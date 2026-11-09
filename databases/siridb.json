@@ -1,0 +1,169 @@
+{
+  "slug": "siridb",
+  "name": "SiriDB",
+  "aliases": [
+    "SiriDB Server"
+  ],
+  "tagline": "Small-footprint, clusterable time-series database with a query language built for grouping series.",
+  "description": "SiriDB is an open-source time-series database written in C and maintained by the Dutch company Cesbit. Series are distributed over pools that can be added while the database is online, each pool optionally mirrored by a replica, and the design avoids a global index so a cluster can grow without downtime. Its own query language is good at selecting and grouping thousands of series with regular expressions and dynamic groups, and the project ships an HTTP server, a Grafana data source and Python, Go and Node.js connectors. Releases still arrive in 2026, but the community is small, so treat it as a niche choice.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "time-series",
+    "observability",
+    "iot"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Cesbit",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "2.0.56",
+    "date": "2026-08-25"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Add pools online to spread series; each pool can have one replica server."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SiriDB query language"
+  ],
+  "apis": [
+    "Native socket protocol",
+    "HTTP (siridb-http)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Go",
+    "JavaScript",
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Small C binary with low memory use",
+    "Pools can be added online to grow a cluster",
+    "Expressive grouping and regex selection across many series",
+    "Permissive MIT licence"
+  ],
+  "weaknesses": [
+    "Small community and few third-party integrations",
+    "No PromQL or SQL support",
+    "Replication limited to pairs within a pool",
+    "Sparse documentation compared with mainstream TSDBs"
+  ],
+  "useCases": [
+    "Self-hosted infrastructure monitoring backends",
+    "Embedded or resource-constrained metrics storage",
+    "Grafana dashboards over many similar series"
+  ],
+  "notIdealFor": [
+    "Prometheus ecosystem integration",
+    "Large teams needing vendor support",
+    "Logs or traces"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "influxdb",
+    "victoriametrics",
+    "prometheus",
+    "questdb",
+    "kairosdb"
+  ],
+  "tags": [
+    "time-series",
+    "open-source",
+    "c",
+    "lightweight"
+  ],
+  "links": {
+    "website": "https://siridb.com/",
+    "docs": "https://docs.siridb.com/",
+    "repository": "https://github.com/SiriDB/siridb-server",
+    "changelog": "https://github.com/SiriDB/siridb-server/releases"
+  },
+  "ids": {
+    "github": "SiriDB/siridb-server",
+    "pypi": "siridb-connector",
+    "hackerNewsQuery": "SiriDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/SiriDB/siridb-server/releases",
+    "https://github.com/SiriDB/siridb-server",
+    "https://siridb.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

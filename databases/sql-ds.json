@@ -1,0 +1,151 @@
+{
+  "slug": "sql-ds",
+  "name": "SQL/DS",
+  "aliases": [
+    "Structured Query Language/Data System",
+    "DB2 for VM and VSE",
+    "DB2 Server for VSE & VM"
+  ],
+  "tagline": "IBM's first commercial SQL database (1981) for VM and VSE mainframes, built from System R; later DB2.",
+  "description": "SQL/DS shipped in 1981 as IBM's first commercial relational database and one of the first SQL products on the market, running on the VM/CMS and DOS/VSE mainframe operating systems and built on technology from the System R research prototype. When IBM released DB2 for MVS shortly after, the two lines coexisted for years, and SQL/DS was eventually rebranded DB2 for VM and VSE. The line continued as DB2 Server for VSE & VM, whose Version 7.5 appeared in IBM's VM product matrix in 2007. Today it is mostly of historical interest, plus the odd remaining z/VM or z/VSE shop; new workloads belong on current Db2.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "The SQL/DS name was retired when IBM rebranded it DB2 for VM and VSE; the last major line, DB2 Server for VSE & VM 7.5, dates from 2007. Successor: IBM Db2.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "IBM",
+  "vendorType": "company",
+  "initialRelease": 1981,
+  "writtenIn": [
+    "PL/S"
+  ],
+  "basedOn": "IBM System R",
+  "license": {
+    "type": "proprietary",
+    "name": "IBM proprietary license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Embedded SQL"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Among the first commercially shipped SQL databases, proving relational ideas outside the lab",
+    "Brought System R's SQL, cost-based optimizer and GRANT/REVOKE security into a product",
+    "One code line served VM and VSE mainframe shops for decades"
+  ],
+  "weaknesses": [
+    "Only ran on IBM VM and VSE mainframe systems",
+    "Product name retired and no new major versions since 2007",
+    "Skills and tooling are scarce today"
+  ],
+  "useCases": [
+    "History of SQL and relational databases",
+    "Maintaining remaining z/VM or z/VSE applications"
+  ],
+  "notIdealFor": [
+    "Any new application",
+    "Non-IBM platforms"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-db2",
+    "system-r",
+    "postgresql"
+  ],
+  "tags": [
+    "ibm",
+    "mainframe",
+    "sql",
+    "historical",
+    "vm",
+    "vse"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/IBM_SQL/DS",
+    "docs": "https://public.dhe.ibm.com/ps/products/db2vsevm/info/manuals75/db2v75n.pdf",
+    "wikipedia": "https://en.wikipedia.org/wiki/IBM_SQL/DS"
+  },
+  "ids": {
+    "wikipedia": "IBM SQL/DS"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/IBM_SQL/DS",
+    "https://www.vm.ibm.com/techinfo/lpmigr/vml04255.html",
+    "https://public.dhe.ibm.com/ps/products/db2vsevm/info/manuals75/db2v75n.pdf",
+    "https://dbdb.io/db/sqlds"
+  ],
+  "lastVerified": "2026-10-27"
+}

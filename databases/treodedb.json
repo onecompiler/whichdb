@@ -1,0 +1,155 @@
+{
+  "slug": "treodedb",
+  "name": "TreodeDB",
+  "aliases": [
+    "Treode",
+    "Treode Store"
+  ],
+  "tagline": "Replicated, sharded key-value store with multi-row atomic writes for REST services; abandoned in 2015.",
+  "description": "TreodeDB was a distributed key-value store written in Scala by Treode, Inc. It replicated and sharded data across a cluster and offered conditional batch writes, multi-row atomic updates guarded by read timestamps, which let REST services extend optimistic concurrency through caches and CDNs using ETag-style versions. It kept versioned data and could feed Spark RDDs, DStreams and Hadoop InputFormats for analytics. Only 0.1 and 0.2 releases shipped (2014); commits ended in late 2015 and the company domain has lapsed. It remains a readable example of a transactional, versioned KV design.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release 0.2.0 (Dec 2014) and last commit Oct 2015; Treode's domain has lapsed. Consider FoundationDB or TiKV.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Treode, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.2.0",
+    "date": "2014-12-08"
+  },
+  "writtenIn": [
+    "Scala"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Designed for sharding and replication but never proven at scale before development stopped."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Scala/Java API",
+    "REST"
+  ],
+  "apis": [
+    "REST",
+    "Scala API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Scala",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Multi-row atomic writes with optimistic concurrency, unusual for a KV store of its time",
+    "Versioned data designed to work with HTTP caches and CDNs",
+    "Connectors for Spark and Hadoop analytics"
+  ],
+  "weaknesses": [
+    "Pre-1.0 and abandoned since 2015",
+    "No community, packages or documentation site still online"
+  ],
+  "useCases": [
+    "Studying conditional batch writes and versioned KV design",
+    "Reference Scala code for a replicated, sharded store"
+  ],
+  "notIdealFor": [
+    "Production use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "foundationdb",
+    "tikv",
+    "cockroachdb",
+    "apache-cassandra"
+  ],
+  "tags": [
+    "key-value",
+    "scala",
+    "distributed",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/Treode/store",
+    "repository": "https://github.com/Treode/store"
+  },
+  "ids": {
+    "github": "Treode/store"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Treode/store",
+    "https://github.com/Treode/store/releases",
+    "https://web.archive.org/web/20150202063109/http://treode.github.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

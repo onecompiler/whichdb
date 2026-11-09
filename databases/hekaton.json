@@ -1,0 +1,191 @@
+{
+  "slug": "hekaton",
+  "name": "Hekaton",
+  "aliases": [
+    "SQL Server In-Memory OLTP",
+    "In-Memory OLTP",
+    "memory-optimized tables"
+  ],
+  "tagline": "SQL Server's built-in lock-free, memory-optimized OLTP engine with natively compiled T-SQL.",
+  "description": "Hekaton is the code name for In-Memory OLTP, the memory-optimized transaction engine built into Microsoft SQL Server since 2014 and available in Azure SQL Database and Azure SQL Managed Instance. Tables declared MEMORY_OPTIMIZED live entirely in RAM with hash or Bw-tree indexes, and use multi-version optimistic concurrency with no locks or latches; T-SQL stored procedures, triggers and scalar functions can be compiled to native machine code. Tables are fully durable through the transaction log by default, or can be declared SCHEMA_ONLY to skip I/O for session state and staging data. Because it lives inside SQL Server, memory-optimized and disk-based tables can be joined in one query and share backups and availability groups.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "session-store",
+    "caching",
+    "iot"
+  ],
+  "architecture": [
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "basedOn": "Microsoft SQL Server",
+  "license": {
+    "type": "proprietary",
+    "name": "Included with Microsoft SQL Server licensing"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Part of SQL Server editions (including free Express and Developer) and supported Azure SQL tiers."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Azure SQL Database",
+      "provider": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/database/in-memory-oltp-overview?view=azuresql"
+    },
+    {
+      "name": "Azure SQL Managed Instance",
+      "provider": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/en-us/azure/azure-sql/managed-instance/in-memory-oltp-overview?view=azuresql"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Memory-optimized data must fit in the server's RAM; scale-out and DR come from SQL Server availability groups."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "T-SQL"
+  ],
+  "apis": [
+    "TDS"
+  ],
+  "compatibleWith": [
+    "sql-server"
+  ],
+  "drivers": [
+    "C#",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Lock- and latch-free multi-version concurrency removes contention hot spots",
+    "Natively compiled stored procedures cut CPU per transaction",
+    "SCHEMA_ONLY tables give no-I/O temp tables, staging tables and session state",
+    "Mix memory-optimized and disk-based tables in the same database and query",
+    "Works with SQL Server backups, availability groups and failover clusters"
+  ],
+  "weaknesses": [
+    "All memory-optimized data must fit in RAM and needs careful memory sizing",
+    "Natively compiled modules support a restricted T-SQL surface",
+    "Optimistic concurrency means write conflicts abort and need retry logic",
+    "Only available inside SQL Server and Azure SQL"
+  ],
+  "useCases": [
+    "High-throughput order, trading or betting transactions",
+    "ASP.NET session state and mid-tier caching",
+    "IoT and sensor ingestion",
+    "Replacing tempdb table variables and temp tables",
+    "ETL staging tables"
+  ],
+  "notIdealFor": [
+    "Large-range analytical scans (use columnstore)",
+    "Data sets bigger than server memory"
+  ],
+  "notableUsers": [
+    "bwin"
+  ],
+  "alternatives": [
+    "sql-server",
+    "volt-active-data",
+    "oracle-timesten",
+    "sap-hana",
+    "singlestore"
+  ],
+  "tags": [
+    "in-memory",
+    "oltp",
+    "sql-server",
+    "microsoft",
+    "mvcc"
+  ],
+  "links": {
+    "website": "https://learn.microsoft.com/en-us/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
+    "wikipedia": "https://en.wikipedia.org/wiki/Hekaton_(database)"
+  },
+  "ids": {
+    "wikipedia": "Hekaton (database)",
+    "hackerNewsQuery": "Hekaton SQL Server"
+  },
+  "brand": {
+    "color": "#CC2927"
+  },
+  "sources": [
+    "https://learn.microsoft.com/en-us/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios",
+    "https://www.microsoft.com/en-us/research/publication/hekaton-sql-servers-memory-optimized-oltp-engine/",
+    "https://en.wikipedia.org/wiki/Hekaton_(database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

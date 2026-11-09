@@ -1,0 +1,178 @@
+{
+  "slug": "amazon-timestream",
+  "name": "Amazon Timestream",
+  "aliases": [
+    "Timestream for InfluxDB",
+    "Timestream for LiveAnalytics",
+    "AWS Timestream"
+  ],
+  "tagline": "AWS time-series services: managed InfluxDB today, with serverless LiveAnalytics closed to new customers.",
+  "description": "Amazon Timestream launched in 2020 as a serverless, SQL-queried time-series database with automatic tiering from memory to magnetic storage, now branded Timestream for LiveAnalytics. In 2024 AWS added Timestream for InfluxDB, a managed InfluxDB service that now offers InfluxDB 2 instances and InfluxDB 3 Enterprise clusters. On June 20, 2025 AWS closed LiveAnalytics to new customers and began steering them to the InfluxDB option; existing LiveAnalytics workloads keep running and still get security and availability work. For a new AWS project, think of Timestream as managed InfluxDB and compare it with running InfluxDB, Tiger Cloud or Amazon Managed Service for Prometheus.",
+  "productType": "managed-service",
+  "status": "active",
+  "statusNote": "Timestream for LiveAnalytics closed to new customers on 2025-06-20 (existing workloads unaffected); AWS points new users to Timestream for InfluxDB.",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "time-series",
+    "iot",
+    "observability",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2020,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "InfluxDB (Timestream for InfluxDB)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary AWS service (InfluxDB engine is open source)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Timestream for InfluxDB bills instance-hours and storage; LiveAnalytics bills writes, storage and query compute units."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "LiveAnalytics scales automatically; InfluxDB 3 Enterprise clusters scale by adding nodes, InfluxDB 2 instances scale up."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "InfluxQL",
+    "Flux"
+  ],
+  "apis": [
+    "AWS SDK",
+    "InfluxDB HTTP API",
+    "Line protocol",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [
+    "influxdb"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C#",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fully managed on AWS with IAM, KMS encryption and VPC integration",
+    "Timestream for InfluxDB keeps standard InfluxDB APIs, so Telegraf and Grafana work unchanged",
+    "LiveAnalytics needs no capacity planning for existing users",
+    "Choice of InfluxDB 2 (Flux) or InfluxDB 3 Enterprise clusters"
+  ],
+  "weaknesses": [
+    "LiveAnalytics, the original serverless engine, is closed to new customers",
+    "AWS-only; Timestream for InfluxDB is mostly a hosted open-source engine with AWS pricing",
+    "Instance-based InfluxDB pricing is less elastic than the original serverless model",
+    "Migrating off LiveAnalytics requires a data export and query rewrite"
+  ],
+  "useCases": [
+    "IoT telemetry on AWS IoT Core",
+    "Managed InfluxDB without running servers",
+    "Operational metrics for AWS-hosted apps"
+  ],
+  "notIdealFor": [
+    "Multi-cloud or on-prem deployments",
+    "New projects expecting the LiveAnalytics serverless model",
+    "Log search"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "influxdb",
+    "timescaledb",
+    "azure-data-explorer",
+    "questdb",
+    "victoriametrics",
+    "grafana-mimir"
+  ],
+  "tags": [
+    "aws",
+    "managed",
+    "time-series",
+    "influxdb",
+    "serverless"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/timestream/",
+    "docs": "https://docs.aws.amazon.com/timestream/",
+    "pricing": "https://aws.amazon.com/timestream/pricing/"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-timestream",
+    "hackerNewsQuery": "Amazon Timestream"
+  },
+  "brand": {
+    "color": "#FF9900"
+  },
+  "sources": [
+    "https://aws.amazon.com/timestream/",
+    "https://docs.aws.amazon.com/timestream/latest/developerguide/AmazonTimestreamForLiveAnalytics-availability-change.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

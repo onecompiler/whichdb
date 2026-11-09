@@ -1,0 +1,190 @@
+{
+  "slug": "grafana-pyroscope",
+  "name": "Grafana Pyroscope",
+  "aliases": [
+    "Pyroscope",
+    "Phlare"
+  ],
+  "tagline": "Continuous profiling database that stores CPU and memory profiles over time on object storage.",
+  "description": "Grafana Pyroscope is a continuous-profiling backend: agents, eBPF collectors or SDKs send CPU, memory, lock and allocation profiles every few seconds, and Pyroscope stores them as time-indexed, deduplicated stack-trace data in object storage so you can compare flame graphs across releases, hosts or time ranges. Grafana Labs acquired the Pyroscope project in 2023 and merged it with its own Phlare database, so the current engine follows the Mimir/Loki architecture with distributors, ingesters and store-gateways. It is AGPL-3.0, integrates with Tempo to link spans to profiles, and is also offered as Grafana Cloud Profiles.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar"
+  ],
+  "workloads": [
+    "observability"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Grafana Labs",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "2.4.2",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Grafana Cloud Profiles has a free tier."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Grafana Cloud Profiles",
+      "provider": "Grafana Labs"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Monolithic for small setups; microservices mode scales components independently over object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Label selectors (PromQL-style)"
+  ],
+  "apis": [
+    "Pyroscope ingest API",
+    "pprof push",
+    "OTLP profiles",
+    "Connect/gRPC query API"
+  ],
+  "compatibleWith": [
+    "s3"
+  ],
+  "drivers": [
+    "Go",
+    "Java",
+    "Python",
+    "Ruby",
+    ".NET",
+    "Rust",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Always-on profiling with low overhead via SDKs or eBPF",
+    "Flame-graph diffs across time ranges, versions or hosts",
+    "Links traces in Tempo to the exact profile of a span",
+    "Object storage keeps profile retention inexpensive"
+  ],
+  "weaknesses": [
+    "AGPL-3.0 licence",
+    "Profiling is a niche signal; most teams adopt it after metrics, logs and traces",
+    "Microservices mode shares Mimir-style operational complexity",
+    "Language SDK coverage and quality vary"
+  ],
+  "useCases": [
+    "Finding CPU and memory hot spots in production",
+    "Comparing performance between releases",
+    "Reducing cloud compute cost"
+  ],
+  "notIdealFor": [
+    "General-purpose time-series storage",
+    "Logs or metrics",
+    "Ad-hoc SQL analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "grafana-tempo",
+    "signoz",
+    "openobserve",
+    "grafana-mimir"
+  ],
+  "tags": [
+    "profiling",
+    "observability",
+    "grafana",
+    "object-storage",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://grafana.com/oss/pyroscope/",
+    "docs": "https://grafana.com/docs/pyroscope/latest/",
+    "repository": "https://github.com/grafana/pyroscope",
+    "changelog": "https://github.com/grafana/pyroscope/releases"
+  },
+  "ids": {
+    "github": "grafana/pyroscope",
+    "dockerHub": "grafana/pyroscope",
+    "hackerNewsQuery": "Pyroscope"
+  },
+  "brand": {
+    "color": "#F46800",
+    "simpleIcon": "grafana"
+  },
+  "sources": [
+    "https://github.com/grafana/pyroscope/releases",
+    "https://grafana.com/oss/pyroscope/",
+    "https://grafana.com/docs/pyroscope/latest/"
+  ],
+  "lastVerified": "2026-10-27"
+}

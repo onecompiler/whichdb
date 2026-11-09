@@ -1,0 +1,171 @@
+{
+  "slug": "libmdbx",
+  "name": "libmdbx",
+  "aliases": [
+    "MDBX"
+  ],
+  "tagline": "Heavily reworked LMDB descendant: memory-mapped ACID B+tree with auto-growing files.",
+  "description": "libmdbx is an embedded, transactional key-value engine that began as a fork of LMDB and has since been extensively redesigned by Leonid Yuriev. It keeps LMDB's memory-mapped copy-on-write B+tree, lock-free readers and no-recovery crash safety, but adds automatic database growth and shrinking, better handling of long-running readers, built-in integrity checking, and a C++ API. It is the storage engine behind several high-performance Ethereum clients such as Erigon and Reth. Development is essentially one maintainer and primary hosting moved off GitHub in 2022, so check the project site for releases and support.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Leonid Yuriev",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "0.14.4",
+    "date": "2026-09-19"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "LMDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single file with automatic geometry growth; multi-TB databases are used by Ethereum archive nodes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API",
+    "C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Rust",
+    "Go",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "LMDB-style lock-free, zero-copy reads with full ACID transactions",
+    "Database file grows and shrinks automatically",
+    "Mitigates LMDB's long-reader problem and adds integrity checks",
+    "Proven in Ethereum clients handling multi-TB state"
+  ],
+  "weaknesses": [
+    "Single writer at a time",
+    "Essentially a one-maintainer project",
+    "Primary repository and docs live off GitHub, complicating discovery and contribution"
+  ],
+  "useCases": [
+    "Blockchain node state and indexes",
+    "Read-heavy embedded storage needing LMDB semantics",
+    "Replacing LMDB where auto-resizing is needed"
+  ],
+  "notIdealFor": [
+    "Write-heavy concurrent workloads",
+    "Projects needing a large vendor-backed community"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "rocksdb",
+    "redb",
+    "bbolt"
+  ],
+  "tags": [
+    "b-tree",
+    "mmap",
+    "embedded",
+    "lmdb-fork",
+    "ethereum"
+  ],
+  "links": {
+    "website": "https://libmdbx.dqdkfa.ru/",
+    "docs": "https://libmdbx.dqdkfa.ru/",
+    "repository": "https://github.com/Mithril-mine/libmdbx",
+    "changelog": "https://github.com/Mithril-mine/libmdbx/releases"
+  },
+  "ids": {
+    "github": "Mithril-mine/libmdbx",
+    "hackerNewsQuery": "libmdbx"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Mithril-mine/libmdbx",
+    "https://libmdbx.dqdkfa.ru/"
+  ],
+  "lastVerified": "2026-10-27"
+}

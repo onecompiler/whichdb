@@ -1,0 +1,193 @@
+{
+  "slug": "polardb-x",
+  "name": "PolarDB-X",
+  "aliases": [
+    "PolarDB Distributed Edition",
+    "DRDS"
+  ],
+  "tagline": "Alibaba's open-source, MySQL-compatible shared-nothing distributed SQL with Paxos and columnar indexes.",
+  "description": "PolarDB-X is Alibaba Cloud's distributed edition of PolarDB, descended from the DRDS sharding middleware that ran Taobao's Double-11 traffic. Stateless compute nodes (written in Java) parse MySQL-dialect SQL and route it to data nodes based on a MySQL fork with X-Paxos replication, while global secondary indexes and clustered columnar indexes keep cross-shard lookups and analytics workable. The engine is open source under Apache 2.0 and installable with Kubernetes operators, and it is also sold as a managed service. It is a credible alternative to TiDB and OceanBase for MySQL shops that need horizontal scale, mainly within the Alibaba ecosystem.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "htap",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Alibaba Cloud",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "5.4.21",
+    "date": "2026-09-20"
+  },
+  "writtenIn": [
+    "Java",
+    "C++"
+  ],
+  "basedOn": "MySQL (data nodes)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Open-source edition is free to self-host; managed PolarDB-X on Alibaba Cloud is pay-as-you-go or subscription."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "alibaba-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "PolarDB-X",
+      "provider": "Alibaba Cloud",
+      "url": "https://www.alibabacloud.com/product/polardb-x"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Hash/range partitioning with automatic rebalancing; data nodes use three-replica X-Paxos; cross-region via read-only instances and CDC."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "MySQL-compatible binlog (CDC)"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "PHP",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "MySQL-compatible SQL and a MySQL-format global binlog for downstream tools",
+    "Global secondary indexes avoid scatter-gather lookups on non-shard keys",
+    "Clustered columnar indexes add analytical scans without a separate warehouse",
+    "X-Paxos replicas give RPO=0 within a region",
+    "Apache 2.0 open source with Kubernetes operator"
+  ],
+  "weaknesses": [
+    "Ecosystem and docs centered on Alibaba Cloud and Chinese-language community",
+    "No triggers; some MySQL features behave differently across shards",
+    "More moving parts (CN, DN, GMS, CDC, columnar) than single-node MySQL",
+    "Version numbering and release cadence of the open-source edition are hard to track"
+  ],
+  "useCases": [
+    "Scaling large MySQL e-commerce databases",
+    "High-concurrency order and payment systems",
+    "Consolidating sharded MySQL into one logical database",
+    "Operational analytics via columnar indexes"
+  ],
+  "notIdealFor": [
+    "Small single-instance MySQL workloads",
+    "Teams outside the Alibaba ecosystem wanting a large Western community",
+    "Apps relying on MySQL triggers"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tidb",
+    "oceanbase",
+    "vitess",
+    "polardb",
+    "apache-shardingsphere",
+    "tencent-tdsql"
+  ],
+  "tags": [
+    "distributed-sql",
+    "mysql-compatible",
+    "open-source",
+    "alibaba-cloud",
+    "paxos"
+  ],
+  "links": {
+    "website": "https://www.alibabacloud.com/product/polardb-x",
+    "docs": "https://doc.polardbx.com/",
+    "repository": "https://github.com/polardb/polardbx-sql",
+    "changelog": "https://github.com/polardb/polardbx-sql/releases"
+  },
+  "ids": {
+    "github": "polardb/polardbx-sql",
+    "dockerHub": "polardbx/polardb-x",
+    "hackerNewsQuery": "PolarDB-X"
+  },
+  "brand": {
+    "color": "#FF6A00",
+    "simpleIcon": "alibabacloud"
+  },
+  "sources": [
+    "https://github.com/polardb/polardbx-sql/releases",
+    "https://www.alibabacloud.com/product/polardb-x",
+    "https://hub.docker.com/r/polardbx/polardb-x"
+  ],
+  "lastVerified": "2026-10-27"
+}

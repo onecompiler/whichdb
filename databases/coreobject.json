@@ -1,0 +1,160 @@
+{
+  "slug": "coreobject",
+  "name": "CoreObject",
+  "aliases": [],
+  "tagline": "Objective-C object database with Git-like branching, tree-structured undo and semantic merging built in.",
+  "description": "CoreObject, from the Étoilé project, is an object-graph persistence framework for Objective-C that treats version control as a core database feature. Applications store structured documents as graphs of objects in a SQLite-backed store, and CoreObject records every change in a revision graph inspired by Mercurial. On top of that it offers branches, tags, structural diff and three-way merge of object graphs, selective and tree-structured undo that survives app restarts, and a basis for real-time collaborative editing, so apps get these features without each reinventing them. It targets macOS and iOS. The last tagged release is 0.5 from 2014; maintainer Quentin Mathé still pushes occasional fixes and refactors, most recently in 2024, so it is usable but small and lightly maintained.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Lightly maintained: last tagged release 0.5 (2014), with occasional commits through April 2024.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "graph"
+  ],
+  "workloads": [
+    "embedded",
+    "local-first",
+    "content-management"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Étoilé project",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.5",
+    "date": "2014-06-03"
+  },
+  "writtenIn": [
+    "Objective-C"
+  ],
+  "basedOn": "SQLite (storage)",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "macos",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Objective-C API"
+  ],
+  "apis": [
+    "Objective-C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Objective-C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Branches, tags and merges for object graphs, not just text files",
+    "Persistent, tree-structured and selective undo that survives restarts",
+    "Structural diff and three-way merge of documents",
+    "Transactional storage and indexing on SQLite"
+  ],
+  "weaknesses": [
+    "Objective-C on Apple platforms only",
+    "Tiny community and sporadic maintenance",
+    "No tagged release since 2014"
+  ],
+  "useCases": [
+    "Document-based macOS/iOS apps that need rich undo and versioning",
+    "Research on version-controlled object stores and collaborative editing"
+  ],
+  "notIdealFor": [
+    "Server-side or cross-platform applications",
+    "Large multi-user datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "realm",
+    "objectbox",
+    "dolt",
+    "noms",
+    "sqlite"
+  ],
+  "tags": [
+    "objective-c",
+    "versioning",
+    "undo",
+    "object-database",
+    "macos"
+  ],
+  "links": {
+    "website": "http://coreobject.org/",
+    "docs": "http://etoileos.com/dev/api/CoreObject/",
+    "repository": "https://github.com/etoile/CoreObject"
+  },
+  "ids": {
+    "github": "etoile/CoreObject",
+    "hackerNewsQuery": "CoreObject"
+  },
+  "brand": {},
+  "sources": [
+    "http://coreobject.org/",
+    "https://github.com/etoile/CoreObject",
+    "https://github.com/etoile/CoreObject/commits/master"
+  ],
+  "lastVerified": "2026-10-27"
+}

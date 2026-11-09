@@ -1,0 +1,176 @@
+{
+  "slug": "kuzu",
+  "name": "Kùzu",
+  "aliases": [
+    "Kuzu",
+    "KuzuDB"
+  ],
+  "tagline": "Embedded columnar property-graph database with Cypher; archived in 2025 after Apple acquired the team.",
+  "description": "Kùzu was an embedded, in-process property-graph database from the University of Waterloo, often described as DuckDB for graphs: columnar storage, CSR adjacency indexes, vectorized and factorized query processing, and worst-case-optimal joins, all queried with Cypher. It added vector and full-text indexes and ran in Python, Node.js, Rust, Java and WebAssembly. In October 2025 Apple agreed to acquire Kùzu Inc. and the GitHub repository was archived on 10 October 2025 with 0.11.3 as the final release. The MIT code lives on in community forks, notably LadybugDB, which is where new projects should look.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Repo archived 2025-10-10 (final release 0.11.3) after Apple agreed to acquire Kùzu Inc.; community fork LadybugDB continues the code.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "graph-analytics",
+    "embedded",
+    "knowledge-graph",
+    "rag"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Kùzu Inc. (acquired by Apple)",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "0.11.3",
+    "date": "2025-10-10"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "wasm",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process; disk-based columnar storage handles graphs larger than memory."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Cypher"
+  ],
+  "apis": [
+    "In-process C/C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Rust",
+    "Java",
+    "Go",
+    "Swift",
+    "C/C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Fast analytical multi-hop joins thanks to factorized, vectorized execution",
+    "Zero-ops embedded deployment with MIT license",
+    "Reads Parquet, CSV, DuckDB and Postgres data directly"
+  ],
+  "weaknesses": [
+    "Discontinued: archived October 2025, no fixes or releases",
+    "Single-writer embedded model, no client-server mode",
+    "Extensions and binary downloads may disappear over time"
+  ],
+  "useCases": [
+    "Existing embedded deployments planning migration",
+    "Reference for LadybugDB-compatible data files"
+  ],
+  "notIdealFor": [
+    "Any new project (use LadybugDB)",
+    "Multi-user server deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ladybugdb",
+    "duckdb",
+    "memgraph",
+    "falkordb",
+    "neo4j",
+    "cozodb"
+  ],
+  "tags": [
+    "embedded",
+    "cypher",
+    "columnar",
+    "archived",
+    "apple"
+  ],
+  "links": {
+    "website": "https://github.com/kuzudb/kuzu",
+    "repository": "https://github.com/kuzudb/kuzu"
+  },
+  "ids": {
+    "github": "kuzudb/kuzu",
+    "npm": "kuzu",
+    "pypi": "kuzu",
+    "hackerNewsQuery": "KuzuDB"
+  },
+  "brand": {
+    "color": "#E8743B"
+  },
+  "sources": [
+    "https://github.com/kuzudb/kuzu",
+    "https://uwaterloo.ca/computer-science/news/waterloo-based-graph-database-start-up-kuzu-acquired-apple",
+    "https://betakit.com/apple-strikes-deal-to-acquire-canadian-database-software-startup-kuzu/"
+  ],
+  "lastVerified": "2026-10-27"
+}

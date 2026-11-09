@@ -1,0 +1,153 @@
+{
+  "slug": "littled",
+  "name": "LittleD",
+  "aliases": [
+    "Little D"
+  ],
+  "tagline": "Relational SQL database for microcontrollers and sensor nodes that runs most queries in about 1 KB of RAM.",
+  "description": "LittleD is a research relational database by Graeme Douglas (with Ramon Lawrence at UBC Okanagan) for microprocessors so small that even SQLite will not fit. It parses SQL on the device and supports CREATE TABLE, INSERT and SELECT-FROM-WHERE with projections, selections over arbitrary expressions and inner joins, all executed in a caller-supplied memory segment of roughly 1 KB for typical queries. Only integers and fixed-width strings are supported, and features such as aggregation, query pre-compilation and better indexing were left as future work. It was described in ACM and UBC papers around 2014 and the last commit was in 2016; its sister project was the IonDB key-value store.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Academic prototype (UBC Okanagan, c. 2014-2016); no commits since Sept 2016. The lab's later work continued in IonDB and EmbedDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "iot"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Graeme Douglas (University of British Columbia Okanagan)",
+  "vendorType": "academic",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Targets devices with a few KB of RAM."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset)"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "On-device SQL parsing and execution in about 1 KB of RAM",
+    "Inner joins and arbitrary WHERE expressions on microcontrollers",
+    "Caller-provided memory segment gives deterministic memory use",
+    "Documented in peer-reviewed papers; Apache-licensed"
+  ],
+  "weaknesses": [
+    "Research prototype, unmaintained since 2016",
+    "Only integers and fixed-width strings; no aggregation or updates beyond INSERT",
+    "No transactions or crash recovery"
+  ],
+  "useCases": [
+    "Teaching query processing under extreme memory limits",
+    "Prototyping SQL access to sensor data on microcontrollers"
+  ],
+  "notIdealFor": [
+    "Production firmware",
+    "Devices with enough memory for SQLite"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "iondb",
+    "sqlite",
+    "extremedb",
+    "raima-database-manager"
+  ],
+  "tags": [
+    "embedded",
+    "microcontroller",
+    "sensor-networks",
+    "sql",
+    "academic"
+  ],
+  "links": {
+    "website": "https://github.com/graemedouglas/LittleD",
+    "repository": "https://github.com/graemedouglas/LittleD"
+  },
+  "ids": {
+    "github": "graemedouglas/LittleD",
+    "hackerNewsQuery": "LittleD database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/graemedouglas/LittleD",
+    "https://dl.acm.org/citation.cfm?id=2554891",
+    "https://dbdb.io/db/littled"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,172 @@
+{
+  "slug": "dqlite",
+  "name": "dqlite",
+  "aliases": [
+    "distributed SQLite"
+  ],
+  "tagline": "Canonical's embeddable C library that makes SQLite highly available with Raft replication.",
+  "description": "dqlite (distributed SQLite) is a C library from Canonical that embeds a replicated SQL engine directly in your application: instances of the app form a Raft cluster and keep identical SQLite databases, with automatic leader election and failover and no external database to operate. It uses libuv and a custom wire protocol tuned for SQLite primitives, and Canonical ships it inside LXD and MicroK8s (where it replaces etcd as the Kubernetes datastore via kine). A Go binding (go-dqlite) is the main way to use it. It is a specialist building block for clustered infrastructure software rather than a standalone database server.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "configuration",
+    "metadata-store",
+    "embedded",
+    "edge"
+  ],
+  "architecture": [
+    "embedded",
+    "distributed"
+  ],
+  "developer": "Canonical",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "1.18.7",
+    "date": "2026-07-02"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "copyleft",
+    "name": "LGPL-3.0 with static-linking exception",
+    "spdx": "LGPL-3.0-only WITH LGPL-3.0-linking-exception"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Small Raft clusters (3-5 voters) inside an application; each node holds the full database."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "dqlite wire protocol",
+    "C API",
+    "Go database/sql driver"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "C",
+    "Go",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Embedded HA SQL with no separate database process",
+    "Raft-based automatic failover and leader election",
+    "Proven inside LXD and MicroK8s clusters",
+    "SQLite semantics and SQL dialect",
+    "Small footprint suitable for edge appliances"
+  ],
+  "weaknesses": [
+    "Linux-only",
+    "Go is the only first-class high-level binding",
+    "Write throughput bounded by a single Raft leader",
+    "Small community outside Canonical's own products"
+  ],
+  "useCases": [
+    "Cluster state for infrastructure software (LXD, MicroK8s)",
+    "Kubernetes datastore replacement for etcd via kine",
+    "HA configuration stores in edge appliances",
+    "Embedding a replicated database in Go services"
+  ],
+  "notIdealFor": [
+    "Large datasets or high write rates",
+    "Non-Linux platforms",
+    "Teams wanting a standalone database server"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rqlite",
+    "sqlite",
+    "etcd",
+    "libsql",
+    "cockroachdb"
+  ],
+  "tags": [
+    "sqlite",
+    "raft",
+    "embedded",
+    "canonical"
+  ],
+  "links": {
+    "website": "https://canonical.com/dqlite",
+    "docs": "https://canonical.com/dqlite/docs",
+    "repository": "https://github.com/canonical/dqlite",
+    "changelog": "https://github.com/canonical/dqlite/releases"
+  },
+  "ids": {
+    "github": "canonical/dqlite",
+    "hackerNewsQuery": "dqlite"
+  },
+  "sources": [
+    "https://github.com/canonical/dqlite/releases",
+    "https://github.com/canonical/dqlite",
+    "https://canonical.com/dqlite"
+  ],
+  "lastVerified": "2026-10-27"
+}

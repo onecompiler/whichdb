@@ -1,0 +1,159 @@
+{
+  "slug": "splice-machine",
+  "name": "Splice Machine",
+  "aliases": [
+    "SpliceSQL",
+    "Splice Engine"
+  ],
+  "tagline": "Hadoop-era ACID SQL database running OLTP on HBase and analytics on Spark; vendor insolvent since 2021.",
+  "description": "Splice Machine put an ANSI SQL, ACID relational database on top of the Hadoop stack. It reused Apache Derby's parser and optimizer, executed short transactional queries directly against HBase regions and pushed large analytical plans to Spark, which gave HTAP on a single Hadoop cluster with MVCC snapshot isolation. The engine was published on GitHub under AGPLv3 next to a commercial edition, and the company later marketed itself around machine learning. It entered insolvency proceedings in July 2021 and the repository went quiet the same month, so it now matters only to teams still running it.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "The company entered insolvency proceedings in July 2021 and the open-source repo has been idle since. Consider CockroachDB, YugabyteDB or TiDB for scale-out SQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "htap",
+    "oltp",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Splice Machine, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache HBase, Apache Spark and Apache Derby",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3 (open-source edition)",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "The AGPL edition remains on GitHub; commercial support ended with the company."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales with the underlying HBase/HDFS and Spark clusters."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full ACID SQL with joins and secondary indexes on top of HBase, which HBase alone lacks",
+    "Dual execution: HBase for point operations, Spark for large analytical queries",
+    "Derby-derived SQL front end with Java stored procedures and triggers"
+  ],
+  "weaknesses": [
+    "Vendor insolvent since 2021; no maintained releases or support",
+    "Requires running a full Hadoop, HBase and Spark stack",
+    "AGPL license on the open-source edition"
+  ],
+  "useCases": [
+    "Maintaining existing Splice Machine clusters",
+    "Studying HTAP designs on Hadoop"
+  ],
+  "notIdealFor": [
+    "New deployments",
+    "Teams without Hadoop operations experience"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cockroachdb",
+    "yugabytedb",
+    "tidb",
+    "apache-hbase",
+    "trafodion"
+  ],
+  "tags": [
+    "hadoop",
+    "hbase",
+    "spark",
+    "htap",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/splicemachine/spliceengine",
+    "repository": "https://github.com/splicemachine/spliceengine"
+  },
+  "ids": {
+    "github": "splicemachine/spliceengine",
+    "hackerNewsQuery": "Splice Machine"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/splicemachine/spliceengine",
+    "https://dealroom.co/companies/splice-machine/",
+    "https://dbdb.io/db/splice-machine"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,167 @@
+{
+  "slug": "indradb",
+  "name": "IndraDB",
+  "aliases": [],
+  "tagline": "Rust graph database, inspired by Facebook's TAO, usable as an embedded library or a gRPC server.",
+  "description": "IndraDB is an open-source graph database written in Rust, started by Yusuf Simonson. Its design began from Facebook's TAO: directed, typed vertices and edges with JSON properties, and queries that hop a bounded number of steps from known vertices rather than scanning the whole graph, assuming graphs too large for full processing. It runs as a gRPC server with official Rust and Python clients, or embeds directly as a Rust library, and its datastore is pluggable: in-memory and RocksDB are built in, with PostgreSQL and sled backends maintained separately. Version 5.0.0 shipped in August 2025. It is a solid base for Rust services that need a simple property graph, but it has a much smaller ecosystem than Neo4j or Memgraph.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "single-node"
+  ],
+  "developer": "IndraDB project (Yusuf Simonson)",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "5.0.0",
+    "date": "2025-08-16"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node; capacity depends on the chosen datastore (memory, RocksDB or PostgreSQL)."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "IndraDB query API"
+  ],
+  "apis": [
+    "gRPC",
+    "Rust library",
+    "CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Embeddable Rust library or standalone gRPC server from the same codebase",
+    "Pluggable datastores: in-memory, RocksDB, PostgreSQL, sled",
+    "Simple, predictable multi-hop query semantics",
+    "No garbage-collection pauses"
+  ],
+  "weaknesses": [
+    "No standard query language such as Cypher, GQL or Gremlin",
+    "Small community and infrequent releases",
+    "No clustering or replication"
+  ],
+  "useCases": [
+    "Embedding a property graph in a Rust service",
+    "Social or link graphs queried by bounded hops",
+    "Prototyping graph features before adopting a larger engine"
+  ],
+  "notIdealFor": [
+    "Graph analytics over whole graphs",
+    "Teams that need Cypher tooling or managed hosting"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cozodb",
+    "helixdb",
+    "neo4j",
+    "memgraph",
+    "surrealdb",
+    "ladybugdb"
+  ],
+  "tags": [
+    "rust",
+    "graph",
+    "embedded",
+    "grpc",
+    "rocksdb"
+  ],
+  "links": {
+    "website": "https://indradb.github.io/",
+    "repository": "https://github.com/indradb/indradb",
+    "docs": "https://docs.rs/indradb-lib",
+    "changelog": "https://github.com/indradb/indradb/releases"
+  },
+  "ids": {
+    "github": "indradb/indradb",
+    "pypi": "indradb",
+    "hackerNewsQuery": "IndraDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/indradb/indradb",
+    "https://github.com/indradb/indradb/releases/tag/v5.0.0",
+    "https://crates.io/crates/indradb-lib"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,199 @@
+{
+  "slug": "kdb-plus",
+  "name": "kdb+",
+  "aliases": [
+    "KDB-X",
+    "kdb",
+    "q",
+    "KX"
+  ],
+  "tagline": "Column-store time-series engine with the q language, a fixture of capital-markets tick data.",
+  "description": "kdb+ from KX is a compact column-oriented database fused with q, a terse vector programming language, and has been the default tick-data store at banks, exchanges and hedge funds for two decades. The classic setup, a tickerplant feeding an in-memory real-time database while history is written to date-partitioned splayed files, delivers very fast queries over long time ranges on modest hardware. In November 2025 KX made KDB-X, the next generation of kdb+, generally available, together with a Community Edition that is free for personal and commercial use within resource limits, and PyKX for working from Python. The q learning curve and commercial licensing at scale remain the main barriers.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "financial-tick-data",
+    "time-series",
+    "real-time-analytics",
+    "stream-processing"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "KX",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "KDB-X 5.0.20261015",
+    "date": "2026-10-15"
+  },
+  "writtenIn": [
+    "C",
+    "k"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial; KDB-X Community Edition free with resource limits"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free with core and memory limits; production licences and kdb Insights are negotiated with KX."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon FinSpace with Managed kdb Insights",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/finspace/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Scale out by partitioning history across segments and hosts behind q gateways; real-time data lives in RAM."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "q",
+    "qSQL",
+    "Python (PyKX)"
+  ],
+  "apis": [
+    "q IPC protocol",
+    "HTTP",
+    "WebSocket"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "C",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very low-latency analytics over in-memory and date-partitioned on-disk tables",
+    "As-of and window joins built for trade/quote alignment",
+    "Tiny binary and footprint; runs well on a single large server",
+    "Tickerplant pub/sub pattern unifies real-time and historical queries",
+    "Decades of production use in front-office finance"
+  ],
+  "weaknesses": [
+    "q is terse and niche; hiring and onboarding are hard",
+    "Commercial licensing at scale is expensive and opaque",
+    "Clustering, HA and replication are build-it-yourself architecture patterns",
+    "Small open-source ecosystem compared with SQL databases"
+  ],
+  "useCases": [
+    "Equities, FX and futures tick capture",
+    "Trade surveillance and best-execution analysis",
+    "Quant research on historical market data",
+    "Real-time risk and P&L",
+    "High-frequency sensor data in telecoms and manufacturing"
+  ],
+  "notIdealFor": [
+    "Teams without q or PyKX expertise",
+    "General web application backends",
+    "Log and text search"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "questdb",
+    "dolphindb",
+    "arcticdb",
+    "clickhouse",
+    "timescaledb",
+    "influxdb"
+  ],
+  "tags": [
+    "time-series",
+    "capital-markets",
+    "in-memory",
+    "q",
+    "proprietary"
+  ],
+  "links": {
+    "website": "https://kx.com/",
+    "docs": "https://code.kx.com/",
+    "changelog": "https://code.kx.com/kdb-x/releases/release-notes-latest.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Kdb%2B"
+  },
+  "ids": {
+    "stackoverflowTag": "kdb+",
+    "wikipedia": "Kdb+",
+    "pypi": "pykx",
+    "hackerNewsQuery": "kdb+"
+  },
+  "brand": {
+    "color": "#101820",
+    "simpleIcon": "kx"
+  },
+  "sources": [
+    "https://code.kx.com/kdb-x/releases/release-notes-latest.html",
+    "https://code.kx.com/q/releases/ChangesIn4.1/",
+    "https://kx.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

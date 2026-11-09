@@ -1,0 +1,102 @@
+{
+  "slug": "degdb",
+  "name": "DegDB",
+  "aliases": ["Distributed Economic Graph Database"],
+  "tagline": "Hackathon-born Go triple store that shards graph data across peers and pays nodes in bitcoin for storage.",
+  "description": "DegDB, the Distributed Economic Graph Database, began as a PennApps Fall 2015 hackathon project by Tristan Rice and Chaoyi Zha. Each peer kept subject-predicate-object triples in a local SQLite file, triples were sharded across a peer-to-peer network by a murmur3 hash of the subject, and queries were JSON triple patterns sent over HTTP and fanned out to the owning shards. The 'economic' part was an incentive layer: nodes ran btcd and btcwallet so that storage and serving could be paid for in bitcoin. A planned rewrite never landed and the repository has been untouched since January 2016, so it is best read as an experiment in incentivised decentralised storage.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Hackathon prototype (2015); no commits since January 2016.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": ["graph"],
+  "workloads": ["knowledge-graph"],
+  "architecture": ["distributed"],
+  "developer": "Tristan Rice and Chaoyi Zha",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "writtenIn": ["Go"],
+  "license": { "type": "permissive", "name": "MIT License", "spdx": "MIT" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Hash-sharded across peers by subject; never tested beyond development clusters."
+  },
+  "consistency": { "acid": "none", "models": ["eventual"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["JSON triple patterns"],
+  "apis": ["HTTP", "Protocol Buffers peer protocol"],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Small, readable Go codebase showing subject-hash sharding of a triple store",
+    "Early experiment in paying peers (via bitcoin) to store and serve shared graph data",
+    "MIT licensed, so the code can be reused freely"
+  ],
+  "weaknesses": [
+    "Abandoned since 2016; depends on old btcd/btcwallet setups",
+    "No transactions, security model or production hardening",
+    "Query support limited to rooted triple patterns"
+  ],
+  "useCases": [
+    "Studying decentralised, incentive-based storage designs",
+    "Teaching examples of sharded triple stores"
+  ],
+  "notIdealFor": ["Production graph workloads", "Anything needing consistency guarantees"],
+  "notableUsers": [],
+  "alternatives": ["cayley", "dgraph", "oxigraph", "orbitdb"],
+  "tags": ["graph", "triple-store", "p2p", "bitcoin", "hackathon"],
+  "links": {
+    "website": "https://github.com/degdb/degdb",
+    "repository": "https://github.com/degdb/degdb"
+  },
+  "ids": {
+    "github": "degdb/degdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/degdb/degdb",
+    "https://dbdb.io/db/degdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

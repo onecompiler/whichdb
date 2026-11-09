@@ -1,0 +1,147 @@
+{
+  "slug": "paradise",
+  "name": "Paradise",
+  "aliases": [
+    "Paradise GIS DBMS"
+  ],
+  "tagline": "1990s UW–Madison parallel object-relational DBMS for GIS, built on SHORE for massive geographic datasets.",
+  "description": "Paradise was a research database system from the University of Wisconsin–Madison database group that set out to store, browse and query very large geographic datasets by combining object-relational extensibility with shared-nothing parallelism. It provided an extended-relational data model with built-in raster, polygon, polyline, point and other spatial types, a subset of SQL for ad-hoc queries, a graphical front end for browsing results, and parallel query processing on top of the SHORE storage manager and the OPT++ extensible optimizer. The team evaluated it with the Sequoia 2000 GIS benchmark in a VLDB 1994 paper and described the parallel version at SIGMOD 1997. It never became a product, but its papers remain a key reference for declustering spatial data and running parallel spatial joins.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "UW–Madison research prototype (mid-1990s); never productized. Spatial ideas live on in PostGIS and parallel spatial engines.",
+  "maturity": "legacy",
+  "primaryModel": "spatial",
+  "models": [
+    "spatial",
+    "relational",
+    "object"
+  ],
+  "workloads": [
+    "geospatial",
+    "scientific"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "University of Wisconsin–Madison",
+  "vendorType": "academic",
+  "initialRelease": 1994,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "SHORE",
+  "license": {
+    "type": "proprietary",
+    "name": "Research prototype (not distributed)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Only papers and the modified SHORE storage manager were published."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Designed to partition massive raster and vector datasets across a shared-nothing cluster."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset)"
+  ],
+  "apis": [
+    "Graphical client"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early end-to-end design for parallel processing of raster and vector GIS data",
+    "Built on the well-documented SHORE storage manager and OPT++ optimizer",
+    "Benchmarked publicly with Sequoia 2000, making results comparable"
+  ],
+  "weaknesses": [
+    "Never released as usable software",
+    "Tied to 1990s hardware and toolchains"
+  ],
+  "useCases": [
+    "Research and teaching on parallel spatial databases",
+    "Background for spatial join and declustering techniques"
+  ],
+  "notIdealFor": [
+    "Any practical GIS deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgis",
+    "shore",
+    "gamma",
+    "rasdaman"
+  ],
+  "tags": [
+    "research",
+    "gis",
+    "spatial",
+    "parallel-database",
+    "wisconsin"
+  ],
+  "links": {
+    "website": "https://research.cs.wisc.edu/paradise/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://research.cs.wisc.edu/paradise/",
+    "https://doi.org/10.1145/253260.253342",
+    "https://dbdb.io/db/paradise"
+  ],
+  "lastVerified": "2026-10-27"
+}

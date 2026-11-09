@@ -1,0 +1,179 @@
+{
+  "slug": "keydb",
+  "name": "KeyDB",
+  "aliases": [],
+  "tagline": "Snap's multi-threaded Redis fork with active-active replication and FLASH storage, now dormant.",
+  "description": "KeyDB forked Redis in 2019 to add multi-threaded command processing, active-replica (multi-master) replication and a FLASH tier backed by RocksDB. Snap acquired it in 2022 and relicensed the formerly commercial features under BSD-3-Clause. Development has since stalled: the last release, 6.3.4, shipped in October 2023 and the main branch has had no commits since April 2024, so it lags years behind Redis 7.x and Valkey. Existing deployments keep working, but new projects should look at Valkey or Dragonfly instead.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No release since 6.3.4 (Oct 2023) and no commits since Apr 2024; no EOL announced. Valkey is the usual migration target.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub",
+    "queue"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "Snap Inc.",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "6.3.4",
+    "date": "2023-10-30"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "basedOn": "Redis 6",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Supports Redis Cluster plus active-replica multi-master replication; FLASH tier extends capacity beyond RAM."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Multi-threaded execution gives more throughput per node than Redis 6",
+    "Active-replica mode allows writes on multiple nodes",
+    "FLASH storage tier can hold data beyond RAM",
+    "Permissive BSD license with formerly enterprise features included"
+  ],
+  "weaknesses": [
+    "Effectively unmaintained: no releases since 2023 and no recent security fixes",
+    "Missing Redis 7+ features such as functions and sharded pub/sub",
+    "Multi-master conflict resolution is last-writer-wins",
+    "Shrinking community and stale Docker images"
+  ],
+  "useCases": [
+    "Existing deployments relying on active-replica replication",
+    "Legacy Redis 6 workloads needing more throughput"
+  ],
+  "notIdealFor": [
+    "New projects (choose Valkey or Dragonfly)",
+    "Environments needing timely CVE patches"
+  ],
+  "notableUsers": [
+    "Snap"
+  ],
+  "alternatives": [
+    "valkey",
+    "dragonfly",
+    "redis",
+    "garnet"
+  ],
+  "tags": [
+    "redis-fork",
+    "multi-threaded",
+    "in-memory",
+    "dormant"
+  ],
+  "links": {
+    "website": "https://docs.keydb.dev/",
+    "docs": "https://docs.keydb.dev/docs/",
+    "repository": "https://github.com/Snapchat/KeyDB",
+    "changelog": "https://github.com/Snapchat/KeyDB/releases"
+  },
+  "ids": {
+    "github": "Snapchat/KeyDB",
+    "stackoverflowTag": "keydb",
+    "dockerHub": "eqalpha/keydb",
+    "hackerNewsQuery": "KeyDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Snapchat/KeyDB/releases",
+    "https://github.com/Snapchat/KeyDB/commits/main",
+    "https://docs.keydb.dev/"
+  ],
+  "lastVerified": "2026-10-27"
+}

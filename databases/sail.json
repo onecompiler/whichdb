@@ -1,0 +1,176 @@
+{
+  "slug": "sail",
+  "name": "Sail",
+  "aliases": [
+    "LakeSail",
+    "pysail"
+  ],
+  "tagline": "Rust-native, Spark Connect-compatible engine for SQL, DataFrame and streaming jobs without the JVM.",
+  "description": "Sail, from LakeSail, is a distributed compute engine written in Rust on Apache DataFusion that speaks the Spark Connect protocol, so existing PySpark and Spark SQL code can run against it without rewrites. It starts instantly, runs locally from a pip install or on Kubernetes, and reads and writes Delta Lake and Iceberg on object storage. LakeSail publishes TPC-H and ClickBench results showing large speed and cost gains over JVM Spark. It is an attractive option for cutting Spark infrastructure cost; Spark API coverage is still growing, so check your workloads.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "lakehouse",
+    "olap",
+    "stream-processing"
+  ],
+  "architecture": [
+    "distributed",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "LakeSail",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "0.7.2",
+    "date": "2026-09-29"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Apache DataFusion",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; LakeSail offers commercial support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Runs locally or as a distributed cluster on Kubernetes."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Spark SQL",
+    "Python (PySpark DataFrame API)"
+  ],
+  "apis": [
+    "Spark Connect (gRPC)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Scala",
+    "Java",
+    "Go",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in Spark Connect compatibility for PySpark and Spark SQL code",
+    "Rust-native: no JVM tuning, instant startup, low memory overhead",
+    "Large published speedups and cost savings versus JVM Spark",
+    "Reads and writes Delta Lake and Iceberg",
+    "Same engine on a laptop and on Kubernetes"
+  ],
+  "weaknesses": [
+    "Spark API and connector coverage is not yet complete",
+    "Young project with limited production references",
+    "Benchmarks are vendor-published"
+  ],
+  "useCases": [
+    "Cutting cost of PySpark ETL",
+    "Local Spark development without a JVM",
+    "Lakehouse batch jobs on Delta/Iceberg"
+  ],
+  "notIdealFor": [
+    "Jobs depending on Spark internals or RDD APIs",
+    "OLTP",
+    "Teams needing a managed service"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-spark-sql",
+    "apache-datafusion",
+    "databricks-sql",
+    "duckdb",
+    "trino"
+  ],
+  "tags": [
+    "rust",
+    "spark-compatible",
+    "lakehouse",
+    "open-source",
+    "datafusion"
+  ],
+  "links": {
+    "website": "https://lakesail.com/",
+    "docs": "https://docs.lakesail.com/sail/latest/",
+    "repository": "https://github.com/lakehq/sail",
+    "changelog": "https://github.com/lakehq/sail/releases"
+  },
+  "ids": {
+    "github": "lakehq/sail",
+    "pypi": "pysail",
+    "hackerNewsQuery": "LakeSail"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/lakehq/sail",
+    "https://github.com/lakehq/sail/releases",
+    "https://pypi.org/project/pysail/"
+  ],
+  "lastVerified": "2026-10-27"
+}

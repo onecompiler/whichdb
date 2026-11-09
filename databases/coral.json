@@ -1,0 +1,154 @@
+{
+  "slug": "coral",
+  "name": "CORAL",
+  "aliases": [
+    "Coral deductive database",
+    "CORAL: Control, Relations and Logic"
+  ],
+  "tagline": "University of Wisconsin deductive database (1988–1997) that mixed declarative Horn-clause rules with C++.",
+  "description": "CORAL was a deductive database system developed at the University of Wisconsin–Madison by Raghu Ramakrishnan, Divesh Srivastava, S. Sudarshan and Praveen Seshadri, among others. Programs are organised as modules of Horn-clause rules extended with complex terms, set-grouping, aggregation, negation and relations containing variables, and the system picked an evaluation strategy per module automatically while letting users steer optimisation with per-module control annotations. A C++ interface let developers combine declarative modules with imperative code and extend the system through C++ classes. Data could live in memory or on disk through the EXODUS storage manager, which also supplied client-server transactions. The final release, 1.5.2, came out in November 1997; it remains a well-cited reference for Datalog evaluation techniques.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Academic project (1988–1997); final release 1.5.2 in Nov 1997. Its techniques continue in modern Datalog engines.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "University of Wisconsin–Madison",
+  "vendorType": "academic",
+  "initialRelease": 1988,
+  "latestVersion": {
+    "version": "1.5.2",
+    "date": "1997-11-26"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "EXODUS storage manager (disk-resident data)",
+  "license": {
+    "type": "proprietary",
+    "name": "Academic source release (no OSI license stated)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Source and 1990s Unix binaries still downloadable from the project page."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "CORAL (extended Datalog)"
+  ],
+  "apis": [
+    "C++ interface"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Rich declarative language: Horn clauses with complex terms, aggregation, set-grouping and negation",
+    "Chooses an evaluation strategy per module, with user-controllable optimisation",
+    "Tight C++ integration for mixing declarative and imperative code",
+    "Handled both main-memory and disk-resident relations"
+  ],
+  "weaknesses": [
+    "Unmaintained since 1997; builds target 1990s Unix toolchains",
+    "Research-grade documentation and tooling"
+  ],
+  "useCases": [
+    "Studying deductive database and Datalog evaluation techniques",
+    "Historical reference for recursive query processing"
+  ],
+  "notIdealFor": [
+    "Any production use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "logicblox",
+    "datomic",
+    "typedb",
+    "cozodb",
+    "xtdb"
+  ],
+  "tags": [
+    "research",
+    "deductive",
+    "datalog",
+    "wisconsin",
+    "1990s"
+  ],
+  "links": {
+    "website": "https://research.cs.wisc.edu/coral/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://research.cs.wisc.edu/coral/",
+    "https://doi.org/10.1007/bf01228880",
+    "https://doi.org/10.1145/170036.170067"
+  ],
+  "lastVerified": "2026-10-27"
+}

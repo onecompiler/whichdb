@@ -1,0 +1,145 @@
+{
+  "slug": "hyper",
+  "name": "HyPer",
+  "aliases": [],
+  "tagline": "TUM's main-memory HTAP research database that pioneered LLVM query compilation; now Tableau Hyper.",
+  "description": "HyPer was a main-memory relational database from Alfons Kemper and Thomas Neumann's group at the Technical University of Munich, built to run OLTP and OLAP on the same up-to-date data. The first design ran transactions serially per partition and gave analytical queries consistent snapshots by forking the process so the OS copied pages on write; later work replaced this with fast multi-version concurrency control. Its best-known contribution is data-centric query compilation, which turns each query into tight LLVM machine code instead of interpreting operators, an approach now widespread. Tableau acquired HyPer in 2016, and it lives on as Hyper, the engine behind Tableau extracts and the Hyper API, while TUM moved on to Umbra.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "TUM research system (2010–2016), acquired by Tableau in 2016; continues as Hyper inside Tableau/Salesforce and the Hyper API.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "htap",
+    "oltp",
+    "olap"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory"
+  ],
+  "developer": "Technical University of Munich",
+  "vendorType": "academic",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (research code; now owned by Salesforce/Tableau)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "The research system was never sold; its successor ships inside Tableau and the free Hyper API."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node main-memory design."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Data-centric LLVM query compilation, now copied by many engines",
+    "OLTP and OLAP on the same fresh data in one system",
+    "Influential MVCC and snapshotting research",
+    "Lives on as a production engine in Tableau"
+  ],
+  "weaknesses": [
+    "The research system itself is no longer available",
+    "Single-node, memory-bound design"
+  ],
+  "useCases": [
+    "Studying compiled query execution",
+    "Background for HTAP system design",
+    "Understanding the engine behind Tableau extracts"
+  ],
+  "notIdealFor": [
+    "Deploying directly (use DuckDB, Tableau Hyper API or a commercial HTAP system)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "sap-hana",
+    "singlestore",
+    "hyrise",
+    "monetdb"
+  ],
+  "tags": [
+    "main-memory",
+    "htap",
+    "query-compilation",
+    "llvm",
+    "tum",
+    "research"
+  ],
+  "links": {
+    "website": "https://hyper-db.de/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://hyper-db.de/",
+    "https://doi.org/10.1109/ICDE.2011.5767867",
+    "https://github.com/tableau/hyper-db/blob/main/website/docs/faq.md",
+    "https://dbdb.io/db/hyper"
+  ],
+  "lastVerified": "2026-10-27"
+}

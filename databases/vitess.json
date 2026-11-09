@@ -1,0 +1,124 @@
+{
+  "slug": "vitess",
+  "name": "Vitess",
+  "aliases": ["vitess.io"],
+  "tagline": "CNCF-graduated sharding and clustering layer that makes a fleet of MySQL servers look like one database.",
+  "description": "Vitess is the sharding system YouTube built to scale MySQL, later open-sourced and graduated from the CNCF. A stateless proxy tier (VTGate) parses MySQL-protocol queries and routes them to shards, each a normal MySQL primary with replicas managed by VTTablet, while VSchema describes how tables are split and resharding happens online. It also brings connection pooling, query rewriting and safety limits, online DDL, and VStream change feeds. Vitess is the right tool when a single MySQL primary is no longer enough and you want to keep MySQL's storage engine and tooling. The cost is real operational complexity and some SQL limits on cross-shard queries; PlanetScale offers it as a managed service.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document"],
+  "workloads": ["oltp", "metadata-store", "content-management"],
+  "architecture": ["distributed", "primary-replica", "client-server"],
+  "developer": "Vitess Authors (CNCF; maintained largely by PlanetScale)",
+  "vendorType": "foundation",
+  "initialRelease": 2012,
+  "latestVersion": { "version": "24.0.5", "date": "2026-10-13" },
+  "writtenIn": ["Go"],
+  "basedOn": "MySQL",
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": {
+    "models": ["open-source", "free"],
+    "freeTier": true,
+    "notes": "Free and open source; managed Vitess is available from PlanetScale."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [
+    { "name": "PlanetScale (Vitess)", "provider": "PlanetScale", "url": "https://planetscale.com/" }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Horizontal sharding with online resharding and MoveTables; runs multi-PB MySQL fleets at Slack, GitHub and YouTube; one primary per shard."
+  },
+  "consistency": { "acid": "limited", "models": ["strong", "eventual"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["MySQL wire protocol", "gRPC", "VStream"],
+  "compatibleWith": ["mysql"],
+  "drivers": ["Java", "Go", "Python", "JavaScript", "PHP", "Ruby", "C#"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Proven at the largest MySQL deployments (YouTube, Slack, GitHub, HubSpot)",
+    "Online resharding and table moves without application downtime",
+    "Connection pooling and query safety limits protect MySQL from overload",
+    "Built-in online DDL with revertible migrations",
+    "VStream provides a unified change stream across all shards"
+  ],
+  "weaknesses": [
+    "Cross-shard transactions are not fully ACID (two-phase commit is optional and limited)",
+    "Some SQL constructs are unsupported or slow when queries span shards",
+    "Many components (VTGate, VTTablet, VTOrc, topology server) to operate",
+    "Requires careful choice of sharding keys via VSchema"
+  ],
+  "useCases": [
+    "Scaling a large MySQL application beyond one primary",
+    "Multi-tenant SaaS sharded by customer",
+    "Consolidating many MySQL databases under one routing layer",
+    "Zero-downtime schema migrations on huge tables"
+  ],
+  "notIdealFor": [
+    "Small apps that fit on a single MySQL server",
+    "Workloads requiring strict cross-shard ACID",
+    "PostgreSQL-based stacks (see Multigres)"
+  ],
+  "notableUsers": ["YouTube", "Slack", "GitHub", "HubSpot"],
+  "alternatives": ["planetscale", "tidb", "apache-shardingsphere", "mysql", "multigres", "polardb-x"],
+  "tags": ["mysql", "sharding", "cncf", "open-source", "kubernetes"],
+  "links": {
+    "website": "https://vitess.io/",
+    "docs": "https://vitess.io/docs/",
+    "repository": "https://github.com/vitessio/vitess",
+    "changelog": "https://github.com/vitessio/vitess/releases"
+  },
+  "ids": {
+    "github": "vitessio/vitess",
+    "stackoverflowTag": "vitess",
+    "dockerHub": "vitess/lite",
+    "hackerNewsQuery": "Vitess"
+  },
+  "brand": { "color": "#F16728", "simpleIcon": "vitess" },
+  "sources": [
+    "https://github.com/vitessio/vitess/releases",
+    "https://vitess.io/",
+    "https://www.cncf.io/projects/vitess/"
+  ],
+  "lastVerified": "2026-10-27"
+}

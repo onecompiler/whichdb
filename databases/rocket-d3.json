@@ -1,0 +1,166 @@
+{
+  "slug": "rocket-d3",
+  "name": "Rocket D3",
+  "aliases": [
+    "D3",
+    "D3 DBMS",
+    "Pick D3",
+    "Pick Systems D3"
+  ],
+  "tagline": "The direct descendant of the original Pick system: a MultiValue database and environment on Linux and Windows.",
+  "description": "D3 is the MultiValue database that traces straight back to Pick Systems, the company founded around Dick Pick's original Pick operating system, and it still feels like Pick: a self-contained environment with its own account and file model, Pick BASIC, the ACCESS query language and nested multi-value records. It runs natively on Linux and as a virtual machine (VME) on Windows. Rocket Software took it over with the Zumasys MultiValue portfolio in 2021 and keeps it maintained: D3 10.4 is the current line, with 10.4.0.3 for Windows (September 2026) certified on Windows Server 2025. It exists to keep long-lived Pick applications running, and Rocket offers migration paths to jBASE.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "multivalue",
+  "models": [
+    "multivalue"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Rocket Software (originally Pick Systems)",
+  "vendorType": "company",
+  "initialRelease": 1993,
+  "latestVersion": {
+    "version": "10.4.0.3 (Windows)",
+    "date": "2026-09"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Per-user licensing via Rocket and MultiValue resellers; downloads require active maintenance."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Pick BASIC (FlashBASIC)",
+    "ACCESS query language"
+  ],
+  "apis": [
+    "MVS Toolkit",
+    "ODBC",
+    "Telnet/terminal",
+    "Python (D3py)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Python",
+    "C#",
+    "Visual Basic"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Closest living implementation of the original Pick environment, so old apps run with few changes",
+    "Nested multi-value records keep header and line data in one item",
+    "Native Linux edition and Windows VME edition",
+    "Rocket provides migration tooling towards jBASE"
+  ],
+  "weaknesses": [
+    "Very small, ageing developer community",
+    "Self-contained environment integrates awkwardly with modern tooling",
+    "Linux 10.3 line limited to severity-1 fixes; upgrades to 10.4 involve architectural changes"
+  ],
+  "useCases": [
+    "Running legacy Pick business applications",
+    "Distribution and accounting packages built on D3",
+    "Staging migrations from D3 to jBASE or SQL databases"
+  ],
+  "notIdealFor": [
+    "New application development",
+    "Analytics or reporting at scale",
+    "High-availability clustered deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "jbase",
+    "rocket-unidata-universe",
+    "openqm",
+    "intersystems-iris"
+  ],
+  "tags": [
+    "multivalue",
+    "pick",
+    "rocket",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.rocketsoftware.com/products/rocket-multivalue-application-development-platform",
+    "wikipedia": "https://en.wikipedia.org/wiki/Pick_operating_system"
+  },
+  "ids": {
+    "hackerNewsQuery": "Rocket D3 Pick"
+  },
+  "brand": {},
+  "sources": [
+    "https://community.rocketsoftware.com/rocket-d3-and-jbase-7",
+    "https://en.wikipedia.org/wiki/Pick_operating_system",
+    "https://www.dbta.com/Editorial/MV-Community/Zumasys-Modernizes-jBASE-Platform-109822.aspx"
+  ],
+  "lastVerified": "2026-10-27"
+}

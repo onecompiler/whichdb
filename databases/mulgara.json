@@ -1,0 +1,165 @@
+{
+  "slug": "mulgara",
+  "name": "Mulgara",
+  "aliases": [
+    "Kowari"
+  ],
+  "tagline": "Pure-Java RDF triplestore forked from Kowari, with SPARQL and iTQL; dormant since its 2014 release.",
+  "description": "Mulgara is a transactional RDF triplestore written entirely in Java, forked in 2006 from Tucana's Kowari after Northrop Grumman, which had bought Tucana and owned the Kowari trademark, threatened a developer over new releases. Instead of sitting on a relational database it keeps its own indexes of subject-predicate-object statements, answers SPARQL and the older iTQL language, supports JTA transactions, and integrates with the Jena and Sesame APIs. Development slowed after 2012 and the last release, 2.1.13, was a small auditing fix in February 2014; the code now sits on GitHub with only token activity since. Choose Apache Jena TDB, RDF4J, Oxigraph or a commercial store for anything current.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No release since 2.1.13 (Feb 2014); the GitHub repository is dormant. Use Apache Jena TDB, RDF4J or Oxigraph.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "metadata-store"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Mulgara Project",
+  "vendorType": "community",
+  "initialRelease": 2006,
+  "latestVersion": {
+    "version": "2.1.13",
+    "date": "2014-02-10"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Open Software License 3.0 (newer code Apache 2.0)",
+    "spdx": "OSL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL",
+    "iTQL"
+  ],
+  "apis": [
+    "SPARQL protocol",
+    "Jena API",
+    "Sesame API",
+    "JTA"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native triple indexes rather than an RDF layer over SQL",
+    "Transactional, with JTA/XA integration for Java applications",
+    "Jena and Sesame compatibility eased swapping it into existing code"
+  ],
+  "weaknesses": [
+    "No releases since 2014 and no active maintainers",
+    "SPARQL 1.1 support is incomplete compared with current stores",
+    "OSL 3.0 licensing is unusual and less permissive than Apache-licensed peers"
+  ],
+  "useCases": [
+    "Maintaining legacy semantic-web applications built on it",
+    "Historical reference for Java triplestores"
+  ],
+  "notIdealFor": [
+    "New knowledge-graph projects",
+    "Large-scale SPARQL workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-jena-tdb",
+    "eclipse-rdf4j",
+    "oxigraph",
+    "virtuoso",
+    "blazegraph"
+  ],
+  "tags": [
+    "rdf",
+    "triplestore",
+    "sparql",
+    "java",
+    "semantic-web"
+  ],
+  "links": {
+    "website": "http://www.mulgara.org/",
+    "repository": "https://github.com/quoll/mulgara",
+    "wikipedia": "https://en.wikipedia.org/wiki/Mulgara_(software)"
+  },
+  "ids": {
+    "github": "quoll/mulgara",
+    "wikipedia": "Mulgara (software)",
+    "hackerNewsQuery": "Mulgara"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.mulgara.org/",
+    "https://github.com/quoll/mulgara",
+    "https://en.wikipedia.org/wiki/Mulgara_(software)"
+  ],
+  "lastVerified": "2026-10-27"
+}

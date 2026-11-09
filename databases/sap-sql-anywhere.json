@@ -1,0 +1,194 @@
+{
+  "slug": "sap-sql-anywhere",
+  "name": "SAP SQL Anywhere",
+  "aliases": [
+    "SQL Anywhere",
+    "Sybase SQL Anywhere",
+    "Watcom SQL",
+    "Adaptive Server Anywhere",
+    "UltraLite"
+  ],
+  "tagline": "Self-tuning embeddable SQL database with MobiLink sync, still shipped inside ISV apps but frozen at v17.",
+  "description": "SQL Anywhere began as Watcom SQL and became Sybase's database for embedding inside packaged software, remote offices and mobile devices. It is notably low-maintenance: it self-tunes cache and query plans, runs with zero DBA, and its MobiLink server synchronises thousands of remote SQL Anywhere or UltraLite databases with a central Oracle, SQL Server or HANA. Version 17 dates from 2015 and SAP only ships fixes now, with mainstream maintenance extended to the end of 2028. Existing ISVs keep it because it just works; new projects should look at SQLite or PostgreSQL plus a modern sync layer.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No new major version since 17 (2015); SAP ships fixes only and lists end of mainstream maintenance as Dec 31, 2028.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "mobile-offline",
+    "edge"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "primary-replica"
+  ],
+  "developer": "SAP SE (originally Watcom / Sybase iAnywhere)",
+  "vendorType": "company",
+  "initialRelease": 1992,
+  "latestVersion": {
+    "version": "17.0",
+    "date": "2015"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Per-seat/core and OEM runtime licensing; free Developer Edition for non-production use."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "unix",
+      "macos",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Built for many small databases synchronised with a central server rather than one large one."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (Watcom-SQL / T-SQL dialects)"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "ADO.NET",
+    "OLE DB",
+    "MobiLink"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "Python",
+    "JavaScript",
+    "PHP",
+    "Perl"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Self-tuning engine runs unattended inside shipped products with no DBA",
+    "MobiLink sync connects thousands of remote databases to a central Oracle, SQL Server or HANA",
+    "Accepts both Watcom-SQL and much of T-SQL, easing ports from ASE/SQL Server",
+    "Small footprint UltraLite edition for mobile and handheld devices"
+  ],
+  "weaknesses": [
+    "Frozen at version 17; no new features from SAP",
+    "Mobile SDKs and platform support lag modern iOS/Android practice",
+    "Small, shrinking community"
+  ],
+  "useCases": [
+    "Databases embedded in packaged ISV software (e.g., PowerBuilder apps)",
+    "Field-service and retail apps that sync with HQ",
+    "Remote office databases with intermittent connectivity"
+  ],
+  "notIdealFor": [
+    "New mobile apps (use SQLite with a modern sync engine)",
+    "Large central OLTP or analytics",
+    "Long-term platforms beyond 2028"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "sql-server",
+    "actian-zen",
+    "couchbase-lite",
+    "firebird",
+    "raima-database-manager"
+  ],
+  "tags": [
+    "embedded",
+    "sync",
+    "sybase",
+    "sap",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.sap.com/products/technology-platform/sql-anywhere.html",
+    "docs": "https://help.sap.com/docs/SAP_SQL_Anywhere",
+    "wikipedia": "https://en.wikipedia.org/wiki/SQL_Anywhere"
+  },
+  "ids": {
+    "stackoverflowTag": "sqlanywhere",
+    "wikipedia": "SQL Anywhere",
+    "npm": "sqlanywhere",
+    "pypi": "sqlanydb",
+    "hackerNewsQuery": "SQL Anywhere"
+  },
+  "brand": {
+    "color": "#0FAAFF",
+    "simpleIcon": "sap"
+  },
+  "sources": [
+    "https://answers.sap.com/questions/506922/sqlanywhere-upgrade-for-16-to-17-because-of-end-of.html",
+    "https://sqlanywhere-forum.sap.com/questions/35769/future-of-sql-anywhere-next-version",
+    "https://userapps.support.sap.com/sap/support/knowledge/en/2702056"
+  ],
+  "lastVerified": "2026-10-27"
+}

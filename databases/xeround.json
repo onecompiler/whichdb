@@ -1,0 +1,147 @@
+{
+  "slug": "xeround",
+  "name": "Xeround",
+  "aliases": [
+    "Xeround Cloud Database"
+  ],
+  "tagline": "Auto-scaling MySQL-compatible cloud DBaaS on a distributed in-memory engine; shut down in May 2013.",
+  "description": "Xeround was an Israeli company, launched in 2005, whose distributed in-memory database was first sold to telecom operators such as T-Mobile. In 2009 it added a MySQL front end and turned the engine into a cloud database service that promised elastic scaling and high availability without sharding, running on Amazon EC2 and other clouds; the beta reportedly drew about 2,000 organisations and general availability came in June 2011. The business did not pay off: on May 1, 2013 Xeround told paying customers it was closing the service and that data had to be migrated out by May 15, 2013.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Service shut down in May 2013 with two weeks' notice to migrate data. Aurora MySQL, PlanetScale or TiDB serve the same need today.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Xeround Inc.",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Historic only; the service no longer exists."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Historically scaled automatically behind a MySQL endpoint."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Any MySQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early elastic MySQL-compatible DBaaS without manual sharding (historically)",
+    "Distributed in-memory engine with built-in high availability"
+  ],
+  "weaknesses": [
+    "Service closed in 2013 with only two weeks for customers to migrate",
+    "Proprietary engine with no released code"
+  ],
+  "useCases": [
+    "Case study in DBaaS vendor risk",
+    "History of distributed MySQL-compatible services"
+  ],
+  "notIdealFor": [
+    "Any workload: the service no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-aurora",
+    "planetscale",
+    "tidb",
+    "singlestore",
+    "mysql-ndb-cluster"
+  ],
+  "tags": [
+    "dbaas",
+    "mysql-compatible",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20130113152906/http://xeround.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Xeround"
+  },
+  "ids": {
+    "wikipedia": "Xeround",
+    "hackerNewsQuery": "Xeround"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Xeround",
+    "https://web.archive.org/web/20130113152906/http://xeround.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

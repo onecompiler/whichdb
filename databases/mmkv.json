@@ -1,0 +1,178 @@
+{
+  "slug": "mmkv",
+  "name": "MMKV",
+  "aliases": [
+    "Tencent MMKV"
+  ],
+  "tagline": "Tencent's mmap-backed key-value store for mobile apps, built as a faster SharedPreferences/NSUserDefaults.",
+  "description": "MMKV is a small key-value storage framework from Tencent's WeChat team. It memory-maps a file, encodes values with protobuf and appends writes, so individual reads and writes take microseconds, and data survives crashes because the OS flushes mapped pages. It runs on Android, iOS, macOS, Windows, Linux, HarmonyOS and Flutter, supports multi-process access on Android, AES encryption and per-key expiry. It is the usual replacement for SharedPreferences, NSUserDefaults or AsyncStorage when those become a bottleneck. It is not a database for querying data: there are no indexes beyond the key.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "configuration",
+    "caching",
+    "session-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Tencent",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "2.4.3",
+    "date": "2026-10-16"
+  },
+  "writtenIn": [
+    "C++",
+    "Java",
+    "Kotlin",
+    "Objective-C",
+    "Swift"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "android",
+      "ios",
+      "macos",
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Designed for small values and app settings, not bulk data."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "Native SDKs"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "Kotlin",
+    "Objective-C",
+    "Swift",
+    "Dart",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Microsecond reads and writes via mmap and append-only protobuf encoding",
+    "Crash-safe without explicit sync calls",
+    "Multi-process access on Android",
+    "Runs on WeChat at very large install counts"
+  ],
+  "weaknesses": [
+    "Key-value only: no queries, indexes or transactions",
+    "Files grow until compaction; large values waste memory",
+    "Not a fit for structured or relational data"
+  ],
+  "useCases": [
+    "Replacing SharedPreferences, NSUserDefaults or AsyncStorage",
+    "Feature flags and user settings",
+    "Small session and token caches on device"
+  ],
+  "notIdealFor": [
+    "Storing large or queryable datasets",
+    "Server-side caching"
+  ],
+  "notableUsers": [
+    "Tencent (WeChat)"
+  ],
+  "alternatives": [
+    "hive-dart",
+    "sqlite",
+    "lmdb",
+    "objectbox",
+    "realm"
+  ],
+  "tags": [
+    "mobile",
+    "key-value",
+    "tencent",
+    "mmap",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://github.com/Tencent/MMKV",
+    "docs": "https://github.com/Tencent/MMKV/wiki",
+    "repository": "https://github.com/Tencent/MMKV",
+    "changelog": "https://github.com/Tencent/MMKV/releases"
+  },
+  "ids": {
+    "github": "Tencent/MMKV",
+    "hackerNewsQuery": "MMKV"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Tencent/MMKV",
+    "https://github.com/Tencent/MMKV/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

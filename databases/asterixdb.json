@@ -1,0 +1,175 @@
+{
+  "slug": "asterixdb",
+  "name": "AsterixDB",
+  "aliases": [
+    "Apache AsterixDB",
+    "ASTERIX"
+  ],
+  "tagline": "Apache parallel database for semi-structured JSON data with SQL++, LSM storage and spatial/text indexes.",
+  "description": "Apache AsterixDB is a shared-nothing parallel database for semi-structured data that began as an NSF-funded UC Irvine and UC Riverside project in 2009, was first released in 2013 and became an Apache top-level project in April 2016. It stores JSON-like ADM records in partitioned LSM trees with B+tree, R-tree and inverted keyword indexes, runs queries in SQL++ (SQL extended for nested data) on the Hyracks dataflow engine, and can also query external data in HDFS or object stores and ingest continuously via data feeds. Transactions are record-level, NoSQL-style. Couchbase's Analytics service is built on it, and commits remain frequent, but formal Apache releases are slow: 0.9.9 (March 2024) is the current stable version.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "olap",
+    "full-text-search",
+    "geospatial",
+    "stream-processing"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation (originally UC Irvine and UC Riverside)",
+  "vendorType": "foundation",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "0.9.9",
+    "date": "2024-03"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Hash-partitions datasets across nodes and executes queries in parallel on Hyracks; designed for clusters of commodity machines."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL++",
+    "AQL (legacy)"
+  ],
+  "apis": [
+    "HTTP query service",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "SQL++ handles nested and heterogeneous JSON with full join and aggregation power",
+    "Partitioned LSM storage sustains high ingest while keeping secondary indexes current",
+    "R-tree spatial, inverted keyword and B+tree indexes in one engine",
+    "Queries both managed datasets and external data in HDFS or object storage",
+    "Apache-licensed, with production lineage through Couchbase Analytics"
+  ],
+  "weaknesses": [
+    "Infrequent formal releases (0.9.9 in 2024) despite active commits",
+    "Small community outside academia and Couchbase",
+    "Only record-level transactions; no multi-statement ACID",
+    "Few managed offerings and limited ecosystem tooling"
+  ],
+  "useCases": [
+    "Analytics over large semi-structured JSON datasets",
+    "Spatial and text queries over social media or sensor feeds",
+    "Database systems research and teaching (SQL++, LSM, parallel execution)",
+    "Querying data lakes on HDFS or object storage alongside managed data"
+  ],
+  "notIdealFor": [
+    "Low-latency OLTP application backends",
+    "Teams wanting a commercially supported, frequently released product"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "couchbase",
+    "apache-spark-sql",
+    "trino",
+    "apache-druid",
+    "mongodb",
+    "clickhouse"
+  ],
+  "tags": [
+    "apache",
+    "sql++",
+    "semi-structured",
+    "parallel-database",
+    "research"
+  ],
+  "links": {
+    "website": "https://asterixdb.apache.org/",
+    "docs": "https://asterixdb.apache.org/docs/0.9.9/index.html",
+    "repository": "https://github.com/apache/asterixdb",
+    "changelog": "https://asterixdb.apache.org/download.html"
+  },
+  "ids": {
+    "github": "apache/asterixdb",
+    "hackerNewsQuery": "AsterixDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://asterixdb.apache.org/about.html",
+    "https://asterixdb.apache.org/download.html",
+    "https://downloads.apache.org/asterixdb/asterixdb-0.9.9/",
+    "https://github.com/apache/asterixdb",
+    "https://www.vldb.org/pvldb/vol12/p2275-hubail.pdf"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,210 @@
+{
+  "slug": "victoriametrics",
+  "name": "VictoriaMetrics",
+  "aliases": [
+    "VM",
+    "VictoriaMetrics Cluster"
+  ],
+  "tagline": "Resource-frugal, Prometheus-compatible metrics database, run as a single binary or a sharded cluster.",
+  "description": "VictoriaMetrics is a time-series database and monitoring stack built to do more per CPU core and per gigabyte of disk than other Prometheus-ecosystem backends. It ingests Prometheus remote write, InfluxDB line protocol, Graphite, OpenTSDB, Datadog and OpenTelemetry, and answers PromQL plus its superset MetricsQL. The single-node binary covers most teams; the cluster version splits vminsert, vmstorage and vmselect for horizontal scale and multi-tenancy, without needing Kafka or object storage. Enterprise adds downsampling, per-series retention filters and automated backups, and VictoriaMetrics Cloud is the vendor's managed service.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series",
+    "iot"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "VictoriaMetrics Inc.",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "1.155.0",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Open-source single-node and cluster are free; Enterprise is a subscription; VictoriaMetrics Cloud is usage-based."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "VictoriaMetrics Cloud",
+      "provider": "VictoriaMetrics",
+      "url": "https://victoriametrics.com/products/cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Cluster shards series across vmstorage nodes with optional replication; cross-region setups rely on vmagent dual-writes."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "MetricsQL",
+    "PromQL"
+  ],
+  "apis": [
+    "Prometheus remote write",
+    "Prometheus query API",
+    "InfluxDB line protocol",
+    "Graphite plaintext",
+    "OpenTSDB",
+    "OTLP",
+    "Datadog API",
+    "CSV/JSON import"
+  ],
+  "compatibleWith": [
+    "prometheus",
+    "influxdb",
+    "graphite",
+    "opentsdb"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very low RAM and disk per active series keeps hardware bills small",
+    "Drop-in Prometheus remote-write target with PromQL-compatible MetricsQL",
+    "One binary accepts Prometheus, Influx, Graphite, OpenTSDB, Datadog and OTLP ingestion",
+    "Cluster mode scales on plain disks with no Kafka, ZooKeeper or object-store dependency",
+    "Apache-2.0 including multi-tenancy in the open-source cluster"
+  ],
+  "weaknesses": [
+    "No built-in cross-region replication; durability relies on replicationFactor or vmagent dual-writes",
+    "Downsampling and retention filters are Enterprise-only",
+    "MetricsQL differs from PromQL in edge cases, which can surprise when switching back",
+    "Uses block storage rather than object storage, so very long retention costs more than S3-backed systems"
+  ],
+  "useCases": [
+    "Long-term storage for Prometheus metrics",
+    "Kubernetes monitoring with vmagent and the operator",
+    "Consolidating Graphite, Influx and Prometheus metrics in one store",
+    "High-rate IoT telemetry",
+    "Cutting cost when moving off SaaS metrics"
+  ],
+  "notIdealFor": [
+    "Logs (see VictoriaLogs)",
+    "Transactional data",
+    "Ad-hoc SQL analytics"
+  ],
+  "notableUsers": [
+    "adidas",
+    "CERN",
+    "Grammarly",
+    "Roblox",
+    "Spotify",
+    "Wix.com",
+    "Criteo",
+    "Razorpay",
+    "Zerodha"
+  ],
+  "alternatives": [
+    "prometheus",
+    "thanos",
+    "grafana-mimir",
+    "m3db",
+    "influxdb",
+    "greptimedb"
+  ],
+  "tags": [
+    "metrics",
+    "monitoring",
+    "prometheus-compatible",
+    "open-source",
+    "go"
+  ],
+  "links": {
+    "website": "https://victoriametrics.com/",
+    "docs": "https://docs.victoriametrics.com/",
+    "repository": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+    "pricing": "https://victoriametrics.com/products/enterprise/",
+    "changelog": "https://docs.victoriametrics.com/victoriametrics/changelog/"
+  },
+  "ids": {
+    "github": "VictoriaMetrics/VictoriaMetrics",
+    "stackoverflowTag": "victoriametrics",
+    "dockerHub": "victoriametrics/victoria-metrics",
+    "hackerNewsQuery": "VictoriaMetrics"
+  },
+  "brand": {
+    "color": "#621773",
+    "simpleIcon": "victoriametrics"
+  },
+  "sources": [
+    "https://github.com/VictoriaMetrics/VictoriaMetrics/releases",
+    "https://docs.victoriametrics.com/victoriametrics/casestudies/",
+    "https://docs.victoriametrics.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

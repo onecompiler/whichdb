@@ -1,0 +1,158 @@
+{
+  "slug": "goshawkdb",
+  "name": "GoshawkDB",
+  "aliases": [],
+  "tagline": "Distributed object-graph store with strictly serializable multi-object transactions; dormant since 2016.",
+  "description": "GoshawkDB was a distributed, fault-tolerant object store written in Go by Matthew Sackman. Data is a graph of objects whose values are opaque byte arrays with explicit pointers to other objects; clients submit multi-object transactions that the cluster commits only at strict serializability, using the Paxos Synod protocol among the replicas of every object touched, with no leader node. Objects are sharded so each lives on a majority subset of nodes, commits are flushed to disk before clients are told, and Go and Java clients support nested transactions and automatic retry. Version 0.3 added multiple roots and object capabilities. The 0.3.1 release of November 2016 was the last.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No releases or commits since 0.3.1 (November 2016); the project is effectively abandoned.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "graph",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Matthew Sackman",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "0.3.1",
+    "date": "2016-11-24"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3 (server); Apache 2.0 (clients)",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Objects are sharded across nodes and replicated to a configurable majority."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Client object API"
+  ],
+  "apis": [
+    "Go client",
+    "Java client"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Strictly serializable transactions across any set of objects",
+    "Leaderless Paxos-based commit avoids a single coordinator",
+    "Clean, well-documented design that is easy to study"
+  ],
+  "weaknesses": [
+    "Abandoned since 2016 at a pre-1.0 version",
+    "No query language or secondary indexes",
+    "AGPL server license"
+  ],
+  "useCases": [
+    "Studying leaderless serializable transaction protocols",
+    "Prototyping object-graph persistence"
+  ],
+  "notIdealFor": [
+    "Production systems",
+    "Query-heavy applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "foundationdb",
+    "cockroachdb",
+    "tikv",
+    "etcd"
+  ],
+  "tags": [
+    "distributed",
+    "transactions",
+    "paxos",
+    "go",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://goshawkdb.io/",
+    "repository": "https://github.com/goshawkdb/server",
+    "docs": "https://goshawkdb.io/documentation.html"
+  },
+  "ids": {
+    "github": "goshawkdb/server",
+    "hackerNewsQuery": "GoshawkDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://goshawkdb.io/",
+    "https://github.com/goshawkdb/server",
+    "https://dbdb.io/db/goshawkdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

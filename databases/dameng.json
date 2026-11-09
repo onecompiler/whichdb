@@ -1,0 +1,180 @@
+{
+  "slug": "dameng",
+  "name": "Dameng (DM)",
+  "aliases": [
+    "DM",
+    "DM8",
+    "DM9",
+    "达梦数据库",
+    "Dameng Database"
+  ],
+  "tagline": "China's leading home-grown RDBMS; DM9 (2026) adds distributed, HTAP and AI features.",
+  "description": "Dameng's DM database is a fully self-developed relational database from Wuhan Dameng Database Co., which listed on Shanghai's STAR Market in 2024. Unlike several Chinese competitors it is not a PostgreSQL fork, yet it offers strong Oracle compatibility (PL/SQL-like DMSQL, similar system views), a shared-storage cluster (DMDSC), MPP for analytics and data-guard style replication. DM8 has been the workhorse in government, power-grid and finance migrations; DM9, released in April 2026 after a seven-year gap, adds a unified centralized/distributed architecture, HTAP and AI capabilities. Like its peers, it is almost entirely focused on the Chinese market.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "htap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "shared-storage",
+    "distributed"
+  ],
+  "developer": "Wuhan Dameng Database Co., Ltd.",
+  "vendorType": "company",
+  "initialRelease": 1988,
+  "latestVersion": {
+    "version": "DM9",
+    "date": "2026-04-22"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Commercial editions; a free development edition of DM8 is downloadable."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "DMDSC shared-storage clustering, MPP for analytics and a distributed architecture in DM9."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "DMSQL (PL/SQL-compatible)"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "DPI (C API)",
+    ".NET Provider"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C",
+    "C#",
+    "Python",
+    "Go",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Independently developed kernel, not a fork, which matters for Chinese procurement rules",
+    "Strong Oracle compatibility in SQL, PL/SQL and system catalogues",
+    "Shared-storage cluster (DMDSC) and MPP options cover OLTP HA and analytics",
+    "Large installed base in government, power and finance migrations"
+  ],
+  "weaknesses": [
+    "Ecosystem, docs and support are almost entirely Chinese",
+    "DM9 is new; most production references are still on DM8",
+    "Vendor performance claims are rarely independently benchmarked"
+  ],
+  "useCases": [
+    "Replacing Oracle in government and state-owned enterprises",
+    "Power-grid and energy management systems",
+    "Financial back-office systems on domestic infrastructure"
+  ],
+  "notIdealFor": [
+    "International deployments",
+    "Teams needing open-source licensing",
+    "Cloud-native serverless apps"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kingbase",
+    "huawei-gaussdb",
+    "oceanbase",
+    "oracle-database",
+    "tidb",
+    "polardb"
+  ],
+  "tags": [
+    "sql",
+    "china",
+    "oracle-compatible",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://www.dameng.com/",
+    "docs": "https://eco.dameng.com/document/dm/zh-cn/start/index.html"
+  },
+  "ids": {
+    "pypi": "dmPython",
+    "hackerNewsQuery": "Dameng database"
+  },
+  "brand": {},
+  "sources": [
+    "https://stock.10jqka.com.cn/20260518/c676778053.shtml",
+    "https://news.qq.com/rain/a/20260521A06YUV00",
+    "https://en.dameng.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,165 @@
+{
+  "slug": "siaqodb",
+  "name": "Siaqodb",
+  "aliases": [
+    "Siaqo DB",
+    "SiaqodbSync"
+  ],
+  "tagline": "Embedded object and document database for .NET, Xamarin and Unity with LINQ queries; now inactive.",
+  "description": "Siaqodb was an embedded NoSQL object database for .NET from CCSTM Computing, aimed at desktop, mobile and game developers. It stored POCO object graphs either object by object or as whole documents, queried them through a full LINQ provider, supported partial and eager loading, async APIs and pluggable encryption, and in its last versions used LMDB as an ACID storage engine. It ran on .NET, Mono/MonoMac, UWP, Xamarin.iOS, Xamarin.Android and Unity3D, and a sync add-on replicated client data to CouchDB, MongoDB or Azure Table storage. After the company stopped trading the source was published on GitHub under MIT in 2020-2021, with a final NuGet release (5.5.0.12) in March 2021; nothing has happened since.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Vendor ceased operations; source released under MIT in 2021 with no activity since. For embedded .NET storage use LiteDB, Realm or SQLite.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "CCSTM Computing LLC",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "5.5.0.12",
+    "date": "2021-03-15"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "basedOn": "LMDB",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License (since 2021; previously commercial)",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Formerly a commercial product; now free MIT-licensed source with no support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "macos",
+      "ios",
+      "android",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "LINQ"
+  ],
+  "apis": [
+    "Embedded .NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Stores plain .NET object graphs with no mapping layer",
+    "Full LINQ provider and async API",
+    "Ran across desktop, Xamarin mobile and Unity games",
+    "Optional sync to CouchDB, MongoDB or Azure storage"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2021; targets the Xamarin era rather than modern .NET MAUI",
+    "Small user base and sparse documentation",
+    ".NET-only"
+  ],
+  "useCases": [
+    "Maintaining older Xamarin or Unity apps built on Siaqodb",
+    "Studying LINQ-native embedded object stores"
+  ],
+  "notIdealFor": [
+    "New .NET or mobile projects",
+    "Server-side or multi-user databases"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "litedb",
+    "realm",
+    "sqlite",
+    "objectbox",
+    "couchbase-lite"
+  ],
+  "tags": [
+    "dotnet",
+    "embedded",
+    "object-database",
+    "xamarin",
+    "unity"
+  ],
+  "links": {
+    "website": "https://github.com/morecraf/Siaqodb",
+    "repository": "https://github.com/morecraf/Siaqodb"
+  },
+  "ids": {
+    "github": "morecraf/Siaqodb",
+    "hackerNewsQuery": "Siaqodb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/morecraf/Siaqodb",
+    "https://www.nuget.org/packages/Siaqodb",
+    "https://web.archive.org/web/20210308065714/http://siaqodb.com/",
+    "https://dbdb.io/db/siaqodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

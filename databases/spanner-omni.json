@@ -1,0 +1,184 @@
+{
+  "slug": "spanner-omni",
+  "name": "Google Spanner Omni",
+  "aliases": [
+    "Spanner Omni"
+  ],
+  "tagline": "Downloadable Spanner that runs on your own servers, other clouds or a laptop, with Paxos and auto-sharding.",
+  "description": "Spanner Omni is a self-managed edition of Google's Spanner that you can run in your own data center, on AWS or Google Cloud VMs, or on a laptop. Google swapped Spanner's dependencies on Colossus and TrueTime hardware for a local-filesystem storage layer and software time synchronization, while keeping Paxos replication, automatic sharding, and the GoogleSQL, PostgreSQL and graph interfaces, plus vector, full-text and columnar features. It was previewed in April 2026 and reached general availability in autumn 2026 with TLS, authentication, audit logs and backups. There is no availability SLA, and upgrades, monitoring (Prometheus/Grafana) and capacity are your job. A free Developer Edition exists; production use needs a vCPU-based annual subscription.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "graph",
+    "key-value",
+    "vector",
+    "search",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "graph-traversal",
+    "vector-search",
+    "full-text-search"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "Google",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2026,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Google Cloud Spanner",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Developer and Commercial editions)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Developer Edition free for non-production (single server up to 4 vCPUs does not expire; larger installs get 90-day licenses). Commercial Edition is a vCPU-based annual subscription."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp",
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Paxos replication and automatic sharding; Google recommends reference topologies of 3 servers per zone or 3 zones x 3 servers; no SLA."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "GoogleSQL",
+    "PostgreSQL dialect",
+    "GQL"
+  ],
+  "apis": [
+    "gRPC",
+    "Spanner client libraries",
+    "PGAdapter (PostgreSQL wire)",
+    "MCP Toolbox"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "Go",
+    "Python",
+    "JavaScript",
+    "C#",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Spanner's consistency, auto-sharding and multi-model features outside Google Cloud",
+    "Same client libraries and dialects as managed Spanner for portability",
+    "Runs on-premises, on AWS, or on a laptop for local development",
+    "Free Developer Edition for non-production use"
+  ],
+  "weaknesses": [
+    "No availability SLA; operations, upgrades and monitoring are on you",
+    "Known feature gaps versus managed Spanner, with no public timeline",
+    "Google Cloud integrations (BigQuery, Gemini) are unavailable",
+    "Very new; little production track record outside Google"
+  ],
+  "useCases": [
+    "Regulated or sovereign deployments that cannot use public cloud",
+    "Hybrid apps sharing a data model with managed Spanner",
+    "Multi-cloud distributed SQL with Spanner semantics",
+    "Local development and CI against a real Spanner engine"
+  ],
+  "notIdealFor": [
+    "Teams without distributed-systems operations experience",
+    "Small apps that fit one Postgres server",
+    "Workloads that require a vendor-backed uptime SLA"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "google-cloud-spanner",
+    "cockroachdb",
+    "yugabytedb",
+    "tidb",
+    "ydb",
+    "alloydb"
+  ],
+  "tags": [
+    "distributed-sql",
+    "self-hosted",
+    "google",
+    "spanner",
+    "multi-cloud"
+  ],
+  "links": {
+    "website": "https://cloud.google.com/spanner-omni"
+  },
+  "ids": {
+    "hackerNewsQuery": "Spanner Omni"
+  },
+  "brand": {
+    "color": "#4285F4",
+    "simpleIcon": "googlecloudspanner"
+  },
+  "sources": [
+    "https://cloud.google.com/blog/products/databases/introducing-spanner-omni",
+    "https://infoq.com/news/2026/10/spanner-omni-deploy-anywhere-ga"
+  ],
+  "lastVerified": "2026-10-27"
+}

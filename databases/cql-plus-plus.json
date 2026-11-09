@@ -1,0 +1,155 @@
+{
+  "slug": "cql-plus-plus",
+  "name": "CQL++",
+  "aliases": [
+    "CQL++ DBMS"
+  ],
+  "tagline": "1990s C++ SQL database with ODBC, embedded SQL and an ISAM layer, later released as free source code.",
+  "description": "CQL++ is an ANSI SQL-89 database management system with ODBC extensions from Machine Independent Software Corporation, distributed with complete C++ source code. It is layered so programmers can work at several levels: the ODBC API (Level 1 plus parts of Level 2), an SQL API used by a preprocessor for embedded EXEC SQL statements, and lower ISAM and B+tree layers for direct record access. It shipped as a single-user library with full COMMIT/ROLLBACK and crash recovery, and as a client/server version providing repeatable-read isolation for multiple users. The client/server code was later made available free of charge, first under the GPL and then under a looser custom license. The site is now maintained in memory of its author Seth Kurtzberg, copyright ends in 2010, and the newest download is a 10.0 beta.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No development since about 2010; the site is kept online in memory of its author and paid support is unavailable.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Machine Independent Software Corporation",
+  "vendorType": "company",
+  "initialRelease": 1994,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Custom free license (formerly GPL)"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Source free to download; paid support is no longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Embedded SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "SQL API",
+    "ISAM API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Complete C++ source for a small SQL engine with ODBC, embedded SQL and ISAM layers",
+    "Transactions with crash recovery in both single-user and client/server builds",
+    "Lets code drop down to ISAM/B+tree access when SQL is too heavy"
+  ],
+  "weaknesses": [
+    "Unmaintained since about 2010, with builds tied to old compilers",
+    "Only SQL-89-level features",
+    "No support or community"
+  ],
+  "useCases": [
+    "Studying the internals of a compact SQL engine",
+    "Maintaining legacy applications built on it"
+  ],
+  "notIdealFor": [
+    "New applications",
+    "Modern SQL features or concurrency needs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "h2",
+    "berkeley-db",
+    "c-treeace"
+  ],
+  "tags": [
+    "sql",
+    "c++",
+    "embedded",
+    "odbc",
+    "1990s"
+  ],
+  "links": {
+    "website": "http://www.cql.com/",
+    "docs": "http://www.cql.com/cql.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://www.cql.com/",
+    "http://www.cql.com/copying.html",
+    "http://www.cql.com/cql.html",
+    "http://www.cql.com/download.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

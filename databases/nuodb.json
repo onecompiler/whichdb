@@ -1,0 +1,177 @@
+{
+  "slug": "nuodb",
+  "name": "NuoDB",
+  "aliases": [
+    "NuoDB Distributed SQL"
+  ],
+  "tagline": "Elastic distributed SQL with in-memory transaction engines and separate storage managers, owned by Dassault.",
+  "description": "NuoDB is a distributed SQL database built around a two-tier, peer-to-peer design: Transaction Engines are in-memory SQL processes that cache data on demand, while Storage Managers persist it, and either tier can be scaled out independently. That makes it good at elastic scale-out of SQL compute and continuous availability across nodes and data centers, while keeping ACID semantics through MVCC. Dassault Systèmes acquired the company in 2020 and now develops it largely as infrastructure for its 3DEXPERIENCE platform, while still selling it with Kubernetes Helm charts and a DBaaS control plane. It is a niche choice today, mostly relevant to existing customers.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Dassault Systèmes",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "8.0.1",
+    "date": "2026-08-12"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (commercial)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Sold under enterprise agreements; historically offered a limited free Community Edition."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Transaction Engines and Storage Managers scale independently; multiple Storage Managers can run in different data centers."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "Native client protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C++",
+    "C#",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "SQL compute (Transaction Engines) scales out independently from storage",
+    "Peer-to-peer design with no single coordinator to fail",
+    "ACID transactions with MVCC across nodes",
+    "Official Helm charts for Kubernetes deployment"
+  ],
+  "weaknesses": [
+    "Small user community and few third-party integrations",
+    "Product direction driven by Dassault's internal needs",
+    "No public pricing or free tier today",
+    "Lacks modern features such as JSON, vector or CDC tooling found in competitors"
+  ],
+  "useCases": [
+    "Existing NuoDB deployments in financial services and ISVs",
+    "Backends for Dassault 3DEXPERIENCE-based solutions",
+    "Elastic OLTP needing continuous availability"
+  ],
+  "notIdealFor": [
+    "Greenfield projects wanting an active open ecosystem",
+    "Analytics workloads",
+    "Teams wanting a managed cloud service"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cockroachdb",
+    "yugabytedb",
+    "tidb",
+    "google-cloud-spanner",
+    "oracle-database"
+  ],
+  "tags": [
+    "distributed-sql",
+    "newsql",
+    "elastic",
+    "dassault"
+  ],
+  "links": {
+    "website": "https://www.3ds.com/nuodb-distributed-sql-database/",
+    "docs": "https://doc.nuodb.com/",
+    "repository": "https://github.com/nuodb/nuodb-helm-charts",
+    "wikipedia": "https://en.wikipedia.org/wiki/NuoDB"
+  },
+  "ids": {
+    "stackoverflowTag": "nuodb",
+    "wikipedia": "NuoDB",
+    "dockerHub": "nuodb/nuodb",
+    "pypi": "pynuodb",
+    "hackerNewsQuery": "NuoDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.3ds.com/nuodb-distributed-sql-database/",
+    "https://hub.docker.com/r/nuodb/nuodb",
+    "https://en.wikipedia.org/wiki/NuoDB",
+    "https://github.com/nuodb/nuodb-helm-charts/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

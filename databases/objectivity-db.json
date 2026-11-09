@@ -1,0 +1,162 @@
+{
+  "slug": "objectivity-db",
+  "name": "Objectivity/DB",
+  "aliases": [
+    "Objectivity",
+    "ThingSpan",
+    "InfiniteGraph"
+  ],
+  "tagline": "Distributed, federated object database once used at petabyte scale in physics; vendor has ceased trading.",
+  "description": "Objectivity/DB was a commercial object database with a distributed, federated architecture: many database files across many hosts presented as a single logical store, accessed through C++, Java, C# and Python APIs that followed the ODMG standard. It was famous for scientific and defence workloads, including SLAC's BaBar experiment, which held over a petabyte of objects, and it later spawned the ThingSpan and InfiniteGraph graph products. Objectivity, Inc. reportedly ceased operations in late 2023, and its website no longer serves product information. Treat it as discontinued.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Objectivity, Inc. reportedly ceased operations in late 2023; objectivity.com no longer serves product pages and no releases or support are available.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "graph"
+  ],
+  "workloads": [
+    "scientific",
+    "oltp",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Objectivity, Inc. (defunct)",
+  "vendorType": "company",
+  "initialRelease": 1990,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (no longer sold)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Federated databases reached over a petabyte in the BaBar physics experiment."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "ODMG object APIs",
+    "SQL/ODBC"
+  ],
+  "apis": [
+    "C++ API",
+    "Java API",
+    "C# API",
+    "Python API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "C#",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Federated architecture spanning many hosts as one logical database",
+    "Proven at petabyte scale in high-energy physics"
+  ],
+  "weaknesses": [
+    "Vendor has ceased trading; no support or updates",
+    "Proprietary formats complicate data extraction"
+  ],
+  "useCases": [
+    "Planning migrations off remaining Objectivity/DB installations",
+    "Historical reference for federated object database design"
+  ],
+  "notIdealFor": [
+    "Any new project"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "versant-object-database",
+    "gemstone-s",
+    "objectdb",
+    "neo4j",
+    "postgresql"
+  ],
+  "tags": [
+    "object-database",
+    "federated",
+    "scientific",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://www.objectivity.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Objectivity/DB"
+  },
+  "ids": {
+    "wikipedia": "Objectivity/DB",
+    "hackerNewsQuery": "Objectivity/DB"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Objectivity/DB",
+    "https://www.objectivity.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

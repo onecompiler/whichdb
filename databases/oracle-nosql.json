@@ -1,0 +1,199 @@
+{
+  "slug": "oracle-nosql",
+  "name": "Oracle NoSQL Database",
+  "aliases": [
+    "Oracle NoSQL",
+    "Oracle NoSQL Database Cloud Service"
+  ],
+  "tagline": "Oracle's sharded key-value and JSON store, available as Apache-licensed software or an OCI service.",
+  "description": "Oracle NoSQL Database is a shared-nothing, sharded store built on Berkeley DB Java Edition. It exposes tables with primary and shard keys, JSON columns, secondary indexes and a SQL-like query language, with per-operation tunable durability and consistency and multi-region active-active tables. The Community Edition is Apache 2.0, the Enterprise Edition adds security and support, and OCI runs a serverless cloud service with an Always Free tier. Release 25.1 added inner joins across table hierarchies and JSON Merge Patch, and 25.3.24 is the current patch (June 2026). Its main appeal is to Oracle-centric organizations wanting predictable-latency NoSQL inside OCI.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "wide-column",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "iot",
+    "session-store",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server",
+    "serverless"
+  ],
+  "developer": "Oracle",
+  "vendorType": "company",
+  "initialRelease": 2011,
+  "latestVersion": {
+    "version": "25.3.24",
+    "date": "2026-06-02"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Oracle Berkeley DB Java Edition",
+  "license": {
+    "type": "permissive",
+    "name": "Apache 2.0 (Community Edition); commercial Enterprise Edition",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free",
+      "per-node-license",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition free; Enterprise Edition licensed per processor; OCI cloud service billed by read/write units and storage, with Always Free tables."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "oracle-cloud"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Oracle NoSQL Database Cloud Service",
+      "provider": "Oracle Cloud Infrastructure",
+      "url": "https://www.oracle.com/database/nosql/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Hash-sharded replication groups with elastic expansion; multi-region tables replicate writes bidirectionally."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Oracle NoSQL SQL"
+  ],
+  "apis": [
+    "Java Direct Driver",
+    "NoSQL SDK HTTP proxy"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Apache-licensed Community Edition of a mature sharded store",
+    "Per-operation durability and consistency settings",
+    "Multi-region active-active tables",
+    "Serverless OCI service with an Always Free tier",
+    "Table hierarchies let parent/child rows co-locate and be joined"
+  ],
+  "weaknesses": [
+    "Small community and ecosystem outside Oracle shops",
+    "Transactions are limited to records sharing a shard key",
+    "Managed service exists only on OCI",
+    "Query language is SQL-like but far from full SQL"
+  ],
+  "useCases": [
+    "Low-latency profile and session stores on OCI",
+    "IoT ingestion with TTL-based expiry",
+    "Oracle-centric architectures needing a NoSQL tier"
+  ],
+  "notIdealFor": [
+    "Teams outside the Oracle ecosystem",
+    "Complex ad-hoc queries and analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-dynamodb",
+    "apache-cassandra",
+    "aerospike",
+    "mongodb",
+    "azure-cosmos-db",
+    "berkeley-db"
+  ],
+  "tags": [
+    "oracle",
+    "key-value",
+    "json",
+    "sharded",
+    "oci"
+  ],
+  "links": {
+    "website": "https://www.oracle.com/database/nosql/",
+    "docs": "https://docs.oracle.com/en/database/other-databases/nosql-database/",
+    "repository": "https://github.com/oracle/nosql",
+    "changelog": "https://docs.oracle.com/en/database/other-databases/nosql-database/25.3/release-notes/overview.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Oracle_NoSQL_Database"
+  },
+  "ids": {
+    "github": "oracle/nosql",
+    "stackoverflowTag": "oracle-nosql",
+    "wikipedia": "Oracle_NoSQL_Database",
+    "npm": "oracle-nosqldb",
+    "pypi": "borneo",
+    "hackerNewsQuery": "Oracle NoSQL"
+  },
+  "brand": {
+    "color": "#C74634"
+  },
+  "sources": [
+    "https://docs.oracle.com/en/database/other-databases/nosql-database/25.3/release-notes/overview.html",
+    "https://blogs.oracle.com/oracle4engineer/oracle-nosql-database-enterprise-edition-25-3-24-24-4-14-23-3-41-2026-06-02",
+    "https://forums.oracle.com/ords/apexds/post/oracle-nosql-database-25-1-release-1496",
+    "https://github.com/oracle/nosql"
+  ],
+  "lastVerified": "2026-10-27"
+}

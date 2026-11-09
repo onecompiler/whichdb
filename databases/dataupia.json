@@ -1,0 +1,150 @@
+{
+  "slug": "dataupia",
+  "name": "Dataupia",
+  "aliases": [
+    "Dataupia Satori Server"
+  ],
+  "tagline": "Data warehouse appliance that sat transparently under existing Oracle and SQL Server databases; defunct.",
+  "description": "Dataupia was a Cambridge, Massachusetts company founded in 2005 by Foster Hinshaw, a co-founder of Netezza, to sell the Satori Server, a data warehouse appliance announced in 2007. Unlike appliances that replaced the customer's database, Satori Server bundled servers, storage, an embedded database engine and parallel processing into a box that plugged in underneath existing Oracle and Microsoft SQL Server deployments, so applications and SQL stayed the same while large tables and scans were offloaded to the appliance. It found users in telecom and other big-data reporting, including a 150 TB deployment announced by Subex, but the company cut staff and sought a buyer during the 2009 recession, announced version 4.0 in February 2011, and then went silent. It is defunct.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Company went quiet after announcing Satori Server 4.0 (Feb 2011) and is defunct; its website is gone.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Dataupia Corporation",
+  "vendorType": "company",
+  "initialRelease": 2007,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold as appliances; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Appliances were added incrementally; a 150 TB deployment was announced in 2008."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [
+    "oracle",
+    "sql-server"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Transparent to applications: worked underneath existing Oracle and SQL Server databases",
+    "All-in-one appliance with server, storage and parallel processing",
+    "Scaled incrementally by adding appliances"
+  ],
+  "weaknesses": [
+    "Company defunct; no support, updates or spare parts",
+    "Proprietary appliance hardware"
+  ],
+  "useCases": [
+    "Historical reference for the 2000s data warehouse appliance market",
+    "Understanding legacy telecom reporting systems built on it"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [
+    "Subex"
+  ],
+  "alternatives": [
+    "teradata-vantage",
+    "ibm-netezza",
+    "greenplum",
+    "vertica",
+    "snowflake"
+  ],
+  "tags": [
+    "data-warehouse",
+    "appliance",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2008/http://www.dataupia.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Dataupia"
+  },
+  "ids": {
+    "wikipedia": "Dataupia",
+    "hackerNewsQuery": "Dataupia"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Dataupia",
+    "https://web.archive.org/web/2008/http://www.dataupia.com/",
+    "https://dbdb.io/db/dataupia"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,152 @@
+{
+  "slug": "consus-java",
+  "name": "Consus (Java)",
+  "aliases": [
+    "Consus ORDBMS",
+    "Consus (Knizhnik)"
+  ],
+  "tagline": "Konstantin Knizhnik's pure-Java embedded object-relational database with JDBC and an SQL-89 dialect.",
+  "description": "This Consus is a small embedded object-relational database written in pure Java by Konstantin Knizhnik, the author of FastDB, GigaBASE and Perst and later a PostgreSQL contributor. It keeps the whole database in a single file, exposes a JDBC interface, and adds object-oriented extensions: tables can be defined implicitly from Java classes, rows map directly to objects, table inheritance enables polymorphic queries, and records can reference each other for navigation without joins. Queries use JSQL, a non-procedural language covering most of SQL-89, and can return objects rather than tuples; BLOBs and CLOBs are streamed. The last published versions are 1.11 for JDK 1.2 and later and 1.06 of a .NET port, and the project has been static for well over a decade. New Java projects should use H2, HSQLDB, Derby or Knizhnik's own Perst.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Unmaintained for many years; the last releases (1.11 for Java, 1.06 for .NET) remain downloadable from garret.ru.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "object"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Konstantin Knizhnik",
+  "vendorType": "community",
+  "initialRelease": 2004,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD-style license"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "JSQL",
+    "SQL"
+  ],
+  "apis": [
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Single-file embedded database with a standard JDBC interface",
+    "Maps Java classes to tables, with inheritance and polymorphic queries",
+    "Direct object references allow navigation without joins"
+  ],
+  "weaknesses": [
+    "Abandoned; targets JDK 1.2-era Java",
+    "Only partial SQL-89 support",
+    "Tiny user base and no maintained documentation"
+  ],
+  "useCases": [
+    "Maintaining old Java applications that embed it",
+    "Studying object-relational mapping built into a database engine"
+  ],
+  "notIdealFor": [
+    "New Java projects",
+    "Concurrent multi-user servers"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "perst",
+    "objectdb"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "object-relational",
+    "jdbc"
+  ],
+  "links": {
+    "website": "http://www.garret.ru/consus.html",
+    "docs": "http://www.garret.ru/consus/docs/Consus.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://www.garret.ru/consus.html",
+    "http://www.garret.ru/consus/docs/Consus.html",
+    "https://dbdb.io/db/consus-java"
+  ],
+  "lastVerified": "2026-10-27"
+}

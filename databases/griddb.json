@@ -1,0 +1,187 @@
+{
+  "slug": "griddb",
+  "name": "GridDB",
+  "aliases": [
+    "GridDB Community Edition",
+    "GridDB Cloud"
+  ],
+  "tagline": "Toshiba's memory-first container database for IoT time series, with per-container ACID and SQL.",
+  "description": "GridDB is a distributed database from Toshiba Digital Solutions aimed at industrial IoT and social-infrastructure systems. Data is organised into containers, either time-series or general collections keyed by row, kept memory-first with disk persistence, and spread across a cluster that promotes a new master automatically when nodes fail. It offers a NoSQL API with ACID guarantees inside each container plus a SQL interface, which the community edition has included since version 5. Toshiba runs it in energy, manufacturing and transport projects and offers GridDB Cloud as a managed service. The server is AGPL-3.0 with Apache-licensed clients, and adoption outside Japan is modest.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "key-value",
+    "relational"
+  ],
+  "workloads": [
+    "iot",
+    "time-series",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Toshiba Digital Solutions",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "5.9.0",
+    "date": "2026-02-18"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0 (server); Apache-2.0 clients",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Community edition is free; GridDB Enterprise is licensed by Toshiba; GridDB Cloud is a subscription service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "GridDB Cloud",
+      "provider": "Toshiba Digital Solutions"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Containers are partitioned and replicated across nodes; capacity grows by adding nodes."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "TQL"
+  ],
+  "apis": [
+    "Native NoSQL API",
+    "JDBC",
+    "Web API (REST)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C",
+    "Python",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Memory-first design gives low-latency reads and writes on sensor data",
+    "ACID transactions within a container, unusual for a TSDB",
+    "Time-series containers with expiry and built-in sampling functions",
+    "Backed by Toshiba with long-running industrial deployments"
+  ],
+  "weaknesses": [
+    "Small community and ecosystem outside Japan",
+    "AGPL-3.0 server licence",
+    "Linux-only server builds",
+    "SQL coverage and tooling lag mainstream SQL databases"
+  ],
+  "useCases": [
+    "Factory and plant sensor data",
+    "Smart grid and energy monitoring",
+    "Infrastructure monitoring for social systems",
+    "IoT apps needing per-device transactional updates"
+  ],
+  "notIdealFor": [
+    "Log and trace observability",
+    "Large ad-hoc analytical joins",
+    "Teams wanting a broad third-party ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tdengine",
+    "apache-iotdb",
+    "influxdb",
+    "timescaledb",
+    "machbase",
+    "extremedb"
+  ],
+  "tags": [
+    "iot",
+    "time-series",
+    "in-memory",
+    "toshiba",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://griddb.net/",
+    "docs": "https://docs.griddb.net/",
+    "repository": "https://github.com/griddb/griddb",
+    "changelog": "https://github.com/griddb/griddb/releases"
+  },
+  "ids": {
+    "github": "griddb/griddb",
+    "stackoverflowTag": "griddb",
+    "dockerHub": "griddb/griddb",
+    "pypi": "griddb-python",
+    "hackerNewsQuery": "GridDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/griddb/griddb/releases",
+    "https://griddb.net/",
+    "https://pypi.org/project/griddb-python/"
+  ],
+  "lastVerified": "2026-10-27"
+}

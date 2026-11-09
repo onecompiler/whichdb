@@ -1,0 +1,163 @@
+{
+  "slug": "db4o",
+  "name": "db4o",
+  "aliases": [
+    "db4objects",
+    "Database for Objects"
+  ],
+  "tagline": "Pioneering embeddable object database for Java and .NET, discontinued by Actian in 2014.",
+  "description": "db4o was an open-source embedded object database for Java and .NET that stored plain objects directly, with no mapping layer, and offered native queries, query-by-example, SODA and LINQ. In the late 2000s it was a common choice for embedded devices and early Android apps. Versant acquired db4objects in 2008, Actian acquired Versant in 2012, and Actian ended development and support in 2014. Only community mirrors of the old code remain. It belongs in the catalogue for history and migrations. Today's closest equivalents are ObjectBox, Realm or plain SQLite.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Actian stopped development, downloads and support of db4o in 2014; no official successor.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Actian (formerly db4objects / Versant)",
+  "vendorType": "company",
+  "initialRelease": 2000,
+  "writtenIn": [
+    "Java",
+    "C#"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-2.0 or commercial license (historical)",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "No longer sold or distributed."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Native Queries",
+    "Query by Example",
+    "SODA",
+    "LINQ"
+  ],
+  "apis": [
+    "Java API",
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stored plain objects with no mapping or schema files",
+    "Native queries written in the host language",
+    "Tiny footprint for its era"
+  ],
+  "weaknesses": [
+    "Discontinued since 2014 with no security fixes or support",
+    "Incompatible with modern JVM and .NET tooling in places",
+    "No migration path from the vendor"
+  ],
+  "useCases": [
+    "Maintaining legacy applications that still embed db4o",
+    "Exporting old db4o files ahead of a migration to a supported store"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Systems needing vendor support or patches"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "objectbox",
+    "realm",
+    "perst",
+    "objectdb",
+    "sqlite"
+  ],
+  "tags": [
+    "object-database",
+    "java",
+    "dotnet",
+    "discontinued",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/Db4o",
+    "wikipedia": "https://en.wikipedia.org/wiki/Db4o"
+  },
+  "ids": {
+    "stackoverflowTag": "db4o",
+    "wikipedia": "Db4o",
+    "hackerNewsQuery": "db4o"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Db4o",
+    "https://sourceforge.net/projects/db4o/"
+  ],
+  "lastVerified": "2026-10-27"
+}

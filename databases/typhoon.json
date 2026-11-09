@@ -1,0 +1,153 @@
+{
+  "slug": "typhoon",
+  "name": "Typhoon",
+  "aliases": [
+    "Typhoon RDBMS",
+    "Typhoon Relational Database Management System"
+  ],
+  "tagline": "Free 1990s C database library in the style of Raima db_VISTA, but relational; long abandoned.",
+  "description": "Typhoon is a C library for record-oriented databases on UNIX and OS/2, released by Danish developer Thomas B. Pedersen in 1994. Inspired by Raima's db_VISTA but relational rather than network-based, it lets you describe tables like C structs in a DDL file with primary, alternate and foreign keys, compile it with the ddlp tool, and then read and write records through C calls. It supported nested structures, unions, variable-length fields and referential integrity, but shipped without locking or transactions. Kaz Kylheku took over maintenance in 1999 with 1.11.x cleanup releases; a GitHub mirror exists, but there has been no development for decades.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Unmaintained since Kaz Kylheku's 1.11.x releases (1999); only a 2018 GitHub mirror remains. Use SQLite, LMDB or Raima for embedded C storage.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Thomas B. Pedersen; later Kaz Kylheku",
+  "vendorType": "community",
+  "initialRelease": 1994,
+  "latestVersion": {
+    "version": "1.11.x",
+    "date": "1999"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Typhoon license (MIT-style permissive)"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C record API",
+    "DDL"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Schema defined as C structures, compiled ahead of time for fast record access",
+    "Primary, alternate and foreign keys with referential integrity in a tiny library",
+    "Permissive licence and small, readable C source"
+  ],
+  "weaknesses": [
+    "No locking, logging or transactions in released versions",
+    "K&R-era C code, unmaintained for decades"
+  ],
+  "useCases": [
+    "Studying 1990s embedded database design",
+    "Maintaining old C applications that use it"
+  ],
+  "notIdealFor": [
+    "New embedded projects",
+    "Multi-user or crash-safe storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "raima-database-manager",
+    "berkeley-db",
+    "lmdb",
+    "c-treeace"
+  ],
+  "tags": [
+    "c",
+    "embedded",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/19990224055253/http://www.belle.dk:80/~tbp/",
+    "repository": "https://github.com/jonahharris/osdb-typhoon"
+  },
+  "ids": {
+    "github": "jonahharris/osdb-typhoon"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/jonahharris/osdb-typhoon",
+    "https://dbdb.io/db/typhoon"
+  ],
+  "lastVerified": "2026-10-27"
+}

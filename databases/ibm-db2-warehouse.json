@@ -1,0 +1,185 @@
+{
+  "slug": "ibm-db2-warehouse",
+  "name": "IBM Db2 Warehouse",
+  "aliases": [
+    "Db2 Warehouse",
+    "dashDB",
+    "Db2 Warehouse on Cloud"
+  ],
+  "tagline": "IBM's MPP analytics edition of Db2 with BLU columnar acceleration, as software or SaaS.",
+  "description": "Db2 Warehouse (originally dashDB) is the analytics-focused edition of IBM Db2: an MPP, shared-nothing database that uses BLU Acceleration for in-memory columnar processing, data skipping and actionable compression. It ships as containerized software for Red Hat OpenShift and Cloud Pak for Data, and as a SaaS on AWS and IBM Cloud whose newer generation separates compute from object storage, reads Apache Iceberg and interoperates with watsonx.data. It suits IBM-centric enterprises and Db2 skill sets; outside that world it has little momentum.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "IBM",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "IBM Db2",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "SaaS billed hourly by compute and storage; software licensed via Cloud Pak for Data or VPCs; free trial available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "ibm-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Db2 Warehouse SaaS",
+      "provider": "IBM",
+      "url": "https://www.ibm.com/products/db2/warehouse"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "MPP partitions across nodes; SaaS separates compute from object storage with cross-region replication."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "SQL PL",
+    "PL/SQL (compatibility)"
+  ],
+  "apis": [
+    "DRDA",
+    "JDBC",
+    "ODBC",
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "C",
+    ".NET",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "BLU Acceleration: in-memory columnar processing with data skipping",
+    "Full Db2 SQL, SQL PL and Oracle compatibility features",
+    "Reads and writes Apache Iceberg and integrates with watsonx.data",
+    "Deploys on OpenShift on-prem or as SaaS on AWS and IBM Cloud",
+    "Built-in ML routines and Python/R support"
+  ],
+  "weaknesses": [
+    "Strongly tied to the IBM ecosystem and licensing",
+    "Smaller community and fewer third-party integrations",
+    "Container platform (OpenShift) adds operational weight"
+  ],
+  "useCases": [
+    "IBM-centric enterprise data warehouse",
+    "Netezza or Db2 consolidation",
+    "Hybrid warehouse with watsonx.data lakehouse"
+  ],
+  "notIdealFor": [
+    "Startups and non-IBM stacks",
+    "OLTP (use Db2 itself)",
+    "Serverless pay-per-query needs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-netezza",
+    "ibm-db2",
+    "snowflake",
+    "amazon-redshift",
+    "oracle-exadata",
+    "teradata-vantage"
+  ],
+  "tags": [
+    "mpp",
+    "ibm",
+    "db2",
+    "columnar",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/products/db2/warehouse",
+    "docs": "https://www.ibm.com/docs/en/db2-warehouse"
+  },
+  "ids": {
+    "hackerNewsQuery": "Db2 Warehouse"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.ibm.com/products/db2/warehouse",
+    "https://en.wikipedia.org/wiki/IBM_Db2"
+  ],
+  "lastVerified": "2026-10-27"
+}

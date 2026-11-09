@@ -1,0 +1,162 @@
+{
+  "slug": "whitedb",
+  "name": "WhiteDB",
+  "aliases": [
+    "wgdb"
+  ],
+  "tagline": "Shared-memory C database library storing typed N-tuples, readable by many processes at once; archived.",
+  "description": "WhiteDB is a lightweight NoSQL database library in C that keeps all data in a shared memory segment, so several processes can read and write the same database directly without a server or sockets, and the data survives after they exit. Records are N-tuples of encoded fields (integers, strings, doubles, dates, or links to other records), with T-tree indexes, a query API, logging and disk dumps for durability, Python bindings and experimental Java bindings. It was developed by Tanel Tammet and Priit Järv with an eye to RDF and rule-engine workloads. The last stable release is 0.7.3 (2014); the maintainers stopped building releases and archived the repository in 2026.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "GitHub repo archived in 2026; maintainers no longer build releases (last stable 0.7.3, Nov 2014; 0.8.0alpha 2022).",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Tanel Tammet and Priit Järv",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "0.7.3",
+    "date": "2014-11-08"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by the size of one machine's shared memory segment."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C query API"
+  ],
+  "apis": [
+    "C API",
+    "Python API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Python",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Many processes share one in-memory database with no server or IPC overhead",
+    "Data persists in shared memory even when no process is attached",
+    "Very small footprint, portable C, Linux and Windows support"
+  ],
+  "weaknesses": [
+    "Archived; no further releases",
+    "GPLv3 licence limits embedding in closed products",
+    "Limited to one machine's RAM; durability depends on dumps and logs"
+  ],
+  "useCases": [
+    "Fast shared state between local processes",
+    "Research on in-memory RDF and reasoning"
+  ],
+  "notIdealFor": [
+    "Networked or distributed access",
+    "New projects needing maintenance"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "sqlite",
+    "unqlite",
+    "extremedb"
+  ],
+  "tags": [
+    "in-memory",
+    "shared-memory",
+    "c",
+    "embedded",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/priitj/whitedb",
+    "repository": "https://github.com/priitj/whitedb"
+  },
+  "ids": {
+    "github": "priitj/whitedb",
+    "hackerNewsQuery": "WhiteDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/priitj/whitedb",
+    "https://github.com/priitj/whitedb/blob/master/AUTHORS",
+    "https://web.archive.org/web/20131027094101/http://whitedb.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

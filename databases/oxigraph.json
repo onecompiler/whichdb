@@ -1,0 +1,178 @@
+{
+  "slug": "oxigraph",
+  "name": "Oxigraph",
+  "aliases": [],
+  "tagline": "Small, fast SPARQL database in Rust that embeds in Rust, Python and JavaScript or runs as a server.",
+  "description": "Oxigraph is an open-source RDF graph database and SPARQL engine written in Rust. It stores quads in RocksDB (or in memory), implements SPARQL 1.1 Query, Update and Federated Query with early SPARQL 1.2/RDF 1.2 support, and ships as a Rust crate, a Python package (pyoxigraph), a JavaScript/WebAssembly package and a standalone HTTP server. It is a good default for embedding RDF in applications, notebooks and browsers, or for small-to-medium SPARQL endpoints. It is not a distributed or reasoning-heavy store, and its query optimizer is simpler than those in commercial triplestores.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "embedded",
+    "metadata-store",
+    "scientific"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Oxigraph community (Tpt)",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "0.5.13",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache-2.0 OR MIT",
+    "spdx": "Apache-2.0 OR MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "browser",
+      "wasm"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process on RocksDB; comfortable up to hundreds of millions of triples."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL"
+  ],
+  "apis": [
+    "SPARQL HTTP protocol",
+    "Graph Store Protocol",
+    "Rust API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Embeds in Rust, Python and browser/Node via WebAssembly with the same engine",
+    "Standards-compliant SPARQL 1.1 with early SPARQL 1.2 / RDF 1.2 work",
+    "Tiny operational footprint: one binary or one pip install",
+    "Dual Apache/MIT license"
+  ],
+  "weaknesses": [
+    "No clustering or replication",
+    "No built-in OWL reasoning or full-text search",
+    "Pre-1.0 versioning with occasional storage format changes"
+  ],
+  "useCases": [
+    "Embedding RDF in Python or Rust apps",
+    "Client-side SPARQL in the browser",
+    "Small SPARQL endpoints for datasets and vocabularies",
+    "Testing RDF pipelines"
+  ],
+  "notIdealFor": [
+    "Billion-triple public endpoints",
+    "Reasoning-heavy enterprise knowledge graphs",
+    "Property-graph workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-jena-tdb",
+    "qlever",
+    "virtuoso",
+    "ontotext-graphdb",
+    "rdfox"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "rust",
+    "embedded",
+    "wasm",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://github.com/oxigraph/oxigraph",
+    "docs": "https://docs.rs/oxigraph",
+    "repository": "https://github.com/oxigraph/oxigraph",
+    "changelog": "https://github.com/oxigraph/oxigraph/releases"
+  },
+  "ids": {
+    "github": "oxigraph/oxigraph",
+    "dockerHub": "oxigraph/oxigraph",
+    "npm": "oxigraph",
+    "pypi": "pyoxigraph",
+    "hackerNewsQuery": "Oxigraph"
+  },
+  "brand": {
+    "color": "#B7410E"
+  },
+  "sources": [
+    "https://github.com/oxigraph/oxigraph/releases",
+    "https://pypi.org/project/pyoxigraph/",
+    "https://www.npmjs.com/package/oxigraph"
+  ],
+  "lastVerified": "2026-10-27"
+}

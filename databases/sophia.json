@@ -1,0 +1,156 @@
+{
+  "slug": "sophia",
+  "name": "Sophia",
+  "aliases": [
+    "Sophia storage engine"
+  ],
+  "tagline": "Embeddable C key-value/row storage library with MVCC and serializable snapshot isolation; no longer developed.",
+  "description": "Sophia is a small, dependency-free C library by Dmitry Simonenko implementing a RAM-disk hybrid storage engine. It is append-only, uses MVCC with optimistic concurrency for many writers and readers, supports multi-statement transactions across several databases that share one write-ahead log, and offers serializable snapshot isolation, upsert, prefix search, key expiry, hot backup and lz4/zstd compression behind a minimal FFI-friendly API. The last release was 2.2 in August 2016, and the README now states the project is no longer developed, while pointing to the author's newer Amelia and Monotone engines that inherit its ideas. It is worth reading for storage-engine design, not for new deployments.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "README states it is no longer developed; last release 2.2 (August 2016). Use RocksDB, LMDB or Fjall for embedded storage.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Dmitry Simonenko",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "2.2",
+    "date": "2016-08-16"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 2-Clause License",
+    "spdx": "BSD-2-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full ACID with serializable snapshot isolation in a tiny embeddable library",
+    "Multi-statement transactions across several databases sharing one WAL",
+    "Append-only design with multi-threaded compaction and lz4/zstd compression",
+    "Amalgamated single-file build with an FFI-friendly C API"
+  ],
+  "weaknesses": [
+    "No longer developed; last release in 2016",
+    "Few maintained language bindings",
+    "Much smaller user base and test history than RocksDB or LMDB"
+  ],
+  "useCases": [
+    "Studying modern storage engine design",
+    "Legacy embedded projects that already depend on it"
+  ],
+  "notIdealFor": [
+    "New production systems that need maintained storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "lmdb",
+    "leveldb",
+    "pebble",
+    "fjall"
+  ],
+  "tags": [
+    "c",
+    "embedded",
+    "mvcc",
+    "storage-engine",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/pmwkaa/sophia",
+    "repository": "https://github.com/pmwkaa/sophia",
+    "docs": "https://github.com/pmwkaa/sophia/tree/master/documentation"
+  },
+  "ids": {
+    "github": "pmwkaa/sophia"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/pmwkaa/sophia",
+    "https://github.com/pmwkaa/sophia/releases",
+    "https://dbdb.io/db/sophia"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,184 @@
+{
+  "slug": "rethinkdb",
+  "name": "RethinkDB",
+  "aliases": [],
+  "tagline": "Open-source JSON database that pushes live query results to apps through changefeeds.",
+  "description": "RethinkDB is a distributed JSON document database whose signature feature is changefeeds: any query can be turned into a live stream of updates, so apps can react to changes without polling or a separate message bus. Its ReQL query language is embedded in host languages as chainable functions and supports joins, map-reduce and geospatial queries, and Raft handles automatic failover. The company behind it shut down in 2016 and the project now lives under the Linux Foundation as a community effort. The last release was 2.4.4 in December 2023. Commits still land, but there has been no feature work in years.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Community-maintained under the Linux Foundation since the company shut down in 2016; last release 2.4.4 (Dec 2023), with only fixes and CI work since.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "pub-sub",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "RethinkDB community (Linux Foundation)",
+  "vendorType": "foundation",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "2.4.4",
+    "date": "2023-12-11"
+  },
+  "writtenIn": [
+    "C++",
+    "Python",
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Tables are sharded and replicated across a cluster with Raft-based failover."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "ReQL"
+  ],
+  "apis": [
+    "RethinkDB client driver protocol",
+    "HTTP admin UI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "Java",
+    "Ruby",
+    "Go",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Changefeeds turn any query into a live push stream",
+    "ReQL composes naturally in the host language and supports joins",
+    "Easy clustering with automatic failover",
+    "Excellent built-in web admin console",
+    "Permissive Apache 2.0 license"
+  ],
+  "weaknesses": [
+    "No new features in years and a small maintainer pool",
+    "No multi-document transactions",
+    "Several official-ish drivers are community-maintained and lag behind",
+    "Write throughput trails modern document stores"
+  ],
+  "useCases": [
+    "Existing realtime apps already built on changefeeds",
+    "Prototypes of collaborative or live-dashboard features"
+  ],
+  "notIdealFor": [
+    "New production systems needing a long-term vendor",
+    "Transactional workloads",
+    "High write throughput"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "surrealdb",
+    "google-cloud-firestore",
+    "convex",
+    "apache-couchdb",
+    "pocketbase"
+  ],
+  "tags": [
+    "open-source",
+    "realtime",
+    "changefeeds",
+    "document",
+    "linux-foundation"
+  ],
+  "links": {
+    "website": "https://rethinkdb.com/",
+    "docs": "https://rethinkdb.com/docs/",
+    "repository": "https://github.com/rethinkdb/rethinkdb",
+    "changelog": "https://github.com/rethinkdb/rethinkdb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/RethinkDB"
+  },
+  "ids": {
+    "github": "rethinkdb/rethinkdb",
+    "stackoverflowTag": "rethinkdb",
+    "wikipedia": "RethinkDB",
+    "dockerHub": "library/rethinkdb",
+    "npm": "rethinkdb",
+    "pypi": "rethinkdb",
+    "hackerNewsQuery": "RethinkDB"
+  },
+  "brand": {
+    "color": "#59B4A5"
+  },
+  "sources": [
+    "https://github.com/rethinkdb/rethinkdb/releases/tag/v2.4.4",
+    "https://rethinkdb.com/",
+    "https://en.wikipedia.org/wiki/RethinkDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

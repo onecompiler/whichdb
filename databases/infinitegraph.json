@@ -1,0 +1,159 @@
+{
+  "slug": "infinitegraph",
+  "name": "InfiniteGraph",
+  "aliases": [],
+  "tagline": "Objectivity's distributed graph database for Java and C++; discontinued after the vendor ceased in 2023.",
+  "description": "InfiniteGraph was a distributed graph database from Objectivity, Inc., first released around 2010 and built on the storage and federation technology of Objectivity/DB. It modelled data as a labelled, directed multigraph in which edges are first-class objects, supported fully ACID transactions with subgraph update locking alongside relaxed, non-blocking concurrent ingest, and was queried through its 'DO' query language, a traversal and navigation API, and path pattern matching. A federation could address up to 65,535 databases, and it was used in government, telecom and cybersecurity analytics. A rebuilt InfiniteGraph appeared in 2021 with another release announced in 2023, but Objectivity reportedly ceased operations in late 2023 and no product or support remains.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Objectivity, Inc. reportedly ceased operations in late 2023; objectivity.com no longer serves product pages and no support is available.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "object"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Objectivity, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "Java",
+    "C++"
+  ],
+  "basedOn": "Objectivity/DB",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Federated databases with 64-bit object IDs; up to 65,535 databases per federation."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "tunable"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "DO query language",
+    "Traversal API"
+  ],
+  "apis": [
+    "Java API",
+    "C++ API",
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Edges are first-class objects with their own identity",
+    "ACID transactions with optional relaxed concurrent ingest",
+    "Federation scaled to very large distributed graphs",
+    "Combined graph navigation with object-style queries"
+  ],
+  "weaknesses": [
+    "Vendor gone; no downloads, updates or support",
+    "Proprietary 'DO' query language with no ecosystem"
+  ],
+  "useCases": [
+    "Historical reference for federated graph databases",
+    "Planning migrations off existing deployments"
+  ],
+  "notIdealFor": [
+    "Any new project"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "janusgraph",
+    "tigergraph",
+    "nebulagraph",
+    "memgraph",
+    "objectivity-db"
+  ],
+  "tags": [
+    "graph",
+    "distributed",
+    "objectivity",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20191118031937/https://www.objectivity.com/products/infinitegraph/",
+    "wikipedia": "https://en.wikipedia.org/wiki/InfiniteGraph"
+  },
+  "ids": {
+    "wikipedia": "InfiniteGraph",
+    "hackerNewsQuery": "InfiniteGraph"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/InfiniteGraph",
+    "https://web.archive.org/web/20191118031937/https://www.objectivity.com/products/infinitegraph/",
+    "https://dbdb.io/db/infinitegraph"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,183 @@
+{
+  "slug": "xapian",
+  "name": "Xapian",
+  "aliases": [
+    "Xapian search engine library",
+    "Omega"
+  ],
+  "tagline": "Mature C++ probabilistic full-text search library with bindings for a dozen languages.",
+  "description": "Xapian is an open-source C++ library for adding full-text search to applications. It ranks results with probabilistic models such as BM25, and supports phrase and proximity queries, boolean filters, stemming in many languages, spelling correction, synonyms, faceting, relevance feedback and geospatial filtering, with on-disk databases that can be searched together or remotely. It grew out of the Muscat engine and first shipped as Xapian 0.5.0 in 2002; Omega, a bundled search application, handles indexing documents and websites. Release 2.1.0 (August 2026) is current, with 1.4.x still maintained. It suits teams that want an embeddable library rather than a search server.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search"
+  ],
+  "workloads": [
+    "full-text-search",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Xapian project (Olly Betts and contributors)",
+  "vendorType": "community",
+  "initialRelease": 2002,
+  "latestVersion": {
+    "version": "2.1.0",
+    "date": "2026-08-13"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2 or later",
+    "spdx": "GPL-2.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Shard by splitting into multiple databases and searching them together, locally or via the remote backend."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Xapian query parser syntax",
+    "Query API"
+  ],
+  "apis": [
+    "C++ API",
+    "Remote backend protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Python",
+    "Perl",
+    "PHP",
+    "Java",
+    "Ruby",
+    "C#",
+    "Tcl",
+    "Lua",
+    "Erlang",
+    "JavaScript",
+    "R"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Embeddable library: no JVM or separate server to operate",
+    "High-quality ranking (BM25 and other models) with stemming for many languages",
+    "Bindings for a dozen languages and decades of production use",
+    "Actively released, with a long-supported stable branch"
+  ],
+  "weaknesses": [
+    "GPL licence complicates embedding in proprietary software",
+    "No built-in clustering, REST API or analytics features of Elasticsearch-style servers",
+    "Smaller ecosystem and fewer tutorials than Lucene-based tools"
+  ],
+  "useCases": [
+    "Search inside desktop and server applications",
+    "Indexing documentation, mail archives or websites with Omega",
+    "Search in Python, Perl or PHP apps without running a search server"
+  ],
+  "notIdealFor": [
+    "Log analytics and aggregations at scale",
+    "Vector or semantic search"
+  ],
+  "notableUsers": [
+    "Debian",
+    "Die Zeit"
+  ],
+  "alternatives": [
+    "apache-lucene",
+    "tantivy",
+    "sphinx",
+    "manticore-search",
+    "meilisearch",
+    "elasticsearch"
+  ],
+  "tags": [
+    "full-text-search",
+    "c++",
+    "library",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://xapian.org/",
+    "docs": "https://xapian.org/docs/",
+    "repository": "https://github.com/xapian/xapian",
+    "wikipedia": "https://en.wikipedia.org/wiki/Xapian"
+  },
+  "ids": {
+    "github": "xapian/xapian",
+    "wikipedia": "Xapian",
+    "stackoverflowTag": "xapian",
+    "hackerNewsQuery": "Xapian"
+  },
+  "brand": {},
+  "sources": [
+    "https://xapian.org/",
+    "https://github.com/xapian/xapian",
+    "https://en.wikipedia.org/wiki/Xapian"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,182 @@
+{
+  "slug": "rocksdb",
+  "name": "RocksDB",
+  "aliases": [],
+  "tagline": "Meta's embeddable LSM-tree key-value engine, the storage layer under dozens of databases.",
+  "description": "RocksDB is a C++ library for persistent, ordered key-value storage built on a log-structured merge tree and tuned for fast SSDs. Meta forked it from LevelDB in 2012 to add multi-threaded compaction, column families, transactions, rich tuning options and much better write throughput, and it has since become the default building block for storage engines: MyRocks, TiKV, Kafka Streams and Flink state, CockroachDB before Pebble, and many more. It is not a server; you embed it and own the API on top. Expect a large configuration surface, and budget time to understand compaction styles and write amplification.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp",
+    "stream-processing",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Meta",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "11.12",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "LevelDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 or GPL-2.0 (dual)",
+    "spdx": "Apache-2.0 OR GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process library; multi-terabyte instances per node are common, and distribution is left to the system embedding it."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C++ API"
+  ],
+  "apis": [
+    "C++ API",
+    "C API",
+    "RocksJava"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "C",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "High write throughput from an LSM design with parallel compaction",
+    "Column families, merge operators, compaction filters and prefix bloom filters",
+    "Optimistic and pessimistic transactions with snapshots",
+    "Huge production footprint at Meta and inside many databases",
+    "Extensive tuning knobs for leveled, universal and FIFO compaction"
+  ],
+  "weaknesses": [
+    "Very large configuration surface; defaults rarely fit demanding workloads",
+    "Write and space amplification from compaction must be managed",
+    "Only C++, C and Java APIs are first-party",
+    "Not a database server: no networking, replication or query language"
+  ],
+  "useCases": [
+    "Storage engine for a custom database or service",
+    "Stream-processing state stores (Kafka Streams, Flink)",
+    "MySQL storage engine via MyRocks",
+    "Write-heavy local indexes and caches on SSD"
+  ],
+  "notIdealFor": [
+    "Teams wanting a ready-made database server",
+    "Read-mostly workloads where a B-tree like LMDB is simpler",
+    "Environments without C++ build tooling"
+  ],
+  "notableUsers": [
+    "Meta",
+    "LinkedIn"
+  ],
+  "alternatives": [
+    "leveldb",
+    "pebble",
+    "lmdb",
+    "wiredtiger",
+    "badger",
+    "speedb"
+  ],
+  "tags": [
+    "lsm-tree",
+    "storage-engine",
+    "embedded",
+    "c++",
+    "meta"
+  ],
+  "links": {
+    "website": "https://rocksdb.org/",
+    "docs": "https://github.com/facebook/rocksdb/wiki",
+    "repository": "https://github.com/facebook/rocksdb",
+    "changelog": "https://github.com/facebook/rocksdb/blob/main/HISTORY.md",
+    "wikipedia": "https://en.wikipedia.org/wiki/RocksDB"
+  },
+  "ids": {
+    "github": "facebook/rocksdb",
+    "stackoverflowTag": "rocksdb",
+    "wikipedia": "RocksDB",
+    "crates": "rocksdb",
+    "hackerNewsQuery": "RocksDB"
+  },
+  "brand": {
+    "color": "#2A2A2A",
+    "simpleIcon": "rocksdb"
+  },
+  "sources": [
+    "https://github.com/facebook/rocksdb/releases",
+    "https://rocksdb.org/",
+    "https://github.com/facebook/rocksdb/blob/main/HISTORY.md"
+  ],
+  "lastVerified": "2026-10-27"
+}

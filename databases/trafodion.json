@@ -1,0 +1,163 @@
+{
+  "slug": "trafodion",
+  "name": "Apache Trafodion",
+  "aliases": [
+    "Trafodion"
+  ],
+  "tagline": "Transactional SQL-on-Hadoop engine on HBase from HP's NonStop SQL lineage; retired by Apache in 2021.",
+  "description": "Apache Trafodion was an operational SQL engine for Hadoop: it added ANSI SQL, ACID transactions, secondary indexes and a cost-based optimizer on top of HBase tables, and could also read Hive data, so OLTP and reporting could share one cluster. HP open-sourced it in 2014 from technology rooted in its NonStop SQL work; it entered the Apache Incubator, became a top-level project in December 2017, and shipped its last release, 2.3.0, in February 2019. Activity faded and the project was retired to the Apache Attic in April 2021. Esgyn's commercial EsgynDB continued the codebase; for new systems, distributed SQL databases are the usual choice.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Retired to the Apache Attic in April 2021; last release 2.3.0 (Feb 2019). EsgynDB is the commercial continuation; distributed SQL engines replace it.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "htap"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation (originally HP)",
+  "vendorType": "foundation",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "2.3.0",
+    "date": "2019-02-28"
+  },
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "basedOn": "Apache HBase",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scaled with the underlying HBase/HDFS cluster."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full ANSI SQL with distributed ACID transactions over HBase storage",
+    "Mature optimizer and executor inherited from HP's enterprise SQL heritage",
+    "Could query native HBase and Hive tables alongside its own tables"
+  ],
+  "weaknesses": [
+    "Retired project: no releases since 2019 and no security fixes",
+    "Heavy operational stack (Hadoop, HBase, ZooKeeper) to run anything",
+    "Small community even at its peak"
+  ],
+  "useCases": [
+    "Maintaining legacy Hadoop OLTP deployments",
+    "Studying SQL-on-HBase transaction design"
+  ],
+  "notIdealFor": [
+    "New deployments",
+    "Teams without Hadoop operations expertise"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "esgyndb",
+    "tidb",
+    "cockroachdb",
+    "splice-machine",
+    "apache-hive"
+  ],
+  "tags": [
+    "hadoop",
+    "hbase",
+    "sql",
+    "apache",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://trafodion.apache.org/",
+    "repository": "https://github.com/apache/trafodion"
+  },
+  "ids": {
+    "github": "apache/trafodion",
+    "hackerNewsQuery": "Apache Trafodion"
+  },
+  "brand": {},
+  "sources": [
+    "https://attic.apache.org/projects/trafodion.html",
+    "https://trafodion.apache.org/",
+    "https://github.com/apache/trafodion"
+  ],
+  "lastVerified": "2026-10-27"
+}

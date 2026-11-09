@@ -1,0 +1,136 @@
+{
+  "slug": "grace",
+  "name": "GRACE",
+  "aliases": [
+    "GRACE database machine"
+  ],
+  "tagline": "University of Tokyo's 1980s parallel database machine that introduced the GRACE hash join.",
+  "description": "GRACE was a parallel relational database machine developed at the University of Tokyo under Masaru Kitsuregawa, with research starting around 1981 and the design published in 1983. Its key idea was to make joins linear rather than quadratic: hash both relations into clusters on the join key, then join cluster by cluster. The hardware had processing modules with built-in LSI sorters, a memory module and disk modules with hash units, connected by two ring networks, so the work flowed through a pipeline. The machine itself is a museum piece, but the GRACE hash join (partition both inputs to disk, then join each pair of partitions) is still the textbook method for joins that do not fit in memory.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research database machine (from about 1981); its partitioned hash join is used in virtually every modern query engine.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "University of Tokyo (Kitsuregawa laboratory)",
+  "vendorType": "academic",
+  "initialRelease": 1983,
+  "writtenIn": [
+    "Custom hardware"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Not released (research hardware)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never commercialised."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Relational algebra"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Introduced the partitioned (GRACE) hash join",
+    "Pipelined dataflow between sorting, memory and disk modules",
+    "Hardware hashing and sorting for relational operators"
+  ],
+  "weaknesses": [
+    "Special-purpose hardware that was never produced commercially"
+  ],
+  "useCases": [
+    "Teaching join algorithms",
+    "History of database machines"
+  ],
+  "notIdealFor": [
+    "Any practical deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "gamma",
+    "teradata-vantage",
+    "bubba",
+    "greenplum"
+  ],
+  "tags": [
+    "database-machine",
+    "hash-join",
+    "japan",
+    "research",
+    "historical"
+  ],
+  "links": {
+    "website": "http://museum.ipsj.or.jp/en/computer/other/0014.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://museum.ipsj.or.jp/en/computer/other/0014.html",
+    "https://doi.org/10.1007/BF03037022",
+    "https://dbdb.io/db/grace"
+  ],
+  "lastVerified": "2026-10-27"
+}

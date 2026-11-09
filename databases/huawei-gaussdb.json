@@ -1,0 +1,185 @@
+{
+  "slug": "huawei-gaussdb",
+  "name": "Huawei GaussDB",
+  "aliases": [
+    "GaussDB",
+    "Huawei Cloud GaussDB"
+  ],
+  "tagline": "Huawei's distributed enterprise RDBMS built on openGauss, aimed at replacing Oracle in Chinese finance.",
+  "description": "GaussDB is Huawei's commercial relational database, available as a Huawei Cloud service and as on-premises software, in centralized and distributed (shared-nothing) deployments. Its kernel is the same lineage as the open-source openGauss, which itself started from PostgreSQL 9.2 but has diverged heavily (thread model, Ustore engine, MOT in-memory tables). Huawei markets it for 'two-city, three-centre' high availability, Oracle and MySQL compatibility modes and PB-scale clusters, and it is widely adopted by Chinese banks under the domestic-technology push. 2026 updates added a native vector retrieval engine and cross-page compression. Outside China, availability, documentation and ecosystem are limited.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "htap",
+    "vector-search"
+  ],
+  "architecture": [
+    "distributed",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Huawei",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "openGauss (originally derived from PostgreSQL 9.2)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Pay-per-use or yearly/monthly on Huawei Cloud; on-premises via enterprise contracts."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "huawei-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "GaussDB",
+      "provider": "Huawei Cloud",
+      "url": "https://www.huaweicloud.com/intl/en-us/product/gaussdb.html"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Distributed edition documented at 1,000+ nodes and PB-scale storage, with cross-AZ and cross-city DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL-style procedural SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "libpq-style C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Distributed shared-nothing edition scales to very large clusters with strong consistency",
+    "Oracle- and MySQL-compatibility modes ease migration of existing applications",
+    "Cross-AZ and multi-city disaster recovery designed for bank regulators",
+    "Same lineage as open-source openGauss, so skills partially transfer"
+  ],
+  "weaknesses": [
+    "Mainly available on Huawei Cloud and in China; limited global presence",
+    "Documentation and community are predominantly Chinese",
+    "Heavily diverged from PostgreSQL, so most PG extensions do not apply"
+  ],
+  "useCases": [
+    "Core banking replacement of Oracle in China",
+    "Government and telecom systems under domestic-technology mandates",
+    "Large distributed OLTP on Huawei Cloud"
+  ],
+  "notIdealFor": [
+    "Deployments on AWS, Azure or GCP",
+    "Teams relying on the PostgreSQL extension ecosystem",
+    "Small projects"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "opengauss",
+    "oceanbase",
+    "tidb",
+    "polardb",
+    "tencent-tdsql",
+    "oracle-database",
+    "kingbase",
+    "dameng"
+  ],
+  "tags": [
+    "sql",
+    "distributed",
+    "china",
+    "huawei",
+    "oracle-compatible"
+  ],
+  "links": {
+    "website": "https://www.huaweicloud.com/intl/en-us/product/gaussdb.html",
+    "docs": "https://support.huaweicloud.com/intl/en-us/gaussdb/index.html",
+    "changelog": "https://support.huaweicloud.com/wtsnew-gaussdb/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/GaussDB"
+  },
+  "ids": {
+    "wikipedia": "GaussDB",
+    "hackerNewsQuery": "GaussDB"
+  },
+  "brand": {
+    "color": "#C7000B",
+    "simpleIcon": "huawei"
+  },
+  "sources": [
+    "https://support.huaweicloud.com/wtsnew-gaussdb/index.html",
+    "https://doc.hcs.huawei.com/db/en-us/index.html",
+    "https://en.wikipedia.org/wiki/GaussDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

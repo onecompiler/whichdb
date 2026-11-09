@@ -1,0 +1,171 @@
+{
+  "slug": "websphere-extreme-scale",
+  "name": "WebSphere eXtreme Scale",
+  "aliases": [
+    "IBM WebSphere eXtreme Scale",
+    "WXS",
+    "ObjectGrid"
+  ],
+  "tagline": "IBM's Java in-memory data grid for caching, HTTP sessions and partitioned object storage; still patched.",
+  "description": "IBM WebSphere eXtreme Scale (WXS) is an elastic in-memory data grid for Java: data is held as key-addressed objects in maps, partitioned across many JVMs with synchronous or asynchronous replica shards, and accessed through its ObjectGrid APIs, a dynamic cache provider for WebSphere and Liberty, or HTTP session replication. Loaders can read through and write behind to a backing relational database. It is a mainstay of large WebSphere estates in banking, retail and telecom. IBM keeps it alive: version 8.6.2 (September 2025) added Java 11 and 17 support with a new installation model, and fix pack 8.6.2.2 followed in June 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "object"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "IBM",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "8.6.2.2",
+    "date": "2026-06-30"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "IBM International Program License Agreement"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensed through IBM, typically per processor value unit."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix",
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Grids partition data across many container JVMs with primary and replica shards for failover."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "ObjectGrid API",
+    "ObjectQuery"
+  ],
+  "apis": [
+    "Java API",
+    "REST data service",
+    "Dynamic cache provider"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Proven at large scale inside WebSphere and Liberty environments",
+    "Automatic partitioning, replica placement and failover across JVMs",
+    "Drop-in dynamic cache and HTTP session store for WebSphere applications",
+    "Read-through and write-behind loaders keep a backing database in sync"
+  ],
+  "weaknesses": [
+    "Java-centric and tightly coupled to the IBM WebSphere ecosystem",
+    "Proprietary licensing with enterprise pricing",
+    "Roadmap is maintenance-oriented; little new functionality beyond Java currency"
+  ],
+  "useCases": [
+    "HTTP session replication for WebSphere/Liberty clusters",
+    "Caching in front of DB2 or Oracle for high-traffic Java apps",
+    "Partitioned in-memory object storage for transaction processing"
+  ],
+  "notIdealFor": [
+    "Polyglot or non-Java stacks",
+    "Teams avoiding IBM licensing",
+    "Durable primary storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-coherence",
+    "hazelcast",
+    "apache-ignite",
+    "infinispan",
+    "vmware-tanzu-gemfire",
+    "redis"
+  ],
+  "tags": [
+    "in-memory-data-grid",
+    "java",
+    "ibm",
+    "caching",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/support/pages/recommended-fixes-websphere-extreme-scale"
+  },
+  "ids": {
+    "hackerNewsQuery": "WebSphere eXtreme Scale"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.ibm.com/support/pages/node/1267774",
+    "https://www.ibm.com/support/pages/node/1267768",
+    "https://www.ibm.com/support/pages/node/7277722",
+    "https://community.ibm.com/community/user/blogs/payal-rahlon/2025/10/21/ibm-websphere-extreme-scale-8620-release",
+    "https://public.dhe.ibm.com/software/webserver/appserv/library/v70/XS7.0_qsg_en.pdf"
+  ],
+  "lastVerified": "2026-10-27"
+}

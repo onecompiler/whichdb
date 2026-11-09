@@ -1,0 +1,210 @@
+{
+  "slug": "intersystems-iris",
+  "name": "InterSystems IRIS",
+  "aliases": [
+    "IRIS",
+    "IRIS for Health",
+    "IRIS data platform"
+  ],
+  "tagline": "Multi-model data platform (SQL, objects, globals, vectors) with built-in interoperability, big in healthcare.",
+  "description": "InterSystems IRIS is the successor to Caché: a single engine whose storage layer is a fast, sparse multidimensional array ('globals') projected simultaneously as SQL tables, objects and JSON documents. On top it bundles an integration engine, FHIR/HL7 tooling (IRIS for Health), embedded Python, columnar storage, sharding and, since 2024, vector search for RAG. That combination makes it dominant in hospital records and health information exchange, including Epic's Chronicles database. It ships as Extended Maintenance releases (2026.1 in March 2026) and quarterly Continuous Delivery releases (2026.2 in July 2026). The trade-offs are proprietary ObjectScript, opaque pricing and a niche talent pool.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "object",
+    "document",
+    "key-value",
+    "multivalue",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "htap",
+    "real-time-analytics",
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "distributed"
+  ],
+  "developer": "InterSystems Corporation",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "2026.2 (CD)",
+    "date": "2026-07-22"
+  },
+  "writtenIn": [
+    "C",
+    "C++",
+    "ObjectScript"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "per-node-license",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Commercial licences per core/user; free Community Edition with size and connection limits; cloud services are usage-based."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "InterSystems IRIS Cloud SQL",
+      "provider": "InterSystems",
+      "url": "https://www.intersystems.com/products/intersystems-iris-cloud-services/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Built-in sharding for SQL tables; synchronous and async mirroring for HA and DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "ObjectScript",
+    "Python (Embedded)"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "ADO.NET",
+    "Native API",
+    "REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#",
+    "Python",
+    "JavaScript",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One storage engine exposed as SQL, objects, documents and raw globals without duplication",
+    "Bundled interoperability engine and FHIR/HL7 tooling for healthcare integration",
+    "Very high transaction ingest rates on modest hardware",
+    "Embedded Python and vector search run next to the data for ML and RAG",
+    "Mirroring gives straightforward automatic failover"
+  ],
+  "weaknesses": [
+    "ObjectScript and globals are proprietary skills with a small talent pool",
+    "Opaque, sales-led pricing",
+    "Community Edition limits make realistic testing awkward",
+    "Tooling ecosystem is much smaller than mainstream RDBMSs"
+  ],
+  "useCases": [
+    "Electronic health records and hospital information systems",
+    "Health information exchanges and FHIR servers",
+    "High-throughput financial transaction processing",
+    "Supply-chain and logistics platforms needing integration plus analytics"
+  ],
+  "notIdealFor": [
+    "Teams wanting open-source licensing",
+    "Simple web CRUD apps",
+    "Organisations without access to InterSystems skills"
+  ],
+  "notableUsers": [
+    "Epic Systems"
+  ],
+  "alternatives": [
+    "intersystems-cache",
+    "oracle-database",
+    "postgresql",
+    "yottadb",
+    "mongodb",
+    "sql-server"
+  ],
+  "tags": [
+    "multi-model",
+    "healthcare",
+    "fhir",
+    "interoperability",
+    "vector-search"
+  ],
+  "links": {
+    "website": "https://www.intersystems.com/products/intersystems-iris/",
+    "docs": "https://docs.intersystems.com/irislatest/csp/docbook/DocBook.UI.Page.cls",
+    "changelog": "https://www.intersystems.com/product-alerts-advisories/"
+  },
+  "ids": {
+    "stackoverflowTag": "intersystems-iris",
+    "dockerHub": "intersystems/iris-community",
+    "npm": "@intersystems/intersystems-iris-native",
+    "pypi": "intersystems-irispython",
+    "hackerNewsQuery": "InterSystems IRIS"
+  },
+  "brand": {
+    "color": "#333695"
+  },
+  "sources": [
+    "https://www.intersystems.com/product-alerts-advisories/intersystems-announces-general-availability-of-intersystems-iris-intersystems-iris-for-health-and-healthshare-health-connect-2026-1",
+    "https://community.intersystems.com/post/intersystems-announces-general-availability-intersystems-iris-intersystems-iris-health-and-0",
+    "https://hub.docker.com/r/intersystems/iris-community"
+  ],
+  "lastVerified": "2026-10-27"
+}

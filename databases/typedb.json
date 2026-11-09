@@ -1,0 +1,197 @@
+{
+  "slug": "typedb",
+  "name": "TypeDB",
+  "aliases": [
+    "Grakn",
+    "Vaticle TypeDB"
+  ],
+  "tagline": "Strongly typed entity-relation database with TypeQL, polymorphic queries and a Rust core.",
+  "description": "TypeDB (formerly Grakn, developed by the company previously called Vaticle) models data as typed entities, n-ary relations and attributes with inheritance, and queries it in TypeQL, a declarative pattern language that supports polymorphic queries and user-defined functions. Version 3.0 rewrote the engine in Rust, and 3.x releases ship frequently (3.14.1 in October 2026). It sits between graph and relational: richer type semantics than a property graph, without SQL tables. It is compelling for complex domain models (cybersecurity, biomedical, engineering) and less so for teams that want a mainstream query language.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "oltp",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "TypeDB Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "3.14.1",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free; TypeDB Cloud has a free tier and paid clustered deployments."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "TypeDB Cloud",
+      "provider": "TypeDB",
+      "url": "https://cloud.typedb.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Clustered editions replicate the database with Raft for HA; no sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "TypeQL"
+  ],
+  "apis": [
+    "gRPC",
+    "HTTP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "Rust",
+    "JavaScript",
+    "C#",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Type system with inheritance and n-ary relations captures complex domains cleanly",
+    "Polymorphic queries return all subtypes without union boilerplate",
+    "Strict schema validation catches modeling errors at write time",
+    "Rust 3.x engine with ACID transactions and frequent releases"
+  ],
+  "weaknesses": [
+    "TypeQL is unique to TypeDB; no Cypher, SQL or SPARQL compatibility",
+    "Smaller ecosystem of tools, connectors and talent",
+    "Breaking changes between 2.x and 3.x required migration work",
+    "No horizontal sharding for very large datasets"
+  ],
+  "useCases": [
+    "Cybersecurity threat intelligence models",
+    "Biomedical and drug-discovery knowledge graphs",
+    "Engineering and digital-twin data models",
+    "Complex access-control and policy modeling"
+  ],
+  "notIdealFor": [
+    "Simple CRUD apps",
+    "Teams standardized on Cypher or SQL",
+    "Massive-scale graph analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "terminusdb",
+    "stardog",
+    "dgraph",
+    "surrealdb",
+    "ontotext-graphdb"
+  ],
+  "tags": [
+    "typeql",
+    "type-system",
+    "knowledge-graph",
+    "rust",
+    "polymorphism"
+  ],
+  "links": {
+    "website": "https://typedb.com/",
+    "docs": "https://typedb.com/docs",
+    "repository": "https://github.com/typedb/typedb",
+    "pricing": "https://typedb.com/pricing",
+    "changelog": "https://github.com/typedb/typedb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/TypeDB"
+  },
+  "ids": {
+    "github": "typedb/typedb",
+    "stackoverflowTag": "vaticle-typedb",
+    "wikipedia": "TypeDB",
+    "dockerHub": "typedb/typedb",
+    "npm": "typedb-driver",
+    "pypi": "typedb-driver",
+    "hackerNewsQuery": "TypeDB"
+  },
+  "brand": {
+    "color": "#7C4DFF"
+  },
+  "sources": [
+    "https://github.com/typedb/typedb/releases",
+    "https://typedb.com/",
+    "https://hub.docker.com/r/typedb/typedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

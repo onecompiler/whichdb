@@ -1,0 +1,144 @@
+{
+  "slug": "spreadsheetdb",
+  "name": "SpreadsheetDB",
+  "aliases": [],
+  "tagline": "Short-lived hosted service that aggregated pushed JSON records with spreadsheet formulas over an HTTP API.",
+  "description": "SpreadsheetDB was a small French database-as-a-service, run by Eurisko around 2017, that mixed a document store with a spreadsheet engine. You pushed schemaless JSON records over an HTTP API, defined spreadsheets whose cells held formulas such as SUM, COUNT or MAX over those records (plus JSONGET to pull external data), and read the computed results as JSON or CSV or through a JavaScript library for charts on web pages. It had a free volume-limited plan and paid plans, but archived pages stop in late 2017 and the domain no longer resolves. It is gone; the idea now lives on in spreadsheet-database tools and SQL over JSON.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Service ended around 2018; spreadsheetdb.io no longer resolves and only a JavaScript client survives on GitHub.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Eurisko",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "1.6.0",
+    "date": "2017"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (hosted service)"
+  },
+  "pricing": {
+    "models": [
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Had a volume-limited free plan and paid plans; the service no longer exists."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Spreadsheet formulas"
+  ],
+  "apis": [
+    "REST (JSON over HTTP)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Spreadsheet formulas as a query language were approachable for non-developers",
+    "Schemaless JSON ingestion with results exported as JSON or CSV"
+  ],
+  "weaknesses": [
+    "Service shut down; data and API are gone",
+    "Hosted-only and proprietary",
+    "Limited query power compared with SQL"
+  ],
+  "useCases": [
+    "Historical reference only",
+    "Example of spreadsheet-style aggregation over JSON records"
+  ],
+  "notIdealFor": [
+    "Any production workload: the service no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "supabase",
+    "google-cloud-firestore",
+    "duckdb",
+    "microsoft-access"
+  ],
+  "tags": [
+    "spreadsheet",
+    "dbaas",
+    "json",
+    "discontinued",
+    "france"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20171028085905/https://www.spreadsheetdb.io/",
+    "repository": "https://github.com/spreadsheetdb"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20171028085905/https://www.spreadsheetdb.io/",
+    "https://github.com/spreadsheetdb",
+    "https://dbdb.io/db/spreadsheetdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

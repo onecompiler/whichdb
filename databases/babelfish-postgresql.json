@@ -1,0 +1,184 @@
+{
+  "slug": "babelfish-postgresql",
+  "name": "Babelfish for PostgreSQL",
+  "aliases": [
+    "Babelfish",
+    "Babelfish for Aurora PostgreSQL"
+  ],
+  "tagline": "Lets PostgreSQL understand SQL Server's T-SQL and TDS protocol, so SQL Server apps can migrate.",
+  "description": "Babelfish is an open-source capability, led by AWS, that adds a SQL Server-compatible endpoint to PostgreSQL. It implements the TDS wire protocol plus T-SQL syntax and semantics (procedures, IDENTITY, temp tables, many system views and functions), so applications using SQL Server drivers and tools like SSMS can connect with little or no code change, while the same data stays reachable through normal PostgreSQL. It ships as a set of extensions over a lightly modified PostgreSQL fork, and AWS offers it as a managed option in Aurora PostgreSQL. Coverage is broad but not complete, so the Babelfish Compass tool should be used to assess T-SQL compatibility before migrating.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Amazon Web Services and Babelfish community",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "6.1.0",
+    "date": "2026-08-26"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 and PostgreSQL License",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Open source; on AWS it is included in Aurora PostgreSQL pricing at no extra charge."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Babelfish for Aurora PostgreSQL",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/rds/aurora/babelfish/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Inherits PostgreSQL/Aurora scaling: one writer with read replicas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "T-SQL",
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "TDS (SQL Server) protocol",
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "sql-server",
+    "postgresql"
+  ],
+  "drivers": [
+    "C#",
+    ".NET",
+    "Java",
+    "Python",
+    "JavaScript",
+    "ODBC"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "SQL Server clients, drivers and SSMS connect via TDS unchanged",
+    "Same database accessible through T-SQL and PostgreSQL at once",
+    "Avoids SQL Server licensing costs",
+    "Babelfish Compass reports compatibility gaps before migration",
+    "Managed on Aurora with no extra license fee"
+  ],
+  "weaknesses": [
+    "Incomplete T-SQL coverage (some system procs, CLR, SQL Agent features missing)",
+    "Requires a modified PostgreSQL build, not stock Postgres",
+    "Performance characteristics differ from SQL Server, so query tuning is needed",
+    "Outside AWS, few managed options"
+  ],
+  "useCases": [
+    "Migrating SQL Server applications to PostgreSQL",
+    "Reducing SQL Server licensing on AWS",
+    "Gradual rewrite of T-SQL apps to native PostgreSQL"
+  ],
+  "notIdealFor": [
+    "Apps relying on SQL Server-only features like CLR integration or SSIS",
+    "Teams on stock PostgreSQL elsewhere",
+    "Workloads needing full SQL Server behavioral parity"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sql-server",
+    "postgresql",
+    "amazon-aurora",
+    "edb-postgres-advanced-server",
+    "azure-sql-database"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "sql-server-compatible",
+    "migration",
+    "aws"
+  ],
+  "links": {
+    "website": "https://babelfishpg.org/",
+    "docs": "https://babelfishpg.org/docs/",
+    "repository": "https://github.com/babelfish-for-postgresql/babelfish_extensions"
+  },
+  "ids": {
+    "github": "babelfish-for-postgresql/babelfish_extensions",
+    "stackoverflowTag": "babelfish",
+    "hackerNewsQuery": "\"Babelfish for PostgreSQL\""
+  },
+  "sources": [
+    "https://babelfishpg.org/",
+    "https://github.com/babelfish-for-postgresql/babelfish_extensions/tags",
+    "https://aws.amazon.com/rds/aurora/babelfish/"
+  ],
+  "lastVerified": "2026-10-27"
+}

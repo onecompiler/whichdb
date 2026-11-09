@@ -1,0 +1,175 @@
+{
+  "slug": "apache-kylin",
+  "name": "Apache Kylin",
+  "aliases": [
+    "Kylin"
+  ],
+  "tagline": "OLAP engine that pre-computes cubes and aggregate indexes for sub-second SQL on huge datasets.",
+  "description": "Apache Kylin, open-sourced by eBay in 2014, answers SQL over billions of rows in sub-second time by pre-computing aggregates: you define a model (fact and dimension tables), Kylin builds cube or aggregate indexes with Spark, and queries are routed to the smallest matching index. Kylin 5 reworked this around flexible indexes, internal tables, a Spark-based query engine and Parquet storage. It suits stable, dimensional BI workloads with predictable queries; ad-hoc analysis and fast-changing schemas fit modern MPP engines better. Kyligence sells the commercial version.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "5.0.5",
+    "date": "2026-07-13"
+  },
+  "writtenIn": [
+    "Java",
+    "Scala"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; Kyligence offers commercial editions and cloud."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Cube builds run on Spark; query nodes scale out; trillion-row deployments reported by users."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ANSI)"
+  ],
+  "apis": [
+    "REST API",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Sub-second queries on huge datasets via pre-computed aggregate indexes",
+    "Predictable latency for dashboards regardless of raw data size",
+    "Standard SQL and BI connectors (Tableau, Power BI, Excel MDX via Kyligence)",
+    "Proven at eBay, Meituan and other large internet companies"
+  ],
+  "weaknesses": [
+    "Requires upfront modeling and index builds; poor for ad-hoc queries",
+    "Index build time and storage grow with dimensions",
+    "Small, mostly China-based community and slow releases"
+  ],
+  "useCases": [
+    "Enterprise BI dashboards with fixed dimensions",
+    "Replacing legacy MOLAP cubes",
+    "High-concurrency reporting"
+  ],
+  "notIdealFor": [
+    "Ad-hoc exploration",
+    "Real-time streaming analytics",
+    "Small datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-druid",
+    "starrocks",
+    "clickhouse",
+    "apache-doris",
+    "apache-pinot"
+  ],
+  "tags": [
+    "olap-cube",
+    "precomputation",
+    "bi",
+    "open-source",
+    "apache"
+  ],
+  "links": {
+    "website": "https://kylin.apache.org/",
+    "docs": "https://kylin.apache.org/docs/overview",
+    "repository": "https://github.com/apache/kylin",
+    "changelog": "https://kylin.apache.org/docs/release_notes/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Kylin"
+  },
+  "ids": {
+    "github": "apache/kylin",
+    "stackoverflowTag": "kylin",
+    "wikipedia": "Apache Kylin",
+    "dockerHub": "apachekylin/apache-kylin-standalone",
+    "hackerNewsQuery": "Apache Kylin"
+  },
+  "brand": {
+    "color": "#F09D13",
+    "simpleIcon": "apachekylin"
+  },
+  "sources": [
+    "https://kylin.apache.org/docs/release_notes/",
+    "https://github.com/apache/kylin",
+    "https://en.wikipedia.org/wiki/Apache_Kylin"
+  ],
+  "lastVerified": "2026-10-27"
+}

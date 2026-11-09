@@ -1,0 +1,156 @@
+{
+  "slug": "noms",
+  "name": "Noms",
+  "aliases": [],
+  "tagline": "Attic Labs' Git-like versioned, forkable, syncable database; archived, but its storage lives on in Dolt.",
+  "description": "Noms is a content-addressed database from Attic Labs that applies Git's model to structured data: every commit is kept, any two versions can be diffed efficiently, and replicas can be forked, worked on offline and later merged and synced. Data is stored as typed values in prolly trees (probabilistic B-trees), which give structural sharing between versions and fast diffs over large collections, and it shipped with a Go SDK and a command-line tool. The project stopped being developed and the repository was archived in August 2021, with a README note sending users to Dolt, an actively maintained fork. Noms remains a good reference for prolly-tree design.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Archived in August 2021; the README recommends Dolt, an actively maintained fork.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "local-first",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Attic Labs",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Replicas sync by exchanging content-addressed chunks."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Go API"
+  ],
+  "apis": [
+    "Go SDK",
+    "noms CLI",
+    "HTTP sync"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Full version history with cheap diffs, forks and merges",
+    "Prolly trees give structural sharing between versions",
+    "Content addressing makes sync between replicas efficient"
+  ],
+  "weaknesses": [
+    "Archived and unmaintained since 2021",
+    "No query language beyond the Go API and CLI",
+    "Never reached a stable 1.0 data format"
+  ],
+  "useCases": [
+    "Studying prolly trees and versioned storage",
+    "Understanding the origins of Dolt"
+  ],
+  "notIdealFor": [
+    "Production use",
+    "SQL workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dolt",
+    "terminusdb",
+    "xtdb",
+    "datomic"
+  ],
+  "tags": [
+    "versioned",
+    "git-like",
+    "prolly-tree",
+    "go",
+    "archived"
+  ],
+  "links": {
+    "website": "https://github.com/attic-labs/noms",
+    "repository": "https://github.com/attic-labs/noms",
+    "docs": "https://github.com/attic-labs/noms/blob/master/doc/intro.md"
+  },
+  "ids": {
+    "github": "attic-labs/noms",
+    "hackerNewsQuery": "Noms database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/attic-labs/noms",
+    "https://github.com/attic-labs/noms/blob/master/doc/intro.md",
+    "https://dbdb.io/db/noms"
+  ],
+  "lastVerified": "2026-10-27"
+}

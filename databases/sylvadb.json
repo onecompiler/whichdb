@@ -1,0 +1,152 @@
+{
+  "slug": "sylvadb",
+  "name": "SylvaDB",
+  "aliases": [
+    "Sylva"
+  ],
+  "tagline": "Web-based relaxed-schema graph data manager for humanities researchers, built on Django over Neo4j.",
+  "description": "Sylva, from the CulturePlex Lab, is a graph database management system aimed at researchers who do not program, especially in the digital humanities. In the browser you define a flexible, relaxed schema of node and relationship types, enter or import data collaboratively, explore it visually and run queries and network analytics, while the storage itself sits in a pluggable graph backend such as Neo4j, Neo4j Spatial or Blueprints/Rexster. It was offered as a hosted service at sylvadb.com and as AGPL-licensed Django code. The hosted service is offline and the code has not changed since January 2016.",
+  "productType": "platform",
+  "status": "maintenance",
+  "statusNote": "Hosted sylvadb.com is offline and the AGPL code on GitHub has had no commits since January 2016. Neo4j with its browser tools is the practical successor.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "graph-analytics"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "CulturePlex Lab",
+  "vendorType": "academic",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "Python",
+    "JavaScript"
+  ],
+  "basedOn": "Neo4j",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3 or later",
+    "spdx": "AGPL-3.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Source is AGPL; the hosted sylvadb.com plans are no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by the underlying graph backend and a single Django deployment."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Visual query builder"
+  ],
+  "apis": [
+    "REST API",
+    "Web UI"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Schema design, data entry and querying entirely in the browser, aimed at non-programmers",
+    "Relaxed schemas let researchers evolve models as their sources change",
+    "Pluggable graph backends including Neo4j and Neo4j Spatial"
+  ],
+  "weaknesses": [
+    "Dormant since 2016 with dated Django and Neo4j dependencies",
+    "Hosted service no longer exists",
+    "A management layer, not a storage engine, so performance depends on the backend"
+  ],
+  "useCases": [
+    "Digital humanities network research",
+    "Teaching graph modelling to non-programmers"
+  ],
+  "notIdealFor": [
+    "Production applications",
+    "Large-scale graph analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "memgraph",
+    "arangodb",
+    "terminusdb"
+  ],
+  "tags": [
+    "graph",
+    "digital-humanities",
+    "django",
+    "neo4j",
+    "academic"
+  ],
+  "links": {
+    "website": "https://github.com/CulturePlex/Sylva",
+    "repository": "https://github.com/CulturePlex/Sylva"
+  },
+  "ids": {
+    "github": "CulturePlex/Sylva"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/CulturePlex/Sylva",
+    "https://github.com/CulturePlex/Sylva/blob/master/LICENSE.txt",
+    "https://dbdb.io/db/sylvadb"
+  ],
+  "lastVerified": "2026-10-27"
+}

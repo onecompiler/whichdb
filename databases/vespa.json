@@ -1,0 +1,195 @@
+{
+  "slug": "vespa",
+  "name": "Vespa",
+  "aliases": [
+    "Vespa.ai"
+  ],
+  "tagline": "Big-data serving engine for search, recommendation and RAG with tensors and ML ranking.",
+  "description": "Vespa came out of Yahoo, where it powered search and recommendation at internet scale, and has been run by the independent company Vespa.ai since 2023. It combines full-text, structured, vector and tensor data in one engine and evaluates ML ranking models (ONNX, XGBoost, LightGBM, multi-phase ranking) on the content nodes, next to the data, so you can rank thousands of candidates per query without shipping them to another service. That makes it the strongest choice for sophisticated hybrid retrieval and personalization, at the cost of a steep learning curve and a heavyweight deployment model.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "vector",
+    "document"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Vespa.ai",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "8.763.13",
+    "date": "2026-10-05"
+  },
+  "writtenIn": [
+    "Java",
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host. Vespa Cloud (managed, also as enclave in your account) offers a free trial and usage-based billing for provisioned resources."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Vespa Cloud",
+      "provider": "Vespa.ai",
+      "url": "https://vespa.ai/vespa-cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Automatic data distribution and redistribution across content nodes; Yahoo-scale deployments serve billions of documents at hundreds of thousands of QPS."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "YQL"
+  ],
+  "apis": [
+    "REST/JSON",
+    "Document v1 API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Ranks with ML models and tensor math on the data nodes, not in a separate service",
+    "True hybrid retrieval: BM25, ANN, multi-vector (ColBERT) and structured filters in one query",
+    "Real-time writes with immediate searchability at very high throughput",
+    "Proven at Yahoo scale",
+    "Apache-2.0 with a capable managed cloud"
+  ],
+  "weaknesses": [
+    "Steep learning curve: application packages, schemas and rank profiles",
+    "Heavy footprint for small projects",
+    "Smaller community than Elasticsearch",
+    "No official Kubernetes operator for self-hosting"
+  ],
+  "useCases": [
+    "Large-scale hybrid search and RAG retrieval",
+    "Recommendation and personalization feeds",
+    "Ad serving and ranking",
+    "E-commerce search with learned ranking"
+  ],
+  "notIdealFor": [
+    "Small apps needing a simple search box",
+    "Log analytics",
+    "Teams without search/ML engineering capacity"
+  ],
+  "notableUsers": [
+    "Yahoo",
+    "Perplexity"
+  ],
+  "alternatives": [
+    "elasticsearch",
+    "opensearch",
+    "weaviate",
+    "milvus",
+    "qdrant",
+    "marqo"
+  ],
+  "tags": [
+    "search",
+    "ranking",
+    "tensors",
+    "hybrid-search",
+    "recommendation",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://vespa.ai/",
+    "docs": "https://docs.vespa.ai/",
+    "repository": "https://github.com/vespa-engine/vespa",
+    "pricing": "https://vespa.ai/pricing/",
+    "changelog": "https://github.com/vespa-engine/vespa/releases"
+  },
+  "ids": {
+    "github": "vespa-engine/vespa",
+    "stackoverflowTag": "vespa",
+    "dockerHub": "vespaengine/vespa",
+    "pypi": "pyvespa",
+    "hackerNewsQuery": "Vespa.ai"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/vespa-engine/vespa/releases",
+    "https://vespa.ai/",
+    "https://docs.vespa.ai/"
+  ],
+  "lastVerified": "2026-10-27"
+}

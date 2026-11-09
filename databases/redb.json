@@ -1,0 +1,164 @@
+{
+  "slug": "redb",
+  "name": "redb",
+  "aliases": [],
+  "tagline": "Pure-Rust embedded key-value store: copy-on-write B-trees, ACID, and a stable file format.",
+  "description": "redb is an embedded key-value database written entirely in Rust, inspired by LMDB: data lives in copy-on-write B-trees in a single file, readers get MVCC snapshots without blocking the single writer, and commits are crash-safe. Its typed table API (keys and values as Rust types) and savepoints make it feel native in Rust code, and the file format has been declared stable since 1.0, with the 4.x line current in 2026. It is a good default for Rust applications that want a dependency-free, transactional local store; LSM engines like Fjall are better for write-heavy loads.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "local-first",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Christopher Berner",
+  "vendorType": "community",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "4.4.0",
+    "date": "2026-10-13"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT or Apache License 2.0",
+    "spdx": "MIT OR Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Rust API"
+  ],
+  "apis": [
+    "Rust API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Rust with zero unsafe-heavy C dependencies",
+    "Fully ACID with MVCC: readers never block the writer",
+    "Typed tables and multimap tables in a natural Rust API",
+    "Stable file format with upgrade paths between major versions",
+    "Savepoints and crash safety without a separate WAL"
+  ],
+  "weaknesses": [
+    "Single writer at a time",
+    "Write throughput below LSM engines for heavy random writes",
+    "Essentially a one-maintainer project",
+    "Rust-first; other language bindings are minimal"
+  ],
+  "useCases": [
+    "Local persistence for Rust desktop and CLI apps",
+    "Embedded metadata and index storage in Rust services",
+    "Replacing sled or LMDB bindings in Rust code"
+  ],
+  "notIdealFor": [
+    "Write-heavy ingestion",
+    "Non-Rust applications",
+    "Distributed or networked access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "fjall",
+    "sled",
+    "lmdb",
+    "bbolt",
+    "sqlite"
+  ],
+  "tags": [
+    "rust",
+    "b-tree",
+    "embedded",
+    "acid"
+  ],
+  "links": {
+    "website": "https://www.redb.org/",
+    "docs": "https://docs.rs/redb",
+    "repository": "https://github.com/cberner/redb",
+    "changelog": "https://github.com/cberner/redb/blob/master/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "cberner/redb",
+    "crates": "redb",
+    "hackerNewsQuery": "redb Rust"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/cberner/redb",
+    "https://github.com/cberner/redb/releases",
+    "https://crates.io/crates/redb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,158 @@
+{
+  "slug": "compass",
+  "name": "Compass",
+  "aliases": [
+    "Compass Search Engine Framework",
+    "Compass Project"
+  ],
+  "tagline": "Java search framework on Lucene with object-to-index mapping; Shay Banon's precursor to Elasticsearch.",
+  "description": "Compass was an open-source Java framework that Shay Banon started in 2004 to make Apache Lucene usable as an application data store. Its core idea was OSEM, object/search engine mapping: annotate domain classes and Compass indexed them, kept the index in step with Hibernate, JPA and other ORM writes, and wrapped Lucene in transactional index operations, a query builder and XML or JSON mappings. It was widely used from Spring and Grails applications in the late 2000s. While designing Compass 3.0, Banon concluded that a scalable, distributed engine speaking JSON over HTTP needed a rewrite, released Elasticsearch in 2010, and announced that Compass 2.x was in maintenance mode and users should plan to migrate. The final line was 2.2.0, and the project site is offline.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Superseded by Elasticsearch (2010); the author put Compass 2.x into maintenance and the project site is offline. Last line: 2.2.0.",
+  "maturity": "legacy",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "full-text-search",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Shay Banon",
+  "vendorType": "community",
+  "initialRelease": 2004,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Lucene",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Lucene query syntax",
+    "Compass query builder"
+  ],
+  "apis": [
+    "Java API",
+    "OSEM annotations"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Annotation-driven mapping from Java objects to a Lucene index",
+    "Kept search indexes in sync with Hibernate/JPA writes automatically",
+    "Transactional semantics over Lucene index updates"
+  ],
+  "weaknesses": [
+    "Discontinued since 2010 and tied to very old Lucene versions",
+    "Single-JVM design with no distribution",
+    "Its author recommended migrating to Elasticsearch"
+  ],
+  "useCases": [
+    "Maintaining legacy Spring or Grails apps that still embed it",
+    "Historical context for Elasticsearch's design"
+  ],
+  "notIdealFor": [
+    "New search projects",
+    "Distributed or large-scale search"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "elasticsearch",
+    "opensearch",
+    "apache-solr",
+    "apache-lucene",
+    "meilisearch"
+  ],
+  "tags": [
+    "search",
+    "lucene",
+    "java",
+    "orm",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20100301140503/http://www.compass-project.org/",
+    "repository": "https://github.com/kimchy/compass"
+  },
+  "ids": {
+    "github": "kimchy/compass"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20100301140503/http://www.compass-project.org/",
+    "https://web.archive.org/web/2012/http://www.kimchy.org/the_future_of_compass/",
+    "https://en.wikipedia.org/wiki/Elasticsearch"
+  ],
+  "lastVerified": "2026-10-27"
+}

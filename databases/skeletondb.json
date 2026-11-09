@@ -1,0 +1,148 @@
+{
+  "slug": "skeletondb",
+  "name": "SkeletonDB",
+  "aliases": [],
+  "tagline": "Experimental lock-free in-memory MVCC key-value store for Go built on a Bw-tree; untouched since 2016.",
+  "description": "SkeletonDB is a small Go library by Tristan Rice that implements an in-memory multi-version key-value store on top of a Bw-tree, the latch-free index structure from Microsoft Research that updates pages with atomic compare-and-swap instead of locks. It was a 2016 hobby project and never grew persistence, a server, or a stable API. Its value today is as a compact, readable Go implementation of Bw-tree ideas; for real embedded storage in Go, pick a maintained engine.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Hobby project with no commits since December 2016; effectively unmaintained. Use Badger, Pebble, bbolt or BuntDB for embedded storage in Go.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Tristan Rice",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Go API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Readable Go implementation of a latch-free Bw-tree",
+    "MVCC snapshots without locks for concurrent readers and writers",
+    "MIT license and tiny codebase, easy to study or fork"
+  ],
+  "weaknesses": [
+    "Abandoned in 2016 with no releases",
+    "In-memory only: no persistence or recovery",
+    "No production users or test history to rely on"
+  ],
+  "useCases": [
+    "Learning how Bw-trees and MVCC work",
+    "Prototyping lock-free data structures in Go"
+  ],
+  "notIdealFor": [
+    "Any production storage",
+    "Data that must survive a restart"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "badger",
+    "pebble",
+    "bbolt",
+    "buntdb"
+  ],
+  "tags": [
+    "go",
+    "mvcc",
+    "bw-tree",
+    "in-memory",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/d4l3k/skeletondb",
+    "repository": "https://github.com/d4l3k/skeletondb"
+  },
+  "ids": {
+    "github": "d4l3k/skeletondb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/d4l3k/skeletondb",
+    "https://dbdb.io/db/skeletondb"
+  ],
+  "lastVerified": "2026-10-27"
+}

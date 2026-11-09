@@ -1,0 +1,163 @@
+{
+  "slug": "nexusdb",
+  "name": "NexusDB",
+  "aliases": [],
+  "tagline": "Commercial embedded and client/server SQL database for Delphi and C++Builder, successor to FlashFiler.",
+  "description": "NexusDB is a relational database engine written in Delphi for Windows developers working in Delphi, C++Builder and .NET. It can be compiled straight into an executable as an embedded engine with no extra libraries, or run as a client/server database, and it supports a large part of SQL:2003 alongside cursor-style navigation that is method-compatible with the old BDE TTable and TQuery components. Transactions, referential integrity, encryption, in-memory tables and full-text indexing are built in, and ADO.NET, ODBC and PHP connectors serve non-Delphi clients. It grew out of TurboPower's FlashFiler and has been sold by Australia's NexusDB Pty Ltd since 2003; the 4.75 line is current, with build 4.75.20 published through Embarcadero GetIt in April 2026, and a free embedded edition is available there.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "NexusDB Pty Ltd",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "4.75.20",
+    "date": "2026-04-14"
+  },
+  "writtenIn": [
+    "Delphi (Object Pascal)"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial; free embedded edition"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "Free single-user embedded edition via Embarcadero GetIt; client/server and source editions are sold as commercial developer licenses."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Delphi TDataSet components",
+    "ADO.NET",
+    "ODBC",
+    "PHP connector"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Delphi",
+    "C++Builder",
+    "C#",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Compiles into a Delphi executable with no external DLLs",
+    "Same engine scales from embedded single-user to client/server",
+    "TTable/TQuery-compatible API eases porting old BDE applications",
+    "Still actively updated for current RAD Studio releases"
+  ],
+  "weaknesses": [
+    "Windows- and Delphi-centric ecosystem",
+    "Small vendor and community compared with Firebird or SQLite",
+    "Commercial licensing for anything beyond the embedded free edition"
+  ],
+  "useCases": [
+    "Desktop and line-of-business apps built with Delphi or C++Builder",
+    "Migrating BDE/Paradox or FlashFiler applications",
+    "Small client/server deployments in Windows shops"
+  ],
+  "notIdealFor": [
+    "Linux or cloud-native services",
+    "Large multi-terabyte databases"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "firebird",
+    "sqlite",
+    "elevatedb",
+    "advantage-database-server",
+    "interbase"
+  ],
+  "tags": [
+    "delphi",
+    "embedded",
+    "sql",
+    "windows",
+    "rad-studio"
+  ],
+  "links": {
+    "website": "https://www.nexusdb.com/",
+    "docs": "https://www.nexusdb.com/docs",
+    "wikipedia": "https://en.wikipedia.org/wiki/NexusDB"
+  },
+  "ids": {
+    "wikipedia": "NexusDB",
+    "hackerNewsQuery": "NexusDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://getitnow.embarcadero.com/nexusdb-embedded-free",
+    "https://en.wikipedia.org/wiki/NexusDB",
+    "https://dbdb.io/db/nexusdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

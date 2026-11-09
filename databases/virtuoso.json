@@ -1,0 +1,199 @@
+{
+  "slug": "virtuoso",
+  "name": "OpenLink Virtuoso",
+  "aliases": [
+    "Virtuoso Universal Server",
+    "Virtuoso Open Source",
+    "VOS"
+  ],
+  "tagline": "Hybrid SQL/RDF engine that runs many of the largest public SPARQL endpoints.",
+  "description": "OpenLink Virtuoso is a long-lived hybrid server that combines a column-store relational engine with native RDF storage, SPARQL 1.1, SQL and SPASQL (SPARQL inside SQL), plus a web and Linked Data server. It powers well-known public endpoints such as DBpedia and UniProt, which shows it can serve billions of triples to anonymous traffic. The open-source edition (GPLv2, 7.2.x line, last release 7.2.17 in May 2026) is single-server; the commercial edition adds elastic clustering and replication. It is a pragmatic choice for big Linked Data publishing, though its tooling and documentation feel dated.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "relational",
+    "xml"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "olap",
+    "content-management",
+    "metadata-store"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server",
+    "distributed"
+  ],
+  "developer": "OpenLink Software",
+  "vendorType": "company",
+  "initialRelease": 1998,
+  "latestVersion": {
+    "version": "7.2.17",
+    "date": "2026-05-07"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-2.0 (Open Source Edition); commercial edition proprietary",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "per-node-license",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Open-source edition is free; commercial edition (clustering, replication) is licensed, and AMIs are sold on AWS Marketplace."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Single-server in the open-source edition; the commercial Elastic Cluster shards across nodes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SPARQL",
+    "SQL",
+    "SPASQL"
+  ],
+  "apis": [
+    "SPARQL HTTP protocol",
+    "ODBC",
+    "JDBC",
+    "ADO.NET",
+    "WebDAV",
+    "Linked Data Platform"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "ODBC",
+    "JDBC",
+    "Python",
+    "PHP",
+    "Jena/RDF4J adapters"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Proven at serving billions of triples on public endpoints such as DBpedia and UniProt",
+    "Column-store indexes with compression keep large RDF datasets compact",
+    "SQL and SPARQL in one engine, including SPARQL embedded inside SQL",
+    "Bundled web server, WebDAV and Linked Data publishing features"
+  ],
+  "weaknesses": [
+    "Open-source edition has no clustering; scale-out is commercial-only",
+    "Dated admin UI (Conductor) and scattered documentation",
+    "Query planner can behave unpredictably on complex SPARQL, needing manual tuning",
+    "Small vendor with slow open-source release cadence"
+  ],
+  "useCases": [
+    "Public Linked Open Data endpoints",
+    "Large RDF datasets in life sciences",
+    "Hybrid SQL plus RDF data integration",
+    "Semantic web publishing"
+  ],
+  "notIdealFor": [
+    "Property-graph apps using Cypher or Gremlin",
+    "Teams wanting modern cloud-native tooling",
+    "Small embedded RDF use"
+  ],
+  "notableUsers": [
+    "DBpedia",
+    "UniProt"
+  ],
+  "alternatives": [
+    "qlever",
+    "ontotext-graphdb",
+    "stardog",
+    "apache-jena-tdb",
+    "blazegraph",
+    "allegrograph"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "linked-data",
+    "sql",
+    "column-store"
+  ],
+  "links": {
+    "website": "https://virtuoso.openlinksw.com/",
+    "docs": "https://docs.openlinksw.com/virtuoso/",
+    "repository": "https://github.com/openlink/virtuoso-opensource",
+    "changelog": "https://vos.openlinksw.com/owiki/wiki/VOS/VOSNews",
+    "wikipedia": "https://en.wikipedia.org/wiki/Virtuoso_Universal_Server"
+  },
+  "ids": {
+    "github": "openlink/virtuoso-opensource",
+    "stackoverflowTag": "virtuoso",
+    "wikipedia": "Virtuoso_Universal_Server",
+    "dockerHub": "openlink/virtuoso-opensource-7",
+    "hackerNewsQuery": "OpenLink Virtuoso"
+  },
+  "brand": {
+    "color": "#0E5DA8"
+  },
+  "sources": [
+    "https://github.com/openlink/virtuoso-opensource/releases",
+    "https://vos.openlinksw.com/owiki/wiki/VOS/VOSNews",
+    "https://hub.docker.com/r/openlink/virtuoso-opensource-7"
+  ],
+  "lastVerified": "2026-10-27"
+}

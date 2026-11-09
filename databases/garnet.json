@@ -1,0 +1,185 @@
+{
+  "slug": "garnet",
+  "name": "Microsoft Garnet",
+  "aliases": [
+    "Garnet"
+  ],
+  "tagline": "Microsoft Research's .NET cache-store that speaks RESP and scales across cores and storage tiers.",
+  "description": "Garnet is a remote cache-store from Microsoft Research built on .NET and the Tsavorite storage engine (a descendant of FASTER). It speaks RESP, so unmodified Redis clients work, but its multi-threaded, epoch-protected design scales throughput with cores and lets data spill from memory to SSD or cloud storage. It supports cluster mode with sharding and migration, Lua, transactions via stored procedures, and recently preview vector sets on DiskANN. It powers several internal Microsoft services and is a good option for .NET shops or anyone wanting an MIT-licensed Redis-compatible server with a larger-than-memory tier.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "vector"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub",
+    "vector-search"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Microsoft Research",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "2.2.4",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Cluster mode with hash-slot sharding and key migration; Tsavorite tiers data from RAM to SSD and cloud storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua",
+    "C# stored procedures"
+  ],
+  "apis": [
+    "RESP2/RESP3"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Throughput scales with cores thanks to a lock-free, multi-threaded storage engine",
+    "Larger-than-memory storage tier spilling to SSD and Azure Storage",
+    "MIT license from a large vendor with an active research team",
+    "Embeddable in .NET apps and extensible with C# server-side procedures",
+    "Low tail latency on large batched workloads"
+  ],
+  "weaknesses": [
+    "Not every Redis command or module is implemented",
+    "Smaller community and fewer packaged deployments than Redis/Valkey",
+    "No first-party managed cloud service",
+    "Operational tooling is younger (backup, monitoring, operators)"
+  ],
+  "useCases": [
+    "Redis-compatible caching for .NET-heavy stacks",
+    "High-throughput caches that need an SSD spill tier",
+    "Embedding a cache-store inside a .NET service"
+  ],
+  "notIdealFor": [
+    "Apps relying on Redis Stack modules",
+    "Teams wanting a fully managed service"
+  ],
+  "notableUsers": [
+    "Microsoft"
+  ],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "dragonfly",
+    "apache-kvrocks",
+    "ncache"
+  ],
+  "tags": [
+    "cache",
+    "redis-compatible",
+    "dotnet",
+    "microsoft-research",
+    "tiered-storage"
+  ],
+  "links": {
+    "website": "https://microsoft.github.io/garnet/",
+    "docs": "https://microsoft.github.io/garnet/docs",
+    "repository": "https://github.com/microsoft/garnet",
+    "changelog": "https://github.com/microsoft/garnet/releases"
+  },
+  "ids": {
+    "github": "microsoft/garnet",
+    "hackerNewsQuery": "Microsoft Garnet"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/microsoft/garnet/releases",
+    "https://www.microsoft.com/en-us/research/project/garnet",
+    "https://www.nuget.org/packages/Microsoft.Garnet"
+  ],
+  "lastVerified": "2026-10-27"
+}

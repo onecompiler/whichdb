@@ -1,0 +1,152 @@
+{
+  "slug": "axion",
+  "name": "Axion",
+  "aliases": [
+    "AxionDB",
+    "Axion Database Engine"
+  ],
+  "tagline": "Small embeddable pure-Java SQL database with a JDBC driver, from the early-2000s Tigris.org community.",
+  "description": "Axion is an open-source relational database engine written in and for Java, developed from 2002 on Tigris.org by a group that included Rodney Waldhoff, James Strachan and Geir Magnusson Jr. Applications embed it through a JDBC driver and choose in-memory or disk-backed databases and tables; it parses SQL with a JavaCC grammar, supports B-tree and array indexes, sequences, constraints and snapshot-isolation transactions. Its niche was the same as HSQLDB and later H2 and Apache Derby: lightweight SQL storage and test databases inside Java applications. Releases never got past 1.0 milestone builds (1.0-M1 and later -dev snapshots on Maven Central), development faded around 2007, and Tigris.org itself shut down in 2020.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Development ended around 2007 at 1.0 milestone builds; Tigris.org hosting closed in 2020. Use H2, HSQLDB or Apache Derby.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Axion Development Team",
+  "vendorType": "community",
+  "initialRelease": 2002,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD-style Axion licence"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "In-process database for a single JVM."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Java with a JDBC driver, so it embeds anywhere a JVM runs",
+    "Choice of in-memory or disk-backed tables",
+    "Snapshot-isolation transactions and B-tree indexes in a small footprint",
+    "Permissive BSD-style licence"
+  ],
+  "weaknesses": [
+    "Abandoned for nearly two decades; never reached a 1.0 final release",
+    "Original website and source repository are gone with Tigris.org",
+    "Far less SQL coverage and tooling than H2, HSQLDB or Derby"
+  ],
+  "useCases": [
+    "Maintaining old Java applications that bundle Axion",
+    "Studying early pure-Java SQL engine design"
+  ],
+  "notIdealFor": [
+    "New Java projects (use H2, HSQLDB or Apache Derby)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "sqlite"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "jdbc",
+    "sql",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://dbdb.io/db/axion",
+    "repository": "https://repo1.maven.org/maven2/axion/axion/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/axion",
+    "https://repo1.maven.org/maven2/axion/axion/",
+    "https://repo1.maven.org/maven2/axion/axion/1.0-M3-dev/"
+  ],
+  "lastVerified": "2026-10-27"
+}

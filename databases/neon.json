@@ -1,0 +1,202 @@
+{
+  "slug": "neon",
+  "name": "Neon",
+  "aliases": [
+    "Neon Postgres",
+    "Neon Serverless Postgres"
+  ],
+  "tagline": "Serverless Postgres with copy-on-write branching and scale-to-zero, now part of Databricks.",
+  "description": "Neon is a serverless PostgreSQL service that splits Postgres into stateless compute and a custom storage layer (safekeepers for the WAL, pageservers backed by object storage). That design enables instant copy-on-write branches of a whole database, point-in-time restore inside a history window, and computes that autoscale and suspend to zero when idle. It became the default Postgres for preview environments, AI app builders and agent-created databases. Databricks acquired Neon in 2025 and its technology now also underpins Databricks Lakebase. The free plan remains generous, and paid plans are purely usage-based, so it is a strong fit for many small or bursty databases; cold starts and shared-storage latency make it less ideal for steady, latency-critical OLTP.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "vector-search",
+    "rag",
+    "content-management"
+  ],
+  "architecture": [
+    "serverless",
+    "shared-storage",
+    "primary-replica"
+  ],
+  "developer": "Databricks (Neon)",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "writtenIn": [
+    "Rust",
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (storage engine)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "free"
+    ],
+    "freeTier": true,
+    "startingPrice": "$0.106 per CU-hour (Launch), no monthly minimum",
+    "notes": "Free plan: 100 CU-hours and 1 GB storage per project, up to 2 CU autoscaling, scale-to-zero after 5 minutes. Scale plan $0.222/CU-hour; storage $0.35/GB-month."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "vercel"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Neon",
+      "provider": "Databricks",
+      "url": "https://neon.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Autoscaling single-writer compute with read replicas sharing storage; projects are pinned to one region."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "HTTP and WebSocket serverless driver",
+    "Data API (PostgREST-compatible)"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "Go",
+    "Java",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Instant copy-on-write branches for preview environments, tests and agents",
+    "Scale-to-zero and autoscaling make thousands of small databases cheap",
+    "Time-travel queries and instant restore within the history window",
+    "Serverless HTTP/WebSocket driver works from edge runtimes",
+    "Real Postgres with common extensions (pgvector, PostGIS)"
+  ],
+  "weaknesses": [
+    "Cold starts after suspend add latency to the first query",
+    "Storage over network/object storage is slower than local NVMe for heavy OLTP",
+    "Single-region projects; no multi-region writes",
+    "Product roadmap now tied to Databricks priorities; public repo activity has slowed"
+  ],
+  "useCases": [
+    "Per-pull-request preview databases",
+    "AI app builders and agents provisioning databases on demand",
+    "SaaS with many small, mostly idle tenant databases",
+    "Serverless and edge apps on Vercel or Cloudflare"
+  ],
+  "notIdealFor": [
+    "Steady high-throughput OLTP with strict latency SLOs",
+    "Multi-region active-active writes",
+    "On-premises deployments"
+  ],
+  "notableUsers": [
+    "Replit",
+    "Vercel"
+  ],
+  "alternatives": [
+    "supabase",
+    "lakebase",
+    "planetscale",
+    "xata",
+    "prisma-postgres",
+    "amazon-aurora"
+  ],
+  "tags": [
+    "serverless",
+    "postgres",
+    "branching",
+    "scale-to-zero",
+    "databricks"
+  ],
+  "links": {
+    "website": "https://neon.com/",
+    "docs": "https://neon.com/docs",
+    "repository": "https://github.com/neondatabase/neon",
+    "pricing": "https://neon.com/pricing",
+    "changelog": "https://neon.com/docs/changelog"
+  },
+  "ids": {
+    "github": "neondatabase/neon",
+    "stackoverflowTag": "neondb",
+    "npm": "@neondatabase/serverless",
+    "hackerNewsQuery": "Neon Postgres"
+  },
+  "brand": {
+    "color": "#34D59A",
+    "simpleIcon": "neon"
+  },
+  "sources": [
+    "https://neon.com/pricing",
+    "https://github.com/neondatabase/neon",
+    "https://www.databricks.com/company/newsroom/press-releases/databricks-agrees-acquire-neon-help-developers-deliver-ai-systems"
+  ],
+  "lastVerified": "2026-10-27"
+}

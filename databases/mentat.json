@@ -1,0 +1,171 @@
+{
+  "slug": "mentat",
+  "name": "Mentat",
+  "aliases": [
+    "Project Mentat",
+    "Datomish"
+  ],
+  "tagline": "Mozilla's archived Rust knowledge base: Datomic-style datoms and Datalog queries stored in SQLite.",
+  "description": "Project Mentat was an embedded, persistent store from Mozilla that brought Datomic and DataScript ideas to client applications: data as immutable entity-attribute-value datoms, schema as data, an append-only transaction log, and Datalog queries, all persisted in SQLite. It started in 2016 as Datomish, written in ClojureScript, and was rewritten in Rust with Swift and Android SDKs and experimental sync, aimed at Firefox and mobile apps. Mozilla stopped development in September 2018 and the repository is archived; a community fork exists but is barely active. It is still a useful design study for putting a Datalog layer on top of SQLite.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Mozilla ended development in Sept 2018 and archived the repository. Consider Datahike, DataScript or XTDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "graph"
+  ],
+  "workloads": [
+    "embedded",
+    "local-first",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Mozilla",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "0.11.1",
+    "date": "2018-08-09"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single SQLite file per store; designed for client devices."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Datalog"
+  ],
+  "apis": [
+    "Rust API",
+    "Swift SDK",
+    "Android SDK",
+    "C FFI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Swift",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Datomic-style datom model and Datalog queries in an embeddable library",
+    "Rides on SQLite for durability and portability",
+    "Schema-as-data makes vocabularies easy to extend over time"
+  ],
+  "weaknesses": [
+    "Archived since 2018; no fixes or releases",
+    "Sync and many planned features were never finished",
+    "Small user base and little documentation beyond the wiki"
+  ],
+  "useCases": [
+    "Studying how to layer Datalog over a relational engine",
+    "Prototyping local-first apps with a datom store"
+  ],
+  "notIdealFor": [
+    "Production applications",
+    "Server-side or multi-user databases"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "datahike",
+    "datascript",
+    "xtdb",
+    "datomic",
+    "sqlite"
+  ],
+  "tags": [
+    "datalog",
+    "embedded",
+    "rust",
+    "sqlite",
+    "archived",
+    "mozilla"
+  ],
+  "links": {
+    "website": "https://mozilla.github.io/mentat/",
+    "repository": "https://github.com/mozilla/mentat"
+  },
+  "ids": {
+    "github": "mozilla/mentat",
+    "hackerNewsQuery": "Project Mentat"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/mozilla/mentat",
+    "https://mozilla.github.io/mentat/",
+    "https://dbdb.io/db/mentat"
+  ],
+  "lastVerified": "2026-10-27"
+}

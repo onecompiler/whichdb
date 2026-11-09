@@ -1,0 +1,175 @@
+{
+  "slug": "azure-table-storage",
+  "name": "Azure Table Storage",
+  "aliases": [
+    "Azure Tables",
+    "Azure Storage Tables"
+  ],
+  "tagline": "Cheap, schemaless key-attribute store inside an Azure Storage account.",
+  "description": "Azure Table Storage is one of the original Azure Storage services: entities with up to 252 properties, addressed by a PartitionKey and RowKey, served over a REST/OData API from a general-purpose storage account. It is very inexpensive for large volumes of simple records and needs no provisioning, which keeps it popular for logs, device metadata and app configuration. The trade-off is that only the two keys are indexed, batch transactions are limited to one partition, and latency is not guaranteed. Teams that outgrow it usually move to Azure Cosmos DB for Table, which exposes the same API with global distribution and SLAs.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "wide-column"
+  ],
+  "workloads": [
+    "metadata-store",
+    "iot",
+    "configuration",
+    "observability"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Azure service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed per GB stored and per 10,000 transactions as part of an Azure Storage account; geo-redundant options cost more."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Azure Table Storage",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/storage/tables/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Partitions are spread automatically; storage accounts are capped by account-level throughput targets. RA-GRS gives a read-only secondary region."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "OData"
+  ],
+  "apis": [
+    "REST/OData",
+    "Azure SDK"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    ".NET",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very low cost per GB for large volumes of simple entities",
+    "Zero provisioning; lives in a storage account you probably already have",
+    "Same API as Azure Cosmos DB for Table, so there is an upgrade path",
+    "Strongly consistent reads within the primary region"
+  ],
+  "weaknesses": [
+    "Only PartitionKey and RowKey are indexed; other filters scan",
+    "Entity group transactions limited to 100 entities in one partition",
+    "No latency SLA and throughput caps per partition and account",
+    "Feature set has barely changed in years"
+  ],
+  "useCases": [
+    "Application logs and diagnostics",
+    "Device and user metadata keyed by ID",
+    "Lightweight configuration storage",
+    "Cheap archival of structured records"
+  ],
+  "notIdealFor": [
+    "Queries on non-key properties",
+    "Low-latency global applications",
+    "Complex transactions or relational data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "azure-cosmos-db",
+    "amazon-dynamodb",
+    "google-cloud-bigtable",
+    "cloudflare-workers-kv"
+  ],
+  "tags": [
+    "azure",
+    "managed",
+    "nosql",
+    "cheap-storage"
+  ],
+  "links": {
+    "website": "https://azure.microsoft.com/products/storage/tables/",
+    "docs": "https://learn.microsoft.com/azure/storage/tables/",
+    "pricing": "https://azure.microsoft.com/pricing/details/storage/tables/"
+  },
+  "ids": {
+    "stackoverflowTag": "azure-table-storage",
+    "npm": "@azure/data-tables",
+    "pypi": "azure-data-tables",
+    "hackerNewsQuery": "Azure Table Storage"
+  },
+  "brand": {
+    "color": "#0078D4"
+  },
+  "sources": [
+    "https://learn.microsoft.com/azure/storage/tables/table-storage-overview",
+    "https://azure.microsoft.com/pricing/details/storage/tables/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,162 @@
+{
+  "slug": "redstore",
+  "name": "RedStore",
+  "aliases": [
+    "Redstore triplestore"
+  ],
+  "tagline": "Lightweight C RDF triplestore with a built-in SPARQL HTTP server, built on the Redland libraries.",
+  "description": "RedStore is a small RDF triplestore written in C by Nicholas Humfrey on top of the Redland RDF libraries (raptor, rasqal and librdf). It bundles its own HTTP server exposing a SPARQL 1.0 query endpoint plus the SPARQL 1.1 Protocol, Graph Store HTTP Protocol and Service Description, so you can load, replace and delete named graphs with curl. Storage is delegated to any context-capable Redland backend, including in-memory hashes, SQLite, MySQL, PostgreSQL and Virtuoso, and there was a packaged Mac OS X app. It was handy for local Linked Data development, but the last release was 0.5.4 in 2011, the last commit in 2017, and it only advertises SPARQL 1.0 query support.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release 0.5.4 (2011), last commit 2017; unmaintained. Use Oxigraph, Apache Jena Fuseki or QLever.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Nicholas Humfrey",
+  "vendorType": "community",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "0.5.4",
+    "date": "2011-10-27"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Redland RDF libraries",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU General Public License v3.0",
+    "spdx": "GPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Capacity depends on the chosen Redland storage backend; intended for small and medium graphs."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL 1.0"
+  ],
+  "apis": [
+    "SPARQL 1.1 Protocol",
+    "SPARQL 1.1 Graph Store HTTP Protocol",
+    "HTTP"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tiny footprint with only the Redland libraries as a runtime dependency",
+    "Built-in HTTP server with Graph Store Protocol for curl-friendly graph loading",
+    "Pluggable storage via Redland backends (hashes, SQLite, MySQL, PostgreSQL, Virtuoso)",
+    "Reads and writes many RDF serialisations"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2017; only SPARQL 1.0 query is advertised, with no SPARQL 1.1 Update",
+    "Performance bounded by Redland storage modules",
+    "No authentication, clustering or reasoning"
+  ],
+  "useCases": [
+    "Local Linked Data experiments and teaching",
+    "Lightweight SPARQL endpoint for small legacy datasets"
+  ],
+  "notIdealFor": [
+    "Production knowledge graphs",
+    "Large RDF datasets",
+    "SPARQL 1.1 Update workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oxigraph",
+    "apache-jena-tdb",
+    "qlever",
+    "eclipse-rdf4j",
+    "virtuoso"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "triplestore",
+    "redland",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://www.aelius.com/njh/redstore/",
+    "repository": "https://github.com/njh/redstore"
+  },
+  "ids": {
+    "github": "njh/redstore",
+    "hackerNewsQuery": "RedStore RDF"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/njh/redstore",
+    "https://www.aelius.com/njh/redstore/",
+    "https://dbdb.io/db/redstore"
+  ],
+  "lastVerified": "2026-10-27"
+}

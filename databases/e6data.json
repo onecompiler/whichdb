@@ -1,0 +1,162 @@
+{
+  "slug": "e6data",
+  "name": "e6data",
+  "aliases": [],
+  "tagline": "Lakehouse compute engine that runs SQL on Iceberg, Delta and Hudi in your own cloud account.",
+  "description": "e6data is a commercial query engine for open lakehouse formats that deploys into the customer's own cloud account (AWS, Azure or GCP) and queries Iceberg, Delta Lake and Hudi tables through existing catalogs. Its pitch is a disaggregated, decentralized architecture that scales capacity in single-vCPU increments, aiming for lower and more predictable cost than Spark, Trino or warehouse compute on high-concurrency workloads. Newer products add streaming ingest and agent-oriented tooling. It is a young, venture-funded vendor, so evaluate it on your own workloads.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "lakehouse",
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "e6data",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "Rust",
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Billed by vCPU usage in the customer's cloud account; trials by request."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales compute in fine-grained vCPU increments over object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ANSI, Trino/Spark-compatible dialects)"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs inside your cloud account over open table formats",
+    "Fine-grained, per-vCPU elastic scaling",
+    "Works with existing catalogs (Glue, Unity, Hive, Polaris)",
+    "Targets high-concurrency lakehouse workloads at lower cost"
+  ],
+  "weaknesses": [
+    "Young vendor with a small community",
+    "Closed source with no self-hosted free edition",
+    "Limited public documentation and benchmarks are vendor-run"
+  ],
+  "useCases": [
+    "Cutting lakehouse compute cost",
+    "High-concurrency BI on Iceberg/Delta",
+    "Offloading queries from Spark or warehouses"
+  ],
+  "notIdealFor": [
+    "Teams wanting open-source engines",
+    "OLTP",
+    "Small single-node datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "starburst",
+    "databricks-sql",
+    "dremio",
+    "amazon-athena"
+  ],
+  "tags": [
+    "lakehouse",
+    "iceberg",
+    "byoc",
+    "query-engine"
+  ],
+  "links": {
+    "website": "https://www.e6data.com/",
+    "docs": "https://docs.e6data.com/",
+    "pricing": "https://www.e6data.com/pricing"
+  },
+  "ids": {
+    "pypi": "e6data-python-connector",
+    "hackerNewsQuery": "e6data"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.e6data.com/",
+    "https://www.e6data.com/pricing",
+    "https://pypi.org/project/e6data-python-connector/"
+  ],
+  "lastVerified": "2026-10-27"
+}

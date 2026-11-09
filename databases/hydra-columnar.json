@@ -1,0 +1,168 @@
+{
+  "slug": "hydra-columnar",
+  "name": "Hydra",
+  "aliases": [
+    "Hydra Columnar",
+    "hydra.so"
+  ],
+  "tagline": "Columnar storage extension for Postgres from Hydra; dormant after the team joined Supabase in 2026.",
+  "description": "Hydra was a startup that built analytics into PostgreSQL. Its first product, Hydra Columnar, was an open-source table access method (forked from Citus columnar) that stored tables column-wise with compression, vectorized execution and parallel scans, plus updates and deletes. Hydra later pivoted to DuckDB-based acceleration, co-creating pg_duckdb with MotherDuck, and offered a serverless analytics Postgres service. In February 2026 the Hydra team joined Supabase, the hydra.so site went offline, and the columnar repo has had no code changes since late 2024. Use pg_duckdb or another maintained option instead.",
+  "productType": "extension",
+  "status": "discontinued",
+  "statusNote": "Hydra's team joined Supabase in Feb 2026 and hydra.so is offline; the columnar repo is unarchived but has had no code changes since Oct 2024. Use pg_duckdb.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Hydra (team now at Supabase)",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "1.1.2",
+    "date": "2024-04-01"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL (Citus columnar fork)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "The extension is free; the hosted Hydra service is no longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single PostgreSQL instance; columnar tables compress well but scale with one server."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Columnar tables inside ordinary Postgres with standard SQL",
+    "Good compression and faster aggregates than heap tables",
+    "Supports updates and deletes on columnar tables"
+  ],
+  "weaknesses": [
+    "Effectively unmaintained; no releases since 2024",
+    "Vendor service shut down after the team joined Supabase",
+    "Limited to older PostgreSQL versions (14-16)"
+  ],
+  "useCases": [
+    "Legacy installs planning migration",
+    "Reference for Postgres columnar table access methods"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Current PostgreSQL versions (17+)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pg-duckdb",
+    "pg-mooncake",
+    "citus",
+    "duckdb",
+    "clickhouse"
+  ],
+  "tags": [
+    "postgres-extension",
+    "columnar",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/hydradatabase/columnar",
+    "repository": "https://github.com/hydradatabase/columnar"
+  },
+  "ids": {
+    "github": "hydradatabase/columnar",
+    "hackerNewsQuery": "Hydra columnar Postgres"
+  },
+  "brand": {},
+  "sources": [
+    "https://supabase.com/blog/hydra-joins-supabase",
+    "https://github.com/hydradatabase/columnar",
+    "https://www.i-programmer.info/news/84-database/16750-hydra-turns-postgresql-into-a-column-store.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

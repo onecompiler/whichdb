@@ -1,0 +1,199 @@
+{
+  "slug": "harperdb",
+  "name": "Harper (formerly HarperDB)",
+  "aliases": [
+    "HarperDB",
+    "Harper",
+    "Harper Pro",
+    "Harper Fabric"
+  ],
+  "tagline": "Node.js runtime that fuses database, cache, app logic and MQTT/WebSocket messaging in one process.",
+  "description": "Harper, called HarperDB until a 2025 rebrand, is a Node.js platform that runs the database, cache, application code and messaging in a single process so requests never cross a network hop. Tables are declared in GraphQL schema files and exported as REST endpoints automatically, data lives in LMDB or, since 5.0, RocksDB, and it adds secondary and HNSW vector indexes, caching with expiry, blob storage and publish/subscribe over MQTT, WebSockets and server-sent events. Harper 5.0 (April 2026) moved the core to Apache 2.0, while Harper Pro adds multi-node replication and certificate management under the Elastic License 2.0; Harper Fabric is the managed, geo-distributed offering. It fits latency-sensitive edge APIs and caches better than general relational workloads.",
+  "productType": "platform",
+  "status": "active",
+  "statusNote": "Renamed from HarperDB to Harper in 2025; the open-source core is now the HarperFast/harper repository.",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value",
+    "vector"
+  ],
+  "workloads": [
+    "caching",
+    "edge",
+    "pub-sub",
+    "oltp",
+    "vector-search"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "HarperDB, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "5.3.4",
+    "date": "2026-10-24"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (core); Elastic License 2.0 (Harper Pro)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Core is free; Harper Pro features are source-available; Harper Fabric is the managed service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Harper Fabric",
+      "provider": "HarperDB, Inc.",
+      "url": "https://fabric.harper.fast/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "active-active",
+    "notes": "Single-node core; multi-node and geo-distributed replication come with Harper Pro or Harper Fabric."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual",
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "REST query parameters",
+    "GraphQL",
+    "SQL (limited)"
+  ],
+  "apis": [
+    "REST",
+    "GraphQL",
+    "MQTT",
+    "WebSocket",
+    "Server-Sent Events",
+    "Operations API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Database, cache, application code and messaging share one process and memory space",
+    "Schema annotations generate REST endpoints with no boilerplate",
+    "Built-in MQTT and WebSocket pub/sub without a separate broker",
+    "LMDB and RocksDB storage engines with HNSW vector indexes",
+    "Apache 2.0 core since Harper 5.0"
+  ],
+  "weaknesses": [
+    "Replication and clustering sit in the ELv2-licensed Harper Pro, not the open-source core",
+    "Application logic must be written in JavaScript/Node.js",
+    "SQL support is limited compared with relational databases",
+    "Smaller community than Redis, MongoDB or Postgres"
+  ],
+  "useCases": [
+    "Edge caching and API acceleration in front of slower origins",
+    "Real-time apps needing MQTT or WebSocket fan-out",
+    "Geo-distributed application backends",
+    "Vector lookups next to application logic"
+  ],
+  "notIdealFor": [
+    "Complex relational reporting",
+    "Teams standardised on non-JavaScript backends",
+    "Large analytical scans"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "pocketbase",
+    "supabase",
+    "convex",
+    "mongodb",
+    "cloudflare-durable-objects"
+  ],
+  "tags": [
+    "nodejs",
+    "edge",
+    "cache",
+    "mqtt",
+    "application-platform",
+    "lmdb"
+  ],
+  "links": {
+    "website": "https://harper.fast/",
+    "docs": "https://docs.harperdb.io/",
+    "repository": "https://github.com/HarperFast/harper",
+    "changelog": "https://github.com/HarperFast/harper/releases"
+  },
+  "ids": {
+    "github": "HarperFast/harper",
+    "dockerHub": "harperdb/harperdb",
+    "npm": "harper",
+    "hackerNewsQuery": "HarperDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://harper.fast/",
+    "https://github.com/HarperFast/harper",
+    "https://github.com/HarperFast/harper/releases/tag/v5.0.0",
+    "https://macaubusiness.com/harper-launches-5-0-fully-open-source-runtime-for-building-and-deploying-cost-efficient-agents/",
+    "https://www.npmjs.com/package/harper"
+  ],
+  "lastVerified": "2026-10-27"
+}

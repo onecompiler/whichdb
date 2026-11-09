@@ -1,0 +1,161 @@
+{
+  "slug": "tayzgrid",
+  "name": "TayzGrid",
+  "aliases": [],
+  "tagline": "Alachisoft's Java in-memory data grid ported from NCache in 2013, with JCache; folded back into NCache.",
+  "description": "TayzGrid was Alachisoft's native-Java port of its .NET distributed cache NCache, created in 2013 so Java shops could get the same peer-to-peer dynamic clustering, replicated and partitioned topologies, WAN replication, event notifications, MapReduce and a JCache (JSR 107) API. It also plugged into Hibernate as a second-level cache, Spring Cache and Java web sessions, and offered a Memcached protocol server for drop-in use. An Apache 2.0 open-source edition was published in 2015 alongside commercial editions up to version 4.6. Alachisoft has since dropped the TayzGrid brand, and its old product URL now redirects to NCache, which covers Java directly.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Brand retired: the TayzGrid product page now redirects to NCache, which Alachisoft offers for Java and .NET. Use NCache, Hazelcast or Apache Ignite.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "object"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Alachisoft",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "NCache",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (open-source edition)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open-source edition plus commercial editions; the product is no longer marketed separately."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Partitioned and replicated topologies, with a WAN bridge between sites in commercial editions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JCache API"
+  ],
+  "apis": [
+    "JCache (JSR 107)",
+    "Memcached protocol",
+    "Hibernate second-level cache",
+    "Spring Cache"
+  ],
+  "compatibleWith": [
+    "memcached"
+  ],
+  "drivers": [
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Feature parity with the mature .NET NCache engine at launch",
+    "Standard JCache API reduces lock-in",
+    "Ready-made Hibernate, Spring Cache and web-session integrations",
+    "Dynamic peer-to-peer clustering without a single coordinator"
+  ],
+  "weaknesses": [
+    "Brand discontinued; open-source edition unmaintained since 2015",
+    "Small Java community compared with Hazelcast or Ignite",
+    "A cache, not a system of record: no durable primary storage"
+  ],
+  "useCases": [
+    "Maintaining existing TayzGrid caches",
+    "Hibernate second-level caching in legacy Java apps"
+  ],
+  "notIdealFor": [
+    "New deployments",
+    "Durable primary data storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ncache",
+    "hazelcast",
+    "apache-ignite",
+    "infinispan",
+    "ehcache"
+  ],
+  "tags": [
+    "in-memory-data-grid",
+    "java",
+    "cache",
+    "jcache",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20160111134155/http://www.alachisoft.com:80/tayzgrid/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20160111134155/http://www.alachisoft.com:80/tayzgrid/",
+    "https://github.com/maniacs-satm/TayzGrid",
+    "https://www.alachisoft.com/ncache/"
+  ],
+  "lastVerified": "2026-10-27"
+}

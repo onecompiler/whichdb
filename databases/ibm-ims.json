@@ -1,0 +1,176 @@
+{
+  "slug": "ibm-ims",
+  "name": "IBM IMS",
+  "aliases": [
+    "IMS",
+    "Information Management System",
+    "IMS DB",
+    "IMS/TM"
+  ],
+  "tagline": "IBM's 1960s hierarchical database and transaction manager, still running bank and airline cores on z/OS.",
+  "description": "IMS (Information Management System) was built by IBM with Rockwell and Caterpillar for the Apollo programme and became the first commercial hierarchical database. Data is stored as trees of segments navigated through DL/I calls, and IMS Transaction Manager runs extremely high volumes of short transactions on z/OS with Parallel Sysplex data sharing. A large share of the world's banks, insurers and airlines still run core workloads on it, now reachable through SQL, JDBC, REST and Java alongside COBOL and PL/I. IMS 15.6 became generally available in June 2025. It is about as stable as software gets, but it only runs on IBM Z and its skills pool is shrinking.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "hierarchical",
+  "models": [
+    "hierarchical"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "IBM",
+  "vendorType": "company",
+  "initialRelease": 1968,
+  "latestVersion": {
+    "version": "15.6",
+    "date": "2025-06-13"
+  },
+  "writtenIn": [
+    "Assembly",
+    "PL/X"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Licensed as z/OS software (monthly licence charges or tailored-fit pricing)."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Parallel Sysplex data sharing spreads one database across many z/OS images; remote site recovery for DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "DL/I",
+    "SQL (IMS Open Database)"
+  ],
+  "apis": [
+    "DL/I",
+    "IMS Connect",
+    "JDBC",
+    "IMS Open Database (DRDA)",
+    "REST via z/OS Connect"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "COBOL",
+    "PL/I",
+    "Java",
+    "C",
+    "Assembly"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Extremely high, predictable transaction throughput on IBM Z",
+    "Decades of production use for core banking, insurance and reservations",
+    "Parallel Sysplex data sharing for continuous availability",
+    "Modern access via SQL, JDBC and REST without rewriting COBOL"
+  ],
+  "weaknesses": [
+    "Runs only on IBM mainframes",
+    "Hierarchical model is rigid; schema changes need careful planning",
+    "Scarce and ageing skills base",
+    "Expensive platform economics"
+  ],
+  "useCases": [
+    "Core banking ledgers and payment processing",
+    "Insurance policy administration",
+    "Airline and travel reservation back ends",
+    "Exposing legacy IMS transactions as APIs"
+  ],
+  "notIdealFor": [
+    "Any non-mainframe environment",
+    "Ad hoc analytics",
+    "New application development"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-db2",
+    "idms",
+    "adabas",
+    "oracle-database"
+  ],
+  "tags": [
+    "mainframe",
+    "hierarchical",
+    "z-os",
+    "cobol",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/products/ims",
+    "docs": "https://www.ibm.com/docs/en/ims/latest",
+    "wikipedia": "https://en.wikipedia.org/wiki/IBM_Information_Management_System"
+  },
+  "ids": {
+    "wikipedia": "IBM Information Management System",
+    "hackerNewsQuery": "IBM IMS"
+  },
+  "brand": {
+    "color": "#0F62FE"
+  },
+  "sources": [
+    "https://community.ibm.com/community/user/blogs/amanda-stephens/2025/05/20/ibm-information-management-system-156-and-ims-ente",
+    "https://www.ibm.com/docs/en/SSEPH2_15.6.0/pdf/IMS_15.6_Release_Planning.pdf",
+    "https://www.ibm.com/products/ims"
+  ],
+  "lastVerified": "2026-10-27"
+}

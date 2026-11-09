@@ -1,0 +1,179 @@
+{
+  "slug": "machbase",
+  "name": "Machbase",
+  "aliases": [
+    "Machbase Neo",
+    "machbase-neo"
+  ],
+  "tagline": "Korean time-series database for sensor data, bundled with MQTT, HTTP and dashboards in one binary.",
+  "description": "Machbase is a time-series database from Korea's Machbase Inc., built for high-rate sensor and machine data with a tag-table design that indexes by sensor ID and time. Its current packaging, Machbase Neo, wraps the proprietary engine in a single Go binary that also provides an MQTT broker, HTTP and gRPC APIs, a SQL editor, dashboards and a scripting layer (TQL) for transforming and charting data. That makes it attractive for factories and edge devices where one small box should collect, store and visualise data. The engine is closed source: non-commercial use is free, while commercial use requires a paid licence, and English-language community resources are limited.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "relational"
+  ],
+  "workloads": [
+    "iot",
+    "time-series",
+    "edge"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Machbase Inc.",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "Neo 8.7.2",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "C",
+    "Go"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Machbase License (free for non-commercial use; UI is open source)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free for personal, educational and non-profit use; commercial deployments need a licence."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Neo is single-node; the cluster edition distributes tag tables across nodes."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "TQL"
+  ],
+  "apis": [
+    "MQTT",
+    "HTTP",
+    "gRPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Python",
+    "Java",
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One binary includes database, MQTT broker, APIs and dashboards",
+    "High ingest rates on small edge hardware such as Raspberry Pi-class devices",
+    "Tag tables index by sensor and time for fast per-sensor queries",
+    "Built-in TQL scripting for transforms and charts without extra services"
+  ],
+  "weaknesses": [
+    "Closed-source engine and commercial licence for business use",
+    "Small international community; many resources are Korean-first",
+    "Proprietary TQL adds another language to learn",
+    "Limited cloud-managed options"
+  ],
+  "useCases": [
+    "Factory sensor data collection at the edge",
+    "Equipment vibration and condition monitoring",
+    "Self-contained IoT gateways with dashboards"
+  ],
+  "notIdealFor": [
+    "Open-source-only environments",
+    "Observability for cloud-native apps",
+    "General OLTP"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tdengine",
+    "apache-iotdb",
+    "influxdb",
+    "griddb",
+    "questdb",
+    "datalayers"
+  ],
+  "tags": [
+    "iot",
+    "time-series",
+    "edge",
+    "mqtt",
+    "proprietary"
+  ],
+  "links": {
+    "website": "https://machbase.com/",
+    "docs": "https://docs.machbase.com/neo/",
+    "repository": "https://github.com/machbase/neo-server",
+    "changelog": "https://github.com/machbase/neo-server/releases"
+  },
+  "ids": {
+    "github": "machbase/neo-server",
+    "dockerHub": "machbase/machbase-neo",
+    "hackerNewsQuery": "Machbase"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/machbase/neo-server/releases",
+    "https://github.com/machbase/neo-server/blob/main/LICENSE",
+    "https://machbase.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

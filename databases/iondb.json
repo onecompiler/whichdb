@@ -1,0 +1,164 @@
+{
+  "slug": "iondb",
+  "name": "IonDB",
+  "aliases": [
+    "Ion DB"
+  ],
+  "tagline": "Key-value store for Arduino-class microcontrollers from UBC Okanagan; superseded by EmbedDB.",
+  "description": "IonDB is a C library that gives tiny embedded devices, mainly Arduinos, a usable associative array with optional persistence to SD card or flash. It offers several dictionary implementations (skip list, open-address and linear hashing, flat files) behind one API, supports duplicate keys and both equality and range lookups, and runs in a few kilobytes of RAM. It came out of Ramon Lawrence's lab at the University of British Columbia Okanagan and was described in an IEEE CCECE 2015 paper. The README now states it is no longer under active development and points to EmbedDB, the same lab's successor that adds time-series and relational processing.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "README states IonDB is no longer actively developed (last release v2.2.0, Feb 2018); the lab's successor is EmbedDB (github.com/ubco-db/EmbedDB).",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "iot"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "University of British Columbia Okanagan (IonDB Project)",
+  "vendorType": "academic",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "2.2.0",
+    "date": "2018-02-28"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Designed for kilobytes of RAM and SD-card or flash storage on a single microcontroller."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API",
+    "C++ wrapper"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs on Arduino-class boards with only a few KB of RAM",
+    "Multiple interchangeable dictionary structures behind one API",
+    "Range and equality queries plus duplicate keys, rare at this size",
+    "Permissive BSD license and an accompanying peer-reviewed paper"
+  ],
+  "weaknesses": [
+    "No longer developed; the authors recommend EmbedDB instead",
+    "No transactions, crash-consistency guarantees or query language",
+    "Arduino-centric build and documentation"
+  ],
+  "useCases": [
+    "Teaching data structures on constrained hardware",
+    "Prototyping sensor logging on Arduino with SD storage",
+    "Reference for embedded key-value designs"
+  ],
+  "notIdealFor": [
+    "New firmware projects (use EmbedDB or a maintained flash KV store)",
+    "Anything needing durability guarantees or concurrency"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "littled",
+    "sqlite",
+    "unqlite",
+    "lmdb"
+  ],
+  "tags": [
+    "embedded",
+    "arduino",
+    "iot",
+    "microcontroller",
+    "academic"
+  ],
+  "links": {
+    "website": "https://github.com/iondbproject/iondb",
+    "repository": "https://github.com/iondbproject/iondb",
+    "docs": "https://github.com/iondbproject/iondb/wiki"
+  },
+  "ids": {
+    "github": "iondbproject/iondb",
+    "hackerNewsQuery": "IonDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/iondbproject/iondb",
+    "https://github.com/iondbproject/iondb/releases",
+    "https://ieeexplore.ieee.org/document/7129178",
+    "https://github.com/ubco-db/EmbedDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

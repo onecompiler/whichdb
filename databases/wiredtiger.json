@@ -1,0 +1,175 @@
+{
+  "slug": "wiredtiger",
+  "name": "WiredTiger",
+  "aliases": [
+    "WT"
+  ],
+  "tagline": "MongoDB's default storage engine: MVCC B-tree with compression and snapshot isolation.",
+  "description": "WiredTiger is a high-performance embeddable storage engine created by the authors of Berkeley DB and acquired by MongoDB in 2014; it has been MongoDB's default engine since 3.2. It provides row-store and column-store B-trees with document-level concurrency control, multi-version snapshot isolation, block compression, checkpoints plus a write-ahead log, and hooks for encryption. Development is driven by MongoDB's needs and it is now tagged alongside MongoDB server releases, with standalone releases last cut in 2024. It can be embedded directly, but the community outside MongoDB is small.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "columnar"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "MongoDB Inc.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "11.3.1",
+    "date": "2024-11-15"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2 or v3, or MongoDB commercial license",
+    "spdx": "GPL-2.0-only OR GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "GPL for open-source use; commercial licensing via MongoDB."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process engine; scales to multi-TB per MongoDB node."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API",
+    "Python bindings"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Python",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Document-level (record-level) concurrency with MVCC snapshot isolation",
+    "Block compression (snappy, zlib, zstd) and prefix compression",
+    "Timestamp-based reads that power MongoDB's majority reads and transactions",
+    "Row and column store formats in one engine"
+  ],
+  "weaknesses": [
+    "Roadmap is driven entirely by MongoDB",
+    "GPL license complicates embedding in proprietary products",
+    "Cache-pressure and eviction tuning can be tricky",
+    "Little standalone documentation and community"
+  ],
+  "useCases": [
+    "Storage engine inside MongoDB",
+    "Embedding a transactional engine in a custom C system",
+    "Research on MVCC B-tree storage"
+  ],
+  "notIdealFor": [
+    "Teams wanting a permissively licensed embeddable engine",
+    "Non-C stacks",
+    "Simple key-value needs (LMDB, RocksDB are easier)"
+  ],
+  "notableUsers": [
+    "MongoDB"
+  ],
+  "alternatives": [
+    "rocksdb",
+    "lmdb",
+    "berkeley-db",
+    "mongodb"
+  ],
+  "tags": [
+    "storage-engine",
+    "b-tree",
+    "mvcc",
+    "mongodb",
+    "c"
+  ],
+  "links": {
+    "website": "https://source.wiredtiger.com/",
+    "docs": "https://source.wiredtiger.com/develop/index.html",
+    "repository": "https://github.com/wiredtiger/wiredtiger",
+    "changelog": "https://github.com/wiredtiger/wiredtiger/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/WiredTiger"
+  },
+  "ids": {
+    "github": "wiredtiger/wiredtiger",
+    "stackoverflowTag": "wiredtiger",
+    "wikipedia": "WiredTiger",
+    "hackerNewsQuery": "WiredTiger"
+  },
+  "brand": {
+    "color": "#00684A"
+  },
+  "sources": [
+    "https://github.com/wiredtiger/wiredtiger",
+    "https://github.com/wiredtiger/wiredtiger/releases",
+    "https://www.mongodb.com/docs/manual/core/wiredtiger/"
+  ],
+  "lastVerified": "2026-10-27"
+}

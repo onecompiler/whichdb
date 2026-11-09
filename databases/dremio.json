@@ -1,0 +1,177 @@
+{
+  "slug": "dremio",
+  "name": "Dremio",
+  "aliases": [],
+  "tagline": "Iceberg-native lakehouse query engine with reflections for acceleration, owned by SAP since 2026.",
+  "description": "Dremio is a lakehouse SQL engine built on Apache Arrow: it queries Iceberg, Delta and Parquet on object storage plus federated sources, and accelerates dashboards with 'reflections', automatically maintained materializations that the optimizer substitutes transparently. Its catalog is based on Apache Polaris, and it offers semantic layer and AI features. SAP completed its acquisition of Dremio in July 2026 to make SAP Business Data Cloud Iceberg-native. The open-source community edition repository has not been updated since September 2025, so new adopters should expect a commercial, SAP-aligned product.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Acquired by SAP (closed 6 July 2026) to underpin SAP Business Data Cloud; the dremio-oss repo has had no updates since Sept 2025.",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "lakehouse",
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "Dremio (SAP)",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "writtenIn": [
+    "Java",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (legacy Community Edition under Apache-2.0)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Dremio Cloud bills compute usage; Enterprise is subscription-licensed; the older Community Edition remains free."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Coordinator and executor nodes with elastic engines; data stays in object storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Arrow Flight SQL",
+    "JDBC",
+    "ODBC",
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Reflections accelerate BI without users changing queries",
+    "Arrow-based engine with Arrow Flight for fast client transfer",
+    "Strong Apache Iceberg support including DML and time travel",
+    "Federates lakes with relational and NoSQL sources",
+    "Semantic layer for governed, shareable datasets"
+  ],
+  "weaknesses": [
+    "Open-source edition effectively frozen since 2025",
+    "Future roadmap now driven by SAP's priorities",
+    "Reflection management adds storage and refresh overhead",
+    "Smaller community than Trino or Spark"
+  ],
+  "useCases": [
+    "Iceberg lakehouse BI acceleration",
+    "Semantic layer over a data lake",
+    "SAP-centric data platforms",
+    "Warehouse offload"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Teams requiring an actively developed open-source engine",
+    "Real-time streaming analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "starburst",
+    "databricks-sql",
+    "snowflake",
+    "amazon-athena",
+    "presto"
+  ],
+  "tags": [
+    "lakehouse",
+    "iceberg",
+    "arrow",
+    "sap",
+    "query-acceleration"
+  ],
+  "links": {
+    "website": "https://www.dremio.com/",
+    "docs": "https://docs.dremio.com/",
+    "repository": "https://github.com/dremio/dremio-oss",
+    "pricing": "https://www.dremio.com/pricing/"
+  },
+  "ids": {
+    "github": "dremio/dremio-oss",
+    "stackoverflowTag": "dremio",
+    "dockerHub": "dremio/dremio-oss",
+    "hackerNewsQuery": "Dremio"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.sec.gov/Archives/edgar/data/0001000184/000110465926087251/tm2621275d1_ex99-2.htm",
+    "https://www.dremio.com/",
+    "https://github.com/dremio/dremio-oss",
+    "https://www.dremio.com/legal/dremio-supported-software/"
+  ],
+  "lastVerified": "2026-10-27"
+}

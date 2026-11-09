@@ -1,0 +1,97 @@
+{
+  "slug": "dbix",
+  "name": "DBIX",
+  "aliases": ["Halcyon DBIX"],
+  "tagline": "1990s multi-user ANSI SQL server from Halcyon Software for Windows and a long list of Unix variants.",
+  "description": "DBIX was a commercial client/server SQL database sold by Halcyon Software in the mid-1990s as a low-cost alternative to the big RDBMS vendors. It ran on Windows 3.x, NT and 95 as well as SunOS, Solaris (SPARC and x86), AIX, HP-UX, Digital UNIX, SCO and Linux, and offered transaction logging, crash recovery, record-level locking, ANSI SQL and an ODBC interface, with extra cursor-sharing extensions on Windows. It was positioned as the back end for Halcyon's VBIX tools, which ported Visual Basic-style applications to Unix. The product disappeared around the end of the decade and the vbix.com domain is now parked, so it is of historical interest only.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Sold by Halcyon Software c. 1996-1999; no releases or vendor site since, and vbix.com is now a parked domain.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp"],
+  "architecture": ["client-server", "single-node"],
+  "developer": "Halcyon Software, Inc.",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "writtenIn": ["Unknown"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["per-node-license"],
+    "freeTier": false,
+    "notes": "Was sold as a packaged commercial server; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows", "linux", "unix"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["ODBC"],
+  "compatibleWith": [],
+  "drivers": ["ODBC"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Unusually broad 1990s platform list: Windows plus most commercial Unixes and early Linux",
+    "Transaction log, crash recovery and record-level locking at a budget price point",
+    "Standard ODBC interface rather than a proprietary API"
+  ],
+  "weaknesses": [
+    "Discontinued for over two decades; no binaries, documentation or support remain",
+    "Never built a third-party tool or community ecosystem"
+  ],
+  "useCases": [
+    "Historical reference on low-cost 1990s SQL servers",
+    "Identifying legacy systems that still reference DBIX data files"
+  ],
+  "notIdealFor": ["Any new or production workload"],
+  "notableUsers": [],
+  "alternatives": ["postgresql", "mysql", "firebird", "sqlite"],
+  "tags": ["sql", "client-server", "discontinued", "1990s"],
+  "links": {
+    "website": "https://web.archive.org/web/1997/http://www.vbix.com/dbix.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/1997/http://www.vbix.com/dbix.html",
+    "https://dbdb.io/db/dbix"
+  ],
+  "lastVerified": "2026-10-27"
+}

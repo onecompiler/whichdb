@@ -1,0 +1,185 @@
+{
+  "slug": "cozodb",
+  "name": "CozoDB",
+  "aliases": [
+    "Cozo"
+  ],
+  "tagline": "Embedded Datalog database blending relational, graph and vector queries; dormant since 2024.",
+  "description": "CozoDB is an embeddable, transactional database written in Rust that uses Datalog (CozoScript) to query relations, recursive graph patterns and built-in graph algorithms in one language, with HNSW vector search, full-text indexes and time-travel queries. It runs in-process across many languages and platforms, including WebAssembly, iOS and Android, with storage on memory, SQLite, RocksDB, Sled or TiKV. The last release, v0.7.6, came out in December 2023 and the last commit in December 2024, so the project is effectively paused. It remains an elegant option for experiments, not something to bet production on.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Last release v0.7.6 (Dec 2023), last commit Dec 2024; not archived but effectively dormant.",
+  "maturity": "emerging",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "relational",
+    "vector"
+  ],
+  "workloads": [
+    "embedded",
+    "knowledge-graph",
+    "vector-search",
+    "graph-analytics",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Ziyang Hu and Cozo contributors",
+  "vendorType": "community",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "0.7.6",
+    "date": "2023-12-11"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios",
+      "wasm",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process; the TiKV backend allows distributed storage but is little used."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "CozoScript (Datalog)"
+  ],
+  "apis": [
+    "In-process API",
+    "HTTP server"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Python",
+    "JavaScript",
+    "Java",
+    "Swift",
+    "Go",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Datalog unifies relational joins, recursion and graph algorithms in one query language",
+    "HNSW vector search and full-text indexes integrated with graph queries",
+    "Runs embedded nearly everywhere, including browsers via WebAssembly and mobile",
+    "Built-in time-travel queries over historical data"
+  ],
+  "weaknesses": [
+    "Effectively unmaintained since 2024",
+    "Datalog is unfamiliar to most developers",
+    "Small community and few production references"
+  ],
+  "useCases": [
+    "Embedded knowledge stores for local AI agents",
+    "Prototyping recursive and graph queries",
+    "Browser or mobile apps needing a graph-capable local DB"
+  ],
+  "notIdealFor": [
+    "Long-lived production systems",
+    "Large multi-user servers",
+    "Teams wanting SQL or Cypher"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ladybugdb",
+    "kuzu",
+    "datomic",
+    "xtdb",
+    "sqlite",
+    "duckdb"
+  ],
+  "tags": [
+    "datalog",
+    "embedded",
+    "rust",
+    "vector",
+    "dormant"
+  ],
+  "links": {
+    "website": "https://www.cozodb.org/",
+    "docs": "https://docs.cozodb.org/",
+    "repository": "https://github.com/cozodb/cozo"
+  },
+  "ids": {
+    "github": "cozodb/cozo",
+    "npm": "cozo-node",
+    "pypi": "pycozo",
+    "hackerNewsQuery": "CozoDB"
+  },
+  "brand": {
+    "color": "#3B82F6"
+  },
+  "sources": [
+    "https://github.com/cozodb/cozo",
+    "https://github.com/cozodb/cozo/releases",
+    "https://pypi.org/project/pycozo/"
+  ],
+  "lastVerified": "2026-10-27"
+}

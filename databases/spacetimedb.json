@@ -1,0 +1,175 @@
+{
+  "slug": "spacetimedb",
+  "name": "SpacetimeDB",
+  "aliases": [
+    "Spacetime",
+    "SpacetimeDB Maincloud"
+  ],
+  "tagline": "In-memory relational database that runs your server logic as WASM modules and streams changes to clients.",
+  "description": "SpacetimeDB, from Clockwork Labs, combines a relational database and an application server: you write modules in Rust, C# or TypeScript whose reducers run inside the database as transactions, and clients subscribe to SQL queries and receive live updates over WebSockets. Data is held in memory with a commit log and snapshots for durability, which gives very low latency for state-heavy apps. It was built to run the MMO BitCraft and is now marketed as a reactive backend platform with a managed Maincloud. The BSL licence restricts offering it as a competing hosted service.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "pub-sub",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "serverless"
+  ],
+  "developer": "Clockwork Labs",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "2.13.0",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Self-host for free under BSL; Maincloud is the managed, usage-billed service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "A database runs in memory on one node; size is bounded by RAM."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subscription subset)"
+  ],
+  "apis": [
+    "WebSocket subscription protocol",
+    "HTTP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "C#",
+    "TypeScript",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Server logic runs inside the database, removing a network hop per operation",
+    "Clients subscribe to SQL queries and get incremental updates",
+    "Very low latency from in-memory state, suited to multiplayer games",
+    "Generated typed client SDKs for Rust, C#/Unity, TypeScript and Unreal"
+  ],
+  "weaknesses": [
+    "Dataset must fit in memory on one node",
+    "BSL licence limits hosting it as a service",
+    "SQL support is a subset; no external BI tooling",
+    "Tight coupling of app logic to the database runtime"
+  ],
+  "useCases": [
+    "Multiplayer and MMO game backends",
+    "Realtime collaborative apps",
+    "Chat and presence systems"
+  ],
+  "notIdealFor": [
+    "Datasets larger than RAM",
+    "Analytics and reporting",
+    "Teams that need an OSI-licensed engine"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "convex",
+    "firebase",
+    "supabase",
+    "rocicorp-zero",
+    "redis",
+    "instantdb"
+  ],
+  "tags": [
+    "gamedev",
+    "realtime",
+    "wasm",
+    "rust",
+    "in-memory"
+  ],
+  "links": {
+    "website": "https://spacetimedb.com/",
+    "docs": "https://spacetimedb.com/docs",
+    "repository": "https://github.com/clockworklabs/SpacetimeDB",
+    "changelog": "https://github.com/clockworklabs/SpacetimeDB/releases"
+  },
+  "ids": {
+    "github": "clockworklabs/SpacetimeDB",
+    "npm": "spacetimedb",
+    "dockerHub": "clockworklabs/spacetime",
+    "hackerNewsQuery": "SpacetimeDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/clockworklabs/SpacetimeDB/releases",
+    "https://github.com/clockworklabs/SpacetimeDB/blob/master/LICENSE.txt",
+    "https://spacetimedb.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

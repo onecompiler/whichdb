@@ -1,0 +1,169 @@
+{
+  "slug": "redisgraph",
+  "name": "RedisGraph",
+  "aliases": [
+    "Redis Graph"
+  ],
+  "tagline": "Retired Redis module that ran Cypher over sparse adjacency matrices; succeeded by FalkorDB.",
+  "description": "RedisGraph was a Redis module that stored property graphs as sparse adjacency matrices and evaluated Cypher queries with GraphBLAS linear algebra, giving very low latency for in-memory graphs. Redis stopped selling it in July 2023, ended support on 31 January 2025, and the repository README now states it is no longer maintained; the last release was 2.12.10 in October 2023. Its original developers forked it as FalkorDB, which keeps a compatible command model and is the recommended migration path.",
+  "productType": "extension",
+  "status": "discontinued",
+  "statusNote": "Redis ended sales in July 2023 and support on 2025-01-31; repo no longer maintained. Migrate to FalkorDB, the maintained fork.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "caching"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica"
+  ],
+  "developer": "Redis Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "2.12.10",
+    "date": "2023-10-02"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Redis",
+  "license": {
+    "type": "source-available",
+    "name": "RSALv2 / SSPLv1 (AGPLv3 option added to the final repo)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "No longer sold or supported."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Each graph lived in a single Redis shard's memory."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Cypher"
+  ],
+  "apis": [
+    "Redis protocol (RESP)"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "Go",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Sparse-matrix execution delivered very fast in-memory traversals",
+    "Easy to add to an existing Redis deployment",
+    "Direct migration path to FalkorDB"
+  ],
+  "weaknesses": [
+    "End of life: no fixes, security patches or support since January 2025",
+    "Single-shard graphs bounded by RAM",
+    "Removed from Redis Stack and Redis Cloud"
+  ],
+  "useCases": [
+    "Legacy deployments planning migration to FalkorDB",
+    "Reference for the GraphBLAS graph-execution approach"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Production systems needing security updates"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "falkordb",
+    "memgraph",
+    "neo4j",
+    "redis"
+  ],
+  "tags": [
+    "redis-module",
+    "cypher",
+    "graphblas",
+    "eol"
+  ],
+  "links": {
+    "website": "https://github.com/RedisGraph/RedisGraph",
+    "repository": "https://github.com/RedisGraph/RedisGraph"
+  },
+  "ids": {
+    "github": "RedisGraph/RedisGraph",
+    "stackoverflowTag": "redisgraph",
+    "dockerHub": "redislabs/redisgraph",
+    "pypi": "redisgraph",
+    "hackerNewsQuery": "RedisGraph"
+  },
+  "brand": {
+    "color": "#FF4438",
+    "simpleIcon": "redis"
+  },
+  "sources": [
+    "https://github.com/RedisGraph/RedisGraph",
+    "https://www.falkordb.com/blog/redisgraph-eol-migration-guide/",
+    "https://redis.antirez.com/commands/content/operate/oss_and_stack/stack-with-enterprise/release-notes/redisgraph/_index.md"
+  ],
+  "lastVerified": "2026-10-27"
+}

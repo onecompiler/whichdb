@@ -1,0 +1,168 @@
+{
+  "slug": "bbolt",
+  "name": "bbolt",
+  "aliases": [
+    "bbolt",
+    "BoltDB",
+    "Bolt"
+  ],
+  "tagline": "etcd's maintained fork of BoltDB: a simple, pure-Go B+tree store in a single file.",
+  "description": "bbolt is the etcd project's fork of Ben Johnson's Bolt, a pure-Go embedded key-value store modelled on LMDB. Data lives in one memory-mapped file as a copy-on-write B+tree organised into nested buckets, with fully serializable transactions: many concurrent readers and a single writer. Because it is small, dependency-free and crash-safe, it is the storage engine under etcd (and therefore Kubernetes) and is widely used by Go tools such as Consul's Raft log store and InfluxDB 1.x. It is best for read-heavy, moderate-size data; heavy random writes are slow compared with LSM engines.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "metadata-store",
+    "configuration"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "etcd maintainers / CNCF",
+  "vendorType": "foundation",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "1.5.0",
+    "date": "2026-06-21"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "Bolt (boltdb/bolt), itself inspired by LMDB",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single file; comfortable into tens of GB, beyond which write and compaction behaviour degrades."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Go API"
+  ],
+  "apis": [
+    "Go API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Go, no cgo, tiny API surface",
+    "Fully serializable ACID transactions",
+    "Crash-safe single-file storage with nested buckets",
+    "Proven as the backend of etcd and Kubernetes"
+  ],
+  "weaknesses": [
+    "One writer at a time; random writes are slow",
+    "File does not shrink without offline compaction",
+    "Whole database is memory-mapped, so very large files strain address space and page cache",
+    "Go-only"
+  ],
+  "useCases": [
+    "Embedded metadata stores in Go services",
+    "Raft log and snapshot storage",
+    "Local state for CLIs and agents"
+  ],
+  "notIdealFor": [
+    "Write-heavy workloads",
+    "Large datasets beyond tens of GB",
+    "Non-Go applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "badger",
+    "pebble",
+    "lmdb",
+    "redb",
+    "nutsdb"
+  ],
+  "tags": [
+    "go",
+    "b-tree",
+    "embedded",
+    "etcd",
+    "mmap"
+  ],
+  "links": {
+    "website": "https://github.com/etcd-io/bbolt",
+    "docs": "https://pkg.go.dev/go.etcd.io/bbolt",
+    "repository": "https://github.com/etcd-io/bbolt",
+    "changelog": "https://github.com/etcd-io/bbolt/releases"
+  },
+  "ids": {
+    "github": "etcd-io/bbolt",
+    "stackoverflowTag": "boltdb",
+    "hackerNewsQuery": "bbolt"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/etcd-io/bbolt",
+    "https://github.com/etcd-io/bbolt/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

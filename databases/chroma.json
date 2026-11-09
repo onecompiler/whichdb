@@ -1,0 +1,198 @@
+{
+  "slug": "chroma",
+  "name": "Chroma",
+  "aliases": [
+    "ChromaDB",
+    "Chroma Cloud"
+  ],
+  "tagline": "Open-source retrieval database for AI apps, from embedded Python to serverless Chroma Cloud.",
+  "description": "Chroma started as the simplest way to add embeddings search to a Python notebook and became the default vector store in many LLM tutorials. The core was rewritten in Rust in 2025, and Chroma now offers dense, sparse (BM25/SPLADE), full-text and regex search, metadata filtering and collection forking. Locally it runs in-process or as a single server; Chroma Cloud is a serverless, object-storage-backed distributed version billed by data written, stored and queried. Ideal for getting RAG working quickly; evaluate the distributed story carefully for very large self-hosted deployments.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "document",
+    "search"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "full-text-search",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node",
+    "serverless",
+    "client-server"
+  ],
+  "developer": "Chroma",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.5.9",
+    "date": "2026-05-05"
+  },
+  "writtenIn": [
+    "Rust",
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "startingPrice": "Starter $0 + usage ($5 free credit)",
+    "notes": "Chroma Cloud bills $2.50/GiB written, $0.33/GiB-month stored and per TiB queried; Team plan is $250/month with $100 usage included. Open source is free."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Chroma Cloud",
+      "provider": "Chroma",
+      "url": "https://www.trychroma.com/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Single-node open source is comfortable into the tens of millions of vectors; Chroma Cloud's distributed engine on object storage scales further."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Chroma API (where filters)"
+  ],
+  "apis": [
+    "REST/JSON",
+    "Python in-process"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Lowest-friction start: pip install and go, embedded or client-server",
+    "Same API from laptop to serverless cloud",
+    "Dense, sparse, full-text and regex search in one collection",
+    "Collection forking for cheap copy-on-write datasets",
+    "Default integration in LangChain, LlamaIndex and many agent frameworks"
+  ],
+  "weaknesses": [
+    "Self-hosted distributed mode is less battle-tested than Milvus or Qdrant",
+    "Limited tunables for index internals",
+    "Stable releases slowed in 2026 while development builds continue",
+    "No RBAC in the open-source server"
+  ],
+  "useCases": [
+    "Prototyping RAG in notebooks",
+    "Embedded retrieval in Python apps",
+    "Agent memory",
+    "Serverless RAG backends"
+  ],
+  "notIdealFor": [
+    "Billion-vector self-hosted clusters",
+    "Complex relational filtering",
+    "Strict enterprise access control on self-hosted"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "qdrant",
+    "lancedb",
+    "pinecone",
+    "weaviate",
+    "pgvector",
+    "milvus",
+    "turbopuffer"
+  ],
+  "tags": [
+    "vector-database",
+    "embedded",
+    "rag",
+    "open-source",
+    "python"
+  ],
+  "links": {
+    "website": "https://www.trychroma.com/",
+    "docs": "https://docs.trychroma.com/",
+    "repository": "https://github.com/chroma-core/chroma",
+    "pricing": "https://www.trychroma.com/pricing",
+    "changelog": "https://github.com/chroma-core/chroma/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/ChromaDB"
+  },
+  "ids": {
+    "github": "chroma-core/chroma",
+    "stackoverflowTag": "chromadb",
+    "wikipedia": "ChromaDB",
+    "dockerHub": "chromadb/chroma",
+    "npm": "chromadb",
+    "pypi": "chromadb",
+    "hackerNewsQuery": "ChromaDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/chroma-core/chroma/releases",
+    "https://pypi.org/project/chromadb/",
+    "https://www.trychroma.com/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

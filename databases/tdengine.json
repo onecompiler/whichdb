@@ -1,0 +1,203 @@
+{
+  "slug": "tdengine",
+  "name": "TDengine",
+  "aliases": [
+    "TDengine TSDB",
+    "TDengine OSS",
+    "TAOS"
+  ],
+  "tagline": "Industrial-IoT time-series database with a table-per-device model and built-in streaming and caching.",
+  "description": "TDengine, from TAOS Data, is a distributed time-series database designed around industrial IoT. Each device gets its own sub-table under a shared \"super table\" schema, which keeps writes sequential and per-device queries fast, while tags on the super table drive fleet-wide aggregation. It bundles features other stacks bolt on, including stream processing, Kafka-style data subscription, last-value caching and retention, so one cluster can stand in for a broker, a TSDB and a cache for sensor data. The open-source edition is AGPL-3.0 and includes clustering; TDengine Enterprise and TDengine Cloud add tiered storage, backup and connectors to industrial sources such as OPC and PI.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "relational"
+  ],
+  "workloads": [
+    "iot",
+    "time-series",
+    "stream-processing",
+    "real-time-analytics",
+    "edge"
+  ],
+  "architecture": [
+    "distributed",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "TAOS Data",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "3.4.3.3",
+    "date": "2026-10-19"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0 (open-source edition)",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Open-source edition is free; Enterprise is a subscription; TDengine Cloud is usage-based."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "TDengine Cloud",
+      "provider": "TAOS Data",
+      "url": "https://cloud.tdengine.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Data is split into virtual nodes (vnodes) replicated with Raft and spread across dnodes."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Native C client",
+    "REST",
+    "WebSocket",
+    "InfluxDB line protocol",
+    "OpenTSDB telnet/JSON"
+  ],
+  "compatibleWith": [
+    "influxdb",
+    "opentsdb"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "Go",
+    "Rust",
+    "JavaScript",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Super-table model fits fleets of millions of devices sharing a schema",
+    "Built-in stream processing, data subscription and last-value cache reduce extra infrastructure",
+    "Columnar per-device storage gives high compression on sensor data",
+    "Accepts InfluxDB line protocol and OpenTSDB writes in schemaless mode",
+    "Clustering is included in the open-source edition"
+  ],
+  "weaknesses": [
+    "AGPL-3.0 licence is a hurdle for embedding in commercial products",
+    "SQL dialect has restrictions (joins mainly on timestamps, limited updates)",
+    "Community and docs are strongest in China; English ecosystem is smaller",
+    "Table-per-device design suits regular telemetry better than ad-hoc event data"
+  ],
+  "useCases": [
+    "Industrial IoT and SCADA historian replacement",
+    "Connected-vehicle telemetry",
+    "Smart meters and energy grids",
+    "Edge-to-cloud sensor data aggregation",
+    "Real-time equipment dashboards"
+  ],
+  "notIdealFor": [
+    "General OLTP workloads",
+    "Log search",
+    "Irregular event data without a stable schema"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-iotdb",
+    "influxdb",
+    "timescaledb",
+    "questdb",
+    "cnosdb",
+    "griddb",
+    "machbase",
+    "datalayers"
+  ],
+  "tags": [
+    "time-series",
+    "iot",
+    "industrial",
+    "open-source",
+    "sql"
+  ],
+  "links": {
+    "website": "https://tdengine.com/",
+    "docs": "https://docs.tdengine.com/",
+    "repository": "https://github.com/taosdata/TDengine",
+    "changelog": "https://github.com/taosdata/TDengine/releases"
+  },
+  "ids": {
+    "github": "taosdata/TDengine",
+    "stackoverflowTag": "tdengine",
+    "dockerHub": "tdengine/tsdb",
+    "npm": "@tdengine/websocket",
+    "pypi": "taospy",
+    "hackerNewsQuery": "TDengine"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/taosdata/TDengine/releases",
+    "https://hub.docker.com/r/tdengine/tsdb",
+    "https://docs.tdengine.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

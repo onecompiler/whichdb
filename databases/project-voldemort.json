@@ -1,0 +1,162 @@
+{
+  "slug": "project-voldemort",
+  "name": "Project Voldemort",
+  "aliases": [
+    "Voldemort"
+  ],
+  "tagline": "LinkedIn's discontinued open-source Dynamo clone, retired in favour of Venice.",
+  "description": "Voldemort was LinkedIn's distributed key-value store, one of the first open-source implementations of Amazon's Dynamo paper, with consistent hashing, vector-clock versioning, pluggable storage engines and a well-known read-only mode for bulk-loading Hadoop output. It served LinkedIn features such as 'People You May Know' for years. LinkedIn stopped all production use in 2018 and the README states the project is no longer under development; the read-only use cases moved to Venice. It is of historical interest only.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No longer developed; LinkedIn ended production use in 2018 and migrated to Venice. Last release 1.10.26 (2017).",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "ml-feature-store"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "LinkedIn",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "1.10.26",
+    "date": "2017-08-30"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Amazon Dynamo design",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Voldemort client API"
+  ],
+  "apis": [
+    "Java client",
+    "Protocol Buffers socket protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Read-only stores could bulk-load precomputed Hadoop output efficiently",
+    "Simple Dynamo-style design that was easy to reason about"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2017 with no security fixes",
+    "Its original owner has migrated away",
+    "No modern features such as secondary indexes or TTL"
+  ],
+  "useCases": [
+    "Understanding Dynamo-style system design",
+    "Legacy systems awaiting migration"
+  ],
+  "notIdealFor": [
+    "Any new project"
+  ],
+  "notableUsers": [
+    "LinkedIn"
+  ],
+  "alternatives": [
+    "riak-kv",
+    "apache-cassandra",
+    "scylladb",
+    "amazon-dynamodb"
+  ],
+  "tags": [
+    "discontinued",
+    "dynamo-style",
+    "linkedin",
+    "java"
+  ],
+  "links": {
+    "website": "https://github.com/voldemort/voldemort",
+    "repository": "https://github.com/voldemort/voldemort",
+    "wikipedia": "https://en.wikipedia.org/wiki/Voldemort_(distributed_data_store)"
+  },
+  "ids": {
+    "github": "voldemort/voldemort",
+    "stackoverflowTag": "voldemort",
+    "wikipedia": "Voldemort (distributed data store)",
+    "hackerNewsQuery": "Project Voldemort"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/voldemort/voldemort",
+    "https://github.com/linkedin/venice"
+  ],
+  "lastVerified": "2026-10-27"
+}

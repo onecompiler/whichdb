@@ -1,0 +1,167 @@
+{
+  "slug": "bigchaindb",
+  "name": "BigchainDB",
+  "aliases": [
+    "Bigchain DB"
+  ],
+  "tagline": "Blockchain-style database combining MongoDB storage with Tendermint BFT consensus; dormant since 2020.",
+  "description": "BigchainDB pairs MongoDB for storage and querying with Tendermint for Byzantine-fault-tolerant consensus, giving a decentralised network of nodes an immutable, append-only record of asset creation and transfer transactions. It was promoted around 2017-2019 as a blockchain database for supply-chain, IP rights and identity projects, overseen by the IPDB Foundation. There has been no release since 2.2.2 in September 2020 and only sporadic commits since, so it is effectively dormant. Ledger needs today are better served by immudb, a permissioned blockchain or an audited Postgres design.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No release since v2.2.2 (Sept 2020) and only sporadic commits; effectively dormant.",
+  "maturity": "legacy",
+  "primaryModel": "ledger",
+  "models": [
+    "ledger",
+    "document"
+  ],
+  "workloads": [
+    "ledger"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "BigchainDB GmbH / IPDB Foundation",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "2.2.2",
+    "date": "2020-09-29"
+  },
+  "writtenIn": [
+    "Python"
+  ],
+  "basedOn": "MongoDB and Tendermint",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "active-active",
+    "notes": "Every node holds a full replica; throughput is bounded by BFT consensus."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "HTTP API",
+    "MongoDB queries (per node)"
+  ],
+  "apis": [
+    "HTTP API",
+    "WebSocket event stream"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Byzantine fault tolerance across independently operated nodes",
+    "Immutable asset-transfer model with signed transactions",
+    "MongoDB underneath allows rich queries over stored assets"
+  ],
+  "weaknesses": [
+    "Effectively unmaintained since 2020",
+    "Operating MongoDB plus Tendermint per node is heavy",
+    "Low throughput compared with centralised ledgers"
+  ],
+  "useCases": [
+    "Legacy consortium deployments already using it",
+    "Studying BFT database design"
+  ],
+  "notIdealFor": [
+    "New production systems",
+    "High-throughput financial ledgers"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "immudb",
+    "tigerbeetle",
+    "orbitdb",
+    "amazon-qldb",
+    "mongodb"
+  ],
+  "tags": [
+    "blockchain",
+    "ledger",
+    "bft",
+    "python",
+    "dormant"
+  ],
+  "links": {
+    "website": "https://www.bigchaindb.com/",
+    "docs": "https://docs.bigchaindb.com/",
+    "repository": "https://github.com/bigchaindb/bigchaindb",
+    "changelog": "https://github.com/bigchaindb/bigchaindb/releases"
+  },
+  "ids": {
+    "github": "bigchaindb/bigchaindb",
+    "stackoverflowTag": "bigchaindb",
+    "dockerHub": "bigchaindb/bigchaindb",
+    "npm": "bigchaindb-driver",
+    "pypi": "bigchaindb-driver",
+    "hackerNewsQuery": "BigchainDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/bigchaindb/bigchaindb/releases",
+    "https://www.bigchaindb.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

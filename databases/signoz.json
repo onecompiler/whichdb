@@ -1,0 +1,184 @@
+{
+  "slug": "signoz",
+  "name": "SigNoz",
+  "aliases": [],
+  "tagline": "OpenTelemetry-native APM and observability platform storing logs, metrics and traces in ClickHouse.",
+  "description": "SigNoz is an open-source observability platform that combines APM, distributed tracing, log management, metrics and alerting in one product, built around OpenTelemetry from the start. Under the hood it uses ClickHouse as its storage and query engine, which gives fast aggregation over spans and logs and lets advanced users write ClickHouse SQL alongside the query builder and PromQL. It is a Datadog or New Relic alternative you can self-host with Docker or Helm, or use as SigNoz Cloud. Most of the code is MIT-licensed, while enterprise features such as SSO live in a separately licensed directory.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "SigNoz Inc.",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "0.147.0",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Go",
+    "TypeScript"
+  ],
+  "basedOn": "ClickHouse",
+  "license": {
+    "type": "permissive",
+    "name": "MIT (core) with separately licensed enterprise directory",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community edition is free; SigNoz Cloud bills by ingested data; enterprise self-hosted is contract-priced."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "SigNoz Cloud",
+      "provider": "SigNoz",
+      "url": "https://signoz.io/teams/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales through the underlying ClickHouse cluster and OpenTelemetry collectors."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SQL (ClickHouse)",
+    "PromQL",
+    "Query builder"
+  ],
+  "apis": [
+    "OTLP",
+    "HTTP API"
+  ],
+  "compatibleWith": [
+    "clickhouse",
+    "prometheus"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Logs, metrics and traces correlated in one UI",
+    "OpenTelemetry-native ingestion with no proprietary agents",
+    "ClickHouse storage gives fast aggregations over high-cardinality data",
+    "Self-hostable with Docker or Helm, plus a managed cloud",
+    "Permissive MIT licence for the core"
+  ],
+  "weaknesses": [
+    "You operate ClickHouse, ZooKeeper/Keeper and collectors when self-hosting",
+    "Pre-1.0 versioning with frequent changes",
+    "Some enterprise features (SSO, advanced RBAC) are commercial",
+    "Less mature than commercial APM suites for some integrations"
+  ],
+  "useCases": [
+    "Self-hosted Datadog or New Relic replacement",
+    "OpenTelemetry backend for microservices",
+    "APM with trace-to-log correlation",
+    "Kubernetes infrastructure monitoring"
+  ],
+  "notIdealFor": [
+    "General-purpose database needs",
+    "Teams unwilling to run ClickHouse",
+    "Pure metrics at Prometheus-scale with PromQL-only tooling"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "openobserve",
+    "grafana-tempo",
+    "grafana-loki",
+    "clickhouse",
+    "parseable",
+    "elasticsearch"
+  ],
+  "tags": [
+    "observability",
+    "apm",
+    "opentelemetry",
+    "clickhouse",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://signoz.io/",
+    "docs": "https://signoz.io/docs/",
+    "repository": "https://github.com/SigNoz/signoz",
+    "pricing": "https://signoz.io/pricing/",
+    "changelog": "https://github.com/SigNoz/signoz/releases"
+  },
+  "ids": {
+    "github": "SigNoz/signoz",
+    "dockerHub": "signoz/signoz",
+    "hackerNewsQuery": "SigNoz"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/SigNoz/signoz/releases",
+    "https://github.com/SigNoz/signoz/blob/main/LICENSE",
+    "https://signoz.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

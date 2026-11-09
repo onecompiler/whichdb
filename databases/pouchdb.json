@@ -1,0 +1,172 @@
+{
+  "slug": "pouchdb",
+  "name": "PouchDB",
+  "aliases": [
+    "Pouch"
+  ],
+  "tagline": "JavaScript database for browsers and Node that speaks the CouchDB replication protocol.",
+  "description": "PouchDB is a JavaScript document database modelled on Apache CouchDB: it runs in the browser on IndexedDB, in Node on LevelDB, and replicates bidirectionally with CouchDB or any server that implements the CouchDB protocol. It pioneered the offline-first web app pattern and is still the simplest way to give a web app live sync with a CouchDB backend. Development is slow (the last major release was 9.0 in 2024, now under the Apache umbrella), and the revision-tree model it inherits from CouchDB makes storage grow unless you compact. Newer local-first libraries offer better TypeScript ergonomics and query power.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "local-first",
+    "mobile-offline",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Apache Software Foundation (PouchDB community)",
+  "vendorType": "foundation",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "9.0.0",
+    "date": "2024-06-21"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by browser storage quotas on the client; server-side scale comes from CouchDB."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Mango (CouchDB find)",
+    "MapReduce views"
+  ],
+  "apis": [
+    "CouchDB HTTP/replication protocol",
+    "JavaScript API"
+  ],
+  "compatibleWith": [
+    "couchdb"
+  ],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in two-way replication with CouchDB and IBM Cloudant",
+    "Runs unchanged in browsers, Node.js, Electron and Cordova",
+    "Changes feed makes reactive UIs and background sync straightforward",
+    "Mature, battle-tested conflict model with deterministic winners"
+  ],
+  "weaknesses": [
+    "Revision history bloats storage unless you compact regularly",
+    "Mango queries are limited; no joins or aggregations",
+    "Slow release cadence and dated APIs compared with newer local-first libraries"
+  ],
+  "useCases": [
+    "Offline-capable web apps with a CouchDB backend",
+    "Field data collection that syncs when back online",
+    "Electron desktop apps needing replication"
+  ],
+  "notIdealFor": [
+    "Relational data with many joins",
+    "Large datasets beyond browser storage quotas",
+    "Teams not running CouchDB-compatible servers"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rxdb",
+    "apache-couchdb",
+    "dexie",
+    "couchbase-lite",
+    "electricsql",
+    "powersync"
+  ],
+  "tags": [
+    "javascript",
+    "offline-first",
+    "couchdb-ecosystem",
+    "browser",
+    "sync"
+  ],
+  "links": {
+    "website": "https://pouchdb.com/",
+    "docs": "https://pouchdb.com/guides/",
+    "repository": "https://github.com/apache/pouchdb",
+    "changelog": "https://github.com/apache/pouchdb/releases"
+  },
+  "ids": {
+    "github": "apache/pouchdb",
+    "stackoverflowTag": "pouchdb",
+    "npm": "pouchdb",
+    "hackerNewsQuery": "PouchDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apache/pouchdb/releases",
+    "https://www.npmjs.com/package/pouchdb",
+    "https://pouchdb.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

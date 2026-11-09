@@ -1,0 +1,153 @@
+{
+  "slug": "vertexdb",
+  "name": "VertexDB",
+  "aliases": [
+    "Vertex"
+  ],
+  "tagline": "Small C graph database server over HTTP/JSON on Tokyo Cabinet with automatic garbage collection.",
+  "description": "VertexDB is a graph database server written in C by Steve Dekorte and Rich Collins in 2009. It stores nodes with named links in a Tokyo Cabinet B-tree file, serves them from a single-threaded libevent HTTP server with JSON responses, and garbage-collects nodes no longer reachable from the root, so applications never delete orphans by hand. Its API is modelled on the FUSE filesystem API (paths, links, listings) plus query and atomic queue operations, so it can double as a persistent queue. The authors ran it in production, but almost all commits date from 2009-2010; later changes were README fixes.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No meaningful development since about 2010; last commit was a README fix in 2018. Depends on the abandoned Tokyo Cabinet.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "queue"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Steve Dekorte and Rich Collins",
+  "vendorType": "community",
+  "initialRelease": 2009,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Tokyo Cabinet",
+  "license": {
+    "type": "permissive",
+    "name": "BSD License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "HTTP path API"
+  ],
+  "apis": [
+    "HTTP/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Any HTTP client"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Automatic garbage collection of unreachable nodes",
+    "Tiny C server with an HTTP/JSON interface any language can call",
+    "Filesystem-like path API plus atomic queue operations"
+  ],
+  "weaknesses": [
+    "Abandoned, and its Tokyo Cabinet dependency is abandoned too",
+    "No query language, replication or clustering",
+    "No authentication; meant to run on an isolated network"
+  ],
+  "useCases": [
+    "Studying a minimal graph store design",
+    "Hobby projects needing a persistent object tree"
+  ],
+  "notIdealFor": [
+    "Production systems",
+    "Analytical graph queries"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "memgraph",
+    "arangodb",
+    "cayley",
+    "hypergraphdb"
+  ],
+  "tags": [
+    "graph",
+    "c",
+    "http",
+    "tokyo-cabinet",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/stevedekorte/vertexdb",
+    "repository": "https://github.com/stevedekorte/vertexdb"
+  },
+  "ids": {
+    "github": "stevedekorte/vertexdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/stevedekorte/vertexdb",
+    "https://github.com/stevedekorte/vertexdb/blob/master/README.md"
+  ],
+  "lastVerified": "2026-10-27"
+}

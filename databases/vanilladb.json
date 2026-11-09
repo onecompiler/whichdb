@@ -1,0 +1,162 @@
+{
+  "slug": "vanilladb",
+  "name": "VanillaDB",
+  "aliases": [
+    "VanillaCore",
+    "VanillaComm",
+    "VanillaBench"
+  ],
+  "tagline": "Readable Java relational engine from NTHU for teaching database internals and prototyping research.",
+  "description": "VanillaDB is a family of small, deliberately readable database components from the DataLab at National Tsing Hua University in Taiwan. VanillaCore is a single-node, multi-threaded relational engine in Java that supports part of SQL-92 and can be used through JDBC, embedded, or via Java stored procedures; VanillaComm adds group communication for distributed systems and VanillaBench provides TPC-C-style benchmarks. It is used in NTHU's database courses and as a research testbed, including the T-Part (SIGMOD 2016) work and the ElaSQL deterministic distributed database. Core releases stopped at 0.7.0 (2022), with only light activity since.",
+  "productType": "research",
+  "status": "maintenance",
+  "statusNote": "Teaching/research system; VanillaCore last released 0.7.0 (Sept 2022) with sporadic commits since. Still usable for coursework.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "DataLab, National Tsing Hua University",
+  "vendorType": "academic",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "0.7.0",
+    "date": "2022-09-15"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single node; distributed variants (e.g. ElaSQL) are separate research systems."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (SQL-92 subset)"
+  ],
+  "apis": [
+    "JDBC",
+    "Embedded Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Clean, documented Java code that students can read end to end",
+    "Modular layers (storage, buffer, recovery, concurrency, planner) that are easy to swap",
+    "Used as a real testbed in published research",
+    "Companion benchmark and communication modules for distributed experiments"
+  ],
+  "weaknesses": [
+    "Partial SQL support",
+    "Not tuned or hardened for production",
+    "Small community; activity has slowed since 2023"
+  ],
+  "useCases": [
+    "Database internals courses and labs",
+    "Prototyping new concurrency or recovery algorithms"
+  ],
+  "notIdealFor": [
+    "Production applications",
+    "Large datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "sqlite"
+  ],
+  "tags": [
+    "education",
+    "research",
+    "java",
+    "academic"
+  ],
+  "links": {
+    "website": "http://www.vanilladb.org/",
+    "repository": "https://github.com/vanilladb/vanillacore"
+  },
+  "ids": {
+    "github": "vanilladb/vanillacore"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.vanilladb.org/",
+    "https://github.com/vanilladb/vanillacore",
+    "https://central.sonatype.com/artifact/org.vanilladb/core"
+  ],
+  "lastVerified": "2026-10-27"
+}

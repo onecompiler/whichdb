@@ -1,0 +1,159 @@
+{
+  "slug": "3store",
+  "name": "3store",
+  "aliases": [
+    "threestore",
+    "3store3"
+  ],
+  "tagline": "Early-2000s RDF triple store from Southampton that layered RDQL and SPARQL over MySQL and Berkeley DB.",
+  "description": "3store is a first-generation RDF triple store written in C at the University of Southampton by a team that included Steve Harris and Nick Gibbins, as a faster port of an older store called WebKBC. It kept triples in MySQL tables with Berkeley DB alongside, and answered RDQL and early SPARQL queries over HTTP, from the command line or through a C API. It backed several academic semantic web applications in the mid-2000s, and its lead developer later designed 4store at Garlik. The last release, 3.0.17, shipped in July 2006, so today it matters only as a piece of RDF storage history.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No release since 3.0.17 (July 2006); unmaintained. Use a modern SPARQL store such as Apache Jena TDB, Oxigraph or Virtuoso.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "University of Southampton",
+  "vendorType": "academic",
+  "initialRelease": 2002,
+  "latestVersion": {
+    "version": "3.0.17",
+    "date": "2006-07"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "MySQL and Berkeley DB",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Source tarballs remain downloadable from SourceForge."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server backed by MySQL; sized for the tens-of-millions-of-triples datasets of its era."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL",
+    "RDQL"
+  ],
+  "apis": [
+    "HTTP query endpoint",
+    "C API",
+    "Command-line tools"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Demonstrated early that a relational backend could serve RDF queries at useful scale",
+    "Simple HTTP query interface supporting both RDQL and early SPARQL",
+    "Small C codebase that is easy to read when studying triple-store design"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2006 and unlikely to build cleanly on current systems",
+    "Only partial, pre-standard SPARQL support",
+    "Relational triple-table layout scales far worse than native RDF engines"
+  ],
+  "useCases": [
+    "Studying the history of RDF storage",
+    "Reproducing mid-2000s semantic web experiments"
+  ],
+  "notIdealFor": [
+    "Any new semantic web or knowledge graph project",
+    "Datasets beyond a few tens of millions of triples"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-jena-tdb",
+    "oxigraph",
+    "virtuoso",
+    "4store",
+    "qlever",
+    "ontotext-graphdb"
+  ],
+  "tags": [
+    "rdf",
+    "triple-store",
+    "semantic-web",
+    "sparql",
+    "historical"
+  ],
+  "links": {
+    "website": "https://sourceforge.net/projects/threestore/",
+    "repository": "https://sourceforge.net/projects/threestore/files/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://sourceforge.net/projects/threestore/",
+    "https://sourceforge.net/projects/threestore/files/threestore-v3/",
+    "https://sourceforge.net/rest/p/threestore/"
+  ],
+  "lastVerified": "2026-10-27"
+}

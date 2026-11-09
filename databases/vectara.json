@@ -1,0 +1,162 @@
+{
+  "slug": "vectara",
+  "name": "Vectara",
+  "aliases": [],
+  "tagline": "Enterprise RAG and agent platform with managed hybrid retrieval, reranking and hallucination scoring.",
+  "description": "Vectara is a managed retrieval-augmented generation platform: you upload documents and it handles chunking, embedding (its Boomerang model), hybrid semantic plus lexical indexing, multilingual reranking, generation and factual-consistency scoring with its Hughes Hallucination Evaluation Model. It has repositioned as an enterprise agent platform with governed, auditable agents built on that retrieval stack, deployable as SaaS, in your VPC or on-prem. It is an option for enterprises that want RAG as a product rather than assembling a vector database, embedder and LLM themselves, with pricing to match.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "rag",
+    "vector-search",
+    "full-text-search"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed"
+  ],
+  "developer": "Vectara, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary SaaS"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "startingPrice": "From $100K/year (SaaS)",
+    "notes": "30-day free trial. SaaS from $100K/year, VPC from $250K/year, on-prem from $500K/year."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Vectara",
+      "provider": "Vectara",
+      "url": "https://www.vectara.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Vectara Query API (JSON)"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "End-to-end RAG: ingestion, hybrid retrieval, reranking and generation",
+    "Built-in hallucination scoring (HHEM)",
+    "VPC and on-prem options for regulated industries",
+    "Multilingual retrieval and reranking"
+  ],
+  "weaknesses": [
+    "Very high entry price",
+    "Proprietary with limited control over internals",
+    "Overkill if you only need a vector store"
+  ],
+  "useCases": [
+    "Enterprise knowledge assistants",
+    "Regulated-industry RAG on-prem",
+    "Customer support agents grounded in documentation"
+  ],
+  "notIdealFor": [
+    "Startups and small teams on a budget",
+    "Custom retrieval pipelines needing low-level control"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "azure-ai-search",
+    "pinecone",
+    "vespa",
+    "elasticsearch",
+    "weaviate"
+  ],
+  "tags": [
+    "rag",
+    "platform",
+    "enterprise",
+    "managed",
+    "proprietary"
+  ],
+  "links": {
+    "website": "https://www.vectara.com/",
+    "docs": "https://docs.vectara.com/",
+    "pricing": "https://www.vectara.com/pricing"
+  },
+  "ids": {
+    "pypi": "vectara",
+    "hackerNewsQuery": "Vectara"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.vectara.com/pricing",
+    "https://docs.vectara.com/",
+    "https://pypi.org/project/vectara/"
+  ],
+  "lastVerified": "2026-10-27"
+}

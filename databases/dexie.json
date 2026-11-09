@@ -1,0 +1,178 @@
+{
+  "slug": "dexie",
+  "name": "Dexie.js",
+  "aliases": [
+    "Dexie",
+    "Dexie Cloud"
+  ],
+  "tagline": "The most popular IndexedDB wrapper, with live queries and an optional Dexie Cloud sync service.",
+  "description": "Dexie.js is a thin, promise-based wrapper around IndexedDB that gives you a readable schema declaration, compound and multi-entry indexes, transactions and a fluent query API, plus liveQuery() hooks that re-run when underlying data changes. It is the pragmatic default for web apps that want local persistence without learning raw IndexedDB. Sync, authentication and access control come from Dexie Cloud, a commercial service from the same author that can also be self-hosted. Because it is still IndexedDB underneath, queries stay index-driven: no joins, aggregates or full-text search.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "local-first",
+    "mobile-offline",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "David Fahlander / Awarica AB",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "4.4.7",
+    "date": "2026-10-19"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "basedOn": "IndexedDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Dexie.js is free; Dexie Cloud sync is a paid service with a free tier and a self-hosted option."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Dexie Cloud",
+      "provider": "Awarica AB",
+      "url": "https://dexie.org/cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by browser IndexedDB quotas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Dexie query API"
+  ],
+  "apis": [
+    "JavaScript/TypeScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Makes IndexedDB pleasant: concise schema, promises, compound indexes",
+    "liveQuery() integrates with React, Vue, Svelte and Angular for reactive UIs",
+    "Small bundle with no runtime dependencies",
+    "Dexie Cloud adds sync, auth and per-realm access control without a custom backend"
+  ],
+  "weaknesses": [
+    "Browser-only; no native mobile story beyond WebViews",
+    "Inherits IndexedDB limits: no joins, aggregates or full-text search",
+    "Sync is tied to Dexie Cloud rather than an arbitrary backend"
+  ],
+  "useCases": [
+    "Offline-capable progressive web apps",
+    "Client-side caches of API data",
+    "Collaborative web apps via Dexie Cloud"
+  ],
+  "notIdealFor": [
+    "Relational queries or analytics",
+    "Native mobile apps",
+    "Server-side storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "indexeddb",
+    "rxdb",
+    "pouchdb",
+    "tinybase",
+    "electricsql",
+    "pglite"
+  ],
+  "tags": [
+    "indexeddb",
+    "javascript",
+    "browser",
+    "local-first",
+    "pwa"
+  ],
+  "links": {
+    "website": "https://dexie.org/",
+    "docs": "https://dexie.org/docs/",
+    "repository": "https://github.com/dexie/Dexie.js",
+    "pricing": "https://dexie.org/cloud/pricing",
+    "changelog": "https://github.com/dexie/Dexie.js/releases"
+  },
+  "ids": {
+    "github": "dexie/Dexie.js",
+    "stackoverflowTag": "dexie",
+    "npm": "dexie",
+    "hackerNewsQuery": "Dexie.js"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/dexie/Dexie.js/releases",
+    "https://www.npmjs.com/package/dexie",
+    "https://dexie.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

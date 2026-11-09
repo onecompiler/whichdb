@@ -1,0 +1,98 @@
+{
+  "slug": "finedb",
+  "name": "FineDB",
+  "aliases": ["Fine DB"],
+  "tagline": "2013 learning project: a multi-threaded C key-value server on LMDB and nanomsg with Snappy compression.",
+  "description": "FineDB is a small key-value database server written in C by Amaury Bouchard in mid-2013, mainly as a way to learn network programming, multi-threading and replication. Storage is delegated to LMDB, which provides memory-mapped B+tree pages and MVCC so readers never block the writer, while nanomsg sockets connect the connection threads to a single writer thread. Clients speak a compact binary protocol with GET, PUT, DEL, LIST, DROP, PING and database-selection commands, optional synchronous or asynchronous acknowledgement, and Snappy-compressed values; each stored value carries a replication timestamp and an expiry time. It ships a C client library and a command-line shell. Development stopped in September 2013 and the finedb.org domain is parked.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since September 2013; finedb.org is parked. LMDB itself, or servers built on it, are the maintained route.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["caching", "oltp"],
+  "architecture": ["client-server", "single-node"],
+  "developer": "Amaury Bouchard",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "writtenIn": ["C"],
+  "basedOn": "LMDB",
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["FineDB binary protocol commands"],
+  "apis": ["Binary TCP protocol", "C client library"],
+  "compatibleWith": [],
+  "drivers": ["C"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "LMDB storage gives crash-safe, memory-mapped reads that never block on writes",
+    "Clean thread design: connection threads feed one writer over nanomsg",
+    "Per-value expiry and Snappy compression in a very small codebase"
+  ],
+  "weaknesses": [
+    "Abandoned after a few months of development in 2013",
+    "Replication and clustering were planned but never finished",
+    "Only a C client library; no authentication"
+  ],
+  "useCases": [
+    "Learning how to wrap LMDB in a multi-threaded network server",
+    "Reference code for nanomsg-based internal messaging"
+  ],
+  "notIdealFor": ["Production data", "Replicated or distributed deployments"],
+  "notableUsers": [],
+  "alternatives": ["lmdb", "redis", "apache-kvrocks", "libmdbx"],
+  "tags": ["key-value", "lmdb", "nanomsg", "c", "abandoned"],
+  "links": {
+    "website": "https://github.com/Amaury/FineDB",
+    "repository": "https://github.com/Amaury/FineDB"
+  },
+  "ids": {
+    "github": "Amaury/FineDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Amaury/FineDB",
+    "https://dbdb.io/db/finedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

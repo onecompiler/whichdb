@@ -1,0 +1,172 @@
+{
+  "slug": "axon-server",
+  "name": "Axon Server",
+  "aliases": [
+    "AxonIQ Axon Server",
+    "Axon Server SE",
+    "Axon Server EE"
+  ],
+  "tagline": "AxonIQ's event store and message router for Axon Framework CQRS and event-sourced apps.",
+  "description": "Axon Server combines an event store with a router for commands, events and queries, designed to back applications built on the Java Axon Framework. It removes the need for a separate message broker in CQRS systems, providing location-transparent routing, event streaming and snapshots. Since 2023 it ships as one artifact whose capabilities depend on the license present; the 2026.x line added Dynamic Consistency Boundary (DCB) event stores, learner nodes and Java 21 as minimum. Free use is limited, with clustering, multi-context and production use generally under AxonIQ's paid plans, so check the license terms before deploying.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "event-store",
+  "models": [
+    "event-store"
+  ],
+  "workloads": [
+    "event-sourcing",
+    "pub-sub",
+    "queue"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "AxonIQ",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "2026.1.7",
+    "date": "2026-10-15"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "AxonIQ subscription terms (connectors Apache-2.0)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Developer plan offers a no-cost single node; Starter/Pro plans and AxonIQ Cloud for production and clustering."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Clustered deployments replicate contexts across nodes; multi-context allows tenant separation."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Axon Framework API",
+    "Axon Server query language (events)"
+  ],
+  "apis": [
+    "gRPC",
+    "HTTP"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Kotlin"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Event store and command/query routing in one component",
+    "Tight integration with Axon Framework and Spring Boot",
+    "Dynamic Consistency Boundaries in 2026.x simplify aggregate design",
+    "Snapshots and tracking processors built in"
+  ],
+  "weaknesses": [
+    "Practically tied to the Java Axon Framework",
+    "Licensing has shifted toward paid plans for production use",
+    "Small ecosystem outside the Axon community"
+  ],
+  "useCases": [
+    "CQRS and event-sourced Java microservices",
+    "Replacing a broker plus event store in Axon-based systems"
+  ],
+  "notIdealFor": [
+    "Non-JVM stacks",
+    "Teams wanting an OSI-licensed event store"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kurrentdb",
+    "postgresql",
+    "pgmq",
+    "xtdb"
+  ],
+  "tags": [
+    "event-sourcing",
+    "cqrs",
+    "java",
+    "axon-framework"
+  ],
+  "links": {
+    "website": "https://www.axoniq.io/",
+    "docs": "https://docs.axoniq.io/axon-server-reference/v2026.1/",
+    "changelog": "https://docs.axoniq.io/axon-server-reference/v2026.1/release-notes/"
+  },
+  "ids": {
+    "stackoverflowTag": "axon",
+    "dockerHub": "axoniq/axonserver",
+    "hackerNewsQuery": "Axon Server"
+  },
+  "brand": {},
+  "sources": [
+    "https://docs.axoniq.io/axon-server-reference/v2026.1/release-notes/",
+    "https://discuss.axoniq.io/t/axon-server-2026-0-0/6681",
+    "https://axoniq.io/blog/new-axon-server-plans"
+  ],
+  "lastVerified": "2026-10-27"
+}

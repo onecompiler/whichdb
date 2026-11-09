@@ -1,0 +1,169 @@
+{
+  "slug": "conceptbase",
+  "name": "ConceptBase.cc",
+  "aliases": [
+    "ConceptBase"
+  ],
+  "tagline": "Deductive object base for metamodeling, built on O-Telos with Datalog rules and unlimited meta-levels.",
+  "description": "ConceptBase.cc is a multi-user deductive object base that implements O-Telos, a variant of the Telos knowledge-representation language. Everything is a proposition and instantiation is a relation rather than a fixed layer, so one database can hold example data, schemas, metaclasses and meta-metaclasses together; integrity constraints, deductive rules evaluated by a Datalog engine, event-condition-action rules and recursive functions all work across those levels. That makes it a specialised tool for designing and analysing modeling languages and for method engineering rather than a general application database. Developed since 1987 at Passau, Aachen, Tilburg and now the University of Skövde, it is still maintained: version 8.5.16 shipped in July 2026 with a Linux server and a Java graph-editor client under a FreeBSD-style license.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "metadata-store"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "The ConceptBase Team (University of Skövde)",
+  "vendorType": "academic",
+  "initialRelease": 1987,
+  "latestVersion": {
+    "version": "8.5.16",
+    "date": "2026-07-21"
+  },
+  "writtenIn": [
+    "Prolog",
+    "Java",
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "FreeBSD-style license",
+    "spdx": "BSD-2-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Sized for models and metamodels rather than bulk application data."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "O-Telos",
+    "Datalog"
+  ],
+  "apis": [
+    "CBserver client API",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Unlimited classification levels: data, classes, metaclasses and beyond in one store",
+    "Deductive rules and integrity constraints apply uniformly across meta-levels",
+    "ECA active rules and recursive functions for model analysis",
+    "Graph editor client whose node and link rendering is itself defined by rules",
+    "Still actively maintained, with regular releases"
+  ],
+  "weaknesses": [
+    "Built for metamodeling, not high-volume application data",
+    "Steep learning curve around Telos and O-Telos concepts",
+    "Small, mostly academic user community"
+  ],
+  "useCases": [
+    "Designing and validating domain-specific modeling languages",
+    "Method engineering and multi-level modeling research",
+    "Teaching conceptual modeling and deductive databases"
+  ],
+  "notIdealFor": [
+    "OLTP application backends",
+    "Large-scale analytics",
+    "Web-scale data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "typedb",
+    "logicblox",
+    "datomic",
+    "terminusdb",
+    "cozodb"
+  ],
+  "tags": [
+    "deductive",
+    "metamodeling",
+    "telos",
+    "datalog",
+    "academic"
+  ],
+  "links": {
+    "website": "https://conceptbase.sourceforge.net/",
+    "repository": "https://gitlab.com/mjeu/conceptbasecc",
+    "wikipedia": "https://en.wikipedia.org/wiki/ConceptBase"
+  },
+  "ids": {
+    "wikipedia": "ConceptBase",
+    "hackerNewsQuery": "ConceptBase"
+  },
+  "brand": {},
+  "sources": [
+    "https://conceptbase.sourceforge.net/",
+    "https://conceptbase.sourceforge.net/CB-Download.html",
+    "https://gitlab.com/mjeu/conceptbasecc",
+    "https://en.wikipedia.org/wiki/ConceptBase"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,106 @@
+{
+  "slug": "eva",
+  "name": "Eva",
+  "aliases": ["Workiva Eva"],
+  "tagline": "Workiva's open-sourced, Datomic-compatible EAV database: immutable history and Datalog queries; archived.",
+  "description": "Eva is a distributed entity-attribute-value database that Workiva built for its own multi-tenant compliance software and open-sourced in 2019 under the Eclipse Public License. Its API is largely compatible with Datomic's: facts (datoms) are only ever added, every transaction produces a new immutable database value you can query as of any point in time, and queries use Datalog with pull expressions. A single transactor serialises writes for atomic consistency, peers read immutable index segments, and the indexes are persistent B-epsilon trees rather than Datomic's LSM-like structures; the reference deployment used MariaDB for segment storage and ActiveMQ for messaging. Workiva described it as alpha quality when it stopped closed development, and the repository was archived in 2023. Datomic, which has been free since 2023, or XTDB are the maintained choices.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Open-sourced by Workiva in 2019 as alpha-quality software; the GitHub repository was archived in 2023. Datomic or XTDB are maintained alternatives.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": ["graph", "relational"],
+  "workloads": ["oltp", "knowledge-graph"],
+  "architecture": ["distributed", "client-server"],
+  "developer": "Workiva",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": { "version": "2.0.4", "date": "2019-07-29" },
+  "writtenIn": ["Clojure", "Java"],
+  "license": { "type": "copyleft", "name": "Eclipse Public License 1.0", "spdx": "EPL-1.0" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Reads scale across peers; all writes go through a single transactor per database."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "flexible",
+  "queryLanguages": ["Datalog", "Pull API"],
+  "apis": ["Clojure/Java peer library", "Eva client service (HTTP)"],
+  "compatibleWith": [],
+  "drivers": ["Clojure", "Java"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Datomic-style immutable history: query any past database value",
+    "Datalog queries and pull expressions familiar to Clojure developers",
+    "Open source (EPL) implementation of the Datomic model, useful for study",
+    "Persistent B-epsilon-tree indexes offer a different write/read trade-off from Datomic"
+  ],
+  "weaknesses": [
+    "Archived and self-described alpha; no maintainers",
+    "Single transactor limits write throughput",
+    "Operationally heavy reference stack (transactor, catalog, MariaDB, ActiveMQ)"
+  ],
+  "useCases": [
+    "Studying an open implementation of the Datomic architecture",
+    "Experiments with accumulate-only, time-aware data models"
+  ],
+  "notIdealFor": ["Production workloads", "High write throughput"],
+  "notableUsers": [],
+  "alternatives": ["datomic", "xtdb", "datahike", "terminusdb"],
+  "tags": ["eav", "datalog", "immutable", "clojure", "datomic-compatible"],
+  "links": {
+    "website": "https://github.com/Workiva/eva",
+    "repository": "https://github.com/Workiva/eva",
+    "docs": "https://github.com/Workiva/eva/blob/master/docs/eva_101.md"
+  },
+  "ids": {
+    "github": "Workiva/eva"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Workiva/eva",
+    "https://github.com/Workiva/eva/blob/master/LICENSE",
+    "https://dbdb.io/db/eva"
+  ],
+  "lastVerified": "2026-10-27"
+}

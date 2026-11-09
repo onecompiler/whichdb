@@ -1,0 +1,159 @@
+{
+  "slug": "neodatis-odb",
+  "name": "NeoDatis ODB",
+  "aliases": [
+    "NeoDatis"
+  ],
+  "tagline": "Lightweight embedded object database for Java (and .NET) that stores plain objects in one file; dormant.",
+  "description": "NeoDatis ODB is a small open-source object database that persists Java objects as they are, with no mapping files, annotations or base classes, into a single database file; ports existed for .NET, and it ran on Android, Groovy and Scala. It offered ACID transactions, indexes, criteria and native queries, a client/server mode and a GUI object explorer, and around 2008–2011 it was a common lightweight alternative to db4o in desktop and Android apps. The 1.9 line was last updated in November 2010 and a 2.x beta never reached a final release; the project is effectively abandoned, though its website still says otherwise. Its .NET port lived on briefly as NDatabase.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No releases since 1.9.30 (Nov 2010); 2.x never left beta. Consider ObjectBox, Realm or SQLite-based storage.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "NeoDatis (Olivier Smadja)",
+  "vendorType": "community",
+  "initialRelease": 2006,
+  "latestVersion": {
+    "version": "1.9.30.689",
+    "date": "2010-11-10"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL v2",
+    "spdx": "LGPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Criteria queries",
+    "Native queries"
+  ],
+  "apis": [
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stores plain Java objects with one line of code and no mapping",
+    "Single-file embedded mode plus an optional client/server mode",
+    "Tiny footprint suitable for early Android apps"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2010; 2.x never finished",
+    "No modern Android or JVM tooling support",
+    "Small community and scattered documentation"
+  ],
+  "useCases": [
+    "Maintaining legacy Java or Android apps that use it",
+    "Studying a compact object-database design"
+  ],
+  "notIdealFor": [
+    "New Android or JVM projects",
+    "Concurrent multi-user workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "db4o",
+    "objectbox",
+    "objectdb",
+    "perst",
+    "sqlite"
+  ],
+  "tags": [
+    "object-database",
+    "java",
+    "embedded",
+    "android",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://neodatis.wikidot.com/",
+    "repository": "https://sourceforge.net/projects/neodatis-odb/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://neodatis.wikidot.com/",
+    "https://sourceforge.net/projects/neodatis-odb/",
+    "https://repo1.maven.org/maven2/org/neodatis/odb/neodatis-odb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,155 @@
+{
+  "slug": "shore",
+  "name": "Shore",
+  "aliases": [
+    "SHORE",
+    "Scalable Heterogeneous Object REpository",
+    "Shore Storage Manager",
+    "SSM"
+  ],
+  "tagline": "UW-Madison's 1990s persistent object repository whose storage manager became a standard research engine.",
+  "description": "SHORE (Scalable Heterogeneous Object REpository) was a University of Wisconsin-Madison project led by Michael Carey, David DeWitt and colleagues as the successor to the EXODUS storage manager. It aimed to be a persistent object system for CAD, GIS, persistent programming languages and multimedia, adding typed objects, multi-language access, a Unix-like namespace and a Unix-compatible interface on top of a layered architecture with 'value-added servers'. The full system was described at SIGMOD 1994 and released in 1996; official support ended in 1997. Its transactional storage manager (ARIES-style logging and recovery, B+ trees, R* trees, locking) lived on far longer, used by Paradise, PREDATOR, TIMBER, Lambda-DB and many studies, and was eventually replaced by the multi-threaded Shore-MT.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research system (1990s); support ended in 1997 and the storage manager was superseded by Shore-MT.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "scientific"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded"
+  ],
+  "developer": "University of Wisconsin-Madison",
+  "vendorType": "academic",
+  "initialRelease": 1996,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "SHORE/UW permissive research license"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C++ storage manager API",
+    "SDL (Shore Data Language)"
+  ],
+  "apis": [
+    "C++ API",
+    "Unix-compatible file interface"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Robust ARIES-style transactional storage manager reused by many research systems",
+    "B+ tree and R* tree indexes for both conventional and spatial data",
+    "Layered design let projects build custom 'value-added servers'",
+    "Decades of published results make it a reference baseline"
+  ],
+  "weaknesses": [
+    "Single-threaded 'green threads' design does not exploit multicore CPUs",
+    "Unsupported since 1997; later releases were as-is",
+    "Object-repository layers were deprecated long ago"
+  ],
+  "useCases": [
+    "History of object-oriented and extensible databases",
+    "Understanding the lineage of Shore-MT and later research engines"
+  ],
+  "notIdealFor": [
+    "Production use",
+    "New research on multicore hardware (use Shore-MT or newer)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "shore-mt",
+    "berkeley-db",
+    "wiredtiger"
+  ],
+  "tags": [
+    "research",
+    "storage-manager",
+    "object-store",
+    "uw-madison",
+    "historical"
+  ],
+  "links": {
+    "website": "https://research.cs.wisc.edu/shore/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://research.cs.wisc.edu/shore/",
+    "https://research.cs.wisc.edu/shore-mt/",
+    "https://doi.org/10.1145/191839.191915",
+    "https://dbdb.io/db/shore"
+  ],
+  "lastVerified": "2026-10-27"
+}

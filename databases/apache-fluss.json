@@ -1,0 +1,168 @@
+{
+  "slug": "apache-fluss",
+  "name": "Apache Fluss",
+  "aliases": [
+    "Fluss"
+  ],
+  "tagline": "Columnar streaming storage for Flink with primary-key tables and tiering into the lakehouse.",
+  "description": "Fluss is a streaming storage layer designed for real-time analytics with Apache Flink, positioned as a table-oriented alternative to Kafka for analytical pipelines. Log tables store append-only streams in an Arrow-based columnar format with projection pushdown, and primary-key tables support upserts, changelog generation and low-latency key lookups for lookup joins. A tiering service continuously compacts data into Paimon, Iceberg, Hudi or Lance so streaming and lakehouse reads can be unioned. Open-sourced by Alibaba in late 2024, it entered the Apache Incubator in 2025 and is now a top-level project; 1.0.0 shipped in September 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "key-value"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "1.0.0",
+    "date": "2026-09-22"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Tablet servers hold bucketed tables with replication; cold data tiers to lake storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Flink SQL",
+    "Spark SQL"
+  ],
+  "apis": [
+    "Java client",
+    "REST gateway"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Columnar stream storage lets Flink read only needed columns",
+    "Primary-key tables replace external KV stores for lookup joins",
+    "Built-in tiering into Paimon, Iceberg, Hudi and Lance",
+    "Apache governance with Alibaba-scale origins"
+  ],
+  "weaknesses": [
+    "Young project; 1.0 only in 2026",
+    "Best used with Flink; other engines are secondary",
+    "Not a general Kafka replacement for non-analytical messaging"
+  ],
+  "useCases": [
+    "Real-time analytics pipelines on Flink",
+    "Streaming lakehouse ingestion with fresh reads",
+    "Lookup joins against changing dimension tables"
+  ],
+  "notIdealFor": [
+    "Applications without Flink or Spark",
+    "General-purpose message queuing"
+  ],
+  "notableUsers": [
+    "Alibaba"
+  ],
+  "alternatives": [
+    "risingwave",
+    "apache-paimon",
+    "materialize",
+    "timeplus-proton"
+  ],
+  "tags": [
+    "streaming-storage",
+    "flink",
+    "lakehouse",
+    "apache",
+    "columnar"
+  ],
+  "links": {
+    "website": "https://fluss.apache.org/",
+    "docs": "https://fluss.apache.org/docs/",
+    "repository": "https://github.com/apache/fluss",
+    "changelog": "https://github.com/apache/fluss/releases"
+  },
+  "ids": {
+    "github": "apache/fluss",
+    "dockerHub": "apache/fluss",
+    "hackerNewsQuery": "Apache Fluss"
+  },
+  "brand": {},
+  "sources": [
+    "https://fluss.apache.org/",
+    "https://github.com/apache/fluss/releases",
+    "https://incubator.apache.org/projects/fluss.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

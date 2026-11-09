@@ -1,0 +1,162 @@
+{
+  "slug": "paradox",
+  "name": "Paradox",
+  "aliases": [
+    "Corel Paradox",
+    "Borland Paradox",
+    "Paradox for Windows"
+  ],
+  "tagline": "Classic 1985 desktop relational database with Query by Example; now a frozen extra in WordPerfect Office.",
+  "description": "Paradox is a desktop relational database that Ansa Software released for MS-DOS in 1985; Borland bought Ansa in 1987 and turned it into one of the best-selling PC databases of the late 1980s and early 1990s, and Corel took it over in the mid-1990s. It paired file-based tables with a visual Query by Example interface, forms, reports and its own languages, PAL on DOS and the object-based ObjectPAL on Windows, and its table format became a common storage choice for Delphi applications through the Borland Database Engine. Corel still bundles Paradox with WordPerfect Office Professional, but the product has not seen a meaningful update since about 2009. Keep it only to maintain existing applications; move data to Access, SQLite or a server database.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Still bundled with Corel WordPerfect Office Professional but effectively frozen since about 2009; maintain existing apps only.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Corel (originally Ansa Software, then Borland)",
+  "vendorType": "company",
+  "initialRelease": 1985,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (Corel)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Available only as part of WordPerfect Office Professional."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "File-based tables shared over a network drive; no server process."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "QBE",
+    "SQL (local SQL)",
+    "ObjectPAL"
+  ],
+  "apis": [
+    "Borland Database Engine (BDE)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "ObjectPAL",
+    "Delphi"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Visual Query by Example that non-programmers can use",
+    "Forms, reports and ObjectPAL apps in one desktop package",
+    "Huge legacy of Delphi/BDE applications that read its tables"
+  ],
+  "weaknesses": [
+    "No meaningful development since about 2009",
+    "File-share multi-user access is fragile and prone to corruption",
+    "BDE dependency is long deprecated",
+    "Only sold inside a WordPerfect Office suite"
+  ],
+  "useCases": [
+    "Maintaining legacy Paradox and Delphi/BDE applications",
+    "Extracting data from old .DB tables for migration"
+  ],
+  "notIdealFor": [
+    "New applications",
+    "Multi-user or web-facing workloads",
+    "Large datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "microsoft-access",
+    "filemaker",
+    "sqlite",
+    "dbase",
+    "4d"
+  ],
+  "tags": [
+    "desktop-database",
+    "qbe",
+    "borland",
+    "corel",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.wordperfect.com/en/pages/old-brands/corel-paradox/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Paradox_(database)"
+  },
+  "ids": {
+    "wikipedia": "Paradox (database)",
+    "stackoverflowTag": "paradox",
+    "hackerNewsQuery": "Paradox database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.wordperfect.com/en/product/office-suite/",
+    "https://www.wordperfect.com/en/pages/old-brands/corel-paradox/",
+    "https://en.wikipedia.org/wiki/Paradox_(database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,166 @@
+{
+  "slug": "ocient",
+  "name": "Ocient",
+  "aliases": [
+    "OcientAIQ",
+    "Ocient Hyperscale Data Warehouse"
+  ],
+  "tagline": "Hyperscale data warehouse on NVMe compute-adjacent storage, rebranded as the OcientAIQ platform.",
+  "description": "Ocient is a commercial MPP data warehouse built for continuously growing, trillion-row datasets in telecom, ad tech and government. Its compute-adjacent storage architecture puts large NVMe arrays inside each query node and bypasses the kernel for I/O, which keeps full scans fast and costs predictable at petabyte scale. Streaming loaders ingest from Kafka, and in-database ML and geospatial functions avoid data movement. The company now markets it as the OcientAIQ Unified Data Platform for AI workloads. It runs on-prem, in OcientCloud or in public clouds; it is a specialist system with a small user base.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "real-time-analytics",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Ocient Inc.",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Enterprise subscriptions for on-prem, OcientCloud or public-cloud deployment."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Designed for multi-petabyte, trillion-row tables on NVMe-dense nodes."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "Python DB-API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Predictable performance on full scans of trillion-row tables",
+    "Compute-adjacent NVMe storage avoids network bottlenecks",
+    "Continuous streaming ingest from Kafka",
+    "In-database ML and geospatial functions"
+  ],
+  "weaknesses": [
+    "Small vendor and user community",
+    "Requires specialised NVMe-heavy hardware for on-prem",
+    "Limited public documentation and ecosystem integrations"
+  ],
+  "useCases": [
+    "Telecom CDR and network analytics",
+    "Ad-tech log analytics",
+    "Government and defense data at PB scale"
+  ],
+  "notIdealFor": [
+    "Small and medium datasets",
+    "OLTP",
+    "Self-service teams wanting a free tier"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vertica",
+    "snowflake",
+    "clickhouse",
+    "teradata-vantage",
+    "google-bigquery"
+  ],
+  "tags": [
+    "hyperscale",
+    "mpp",
+    "nvme",
+    "enterprise",
+    "petabyte"
+  ],
+  "links": {
+    "website": "https://ocient.com/",
+    "docs": "https://docs.ocient.com/"
+  },
+  "ids": {
+    "pypi": "pyocient",
+    "hackerNewsQuery": "Ocient"
+  },
+  "brand": {},
+  "sources": [
+    "https://ocient.com/",
+    "https://pypi.org/project/pyocient/"
+  ],
+  "lastVerified": "2026-10-27"
+}

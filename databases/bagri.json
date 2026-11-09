@@ -1,0 +1,165 @@
+{
+  "slug": "bagri",
+  "name": "Bagri",
+  "aliases": [
+    "BagriDB"
+  ],
+  "tagline": "Distributed XML and JSON document database layered on Hazelcast, queried with XQuery via the XQJ API.",
+  "description": "Bagri is an open-source document database by Denis Sukhoroslov that stores XML (and, later, JSON) documents in a distributed in-memory data grid, primarily Hazelcast, with experimental Coherence and JCache client modules. Documents are shredded into the grid and queried with XQuery through the Saxon engine, exposed via the standard XQJ (JSR 225) Java API and a REST server; release 1.2.0 (December 2017) added transaction-level triggers, batch and asynchronous document processing and a non-transactional fast path. It scales by adding grid members and was benchmarked with the TPoX XML suite. Development stopped in February 2019 and the bagridb.com domain now belongs to an unrelated site.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release 1.2.0 (Dec 2017), last commit Feb 2019; project website gone. BaseX, eXist-db or MarkLogic are maintained XML databases.",
+  "maturity": "legacy",
+  "primaryModel": "xml",
+  "models": [
+    "xml",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Denis Sukhoroslov",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "1.2.0",
+    "date": "2017-12-30"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Hazelcast IMDG",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Partitions documents across Hazelcast cluster members; capacity follows cluster RAM."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "XQuery"
+  ],
+  "apis": [
+    "XQJ (JSR 225)",
+    "REST API",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Standard XQuery and XQJ access instead of a proprietary API",
+    "Scales out by adding in-memory data grid members",
+    "Handles both XML and JSON documents",
+    "Apache 2.0 licensed, modular Maven build"
+  ],
+  "weaknesses": [
+    "Abandoned since 2019 and pinned to old Hazelcast and Saxon versions",
+    "Data lives in grid memory, so capacity is RAM-bound",
+    "Tiny community and no remaining website or documentation hub"
+  ],
+  "useCases": [
+    "Studying XQuery over in-memory data grids",
+    "Legacy systems already built on Bagri's XQJ interface"
+  ],
+  "notIdealFor": [
+    "New XML or document-store projects",
+    "Datasets larger than cluster memory"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "basex",
+    "exist-db",
+    "marklogic",
+    "hazelcast",
+    "mongodb"
+  ],
+  "tags": [
+    "xml",
+    "xquery",
+    "hazelcast",
+    "document",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/dsukhoroslov/bagri",
+    "repository": "https://github.com/dsukhoroslov/bagri",
+    "changelog": "https://github.com/dsukhoroslov/bagri/releases"
+  },
+  "ids": {
+    "github": "dsukhoroslov/bagri"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/dsukhoroslov/bagri",
+    "https://github.com/dsukhoroslov/bagri/releases/tag/v1.2.0",
+    "https://dbdb.io/db/bagri"
+  ],
+  "lastVerified": "2026-10-27"
+}

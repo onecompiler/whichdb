@@ -1,0 +1,160 @@
+{
+  "slug": "castledb",
+  "name": "CastleDB",
+  "aliases": [
+    "Castle DB"
+  ],
+  "tagline": "Structured static database for game data: spreadsheet-style editor, typed sheets and diff-friendly JSON.",
+  "description": "CastleDB, created by Nicolas Cannasse (author of Haxe and co-founder of Shiro Games), is a structured static database for data that people author rather than data an application writes at runtime: items, monsters, quests, dialogue and level layouts. Each sheet has a declared column model with types, unique identifiers and references to rows in other sheets, so the editor validates input much like a schema would. Everything is saved to a single JSON file formatted with newlines so it diffs and merges cleanly in Git or SVN, and a Haxe macro library turns that file into typed accessors at compile time. The original standalone editor is now legacy because editing moved into HIDE, the Heaps engine's editor, but the castle library itself is still actively developed.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "content-management",
+    "configuration"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Nicolas Cannasse",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "1.6.0",
+    "date": "2018-04-09"
+  },
+  "writtenIn": [
+    "Haxe"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "ISC License",
+    "spdx": "ISC"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "One JSON file loaded whole into memory; sized for hand-authored game data."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Haxe API"
+  ],
+  "apis": [
+    "Haxe macro API",
+    "JSON file format"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Haxe"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Typed sheets with cross-sheet references catch data-entry mistakes before they reach the game",
+    "Single newline-formatted JSON file merges cleanly in Git",
+    "Haxe macros generate typed accessors, so a missing ID fails at compile time",
+    "Includes tile and level editing alongside tabular data"
+  ],
+  "weaknesses": [
+    "Not a runtime database: no concurrent writes, query engine or transactions",
+    "Best supported from Haxe/Heaps; other languages must parse the JSON themselves",
+    "Standalone editor is legacy now that editing lives in HIDE"
+  ],
+  "useCases": [
+    "Game design data such as items, monsters and quests",
+    "Level and tile map authoring for Heaps games",
+    "Version-controlled reference data edited by non-programmers"
+  ],
+  "notIdealFor": [
+    "Data written by the application at runtime",
+    "Large datasets",
+    "Concurrent multi-user editing without version control"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "tinydb",
+    "lowdb"
+  ],
+  "tags": [
+    "gamedev",
+    "haxe",
+    "json",
+    "static-data",
+    "editor"
+  ],
+  "links": {
+    "website": "http://castledb.org/",
+    "repository": "https://github.com/ncannasse/castle"
+  },
+  "ids": {
+    "github": "ncannasse/castle",
+    "hackerNewsQuery": "CastleDB"
+  },
+  "brand": {},
+  "sources": [
+    "http://castledb.org/",
+    "https://github.com/ncannasse/castle",
+    "https://dbdb.io/db/castledb"
+  ],
+  "lastVerified": "2026-10-27"
+}

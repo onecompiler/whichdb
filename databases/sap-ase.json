@@ -1,0 +1,179 @@
+{
+  "slug": "sap-ase",
+  "name": "SAP ASE (Sybase)",
+  "aliases": [
+    "Sybase ASE",
+    "Adaptive Server Enterprise",
+    "Sybase SQL Server",
+    "SAP Adaptive Server Enterprise"
+  ],
+  "tagline": "The original Sybase T-SQL engine, still running trading and SAP systems but firmly in SAP's sunset lane.",
+  "description": "SAP ASE is the descendant of Sybase SQL Server, the code base Microsoft licensed to create SQL Server, so its T-SQL dialect will feel familiar. It earned a reputation on Wall Street for fast, predictable OLTP and still underpins many trading, settlement and older SAP Business Suite systems. SAP acquired Sybase in 2010 and has since steered new workloads to HANA; ASE 16.1 is the current line, with mainstream maintenance planned to the end of 2030. Choose it only to keep existing systems running; most owners are planning migrations to HANA, SQL Server or PostgreSQL.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "SAP keeps ASE 16.1 in mainstream maintenance to Dec 31, 2030 (SAP Note 1922006) but offers no roadmap beyond it and steers customers to SAP HANA.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "SAP SE (originally Sybase)",
+  "vendorType": "company",
+  "initialRelease": 1987,
+  "latestVersion": {
+    "version": "16.1",
+    "date": "2022"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Commercial per-core licensing, usually bundled into SAP contracts; a free developer edition exists."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single-server engine; HADR and SAP Replication Server provide standby and DR copies."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "T-SQL"
+  ],
+  "apis": [
+    "TDS",
+    "Open Client (CT-Library)",
+    "ODBC",
+    "JDBC (jConnect)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Java",
+    "C#",
+    "Python",
+    "Perl"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Low-latency, predictable OLTP that trading desks have relied on for decades",
+    "T-SQL dialect close to SQL Server eases skills transfer and migration",
+    "Optional in-memory database mode for latency-critical tables",
+    "Supported platform for older SAP Business Suite (ECC) systems"
+  ],
+  "weaknesses": [
+    "No meaningful roadmap: SAP's strategic database is HANA",
+    "Shrinking skills pool and third-party tool support",
+    "No horizontal scaling; Cluster Edition is gone",
+    "Lacks modern JSON, vector and full-text capabilities"
+  ],
+  "useCases": [
+    "Keeping legacy trading and settlement systems running",
+    "SAP ECC on ASE until S/4HANA migration",
+    "Applications built on Sybase Open Client that cannot move yet"
+  ],
+  "notIdealFor": [
+    "Any new application",
+    "Workloads needing cloud-native managed services",
+    "Teams planning beyond 2030"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sql-server",
+    "sap-hana",
+    "postgresql",
+    "oracle-database",
+    "sap-iq"
+  ],
+  "tags": [
+    "sql",
+    "t-sql",
+    "sybase",
+    "sap",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.sap.com/products/technology-platform/sybase-ase.html",
+    "docs": "https://help.sap.com/docs/SAP_ASE",
+    "wikipedia": "https://en.wikipedia.org/wiki/Adaptive_Server_Enterprise"
+  },
+  "ids": {
+    "stackoverflowTag": "sybase",
+    "wikipedia": "Adaptive Server Enterprise",
+    "hackerNewsQuery": "Sybase"
+  },
+  "brand": {
+    "color": "#0FAAFF",
+    "simpleIcon": "sap"
+  },
+  "sources": [
+    "https://www.enterprisedb.com/sites/default/files/2026-10/Sybase_Compliance_Brief.pdf",
+    "https://www.ispirer.com/blog/is-sybase-ase-dead",
+    "https://community.sailpoint.com/blog/Deprecation-of-Support-for-SAP-ASE-Versions"
+  ],
+  "lastVerified": "2026-10-27"
+}

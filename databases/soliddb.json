@@ -1,0 +1,175 @@
+{
+  "slug": "soliddb",
+  "name": "solidDB",
+  "aliases": [
+    "IBM solidDB",
+    "UNICOM solidDB",
+    "Solid"
+  ],
+  "tagline": "Low-latency in-memory plus on-disk SQL database with HotStandby failover, sold today by UNICOM.",
+  "description": "solidDB is a relational engine that keeps hot tables in memory and the rest on disk inside one server process, and a single SQL statement can touch both. It started at Solid Information Technology in Helsinki in 1992, was bought by IBM at the end of 2007 and sold to UNICOM Global in 2014, which still sells and supports it. Its home turf is telecom and network equipment: HotStandby pairs with sub-second failover, asynchronous C-Replication in one-to-many, many-to-one or bidirectional topologies, and an option to link the engine into the application and use shared-memory access. Recent releases added a JSON datatype, and 201.0 (February 2025) added a Grid option and a vector datatype with Euclidean and dot-product search.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "UNICOM Systems (UNICOM Global)",
+  "vendorType": "company",
+  "initialRelease": 1992,
+  "latestVersion": {
+    "version": "201.0",
+    "date": "2025-02"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold through UNICOM sales; 5 years of standard support per version plus optional paid extended support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Typically deployed as HotStandby pairs; C-Replication spans sites asynchronously. 201.0 adds a Grid option."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "Linked library with shared-memory access"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "In-memory and disk-based tables in the same server and the same SQL statement",
+    "HotStandby failover in under a second, with hooks for external HA controllers",
+    "Can be linked into the application and accessed over shared memory for the lowest latency",
+    "Flexible async replication: one-to-many, many-to-one, bidirectional and hierarchical",
+    "Three decades of use in telecom and network equipment"
+  ],
+  "weaknesses": [
+    "Proprietary and sales-led, with no public pricing or free edition",
+    "Small ecosystem and community compared with mainstream databases",
+    "SQL support is SQL-92 entry level plus selected later features",
+    "In-memory tables need RAM sized to the hot dataset"
+  ],
+  "useCases": [
+    "Telecom and network equipment control planes",
+    "Embedded real-time data management in appliances",
+    "Low-latency OLTP with hot-standby failover"
+  ],
+  "notIdealFor": [
+    "Analytics over large datasets",
+    "Teams that want open source or a managed cloud service",
+    "Horizontally sharded write-heavy workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-timesten",
+    "altibase",
+    "extremedb",
+    "raima-database-manager",
+    "sap-hana"
+  ],
+  "tags": [
+    "in-memory",
+    "sql",
+    "high-availability",
+    "telecom",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://www.unicomsi.com/products/soliddb/",
+    "docs": "https://support.unicomsi.com/manuals/soliddb/101/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/SolidDB"
+  },
+  "ids": {
+    "wikipedia": "SolidDB",
+    "hackerNewsQuery": "solidDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.unicomsi.com/products/soliddb/",
+    "https://www.unicomsi.com/products/soliddb/features/",
+    "https://www.unicomsi.com/static/ce5fa4f8d3fb75ef42556af8b8f71479/soliddb-support-lifecycle-policy.pdf",
+    "https://en.wikipedia.org/wiki/SolidDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

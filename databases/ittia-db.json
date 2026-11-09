@@ -1,0 +1,168 @@
+{
+  "slug": "ittia-db",
+  "name": "ITTIA DB",
+  "aliases": [
+    "ITTIA DB SQL",
+    "ITTIA DB Lite",
+    "ITTIA DB Platform"
+  ],
+  "tagline": "Embedded time-series and relational database for microcontrollers, RTOS and edge AI devices.",
+  "description": "ITTIA DB is an embedded database family from ITTIA in Bellevue, Washington, aimed at devices that need to store and analyse data locally. ITTIA DB targets Linux, Windows, Android, QNX and VxWorks with SQL, replication and time-series features, while ITTIA DB Lite fits on microcontrollers under FreeRTOS, Zephyr or bare metal. The company now positions the line around edge AI, with ITTIA Data Connect for moving device data upstream and analytics tooling on top. It is a specialist commercial product: useful when SQLite lacks time-series handling or real-time guarantees, but with a small public footprint and few independent references.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "iot",
+    "edge",
+    "time-series"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "ITTIA L.L.C.",
+  "vendorType": "company",
+  "initialRelease": 2007,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "OEM/device licensing by quote; evaluation versions available on request."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "android",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "C API"
+  ],
+  "apis": [
+    "C API",
+    "C++ API",
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs on microcontrollers and RTOSes where general-purpose databases cannot",
+    "Time-series storage and analytics designed for sensor data at the edge",
+    "Replication and data-connect tooling to ship device data to servers",
+    "Real-time oriented design for deterministic embedded behaviour"
+  ],
+  "weaknesses": [
+    "Quote-based commercial licensing",
+    "Little public documentation, versioning or community",
+    "Narrow focus on embedded devices"
+  ],
+  "useCases": [
+    "Industrial IoT sensor logging and local analytics",
+    "Medical and automotive device data",
+    "Edge AI preprocessing on microcontrollers"
+  ],
+  "notIdealFor": [
+    "Server-side applications",
+    "Open-source projects",
+    "Large analytical datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "raima-database-manager",
+    "extremedb",
+    "sqlite",
+    "empress-embedded-database",
+    "objectbox"
+  ],
+  "tags": [
+    "embedded",
+    "time-series",
+    "rtos",
+    "edge-ai",
+    "iot"
+  ],
+  "links": {
+    "website": "https://www.ittia.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "ITTIA DB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.ittia.com/",
+    "https://sdtimes.com/ittia-db-sql-5-5-integrates-with-many-popular-development-frameworks/",
+    "https://www.automation.com/article/ittia-launches-db-sql-engine-for-embedded-systems"
+  ],
+  "lastVerified": "2026-10-27"
+}

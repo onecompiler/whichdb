@@ -1,0 +1,168 @@
+{
+  "slug": "idms",
+  "name": "IDMS",
+  "aliases": [
+    "CA IDMS",
+    "Broadcom IDMS",
+    "Integrated Database Management System"
+  ],
+  "tagline": "CODASYL network-model mainframe database, now Broadcom's, still running decades-old COBOL systems.",
+  "description": "IDMS is a network-model (CODASYL) database: records are linked by owner-member 'sets' and programs navigate them with explicit FIND/OBTAIN calls, which makes known access paths very fast. Originally developed at B.F. Goodrich and commercialised by Cullinane in the 1970s, it passed to Computer Associates and then to Broadcom with the 2018 CA acquisition. It runs on z/OS with the IDMS-DC transaction monitor and also offers a SQL option, web services and modern tooling. Broadcom delivers enhancements to release 19.0 incrementally rather than shipping new major versions. Like IMS it is reliable but mainframe-only, with a shrinking skills base.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "navigational",
+  "models": [
+    "navigational",
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "shared-storage"
+  ],
+  "developer": "Broadcom (originally Cullinane, Computer Associates)",
+  "vendorType": "company",
+  "initialRelease": 1973,
+  "writtenIn": [
+    "Assembly"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Mainframe software licensing through Broadcom portfolio agreements."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Data sharing across Parallel Sysplex members; DR via mainframe replication."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "DML (navigational)",
+    "SQL (IDMS SQL option)",
+    "ADS/Online"
+  ],
+  "apis": [
+    "IDMS DML",
+    "IDMS Server (ODBC/JDBC)",
+    "Web services"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "COBOL",
+    "PL/I",
+    "Assembly",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Owner-member sets make known navigation paths extremely fast",
+    "Proven reliability in long-running mainframe systems",
+    "SQL option and ODBC/JDBC server allow relational access to network data",
+    "Broadcom continues to ship incremental features on release 19.0"
+  ],
+  "weaknesses": [
+    "Mainframe-only and expensive to operate",
+    "Navigational programming couples applications tightly to the physical schema",
+    "Very small, ageing skills pool"
+  ],
+  "useCases": [
+    "Government and utility billing systems on z/OS",
+    "Manufacturing and distribution systems built in the 1980s",
+    "Exposing legacy IDMS data via SQL and web services during migration"
+  ],
+  "notIdealFor": [
+    "Any new application",
+    "Non-mainframe environments",
+    "Analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-ims",
+    "adabas",
+    "ibm-db2",
+    "raima-database-manager"
+  ],
+  "tags": [
+    "mainframe",
+    "codasyl",
+    "network-model",
+    "cobol",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.broadcom.com/products/mainframe/databases/idms",
+    "docs": "https://techdocs.broadcom.com/us/en/ca-mainframe-software/database-management/ca-idms/19-0.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/IDMS"
+  },
+  "ids": {
+    "wikipedia": "IDMS",
+    "hackerNewsQuery": "CA IDMS"
+  },
+  "brand": {
+    "color": "#CC092F",
+    "simpleIcon": "broadcom"
+  },
+  "sources": [
+    "https://knowledge.broadcom.com/external/article/16281/idms-release-20.html",
+    "https://techdocs.broadcom.com/us/en/ca-mainframe-software/database-management/ca-idms/19-0.html",
+    "https://en.wikipedia.org/wiki/IDMS"
+  ],
+  "lastVerified": "2026-10-27"
+}

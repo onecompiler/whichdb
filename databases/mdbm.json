@@ -1,0 +1,166 @@
+{
+  "slug": "mdbm",
+  "name": "MDBM",
+  "aliases": [
+    "Yahoo MDBM"
+  ],
+  "tagline": "Yahoo's memory-mapped, zero-copy key-value library, a heavily tuned descendant of SGI's DBM.",
+  "description": "MDBM is a C/C++ key-value library that keeps its hash table in a memory-mapped file, so reads can hand back pointers straight into the mapping without copying. Yahoo ran it in production for more than a decade before open-sourcing it under the BSD license in 2014; it descends from Larry McVoy's SGI rewrite of sdbm and adds performance work, multiple locking modes, large-object support, command-line tools, tests and thorough documentation. It suits read-mostly lookup data shared by many processes on one host. The last tagged release is v4.13.0 (December 2018); since then only the original maintainer's fork has seen occasional fixes, so treat it as maintenance-only.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Last release v4.13.0 (Dec 2018); the Yahoo repo is idle and only the maintainer's fork (timrc-git/mdbm) saw fixes through 2023.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Yahoo",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "4.13.0",
+    "date": "2018-12-06"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "sdbm",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-host, file-backed hash; sized by available address space and page cache."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "C API",
+    "C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-copy reads directly from the memory-mapped file",
+    "Shared safely by many processes on one host via its locking modes",
+    "Over a decade of production use at Yahoo before open-sourcing",
+    "Unusually complete documentation and CLI tooling for a KV library"
+  ],
+  "weaknesses": [
+    "No transactions or crash-consistent multi-key updates",
+    "Upstream repository idle since 2018",
+    "Single-host only; no replication or network protocol"
+  ],
+  "useCases": [
+    "Read-heavy lookup tables shared across worker processes",
+    "Local caches of configuration or ad/serving metadata",
+    "Replacing ndbm/gdbm in C and C++ services"
+  ],
+  "notIdealFor": [
+    "Workloads needing transactions or durability guarantees",
+    "Distributed or replicated data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "libmdbx",
+    "berkeley-db",
+    "kyoto-cabinet"
+  ],
+  "tags": [
+    "key-value",
+    "embedded",
+    "mmap",
+    "dbm-family",
+    "yahoo"
+  ],
+  "links": {
+    "website": "https://github.com/yahoo/mdbm",
+    "docs": "http://yahoo.github.io/mdbm/",
+    "repository": "https://github.com/yahoo/mdbm"
+  },
+  "ids": {
+    "github": "yahoo/mdbm",
+    "hackerNewsQuery": "MDBM"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/yahoo/mdbm",
+    "https://github.com/timrc-git/mdbm",
+    "http://yahoo.github.io/mdbm/",
+    "https://dbdb.io/db/mdbm"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,160 @@
+{
+  "slug": "objectstore",
+  "name": "ObjectStore",
+  "aliases": [
+    "ObjectStore AI",
+    "Progress ObjectStore"
+  ],
+  "tagline": "Pioneering C++/Java object database that maps persistent objects into virtual memory; now sold by IgniteTech.",
+  "description": "ObjectStore is a commercial object database created in 1988 by Object Design, Inc., a company founded by former Symbolics engineers including Dan Weinreb. Its signature idea is transparent persistence for C++: objects are allocated in the database through an overloaded operator new, database pages are memory-mapped on demand when a pointer is first dereferenced, and pointers are swizzled so the same database works across platforms, making persistent objects behave like ordinary in-memory ones; Java support followed later. Progress Software acquired the product in 2002, and in 2013 it moved to an ESW Capital company; today IgniteTech sells and supports it as 'ObjectStore AI'. It still runs inside long-lived telecom, finance, travel and GIS systems, but it is a legacy choice for new projects.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Sold and supported by IgniteTech (ESW Capital) since Progress divested it in 2013; no public roadmap or recent release notes.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded"
+  ],
+  "developer": "IgniteTech (originally Object Design, Inc.)",
+  "vendorType": "company",
+  "initialRelease": 1988,
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (IgniteTech)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C++ API",
+    "Java API"
+  ],
+  "apis": [
+    "C++ API",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Persistent C++ objects behave like ordinary in-memory objects",
+    "Page-level memory mapping makes pointer navigation extremely fast",
+    "Decades of production use in telecom, finance and GIS"
+  ],
+  "weaknesses": [
+    "Closed, expensive and owned by a vendor focused on maintaining legacy software",
+    "Tight coupling between application classes and the database schema",
+    "Small and shrinking pool of developers who know it"
+  ],
+  "useCases": [
+    "Maintaining existing C++ or Java systems built on ObjectStore",
+    "Navigation-heavy object graphs where pointer chasing dominates"
+  ],
+  "notIdealFor": [
+    "New applications",
+    "SQL or ad-hoc analytics",
+    "Cloud-native deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "versant-object-database",
+    "objectivity-db",
+    "gemstone-s",
+    "objectdb",
+    "db4o"
+  ],
+  "tags": [
+    "object-database",
+    "c++",
+    "java",
+    "legacy",
+    "ignitetech"
+  ],
+  "links": {
+    "website": "https://ignitetech.ai/software-library/objectstore/",
+    "wikipedia": "https://en.wikipedia.org/wiki/ObjectStore"
+  },
+  "ids": {
+    "wikipedia": "ObjectStore",
+    "hackerNewsQuery": "ObjectStore database"
+  },
+  "brand": {},
+  "sources": [
+    "https://ignitetech.ai/software-library/objectstore/",
+    "https://en.wikipedia.org/wiki/ObjectStore",
+    "https://dbdb.io/db/objectstore"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,148 @@
+{
+  "slug": "beagle-sql",
+  "name": "Beagle SQL",
+  "aliases": [
+    "BeagleSQL",
+    "Beagle"
+  ],
+  "tagline": "Hobbyist 1990s client/server SQL database in C with its own B-tree storage; abandoned by 1999.",
+  "description": "Beagle SQL was a free client/server relational database written in C by Robert Klein, with Jean-Claude Magras, starting in 1996, at a time when MySQL and PostgreSQL were still young and free SQL servers were scarce. The source shows a TCP server daemon, a yacc/lex SQL parser, its own B-tree storage layer, password authentication with SHA-1 and an interactive SQL client. Its licence allowed free use and modification, but commercial redistribution required the author's written permission, so it was source-available rather than open source in today's sense. Development stopped by the end of the decade; the code survives in a 2018 GitHub mirror of historical open-source databases.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Abandoned in the late 1990s; only a historical source mirror remains (GitHub, 2018).",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Robert Klein and Jean-Claude Magras",
+  "vendorType": "community",
+  "initialRelease": 1996,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Custom licence (free use; commercial redistribution needs permission)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset)"
+  ],
+  "apis": [
+    "Custom TCP protocol",
+    "C client library"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Compact, readable C implementation of a complete small SQL server",
+    "Useful snapshot of 1990s free database engineering"
+  ],
+  "weaknesses": [
+    "Abandoned for over 25 years",
+    "Only a subset of SQL and no modern security",
+    "Non-standard licence restricts commercial redistribution"
+  ],
+  "useCases": [
+    "Studying how early free SQL servers were built",
+    "Database history and teaching"
+  ],
+  "notIdealFor": [
+    "Any production or new development"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "sqlite",
+    "mysql",
+    "firebird"
+  ],
+  "tags": [
+    "sql",
+    "historical",
+    "1990s",
+    "c"
+  ],
+  "links": {
+    "website": "https://github.com/jonahharris/osdb-beaglesql",
+    "repository": "https://github.com/jonahharris/osdb-beaglesql"
+  },
+  "ids": {
+    "github": "jonahharris/osdb-beaglesql"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/jonahharris/osdb-beaglesql",
+    "https://github.com/jonahharris/osdb-beaglesql/blob/master/src/beagle.h",
+    "https://dbdb.io/db/beagle-sql"
+  ],
+  "lastVerified": "2026-10-27"
+}

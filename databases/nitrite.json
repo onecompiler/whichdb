@@ -1,0 +1,171 @@
+{
+  "slug": "nitrite",
+  "name": "Nitrite",
+  "aliases": [
+    "Nitrite Database",
+    "NO2"
+  ],
+  "tagline": "Embedded NoSQL document store for Java and Android with pluggable MVStore or RocksDB storage.",
+  "description": "Nitrite is an embedded, serverless document database for the JVM and Android, with a MongoDB-like API for collections of documents plus an object repository layer for plain Java and Kotlin objects. Storage is pluggable, using H2's MVStore or RocksDB, or pure in-memory. Version 4 rewrote the engine with transactions, and first-party modules add full-text indexes and spatial queries. The 4.x/5.x lines are actively released (5.4.2 in October 2026), and there is a separate Dart/Flutter port. It is a good fit for desktop and mobile JVM apps that want document storage without an external server.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value",
+    "spatial"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline",
+    "configuration"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Nitrite project (Anindya Chatterjee)",
+  "vendorType": "community",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "5.4.2",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Java",
+    "Kotlin"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Nitrite filter API (Java/Kotlin)"
+  ],
+  "apis": [
+    "Java API",
+    "Kotlin extensions"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Kotlin",
+    "Dart"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure JVM, so it embeds anywhere Java or Kotlin runs, including Android",
+    "Choice of MVStore or RocksDB storage, or in-memory",
+    "Document collections and typed object repositories in one API",
+    "Built-in full-text and spatial indexing modules"
+  ],
+  "weaknesses": [
+    "Small community with a single core maintainer",
+    "No replication or sync to a server",
+    "Breaking changes between major versions (3 to 4 to 5)"
+  ],
+  "useCases": [
+    "Desktop Java apps needing local document storage",
+    "Android apps preferring a document API over SQLite",
+    "Test fixtures and caches in JVM services"
+  ],
+  "notIdealFor": [
+    "Multi-process or server workloads",
+    "Large datasets with concurrent writers"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "objectbox",
+    "realm",
+    "couchbase-lite",
+    "h2",
+    "ejdb",
+    "litedb"
+  ],
+  "tags": [
+    "embedded",
+    "java",
+    "android",
+    "document"
+  ],
+  "links": {
+    "website": "https://nitrite.dizitart.com/",
+    "docs": "https://nitrite.dizitart.com/java-sdk/getting-started/",
+    "repository": "https://github.com/nitrite/nitrite-java",
+    "changelog": "https://github.com/nitrite/nitrite-java/releases"
+  },
+  "ids": {
+    "github": "nitrite/nitrite-java",
+    "hackerNewsQuery": "Nitrite database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/nitrite/nitrite-java",
+    "https://github.com/nitrite/nitrite-java/releases/tag/v5.4.2",
+    "https://nitrite.dizitart.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

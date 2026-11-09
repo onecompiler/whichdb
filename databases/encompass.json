@@ -1,0 +1,109 @@
+{
+  "slug": "encompass",
+  "name": "Encompass",
+  "aliases": ["ENCOMPASS", "Tandem ENCOMPASS"],
+  "tagline": "Tandem's early-1980s fault-tolerant distributed database system, the predecessor of NonStop SQL.",
+  "description": "ENCOMPASS was Tandem Computers' distributed database management system for its fault-tolerant NonStop machines, documented in Tandem technical reports from 1981. It was a suite rather than a single engine: the ENSCRIBE record manager (key-sequenced, relative and entry-sequenced files with alternate keys), the TMF Transaction Monitoring Facility for atomic transactions with audit trails across nodes of an EXPAND network, the PATHWAY transaction-processing monitor, a data dictionary, and ENFORM, a relational query and report language over ENSCRIBE files. That stack ran many 1980s ATM, banking and stock-exchange systems. Tandem replaced the relational layer with NonStop SQL in 1987, but Enscribe, TMF and Pathway survive in today's HPE NonStop platform.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Superseded by NonStop SQL (1987). Its components Enscribe, TMF and Pathway still ship on HPE NonStop; use HPE NonStop SQL for new work.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational", "hierarchical"],
+  "workloads": ["oltp"],
+  "architecture": ["distributed", "client-server"],
+  "developer": "Tandem Computers, Inc.",
+  "vendorType": "company",
+  "initialRelease": 1981,
+  "writtenIn": ["TAL (Transaction Application Language)"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["enterprise-contract"],
+    "freeTier": false,
+    "notes": "Sold with Tandem NonStop systems; no longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["mainframe"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Files could be partitioned across processors and EXPAND network nodes, with TMF coordinating distributed transactions."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["ENFORM", "DDL"],
+  "apis": ["ENSCRIBE file system calls", "PATHWAY / SCREEN COBOL"],
+  "compatibleWith": [],
+  "drivers": ["COBOL", "TAL", "FORTRAN"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fault-tolerant, distributed transactions (TMF) years before most databases had them",
+    "Data partitioned across processors and network nodes, transparent to applications",
+    "Proven in 1980s banking, ATM and exchange workloads",
+    "Core pieces (Enscribe, TMF, Pathway) are still supported on HPE NonStop"
+  ],
+  "weaknesses": [
+    "Tied to Tandem/NonStop hardware and its proprietary toolchain",
+    "ENFORM was a query/report language, not full SQL; replaced by NonStop SQL",
+    "Historical documentation is mostly scanned manuals and technical reports"
+  ],
+  "useCases": [
+    "Studying early distributed transaction processing",
+    "Understanding the lineage of HPE NonStop SQL",
+    "Maintaining legacy Enscribe/Pathway applications"
+  ],
+  "notIdealFor": ["New application development", "Non-NonStop platforms"],
+  "notableUsers": [],
+  "alternatives": ["hpe-nonstop-sql", "ibm-ims", "ibm-db2", "trafodion"],
+  "tags": ["tandem", "nonstop", "fault-tolerant", "oltp", "historical"],
+  "links": {
+    "website": "https://bitsavers.org/pdf/tandem/technical_reports/",
+    "docs": "https://bitsavers.org/pdf/tandem/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://bitsavers.org/pdf/tandem/technical_reports/TR81-02_Transaction_Monitoring_in_ENCOMPASS_Jun81.pdf",
+    "https://bitsavers.org/pdf/tandem/technical_reports/TR81-05_Relational_Data_Base_Management_For_On-Line_Transaction_Processing_Feb81.pdf",
+    "https://en.wikipedia.org/wiki/Tandem_Computers",
+    "https://en.wikipedia.org/wiki/Enscribe",
+    "https://dbdb.io/db/encompass"
+  ],
+  "lastVerified": "2026-10-27"
+}

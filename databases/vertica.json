@@ -1,0 +1,193 @@
+{
+  "slug": "vertica",
+  "name": "Vertica",
+  "aliases": [
+    "OpenText Vertica",
+    "OpenText Analytics Database",
+    "HP Vertica"
+  ],
+  "tagline": "Veteran MPP columnar analytics database from the C-Store lineage, now owned by Rocket Software.",
+  "description": "Vertica is a column-store MPP database that grew out of Michael Stonebraker's C-Store research in 2005, passing through HP, Micro Focus and OpenText before Rocket Software bought it in May 2026. It stores data as sorted, encoded projections and runs either in Enterprise mode on local disks or Eon mode with storage on S3-compatible object stores and elastic subclusters. Built-in time-series, geospatial, in-database ML, Kafka ingestion and querying of external Parquet make it a capable all-rounder for large on-prem or hybrid estates. Licensing cost and yet another ownership change are the main concerns.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "OpenText sold Vertica to Rocket Software (a Bain Capital company); the deal closed 11 May 2026.",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "time-series",
+    "spatial",
+    "document"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "real-time-analytics",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Rocket Software",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "26.3",
+    "date": "2026"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free Community Edition up to 1 TB)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Licensed by raw data volume or subscription; a free Community Edition is limited to 3 nodes and 1 TB."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shared-nothing Enterprise mode or Eon mode with subclusters over object storage; multi-PB deployments documented."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/vSQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "ADO.NET",
+    "vsql CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    ".NET",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Mature columnar MPP engine with aggressive encoding and compression",
+    "Eon mode separates compute and storage with elastic subclusters",
+    "Built-in time-series gap filling, geospatial and in-database ML",
+    "Native Kafka ingestion and external Parquet/ORC tables",
+    "Runs on-prem, in any cloud or on Kubernetes"
+  ],
+  "weaknesses": [
+    "Expensive licensing based on data volume",
+    "Repeated ownership changes (HP, Micro Focus, OpenText, Rocket) create roadmap risk",
+    "Projection design and tuning require specialist skills",
+    "Shrinking mindshare versus cloud warehouses"
+  ],
+  "useCases": [
+    "Large on-prem or hybrid enterprise warehouses",
+    "Telecom and IoT analytics",
+    "Time-series analytics with SQL",
+    "Embedded analytics in software products"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Small teams wanting a serverless SaaS",
+    "Budget-constrained projects"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "snowflake",
+    "greenplum",
+    "yellowbrick",
+    "exasol",
+    "clickhouse",
+    "teradata-vantage"
+  ],
+  "tags": [
+    "mpp",
+    "columnar",
+    "enterprise",
+    "on-prem",
+    "hybrid"
+  ],
+  "links": {
+    "website": "https://www.vertica.com/",
+    "docs": "https://docs.vertica.com/latest/en/",
+    "changelog": "https://docs.rocketsoftware.com/bundle/vertica_26.3/page/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Vertica"
+  },
+  "ids": {
+    "stackoverflowTag": "vertica",
+    "wikipedia": "Vertica",
+    "pypi": "vertica-python",
+    "npm": "vertica-nodejs",
+    "hackerNewsQuery": "Vertica"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.rocketsoftware.com/news/rocket-software-completes-acquisition-vertica",
+    "https://docs.vertica.com/latest/en/",
+    "https://www.opentext.com/about/press-releases/opentext-to-divest-vertica-for-us150-million",
+    "https://en.wikipedia.org/wiki/Vertica"
+  ],
+  "lastVerified": "2026-10-27"
+}

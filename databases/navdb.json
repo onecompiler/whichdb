@@ -1,0 +1,146 @@
+{
+  "slug": "navdb",
+  "name": "NavDB",
+  "aliases": [
+    "Navigator Database"
+  ],
+  "tagline": "Short-lived (2017–2019) multithreaded in-memory key-value server from South Africa's Navigator Data.",
+  "description": "NavDB was an in-memory key-value database server from Navigator Data, a small South African company, announced in 2017 as the first step toward a multi-model database. It offered a multithreaded server for Linux, macOS and Windows with open-source client libraries, and its developers were working on an experimental relational layer with SQL access. The website went quiet in 2019 and the company's GitHub repositories have since been removed, so no code or binaries are publicly available. It is listed for completeness only; Redis, Valkey or Dragonfly cover the same ground.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Website abandoned in 2019 and GitHub repositories removed; nothing is downloadable. Use Redis, Valkey or Dragonfly.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching"
+  ],
+  "architecture": [
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Navigator Data",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary server; open-source client libraries"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Pricing was never clearly published; no build is available today."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "TCP client protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "PHP",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Multithreaded in-memory server design",
+    "Cross-platform builds for Linux, macOS and Windows"
+  ],
+  "weaknesses": [
+    "Abandoned in 2019 with no surviving code or binaries",
+    "Relational layer never left the experimental stage"
+  ],
+  "useCases": [
+    "Historical record of small in-memory KV servers",
+    "Context when migrating an old NavDB deployment"
+  ],
+  "notIdealFor": [
+    "Any deployment: the software is unavailable"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "dragonfly",
+    "memcached"
+  ],
+  "tags": [
+    "key-value",
+    "in-memory",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20190318071134/https://navdb.io/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/20190318071134/https://navdb.io/",
+    "https://dbdb.io/db/navdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,184 @@
+{
+  "slug": "vector",
+  "name": "Actian Analytics Engine (Vector)",
+  "aliases": [
+    "Actian Vector",
+    "Vector",
+    "Vectorwise",
+    "VectorWise",
+    "Actian Analytics Engine"
+  ],
+  "tagline": "Actian's vectorized columnar analytics database, born from CWI's X100; renamed Analytics Engine in 2026.",
+  "description": "Actian Vector, now sold as Actian Analytics Engine, is a columnar SQL database for analytics that grew out of the X100 research project at CWI Amsterdam. Its engine processes data in cache-sized vectors with SIMD instead of a row at a time, reads compressed column storage, and handles trickle updates with Positional Delta Trees, behind the Ingres SQL front end and tools; it held TPC-H records on single servers in the 2010s. Vectorwise launched in 2010, Ingres/Actian bought it in 2011 and HCL now owns Actian. Version 8.0 (July 2026) brought the rename plus vector search, ONNX in-database inference, an MCP server and Iceberg/Delta Lake reads.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "vector"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse",
+    "real-time-analytics",
+    "vector-search"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Actian (HCLSoftware)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "8.0",
+    "date": "2026-07-31"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "CWI X100 engine with the Ingres SQL front end",
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Commercial licences; a free Community Edition has been offered; the managed service is the Actian Analytics AI Platform."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Actian Analytics AI Platform",
+      "provider": "Actian"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "MPP clusters with separated storage and compute; strongest per-node efficiency on commodity servers."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    ".NET",
+    "Python SDK",
+    "MCP server"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C",
+    "C#",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Vectorized, cache-conscious execution that set single-node TPC-H records",
+    "Positional Delta Trees allow updates without wrecking scan performance",
+    "Runs fully on-premises or air-gapped as well as in Actian's cloud",
+    "2026 release adds native vector search, ONNX inference and Iceberg/Delta Lake access"
+  ],
+  "weaknesses": [
+    "Proprietary with a smaller community than Snowflake, ClickHouse or Redshift",
+    "Rebrands (Vectorwise, Vector, Avalanche, Analytics Engine) make docs and resources hard to follow",
+    "Ingres heritage shows in tooling and SQL dialect quirks"
+  ],
+  "useCases": [
+    "Enterprise data warehouses and data marts",
+    "Sub-second BI dashboards on large fact tables",
+    "On-prem analytics where data cannot leave the site",
+    "Replacing ageing Netezza-class appliances"
+  ],
+  "notIdealFor": [
+    "High-concurrency OLTP",
+    "Teams wanting open-source licensing"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "vertica",
+    "exasol",
+    "snowflake",
+    "duckdb",
+    "monetdb"
+  ],
+  "tags": [
+    "columnar",
+    "analytics",
+    "vectorized",
+    "actian",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.actian.com/databases/analytics-engine/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Actian_Vector"
+  },
+  "ids": {
+    "wikipedia": "Actian Vector",
+    "hackerNewsQuery": "Actian Vector"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.actian.com/databases/analytics-engine/",
+    "https://www.actian.com/blog/product-launches/actian-analytics-engine-8-0-data-lake-enabled-and-ai-ready/",
+    "https://en.wikipedia.org/wiki/Actian_Vector"
+  ],
+  "lastVerified": "2026-10-27"
+}

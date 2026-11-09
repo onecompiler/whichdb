@@ -1,0 +1,210 @@
+{
+  "slug": "postgis",
+  "name": "PostGIS",
+  "aliases": [
+    "PostGIS extension"
+  ],
+  "tagline": "The standard spatial extension for PostgreSQL: geometry, geography, rasters and topology in SQL.",
+  "description": "PostGIS turns PostgreSQL into a full spatial database. It adds geometry and geography types, hundreds of OGC/ISO SQL/MM functions (ST_Intersects, ST_Buffer, ST_DWithin and so on), GiST and SP-GiST spatial indexing, raster support, topology, 3D and routing via pgRouting, all usable alongside ordinary relational data and transactions. Built on GEOS, PROJ and GDAL, it is the reference open-source GIS backend and is available on nearly every managed Postgres service. The 3.7 release was in release-candidate stage in October 2026, with 3.6.x the current stable line.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "spatial",
+  "models": [
+    "spatial",
+    "relational"
+  ],
+  "workloads": [
+    "geospatial",
+    "oltp",
+    "olap"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "PostGIS Project Steering Committee (OSGeo)",
+  "vendorType": "foundation",
+  "initialRelease": 2001,
+  "latestVersion": {
+    "version": "3.6.4",
+    "date": "2026-06-08"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2.0",
+    "spdx": "GPL-2.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; preinstalled or available on almost every managed PostgreSQL service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "digitalocean",
+      "aiven",
+      "heroku",
+      "render",
+      "railway"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon RDS for PostgreSQL (PostGIS)",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/rds/postgresql/"
+    },
+    {
+      "name": "Cloud SQL for PostgreSQL (PostGIS)",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/sql/postgresql"
+    },
+    {
+      "name": "Supabase",
+      "provider": "Supabase",
+      "url": "https://supabase.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Scales like the host PostgreSQL; Citus can distribute spatial tables."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "C#",
+    "Ruby",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Richest open-source spatial SQL function library",
+    "Spatial and relational data join in one transactional database",
+    "GiST/SP-GiST/BRIN spatial indexing for fast proximity queries",
+    "Universal support across managed Postgres providers and GIS tools (QGIS, GeoServer)"
+  ],
+  "weaknesses": [
+    "GPL licence (extension only; does not affect your app's SQL)",
+    "Heavy spatial joins can be CPU-bound on a single node",
+    "Upgrading PostGIS alongside major Postgres versions needs care"
+  ],
+  "useCases": [
+    "Store locators and proximity search",
+    "Fleet tracking and logistics routing",
+    "Land, utility and municipal GIS",
+    "Vector tile generation for web maps"
+  ],
+  "notIdealFor": [
+    "Planet-scale raster analytics (use array or lakehouse engines)",
+    "Non-Postgres stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "rasdaman",
+    "tiledb",
+    "kinetica",
+    "duckdb",
+    "sql-server"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "gis",
+    "spatial",
+    "osgeo",
+    "extension"
+  ],
+  "links": {
+    "website": "https://postgis.net/",
+    "docs": "https://postgis.net/documentation/",
+    "repository": "https://github.com/postgis/postgis",
+    "changelog": "https://postgis.net/news/",
+    "wikipedia": "https://en.wikipedia.org/wiki/PostGIS"
+  },
+  "ids": {
+    "github": "postgis/postgis",
+    "stackoverflowTag": "postgis",
+    "wikipedia": "PostGIS",
+    "dockerHub": "postgis/postgis",
+    "hackerNewsQuery": "PostGIS"
+  },
+  "brand": {},
+  "sources": [
+    "https://postgis.net/news/",
+    "https://download.osgeo.org/postgis/source/",
+    "https://github.com/postgis/postgis"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,170 @@
+{
+  "slug": "rdb-vms",
+  "name": "Oracle Rdb",
+  "aliases": [
+    "Rdb/VMS",
+    "VAX Rdb/VMS",
+    "DEC Rdb",
+    "Rdb"
+  ],
+  "tagline": "DEC's relational database for OpenVMS, owned by Oracle since 1994 and still updated on Alpha and Itanium.",
+  "description": "Oracle Rdb is the relational database Digital Equipment Corporation shipped in 1984 as VAX Rdb/VMS, and which Oracle bought in 1994. It runs only on OpenVMS, sits on the KODA storage kernel it shares with Oracle CODASYL DBMS, and is accessed through SQL, the older RDO language, precompilers or the SQL module language from COBOL, BASIC, Fortran and C programs. Rdb was known for one of the earliest cost-based optimizers and remains the standard upgrade path for OpenVMS applications built on RMS files. Despite a 2011 statement that 7.3 would be the last major version, Oracle keeps shipping 7.4.x updates: 7.4.1.5 arrived in January 2026 for OpenVMS on Alpha and Integrity (IA-64) servers, while an announced port to x86-64 OpenVMS has not appeared in current documentation.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Still developed and supported by Oracle for OpenVMS Alpha and Itanium (7.4.1.5, January 2026); there is no confirmed x86-64 OpenVMS release.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "Oracle Corporation (originally Digital Equipment Corporation)",
+  "vendorType": "company",
+  "initialRelease": 1984,
+  "latestVersion": {
+    "version": "7.4.1.5",
+    "date": "2026-01"
+  },
+  "writtenIn": [
+    "BLISS"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Oracle proprietary license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensed through Oracle with support contracts; pricing via Oracle sales."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales within OpenVMS clusters sharing the same disks; no sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "RDO (Relational Database Operator)"
+  ],
+  "apis": [
+    "SQL precompilers",
+    "SQL module language",
+    "Dynamic SQL (SQLDA)",
+    "ODBC/JDBC via Oracle SQL/Services"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "COBOL",
+    "C",
+    "BASIC",
+    "Fortran",
+    "Pascal"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Four decades of stability in mission-critical OpenVMS shops",
+    "Natural upgrade path from RMS files for COBOL and BASIC applications",
+    "Runs across OpenVMS clusters with shared-disk access",
+    "Still receiving Oracle maintenance releases in 2026",
+    "Early pioneer of cost-based query optimisation"
+  ],
+  "weaknesses": [
+    "OpenVMS-only, and not yet available on x86-64 OpenVMS",
+    "Expensive licensing and a shrinking pool of skilled staff",
+    "Tied to ageing Alpha and Itanium hardware"
+  ],
+  "useCases": [
+    "Running existing OpenVMS line-of-business systems",
+    "Banking, manufacturing and government applications on OpenVMS clusters",
+    "Modernising RMS-file applications without leaving OpenVMS"
+  ],
+  "notIdealFor": [
+    "Any new platform choice outside OpenVMS",
+    "Cloud-native or containerised deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-database",
+    "postgresql",
+    "ibm-db2"
+  ],
+  "tags": [
+    "openvms",
+    "dec",
+    "oracle",
+    "legacy",
+    "mission-critical"
+  ],
+  "links": {
+    "website": "https://www.oracle.com/database/technologies/related/rdb.html",
+    "docs": "https://www.oracle.com/a/ocom/docs/database/rdb07415-new-features.pdf",
+    "wikipedia": "https://en.wikipedia.org/wiki/Oracle_Rdb"
+  },
+  "ids": {
+    "wikipedia": "Oracle Rdb",
+    "hackerNewsQuery": "Oracle Rdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.oracle.com/database/technologies/related/rdb.html",
+    "https://www.oracle.com/a/ocom/docs/database/rdb07415-new-features.pdf",
+    "https://www.oracle.com/a/tech/docs/documentation/rdb07414-release-notes.pdf",
+    "https://en.wikipedia.org/wiki/Oracle_Rdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

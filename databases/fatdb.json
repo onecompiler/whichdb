@@ -1,0 +1,102 @@
+{
+  "slug": "fatdb",
+  "name": "FatDB",
+  "aliases": ["FatCloud FatDB"],
+  "tagline": "Short-lived .NET NoSQL store from FatCloud that sat alongside SQL Server; the company closed in 2014.",
+  "description": "FatDB was a commercial distributed NoSQL database for Windows and .NET, released by FatCloud in 2012. It stored schema-free documents and key-value data across a cluster of Windows nodes with sharding and a configurable replication factor, and it was pitched as a way to extend existing Microsoft SQL Server applications rather than replace them. Developers worked in C# through a .NET client API with LINQ, a RESTful HTTP API or WCF RPC, and could run map/reduce jobs and server-side logic written as .NET code. There was no SQL interface of its own, no multi-record transactions and only application-level security. FatCloud ceased operations in February 2014 and the product disappeared with it.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "FatCloud ceased operations in February 2014 and FatDB was discontinued. RavenDB or Azure Cosmos DB serve the .NET NoSQL niche today.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": ["document", "key-value"],
+  "workloads": ["oltp", "caching"],
+  "architecture": ["distributed", "in-memory"],
+  "developer": "FatCloud, LLC",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": ["C#"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["per-node-license"],
+    "freeTier": false,
+    "notes": "Commercial licence; the exact pricing terms have not survived. No longer sold."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Sharded across Windows nodes with a selectable replication factor."
+  },
+  "consistency": { "acid": "none", "models": ["eventual", "strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["LINQ"],
+  "apis": [".NET client API", "REST/HTTP", "WCF"],
+  "compatibleWith": [],
+  "drivers": ["C#"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native .NET experience: LINQ queries and C# map/reduce",
+    "Designed to sit beside SQL Server rather than replace it",
+    "Sharding and replication on plain Windows servers"
+  ],
+  "weaknesses": [
+    "Vendor closed in 2014; no binaries, support or documentation remain",
+    "Windows-only, with no SQL, transactions or built-in access control"
+  ],
+  "useCases": [
+    "Historical reference for .NET-native NoSQL designs",
+    "Context for legacy systems that once depended on FatDB"
+  ],
+  "notIdealFor": ["Any current deployment"],
+  "notableUsers": [],
+  "alternatives": ["ravendb", "azure-cosmos-db", "couchbase", "ncache", "mongodb"],
+  "tags": ["dotnet", "nosql", "windows", "discontinued"],
+  "links": {
+    "website": "https://db-engines.com/en/system/FatDB"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://db-engines.com/en/system/FatDB",
+    "https://dbdb.io/db/fatdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

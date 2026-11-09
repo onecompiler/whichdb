@@ -1,0 +1,195 @@
+{
+  "slug": "extremedb",
+  "name": "eXtremeDB",
+  "aliases": [
+    "eXtremeDB/rt",
+    "eXtremeSQL"
+  ],
+  "tagline": "Embedded in-memory and hybrid database for devices, real-time systems and time-series analytics.",
+  "description": "eXtremeDB from McObject is a small-footprint embedded database that runs in-process on everything from microcontrollers and real-time operating systems to large servers, with in-memory, persistent or hybrid storage per table. Beyond classic embedded use in telecom, aerospace and industrial control, it offers columnar \"sequences\" for time-series analytics, which made it popular for market data in its Financial Edition, along with SQL, clustering and high availability. The eXtremeDB/rt variant targets hard real-time systems with deadline-aware transactions. Version 9.0 (July 2026) added native approximate-nearest-neighbour indexes and an ultra-lightweight edge client. It is proprietary and licensed per product.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "relational",
+    "time-series",
+    "columnar",
+    "vector"
+  ],
+  "workloads": [
+    "embedded",
+    "edge",
+    "time-series",
+    "financial-tick-data",
+    "iot",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory",
+    "client-server",
+    "distributed"
+  ],
+  "developer": "McObject",
+  "vendorType": "company",
+  "initialRelease": 2001,
+  "latestVersion": {
+    "version": "9.0",
+    "date": "2026-07-15"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (per-product licensing)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensed per product or deployment; free 60-day evaluation."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Usually embedded on one device; Cluster and HA editions replicate across nodes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (eXtremeSQL)",
+    "Native C/C++ API"
+  ],
+  "apis": [
+    "C/C++ API",
+    "ODBC",
+    "JDBC",
+    "Python",
+    "Java",
+    "C#"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "Python",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs embedded on RTOS and microcontrollers with a very small footprint",
+    "Hard real-time edition with deadline-aware transactions",
+    "Columnar sequences give fast time-series analytics in-process",
+    "Mix of in-memory and persistent tables in one database",
+    "Long track record in telecom, aerospace and industrial control"
+  ],
+  "weaknesses": [
+    "Proprietary with opaque, per-product pricing",
+    "Small developer community and few public tutorials",
+    "Not a drop-in for mainstream SQL tooling",
+    "Distributed features are secondary to its embedded focus"
+  ],
+  "useCases": [
+    "Embedded databases in network equipment",
+    "Avionics and defence systems",
+    "Industrial controllers and edge gateways",
+    "In-process market data analytics",
+    "Real-time systems needing deterministic latency"
+  ],
+  "notIdealFor": [
+    "Web application backends",
+    "Open-source-only projects",
+    "Large-scale observability"
+  ],
+  "notableUsers": [
+    "TradeStation",
+    "F5",
+    "Schneider Electric",
+    "Boeing"
+  ],
+  "alternatives": [
+    "sqlite",
+    "rocksdb",
+    "lmdb",
+    "kdb-plus",
+    "griddb",
+    "questdb"
+  ],
+  "tags": [
+    "embedded",
+    "in-memory",
+    "real-time",
+    "time-series",
+    "proprietary"
+  ],
+  "links": {
+    "website": "https://www.mcobject.com/",
+    "docs": "https://www.mcobject.com/docs/",
+    "wikipedia": "https://en.wikipedia.org/wiki/EXtremeDB"
+  },
+  "ids": {
+    "wikipedia": "EXtremeDB",
+    "hackerNewsQuery": "eXtremeDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.mcobject.com/press/",
+    "https://www.mcobject.com/",
+    "https://en.wikipedia.org/wiki/EXtremeDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

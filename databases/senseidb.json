@@ -1,0 +1,166 @@
+{
+  "slug": "senseidb",
+  "name": "SenseiDB",
+  "aliases": [
+    "Sensei",
+    "LinkedIn Sensei"
+  ],
+  "tagline": "LinkedIn's distributed, real-time faceted-search database on Lucene, Zoie and Bobo; archived since 2014.",
+  "description": "SenseiDB was a distributed, elastic database for semi-structured data that LinkedIn built and open-sourced around 2010, and which powered parts of the LinkedIn homepage and the LinkedIn Signal product. It combined Lucene for full-text search, Zoie for real-time indexing and Bobo for fast faceted browsing, sharded and replicated across nodes coordinated by ZooKeeper, and offered BQL, an SQL-like language with MATCH ... AGAINST, GROUP BY and BROWSE BY facets. Data streamed in through gateways for Kafka, JDBC, JMS and files, or was bootstrapped from HDFS with a MapReduce indexing job. Development stopped after the 1.5.x releases around 2012-2013, and LinkedIn archived the repository; Elasticsearch and OpenSearch cover the same ground today.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Development ended around 2013 and LinkedIn's repository is archived (LinkedInAttic). Use Elasticsearch, OpenSearch or Apache Solr.",
+  "maturity": "legacy",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "full-text-search",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "primary-replica"
+  ],
+  "developer": "LinkedIn",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "1.5.6",
+    "date": "2012-12"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Lucene, Zoie and Bobo",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Sharded and replicated across nodes with ZooKeeper; replicas converge eventually."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "BQL (Browse Query Language)"
+  ],
+  "apis": [
+    "REST/JSON",
+    "Java client",
+    "Python client"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Real-time indexing: updates searchable within moments of arriving",
+    "Fast faceted browsing via Bobo alongside full-text relevance",
+    "SQL-like BQL with facets, grouping and full-text predicates",
+    "Ingest gateways for Kafka, JDBC and JMS plus Hadoop bootstrapping",
+    "Proven at LinkedIn scale in its day"
+  ],
+  "weaknesses": [
+    "Archived and unmaintained for over a decade",
+    "Built on old Lucene versions with no upgrade path",
+    "No transactions or strong consistency"
+  ],
+  "useCases": [
+    "Historical reference for real-time faceted search architecture",
+    "Migrating legacy Sensei deployments to Elasticsearch or OpenSearch"
+  ],
+  "notIdealFor": [
+    "Any new search deployment",
+    "Transactional data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "elasticsearch",
+    "opensearch",
+    "apache-solr",
+    "vespa",
+    "manticore-search"
+  ],
+  "tags": [
+    "search",
+    "lucene",
+    "linkedin",
+    "faceted-search",
+    "archived"
+  ],
+  "links": {
+    "website": "http://senseidb.github.io/sensei/",
+    "repository": "https://github.com/LinkedInAttic/sensei"
+  },
+  "ids": {
+    "github": "LinkedInAttic/sensei",
+    "hackerNewsQuery": "SenseiDB"
+  },
+  "brand": {},
+  "sources": [
+    "http://senseidb.github.io/sensei/",
+    "https://github.com/LinkedInAttic/sensei",
+    "https://dbdb.io/db/senseidb"
+  ],
+  "lastVerified": "2026-10-27"
+}

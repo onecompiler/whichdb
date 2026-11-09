@@ -1,0 +1,161 @@
+{
+  "slug": "scuba",
+  "name": "Scuba",
+  "aliases": [
+    "Facebook Scuba",
+    "Meta Scuba",
+    "Kraken"
+  ],
+  "tagline": "Meta's internal in-memory store for real-time event analytics; described at VLDB 2013, rebuilt as Kraken.",
+  "description": "Scuba is the system Facebook engineers use for interactive, ad hoc analysis of real-time logs: code-regression analysis, bug-report and ads-revenue monitoring, and performance debugging, usually explored through a GUI of time-series charts, tables and breakdowns. As described at VLDB 2013, events flow from Scribe through tailers into hundreds of shared-nothing leaf servers that keep compressed, randomly partitioned tables entirely in RAM (around 70 TB at the time), expiring old data as fast as new rows arrive and optionally storing only a sample with a recorded sample rate. Queries fan out from root aggregators to every leaf and usually return in under a second, trading completeness and durability for freshness and speed. A 2022 VLDB paper describes Kraken, Scuba's next-generation architecture that decouples storage from query serving. It has never been offered outside Meta.",
+  "productType": "research",
+  "status": "active",
+  "statusNote": "Internal Meta system, never sold or open-sourced; re-architected as Kraken (VLDB 2022) while keeping the Scuba user experience.",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "observability",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Meta Platforms (Facebook)",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Internal (not distributed)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Not available outside Meta."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "In 2013: hundreds of servers with 144 GB RAM each, ~70 TB of compressed data in memory, millions of rows ingested per second."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (CLI)",
+    "GUI query builder"
+  ],
+  "apis": [
+    "Thrift API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "PHP",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": false,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Sub-second ad hoc queries over data that is seconds old",
+    "Ingests millions of events per second and ages data out at the same rate",
+    "Per-row sample rates make very high-volume event streams affordable",
+    "Self-describing rows: new columns appear without schema migrations",
+    "Influential design for modern observability and event-analytics stores"
+  ],
+  "weaknesses": [
+    "Not available outside Meta",
+    "Deliberately favours speed and freshness over completeness and durability",
+    "SQL subset with grouping and aggregation but no joins"
+  ],
+  "useCases": [
+    "Design reference for real-time event analytics and observability systems",
+    "Understanding sampled, in-memory log analytics at internet scale"
+  ],
+  "notIdealFor": [
+    "Anyone outside Meta: there is nothing to deploy",
+    "Workloads that require exact, durable results"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "apache-druid",
+    "apache-pinot",
+    "axiom",
+    "azure-data-explorer"
+  ],
+  "tags": [
+    "meta",
+    "facebook",
+    "in-memory",
+    "real-time-analytics",
+    "internal"
+  ],
+  "links": {
+    "website": "https://research.facebook.com/publications/scuba-diving-into-data-at-facebook/",
+    "docs": "https://www.vldb.org/pvldb/vol6/p1057-wiener.pdf"
+  },
+  "ids": {
+    "hackerNewsQuery": "Facebook Scuba"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.vldb.org/pvldb/vol6/p1057-wiener.pdf",
+    "https://research.facebook.com/publications/scuba-diving-into-data-at-facebook/",
+    "https://www.vldb.org/pvldb/vol15/p3522-mo.pdf"
+  ],
+  "lastVerified": "2026-10-27"
+}

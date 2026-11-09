@@ -1,0 +1,232 @@
+{
+  "slug": "sql-server",
+  "name": "Microsoft SQL Server",
+  "aliases": [
+    "SQL Server",
+    "MSSQL",
+    "MS SQL",
+    "SQL Server 2025"
+  ],
+  "tagline": "Microsoft's flagship RDBMS: T-SQL, columnstore, Always On, and now native vectors and JSON.",
+  "description": "SQL Server is the default relational database of the Microsoft world, running on Windows and Linux and sharing its engine with Azure SQL. It is a strong all-rounder: row and columnstore indexes in one database, In-Memory OLTP, temporal tables, Always On availability groups and very good tooling (SSMS, Query Store). SQL Server 2025 (GA November 2025) added a native vector type with DiskANN indexing, a native JSON type, regex functions and change event streaming. It is the obvious choice for .NET and Windows-heavy shops; the costs are per-core licensing, the fact that its best features sit in Enterprise Edition, and no built-in way to scale writes horizontally.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial",
+    "vector",
+    "graph",
+    "xml"
+  ],
+  "workloads": [
+    "oltp",
+    "htap",
+    "data-warehouse",
+    "real-time-analytics",
+    "vector-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "shared-storage"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "company",
+  "initialRelease": 1989,
+  "latestVersion": {
+    "version": "2025 CU10 (17.0.5035.5)",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Microsoft commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Per-core (Standard/Enterprise) or Server+CAL licensing, or pay-as-you-go via Azure Arc. Free Express and Developer editions."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "azure",
+      "aws",
+      "gcp"
+    ],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Azure SQL Managed Instance",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/azure-sql/managed-instance/"
+    },
+    {
+      "name": "Amazon RDS for SQL Server",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/rds/sqlserver/"
+    },
+    {
+      "name": "Cloud SQL for SQL Server",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/sql/sqlserver"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Scales up well; readable secondaries and distributed availability groups for reads/DR. Write scale-out requires app-level sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "T-SQL"
+  ],
+  "apis": [
+    "TDS",
+    "ODBC",
+    "JDBC",
+    "ADO.NET",
+    "OLE DB"
+  ],
+  "compatibleWith": [
+    "sql-server"
+  ],
+  "drivers": [
+    "C#",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "PHP",
+    "Rust",
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Columnstore and rowstore indexes on the same tables give real HTAP without ETL",
+    "Query Store, Intelligent Query Processing and SSMS make performance work approachable",
+    "Always On availability groups provide automatic failover with readable secondaries",
+    "Native vector type and DiskANN index in 2025 put semantic search next to relational data",
+    "Same engine as Azure SQL, so lift-and-shift to Microsoft's cloud is straightforward",
+    "Deep integration with .NET, Entra ID, Power BI and the wider Microsoft stack"
+  ],
+  "weaknesses": [
+    "Per-core Enterprise licensing gets expensive quickly on large servers",
+    "No native horizontal write scaling or sharding",
+    "Linux support lags Windows for some features (e.g., certain HA and integration services)",
+    "T-SQL dialect and features tie applications to Microsoft"
+  ],
+  "useCases": [
+    "Line-of-business apps in .NET shops",
+    "ERP and CRM back ends (Dynamics, many ISV products)",
+    "Operational reporting with columnstore indexes",
+    "Departmental data marts feeding Power BI",
+    "Hybrid on-prem and Azure deployments via Azure Arc"
+  ],
+  "notIdealFor": [
+    "Globally distributed, multi-region write workloads",
+    "Budget projects that need Enterprise-only features",
+    "Petabyte-scale analytics (use a cloud warehouse)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "oracle-database",
+    "azure-sql-database",
+    "mysql",
+    "ibm-db2",
+    "amazon-aurora"
+  ],
+  "tags": [
+    "sql",
+    "t-sql",
+    "enterprise",
+    "microsoft",
+    "columnstore",
+    "vector-search"
+  ],
+  "links": {
+    "website": "https://www.microsoft.com/en-us/sql-server",
+    "docs": "https://learn.microsoft.com/en-us/sql/sql-server/",
+    "changelog": "https://support.microsoft.com/servicing/sql/sql-server-2025/kb5005684-build-versions",
+    "repository": "https://github.com/microsoft/mssql-docker",
+    "wikipedia": "https://en.wikipedia.org/wiki/Microsoft_SQL_Server"
+  },
+  "ids": {
+    "stackoverflowTag": "sql-server",
+    "wikipedia": "Microsoft SQL Server",
+    "npm": [
+      "tedious",
+      "mssql"
+    ],
+    "pypi": [
+      "pymssql",
+      "mssql-python"
+    ],
+    "crates": "tiberius",
+    "hackerNewsQuery": "SQL Server"
+  },
+  "brand": {
+    "color": "#CC2927"
+  },
+  "sources": [
+    "https://support.microsoft.com/servicing/sql/sql-server-2025/kb5005684-build-versions",
+    "https://learn.microsoft.com/en-us/lifecycle/products/sql-server-2025",
+    "https://redmondmag.com/blogs/redmond-dispatch/2026/05/microsoft-releases-new-sql-server.aspx"
+  ],
+  "lastVerified": "2026-10-27"
+}

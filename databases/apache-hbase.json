@@ -1,0 +1,205 @@
+{
+  "slug": "apache-hbase",
+  "name": "Apache HBase",
+  "aliases": [
+    "HBase"
+  ],
+  "tagline": "Hadoop's Bigtable clone: strongly consistent wide-column tables on top of HDFS.",
+  "description": "HBase is the open-source implementation of Google's Bigtable design for the Hadoop ecosystem: sorted, sparse tables split into regions served by RegionServers, with HDFS for durability and ZooKeeper for coordination. It gives strongly consistent row-level reads and writes over billions of rows and integrates tightly with Spark, MapReduce and Apache Phoenix for SQL. HBase 3.0 shipped in 2026 after a very long development cycle, but momentum has shifted toward cloud-native stores and many large users have migrated away. Choose it today mainly when you already run Hadoop infrastructure.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "time-series",
+    "metadata-store",
+    "iot"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "3.0.0",
+    "date": "2026-08-06"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Google Bigtable design (on HDFS)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; available on Amazon EMR, Azure HDInsight and Alibaba Cloud."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "alibaba-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon EMR (HBase)",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/emr/features/hbase/"
+    },
+    {
+      "name": "Azure HDInsight HBase",
+      "provider": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/azure/hdinsight/hbase/apache-hbase-overview"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Automatic region splitting across RegionServers; multi-PB clusters documented. Cross-cluster replication is asynchronous."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "HBase API",
+    "HBase shell"
+  ],
+  "apis": [
+    "Java client",
+    "REST",
+    "Thrift"
+  ],
+  "compatibleWith": [
+    "hbase"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "C++",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Strongly consistent single-row operations at billions-of-rows scale",
+    "Cell versioning lets you read historical values by timestamp",
+    "Native integration with Hadoop, Spark and Apache Phoenix",
+    "Coprocessors run custom server-side logic next to the data",
+    "Proven multi-petabyte deployments"
+  ],
+  "weaknesses": [
+    "Heavy operational stack: HDFS, ZooKeeper, HMaster and RegionServers",
+    "Region failover can cause seconds-to-minutes of unavailability for affected keys",
+    "No native secondary indexes or SQL without Phoenix",
+    "Ecosystem and talent pool are shrinking as Hadoop declines"
+  ],
+  "useCases": [
+    "Large sparse tables within an existing Hadoop cluster",
+    "Time-series and metrics backends (OpenTSDB)",
+    "Random read/write access to batch-processed data",
+    "Message and event history stores"
+  ],
+  "notIdealFor": [
+    "Greenfield cloud-native projects",
+    "Small datasets",
+    "Low-latency multi-region writes",
+    "Teams without Hadoop operations experience"
+  ],
+  "notableUsers": [
+    "Alibaba",
+    "Xiaomi"
+  ],
+  "alternatives": [
+    "google-cloud-bigtable",
+    "apache-cassandra",
+    "scylladb",
+    "apache-accumulo",
+    "tidb",
+    "apache-kudu"
+  ],
+  "tags": [
+    "hadoop",
+    "bigtable-clone",
+    "apache",
+    "hdfs",
+    "wide-column"
+  ],
+  "links": {
+    "website": "https://hbase.apache.org/",
+    "docs": "https://hbase.apache.org/book.html",
+    "repository": "https://github.com/apache/hbase",
+    "changelog": "https://hbase.apache.org/downloads.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_HBase"
+  },
+  "ids": {
+    "github": "apache/hbase",
+    "stackoverflowTag": "hbase",
+    "wikipedia": "Apache HBase",
+    "hackerNewsQuery": "HBase"
+  },
+  "brand": {
+    "color": "#BE160C",
+    "simpleIcon": "apachehbase"
+  },
+  "sources": [
+    "https://hbase.apache.org/downloads.html",
+    "https://github.com/apache/hbase/releases",
+    "https://dlcdn.apache.org/hbase/"
+  ],
+  "lastVerified": "2026-10-27"
+}

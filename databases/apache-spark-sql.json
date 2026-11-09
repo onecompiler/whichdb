@@ -1,0 +1,215 @@
+{
+  "slug": "apache-spark-sql",
+  "name": "Apache Spark SQL",
+  "aliases": [
+    "Spark SQL",
+    "PySpark SQL"
+  ],
+  "tagline": "Spark's SQL and DataFrame engine for large-scale batch, streaming and lakehouse processing.",
+  "description": "Spark SQL is the relational layer of Apache Spark: the Catalyst optimizer and Tungsten execution engine behind SQL, DataFrames and Structured Streaming. It reads and writes Parquet, ORC, Delta Lake, Iceberg and Hudi on object storage and is the workhorse of most lakehouse ETL. Spark 4.x brought ANSI SQL mode by default, the VARIANT type, SQL scripting, Spark Connect thin clients and declarative pipelines. Spark SQL excels at heavy, fault-tolerant transformations over huge data; for interactive BI latency, engines like Trino, Photon or StarRocks usually respond faster.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "document"
+  ],
+  "workloads": [
+    "lakehouse",
+    "olap",
+    "stream-processing",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "4.2.0",
+    "date": "2026-07-14"
+  },
+  "writtenIn": [
+    "Scala",
+    "Java",
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; managed by Databricks, Amazon EMR and Glue, Google Dataproc, Azure HDInsight and others."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "alibaba-cloud",
+      "oracle-cloud"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Databricks",
+      "provider": "Databricks",
+      "url": "https://www.databricks.com/"
+    },
+    {
+      "name": "Amazon EMR",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/emr/"
+    },
+    {
+      "name": "Google Cloud Dataproc",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/dataproc"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Runs on YARN, Kubernetes or standalone clusters of thousands of nodes; fault tolerance via lineage and retries."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Spark SQL (ANSI)",
+    "Python (PySpark DataFrames)",
+    "Scala",
+    "R"
+  ],
+  "apis": [
+    "Spark Connect (gRPC)",
+    "Thrift JDBC/ODBC server",
+    "DataFrame API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Scala",
+    "Java",
+    "R",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Industry-standard engine for large-scale ETL and lakehouse pipelines",
+    "Same engine for batch SQL, DataFrames and Structured Streaming",
+    "Reads and writes Delta, Iceberg, Hudi, Parquet and ORC",
+    "Fault tolerance suits very long jobs over petabytes",
+    "Available as a managed service on every major cloud"
+  ],
+  "weaknesses": [
+    "Higher query latency than MPP engines for interactive BI",
+    "JVM tuning (memory, shuffle, partitions) is a skill in itself",
+    "Not a database: no storage, indexes or concurrency control of its own",
+    "Small-file and skew problems need active management"
+  ],
+  "useCases": [
+    "Lakehouse ETL and ELT",
+    "Batch feature engineering for ML",
+    "Streaming ingestion into Delta/Iceberg",
+    "Large-scale data cleaning and joins"
+  ],
+  "notIdealFor": [
+    "Sub-second dashboards",
+    "OLTP",
+    "Small datasets better served by DuckDB"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "databricks-sql",
+    "presto",
+    "apache-hive",
+    "apache-datafusion",
+    "duckdb"
+  ],
+  "tags": [
+    "spark",
+    "etl",
+    "lakehouse",
+    "distributed",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://spark.apache.org/sql/",
+    "docs": "https://spark.apache.org/docs/latest/sql-programming-guide.html",
+    "repository": "https://github.com/apache/spark",
+    "changelog": "https://spark.apache.org/news/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Spark"
+  },
+  "ids": {
+    "github": "apache/spark",
+    "stackoverflowTag": "apache-spark-sql",
+    "wikipedia": "Apache Spark",
+    "dockerHub": "apache/spark",
+    "pypi": "pyspark",
+    "hackerNewsQuery": "Spark SQL"
+  },
+  "brand": {
+    "color": "#E25A1C",
+    "simpleIcon": "apachespark"
+  },
+  "sources": [
+    "https://spark.apache.org/news/index.html",
+    "https://pypi.org/project/pyspark/",
+    "https://en.wikipedia.org/wiki/Apache_Spark"
+  ],
+  "lastVerified": "2026-10-27"
+}

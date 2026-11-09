@@ -1,0 +1,152 @@
+{
+  "slug": "stsdb",
+  "name": "STSdb",
+  "aliases": [
+    "STSdb 4.0",
+    "STSdb4"
+  ],
+  "tagline": "Embedded .NET key-value store built on the WaterfallTree index; vendor gone, GPL code frozen since 2015.",
+  "description": "STSdb is an embedded key-value database for .NET from the Bulgarian company STS Soft. Version 4.0 is built on the vendor's WaterfallTree index, designed to keep insert speed from collapsing when keys arrive in random order, and adds parallel vertical compression behind a compact, typed C# API. The code is on GitHub under GPLv2 with 4.0.8 (September 2015) as the last tag, and the vendor's website has since lapsed. It remains an interesting write-optimised design for .NET, but it has no maintainer.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "STS Soft's site has lapsed (domain for sale) and the GPLv2 code on GitHub has not changed since 4.0.8 in September 2015. LiteDB or RocksDB bindings are maintained options for .NET.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "STS Soft",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "4.0.8",
+    "date": "2015-09-03"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "GPLv2 on GitHub; the vendor also sold commercial licences, which are no longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "C# API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "WaterfallTree keeps insert throughput high even with random keys",
+    "Compact typed C# API that embeds in-process",
+    "Parallel vertical compression for compact files"
+  ],
+  "weaknesses": [
+    "Vendor defunct and code frozen since 2015",
+    "GPLv2 is restrictive for closed-source .NET applications",
+    "Windows/.NET Framework focus with little cross-platform testing"
+  ],
+  "useCases": [
+    "Maintaining existing .NET apps that embed it",
+    "Studying write-optimised tree indexes"
+  ],
+  "notIdealFor": [
+    "New .NET projects",
+    "Multi-process or networked access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "litedb",
+    "rocksdb",
+    "lmdb",
+    "ravendb"
+  ],
+  "tags": [
+    "dotnet",
+    "csharp",
+    "embedded",
+    "key-value",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/STSSoft/STSdb4",
+    "repository": "https://github.com/STSSoft/STSdb4"
+  },
+  "ids": {
+    "github": "STSSoft/STSdb4"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/STSSoft/STSdb4",
+    "https://github.com/STSSoft/STSdb4/tags",
+    "https://dbdb.io/db/stsdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

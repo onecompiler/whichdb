@@ -1,0 +1,120 @@
+{
+  "slug": "polardb",
+  "name": "Alibaba PolarDB",
+  "aliases": ["PolarDB", "PolarDB for MySQL", "PolarDB for PostgreSQL", "ApsaraDB PolarDB"],
+  "tagline": "Alibaba Cloud's shared-storage relational service in MySQL-, PostgreSQL- and Oracle-compatible editions.",
+  "description": "PolarDB is Alibaba Cloud's cloud-native relational database, conceptually similar to Amazon Aurora: compute nodes share a distributed storage layer (PolarFS) over RDMA, so read nodes can be added in minutes without copying data. It comes in PolarDB for MySQL, PolarDB for PostgreSQL and an Oracle-compatible PostgreSQL edition, with serverless scaling, an in-memory column index (IMCI) for analytics and Global Database Network for cross-region reads. A separate distributed edition, PolarDB-X, handles shared-nothing sharding. It is the default high-end relational choice inside Alibaba Cloud, especially in China and Southeast Asia; outside that ecosystem it offers little reason to switch.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "spatial", "columnar", "vector"],
+  "workloads": ["oltp", "htap", "real-time-analytics", "geospatial"],
+  "architecture": ["shared-storage", "primary-replica", "serverless"],
+  "developer": "Alibaba Cloud",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2017,
+  "writtenIn": ["C", "C++"],
+  "basedOn": "MySQL and PostgreSQL",
+  "license": { "type": "proprietary", "name": "Proprietary (Alibaba Cloud service)" },
+  "pricing": {
+    "models": ["usage-based", "subscription"],
+    "freeTier": false,
+    "notes": "Pay-as-you-go or subscription per node plus storage; serverless billed per PCU; periodic Alibaba Cloud free trials."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["alibaba-cloud"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "PolarDB", "provider": "Alibaba Cloud", "url": "https://www.alibabacloud.com/product/polardb" }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "One primary with up to 15 read nodes on shared storage (hundreds of TB); multi-master and PolarDB-X options for write scale-out; GDN for cross-region reads."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL", "PL/SQL (Oracle-compatible edition)"],
+  "apis": ["MySQL wire protocol", "PostgreSQL wire protocol"],
+  "compatibleWith": ["mysql", "postgresql", "oracle"],
+  "drivers": ["Java", "Python", "Go", "PHP", "JavaScript", "C#"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Shared storage over RDMA lets read nodes be added in minutes without data copies",
+    "In-memory column index (IMCI) speeds analytics on transactional tables",
+    "MySQL, PostgreSQL and Oracle-compatible editions under one service",
+    "Serverless scaling and Global Database Network for cross-region reads",
+    "Flashback query to recover from accidental writes"
+  ],
+  "weaknesses": [
+    "Only available on Alibaba Cloud",
+    "Single writer per cluster unless you move to multi-master or PolarDB-X",
+    "English documentation and community resources are thinner than AWS/GCP equivalents",
+    "Feature parity differs between MySQL and PostgreSQL editions"
+  ],
+  "useCases": [
+    "E-commerce and gaming backends on Alibaba Cloud",
+    "Oracle migrations in Chinese enterprises",
+    "Read-heavy apps needing fast replica scaling",
+    "HTAP reporting with IMCI"
+  ],
+  "notIdealFor": [
+    "Workloads outside Alibaba Cloud",
+    "Open-source or self-hosted requirements",
+    "Very write-heavy sharded workloads (use PolarDB-X)"
+  ],
+  "notableUsers": [],
+  "alternatives": ["polardb-x", "amazon-aurora", "oceanbase", "tencent-tdsql", "alloydb", "huawei-gaussdb"],
+  "tags": ["alibaba-cloud", "managed", "cloud-native", "mysql-compatible", "postgres-compatible"],
+  "links": {
+    "website": "https://www.alibabacloud.com/product/polardb",
+    "docs": "https://www.alibabacloud.com/help/en/polardb/",
+    "pricing": "https://www.alibabacloud.com/product/polardb/pricing"
+  },
+  "ids": {
+    "stackoverflowTag": "polardb",
+    "hackerNewsQuery": "PolarDB"
+  },
+  "brand": { "color": "#FF6A00", "simpleIcon": "alibabacloud" },
+  "sources": [
+    "https://www.alibabacloud.com/product/polardb",
+    "https://www.alibabacloud.com/help/en/polardb/",
+    "https://github.com/polardb/polardbx-sql"
+  ],
+  "lastVerified": "2026-10-27"
+}

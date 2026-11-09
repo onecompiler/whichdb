@@ -1,0 +1,171 @@
+{
+  "slug": "slatedb",
+  "name": "SlateDB",
+  "aliases": [],
+  "tagline": "Embedded LSM storage engine that writes straight to object storage like S3.",
+  "description": "SlateDB is an embedded, LSM-tree key-value engine written in Rust whose SSTables and write-ahead log live in object storage (S3, GCS, Azure Blob, MinIO, Tigris) instead of local disk. That gives bottomless, highly durable storage and trivial replication at the cost of higher write latency, which it mitigates by batching writes and caching reads locally. It supports a single fenced writer with many readers, snapshots and optimistic transactions, with bindings for Go, Java, Node.js and Python. Still pre-1.0 (0.17 in 2026) and governed under the Commonhaus Foundation, it is a building block for stateless-compute systems rather than a database you query directly.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "stream-processing",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "shared-storage"
+  ],
+  "developer": "SlateDB contributors (Commonhaus Foundation)",
+  "vendorType": "foundation",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "0.17.0",
+    "date": "2026-09-29"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; you pay your object-store provider for storage and API requests."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Storage is bounded only by the object store; throughput is limited by the single writer and object-store latency."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Rust API"
+  ],
+  "apis": [
+    "Rust API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Go",
+    "Java",
+    "JavaScript",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Bottomless, highly durable storage on S3-compatible object stores",
+    "No local disks to manage; compute nodes can be stateless",
+    "Single-writer fencing protocol prevents split-brain writers",
+    "Multiple readers can scale reads from the same bucket",
+    "Bindings for Go, Java, Node.js and Python"
+  ],
+  "weaknesses": [
+    "Write latency in tens to hundreds of milliseconds due to object-store PUTs",
+    "Pre-1.0: APIs and formats may still change",
+    "Object-store request costs need tuning (flush interval, caching)",
+    "Only one writer per database"
+  ],
+  "useCases": [
+    "State backends for stream processors and serverless compute",
+    "Metadata stores for object-storage-native systems",
+    "Durable logs and queues on S3",
+    "Embedding a KV engine in diskless containers"
+  ],
+  "notIdealFor": [
+    "Low-latency transactional writes",
+    "Multi-writer workloads",
+    "Teams needing a stable 1.0 storage format today"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "fjall",
+    "foundationdb",
+    "pebble"
+  ],
+  "tags": [
+    "rust",
+    "lsm-tree",
+    "object-storage",
+    "s3",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://slatedb.io/",
+    "docs": "https://docs.rs/slatedb",
+    "repository": "https://github.com/slatedb/slatedb",
+    "changelog": "https://github.com/slatedb/slatedb/releases"
+  },
+  "ids": {
+    "github": "slatedb/slatedb",
+    "pypi": "slatedb",
+    "hackerNewsQuery": "SlateDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/slatedb/slatedb",
+    "https://slatedb.io/",
+    "https://github.com/slatedb/slatedb/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

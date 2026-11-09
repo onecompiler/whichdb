@@ -1,0 +1,191 @@
+{
+  "slug": "amazon-documentdb",
+  "name": "Amazon DocumentDB",
+  "aliases": [
+    "Amazon DocumentDB (with MongoDB compatibility)",
+    "DocDB"
+  ],
+  "tagline": "AWS's managed MongoDB-API database on a proprietary, Aurora-style storage layer.",
+  "description": "Amazon DocumentDB is a managed AWS service that implements the MongoDB API on top of AWS's own distributed storage, which replicates six ways across three Availability Zones and separates compute from storage much like Aurora. It does not run MongoDB code; compatibility is reimplemented, and version 8.0 (November 2025) added MongoDB 8.0 driver support, a new query planner, $vectorSearch, collations and views. Instance-based and serverless clusters suit most workloads, while Elastic Clusters add sharding. It fits AWS-centric teams that want MongoDB drivers without SSPL or a third-party vendor, as long as they test for compatibility gaps.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "metadata-store",
+    "vector-search"
+  ],
+  "architecture": [
+    "shared-storage",
+    "primary-replica",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "8.0",
+    "date": "2025-11-11"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary AWS service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed per instance-hour (or DocumentDB Capacity Units for serverless), storage, I/O (or I/O-Optimized) and backup. A one-month free trial is offered."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon DocumentDB",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/documentdb/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Instance clusters scale reads with up to 15 replicas over shared storage; Elastic Clusters shard writes. Global Clusters replicate to secondary regions."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "MongoDB Query API (MQL)",
+    "Aggregation pipeline"
+  ],
+  "apis": [
+    "MongoDB wire protocol"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#",
+    "PHP",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Storage auto-grows and is replicated six ways across three AZs",
+    "Read replicas share storage, so adding one takes minutes and no data copy",
+    "Deep AWS integration: IAM auth, KMS encryption, VPC, CloudWatch, DMS",
+    "Serverless option for spiky or dev/test workloads",
+    "Version 8.0 brought large query-latency and compression improvements"
+  ],
+  "weaknesses": [
+    "Reimplemented API: some operators, stages and index types behave differently or are missing",
+    "AWS-only, so it is not a portable MongoDB exit strategy",
+    "Instance-based clusters scale writes only vertically unless you use Elastic Clusters",
+    "I/O charges on the standard storage tier can be hard to predict"
+  ],
+  "useCases": [
+    "Lift-and-shift of MongoDB apps already running on AWS",
+    "Catalogs, profiles and content stores for AWS-native services",
+    "Vector search alongside JSON documents in AWS"
+  ],
+  "notIdealFor": [
+    "Apps that depend on the newest MongoDB features or exact behaviour",
+    "Multi-cloud or on-premises deployments",
+    "Analytics-heavy workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb-atlas",
+    "azure-documentdb",
+    "documentdb-postgres",
+    "amazon-dynamodb",
+    "mongodb",
+    "azure-cosmos-db"
+  ],
+  "tags": [
+    "aws",
+    "mongodb-compatible",
+    "dbaas",
+    "document",
+    "serverless"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/documentdb/",
+    "docs": "https://docs.aws.amazon.com/documentdb/",
+    "pricing": "https://aws.amazon.com/documentdb/pricing/",
+    "changelog": "https://docs.aws.amazon.com/documentdb/latest/developerguide/release-notes.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_DocumentDB"
+  },
+  "ids": {
+    "stackoverflowTag": "aws-documentdb",
+    "wikipedia": "Amazon_DocumentDB",
+    "hackerNewsQuery": "Amazon DocumentDB"
+  },
+  "brand": {
+    "color": "#C925D1"
+  },
+  "sources": [
+    "https://aws.amazon.com/about-aws/whats-new/2025/11/documentdb-8-o/",
+    "https://docs.aws.amazon.com/documentdb/latest/developerguide/compatibility.html",
+    "https://docs.aws.amazon.com/documentdb/latest/developerguide/release-notes.html",
+    "https://aws.amazon.com/documentdb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

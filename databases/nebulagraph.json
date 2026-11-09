@@ -1,0 +1,181 @@
+{
+  "slug": "nebulagraph",
+  "name": "NebulaGraph",
+  "aliases": [
+    "Nebula Graph",
+    "NebulaGraph Enterprise"
+  ],
+  "tagline": "Shared-nothing distributed graph database for trillion-edge graphs, with GQL in Enterprise v5.",
+  "description": "NebulaGraph is a distributed property-graph database from Vesoft that separates stateless query (graphd), Raft-replicated storage on RocksDB (storaged) and metadata (metad) services, so compute and storage scale independently. It targets very large graphs with millisecond lookups and is widely used in Chinese internet and finance companies. The open-source edition (Apache 2.0, nGQL with an openCypher-compatible subset) has not had a feature release since v3.8.0 in May 2024, while the commercial Enterprise v5 line was redesigned around native ISO GQL support. Pick it for scale-out graphs where you can live with weaker transactional guarantees.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "knowledge-graph",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Vesoft Inc.",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "3.8.0",
+    "date": "2024-05-17"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (open-source edition); Enterprise is commercial",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open-source edition is free; Enterprise v5 (GQL, extra tooling, support) is licensed commercially."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Graph is hash-partitioned across storage nodes with Raft replicas; query nodes scale independently."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "nGQL",
+    "openCypher (subset)",
+    "GQL (Enterprise v5)"
+  ],
+  "apis": [
+    "Thrift RPC",
+    "HTTP gateway"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "C++",
+    "JavaScript (community)"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Shared-nothing design separates query, storage and meta services for independent scaling",
+    "Raft-replicated RocksDB storage handles billions of vertices and trillions of edges",
+    "Enterprise v5 was rebuilt around native ISO GQL",
+    "Official Kubernetes operator plus Spark connector and Exchange for bulk loads"
+  ],
+  "weaknesses": [
+    "Open-source edition has seen no feature release since 3.8.0 (2024)",
+    "No general multi-statement ACID transactions in the open-source edition",
+    "nGQL is proprietary, and openCypher coverage is partial",
+    "Documentation and community skew toward Chinese-language users"
+  ],
+  "useCases": [
+    "Social and relationship graphs at internet scale",
+    "Risk control and anti-fraud in finance",
+    "Knowledge graphs for search and recommendation",
+    "Device and account linkage graphs"
+  ],
+  "notIdealFor": [
+    "Workloads needing strict multi-statement transactions",
+    "Small single-node graphs",
+    "RDF/SPARQL semantic workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tigergraph",
+    "janusgraph",
+    "apache-hugegraph",
+    "neo4j",
+    "galaxybase",
+    "ultipa"
+  ],
+  "tags": [
+    "distributed",
+    "ngql",
+    "gql",
+    "open-source",
+    "raft"
+  ],
+  "links": {
+    "website": "https://www.nebula-graph.io/",
+    "docs": "https://docs.nebula-graph.io/",
+    "repository": "https://github.com/vesoft-inc/nebula",
+    "changelog": "https://github.com/vesoft-inc/nebula/releases"
+  },
+  "ids": {
+    "github": "vesoft-inc/nebula",
+    "stackoverflowTag": "nebula-graph",
+    "dockerHub": "vesoft/nebula-graphd",
+    "pypi": "nebula3-python",
+    "hackerNewsQuery": "NebulaGraph"
+  },
+  "brand": {
+    "color": "#4A5CFF"
+  },
+  "sources": [
+    "https://github.com/vesoft-inc/nebula/releases",
+    "https://nebula-graph.io/posts/announcing-nebulagraph-enterprise-v5.0-rc-release-delivering-full-fledged-gql-support",
+    "https://hub.docker.com/r/vesoft/nebula-graphd"
+  ],
+  "lastVerified": "2026-10-27"
+}

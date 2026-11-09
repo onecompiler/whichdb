@@ -1,0 +1,172 @@
+{
+  "slug": "tinybase",
+  "name": "TinyBase",
+  "aliases": [
+    "TinyBase.js"
+  ],
+  "tagline": "Tiny reactive in-memory store for tables and values, with persisters and CRDT sync.",
+  "description": "TinyBase is a small TypeScript data store that holds tabular data and key-values in memory, with fine-grained listeners that make React and other UIs update precisely when cells change. Optional modules add indexes, metrics, relationships, a query language (TinyQL) with joins and grouping, undo checkpoints, and persisters to IndexedDB, OPFS, SQLite, PGlite, Postgres, Cloudflare Durable Objects and more. MergeableStore and synchronizers give CRDT-based sync between clients and servers. It suits apps where the working dataset fits in memory and you want reactivity and local-first sync without a heavy framework.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "relational"
+  ],
+  "workloads": [
+    "local-first",
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "in-memory",
+    "embedded"
+  ],
+  "developer": "James Pearce (tinyplex)",
+  "vendorType": "community",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "10.0.1",
+    "date": "2026-09-24"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "ios",
+      "android",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "active-active",
+    "notes": "In-memory working set; MergeableStore lets many clients write and converge."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "TinyQL"
+  ],
+  "apis": [
+    "TypeScript API",
+    "React hooks"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Fine-grained cell-level listeners for precise UI updates",
+    "Very small, tree-shakeable modules with no dependencies",
+    "Many persisters, from IndexedDB to SQLite, Postgres and Durable Objects",
+    "Built-in CRDT MergeableStore for local-first sync"
+  ],
+  "weaknesses": [
+    "Whole working set must fit in memory",
+    "Not a durable primary database by itself; relies on persisters",
+    "Single-maintainer project"
+  ],
+  "useCases": [
+    "Reactive client state with persistence",
+    "Local-first apps syncing via WebSockets or Durable Objects",
+    "Offline-capable dashboards and small tools"
+  ],
+  "notIdealFor": [
+    "Large datasets",
+    "Server-side system of record"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rxdb",
+    "dexie",
+    "evolu",
+    "jazz",
+    "lokijs",
+    "replicache"
+  ],
+  "tags": [
+    "reactive",
+    "local-first",
+    "typescript",
+    "crdt",
+    "in-memory"
+  ],
+  "links": {
+    "website": "https://tinybase.org/",
+    "docs": "https://tinybase.org/guides/",
+    "repository": "https://github.com/tinyplex/tinybase",
+    "changelog": "https://github.com/tinyplex/tinybase/releases"
+  },
+  "ids": {
+    "github": "tinyplex/tinybase",
+    "npm": "tinybase",
+    "hackerNewsQuery": "TinyBase"
+  },
+  "brand": {},
+  "sources": [
+    "https://tinybase.org/",
+    "https://github.com/tinyplex/tinybase/releases",
+    "https://www.npmjs.com/package/tinybase"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,177 @@
+{
+  "slug": "alasql",
+  "name": "AlaSQL",
+  "aliases": [
+    "AlaSQL.js",
+    "alasql"
+  ],
+  "tagline": "Pure-JavaScript in-memory SQL engine for browsers and Node.js that queries arrays, JSON, CSV and Excel files.",
+  "description": "AlaSQL is a SQL database engine written entirely in JavaScript that runs in the browser, Node.js and other JS runtimes with no native dependencies. It executes most of SQL-99 (joins, grouping, subqueries, unions) over in-memory tables or plain arrays of objects, adds syntax for nested JSON and simple graph queries, and can read and write CSV, TSV, JSON and Excel (.xls/.xlsx) files, persist to localStorage or IndexedDB, and read SQLite files via SQL.js. It is best treated as a data-wrangling and reporting library inside an app rather than a durable database: transactions are limited and data lives in memory. The project is actively maintained under MIT, with v4.21.0 released in October 2026.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "olap",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Andrey Gershun, Mathias Rangel Wulff and contributors",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "4.21.0",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by the JavaScript heap of the browser tab or Node process."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JavaScript API",
+    "CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs SQL directly over JavaScript arrays and JSON with no server or native code",
+    "Reads and writes CSV, JSON and Excel (.xls/.xlsx) for import/export and reporting",
+    "Optional persistence to localStorage or IndexedDB in the browser",
+    "Wide SQL-99 coverage including joins, GROUP BY and subqueries",
+    "Mature, MIT-licensed and still actively released"
+  ],
+  "weaknesses": [
+    "Data lives in memory; not a durable store for large or critical data",
+    "Transactions are limited (only for the localStorage engine)",
+    "Interpreted JavaScript is much slower than WASM engines like DuckDB-Wasm or SQLite-Wasm on big datasets",
+    "Edge-case SQL semantics differ from mainstream databases"
+  ],
+  "useCases": [
+    "Client-side filtering, grouping and joining of JSON API results",
+    "Exporting app data to Excel or CSV from the browser",
+    "Quick data transforms in Node.js scripts",
+    "Prototyping SQL logic without a database server"
+  ],
+  "notIdealFor": [
+    "Durable application storage",
+    "Datasets larger than available memory",
+    "Analytics where DuckDB-Wasm or SQLite-Wasm are an option"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "sqlite",
+    "pglite",
+    "lokijs",
+    "dexie",
+    "tinybase"
+  ],
+  "tags": [
+    "javascript",
+    "browser",
+    "in-memory",
+    "sql",
+    "excel"
+  ],
+  "links": {
+    "website": "https://alasql.org/",
+    "docs": "https://github.com/AlaSQL/alasql/wiki",
+    "repository": "https://github.com/AlaSQL/alasql",
+    "changelog": "https://github.com/AlaSQL/alasql/releases"
+  },
+  "ids": {
+    "github": "AlaSQL/alasql",
+    "stackoverflowTag": "alasql",
+    "npm": "alasql",
+    "hackerNewsQuery": "AlaSQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/AlaSQL/alasql",
+    "https://github.com/AlaSQL/alasql/releases/tag/v4.21.0",
+    "https://www.npmjs.com/package/alasql",
+    "https://alasql.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

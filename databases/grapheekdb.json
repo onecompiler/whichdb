@@ -1,0 +1,155 @@
+{
+  "slug": "grapheekdb",
+  "name": "GrapheekDB",
+  "aliases": [],
+  "tagline": "Small pure-Python embedded graph database with pluggable LMDB or Kyoto Cabinet storage; unmaintained.",
+  "description": "GrapheekDB is a lightweight graph database written in pure Python by Raphaël Braud. It stores directed graphs of nodes and edges with arbitrary properties and offers a Gremlin-inspired, chainable traversal API with property indexes. Storage is pluggable: an in-memory backend for tests, or Kyoto Cabinet and LMDB key-value stores for persistence, and it could also run as a small server. Releases ran from 0.0.1 in January 2014 to 0.0.25 in October 2020, all still labelled pre-1.0, and the project has seen no activity since. Python developers who want an embedded graph today usually choose LadybugDB (the Kùzu fork), CozoDB or NetworkX on top of SQLite.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No releases since 0.0.25 (October 2020); the Bitbucket project is inactive.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Raphaël Braud (Nidus)",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.0.25",
+    "date": "2020-10-05"
+  },
+  "writtenIn": [
+    "Python"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Gremlin-style Python traversal API"
+  ],
+  "apis": [
+    "Python API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Python with no server to run",
+    "Pluggable LMDB or Kyoto Cabinet persistence",
+    "Chainable traversal API familiar to Gremlin users"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2020 and never reached 1.0",
+    "Pure-Python traversals are slow on large graphs",
+    "GPL v3 limits embedding in proprietary software"
+  ],
+  "useCases": [
+    "Small embedded graph prototypes in Python",
+    "Learning how a graph layer maps onto a key-value store"
+  ],
+  "notIdealFor": [
+    "Large graphs",
+    "Production services"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ladybugdb",
+    "cozodb",
+    "neo4j",
+    "falkordb"
+  ],
+  "tags": [
+    "python",
+    "graph",
+    "embedded",
+    "lmdb",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://bitbucket.org/nidusfr/grapheekdb",
+    "repository": "https://bitbucket.org/nidusfr/grapheekdb"
+  },
+  "ids": {
+    "pypi": "grapheekdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://pypi.org/project/grapheekdb/",
+    "https://bitbucket.org/nidusfr/grapheekdb",
+    "https://dbdb.io/db/grapheekdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

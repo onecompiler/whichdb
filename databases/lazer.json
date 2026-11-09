@@ -1,0 +1,164 @@
+{
+  "slug": "lazer",
+  "name": "Lazer Database",
+  "aliases": [
+    "Lazer",
+    "Lazer-Database",
+    "greg0/lazer-database"
+  ],
+  "tagline": "PHP library that treats JSON files as database tables, with an ORM-style query builder and relations.",
+  "description": "Lazer is a small PHP library, started by Grzegorz Kuźnik in 2013 and now maintained under the Lazer-Database GitHub organisation, that stores each table as a JSON data file plus a JSON schema file. A fluent, ORM-inspired API lets you create tables with typed fields, insert and update rows, filter with where/orWhere, order, limit, group and count, and define belongsTo and hasMany relations that join across tables. It needs only PHP 7.2+ and Composer, so it suits shared hosting, small CMS-style sites and tools where SQLite is unavailable or overkill. Everything is loaded and rewritten in PHP, so it is unsuitable for concurrency or large tables. It is still maintained, with 2.0.6 released in October 2026.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "content-management"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Grzegorz Kuźnik and the Lazer-Database contributors",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "2.0.6",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "PHP"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Whole JSON files are read and rewritten; practical for small tables only."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "PHP fluent query API"
+  ],
+  "apis": [
+    "PHP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "PHP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-dependency persistence for PHP: just JSON files and Composer",
+    "Fluent API with where, order, limit, group and count",
+    "belongsTo/hasMany relations across tables",
+    "Database files can be moved or versioned like any other files"
+  ],
+  "weaknesses": [
+    "No transactions or safe concurrent writes",
+    "Loads whole tables into memory; slows down quickly as data grows",
+    "Small maintainer base"
+  ],
+  "useCases": [
+    "Small PHP sites on hosts without a database server",
+    "Prototypes and admin tools needing simple structured storage",
+    "Config or content stored as diff-able JSON files"
+  ],
+  "notIdealFor": [
+    "Concurrent multi-user writes",
+    "Tables beyond tens of thousands of rows"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "sleekdb",
+    "lowdb",
+    "tinydb",
+    "kirbybase"
+  ],
+  "tags": [
+    "php",
+    "json",
+    "flat-file",
+    "embedded",
+    "orm"
+  ],
+  "links": {
+    "website": "https://github.com/Lazer-Database/Lazer-Database",
+    "repository": "https://github.com/Lazer-Database/Lazer-Database",
+    "changelog": "https://github.com/Lazer-Database/Lazer-Database/releases"
+  },
+  "ids": {
+    "github": "Lazer-Database/Lazer-Database",
+    "hackerNewsQuery": "Lazer Database PHP"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Lazer-Database/Lazer-Database",
+    "https://packagist.org/packages/greg0/lazer-database",
+    "https://dbdb.io/db/lazer"
+  ],
+  "lastVerified": "2026-10-27"
+}

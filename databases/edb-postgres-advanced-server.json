@@ -1,0 +1,204 @@
+{
+  "slug": "edb-postgres-advanced-server",
+  "name": "EDB Postgres Advanced Server",
+  "aliases": [
+    "EPAS",
+    "EDB Advanced Server",
+    "Postgres Plus Advanced Server"
+  ],
+  "tagline": "EnterpriseDB's PostgreSQL with deep Oracle compatibility: PL/SQL packages, DBMS_* and TDE.",
+  "description": "EDB Postgres Advanced Server (EPAS) is EnterpriseDB's commercial distribution of PostgreSQL, built to run Oracle applications with minimal rewriting. On top of each upstream major version it adds Oracle-compatible PL/SQL, packages, synonyms, hierarchical queries, a large set of DBMS_* and UTL_* built-ins, Oracle-style partitioning syntax, resource management, auditing and transparent data encryption. It is the core of EDB's Postgres AI platform and is available self-managed, on Kubernetes via EDB's CloudNativePG-based operator, and as a managed cloud service. It is the most mature path off Oracle within the Postgres world, at the cost of a proprietary subscription.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "geospatial",
+    "full-text-search"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "EnterpriseDB (EDB)",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "18.6",
+    "date": "2026-08-13"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "EDB commercial subscription"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract",
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Subscription priced per vCPU/core; free for evaluation. Managed version billed by usage."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "EDB Postgres AI Cloud Service",
+      "provider": "EDB",
+      "url": "https://www.enterprisedb.com/products/edb-postgres-ai"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "active-active",
+    "notes": "EDB Postgres Distributed (PGD) adds multi-master, geo-distributed writes on top of EPAS."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL",
+    "SPL (Oracle-compatible PL/SQL)"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "libpq",
+    "OCI-compatible connector (EDB*Plus, OCL)"
+  ],
+  "compatibleWith": [
+    "postgresql",
+    "oracle"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    ".NET",
+    "JavaScript",
+    "Go",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs much Oracle PL/SQL, packages and DBMS_* code with little change",
+    "Transparent data encryption built in",
+    "Migration Portal and toolkit to assess and convert Oracle schemas",
+    "Tracks upstream PostgreSQL majors closely",
+    "Pairs with EDB Postgres Distributed for always-on multi-region"
+  ],
+  "weaknesses": [
+    "Proprietary subscription with per-core pricing",
+    "Oracle compatibility is broad but not complete; complex apps still need testing",
+    "Not offered natively by AWS RDS, Cloud SQL or Azure flexible server",
+    "Features diverge from community PostgreSQL, creating lock-in"
+  ],
+  "useCases": [
+    "Migrating Oracle applications to Postgres",
+    "Regulated workloads needing TDE and auditing",
+    "Enterprises wanting vendor-backed Postgres with 24x7 support",
+    "Always-on clusters with EDB Postgres Distributed"
+  ],
+  "notIdealFor": [
+    "Teams who want purely open-source Postgres",
+    "Cost-sensitive small deployments",
+    "Workloads already portable to community PostgreSQL"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "oracle-database",
+    "postgres-pro",
+    "babelfish-postgresql",
+    "pgedge",
+    "amazon-aurora",
+    "alloydb"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "oracle-compatible",
+    "commercial",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://www.enterprisedb.com/products/edb-postgres-advanced-server",
+    "docs": "https://www.enterprisedb.com/docs/epas/latest/",
+    "changelog": "https://www.enterprisedb.com/docs/epas/latest/epas_rel_notes/",
+    "wikipedia": "https://en.wikipedia.org/wiki/EnterpriseDB"
+  },
+  "ids": {
+    "stackoverflowTag": "enterprisedb",
+    "wikipedia": "EnterpriseDB",
+    "hackerNewsQuery": "\"EDB Postgres Advanced Server\""
+  },
+  "brand": {
+    "color": "#FF3E00",
+    "simpleIcon": "enterprisedb"
+  },
+  "sources": [
+    "https://www.enterprisedb.com/docs/epas/latest/epas_rel_notes/",
+    "https://www.enterprisedb.com/services/edb-supported-products-and-platforms",
+    "https://www.enterprisedb.com/products/edb-postgres-advanced-server"
+  ],
+  "lastVerified": "2026-10-27"
+}

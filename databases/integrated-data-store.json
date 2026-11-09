@@ -1,0 +1,151 @@
+{
+  "slug": "integrated-data-store",
+  "name": "Integrated Data Store",
+  "aliases": [
+    "IDS",
+    "IDS/I",
+    "IDS/II",
+    "GE Integrated Data Store"
+  ],
+  "tagline": "Charles Bachman's 1964 network DBMS at GE: the first direct-access database and the template for CODASYL.",
+  "description": "Integrated Data Store (IDS) was built by Charles Bachman at General Electric's computer division and released in 1964 for the GE 235. It is generally regarded as the first direct-access database management system: records lived on disk and programs navigated between them through owner-member sets, rather than reading sequential tape files. That navigational network model became the basis of the CODASYL Data Base Task Group standard, and B.F. Goodrich's rewrite of IDS turned into IDMS, which is still sold today. Honeywell carried IDS forward after buying GE's computer business, with IDS/II following in 1975. Bachman received the 1973 Turing Award largely for this work. Nobody runs IDS itself now; it matters as history and as the ancestor of IDMS.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Historical system (GE 1964, Honeywell IDS/II from 1975); no longer offered. Its design survives in CA/Broadcom IDMS.",
+  "maturity": "legacy",
+  "primaryModel": "navigational",
+  "models": [
+    "navigational",
+    "hierarchical"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "General Electric (later Honeywell Information Systems)",
+  "vendorType": "company",
+  "initialRelease": 1964,
+  "writtenIn": [
+    "Assembly"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (GE / Honeywell)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Originally bundled with GE hardware; IDS/II (1975) became a separately chargeable Honeywell product. Not available today."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Disk-based on 1960s-70s mainframes."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Navigational record-at-a-time DML"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "First DBMS to give programs shared, direct access to records on disk",
+    "Introduced the owner-member set model that CODASYL standardized",
+    "Very fast record navigation on the hardware of its era",
+    "Direct ancestor of IDMS, which still runs large mainframe workloads"
+  ],
+  "weaknesses": [
+    "Obsolete; no available implementation or hardware",
+    "Programs had to navigate pointers by hand, coupling code to physical layout",
+    "No declarative query language; the motivation for Codd's relational model"
+  ],
+  "useCases": [
+    "Studying the origins of database management systems",
+    "Teaching the navigational/network model and why relational replaced it",
+    "Understanding the lineage of IDMS and CODASYL databases"
+  ],
+  "notIdealFor": [
+    "Any practical workload today"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "idms",
+    "ibm-ims",
+    "adabas",
+    "ibm-db2"
+  ],
+  "tags": [
+    "historical",
+    "network-model",
+    "codasyl",
+    "mainframe",
+    "turing-award"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/Integrated_Data_Store",
+    "wikipedia": "https://en.wikipedia.org/wiki/Integrated_Data_Store"
+  },
+  "ids": {
+    "wikipedia": "Integrated Data Store",
+    "hackerNewsQuery": "Integrated Data Store Bachman"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Integrated_Data_Store",
+    "https://doi.org/10.1109/MAHC.2009.110",
+    "https://dbdb.io/db/integrated-data-store"
+  ],
+  "lastVerified": "2026-10-27"
+}

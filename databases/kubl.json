@@ -1,0 +1,147 @@
+{
+  "slug": "kubl",
+  "name": "Kubl",
+  "aliases": [
+    "KUBL",
+    "Kubl RDBMS"
+  ],
+  "tagline": "Orri Erling's lightweight Finnish SQL engine from the 1990s that became the core of OpenLink Virtuoso.",
+  "description": "Kubl was a compact, high-performance relational (later object-relational) database written by Orri Erling in Finland, with development starting in 1994 and partly funded by the Infosto Group for its online classified-ads services. A free trial was published in November 1996, and it was marketed as a fast, lightweight engine for embedded use with an emphasis on transaction-per-second benchmarks. In 1998 OpenLink Software acquired Kubl and hired Erling, and Kubl's engine became the heart of OpenLink Virtuoso, which still ships today as a SQL and RDF/SPARQL server. Kubl itself has not been sold since; anyone interested should look at Virtuoso.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by OpenLink Software in 1998 and folded into OpenLink Virtuoso, which remains the maintained successor.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "object"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Orri Erling",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "A free trial was offered from 1996; product withdrawn after the 1998 acquisition."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Lean, fast SQL engine built for high transaction rates",
+    "Its design survives in OpenLink Virtuoso's relational core",
+    "Embeddable footprint unusual for 1990s SQL databases"
+  ],
+  "weaknesses": [
+    "Discontinued since 1998; no binaries or documentation in circulation",
+    "Known today only through Virtuoso's history"
+  ],
+  "useCases": [
+    "History of Virtuoso and of Finnish database engineering",
+    "Background when tracing Virtuoso's relational engine design"
+  ],
+  "notIdealFor": [
+    "Any present-day deployment (use Virtuoso instead)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "virtuoso",
+    "soliddb",
+    "postgresql",
+    "sqlite"
+  ],
+  "tags": [
+    "historical",
+    "finland",
+    "sql",
+    "virtuoso",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/1998/http://www.kubl.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Virtuoso_Universal_Server"
+  },
+  "ids": {
+    "hackerNewsQuery": "Kubl database"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/1998/http://www.kubl.com/",
+    "https://en.wikipedia.org/wiki/Virtuoso_Universal_Server",
+    "https://dbdb.io/db/kubl"
+  ],
+  "lastVerified": "2026-10-27"
+}

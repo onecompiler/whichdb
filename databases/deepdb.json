@@ -1,0 +1,105 @@
+{
+  "slug": "deepdb",
+  "name": "DeepDB",
+  "aliases": ["deepSQL", "DeepDB for MySQL"],
+  "tagline": "Defunct self-tuning InnoDB replacement for MySQL built on an adaptive tree structure called CASSI.",
+  "description": "DeepDB was a proprietary MySQL storage engine from Deep Information Sciences, a New Hampshire startup founded in 2010 on University of New Hampshire research. It replaced InnoDB's B+tree with an adaptive structure the company called CASSI, which summarised and reorganised data at run time and used machine-learning heuristics to tune itself to the host, with the aim of fast bulk ingest under heavy indexing and mixed transactional/analytic queries without DBA tuning. Late in its life it was rebranded deepSQL and pitched as an HTAP database for hosting providers and clouds. The company wound down around 2017, released code under AGPL as the short-lived Deep Software Foundation, and its domains have since lapsed, so it is effectively gone.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Deep Information Sciences shut down around 2017; the code was dumped under AGPL via the Deep Software Foundation, which also vanished. Use MySQL with InnoDB/MyRocks instead.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp", "htap"],
+  "architecture": ["single-node", "client-server"],
+  "developer": "Deep Information Sciences, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": ["C++"],
+  "basedOn": "MySQL (pluggable storage engine)",
+  "license": { "type": "copyleft", "name": "Proprietary, later AGPL-3.0 source release", "spdx": "AGPL-3.0-only" },
+  "pricing": {
+    "models": ["open-source"],
+    "freeTier": false,
+    "notes": "Originally a free-download/commercial product; nothing is distributed or supported today."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scaled within a single MySQL server; marketed for billions of rows per instance."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["MySQL wire protocol"],
+  "compatibleWith": ["mysql"],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in MySQL engine: applications kept the MySQL protocol and SQL dialect",
+    "Interesting design reference for adaptive, self-tuning index structures",
+    "Targeted heavy-index bulk ingest, a known InnoDB weak spot"
+  ],
+  "weaknesses": [
+    "Vendor defunct since about 2017; no builds, docs or support",
+    "Benchmarks were vendor-published and never independently reproduced at scale",
+    "Proprietary engine internals made it a lock-in risk even when alive"
+  ],
+  "useCases": [
+    "Historical reference on alternative MySQL storage engines",
+    "Background reading on adaptive/learned index ideas"
+  ],
+  "notIdealFor": ["Any production deployment"],
+  "notableUsers": [],
+  "alternatives": ["mysql", "percona-server-mysql", "mariadb", "singlestore", "tidb"],
+  "tags": ["mysql", "storage-engine", "htap", "discontinued", "self-tuning"],
+  "links": {
+    "website": "https://web.archive.org/web/2015/http://deep.is/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2015/http://deep.is/",
+    "https://web.archive.org/web/20171024053427/http://www.deepis.com/",
+    "https://dbdb.io/db/deepdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

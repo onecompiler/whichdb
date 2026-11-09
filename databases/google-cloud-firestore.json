@@ -1,0 +1,202 @@
+{
+  "slug": "google-cloud-firestore",
+  "name": "Google Cloud Firestore",
+  "aliases": [
+    "Firestore",
+    "Cloud Firestore",
+    "Firestore with MongoDB compatibility"
+  ],
+  "tagline": "Serverless document database with realtime listeners, offline SDKs and a new Enterprise edition.",
+  "description": "Firestore is Google Cloud's serverless document database, also sold as part of Firebase. It stores documents in collections and subcollections, runs on Spanner-class infrastructure with strongly consistent multi-region replication, and gives mobile and web clients realtime listeners, offline caching and security rules. The Enterprise edition, generally available in 2026, adds a MongoDB-compatible mode and a Pipeline query interface with joins, plus text and geospatial search (GA October 2026). Standard Firestore still requires an index for every query shape. It is the default for Firebase-style apps that want zero ops and pay-per-operation pricing.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "vector",
+    "spatial",
+    "search"
+  ],
+  "workloads": [
+    "oltp",
+    "mobile-offline",
+    "content-management",
+    "vector-search",
+    "full-text-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Google",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2017,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary Google Cloud service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "startingPrice": "Free quota: 1 GiB storage, 50k reads and 20k writes per day",
+    "notes": "Standard edition bills per document read/write/delete; Enterprise edition bills by read/write units. Storage billed per GiB."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Cloud Firestore",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/firestore"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Automatic splitting; multi-region locations replicate writes synchronously. Sustained hot-spot writes to one document are limited to about 1 per second."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Firestore query API",
+    "Pipeline operations (Enterprise)",
+    "MongoDB Query API (Enterprise)"
+  ],
+  "apis": [
+    "gRPC",
+    "REST",
+    "MongoDB wire protocol (Enterprise)",
+    "Firebase client SDKs"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "JavaScript",
+    "Swift",
+    "Kotlin",
+    "Java",
+    "Python",
+    "Go",
+    "C#",
+    "Dart",
+    "C++",
+    "PHP",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Truly serverless: no capacity planning, scales to zero cost at idle",
+    "Realtime listeners and offline persistence in the Firebase SDKs",
+    "Security Rules let clients talk to the database directly",
+    "Strongly consistent, ACID transactions even in multi-region mode",
+    "Enterprise edition adds MongoDB compatibility, joins and text search",
+    "Point-in-time recovery and reads at a past timestamp"
+  ],
+  "weaknesses": [
+    "Per-operation billing can explode with chatty listeners or fan-out reads",
+    "Standard edition has limited query expressiveness and needs composite indexes for most filters",
+    "Write rate limits on individual documents and on sequential keys",
+    "GCP-only, with proprietary APIs outside the Enterprise MongoDB mode"
+  ],
+  "useCases": [
+    "Mobile and web apps built on Firebase",
+    "Realtime collaborative features and chat",
+    "User profiles and app state with offline support",
+    "Serverless backends on Cloud Run or Cloud Functions"
+  ],
+  "notIdealFor": [
+    "Analytics and aggregation-heavy workloads",
+    "High-frequency counters or hot single documents",
+    "Workloads needing multi-cloud portability"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "firebase-realtime-database",
+    "mongodb-atlas",
+    "azure-cosmos-db",
+    "amazon-dynamodb",
+    "supabase",
+    "couchbase-capella"
+  ],
+  "tags": [
+    "gcp",
+    "firebase",
+    "serverless",
+    "realtime",
+    "document"
+  ],
+  "links": {
+    "website": "https://cloud.google.com/firestore",
+    "docs": "https://firebase.google.com/docs/firestore",
+    "pricing": "https://cloud.google.com/firestore/pricing",
+    "changelog": "https://docs.cloud.google.com/firestore/docs/release-notes",
+    "wikipedia": "https://en.wikipedia.org/wiki/Firestore"
+  },
+  "ids": {
+    "stackoverflowTag": "google-cloud-firestore",
+    "wikipedia": "Firestore",
+    "npm": "@google-cloud/firestore",
+    "pypi": "google-cloud-firestore",
+    "hackerNewsQuery": "Firestore"
+  },
+  "brand": {
+    "color": "#FFA000"
+  },
+  "sources": [
+    "https://docs.cloud.google.com/firestore/docs/release-notes",
+    "https://cloud.google.com/firestore",
+    "https://firebase.google.com/docs/firestore",
+    "https://en.wikipedia.org/wiki/Firestore"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,194 @@
+{
+  "slug": "materialize",
+  "name": "Materialize",
+  "aliases": [
+    "Materialize Cloud",
+    "Materialize Self-Managed"
+  ],
+  "tagline": "A Postgres-compatible operational data warehouse that keeps SQL views incrementally up to date.",
+  "description": "Materialize ingests change streams from Postgres, MySQL, SQL Server and Kafka and maintains the results of SQL views incrementally using Timely and Differential Dataflow, so complex joins and aggregations stay fresh within milliseconds of the source data without batch refreshes. It speaks the Postgres wire protocol, gives strict-serializable reads, and separates storage from compute clusters for isolation. Teams use it for real-time dashboards, feature serving, alerting and replacing fragile cache invalidation. It is available as a managed cloud service or self-managed (Community Edition free with a capped footprint) under the Business Source License.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics",
+    "ml-feature-store",
+    "caching"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "Materialize, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "v26.47.1",
+    "date": "2026-10-23"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Cloud billed by compute credits and storage; self-managed Community Edition is free within memory/disk limits, Enterprise licensed."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Materialize Cloud",
+      "provider": "Materialize",
+      "url": "https://materialize.com/pricing/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "State is held in memory/disk of compute clusters sized per workload; durable storage on S3."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "HTTP SQL API",
+    "WebSocket SUBSCRIBE"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "C#",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Incrementally maintained SQL views with full joins, including outer joins and recursion",
+    "Strict-serializable consistency across sources, unusual for stream processors",
+    "Postgres wire compatibility works with dbt, BI tools and psql",
+    "Native CDC from Postgres, MySQL and SQL Server without Kafka",
+    "SUBSCRIBE pushes view changes to applications"
+  ],
+  "weaknesses": [
+    "BSL license and capped free self-managed edition",
+    "Working state must fit cluster memory/disk; large windows can be expensive",
+    "Not a general-purpose OLTP database",
+    "Limited window-function and UDF support compared with batch engines"
+  ],
+  "useCases": [
+    "Real-time operational dashboards over OLTP data",
+    "Fresh feature serving for ML and personalization",
+    "Replacing hand-written cache invalidation with SQL views",
+    "Event-driven alerting on joined streams"
+  ],
+  "notIdealFor": [
+    "Ad-hoc historical analytics over years of data",
+    "Primary transactional storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "risingwave",
+    "feldera",
+    "readyset",
+    "ksqldb",
+    "timeplus-proton",
+    "epsio"
+  ],
+  "tags": [
+    "streaming-sql",
+    "incremental-view-maintenance",
+    "postgres-compatible",
+    "bsl",
+    "rust"
+  ],
+  "links": {
+    "website": "https://materialize.com/",
+    "docs": "https://materialize.com/docs/",
+    "repository": "https://github.com/MaterializeInc/materialize",
+    "pricing": "https://materialize.com/pricing/",
+    "changelog": "https://materialize.com/docs/releases/"
+  },
+  "ids": {
+    "github": "MaterializeInc/materialize",
+    "stackoverflowTag": "materialize",
+    "dockerHub": "materialize/materialized",
+    "hackerNewsQuery": "Materialize streaming"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/MaterializeInc/materialize/releases",
+    "https://materialize.com/docs/license/",
+    "https://materialize.com/changelog/2025-03-11-materialize-self-managed-and-community-editions/"
+  ],
+  "lastVerified": "2026-10-27"
+}

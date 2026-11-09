@@ -1,0 +1,118 @@
+{
+  "slug": "multigres",
+  "name": "Multigres",
+  "aliases": ["Vitess for Postgres"],
+  "tagline": "Alpha-stage, Vitess-inspired sharding, pooling and HA layer for unmodified PostgreSQL, led by Supabase.",
+  "description": "Multigres is an open-source project, sponsored by Supabase and led by Vitess co-creator Sugu Sougoumarane, that aims to do for PostgreSQL what Vitess did for MySQL. It runs unmodified Postgres behind a wire-compatible gateway (multigateway), per-instance connection pools (multipooler), a Raft-based orchestrator for primary election and failover (multiorch), backup tooling with pgBackRest and a Kubernetes operator. The goal is horizontal sharding, connection scaling and high availability without forking Postgres. The first open-source release, v0.1.0, shipped in May 2026 and is explicitly alpha. Watch it if you plan to outgrow a single Postgres primary, but do not run production on it yet.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp"],
+  "architecture": ["distributed", "primary-replica", "client-server"],
+  "developer": "Supabase (Multigres project)",
+  "vendorType": "company",
+  "initialRelease": 2026,
+  "latestVersion": { "version": "0.1.0 (alpha)", "date": "2026-05-30" },
+  "writtenIn": ["Go"],
+  "basedOn": "PostgreSQL",
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": {
+    "models": ["open-source", "free"],
+    "freeTier": true,
+    "notes": "Free and open source; expected to power horizontal scaling on Supabase in the future."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Designed for sharding across many Postgres primaries; sharding is still under development in the alpha."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["PostgreSQL wire protocol", "gRPC admin API"],
+  "compatibleWith": ["postgresql"],
+  "drivers": ["Java", "Python", "JavaScript", "Go", "Rust", "Ruby", "C#"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs stock PostgreSQL, so extensions and tooling keep working",
+    "Architecture and team carry over lessons from Vitess",
+    "Built-in connection pooling, failover orchestration and backups",
+    "Apache 2.0 with a Kubernetes operator from day one"
+  ],
+  "weaknesses": [
+    "Alpha software: APIs and behavior will change",
+    "Sharding features are incomplete in the first release",
+    "No production references yet",
+    "Operational model adds several new components around Postgres"
+  ],
+  "useCases": [
+    "Evaluating a future path to shard Postgres without leaving it",
+    "Postgres HA and pooling experiments on Kubernetes",
+    "Contributing to the next-generation Postgres scaling layer"
+  ],
+  "notIdealFor": [
+    "Production workloads today",
+    "Teams that need managed support",
+    "Small databases that fit on one server"
+  ],
+  "notableUsers": [],
+  "alternatives": ["citus", "vitess", "yugabytedb", "cockroachdb", "pgedge", "apache-shardingsphere"],
+  "tags": ["postgres", "sharding", "open-source", "supabase", "alpha"],
+  "links": {
+    "website": "https://multigres.com/",
+    "docs": "https://multigres.com/docs",
+    "repository": "https://github.com/multigres/multigres",
+    "changelog": "https://github.com/multigres/multigres/releases"
+  },
+  "ids": {
+    "github": "multigres/multigres",
+    "hackerNewsQuery": "Multigres"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/multigres/multigres/releases",
+    "https://multigres.com/",
+    "https://siliconangle.com/2025/10/03/postgresql-specialist-supabase-snags-100m-funding/"
+  ],
+  "lastVerified": "2026-10-27"
+}

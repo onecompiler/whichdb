@@ -1,0 +1,178 @@
+{
+  "slug": "azure-cosmos-db-for-postgresql",
+  "name": "Azure Cosmos DB for PostgreSQL",
+  "aliases": [
+    "Hyperscale (Citus)",
+    "Azure Database for PostgreSQL Hyperscale (Citus)"
+  ],
+  "tagline": "Microsoft's managed Citus service for sharded Postgres, now retiring in favor of Elastic Clusters.",
+  "description": "Azure Cosmos DB for PostgreSQL is Microsoft's managed service for Citus, the extension that shards PostgreSQL tables across a coordinator and worker nodes. It began as Hyperscale (Citus) under Azure Database for PostgreSQL and was rebranded under the Cosmos DB umbrella in 2022, despite having nothing in common with Cosmos DB's NoSQL engine. It suited multi-tenant SaaS and real-time analytics that outgrew one Postgres server. Microsoft has since put the service on a retirement path: it is no longer recommended for new projects, and Postgres users are directed to Elastic Clusters in Azure Database for PostgreSQL, which provide the same Citus sharding inside the mainstream Postgres service.",
+  "productType": "managed-service",
+  "status": "deprecated",
+  "statusNote": "Microsoft lists it as on a retirement path and not recommended for new projects; use Elastic Clusters in Azure Database for PostgreSQL instead.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "columnar",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "real-time-analytics",
+    "htap",
+    "iot"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL + Citus",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Azure service; Citus is AGPL-3.0)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Billed per node vCore and storage; single-node clusters from a few dollars per day; not recommended for new deployments."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Azure Cosmos DB for PostgreSQL",
+      "provider": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/azure/cosmos-db/postgresql/introduction"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Distributed tables across worker nodes with shard rebalancing; HA standbys and cross-region read replicas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C#",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Ruby",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fully managed Citus with built-in PgBouncer, HA and backups",
+    "Start on one node and distribute tables later without changing databases",
+    "Tracks new PostgreSQL majors quickly because Citus is an extension"
+  ],
+  "weaknesses": [
+    "On a retirement path; no future for new projects",
+    "Confusing branding: unrelated to Cosmos DB's NoSQL APIs",
+    "Cross-shard queries on non-distribution columns can be slow"
+  ],
+  "useCases": [
+    "Existing deployments planning migration to Elastic Clusters",
+    "Multi-tenant SaaS sharded by tenant (legacy)",
+    "Real-time analytics dashboards (legacy)"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Workloads needing multi-region writes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "azure-database-for-postgresql",
+    "citus",
+    "azure-cosmos-db",
+    "yugabytedb",
+    "cockroachdb"
+  ],
+  "tags": [
+    "azure",
+    "citus",
+    "postgres",
+    "deprecated",
+    "sharding"
+  ],
+  "links": {
+    "website": "https://learn.microsoft.com/azure/cosmos-db/postgresql/introduction",
+    "docs": "https://learn.microsoft.com/azure/cosmos-db/postgresql/"
+  },
+  "ids": {
+    "hackerNewsQuery": "\"Cosmos DB for PostgreSQL\""
+  },
+  "brand": {
+    "color": "#0078D4"
+  },
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/cosmos-db/postgresql/introduction",
+    "https://learn.microsoft.com/azure/postgresql/elastic-clusters/concepts-elastic-clusters",
+    "https://github.com/citusdata/citus"
+  ],
+  "lastVerified": "2026-10-27"
+}

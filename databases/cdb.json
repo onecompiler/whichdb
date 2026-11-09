@@ -1,0 +1,170 @@
+{
+  "slug": "cdb",
+  "name": "cdb",
+  "aliases": [
+    "constant database",
+    "cdb64"
+  ],
+  "tagline": "D. J. Bernstein's constant database: immutable on-disk hash tables with two-read lookups and atomic swaps.",
+  "description": "cdb is a small C library and file format by D. J. Bernstein for constant databases: a key/value file is built once with cdbmake and afterwards only read. A fixed header points into 256 hash tables, so a successful lookup normally needs two disk reads and a miss only one; readers need no locks, and a replacement database is written to a temporary file and renamed into place, so readers never see a half-built file and crashes cannot corrupt it. It was written for qmail, djbdns and ucspi-tcp and has been reimplemented in most languages. After decades at version 0.75, Bernstein published a new release in October 2025 that adds cdb64, lifting the classic 4 GB file limit. It suits read-mostly lookup tables that are rebuilt in batches.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "configuration",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "D. J. Bernstein",
+  "vendorType": "community",
+  "initialRelease": 1996,
+  "latestVersion": {
+    "version": "20251021",
+    "date": "2025-10-21"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Public domain"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Classic cdb files are limited to 4 GB; cdb64 raises the limit to exabytes. Any change means rebuilding the file."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C library",
+    "cdbmake / cdbget / cdbdump tools"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Go",
+    "Rust",
+    "Perl",
+    "Python",
+    "Ruby",
+    "Haskell"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Successful lookups usually cost two disk reads, misses one",
+    "Lock-free concurrent readers and crash-safe atomic replacement via rename",
+    "Machine-independent format with implementations in most languages",
+    "Public-domain code small enough to audit in an afternoon",
+    "cdb64 (2025) removes the 4 GB size ceiling"
+  ],
+  "weaknesses": [
+    "No in-place updates: every change rebuilds the whole file",
+    "Exact-key lookups only; no range scans or secondary indexes",
+    "Classic format is limited to 4 GB"
+  ],
+  "useCases": [
+    "Mail and DNS server lookup tables",
+    "Read-only configuration or routing maps rebuilt in batches",
+    "Static key/value datasets shipped with an application"
+  ],
+  "notIdealFor": [
+    "Frequently updated data",
+    "Range or prefix queries",
+    "Multi-key transactions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "leveldb",
+    "rocksdb",
+    "berkeley-db",
+    "sqlite"
+  ],
+  "tags": [
+    "key-value",
+    "immutable",
+    "embedded",
+    "c",
+    "djb"
+  ],
+  "links": {
+    "website": "https://cdb.cr.yp.to/",
+    "changelog": "https://cdb.cr.yp.to/cdb-20251021.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cdb_(software)"
+  },
+  "ids": {
+    "wikipedia": "Cdb (software)"
+  },
+  "brand": {},
+  "sources": [
+    "https://cdb.cr.yp.to/",
+    "https://cdb.cr.yp.to/cdb-20251021.html",
+    "https://en.wikipedia.org/wiki/Cdb_(software)"
+  ],
+  "lastVerified": "2026-10-27"
+}

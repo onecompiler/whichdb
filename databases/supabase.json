@@ -1,0 +1,129 @@
+{
+  "slug": "supabase",
+  "name": "Supabase",
+  "aliases": ["Supabase Postgres"],
+  "tagline": "Open-source Postgres backend platform: database, auth, storage, realtime and edge functions in one project.",
+  "description": "Supabase gives every project a dedicated PostgreSQL database plus the services most apps need around it: auto-generated REST and GraphQL APIs (PostgREST, pg_graphql), authentication tied to Postgres row-level security, S3-compatible file storage, realtime change broadcasts, edge functions and pgvector for AI features. Because everything is plain Postgres, you can drop to SQL, use any extension it ships, or leave with pg_dump. It has become the default backend for AI app builders like Lovable and Bolt. The free plan pauses idle projects and caps databases at 500 MB. Horizontal write scaling is not yet available; Supabase's answer is Multigres, still in alpha.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "vector", "spatial"],
+  "workloads": ["oltp", "vector-search", "rag", "content-management", "pub-sub", "geospatial"],
+  "architecture": ["primary-replica", "client-server"],
+  "developer": "Supabase, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": { "version": "v1.26.08 (self-hosted)", "date": "2026-08-07" },
+  "writtenIn": ["TypeScript", "Elixir", "Go", "Rust", "C"],
+  "basedOn": "PostgreSQL",
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": {
+    "models": ["subscription", "usage-based", "open-source"],
+    "freeTier": true,
+    "startingPrice": "$25/month (Pro)",
+    "notes": "Free: 2 active projects, 500 MB database, 1 GB file storage, 50k MAU, pauses after 1 week idle. Pro includes $10 compute credits; Team from $599/month."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws", "vercel"],
+    "platforms": ["linux", "macos", "windows"]
+  },
+  "managedServices": [
+    { "name": "Supabase Cloud", "provider": "Supabase", "url": "https://supabase.com/" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "One Postgres primary per project with vertical compute add-ons and read replicas in other regions; Multigres (alpha) is the planned sharding layer."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL", "GraphQL"],
+  "apis": ["PostgreSQL wire protocol", "REST (PostgREST)", "GraphQL (pg_graphql)", "Realtime WebSocket"],
+  "compatibleWith": ["postgresql", "s3"],
+  "drivers": ["JavaScript", "Python", "Dart", "Swift", "Kotlin", "C#", "Go", "Rust"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full Postgres with superuser-like access, extensions and no lock-in",
+    "Auth, storage, realtime and APIs integrated with row-level security",
+    "Instant REST and GraphQL APIs generated from the schema",
+    "pgvector and AI tooling built in for RAG apps",
+    "Fully open source and self-hostable with Docker"
+  ],
+  "weaknesses": [
+    "Free projects pause after a week of inactivity and are small",
+    "No horizontal write scaling yet (Multigres is alpha)",
+    "Self-hosting the whole stack is complex compared with the hosted service",
+    "Row-level security policies are easy to get wrong, exposing data via the public API"
+  ],
+  "useCases": [
+    "MVPs and startups needing a complete backend quickly",
+    "AI-generated apps from Lovable, Bolt and similar builders",
+    "Mobile and web apps with auth and file uploads",
+    "Realtime collaborative features via Postgres changes",
+    "Semantic search with pgvector"
+  ],
+  "notIdealFor": [
+    "Write volumes beyond a single large Postgres",
+    "Teams wanting only a bare database without platform services",
+    "Strict offline-first mobile sync"
+  ],
+  "notableUsers": ["Lovable", "Bolt.new"],
+  "alternatives": ["firebase", "neon", "appwrite", "pocketbase", "convex", "nile"],
+  "tags": ["postgres", "baas", "open-source", "auth", "realtime"],
+  "links": {
+    "website": "https://supabase.com/",
+    "docs": "https://supabase.com/docs",
+    "repository": "https://github.com/supabase/supabase",
+    "pricing": "https://supabase.com/pricing",
+    "changelog": "https://supabase.com/changelog"
+  },
+  "ids": {
+    "github": "supabase/supabase",
+    "stackoverflowTag": "supabase",
+    "dockerHub": "supabase/postgres",
+    "npm": "@supabase/supabase-js",
+    "pypi": "supabase",
+    "hackerNewsQuery": "Supabase"
+  },
+  "brand": { "color": "#3FCF8E", "simpleIcon": "supabase" },
+  "sources": [
+    "https://supabase.com/pricing",
+    "https://github.com/supabase/supabase/releases",
+    "https://siliconangle.com/2025/10/03/postgresql-specialist-supabase-snags-100m-funding/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,153 @@
+{
+  "slug": "mariposa",
+  "name": "Mariposa",
+  "aliases": [
+    "Mariposa DBMS",
+    "Berkeley Mariposa"
+  ],
+  "tagline": "Stonebraker's 1990s Berkeley research DBMS that federated wide-area sites through an economic bidding model.",
+  "description": "Mariposa was a distributed database research project led by Michael Stonebraker at UC Berkeley, built on the POSTGRES code base and funded by ARO and ARPA. It rejected the usual assumptions of distributed DBMSs (a single administrator, a global optimizer, synchronous coordination) for wide-area settings where sites are autonomous: a broker split each query, solicited bids from sites that 'sold' data and processing within a budget, and fragments could migrate between sites as local policies dictated. Alpha-1 was released in June 1996 with a subset of SQL-3, and the ideas were commercialized by Cohera Corporation for federated data integration. It is now of historical and teaching interest; its themes resurface in federated query engines and data marketplaces.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (UC Berkeley, c. 1994-1999; Alpha-1 released June 1996). Ideas were commercialized by Cohera; no maintained code.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "olap"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "University of California, Berkeley (Michael Stonebraker's group)",
+  "vendorType": "academic",
+  "initialRelease": 1996,
+  "latestVersion": {
+    "version": "Alpha-1",
+    "date": "1996-06"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "POSTGRES",
+  "license": {
+    "type": "permissive",
+    "name": "BSD-style University of California license"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Designed for many autonomous sites over a WAN; the prototype was never deployed at scale."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset of SQL-3)"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Economic model let autonomous sites bid on queries and trade data fragments",
+    "No global synchronization; each site kept local policy control",
+    "Data fragments could move and be copied between sites dynamically",
+    "Influential paper trail on wide-area federated query processing"
+  ],
+  "weaknesses": [
+    "Research alpha only; never production-ready",
+    "Bidding added latency and complexity to query optimization",
+    "Code targets 1990s Unix systems and is unmaintained"
+  ],
+  "useCases": [
+    "Teaching distributed and federated query processing",
+    "Background reading for data-marketplace and federation designs"
+  ],
+  "notIdealFor": [
+    "Any practical deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "trino",
+    "presto",
+    "cockroachdb",
+    "yugabytedb"
+  ],
+  "tags": [
+    "research",
+    "berkeley",
+    "stonebraker",
+    "distributed",
+    "federated"
+  ],
+  "links": {
+    "website": "http://mariposa.cs.berkeley.edu/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Mariposa distributed database"
+  },
+  "brand": {},
+  "sources": [
+    "http://mariposa.cs.berkeley.edu/",
+    "http://mariposa.cs.berkeley.edu/download.html",
+    "https://en.wikipedia.org/wiki/Michael_Stonebraker",
+    "https://dbdb.io/db/mariposa"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,158 @@
+{
+  "slug": "sequins",
+  "name": "Sequins",
+  "aliases": [
+    "Stripe Sequins"
+  ],
+  "tagline": "Stripe's read-only key-value server for Hadoop batch output, loaded from HDFS or S3; archived in 2023.",
+  "description": "Sequins was a Go service from Stripe for serving the output of batch jobs with low latency. You point it at a source root on local disk, HDFS or S3 containing databases and versions of Hadoop SequenceFiles (from MapReduce, Spark or Impala); each node mirrors and indexes its partitions into local Sparkey hash files and answers HTTP GET requests by key, with no client library and no runtime dependency on Hadoop. Updates are whole new versions that nodes switch to atomically, and a ZooKeeper-coordinated cluster partitions and replicates data so it keeps serving through node failures. It filled the niche Voldemort's read-only stores once did. Stripe stopped maintaining it and archived the repository in July 2023.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Stripe archived the repository in July 2023 and marked it inactive. Consider serving batch output from RocksDB-, ScyllaDB- or DynamoDB-backed stores.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "ml-feature-store",
+    "caching"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Stripe",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "1.0.0",
+    "date": "2016-10-26"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "Sparkey",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Partitions and replicates read-only datasets across a ZooKeeper-coordinated cluster; local data is only a cache of the source root."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "HTTP GET by key"
+  ],
+  "apis": [
+    "HTTP"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Serves Hadoop/Spark batch output directly with millisecond key lookups",
+    "Atomic version switching: publish a new dataset by writing a new directory",
+    "No runtime dependency on HDFS once data is mirrored",
+    "Plain HTTP interface with no client library"
+  ],
+  "weaknesses": [
+    "Read-only: no individual writes, only whole-dataset versions",
+    "Archived and unmaintained since 2023",
+    "Requires ZooKeeper for clustered operation"
+  ],
+  "useCases": [
+    "Serving precomputed features or scores from batch pipelines",
+    "Low-latency lookups over nightly Hadoop job output",
+    "Reference design for versioned read-only key-value serving"
+  ],
+  "notIdealFor": [
+    "Workloads with individual writes or updates",
+    "New deployments needing maintenance"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "project-voldemort",
+    "rocksdb",
+    "scylladb",
+    "amazon-dynamodb",
+    "apache-hbase"
+  ],
+  "tags": [
+    "read-only",
+    "hadoop",
+    "go",
+    "stripe",
+    "archived"
+  ],
+  "links": {
+    "website": "https://github.com/stripe-archive/sequins",
+    "repository": "https://github.com/stripe-archive/sequins"
+  },
+  "ids": {
+    "github": "stripe-archive/sequins",
+    "hackerNewsQuery": "Stripe Sequins"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/stripe-archive/sequins",
+    "https://github.com/stripe-archive/sequins/blob/master/doc/manual/2-1-on-disk-format/README.md",
+    "https://dbdb.io/db/sequins"
+  ],
+  "lastVerified": "2026-10-27"
+}

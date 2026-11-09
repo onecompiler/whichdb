@@ -1,0 +1,176 @@
+{
+  "slug": "rdfox",
+  "name": "RDFox",
+  "aliases": [],
+  "tagline": "In-memory RDF store with incremental Datalog reasoning, now owned by Samsung.",
+  "description": "RDFox is a high-performance, in-memory RDF triple store and Datalog reasoner developed at the University of Oxford and commercialized by Oxford Semantic Technologies, which Samsung Electronics acquired in 2024. Its distinguishing feature is incremental materialization: rules and OWL 2 RL axioms are re-evaluated efficiently as data changes, so queries see up-to-date inferences without full recomputation. It runs as a server or embedded library, including an Android build used on Samsung Galaxy devices. Choose it when rule-based reasoning speed matters more than raw dataset size.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "embedded",
+    "edge",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Oxford Semantic Technologies (Samsung Electronics)",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "7.7",
+    "date": "2026-09-29"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Commercial licenses; time-limited trial licenses are available on request."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Data and materialized inferences are held in RAM on one machine; billions of triples need large memory."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL",
+    "Datalog",
+    "OWL 2 RL"
+  ],
+  "apis": [
+    "REST API",
+    "C/C++ API",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C++",
+    "Python (REST)"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Incremental Datalog and OWL 2 RL reasoning keeps inferences current as data changes",
+    "Parallel in-memory engine with very fast materialization",
+    "Runs embedded on edge and mobile devices, including Android",
+    "Rich rule language with negation, aggregation and stratification"
+  ],
+  "weaknesses": [
+    "Proprietary with no free production tier",
+    "RAM-bound dataset size",
+    "Samsung ownership may steer roadmap toward on-device use"
+  ],
+  "useCases": [
+    "Rule-based decision and compliance engines",
+    "On-device personal knowledge graphs",
+    "Real-time knowledge-graph reasoning",
+    "Product configuration and validation"
+  ],
+  "notIdealFor": [
+    "Very large graphs that exceed RAM",
+    "Property-graph Cypher workloads",
+    "Open-source-only projects"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ontotext-graphdb",
+    "stardog",
+    "allegrograph",
+    "oxigraph",
+    "apache-jena-tdb"
+  ],
+  "tags": [
+    "rdf",
+    "datalog",
+    "reasoning",
+    "in-memory",
+    "samsung"
+  ],
+  "links": {
+    "website": "https://www.oxfordsemantic.tech/",
+    "docs": "https://docs.oxfordsemantic.tech/",
+    "changelog": "https://docs.oxfordsemantic.tech/release-notes.html"
+  },
+  "ids": {
+    "stackoverflowTag": "rdfox",
+    "dockerHub": "oxfordsemantic/rdfox",
+    "hackerNewsQuery": "RDFox"
+  },
+  "brand": {
+    "color": "#1428A0"
+  },
+  "sources": [
+    "https://docs.oxfordsemantic.tech/release-notes.html",
+    "https://www.uktech.news/tech-hubs/south-east/oxford/samsung-acquire-oxford-knowledge-graph-spinout-20240718",
+    "https://hub.docker.com/r/oxfordsemantic/rdfox"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,182 @@
+{
+  "slug": "turbopuffer",
+  "name": "turbopuffer",
+  "aliases": [
+    "tpuf"
+  ],
+  "tagline": "Serverless vector and full-text search on object storage, priced for billions of documents.",
+  "description": "turbopuffer is a proprietary serverless search engine that stores every namespace on object storage and caches hot data on NVMe and in memory, so cold data costs object-storage prices while warm queries stay fast. It provides vector (ANN), BM25 full-text and hybrid search with attribute filtering, strongly consistent reads by default and namespaces suited to one-per-tenant designs. It became popular with AI companies that index huge numbers of small corpora, such as code-editor and workspace products. Expect higher cold-query latency than RAM-resident engines and plan minimums from $16 per month.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "vector-search",
+    "full-text-search",
+    "rag"
+  ],
+  "architecture": [
+    "serverless",
+    "shared-storage",
+    "distributed"
+  ],
+  "developer": "turbopuffer Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary SaaS"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "startingPrice": "$16/month minimum (Launch)",
+    "notes": "Usage billed on storage (~$0.33/GB), data written and data queried. Plans: Launch $16, Scale $256, Enterprise $4,096 monthly minimums; Enterprise adds BYOC, CMEK and single tenancy."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "turbopuffer",
+      "provider": "turbopuffer",
+      "url": "https://turbopuffer.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Namespaces on object storage scale to very large document counts; customers run millions of namespaces."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "turbopuffer query API (JSON)"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "TypeScript",
+    "Go",
+    "Java",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Object-storage-first design makes large, mostly-cold datasets cheap",
+    "Vector, BM25 and hybrid search with filters in one API",
+    "Strongly consistent reads by default",
+    "Namespaces scale to millions of tenants",
+    "No clusters to size or operate"
+  ],
+  "weaknesses": [
+    "Closed source, cloud-only (BYOC only on Enterprise)",
+    "Cold namespace queries are noticeably slower than warm ones",
+    "No free tier",
+    "Narrower query features than a full search engine"
+  ],
+  "useCases": [
+    "Per-user or per-repo indexes for AI coding and productivity tools",
+    "RAG over billions of chunks",
+    "Hybrid search for multi-tenant SaaS"
+  ],
+  "notIdealFor": [
+    "Self-hosted or air-gapped environments",
+    "Consistently ultra-low-latency queries on cold data",
+    "Analytics and aggregations"
+  ],
+  "notableUsers": [
+    "Cursor",
+    "Notion",
+    "Linear"
+  ],
+  "alternatives": [
+    "pinecone",
+    "lancedb",
+    "amazon-s3-vectors",
+    "qdrant",
+    "chroma",
+    "zilliz-cloud"
+  ],
+  "tags": [
+    "vector-database",
+    "serverless",
+    "object-storage",
+    "hybrid-search",
+    "proprietary"
+  ],
+  "links": {
+    "website": "https://turbopuffer.com/",
+    "docs": "https://turbopuffer.com/docs",
+    "pricing": "https://turbopuffer.com/pricing"
+  },
+  "ids": {
+    "npm": "@turbopuffer/turbopuffer",
+    "pypi": "turbopuffer",
+    "hackerNewsQuery": "turbopuffer"
+  },
+  "brand": {},
+  "sources": [
+    "https://turbopuffer.com/pricing",
+    "https://turbopuffer.com/docs",
+    "https://pypi.org/project/turbopuffer/"
+  ],
+  "lastVerified": "2026-10-27"
+}

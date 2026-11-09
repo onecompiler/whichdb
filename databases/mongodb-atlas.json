@@ -1,0 +1,207 @@
+{
+  "slug": "mongodb-atlas",
+  "name": "MongoDB Atlas",
+  "aliases": [
+    "Atlas"
+  ],
+  "tagline": "MongoDB's own multi-cloud DBaaS, bundling search, vector search and stream processing.",
+  "description": "MongoDB Atlas is the fully managed version of MongoDB run by MongoDB, Inc. on AWS, Google Cloud and Azure, including clusters that span providers. Beyond hosting the server it adds Atlas Search and Vector Search (Lucene-based, co-located with the cluster), Atlas Stream Processing, Online Archive, global clusters and point-in-time backups. New server versions land on Atlas first, as 9.0 did in September 2026. The mobile Device Sync and Data API products reached end of life in September 2025, so Atlas is now firmly a server-side data platform.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "search",
+    "vector",
+    "time-series",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "stream-processing",
+    "content-management",
+    "iot",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "primary-replica"
+  ],
+  "developer": "MongoDB, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "C++",
+    "Java",
+    "Go"
+  ],
+  "basedOn": "MongoDB",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary managed service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "Free M0 cluster (512 MB); Flex and dedicated tiers billed hourly",
+    "notes": "Serverless instances were retired in favour of Flex clusters in 2025. Search, vector search and stream processing are billed separately."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "MongoDB Atlas",
+      "provider": "MongoDB, Inc.",
+      "url": "https://www.mongodb.com/atlas"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Multi-region and multi-cloud replica sets for DR and local reads; Global Clusters use zone sharding to keep writes in a user's region."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "tunable",
+      "causal"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "MongoDB Query API (MQL)",
+    "Aggregation pipeline",
+    "Atlas Search ($search)"
+  ],
+  "apis": [
+    "MongoDB wire protocol",
+    "Atlas Administration API"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "C",
+    "C++",
+    "C#",
+    "Go",
+    "Java",
+    "Kotlin",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Rust",
+    "Swift"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs on AWS, Google Cloud and Azure, including single clusters that span providers",
+    "Lucene-backed full-text and vector search without running a separate search cluster",
+    "Gets new MongoDB server versions and features before self-managed editions",
+    "Backups with point-in-time restore, auto-scaling and performance advisor built in",
+    "Free M0 tier makes prototyping costless"
+  ],
+  "weaknesses": [
+    "Costs climb quickly once search nodes, backups and cross-region traffic are added",
+    "Lock-in to MongoDB's commercial terms; only MongoDB-compatible clones offer an exit",
+    "Device Sync and Data API were retired in 2025, stranding some mobile architectures",
+    "Shared and Flex tiers have throughput and feature limits that surprise teams in production"
+  ],
+  "useCases": [
+    "Managed MongoDB for SaaS backends",
+    "Hybrid keyword plus vector search for RAG applications",
+    "Multi-cloud or cloud-exit-ready deployments",
+    "Event processing with Atlas Stream Processing over Kafka",
+    "Globally distributed apps with data residency rules"
+  ],
+  "notIdealFor": [
+    "Cost-sensitive workloads with steady, predictable load (self-host may be cheaper)",
+    "Offline-first mobile sync (Device Sync is end-of-life)",
+    "Heavy analytics over the full dataset"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "amazon-documentdb",
+    "azure-documentdb",
+    "azure-cosmos-db",
+    "couchbase-capella",
+    "google-cloud-firestore"
+  ],
+  "tags": [
+    "dbaas",
+    "document",
+    "multi-cloud",
+    "vector-search",
+    "mongodb-ecosystem"
+  ],
+  "links": {
+    "website": "https://www.mongodb.com/atlas",
+    "docs": "https://www.mongodb.com/docs/atlas/",
+    "pricing": "https://www.mongodb.com/pricing",
+    "changelog": "https://www.mongodb.com/docs/atlas/release-notes/changelog/"
+  },
+  "ids": {
+    "stackoverflowTag": "mongodb-atlas",
+    "hackerNewsQuery": "MongoDB Atlas"
+  },
+  "brand": {
+    "color": "#00ED64",
+    "simpleIcon": "mongodb"
+  },
+  "sources": [
+    "https://www.mongodb.com/atlas",
+    "https://www.mongodb.com/products/updates",
+    "https://www.mongodb.com/docs/atlas/device-sdks/deprecation/",
+    "https://www.mongodb.com/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

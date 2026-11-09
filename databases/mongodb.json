@@ -1,0 +1,235 @@
+{
+  "slug": "mongodb",
+  "name": "MongoDB",
+  "aliases": [
+    "Mongo",
+    "MongoDB Community Server",
+    "MongoDB Enterprise Advanced"
+  ],
+  "tagline": "The default document database: flexible BSON documents, rich queries and built-in sharding.",
+  "description": "MongoDB stores data as BSON documents in collections and queries them with the MongoDB Query API and aggregation pipeline, so application objects map onto storage without an ORM. Replica sets give automatic failover, native sharding spreads data across many nodes, and multi-document ACID transactions have been available since 4.0. Version 9.0 (GA September 2026) continues the push into search, vector search and performance. It is the reference implementation that a whole ecosystem of 'MongoDB-compatible' services measures itself against, but the server is under the source-available SSPL rather than an OSI license.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "search",
+    "vector",
+    "time-series",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "metadata-store",
+    "iot",
+    "time-series",
+    "full-text-search",
+    "vector-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "MongoDB, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "9.0.4",
+    "date": "2026-10-14"
+  },
+  "writtenIn": [
+    "C++",
+    "JavaScript",
+    "Python"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Server Side Public License v1 (Community); commercial (Enterprise)",
+    "spdx": "SSPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Server is free to self-host; Enterprise Advanced adds in-memory engine, encryption, LDAP/Kerberos and support. Atlas is the managed option."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "MongoDB Atlas",
+      "provider": "MongoDB, Inc.",
+      "url": "https://www.mongodb.com/atlas"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Range/hashed sharding scales writes; each shard has one primary. Zone sharding can pin data (and its writes) to a region, but a given document is written in one place."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "tunable",
+      "causal"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "MongoDB Query API (MQL)",
+    "Aggregation pipeline"
+  ],
+  "apis": [
+    "MongoDB wire protocol"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "C",
+    "C++",
+    "C#",
+    "Go",
+    "Java",
+    "Kotlin",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Rust",
+    "Scala",
+    "Swift"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Document model maps directly to application objects; nested arrays and subdocuments avoid many joins",
+    "Native sharding plus replica sets with automatic failover, built into the core server",
+    "Aggregation pipeline is expressive enough for most reporting without a separate ETL step",
+    "Change streams give a resumable, ordered feed of writes for event-driven systems",
+    "Largest driver, tooling and hiring ecosystem of any document database",
+    "Queryable Encryption and field-level encryption for sensitive fields"
+  ],
+  "weaknesses": [
+    "SSPL is not OSI open source, which blocks some redistributors and cloud vendors",
+    "Poor shard-key choices are painful to fix and can create hot shards",
+    "Multi-document transactions work but carry real latency and contention costs at scale",
+    "Embedding-versus-referencing decisions push data-modelling work onto the application team",
+    "Several advanced features (in-memory engine, auditing, encryption at rest) are Enterprise-only"
+  ],
+  "useCases": [
+    "Product catalogs with highly variable attributes",
+    "Content management and user-generated content",
+    "Mobile and web backends that evolve their schema weekly",
+    "IoT and event data with time-series collections",
+    "Operational data stores aggregating many upstream systems",
+    "RAG and semantic search next to operational data"
+  ],
+  "notIdealFor": [
+    "Heavily relational models with many-to-many joins",
+    "Large analytical scans (use a columnar warehouse)",
+    "Teams that need a permissive OSI license for redistribution"
+  ],
+  "notableUsers": [
+    "Coinbase",
+    "Forbes",
+    "Bosch"
+  ],
+  "alternatives": [
+    "mongodb-atlas",
+    "couchbase",
+    "amazon-documentdb",
+    "azure-cosmos-db",
+    "documentdb-postgres",
+    "percona-server-mongodb",
+    "postgresql",
+    "ferretdb"
+  ],
+  "tags": [
+    "nosql",
+    "document",
+    "bson",
+    "sharding",
+    "sspl",
+    "mongodb-ecosystem"
+  ],
+  "links": {
+    "website": "https://www.mongodb.com/",
+    "docs": "https://www.mongodb.com/docs/manual/",
+    "repository": "https://github.com/mongodb/mongo",
+    "pricing": "https://www.mongodb.com/pricing",
+    "changelog": "https://www.mongodb.com/docs/manual/release-notes/",
+    "wikipedia": "https://en.wikipedia.org/wiki/MongoDB"
+  },
+  "ids": {
+    "github": "mongodb/mongo",
+    "stackoverflowTag": "mongodb",
+    "wikipedia": "MongoDB",
+    "dockerHub": "library/mongo",
+    "npm": "mongodb",
+    "pypi": "pymongo",
+    "crates": "mongodb",
+    "hackerNewsQuery": "MongoDB"
+  },
+  "brand": {
+    "color": "#47A248",
+    "simpleIcon": "mongodb"
+  },
+  "sources": [
+    "https://www.mongodb.com/docs/manual/release-notes/",
+    "https://www.mongodb.com/try/download/community",
+    "https://www.mongodb.com/products/updates",
+    "https://github.com/mongodb/mongo",
+    "https://www.mongodb.com/legal/licensing/server-side-public-license"
+  ],
+  "lastVerified": "2026-10-27"
+}

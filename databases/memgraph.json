@@ -1,0 +1,190 @@
+{
+  "slug": "memgraph",
+  "name": "Memgraph",
+  "aliases": [],
+  "tagline": "In-memory, Cypher-compatible graph database in C++ for streaming and real-time graph workloads.",
+  "description": "Memgraph is an in-memory property-graph database written in C++ that speaks Cypher over the Bolt protocol, so most Neo4j drivers and tools work against it unchanged. Data lives in RAM with snapshots and a write-ahead log for durability, which gives low-latency traversals and fast ingestion straight from Kafka or Pulsar streams. MAGE adds graph algorithms, and recent 3.x releases add vector and text search aimed at GraphRAG and agent memory. It is a strong fit when the working graph fits in memory and freshness matters; the community edition is source-available under BSL 1.1, with HA and fine-grained security in Enterprise.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "real-time-analytics",
+    "stream-processing",
+    "rag",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Memgraph Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "3.14.0",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1 (Community) / Memgraph Enterprise License",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community edition is free to use under BSL 1.1; Enterprise (HA, RBAC, auditing) is priced by memory capacity."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "The whole graph must fit in RAM of one instance; replication and HA (Enterprise) scale reads and availability, not size."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Cypher"
+  ],
+  "apis": [
+    "Bolt protocol",
+    "WebSocket"
+  ],
+  "compatibleWith": [
+    "neo4j"
+  ],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "Go",
+    "C#",
+    "Rust",
+    "C/C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Low-latency traversals because the full graph is kept in RAM",
+    "Bolt and Cypher compatibility lets Neo4j drivers and many tools connect unchanged",
+    "Native Kafka, Redpanda and Pulsar stream ingestion with triggers for reactive graphs",
+    "Custom procedures in Python, C++ or Rust plus the MAGE algorithm library",
+    "Vector and text search built in for GraphRAG and agent-memory use cases"
+  ],
+  "weaknesses": [
+    "Dataset size is capped by RAM, which raises cost for large graphs",
+    "No sharding: one primary holds the entire graph",
+    "BSL licensing is not OSI open source and restricts offering it as a service",
+    "HA, RBAC and audit logs are Enterprise-only"
+  ],
+  "useCases": [
+    "Real-time fraud detection on streaming transactions",
+    "Network and IT topology monitoring",
+    "GraphRAG and agent memory",
+    "Supply chain optimization",
+    "Dynamic recommendation engines"
+  ],
+  "notIdealFor": [
+    "Graphs much larger than available RAM",
+    "RDF/SPARQL workloads",
+    "Cold archival graph storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "falkordb",
+    "tigergraph",
+    "kuzu",
+    "ladybugdb",
+    "amazon-neptune-analytics"
+  ],
+  "tags": [
+    "in-memory",
+    "cypher",
+    "bolt",
+    "streaming",
+    "graphrag"
+  ],
+  "links": {
+    "website": "https://memgraph.com/",
+    "docs": "https://memgraph.com/docs",
+    "repository": "https://github.com/memgraph/memgraph",
+    "pricing": "https://memgraph.com/pricing",
+    "changelog": "https://memgraph.com/docs/release-notes"
+  },
+  "ids": {
+    "github": "memgraph/memgraph",
+    "stackoverflowTag": "memgraphdb",
+    "dockerHub": "memgraph/memgraph",
+    "pypi": "gqlalchemy",
+    "hackerNewsQuery": "Memgraph"
+  },
+  "brand": {
+    "color": "#FB6E00"
+  },
+  "sources": [
+    "https://github.com/memgraph/memgraph/releases",
+    "https://memgraph.com/legal",
+    "https://hub.docker.com/r/memgraph/memgraph"
+  ],
+  "lastVerified": "2026-10-27"
+}

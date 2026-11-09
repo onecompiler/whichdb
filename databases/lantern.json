@@ -1,0 +1,174 @@
+{
+  "slug": "lantern",
+  "name": "Lantern",
+  "aliases": [
+    "lantern_hnsw",
+    "Lantern Cloud"
+  ],
+  "tagline": "Postgres vector extension built on USearch HNSW; development has stalled since late 2024.",
+  "description": "Lantern is a PostgreSQL extension from the YC-backed Lantern Systems that adds a lantern_hnsw index type based on USearch, with faster external index builds, in-database embedding generation and BM25 text search through its lantern_extras companion. It was pitched as a quicker alternative to pgvector's HNSW. Since v0.5.0 in November 2024 there have been no releases and the repository has had no commits since December 2024, while pgvector closed most of the performance gap. Lantern Cloud's website is still online, but the project looks dormant; prefer pgvector, VectorChord or pgvectorscale for new work.",
+  "productType": "extension",
+  "status": "maintenance",
+  "statusNote": "No releases since v0.5.0 (Nov 2024) and no commits since Dec 2024; the project appears dormant. pgvector, VectorChord or pgvectorscale are safer choices.",
+  "maturity": "legacy",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "relational"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Lantern Systems, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "0.5.0",
+    "date": "2024-11-15"
+  },
+  "writtenIn": [
+    "C",
+    "Rust"
+  ],
+  "basedOn": "PostgreSQL (uses USearch)",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Extension is free; Lantern Cloud advertised a free tier and a $44/month production tier."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Lantern Cloud",
+      "provider": "Lantern Systems",
+      "url": "https://lantern.dev/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Any PostgreSQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "USearch-based HNSW with external (out-of-database) index builds",
+    "In-database embedding generation via lantern_extras",
+    "Postgres transactions and joins around vectors"
+  ],
+  "weaknesses": [
+    "No commits or releases since late 2024",
+    "Supports only up to PostgreSQL 17",
+    "pgvector now matches most of its performance advantages",
+    "AGPL licence"
+  ],
+  "useCases": [
+    "Maintaining existing Lantern installs while planning migration",
+    "Benchmarking USearch-based HNSW against pgvector"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Production systems needing active maintenance"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pgvector",
+    "vectorchord",
+    "pgvectorscale",
+    "paradedb",
+    "usearch"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "vector",
+    "extension",
+    "dormant"
+  ],
+  "links": {
+    "website": "https://lantern.dev/",
+    "docs": "https://lantern.dev/docs",
+    "repository": "https://github.com/lanterndata/lantern",
+    "changelog": "https://github.com/lanterndata/lantern/releases"
+  },
+  "ids": {
+    "github": "lanterndata/lantern",
+    "dockerHub": "lanterndata/lantern",
+    "hackerNewsQuery": "Lantern Postgres vector"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/lanterndata/lantern",
+    "https://github.com/lanterndata/lantern/releases",
+    "https://lantern.dev/"
+  ],
+  "lastVerified": "2026-10-27"
+}

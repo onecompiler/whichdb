@@ -1,0 +1,153 @@
+{
+  "slug": "jsonstore-io",
+  "name": "jsonstore.io",
+  "aliases": [
+    "jsonstore"
+  ],
+  "tagline": "Free hosted JSON store addressed by a secret URL; the project is archived and the domain is parked.",
+  "description": "jsonstore.io was a free hobby service that handed you a long random endpoint URL; POST, PUT, GET and DELETE requests on paths under it created, updated, read and removed JSON values, with no signup or schema. It was popular for prototypes, hackathons and static sites that needed a scrap of persistence. Under the hood the small Node/Express app stored data in Firebase. The GitHub project (about 2,000 stars) is archived and marked inactive, last touched in 2020, and the domain now serves a parked page, so any data once stored there should be considered gone.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Repository archived and marked inactive (last commit 2020); the jsonstore.io domain now shows a parked page. Use a maintained BaaS or KV service instead.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "configuration",
+    "session-store"
+  ],
+  "architecture": [
+    "serverless"
+  ],
+  "developer": "bluzi (open-source community)",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "basedOn": "Firebase",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Was free; the hosted service no longer operates."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Intended for small projects only."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "HTTP path-based REST"
+  ],
+  "apis": [
+    "REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-signup JSON storage via a secret URL (historically)",
+    "Plain HTTP verbs made it usable from curl, browsers and any language",
+    "MIT-licensed code that can still be studied or self-hosted on Firebase"
+  ],
+  "weaknesses": [
+    "Service is gone; the domain is parked",
+    "Security relied only on keeping the endpoint URL secret",
+    "No queries beyond fetching a path; no backups or SLAs"
+  ],
+  "useCases": [
+    "Historical reference for URL-addressed JSON stores",
+    "Example code for a tiny Firebase-backed REST store"
+  ],
+  "notIdealFor": [
+    "Any current use: the hosted service no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kvdb-io",
+    "firebase-realtime-database",
+    "supabase",
+    "upstash",
+    "cloudflare-workers-kv",
+    "pocketbase"
+  ],
+  "tags": [
+    "rest",
+    "json",
+    "hosted",
+    "hobby",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/bluzi/jsonstore",
+    "repository": "https://github.com/bluzi/jsonstore"
+  },
+  "ids": {
+    "github": "bluzi/jsonstore",
+    "hackerNewsQuery": "jsonstore.io"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/bluzi/jsonstore",
+    "https://github.com/bluzi/jsonstore/blob/master/package.json",
+    "https://web.archive.org/web/2019/https://www.jsonstore.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,160 @@
+{
+  "slug": "halodb",
+  "name": "HaloDB",
+  "aliases": [],
+  "tagline": "Yahoo's embedded Java key-value store: off-heap index of every key plus append-only data files.",
+  "description": "HaloDB is an embedded key-value store for the JVM that Yahoo (Oath) built for the storage layer of a high-throughput, low-latency key-value service behind its ad platforms. Its design follows Bitcask: every key lives in an in-memory index held off-heap to avoid garbage-collection pauses, while values are appended to log-structured data files, so a read costs at most one disk seek and writes are sequential. Background compaction reclaims stale entries, tombstone files record deletes, and the index is rebuilt in parallel on open. The trade-off is that all keys must fit in RAM and there are no range scans. The latest release is 0.5.6 from May 2021, and the repository has been quiet since 2023.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No release since 0.5.6 (May 2021) and only documentation commits since; the repository remains open under Yahoo.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Yahoo (Oath)",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "0.5.6",
+    "date": "2021-05-26"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process library; capacity is bounded by RAM available for the key index."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java API"
+  ],
+  "apis": [
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "At most one disk seek per read thanks to the full in-memory key index",
+    "Off-heap index avoids JVM garbage-collection pauses",
+    "Sequential append-only writes suit SSDs and spinning disks alike",
+    "Proven behind Yahoo's ad-serving key-value service"
+  ],
+  "weaknesses": [
+    "Every key must fit in memory",
+    "No range queries, ordered iteration or transactions",
+    "Effectively dormant since 2021"
+  ],
+  "useCases": [
+    "Embedded storage for a custom JVM key-value service",
+    "Point-lookup workloads with SSD-resident values",
+    "Local persistent caches"
+  ],
+  "notIdealFor": [
+    "Range scans or secondary indexes",
+    "Key sets larger than RAM"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "lmdb",
+    "chronicle-map",
+    "mapdb",
+    "xodus"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "key-value",
+    "bitcask",
+    "yahoo"
+  ],
+  "links": {
+    "website": "https://github.com/yahoo/HaloDB",
+    "repository": "https://github.com/yahoo/HaloDB",
+    "changelog": "https://github.com/yahoo/HaloDB/releases"
+  },
+  "ids": {
+    "github": "yahoo/HaloDB",
+    "hackerNewsQuery": "HaloDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/yahoo/HaloDB",
+    "https://github.com/yahoo/HaloDB/releases",
+    "https://yahoodevelopers.tumblr.com/post/178250134648/introducing-halodb-a-fast-embedded-key-value"
+  ],
+  "lastVerified": "2026-10-27"
+}

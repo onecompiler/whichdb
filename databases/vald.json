@@ -1,0 +1,165 @@
+{
+  "slug": "vald",
+  "name": "Vald",
+  "aliases": [],
+  "tagline": "Kubernetes-native distributed vector search engine built on Yahoo Japan's NGT.",
+  "description": "Vald is a distributed approximate nearest neighbour search engine created at Yahoo Japan (now LY Corporation) and designed to run only on Kubernetes. It uses the NGT graph index, shards vectors across agent pods, rebuilds indexes asynchronously without blocking queries and backs index state up to persistent volumes or object storage. Filtering and pre/post-processing are handled by pluggable gRPC 'filter' components. It is solid infrastructure for teams already deep in Kubernetes, but it has a much smaller community than Milvus or Qdrant and no metadata-rich query layer.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "LY Corporation (vdaas)",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "1.8.0",
+    "date": "2026-08-26"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "NGT",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Agents shard and replicate the index across Kubernetes pods; LB gateway fans queries out and merges results."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Vald gRPC API"
+  ],
+  "apis": [
+    "gRPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Java",
+    "Python",
+    "Node.js"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Asynchronous auto-indexing keeps queries serving during rebuilds",
+    "Horizontal scaling and self-healing via Kubernetes",
+    "NGT index offers strong speed/recall trade-offs",
+    "Pluggable ingress/egress filters for custom preprocessing"
+  ],
+  "weaknesses": [
+    "Kubernetes is mandatory",
+    "Minimal metadata filtering and no hybrid/full-text search",
+    "Small community and ecosystem integrations",
+    "Slow release cadence in 2024-25"
+  ],
+  "useCases": [
+    "Large-scale image or embedding similarity search on Kubernetes",
+    "Recommendation candidate retrieval",
+    "Internal ANN services"
+  ],
+  "notIdealFor": [
+    "Non-Kubernetes environments",
+    "RAG needing rich metadata filters",
+    "Quick prototypes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "milvus",
+    "qdrant",
+    "weaviate",
+    "vespa",
+    "faiss"
+  ],
+  "tags": [
+    "vector-database",
+    "kubernetes",
+    "ngt",
+    "open-source",
+    "go"
+  ],
+  "links": {
+    "website": "https://vald.vdaas.org/",
+    "docs": "https://vald.vdaas.org/docs/",
+    "repository": "https://github.com/vdaas/vald",
+    "changelog": "https://github.com/vdaas/vald/releases"
+  },
+  "ids": {
+    "github": "vdaas/vald",
+    "dockerHub": "vdaas/vald-agent-ngt",
+    "hackerNewsQuery": "Vald vector search"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/vdaas/vald",
+    "https://github.com/vdaas/vald/releases",
+    "https://vald.vdaas.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

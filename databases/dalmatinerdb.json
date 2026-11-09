@@ -1,0 +1,164 @@
+{
+  "slug": "dalmatinerdb",
+  "name": "DalmatinerDB",
+  "aliases": [
+    "Dalmatiner"
+  ],
+  "tagline": "Erlang metric store on riak_core and ZFS with a SQL-like query language; dormant since 2019.",
+  "description": "DalmatinerDB is a purpose-built metrics database from Project FiFo, written in Erlang on Basho's riak_core for distribution and designed to sit on ZFS, leaning on the filesystem for checksums, compression, caching and intent logging rather than reimplementing them. It deliberately keeps the data model minimal: fixed-resolution numeric series addressed by bucket and metric, written and read sequentially over a compact binary protocol, with front-end servers that offer a SQL-like query language for aggregations and a Grafana integration. That trade-off made writes cheap and scaling straightforward, at the cost of flexibility. The last tagged release was 0.3.4p1 in January 2018 and repository activity ended in 2019–2020, so it is effectively dormant; Prometheus-compatible stores such as VictoriaMetrics or M3DB are the practical choices now.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Dormant: last release 0.3.4p1 (Jan 2018) and no repository activity since 2020.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "time-series",
+    "observability"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Project FiFo",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.3.4p1",
+    "date": "2018-01-20"
+  },
+  "writtenIn": [
+    "Erlang"
+  ],
+  "basedOn": "riak_core",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "riak_core ring distributes and replicates metrics across nodes."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "DalmatinerDB query language (SQL-like)"
+  ],
+  "apis": [
+    "Binary TCP protocol",
+    "HTTP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Erlang"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very cheap sequential writes of fixed-resolution metrics",
+    "Uses ZFS for checksums, compression and caching instead of reimplementing them",
+    "riak_core distribution gives straightforward horizontal scaling",
+    "Grafana integration"
+  ],
+  "weaknesses": [
+    "Dormant since 2019 with no maintainer activity",
+    "Best performance assumes ZFS, which narrows deployment options",
+    "Minimal data model: no rich labels, joins or general queries"
+  ],
+  "useCases": [
+    "Maintaining existing Project FiFo / SmartOS monitoring setups",
+    "Studying a filesystem-leaning metrics store design"
+  ],
+  "notIdealFor": [
+    "New monitoring stacks",
+    "Label-heavy Prometheus-style metrics",
+    "Event or log data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "victoriametrics",
+    "m3db",
+    "prometheus",
+    "influxdb",
+    "graphite",
+    "questdb"
+  ],
+  "tags": [
+    "time-series",
+    "metrics",
+    "erlang",
+    "zfs",
+    "dormant"
+  ],
+  "links": {
+    "website": "https://dalmatiner.io/",
+    "docs": "https://docs.dalmatiner.io/",
+    "repository": "https://gitlab.com/Project-FiFo/DalmatinerDB/dalmatinerdb"
+  },
+  "ids": {
+    "github": "dalmatinerdb/dalmatinerdb",
+    "hackerNewsQuery": "DalmatinerDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://dalmatiner.io/",
+    "https://gitlab.com/Project-FiFo/DalmatinerDB/dalmatinerdb",
+    "https://github.com/dalmatinerdb/dalmatinerdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

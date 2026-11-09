@@ -1,0 +1,223 @@
+{
+  "slug": "pgvector",
+  "name": "pgvector",
+  "aliases": [
+    "pg_vector",
+    "vector extension"
+  ],
+  "tagline": "The standard Postgres extension for vector similarity search with HNSW and IVFFlat indexes.",
+  "description": "pgvector adds a vector type plus halfvec, bit and sparsevec variants to PostgreSQL, with exact search and approximate HNSW and IVFFlat indexes, so embeddings live in the same rows, transactions and backups as the rest of your data. It is available on essentially every managed Postgres (RDS, Aurora, Cloud SQL, AlloyDB, Azure, Supabase, Neon), which makes it the lowest-friction way to add semantic search to an existing app. Iterative index scans (0.8) fixed the worst filtered-query recall problems. It is comfortable into the tens of millions of vectors; beyond that, index build memory and filtering trade-offs push teams toward pgvectorscale, VectorChord or a dedicated vector database.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "relational"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Andrew Kane and pgvector contributors",
+  "vendorType": "community",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "0.8.7",
+    "date": "2026-10-01"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "PostgreSQL License",
+    "spdx": "PostgreSQL"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; included at no extra cost on most managed PostgreSQL services."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "digitalocean",
+      "heroku",
+      "render",
+      "railway",
+      "aiven"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon RDS / Aurora PostgreSQL",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/rds/postgresql/"
+    },
+    {
+      "name": "Cloud SQL / AlloyDB",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/sql/postgresql"
+    },
+    {
+      "name": "Azure Database for PostgreSQL",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/postgresql/"
+    },
+    {
+      "name": "Supabase",
+      "provider": "Supabase",
+      "url": "https://supabase.com/"
+    },
+    {
+      "name": "Neon",
+      "provider": "Databricks",
+      "url": "https://neon.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Bounded by one Postgres primary; HNSW builds want the index in maintenance_work_mem. Citus can shard vector tables."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Go",
+    "Java",
+    "Ruby",
+    "Rust",
+    "C#",
+    "PHP",
+    "Elixir"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Vectors live next to relational data with full ACID and joins",
+    "Available on virtually every managed Postgres",
+    "HNSW and IVFFlat with L2, inner product, cosine, L1, Hamming and Jaccard",
+    "halfvec, binary and sparse vectors cut storage",
+    "Iterative index scans improve filtered search recall"
+  ],
+  "weaknesses": [
+    "HNSW index builds are memory-hungry and slow at 100M+ vectors",
+    "Filtered ANN still trails purpose-built engines",
+    "No built-in BM25; hybrid search needs Postgres FTS or ParadeDB",
+    "Scaling beyond one primary needs Citus or sharding"
+  ],
+  "useCases": [
+    "Adding semantic search to an existing Postgres app",
+    "RAG with permission filtering via SQL joins",
+    "Recommendations next to product data",
+    "Deduplication and similarity lookups"
+  ],
+  "notIdealFor": [
+    "Billion-vector collections",
+    "Very high QPS vector-only workloads",
+    "Teams not already on Postgres"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pgvectorscale",
+    "vectorchord",
+    "paradedb",
+    "qdrant",
+    "pinecone",
+    "sqlite-vec"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "vector",
+    "extension",
+    "rag",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://github.com/pgvector/pgvector",
+    "docs": "https://github.com/pgvector/pgvector#readme",
+    "repository": "https://github.com/pgvector/pgvector",
+    "changelog": "https://github.com/pgvector/pgvector/blob/master/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "pgvector/pgvector",
+    "stackoverflowTag": "pgvector",
+    "dockerHub": "pgvector/pgvector",
+    "npm": "pgvector",
+    "pypi": "pgvector",
+    "hackerNewsQuery": "pgvector"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/pgvector/pgvector",
+    "https://github.com/pgvector/pgvector/blob/master/CHANGELOG.md",
+    "https://hub.docker.com/r/pgvector/pgvector"
+  ],
+  "lastVerified": "2026-10-27"
+}

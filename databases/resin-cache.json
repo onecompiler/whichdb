@@ -1,0 +1,172 @@
+{
+  "slug": "resin-cache",
+  "name": "Resin Cache",
+  "aliases": [
+    "Resin distributed cache",
+    "Resin ClusterCache",
+    "Resin memcached"
+  ],
+  "tagline": "Distributed JCache and memcached-compatible key-value cache built into Caucho's Resin Pro app server.",
+  "description": "Resin Cache is the clustered caching layer of Caucho Technology's Resin Pro Java application server. Introduced with Resin 4.0 in 2009 as a JCache (JSR-107-style) java.util.Map extension, it replicates or shards entries across the Resin cluster's triad servers, backs HTTP session replication, and since 4.0.24 (2011) also speaks the memcached protocol as both client and server, so it can replace a memcached tier. Tiered configurations put a local in-process cache in front of a shared ClusterCache with read-through loaders and optional persistence. Resin itself is now in maintenance mode: 4.0.67, a bug-fix release, shipped in November 2024, and the cache is only relevant if you already run Resin Pro.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Ships only inside Resin Pro 4.0, which now gets occasional bug-fix releases (4.0.67, November 2024). For new caches use Redis, Valkey or Hazelcast.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Caucho Technology",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "Resin Pro 4.0.67",
+    "date": "2024-11-20"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Resin Pro commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Clustering and distributed caching are Resin Pro features; the GPL Resin edition lacks them."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Entries are replicated or sharded across the servers of one Resin cluster."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JCache API",
+    "memcached protocol"
+  ],
+  "apis": [
+    "JCache (JSR-107 style) API",
+    "memcached text protocol"
+  ],
+  "compatibleWith": [
+    "memcached"
+  ],
+  "drivers": [
+    "Java",
+    "Any memcached client"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Built into Resin Pro, so Java apps get clustered caching with no extra servers",
+    "memcached-compatible server and client for drop-in replacement",
+    "Tiered local plus cluster caching with read-through loaders",
+    "Integrated with Resin's session replication"
+  ],
+  "weaknesses": [
+    "Only available inside the Resin Pro application server",
+    "Resin is in maintenance mode with a shrinking user base",
+    "No rich data structures, querying or cross-cluster replication"
+  ],
+  "useCases": [
+    "Session replication for Java web apps on Resin Pro",
+    "Application-level object caching within a Resin cluster",
+    "Replacing a memcached tier in an existing Resin deployment"
+  ],
+  "notIdealFor": [
+    "Non-Resin stacks",
+    "New caching infrastructure",
+    "Durable primary storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "memcached",
+    "hazelcast",
+    "infinispan",
+    "ehcache"
+  ],
+  "tags": [
+    "cache",
+    "java",
+    "jcache",
+    "memcached",
+    "app-server"
+  ],
+  "links": {
+    "website": "https://www.caucho.com/",
+    "changelog": "https://www.caucho.com/download/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Resin memcached Caucho"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.caucho.com/download/",
+    "https://caucho.com/resin-4.0/changes/resin-4.0.33.xtp",
+    "https://www.caucho.com/resin-4.0/changes/resin-4.0.0.xtp",
+    "https://www.infoq.com/news/2011/12/resin-memcached/",
+    "https://en.wikipedia.org/wiki/Resin_(software)"
+  ],
+  "lastVerified": "2026-10-27"
+}

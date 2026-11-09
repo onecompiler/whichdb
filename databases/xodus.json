@@ -1,0 +1,171 @@
+{
+  "slug": "xodus",
+  "name": "Xodus",
+  "aliases": [
+    "JetBrains Xodus"
+  ],
+  "tagline": "JetBrains' embedded transactional Java/Kotlin store behind YouTrack; in sunset in favour of YouTrackDB.",
+  "description": "Xodus is a schema-less embedded database written in Java and Kotlin by JetBrains for YouTrack and JetBrains Hub. It offers three layers: Environments, a transactional key-value store over an append-only log; Entity Stores, with entities that carry properties, blobs and links and a query API; and a virtual file system. Transactions are fully ACID with MVCC snapshot isolation, so reads never block, and there is no server to install. It is Apache 2.0 licensed. The last release, 2.0.1, came out in March 2022, and in 2025 JetBrains marked the project as entering its sunset stage as it moves to YouTrackDB, its OrientDB-derived graph database.",
+  "productType": "library",
+  "status": "deprecated",
+  "statusNote": "JetBrains put Xodus into its 'sunset' stage in Sept 2025 while migrating to YouTrackDB; last release 2.0.1 (March 2022).",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "object"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "JetBrains",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "2.0.1",
+    "date": "2022-03-29"
+  },
+  "writtenIn": [
+    "Java",
+    "Kotlin"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process embedded store; YouTrack runs large instances on it."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java/Kotlin API",
+    "Entity Store query API"
+  ],
+  "apis": [
+    "Java API",
+    "Kotlin DSL (Xodus-DNQ)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Kotlin"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fully ACID with MVCC snapshot isolation; readers never block writers",
+    "Embedded and pure JVM: no native libraries or server process",
+    "Battle-tested as the storage engine of YouTrack",
+    "Entity Store layer adds links and queries on top of key-value storage"
+  ],
+  "weaknesses": [
+    "Sunset stage: no new features and migration expected",
+    "JVM-only, with a modest community outside JetBrains",
+    "No replication or clustering"
+  ],
+  "useCases": [
+    "Embedded storage for JVM desktop or server apps",
+    "Existing YouTrack/Hub-style deployments"
+  ],
+  "notIdealFor": [
+    "New long-lived projects",
+    "Multi-node or networked access"
+  ],
+  "notableUsers": [
+    "JetBrains"
+  ],
+  "alternatives": [
+    "mapdb",
+    "h2",
+    "rocksdb",
+    "lmdb",
+    "chronicle-map",
+    "orientdb"
+  ],
+  "tags": [
+    "embedded",
+    "java",
+    "kotlin",
+    "jetbrains",
+    "key-value"
+  ],
+  "links": {
+    "website": "https://github.com/JetBrains/xodus",
+    "docs": "https://github.com/JetBrains/xodus/wiki",
+    "repository": "https://github.com/JetBrains/xodus"
+  },
+  "ids": {
+    "github": "JetBrains/xodus",
+    "stackoverflowTag": "xodus",
+    "hackerNewsQuery": "JetBrains Xodus"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/JetBrains/xodus",
+    "https://github.com/JetBrains/xodus/releases/tag/v2.0.1",
+    "https://central.sonatype.com/artifact/org.jetbrains.xodus/xodus-openAPI"
+  ],
+  "lastVerified": "2026-10-27"
+}

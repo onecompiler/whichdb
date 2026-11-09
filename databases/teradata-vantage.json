@@ -1,0 +1,207 @@
+{
+  "slug": "teradata-vantage",
+  "name": "Teradata Vantage",
+  "aliases": [
+    "Teradata",
+    "VantageCloud",
+    "VantageCloud Lake",
+    "VantageCloud Enterprise",
+    "Teradata Database"
+  ],
+  "tagline": "The original MPP data warehouse, now VantageCloud with open table formats and in-database analytics.",
+  "description": "Teradata pioneered shared-nothing MPP data warehousing in the 1980s, and Vantage is its current platform: the Teradata engine with mature workload management, a strong cost-based optimizer for complex joins, and ClearScape in-database analytics and ML functions. It runs on-premises (IntelliFlex, VMware) and as VantageCloud Enterprise or the object-storage-based VantageCloud Lake on AWS, Azure and Google Cloud. Engine 20 (initial release June 2025) brought Iceberg and Delta Lake support and functional parity with 17.20, which reaches end of life in June 2027. It remains a heavyweight for large enterprises with complex mixed workloads, but has been losing new-logo deals to Snowflake, Databricks and BigQuery.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "spatial",
+    "time-series"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Teradata Corporation",
+  "vendorType": "company",
+  "initialRelease": 1984,
+  "latestVersion": {
+    "version": "20.00.30.77",
+    "date": "2026"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Consumption or subscription pricing for VantageCloud; on-prem via enterprise contracts. ClearScape Analytics Experience is a free sandbox."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Teradata VantageCloud Lake",
+      "provider": "Teradata (on AWS, Azure, GCP)",
+      "url": "https://www.teradata.com/platform/cloud"
+    },
+    {
+      "name": "Teradata VantageCloud Enterprise",
+      "provider": "Teradata (on AWS, Azure, GCP)",
+      "url": "https://www.teradata.com/platform/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Shared-nothing MPP with hash-distributed data across AMPs; multi-petabyte production systems are common."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (Teradata SQL)",
+    "SPL"
+  ],
+  "apis": [
+    "Teradata CLIv2",
+    "ODBC",
+    "JDBC",
+    "REST (Query Service)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "C#",
+    "Go",
+    "R",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Optimizer and MPP engine handle very complex multi-way joins at scale",
+    "Mature workload management for thousands of concurrent mixed queries",
+    "ClearScape in-database analytics and ML functions near the data",
+    "Open table format support (Iceberg, Delta Lake) in Engine 20",
+    "Decades of proven multi-petabyte enterprise deployments"
+  ],
+  "weaknesses": [
+    "Expensive relative to cloud-native warehouses for many workloads",
+    "Less elastic than separation-of-storage-and-compute rivals outside VantageCloud Lake",
+    "Shrinking mindshare and talent pool among newer data teams"
+  ],
+  "useCases": [
+    "Enterprise data warehouses for banks, retailers and telcos",
+    "Complex regulatory and risk reporting",
+    "Customer 360 analytics across many subject areas",
+    "In-database ML scoring on large datasets"
+  ],
+  "notIdealFor": [
+    "Small analytics teams on tight budgets",
+    "OLTP workloads",
+    "Ad hoc startup analytics (use a serverless warehouse)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "snowflake",
+    "google-bigquery",
+    "amazon-redshift",
+    "databricks-sql",
+    "oracle-exadata",
+    "vertica",
+    "microsoft-fabric-warehouse",
+    "ibm-netezza"
+  ],
+  "tags": [
+    "data-warehouse",
+    "mpp",
+    "enterprise",
+    "analytics",
+    "lakehouse"
+  ],
+  "links": {
+    "website": "https://www.teradata.com/",
+    "docs": "https://docs.teradata.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Teradata"
+  },
+  "ids": {
+    "stackoverflowTag": "teradata",
+    "wikipedia": "Teradata",
+    "npm": "teradatasql",
+    "pypi": "teradatasql",
+    "hackerNewsQuery": "Teradata"
+  },
+  "brand": {
+    "color": "#F37440",
+    "simpleIcon": "teradata"
+  },
+  "sources": [
+    "https://docs.teradata.com/r/Enterprise_IntelliFlex_VMware/Database-Utilities/Introduction-to-Utilities/Changes-and-Additions",
+    "https://aws.amazon.com/marketplace/pp/prodview-ghlr2wogdfphq",
+    "https://www.teradata.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

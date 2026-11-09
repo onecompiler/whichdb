@@ -1,0 +1,181 @@
+{
+  "slug": "faiss",
+  "name": "Faiss",
+  "aliases": [
+    "FAISS",
+    "Facebook AI Similarity Search"
+  ],
+  "tagline": "Meta's C++/Python library for fast dense-vector similarity search and clustering, CPU and GPU.",
+  "description": "Faiss is the reference library for approximate nearest neighbour search, developed by Meta's FAIR lab since 2017. It provides a toolkit of index types (flat, IVF, HNSW, PQ/OPQ, scalar and additive quantizers, binary) that can be composed via index factory strings, plus GPU implementations including NVIDIA cuVS integration for billion-scale batch search. It is a library, not a database: there is no server, no metadata store and no durability beyond writing index files. Many vector databases and research systems use Faiss internally or benchmark against it.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "embedded",
+    "scientific"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Meta (FAIR)",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "1.15.1",
+    "date": "2026-09-16"
+  },
+  "writtenIn": [
+    "C++",
+    "Python",
+    "CUDA"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Billion-vector indexes on a single GPU server are documented; distribution across machines is up to the application."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C++ API",
+    "Python API"
+  ],
+  "apis": [
+    "C++",
+    "Python",
+    "C"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Python",
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Widest range of ANN index and quantization algorithms in one library",
+    "State-of-the-art GPU search, including cuVS integration",
+    "Composable index factory for quick experimentation",
+    "Battle-tested at Meta scale and in countless research papers",
+    "Permissive MIT licence"
+  ],
+  "weaknesses": [
+    "No metadata filtering, persistence layer or server",
+    "Deletes and updates are awkward for many index types",
+    "Choosing and tuning index types needs expertise",
+    "Scaling beyond one machine is your problem"
+  ],
+  "useCases": [
+    "Embedding similarity search inside ML pipelines",
+    "Offline deduplication and clustering",
+    "Building custom vector search services",
+    "ANN research and benchmarking"
+  ],
+  "notIdealFor": [
+    "Applications needing a database with CRUD and filters",
+    "Multi-tenant production services without extra infrastructure",
+    "Teams without ML engineering skills"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "usearch",
+    "milvus",
+    "qdrant",
+    "lancedb",
+    "vald"
+  ],
+  "tags": [
+    "vector",
+    "library",
+    "ann",
+    "gpu",
+    "meta",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://faiss.ai/",
+    "docs": "https://faiss.ai/",
+    "repository": "https://github.com/facebookresearch/faiss",
+    "changelog": "https://github.com/facebookresearch/faiss/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/FAISS"
+  },
+  "ids": {
+    "github": "facebookresearch/faiss",
+    "stackoverflowTag": "faiss",
+    "wikipedia": "FAISS",
+    "pypi": "faiss-cpu",
+    "hackerNewsQuery": "Faiss"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/facebookresearch/faiss/releases",
+    "https://faiss.ai/",
+    "https://pypi.org/project/faiss-cpu/"
+  ],
+  "lastVerified": "2026-10-27"
+}

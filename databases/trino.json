@@ -1,0 +1,206 @@
+{
+  "slug": "trino",
+  "name": "Trino",
+  "aliases": [
+    "PrestoSQL"
+  ],
+  "tagline": "Fast distributed SQL query engine for federated analytics across lakes and databases.",
+  "description": "Trino is the open-source MPP SQL engine created by Presto's original authors when they forked PrestoSQL in 2019 (renamed in 2020). Like Presto it stores nothing itself: it queries Iceberg, Delta Lake, Hudi and Hive tables on object storage and federates over dozens of connectors, from PostgreSQL to Elasticsearch to Kafka. It has become the default open lakehouse query engine, with strong Iceberg support (DML, time travel, materialized views) and fault-tolerant execution for longer ETL. It needs a well-sized cluster and good file layout to perform; Starburst and Amazon Athena provide managed versions.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "lakehouse",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Trino Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "484",
+    "date": "2026-10-16"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; managed via Starburst Galaxy, Amazon Athena (engine v3) and Amazon EMR."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Starburst Galaxy",
+      "provider": "Starburst",
+      "url": "https://www.starburst.io/platform/starburst-galaxy/"
+    },
+    {
+      "name": "Amazon Athena",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/athena/"
+    },
+    {
+      "name": "Amazon EMR (Trino)",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/emr/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales by adding workers; fault-tolerant execution spools intermediate data for long queries."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ANSI)"
+  ],
+  "apis": [
+    "HTTP REST client protocol",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "Rust",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Best-in-class open engine for Iceberg, including DML and time travel",
+    "Federates dozens of sources (Postgres, MySQL, Kafka, Elasticsearch) in one query",
+    "Very active community with frequent releases",
+    "Fault-tolerant execution makes it viable for ETL, not just interactive SQL",
+    "Pluggable security: OAuth2, LDAP, Kerberos, OPA and Ranger access control"
+  ],
+  "weaknesses": [
+    "No storage of its own; results depend on file sizes, partitioning and stats",
+    "Memory-hungry; large joins need careful cluster sizing",
+    "Coordinator is a single point of failure without managed offerings",
+    "Requires a very recent Java runtime and frequent upgrades to stay current"
+  ],
+  "useCases": [
+    "Open lakehouse SQL on Iceberg/Delta",
+    "Federated analytics across databases",
+    "Interactive BI on object storage",
+    "Data mesh query layer"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Sub-100 ms user-facing analytics",
+    "Single-machine datasets"
+  ],
+  "notableUsers": [
+    "LinkedIn",
+    "Lyft",
+    "Netflix"
+  ],
+  "alternatives": [
+    "presto",
+    "starburst",
+    "amazon-athena",
+    "apache-spark-sql",
+    "dremio",
+    "databricks-sql",
+    "starrocks"
+  ],
+  "tags": [
+    "query-engine",
+    "federated",
+    "lakehouse",
+    "iceberg",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://trino.io/",
+    "docs": "https://trino.io/docs/current/",
+    "repository": "https://github.com/trinodb/trino",
+    "changelog": "https://trino.io/docs/current/release.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Trino_(SQL_query_engine)"
+  },
+  "ids": {
+    "github": "trinodb/trino",
+    "stackoverflowTag": "trino",
+    "wikipedia": "Trino (SQL query engine)",
+    "dockerHub": "trinodb/trino",
+    "pypi": "trino",
+    "npm": "trino-client",
+    "hackerNewsQuery": "Trino"
+  },
+  "brand": {
+    "color": "#DD00A1",
+    "simpleIcon": "trino"
+  },
+  "sources": [
+    "https://github.com/trinodb/trino/releases",
+    "https://trino.io/",
+    "https://en.wikipedia.org/wiki/Trino_(SQL_query_engine)"
+  ],
+  "lastVerified": "2026-10-27"
+}

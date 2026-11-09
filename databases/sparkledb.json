@@ -1,0 +1,139 @@
+{
+  "slug": "sparkledb",
+  "name": "SparkleDB",
+  "aliases": [],
+  "tagline": "Norwegian semantic (RDF/SPARQL) NoSQL database marketed for big data around 2012-2015; now defunct.",
+  "description": "SparkleDB was a commercial semantic database from SparkleDB AS (associated with SysSurge AS) that promised a horizontally scalable, transactional RDF store queried with SPARQL, with automatic sharding, replication without a single point of failure, persistent or in-memory operation and TLS-secured access on Windows, macOS and Linux. Its website asked visitors to request a beta invite and went offline after 2015; no public releases, source code or independent evaluations survive. It is listed for completeness. For SPARQL workloads, use one of the established RDF stores.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Website offline since about 2015 and no releases survive. For SPARQL use Virtuoso, GraphDB, Stardog or Apache Jena.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "SparkleDB AS (SysSurge AS)",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Pricing was never published; the product is no longer available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Automatic sharding and replication were vendor claims that were never independently verified."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Aimed to combine SPARQL querying with automatic sharding and replication",
+    "Could run as a persistent or in-memory store, according to the vendor"
+  ],
+  "weaknesses": [
+    "Defunct; no downloadable releases remain",
+    "Never independently benchmarked or reviewed",
+    "Proprietary, so nothing can be recovered or forked"
+  ],
+  "useCases": [
+    "Historical reference only",
+    "Example of early-2010s scale-out RDF store marketing"
+  ],
+  "notIdealFor": [
+    "Any production workload"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "virtuoso",
+    "ontotext-graphdb",
+    "stardog",
+    "apache-jena-tdb",
+    "blazegraph"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "semantic-web",
+    "discontinued",
+    "norway"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20150514110308/http://www.sparkledb.net/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20150514110308/http://www.sparkledb.net/",
+    "https://dbdb.io/db/sparkledb"
+  ],
+  "lastVerified": "2026-10-27"
+}

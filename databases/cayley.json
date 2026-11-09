@@ -1,0 +1,168 @@
+{
+  "slug": "cayley",
+  "name": "Cayley",
+  "aliases": [],
+  "tagline": "Go graph database inspired by Google's Knowledge Graph, dormant since its 2019 release.",
+  "description": "Cayley is an open-source graph database written in Go, started at Google in 2014 and inspired by the storage behind Freebase and the Knowledge Graph. It stores RDF-style quads on pluggable backends (Bolt, LevelDB, PostgreSQL, MySQL, MongoDB, CockroachDB or memory) and queries them with Gizmo (a Gremlin-like JavaScript dialect), a GraphQL-inspired language and MQL. The last release, v0.7.7, shipped in October 2019 and the last commits date from mid-2024; the repo is not archived but effectively dormant. It remains a readable example of a quad store, but new projects should use a maintained engine.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No release since v0.7.7 (Oct 2019) and no commits since July 2024; not archived but effectively dormant.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Cayley community (originally Google)",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.7.7",
+    "date": "2019-10-15"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scale depends on the chosen backend; Cayley itself is a single process."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Gizmo",
+    "GraphQL-like",
+    "MQL"
+  ],
+  "apis": [
+    "HTTP API",
+    "Go library"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pluggable storage backends, including SQL databases",
+    "Embeddable as a Go library",
+    "Simple quad model that reads RDF formats"
+  ],
+  "weaknesses": [
+    "No releases since 2019 and no active maintenance",
+    "Non-standard query languages; no SPARQL or Cypher",
+    "Performance well behind modern graph engines"
+  ],
+  "useCases": [
+    "Learning how quad stores work",
+    "Legacy Go projects already using it"
+  ],
+  "notIdealFor": [
+    "New production systems",
+    "Large or high-traffic graphs",
+    "Standards-based RDF work"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oxigraph",
+    "dgraph",
+    "neo4j",
+    "apache-jena-tdb",
+    "cozodb"
+  ],
+  "tags": [
+    "go",
+    "quad-store",
+    "dormant",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://cayley.io/",
+    "docs": "https://cayley.gitbook.io/cayley/",
+    "repository": "https://github.com/cayleygraph/cayley"
+  },
+  "ids": {
+    "github": "cayleygraph/cayley",
+    "stackoverflowTag": "cayley",
+    "dockerHub": "cayleygraph/cayley",
+    "hackerNewsQuery": "Cayley graph database"
+  },
+  "brand": {
+    "color": "#3BA4D8"
+  },
+  "sources": [
+    "https://github.com/cayleygraph/cayley",
+    "https://github.com/cayleygraph/cayley/releases",
+    "https://cayley.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

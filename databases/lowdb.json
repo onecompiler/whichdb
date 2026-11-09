@@ -1,0 +1,168 @@
+{
+  "slug": "lowdb",
+  "name": "lowdb",
+  "aliases": [],
+  "tagline": "Tiny type-safe local JSON database for Node, Electron and the browser using plain JavaScript.",
+  "description": "lowdb is a minimal library that loads a JSON file (or localStorage) into memory as a plain JavaScript object, lets you mutate it with ordinary array and object methods, and writes it back atomically. With TypeScript it gives typed access to the data and has no query language to learn. It is popular for prototypes, CLIs, Electron apps, small demos and test fixtures, and underpins tools like json-server. The library is effectively feature-complete: v7.0.1 (December 2023) is the latest release, with only occasional maintenance commits since. It is not a database in the transactional sense and should not be used for concurrent multi-process writes.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Feature-complete; no release since v7.0.1 (Dec 2023), with only occasional maintenance commits.",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "configuration",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "typicode",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "7.0.1",
+    "date": "2023-12-26"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Whole dataset is held in memory and rewritten on each save; practical up to a few MB."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JavaScript (native array/object methods)"
+  ],
+  "apis": [
+    "JavaScript API",
+    "Adapters (JSONFile, LocalStorage, Memory)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero learning curve: data is just a JavaScript object",
+    "Type-safe with TypeScript generics",
+    "Atomic file writes and pluggable adapters, including browser localStorage",
+    "Tiny dependency footprint"
+  ],
+  "weaknesses": [
+    "Loads the entire dataset into memory",
+    "No indexes, queries or transactions",
+    "Unsafe for concurrent writers across processes"
+  ],
+  "useCases": [
+    "Prototypes and hackathon backends",
+    "CLI tool and Electron app settings",
+    "Mock APIs and test fixtures"
+  ],
+  "notIdealFor": [
+    "Production multi-user apps",
+    "Datasets larger than a few megabytes",
+    "Concurrent access from multiple processes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "nedb",
+    "sqlite",
+    "pglite",
+    "lokijs",
+    "tinybase",
+    "dexie"
+  ],
+  "tags": [
+    "javascript",
+    "json",
+    "embedded",
+    "prototyping"
+  ],
+  "links": {
+    "website": "https://github.com/typicode/lowdb",
+    "docs": "https://github.com/typicode/lowdb#readme",
+    "repository": "https://github.com/typicode/lowdb",
+    "changelog": "https://github.com/typicode/lowdb/releases"
+  },
+  "ids": {
+    "github": "typicode/lowdb",
+    "stackoverflowTag": "lowdb",
+    "npm": "lowdb",
+    "hackerNewsQuery": "lowdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/typicode/lowdb",
+    "https://www.npmjs.com/package/lowdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

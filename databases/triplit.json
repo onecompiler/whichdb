@@ -1,0 +1,167 @@
+{
+  "slug": "triplit",
+  "name": "Triplit",
+  "aliases": [
+    "Triplit DB"
+  ],
+  "tagline": "Full-stack syncing database for TypeScript apps; development has stalled since 2025.",
+  "description": "Triplit is a TypeScript database that runs both in the client (IndexedDB or memory) and on a server (SQLite, Durable Objects and others), syncing over websockets with optimistic local writes, relational-style queries with includes, schemas and role-based permissions. It aimed to give React, Vue, Svelte and Solid apps realtime, offline-capable data without writing a backend. Its last npm release was in July 2025, and co-founder Matt Linkous joined Supabase in October 2025 to work on sync integrations. The AGPL code remains on GitHub with little activity, so treat it as stalled.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No releases since July 2025; co-founder joined Supabase (Oct 2025) and the project website was unreachable during verification. Code stays AGPL on GitHub.",
+  "maturity": "emerging",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational"
+  ],
+  "workloads": [
+    "local-first",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Aspen Cloud, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.0.50 (client)",
+    "date": "2025-07-31"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosted server is free under AGPL; hosted offering status unclear."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "ios",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Triplit query builder (TypeScript)"
+  ],
+  "apis": [
+    "WebSocket sync protocol",
+    "HTTP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Same query API on client and server with optimistic local writes",
+    "Relational includes and schemas with role-based permissions",
+    "Pluggable storage from IndexedDB to SQLite and Durable Objects"
+  ],
+  "weaknesses": [
+    "Development has stalled; no releases since mid-2025",
+    "AGPL license is a hurdle for some commercial deployments",
+    "Small community and uncertain hosted offering"
+  ],
+  "useCases": [
+    "Existing Triplit apps",
+    "Learning or prototyping local-first sync patterns"
+  ],
+  "notIdealFor": [
+    "New production projects needing an active vendor",
+    "Large datasets or high write throughput"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "instantdb",
+    "jazz",
+    "rocicorp-zero",
+    "electricsql",
+    "powersync",
+    "rxdb"
+  ],
+  "tags": [
+    "local-first",
+    "typescript",
+    "sync",
+    "realtime",
+    "stalled"
+  ],
+  "links": {
+    "website": "https://www.triplit.dev/",
+    "docs": "https://www.triplit.dev/docs",
+    "repository": "https://github.com/aspen-cloud/triplit"
+  },
+  "ids": {
+    "github": "aspen-cloud/triplit",
+    "npm": "@triplit/client",
+    "dockerHub": "aspencloud/triplit-server",
+    "hackerNewsQuery": "Triplit"
+  },
+  "brand": {},
+  "sources": [
+    "https://supabase.com/blog/triplit-joins-supabase",
+    "https://github.com/aspen-cloud/triplit",
+    "https://www.npmjs.com/package/@triplit/client"
+  ],
+  "lastVerified": "2026-10-27"
+}

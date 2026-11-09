@@ -1,0 +1,122 @@
+{
+  "slug": "matrixone",
+  "name": "MatrixOne",
+  "aliases": ["MatrixOrigin MatrixOne", "MatrixOne Cloud"],
+  "tagline": "MySQL-compatible cloud-native HTAP database on object storage, with vector search and snapshots.",
+  "description": "MatrixOne is an open-source hyper-converged database from MatrixOrigin, written in Go. It separates stateless compute nodes from a shared log service and object storage (S3-compatible), and uses a single columnar storage format for both transactional and analytical queries, aiming to replace a MySQL plus warehouse combination with one engine. It speaks the MySQL protocol, supports vector types and indexes for AI retrieval, and offers snapshots and point-in-time restore that act like time travel for data. MatrixOrigin also runs a managed MatrixOne Cloud. Adoption is concentrated in China and the project is younger than TiDB or OceanBase, so evaluate maturity carefully.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": ["relational", "columnar", "vector", "time-series"],
+  "workloads": ["htap", "oltp", "olap", "vector-search", "time-series", "iot"],
+  "architecture": ["distributed", "shared-storage", "client-server", "serverless"],
+  "developer": "MatrixOrigin",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "latestVersion": { "version": "4.2.6", "date": "2026-10-18" },
+  "writtenIn": ["Go"],
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": {
+    "models": ["open-source", "usage-based"],
+    "freeTier": false,
+    "notes": "Open source and free to self-host; MatrixOne Cloud is billed by usage."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": ["aws", "alibaba-cloud"],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [
+    { "name": "MatrixOne Cloud", "provider": "MatrixOrigin", "url": "https://www.matrixorigin.io/" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Compute nodes scale independently over shared object storage; log service replicated with Raft."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["MySQL wire protocol"],
+  "compatibleWith": ["mysql", "s3"],
+  "drivers": ["Java", "Go", "Python", "JavaScript", "C#"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One engine for transactional and analytical queries over columnar storage",
+    "Compute/storage separation on cheap object storage",
+    "MySQL protocol compatibility for existing tools",
+    "Vector types and indexes for AI retrieval in SQL",
+    "Snapshots and PITR for data recovery"
+  ],
+  "weaknesses": [
+    "Young project with frequent breaking changes between releases",
+    "MySQL compatibility gaps (no triggers or stored procedures)",
+    "Small community outside China",
+    "Point-write latency higher than row-store OLTP databases"
+  ],
+  "useCases": [
+    "Consolidating MySQL plus a warehouse into one HTAP engine",
+    "IoT and time-series ingestion with analytics",
+    "RAG applications needing vectors and SQL together",
+    "Cost-sensitive analytics on object storage"
+  ],
+  "notIdealFor": [
+    "Mission-critical OLTP needing long production track record",
+    "Apps relying on MySQL triggers or procedures",
+    "Edge or embedded use"
+  ],
+  "notableUsers": [],
+  "alternatives": ["tidb", "oceanbase", "singlestore", "starrocks", "apache-doris", "databend"],
+  "tags": ["htap", "mysql-compatible", "cloud-native", "open-source", "vector"],
+  "links": {
+    "website": "https://www.matrixorigin.io/",
+    "docs": "https://docs.matrixorigin.cn/en/",
+    "repository": "https://github.com/matrixorigin/matrixone",
+    "changelog": "https://github.com/matrixorigin/matrixone/releases"
+  },
+  "ids": {
+    "github": "matrixorigin/matrixone",
+    "dockerHub": "matrixorigin/matrixone",
+    "hackerNewsQuery": "MatrixOne"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/matrixorigin/matrixone/releases",
+    "https://github.com/matrixorigin/matrixone",
+    "https://hub.docker.com/r/matrixorigin/matrixone"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,163 @@
+{
+  "slug": "epsilla",
+  "name": "Epsilla",
+  "aliases": [
+    "EpsillaDB"
+  ],
+  "tagline": "C++ vector database using parallel graph traversal; vendor now focuses on an agent platform.",
+  "description": "Epsilla is an open-source vector database written in C++ that claims large speedups over standard HNSW by traversing its graph index in parallel, with support for metadata filtering, hybrid dense/sparse retrieval and a REST API, plus an embedded Python mode. Epsilla Inc. (YC-backed) has since shifted its business to an agent-as-a-service platform and no longer markets the database as a product. The repository still sees occasional commits, but there has been no tagged release since v0.3.16 in March 2025. Treat it as low-activity; choose Qdrant, Milvus or pgvector for new work.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No tagged release since v0.3.16 (March 2025); Epsilla Inc. now sells an AI agent platform rather than the vector database.",
+  "maturity": "emerging",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Epsilla Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "0.3.16",
+    "date": "2025-03-09"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Database is free to self-host; Epsilla's commercial focus is its hosted agent platform."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Epsilla API (JSON)"
+  ],
+  "apis": [
+    "REST/JSON",
+    "Python embedded"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Parallel graph traversal for fast ANN on multi-core machines",
+    "Embedded Python mode for local use",
+    "Simple REST API"
+  ],
+  "weaknesses": [
+    "Vendor focus has moved away from the database",
+    "No release since early 2025",
+    "Small community and few integrations",
+    "No clustering"
+  ],
+  "useCases": [
+    "Experimenting with parallel graph ANN",
+    "Small self-hosted RAG prototypes"
+  ],
+  "notIdealFor": [
+    "Production systems needing long-term support",
+    "Large or distributed deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "qdrant",
+    "milvus",
+    "chroma",
+    "weaviate",
+    "pgvector"
+  ],
+  "tags": [
+    "vector-database",
+    "c++",
+    "low-activity"
+  ],
+  "links": {
+    "website": "https://www.epsilla.com/",
+    "repository": "https://github.com/epsilla-cloud/vectordb",
+    "changelog": "https://github.com/epsilla-cloud/vectordb/releases"
+  },
+  "ids": {
+    "github": "epsilla-cloud/vectordb",
+    "dockerHub": "epsilla/vectordb",
+    "hackerNewsQuery": "Epsilla"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/epsilla-cloud/vectordb",
+    "https://github.com/epsilla-cloud/vectordb/releases",
+    "https://www.epsilla.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

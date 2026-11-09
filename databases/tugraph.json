@@ -1,0 +1,180 @@
+{
+  "slug": "tugraph",
+  "name": "TuGraph",
+  "aliases": [
+    "TuGraph-DB"
+  ],
+  "tagline": "Ant Group's open-source C++ graph database with ACID transactions, Cypher and LDBC-record performance.",
+  "description": "TuGraph-DB is an open-source labeled property-graph database from Ant Group, written in C++ and used internally for financial risk and relationship workloads. It offers serializable ACID transactions, openCypher, full-text and secondary indexes, embedded graph algorithms and stored procedures in C++ or Python, and it held the LDBC SNB benchmark record in 2022. The 4.5 line added a Bolt-protocol cluster mode. Activity has slowed: the last release is 4.5.2 from March 2025 and 2026 commits are documentation only, so evaluate support options before adopting it.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No release since 4.5.2 (Mar 2025); 2026 commits are documentation-only.",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "oltp",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Ant Group",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "4.5.2",
+    "date": "2025-03-13"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Open source; a hosted trial is offered via Alibaba Cloud Compute Nest."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "alibaba-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node storage up to tens of terabytes; HA replication cluster for availability."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "openCypher"
+  ],
+  "apis": [
+    "Bolt protocol",
+    "REST API",
+    "RPC"
+  ],
+  "compatibleWith": [
+    "neo4j"
+  ],
+  "drivers": [
+    "C++",
+    "Python",
+    "Java",
+    "JavaScript (Bolt drivers)"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Serializable ACID transactions with fast single-node traversal",
+    "Former LDBC SNB Interactive benchmark record holder",
+    "C++ and Python stored procedures plus built-in analytics algorithms",
+    "Bolt protocol lets standard Neo4j drivers connect"
+  ],
+  "weaknesses": [
+    "Development has slowed sharply since early 2025",
+    "Linux-only builds and documentation partly in Chinese",
+    "No sharding for graphs beyond one machine"
+  ],
+  "useCases": [
+    "Financial risk and anti-fraud graphs",
+    "Single-node high-performance graph workloads",
+    "Benchmarking and research"
+  ],
+  "notIdealFor": [
+    "Teams needing an actively developed roadmap",
+    "Distributed graphs",
+    "RDF/SPARQL workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "memgraph",
+    "nebulagraph",
+    "apache-hugegraph",
+    "galaxybase"
+  ],
+  "tags": [
+    "c++",
+    "opencypher",
+    "ant-group",
+    "open-source",
+    "ldbc"
+  ],
+  "links": {
+    "website": "https://www.tugraph.org/",
+    "docs": "https://tugraph-db.readthedocs.io/en/latest/",
+    "repository": "https://github.com/TuGraph-family/tugraph-db",
+    "changelog": "https://github.com/TuGraph-family/tugraph-db/releases"
+  },
+  "ids": {
+    "github": "TuGraph-family/tugraph-db",
+    "dockerHub": "tugraph/tugraph-runtime-centos7",
+    "hackerNewsQuery": "TuGraph"
+  },
+  "brand": {
+    "color": "#1677FF"
+  },
+  "sources": [
+    "https://github.com/TuGraph-family/tugraph-db",
+    "https://github.com/TuGraph-family/tugraph-db/releases",
+    "https://hub.docker.com/r/tugraph/tugraph-runtime-centos7"
+  ],
+  "lastVerified": "2026-10-27"
+}

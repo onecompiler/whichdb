@@ -1,0 +1,97 @@
+{
+  "slug": "fathomdb",
+  "name": "FathomDB",
+  "aliases": ["Fathom DB"],
+  "tagline": "Early YC-backed MySQL-as-a-service on AWS and Rackspace; the team joined Meteor in 2014 and it closed.",
+  "description": "FathomDB was a Y Combinator startup, founded in 2008, that sold hosted MySQL as a service on Amazon and Rackspace clouds and claims to have launched the first relational database-as-a-service, around the time Amazon RDS appeared. Customers got a hosted MySQL server instead of running database VMs themselves, and the team also contributed early code to OpenStack's database-as-a-service effort. FathomDB later started building a 'cloud-first' relational database but did not finish it; in 2014 the company joined Meteor, the JavaScript application platform, and the hosted service was wound down. Its significance is historical, as one of the first database-as-a-service businesses.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "The FathomDB team joined Meteor in 2014 and the hosted MySQL service was shut down. Use Amazon RDS, PlanetScale or another managed MySQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp"],
+  "architecture": ["client-server", "primary-replica"],
+  "developer": "FathomDB",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "writtenIn": ["Unknown"],
+  "basedOn": "MySQL",
+  "license": { "type": "proprietary", "name": "Proprietary (hosted service)" },
+  "pricing": {
+    "models": ["subscription"],
+    "freeTier": false,
+    "notes": "Was sold as a hosted service; detailed pricing has not survived and the service no longer exists."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws"],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["MySQL wire protocol"],
+  "compatibleWith": ["mysql"],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One of the first hosted relational database services, on both AWS and Rackspace",
+    "Stock MySQL compatibility, so applications needed no changes"
+  ],
+  "weaknesses": [
+    "Service shut down in 2014",
+    "Customers had to migrate elsewhere when the team joined Meteor"
+  ],
+  "useCases": [
+    "Historical reference for the early database-as-a-service market",
+    "Background on how hosted MySQL evolved before RDS and PlanetScale dominated"
+  ],
+  "notIdealFor": ["Any current workload: the service no longer exists"],
+  "notableUsers": [],
+  "alternatives": ["amazon-rds", "planetscale", "google-cloud-sql", "mysql"],
+  "tags": ["dbaas", "mysql", "y-combinator", "discontinued"],
+  "links": {
+    "website": "http://www.fathomdb.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://www.fathomdb.com/",
+    "https://dbdb.io/db/fathomdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

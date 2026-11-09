@@ -1,0 +1,145 @@
+{
+  "slug": "ovrimos",
+  "name": "Ovrimos",
+  "aliases": [
+    "Ovrimos SQL Server",
+    "Ovrimos WebBase Server"
+  ],
+  "tagline": "Greek late-1990s transactional SQL server with a built-in programmable web server; long defunct.",
+  "description": "Ovrimos was a client/server relational database from Ovrimos S.A. of Athens, Greece (founded 1993, with a US office in Mountain View), whose distinguishing feature was a built-in, programmable web server so that SQL-backed web applications could be served straight from the database. Sold around 2000 as Ovrimos WebBase Server 3.x, it claimed ANSI SQL compliance, transactions, an ODBC driver, a replicator and secure web serving in higher editions, and a tiny footprint of about 4 MB of disk and 10 MB of RAM. The company also sold an S/MIME e-mail and LDAP product, and the database disappeared in the early 2000s. It is of interest today mainly as an early 'database plus application server' design.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Ovrimos S.A. stopped offering the product in the early 2000s; no supported version or successor exists.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Ovrimos S.A.",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (Ovrimos S.A.)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "HTTP (built-in web server)"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Database and web application server in one small package",
+    "Very low resource requirements for its time"
+  ],
+  "weaknesses": [
+    "Defunct for two decades",
+    "Tiny user base outside Greece"
+  ],
+  "useCases": [
+    "Historical reference on database-integrated web servers",
+    "Context for late-1990s web database products"
+  ],
+  "notIdealFor": [
+    "Any deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "mysql",
+    "sqlite"
+  ],
+  "tags": [
+    "sql",
+    "web-server",
+    "historical",
+    "greece",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20020126131847/http://www.ovrimos.com:80/introd1.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/20020126131847/http://www.ovrimos.com:80/introd1.html",
+    "http://web.archive.org/web/20010414072540/http://ovrimos.com:80/company.html",
+    "https://dbdb.io/db/ovrimos"
+  ],
+  "lastVerified": "2026-10-27"
+}

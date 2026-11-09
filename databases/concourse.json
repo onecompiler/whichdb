@@ -1,0 +1,168 @@
+{
+  "slug": "concourse",
+  "name": "Concourse",
+  "aliases": [
+    "ConcourseDB",
+    "Cinchapi Concourse"
+  ],
+  "tagline": "Self-tuning document-graph database with automatic indexing, full version history and time-travel reads.",
+  "description": "Concourse, from Cinchapi, is an open-source Java database whose records are schemaless documents made of keys that can each hold several values, with links between records forming a graph. Every write is versioned, so you can read a value as it was at any earlier moment or audit how it changed, and every value is indexed automatically, including substring indexing of strings for search, so ad-hoc range, predicate and text queries work without planning indexes. It provides serializable ACID transactions, the CCL criteria language and an interactive shell (CaSH). Development continues: 1.0.x images are published on Docker Hub, a 1.1 line is in progress, and a peer-to-peer distributed mode is documented but still alpha. The public GitHub repository returned 404 when checked in October 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "graph"
+  ],
+  "workloads": [
+    "oltp",
+    "full-text-search",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed"
+  ],
+  "developer": "Cinchapi Inc.",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "1.0.6",
+    "date": "2026-10"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node in production; the distributed CP mode with replication is documented as alpha."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "CCL"
+  ],
+  "apis": [
+    "Java API",
+    "CaSH shell"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Every value indexed automatically, so ad-hoc predicates and substring search need no index planning",
+    "Full version history with time-travel reads and change audits",
+    "Serializable ACID transactions over schemaless records",
+    "Links between records model graphs without join tables"
+  ],
+  "weaknesses": [
+    "Small community and few third-party integrations",
+    "Indexing every value costs extra storage and background work",
+    "Distributed mode is still alpha",
+    "Public source repository was unavailable when last checked"
+  ],
+  "useCases": [
+    "Applications that need audit trails and point-in-time reads",
+    "Exploratory data where queries are not known in advance",
+    "Integrating heterogeneous records with search across them"
+  ],
+  "notIdealFor": [
+    "Large multi-node production clusters",
+    "Teams that need SQL",
+    "Heavy analytical scans"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "xtdb",
+    "datomic",
+    "mongodb",
+    "terminusdb",
+    "surrealdb",
+    "arangodb"
+  ],
+  "tags": [
+    "document",
+    "graph",
+    "versioned",
+    "time-travel",
+    "java"
+  ],
+  "links": {
+    "website": "https://docs.cinchapi.com/concourse/",
+    "docs": "https://docs.cinchapi.com/concourse/"
+  },
+  "ids": {
+    "dockerHub": "cinchapi/concourse",
+    "hackerNewsQuery": "ConcourseDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://docs.cinchapi.com/concourse/introduction/",
+    "https://docs.cinchapi.com/concourse/transactions/",
+    "https://docs.cinchapi.com/concourse/distributed/",
+    "https://hub.docker.com/r/cinchapi/concourse"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,143 @@
+{
+  "slug": "timber",
+  "name": "TIMBER",
+  "aliases": [
+    "Timber native XML database"
+  ],
+  "tagline": "University of Michigan research XML database that brought tree algebra and cost-based optimization to XML.",
+  "description": "TIMBER (Tree-structured native XML database Implemented at the University of Michigan by Bright Energetic Researchers) was H. V. Jagadish's group's answer to shredding XML into relational tables. It treated XML documents as trees and built a database around them that stayed close to relational architecture: the TAX tree algebra as the counterpart to relational algebra, structural joins for ancestor-descendant matching, size estimation for twig patterns and a cost-based optimizer, layered over the Shore storage manager. The group published widely on it in 2002-2006 and distributed version 2.1 source for non-commercial research use. The project page has not changed since 2006; its ideas live on in XQuery engines.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (about 2000-2006) at the University of Michigan; project page unchanged since 2006. Structural joins and tree algebra ideas live on in XML/XQuery engines such as BaseX.",
+  "maturity": "legacy",
+  "primaryModel": "xml",
+  "models": [
+    "xml"
+  ],
+  "workloads": [
+    "content-management"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "University of Michigan Database Group",
+  "vendorType": "academic",
+  "initialRelease": 2002,
+  "latestVersion": {
+    "version": "2.1",
+    "date": "2006"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Shore storage manager",
+  "license": {
+    "type": "proprietary",
+    "name": "University of Michigan non-commercial research license"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free for non-commercial education and research after registration."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "XQuery (subset)"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Introduced the TAX tree algebra and structural joins for XML query processing",
+    "Cost-based optimization with size estimates for twig patterns",
+    "Large body of published papers explaining the design"
+  ],
+  "weaknesses": [
+    "Research prototype, unmaintained since about 2006",
+    "Non-commercial licence only",
+    "Partial XQuery support"
+  ],
+  "useCases": [
+    "Studying native XML query processing",
+    "Teaching tree algebras and structural joins"
+  ],
+  "notIdealFor": [
+    "Any production XML workload"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "basex",
+    "exist-db",
+    "sednadb",
+    "marklogic"
+  ],
+  "tags": [
+    "xml",
+    "xquery",
+    "research",
+    "university-of-michigan"
+  ],
+  "links": {
+    "website": "http://dbgroup.eecs.umich.edu/timber/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://dbgroup.eecs.umich.edu/timber/introduction.html",
+    "http://dbgroup.eecs.umich.edu/timber/overview.html",
+    "http://dbgroup.eecs.umich.edu/timber/publications.html",
+    "https://dbdb.io/db/timber"
+  ],
+  "lastVerified": "2026-10-27"
+}

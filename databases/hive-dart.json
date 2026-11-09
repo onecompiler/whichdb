@@ -1,0 +1,169 @@
+{
+  "slug": "hive-dart",
+  "name": "Hive (Dart)",
+  "aliases": [
+    "hive_flutter",
+    "Hive CE"
+  ],
+  "tagline": "Lightweight pure-Dart key-value store for Flutter; development continues in the Hive CE fork.",
+  "description": "Hive is a key-value database written in pure Dart, popular in Flutter apps because it needs no native code, works on mobile, desktop and web, and is very fast for small reads and writes. Data lives in boxes (one file each), optionally AES-256 encrypted, and typed objects are stored via generated TypeAdapters. It works well for settings, caches and modest local state, but it has no query language or indexes beyond keys. The original package has not been released since 2.2.3 in June 2022, and the community-maintained Hive CE (hive_ce) is where fixes and new Dart support now land.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Original hive package unreleased since 2.2.3 (June 2022); active development moved to the community fork Hive CE (hive_ce).",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline",
+    "caching",
+    "configuration"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Simon Choi and the Hive community",
+  "vendorType": "community",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "2.2.3",
+    "date": "2022-06-30"
+  },
+  "writtenIn": [
+    "Dart"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Boxes are loaded into memory by default; lazy boxes help with larger data."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key lookups (Dart API)"
+  ],
+  "apis": [
+    "Dart API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Dart"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Dart with no native dependencies, so it runs on Flutter web too",
+    "Very fast key reads and writes for small objects",
+    "Simple box-based API with optional AES-256 encryption"
+  ],
+  "weaknesses": [
+    "Original package is unmaintained; you need to switch to Hive CE for fixes",
+    "No queries or secondary indexes, only key access and full scans",
+    "Not built for large datasets or relational data"
+  ],
+  "useCases": [
+    "Flutter app settings and preferences",
+    "Caching API responses offline",
+    "Small typed object stores in Flutter apps"
+  ],
+  "notIdealFor": [
+    "Querying or filtering large collections",
+    "Relational data",
+    "Multi-process access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "isar",
+    "objectbox",
+    "mmkv",
+    "sqlite",
+    "realm"
+  ],
+  "tags": [
+    "flutter",
+    "dart",
+    "key-value",
+    "mobile",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://pub.dev/packages/hive",
+    "docs": "https://docs.hivedb.dev/",
+    "repository": "https://github.com/isar/hive"
+  },
+  "ids": {
+    "github": "isar/hive",
+    "stackoverflowTag": "flutter-hive",
+    "hackerNewsQuery": "Hive Flutter database"
+  },
+  "brand": {},
+  "sources": [
+    "https://pub.dev/packages/hive",
+    "https://pub.dev/packages/hive_ce",
+    "https://github.com/isar/hive"
+  ],
+  "lastVerified": "2026-10-27"
+}

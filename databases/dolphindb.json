@@ -1,0 +1,187 @@
+{
+  "slug": "dolphindb",
+  "name": "DolphinDB",
+  "aliases": [],
+  "tagline": "Distributed time-series database and scripting platform for quant finance and industrial analytics.",
+  "description": "DolphinDB is a distributed columnar time-series database fused with a vectorised scripting language that mixes SQL with Python-like syntax and ships more than 2,000 built-in functions. It is strongest in quantitative finance, where its unified batch and streaming engines let the same factor or indicator code run on historical data and live market feeds, and it also sees use in manufacturing and energy IoT. Recent releases add GPU acceleration and in-database inference for PyTorch and TensorFlow models. It is proprietary, made by a Hangzhou-based company; a free community edition with resource limits exists, but production use means a commercial licence.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "financial-tick-data",
+    "time-series",
+    "stream-processing",
+    "real-time-analytics",
+    "iot"
+  ],
+  "architecture": [
+    "distributed",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "DolphinDB Inc.",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "3.00.6.1",
+    "date": "2026-09"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (free community edition with limits)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community edition is free with node and memory limits; enterprise licences are negotiated."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Partitioned distributed tables across data nodes with Raft-based metadata high availability."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "DolphinDB script"
+  ],
+  "apis": [
+    "Native binary protocol",
+    "HTTP",
+    "WebSocket",
+    "MCP server"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "C++",
+    "Java",
+    "C#",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Same scripts run in batch and streaming, which avoids research-to-production rewrites",
+    "Thousands of built-in time-series, statistical and financial functions",
+    "Fast as-of and window joins for market data",
+    "Distributed partitioned storage with built-in stream engines and pub/sub",
+    "Clients for Python, C++, Java, C#, Go and more"
+  ],
+  "weaknesses": [
+    "Proprietary with negotiated pricing",
+    "Proprietary scripting language has a learning curve",
+    "Documentation and community are strongest in Chinese",
+    "Smaller Western ecosystem than kdb+ or open-source TSDBs"
+  ],
+  "useCases": [
+    "Quant research and factor computation",
+    "Real-time market data processing",
+    "Trading risk and surveillance",
+    "Industrial IoT analytics with streaming rules"
+  ],
+  "notIdealFor": [
+    "Teams needing an open-source licence",
+    "Web application backends",
+    "Log search"
+  ],
+  "notableUsers": [
+    "CLSA",
+    "GF Securities",
+    "BYD",
+    "BOE",
+    "Foxconn"
+  ],
+  "alternatives": [
+    "kdb-plus",
+    "questdb",
+    "arcticdb",
+    "clickhouse",
+    "tdengine",
+    "timescaledb"
+  ],
+  "tags": [
+    "time-series",
+    "capital-markets",
+    "streaming",
+    "proprietary",
+    "quant"
+  ],
+  "links": {
+    "website": "https://www.dolphindb.com/",
+    "docs": "https://docs.dolphindb.com/en/"
+  },
+  "ids": {
+    "dockerHub": "dolphindb/dolphindb",
+    "npm": "dolphindb",
+    "pypi": "dolphindb",
+    "hackerNewsQuery": "DolphinDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.dolphindb.com/",
+    "https://hub.docker.com/r/dolphindb/dolphindb",
+    "https://pypi.org/project/dolphindb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

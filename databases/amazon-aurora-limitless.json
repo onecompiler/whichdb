@@ -1,0 +1,181 @@
+{
+  "slug": "amazon-aurora-limitless",
+  "name": "Amazon Aurora PostgreSQL Limitless Database",
+  "aliases": [
+    "Aurora Limitless",
+    "Aurora PostgreSQL Limitless"
+  ],
+  "tagline": "Managed horizontal sharding for Aurora PostgreSQL: one endpoint over a serverless group of shards.",
+  "description": "Aurora PostgreSQL Limitless Database adds managed horizontal scaling to Aurora PostgreSQL. A DB shard group of serverless routers and shards sits behind a single endpoint; you declare sharded tables with a shard key, reference tables that are copied to every shard, and standard tables, and routers plan queries and run distributed transactions with consistent snapshots across shards. Capacity scales in ACUs, so AWS targets millions of write transactions per second and petabyte-scale data while you still connect with ordinary Postgres drivers. It is the AWS-native answer to Citus or a distributed SQL database for very large Postgres workloads, but it supports only a subset of Postgres features and is priced well above standard Aurora.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "metadata-store",
+    "ledger"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless",
+    "shared-storage"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2024,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "Aurora PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (AWS service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed per ACU-hour across routers and shards plus Aurora I/O-Optimized storage; no free tier."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Aurora PostgreSQL Limitless Database",
+      "provider": "AWS",
+      "url": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/limitless.html"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shard groups split data by shard key across serverless shards; AWS cites millions of writes per second and petabytes of data."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Ruby",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Horizontal write scaling while keeping a single Postgres endpoint",
+    "Shard and reference tables with distributed transactions and consistent reads",
+    "Serverless ACU scaling for routers and shards",
+    "Stays inside Aurora's backup, monitoring and IAM tooling"
+  ],
+  "weaknesses": [
+    "Supports a restricted subset of PostgreSQL features and extensions",
+    "Expensive minimum footprint compared with a single Aurora cluster",
+    "Shard key design is critical; cross-shard queries cost more",
+    "AWS-only and relatively new"
+  ],
+  "useCases": [
+    "Very high write-rate Postgres workloads on AWS",
+    "Multi-tenant SaaS sharded by tenant ID",
+    "Replacing application-level Postgres sharding",
+    "Large ledgers and event tables beyond one writer"
+  ],
+  "notIdealFor": [
+    "Small or medium databases that fit one Aurora writer",
+    "Apps relying on many Postgres extensions",
+    "Multi-region active-active writes (consider Aurora DSQL)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-aurora",
+    "amazon-aurora-dsql",
+    "citus",
+    "cockroachdb",
+    "yugabytedb",
+    "google-cloud-spanner"
+  ],
+  "tags": [
+    "aws",
+    "postgres",
+    "sharding",
+    "serverless",
+    "distributed-sql"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/rds/aurora/features/",
+    "docs": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/limitless.html",
+    "pricing": "https://aws.amazon.com/rds/aurora/pricing/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Aurora Limitless"
+  },
+  "brand": {
+    "color": "#527FFF"
+  },
+  "sources": [
+    "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/limitless.html",
+    "https://aws.amazon.com/rds/aurora/features/",
+    "https://aws.amazon.com/rds/aurora/pricing/"
+  ],
+  "lastVerified": "2026-10-27"
+}

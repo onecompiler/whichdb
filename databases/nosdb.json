@@ -1,0 +1,148 @@
+{
+  "slug": "nosdb",
+  "name": "NosDB",
+  "aliases": [],
+  "tagline": "Alachisoft's 2015-era distributed JSON document database for .NET; quietly dropped in favor of NCache.",
+  "description": "NosDB was a schema-less, distributed JSON document database for .NET applications from Alachisoft, the company behind the NCache distributed cache. It offered sharded, replicated clusters with multi-datacenter support, a SQL-like query language and LINQ over JSON documents, an ADO.NET provider, MapReduce and aggregation, Power BI integration, and .NET, Java and REST clients, in an Apache 2.0 open-source edition alongside a commercial Enterprise edition. Alachisoft abandoned it around 2016–2017: the GitHub repository has been removed and the old product URL now redirects to NCache. There is no supported path; MongoDB, RavenDB or Azure Cosmos DB fill the same niche for .NET teams.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Abandoned by Alachisoft around 2016–2017; repository removed and product URL redirects to NCache. Use MongoDB, RavenDB or Cosmos DB.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Alachisoft",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (open-source edition); commercial Enterprise edition",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer distributed or sold."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SQL-like query language",
+    "LINQ"
+  ],
+  "apis": [
+    ".NET client",
+    "Java client",
+    "REST",
+    "ADO.NET"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native .NET stack with LINQ and an ADO.NET provider",
+    "Sharding and replication designed by an established distributed-cache vendor"
+  ],
+  "weaknesses": [
+    "Abandoned by its vendor; code and downloads are gone",
+    "Windows/.NET-only ecosystem that never built a community"
+  ],
+  "useCases": [
+    "Historical reference only",
+    "Planning a migration off an old NosDB deployment"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "ravendb",
+    "azure-cosmos-db",
+    "couchbase"
+  ],
+  "tags": [
+    "document",
+    "dotnet",
+    "json",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20160703030147/http://www.alachisoft.com:80/nosdb/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/20160703030147/http://www.alachisoft.com:80/nosdb/",
+    "https://www.alachisoft.com/ncache/",
+    "https://dbdb.io/db/nosdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

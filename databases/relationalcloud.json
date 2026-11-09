@@ -1,0 +1,147 @@
+{
+  "slug": "relationalcloud",
+  "name": "RelationalCloud",
+  "aliases": [
+    "Relational Cloud",
+    "MIT Relational Cloud"
+  ],
+  "tagline": "MIT research database-as-a-service (CIDR 2011) that pioneered workload consolidation and encrypted SQL.",
+  "description": "Relational Cloud was an MIT CSAIL project, presented at CIDR 2011 by Carlo Curino, Sam Madden, Nickolai Zeldovich and colleagues, that asked what a multi-tenant SQL database-as-a-service should look like. It tackled three problems: packing many tenant databases onto few servers (the Kairos consolidation engine, which beat one-database-per-VM by 2-3x in machines), scaling a tenant beyond one node with workload-aware partitioning (Schism) plus a distributed transaction coordinator, and keeping data private from the operator with CryptDB's queries over encrypted data. The prototype exposed JDBC and ran over MySQL and PostgreSQL back-ends. The project ended around 2013, but its ideas show up in today's managed and serverless relational services.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "MIT research prototype (about 2010-2013); never a product, and relationalcloud.com is now a parked domain. Its ideas live on in managed SQL services and CryptDB-style encryption.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "MIT CSAIL",
+  "vendorType": "academic",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "Java",
+    "C++"
+  ],
+  "basedOn": "MySQL and PostgreSQL back-ends",
+  "license": {
+    "type": "proprietary",
+    "name": "No integrated public release (research prototype)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Research prototype; no service or integrated release was ever offered."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Consolidated many small tenants per server and partitioned large tenants across servers with distributed transactions."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "postgresql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Showed that one DBMS hosting many tenants beats one VM per database on hardware use",
+    "Workload-driven partitioning (Schism) to minimise distributed transactions",
+    "CryptDB let the service run SQL over data it could not read",
+    "Live migration of tenant databases between machines"
+  ],
+  "weaknesses": [
+    "Research prototype only; no maintained, integrated release",
+    "Many components were described in separate papers rather than shipped together"
+  ],
+  "useCases": [
+    "Studying multi-tenant DBaaS design",
+    "Background on encrypted query processing and workload-aware partitioning"
+  ],
+  "notIdealFor": [
+    "Running production databases"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-aurora",
+    "azure-sql-database",
+    "neon",
+    "vitess"
+  ],
+  "tags": [
+    "research",
+    "dbaas",
+    "multi-tenant",
+    "mit",
+    "encryption"
+  ],
+  "links": {
+    "website": "https://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper33.pdf"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper33.pdf",
+    "https://dbdb.io/db/relationalcloud"
+  ],
+  "lastVerified": "2026-10-27"
+}

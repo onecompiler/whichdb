@@ -1,0 +1,167 @@
+{
+  "slug": "microsoft-faster",
+  "name": "Microsoft FASTER",
+  "aliases": [
+    "FASTER",
+    "FASTER KV",
+    "FasterKV"
+  ],
+  "tagline": "Microsoft Research's larger-than-memory concurrent KV store and log; superseded by Garnet's Tsavorite.",
+  "description": "FASTER is a Microsoft Research library offering FASTER KV, a concurrent key-value store and cache for point lookups and heavy in-place updates, and FASTER Log, a high-throughput persistent log. Its hybrid log spans memory and SSD or cloud storage, so datasets can exceed RAM, and non-blocking checkpoints give consistent recovery; it was used inside Azure services and Durable Functions' Netherite backend. Microsoft now marks the repository as no longer actively maintained and directs users to Garnet, whose Tsavorite storage engine is FASTER's evolution. Existing C# users can keep running the last 2.6.x release but should plan a move.",
+  "productType": "library",
+  "status": "deprecated",
+  "statusNote": "Microsoft marks the repo as no longer actively maintained (last release 2.6.5, May 2024) and recommends Garnet and its Tsavorite engine.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching",
+    "stream-processing"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Microsoft Research",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "2.6.5",
+    "date": "2024-05-07"
+  },
+  "writtenIn": [
+    "C#",
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Hybrid log spills beyond memory to local SSD or cloud storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C# API"
+  ],
+  "apis": [
+    "C# API",
+    "C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very high throughput for point reads and in-place updates",
+    "Datasets larger than memory via a hybrid in-memory/on-disk log",
+    "Non-blocking checkpoints and consistent recovery",
+    "FASTER Log provides a fast persistent log with low-latency commits"
+  ],
+  "weaknesses": [
+    "No longer actively maintained by Microsoft",
+    "No range scans over keys; designed for point operations",
+    "Complex session and checkpoint API"
+  ],
+  "useCases": [
+    "Existing .NET state stores pending migration to Garnet/Tsavorite",
+    "High-update-rate counters and caches in .NET"
+  ],
+  "notIdealFor": [
+    "New projects (use Garnet)",
+    "Range-scan or ordered workloads",
+    "Non-.NET stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "garnet",
+    "rocksdb",
+    "lmdb",
+    "badger"
+  ],
+  "tags": [
+    "microsoft",
+    "dotnet",
+    "deprecated",
+    "hybrid-log",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://microsoft.github.io/FASTER/",
+    "repository": "https://github.com/microsoft/FASTER",
+    "changelog": "https://github.com/microsoft/FASTER/releases"
+  },
+  "ids": {
+    "github": "microsoft/FASTER",
+    "hackerNewsQuery": "Microsoft FASTER"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/microsoft/FASTER",
+    "https://github.com/microsoft/garnet"
+  ],
+  "lastVerified": "2026-10-27"
+}

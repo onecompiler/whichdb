@@ -1,0 +1,185 @@
+{
+  "slug": "datalayers",
+  "name": "Datalayers",
+  "aliases": [
+    "DataLayers"
+  ],
+  "tagline": "Multi-model database for IoT and observability: time series, full-text, vector and key-value on Parquet.",
+  "description": "Datalayers is a commercial distributed database from China aimed at observability, IoT and AI retrieval. It combines time-series storage, BM25 full-text search, vector search (IVF and HNSW), a Redis-compatible key-value model and SQL stream processing behind one SQL interface, with storage and compute separated over object storage in Parquet format. Clients connect over the PostgreSQL wire protocol or Arrow Flight SQL, and it accepts InfluxDB line protocol and Prometheus remote write, so existing collectors plug in. It is designed to run on edge gateways as well as in cloud clusters. Releases are frequent, but documentation is mostly in Chinese and the product is licence-key based rather than open source.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "search",
+    "vector",
+    "key-value",
+    "columnar"
+  ],
+  "workloads": [
+    "iot",
+    "observability",
+    "time-series",
+    "full-text-search",
+    "vector-search",
+    "edge",
+    "stream-processing"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Datalayers",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "2.4.9",
+    "date": "2026-09-18"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (licence key; free trial)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free download and trial licence; production use is licensed."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Compute and storage scale independently over S3-compatible object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PromQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "Arrow Flight SQL",
+    "InfluxDB line protocol",
+    "Prometheus remote write",
+    "Redis protocol",
+    "REST",
+    "JDBC"
+  ],
+  "compatibleWith": [
+    "postgresql",
+    "influxdb",
+    "prometheus",
+    "redis"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Time series, full-text, vector and key-value data in one SQL engine",
+    "Parquet on object storage keeps data readable by big-data tools",
+    "Built-in stream ingestion from Kafka, MQTT and HTTP with SQL pipelines",
+    "Federated queries join MySQL and PostgreSQL tables",
+    "Runs on resource-constrained edge gateways"
+  ],
+  "weaknesses": [
+    "Closed source with licence-key activation",
+    "Very young product with few public references",
+    "Documentation is mainly in Chinese",
+    "Breadth of features means less depth than specialist engines"
+  ],
+  "useCases": [
+    "Industrial IoT data platforms",
+    "Unified metrics, logs and events storage",
+    "Hybrid keyword and vector retrieval for AI apps",
+    "Edge-to-cloud telemetry"
+  ],
+  "notIdealFor": [
+    "Teams requiring open source",
+    "Transactional workloads",
+    "Organisations needing English-first support"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tdengine",
+    "greptimedb",
+    "influxdb",
+    "apache-iotdb",
+    "machbase",
+    "cnosdb"
+  ],
+  "tags": [
+    "multi-model",
+    "iot",
+    "time-series",
+    "vector",
+    "proprietary"
+  ],
+  "links": {
+    "website": "https://datalayers.cn/",
+    "docs": "https://docs.datalayers.cn/datalayers/latest/",
+    "changelog": "https://docs.datalayers.cn/datalayers/latest/releases/changes.html"
+  },
+  "ids": {
+    "dockerHub": "datalayers/datalayers",
+    "hackerNewsQuery": "Datalayers database"
+  },
+  "brand": {},
+  "sources": [
+    "https://docs.datalayers.cn/datalayers/latest/",
+    "https://github.com/datalayers-io/datalayers-docs",
+    "https://hub.docker.com/r/datalayers/datalayers"
+  ],
+  "lastVerified": "2026-10-27"
+}

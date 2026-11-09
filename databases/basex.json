@@ -1,0 +1,188 @@
+{
+  "slug": "basex",
+  "name": "BaseX",
+  "aliases": [],
+  "tagline": "Lightweight, fast native XML database and XQuery 3.1/4.0 processor with a GUI.",
+  "description": "BaseX is a compact Java XML database and XQuery processor known for fast query evaluation, standards conformance and a useful visual GUI for exploring documents. It supports XQuery 3.1 (with growing XQuery 4.0 support), XQuery Full Text, XQuery Update and RESTXQ for building web services, and it can also store and query JSON, CSV and binary files. It runs embedded, as a client/server database or as an HTTP server, and releases arrive several times a year (12.4 in May 2026) from a small, dedicated team. It is a strong, permissively licensed choice for XML processing and document-centric apps on a single machine.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "xml",
+  "models": [
+    "xml",
+    "document",
+    "search"
+  ],
+  "workloads": [
+    "content-management",
+    "full-text-search",
+    "scientific",
+    "embedded",
+    "metadata-store"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server",
+    "in-memory"
+  ],
+  "developer": "BaseX GmbH",
+  "vendorType": "company",
+  "initialRelease": 2007,
+  "latestVersion": {
+    "version": "12.4",
+    "date": "2026-05-28"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free; BaseX GmbH offers support contracts and development services."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server; individual databases scale to many GB, and large corpora are split across databases."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "XQuery 3.1/4.0",
+    "XPath",
+    "XQuery Full Text",
+    "XQuery Update",
+    "XSLT"
+  ],
+  "apis": [
+    "REST",
+    "RESTXQ",
+    "WebDAV",
+    "Client/server TCP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "C#",
+    "JavaScript",
+    "PHP",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast, standards-conformant XQuery engine",
+    "Visual GUI with tree maps and query editor for exploring XML",
+    "Permissive BSD license",
+    "RESTXQ makes it easy to expose XQuery as web APIs",
+    "Handles JSON, CSV and HTML alongside XML"
+  ],
+  "weaknesses": [
+    "No replication or clustering",
+    "Small vendor; long-term support depends on a handful of maintainers",
+    "Write concurrency is limited compared with general-purpose databases"
+  ],
+  "useCases": [
+    "XML transformation and querying pipelines",
+    "Digital humanities and archival corpora",
+    "Embedded XQuery processing in Java applications",
+    "Small document-centric web services"
+  ],
+  "notIdealFor": [
+    "High-availability production clusters",
+    "Write-heavy transactional systems"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "exist-db",
+    "marklogic",
+    "sednadb",
+    "mongodb",
+    "postgresql"
+  ],
+  "tags": [
+    "xml",
+    "xquery",
+    "open-source",
+    "lightweight"
+  ],
+  "links": {
+    "website": "https://basex.org/",
+    "docs": "https://docs.basex.org/",
+    "repository": "https://github.com/BaseXdb/basex",
+    "changelog": "https://github.com/BaseXdb/basex/blob/main/CHANGELOG",
+    "wikipedia": "https://en.wikipedia.org/wiki/BaseX"
+  },
+  "ids": {
+    "github": "BaseXdb/basex",
+    "stackoverflowTag": "basex",
+    "wikipedia": "BaseX",
+    "hackerNewsQuery": "BaseX"
+  },
+  "brand": {
+    "color": "#B52A2A"
+  },
+  "sources": [
+    "https://basex.org/",
+    "https://github.com/BaseXdb/basex",
+    "https://en.wikipedia.org/wiki/BaseX"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,163 @@
+{
+  "slug": "acedb",
+  "name": "AceDB",
+  "aliases": [
+    "ACeDB",
+    "ACEDB",
+    "A C. elegans Database"
+  ],
+  "tagline": "Genome database system born for C. elegans in 1989, with an object-tree data model; NCBI fork still updated.",
+  "description": "AceDB (A C. elegans DataBase) is a genome database and browser that Richard Durbin and Jean Thierry-Mieg started around 1989-1990 for the nematode C. elegans, later reused for many other organisms and as the original core of WormBase. Data lives in classes of objects whose schema is a tree of tagged fields, which made it flexible for fast-changing biological knowledge long before document databases; it ships its own query language (AQL), table maker and graphical browsers. In the late 1990s the code forked: the Sanger Institute branch was archived on GitHub in October 2016, while Jean Thierry-Mieg's NCBI branch, used for AceView and RNA-seq tooling, still receives source updates (latest tarball May 2025). It is a niche tool for groups with existing AceDB data, not a general-purpose database.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Sanger branch archived in 2016; the NCBI fork maintained by Jean Thierry-Mieg still publishes source updates (May 2025) but has a tiny user base.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "hierarchical"
+  ],
+  "workloads": [
+    "scientific"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Richard Durbin and Jean Thierry-Mieg (NCBI / Sanger Institute)",
+  "vendorType": "academic",
+  "initialRelease": 1989,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server database files; used for whole-genome annotation datasets of its era."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "AQL (AceDB Query Language)",
+    "AceDB query/table-maker"
+  ],
+  "apis": [
+    "ace text format",
+    "Socket server (saceserver)",
+    "Command-line (tace)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Perl (AcePerl)"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tree-structured object schema absorbs evolving biological annotations without migrations",
+    "Integrated graphical genome browsers and table maker for biologists",
+    "Decades of curated genomic datasets (WormBase, AceView) were built on it",
+    "GPL source still available from both the Sanger and NCBI branches"
+  ],
+  "weaknesses": [
+    "Tiny, ageing user and developer community",
+    "Two diverged forks with uneven documentation",
+    "Non-standard query language and file formats with little tooling outside bioinformatics",
+    "No replication, clustering or modern security features"
+  ],
+  "useCases": [
+    "Maintaining legacy AceDB/WormBase-era genome annotation datasets",
+    "Working with NCBI AceView and Magic RNA-seq pipelines",
+    "Studying early flexible-schema database design"
+  ],
+  "notIdealFor": [
+    "New bioinformatics platforms (prefer PostgreSQL-based schemas or genomics stores)",
+    "General application backends"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "mongodb",
+    "tiledb",
+    "sqlite"
+  ],
+  "tags": [
+    "bioinformatics",
+    "genomics",
+    "object-database",
+    "historical"
+  ],
+  "links": {
+    "website": "https://ftp.ncbi.nlm.nih.gov/repository/acedb/",
+    "repository": "https://github.com/richarddurbin/acedb",
+    "wikipedia": "https://en.wikipedia.org/wiki/AceDB"
+  },
+  "ids": {
+    "github": "richarddurbin/acedb",
+    "wikipedia": "AceDB",
+    "hackerNewsQuery": "AceDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/richarddurbin/acedb",
+    "https://ftp.ncbi.nlm.nih.gov/repository/acedb/ACeDB_NCBI/",
+    "https://en.wikipedia.org/wiki/AceDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

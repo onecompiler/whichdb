@@ -1,0 +1,147 @@
+{
+  "slug": "apollo",
+  "name": "Apollo",
+  "aliases": [
+    "Facebook Apollo"
+  ],
+  "tagline": "Facebook's Raft-replicated, sharded C++ data store shown at QCon 2014; never released or open-sourced.",
+  "description": "Apollo was a distributed database that Facebook engineer Jeff Johnson presented at QCon New York in June 2014. Data was split into shards, each replicated with a Raft-based quorum protocol, and stored by default in RocksDB (MySQL was being tried as an alternative engine). Instead of a fixed document or key-value model it exposed atomic operations on data structures such as maps, queues, trees and key-value pairs, with read/write calls guarded by preconditions, and 'fault-tolerant state machines' handled cross-shard transactions, migration and load balancing. It was written in C++11 on Thrift 2 and targeted low-latency online storage, possible memcached replacements and reliable outbound message queues. It was not in production at the time, Facebook never open-sourced it, and nothing further was published, so it survives only as an early example of Raft-per-shard design.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Internal Facebook project presented in 2014; never released or open-sourced, with no public updates since.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "hierarchical"
+  ],
+  "workloads": [
+    "oltp",
+    "queue",
+    "caching"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Facebook (Meta)",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "RocksDB",
+  "license": {
+    "type": "proprietary",
+    "name": "Internal (never released)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never distributed outside Facebook."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Designed for thousands of shards, from three servers up to thousands, and datasets from megabytes to 10+ PB; never documented in production."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Conditional read/write API"
+  ],
+  "apis": [
+    "Thrift 2 RPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early public example of per-shard Raft replication at internet scale",
+    "Atomic conditional operations on rich data structures, not just opaque values",
+    "Storage-agnostic design with RocksDB as the primary engine"
+  ],
+  "weaknesses": [
+    "Never released; no code, documentation or users outside Facebook",
+    "Only described in a single 2014 conference talk and its write-ups"
+  ],
+  "useCases": [
+    "Historical reference for Raft-per-shard database design",
+    "Background reading on Facebook's storage evolution"
+  ],
+  "notIdealFor": [
+    "Any real deployment: the software is not available"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tikv",
+    "cockroachdb",
+    "yugabytedb",
+    "foundationdb",
+    "etcd"
+  ],
+  "tags": [
+    "raft",
+    "rocksdb",
+    "facebook",
+    "internal",
+    "historical"
+  ],
+  "links": {
+    "website": "https://www.infoq.com/news/2014/06/facebook-apollo"
+  },
+  "ids": {
+    "hackerNewsQuery": "Facebook Apollo database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.infoq.com/news/2014/06/facebook-apollo",
+    "https://dzone.com/articles/facebook-announces-apollo-qcon",
+    "https://i-programmer.info/news/84/7441.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

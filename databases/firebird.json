@@ -1,0 +1,188 @@
+{
+  "slug": "firebird",
+  "name": "Firebird",
+  "aliases": [
+    "Firebird SQL",
+    "FirebirdSQL"
+  ],
+  "tagline": "Lightweight, MVCC relational database from the InterBase lineage, embeddable or client-server.",
+  "description": "Firebird is an open-source relational database descended from Borland's InterBase 6.0 source release in 2000. It uses a multi-generational (MVCC) architecture, supports stored procedures and triggers in PSQL, and runs either as a server or as an embedded library from the same database file, which made it popular with Delphi and line-of-business desktop software, especially in Brazil, Russia and Europe. Firebird 5 added parallel backup/restore, partial indexes and SQL-level profiling, and the project, run by the Firebird Foundation, ships coordinated patch releases for 3.x, 4.x and 5.x. Firebird 6 is in development, but 5.0 remains the current stable line.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Firebird Project (Firebird Foundation)",
+  "vendorType": "foundation",
+  "initialRelease": 2000,
+  "latestVersion": {
+    "version": "5.0.4",
+    "date": "2026-04-17"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "basedOn": "InterBase 6.0",
+  "license": {
+    "type": "copyleft",
+    "name": "InterBase Public License / Initial Developer's Public License (MPL-style)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Free for any use; commercial support from IBSurgeon, IBPhoenix and others."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node; physical and logical replication (since 4.0) for standbys."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PSQL"
+  ],
+  "apis": [
+    "Firebird wire protocol",
+    "OO API",
+    "ISC API"
+  ],
+  "drivers": [
+    "Java",
+    "C#",
+    ".NET",
+    "Python",
+    "Delphi",
+    "PHP",
+    "JavaScript",
+    "Go",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Same engine runs embedded or as a server with no change to the database file",
+    "Small footprint and near-zero administration for departmental apps",
+    "Readers never block writers thanks to MVCC record versions",
+    "Mature PSQL stored procedures, triggers and events",
+    "Long-lived stable releases with patches for three major lines"
+  ],
+  "weaknesses": [
+    "Small ecosystem and few managed hosting options",
+    "No native JSON type or full-text search",
+    "Garbage collection of old record versions needs attention under long transactions",
+    "No built-in sharding or multi-primary clustering"
+  ],
+  "useCases": [
+    "Desktop and Delphi business applications",
+    "Embedded databases in point-of-sale or ERP software",
+    "Departmental client-server systems",
+    "Migration target for InterBase deployments"
+  ],
+  "notIdealFor": [
+    "Cloud-native SaaS needing managed services",
+    "Large-scale analytics",
+    "Document or JSON-heavy workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "sqlite",
+    "h2",
+    "mariadb",
+    "mysql",
+    "sql-server"
+  ],
+  "tags": [
+    "open-source",
+    "embedded",
+    "mysql",
+    "delphi"
+  ],
+  "links": {
+    "website": "https://firebirdsql.org/",
+    "docs": "https://firebirdsql.org/en/documentation/",
+    "repository": "https://github.com/FirebirdSQL/firebird",
+    "changelog": "https://github.com/FirebirdSQL/firebird/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Firebird_(database_server)"
+  },
+  "ids": {
+    "github": "FirebirdSQL/firebird",
+    "stackoverflowTag": "firebird",
+    "wikipedia": "Firebird (database server)",
+    "dockerHub": "firebirdsql/firebird",
+    "pypi": "firebird-driver",
+    "npm": "node-firebird",
+    "hackerNewsQuery": "Firebird database"
+  },
+  "sources": [
+    "https://github.com/FirebirdSQL/firebird/releases",
+    "https://firebirdsql.org/en/news/",
+    "https://firebirdsql.org/en/licensing/"
+  ],
+  "lastVerified": "2026-10-27"
+}

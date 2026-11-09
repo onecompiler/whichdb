@@ -1,0 +1,152 @@
+{
+  "slug": "nanolat",
+  "name": "Nanolat",
+  "aliases": [
+    "Nanolat Database",
+    "NLDB"
+  ],
+  "tagline": "Abandoned C++ in-memory key-value server with rank queries and log replication over InfiniBand.",
+  "description": "Nanolat Database (nldb) was a C++ in-memory key-value server from a small Korean project, aimed at game leaderboards, trading front ends and monitoring systems that need microsecond latency. Besides put, get and delete it offered cursor range scans and lookup by rank (for example, fetch 100 keys starting at the 1,000th), transactions, and master-slave replication that shipped the transaction log to a replica over InfiniBand or 10GbE instead of flushing it to local disk. Storage was pluggable through table plug-ins, with LevelDB and Tokyo Cabinet as back ends. The repository was last updated in April 2014 and the nanolat.com domain no longer hosts the project; Redis sorted sets cover the leaderboard case today.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since April 2014 and the project site is gone. Redis or Valkey sorted sets cover its leaderboard use case.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica"
+  ],
+  "developer": "Nanolat",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single master with log-shipping replicas."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Rank-based key lookup built in, a natural fit for leaderboards",
+    "Low-latency replication by shipping logs over InfiniBand",
+    "Pluggable storage via LevelDB and Tokyo Cabinet back ends"
+  ],
+  "weaknesses": [
+    "Abandoned since 2014; built against gcc 4.6/4.7-era toolchains",
+    "Tiny user base and sparse documentation"
+  ],
+  "useCases": [
+    "Studying rank-indexed key-value designs",
+    "Reference for log-shipping replication"
+  ],
+  "notIdealFor": [
+    "Production systems",
+    "Anything needing maintained client libraries"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "leveldb",
+    "rocksdb"
+  ],
+  "tags": [
+    "key-value",
+    "in-memory",
+    "low-latency",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/Nanolat/nldb",
+    "repository": "https://github.com/Nanolat/nldb"
+  },
+  "ids": {
+    "github": "Nanolat/nldb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Nanolat/nldb",
+    "https://dbdb.io/db/nanolat"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,107 @@
+{
+  "slug": "drizzle",
+  "name": "Drizzle",
+  "aliases": ["Drizzle database server"],
+  "tagline": "Slimmed-down MySQL fork rebuilt as a plugin microkernel for web and cloud workloads; abandoned since 2012.",
+  "description": "Drizzle was a fork of the abandoned MySQL 6.0 development tree started by Brian Aker in 2008, with contributors from Sun, Rackspace and the wider MySQL community. It reorganised MySQL around a small C++ microkernel and pushed authentication (PAM, LDAP, HTTP auth), logging, replication, query caching, query rewriting and storage engines into plugins, dropped a good deal of MySQL legacy, and assumed POSIX systems, UTF-8 strings and MVCC transactions. The first GA release came in March 2011 and the last, 7.2.4, in September 2012; active development ended by late 2013 and the maintainers formally wound the project up in July 2016. It is not a database to deploy today, but its modularisation ideas show up in later MySQL, MariaDB and Percona work.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release 7.2.4 in September 2012; maintainers formally wound the project up in July 2016. Use MySQL, MariaDB or Percona Server instead.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp"],
+  "architecture": ["client-server", "primary-replica"],
+  "developer": "Drizzle project (started by Brian Aker)",
+  "vendorType": "community",
+  "initialRelease": 2008,
+  "latestVersion": { "version": "7.2.4", "date": "2012-09-23" },
+  "writtenIn": ["C++"],
+  "basedOn": "MySQL 6.0 development branch",
+  "license": { "type": "copyleft", "name": "GNU GPL v2 (client libraries BSD)", "spdx": "GPL-2.0-only" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos", "unix"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single primary with plugin-based replication; sharding was left to the application."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["MySQL wire protocol", "Drizzle protocol", "libdrizzle"],
+  "compatibleWith": ["mysql"],
+  "drivers": ["C", "PHP", "Java"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Clean plugin microkernel: auth, logging, replication and engines were all swappable modules",
+    "Modern C++ codebase without MySQL's legacy baggage, useful for studying server design",
+    "Spoke the MySQL protocol, so existing clients could connect"
+  ],
+  "weaknesses": [
+    "No release since 2012 and no security fixes",
+    "Diverged from MySQL in features and behaviour, so existing applications rarely ran unmodified",
+    "Never gained the ecosystem, tooling or hosting support of MySQL forks that survived"
+  ],
+  "useCases": [
+    "Historical study of MySQL forks and modular server architecture",
+    "Reading plugin-API designs for database servers"
+  ],
+  "notIdealFor": ["Any production deployment", "Applications that need MySQL feature parity"],
+  "notableUsers": [],
+  "alternatives": ["mysql", "mariadb", "percona-server-mysql", "postgresql"],
+  "tags": ["mysql-fork", "sql", "open-source", "discontinued", "microkernel"],
+  "links": {
+    "website": "https://launchpad.net/drizzle",
+    "repository": "https://github.com/stewartsmith/drizzle",
+    "wikipedia": "https://en.wikipedia.org/wiki/Drizzle_(database_server)"
+  },
+  "ids": {
+    "wikipedia": "Drizzle_(database_server)"
+  },
+  "brand": {},
+  "sources": [
+    "https://launchpad.net/drizzle",
+    "https://api.launchpad.net/1.0/drizzle/releases",
+    "https://en.wikipedia.org/wiki/Drizzle_(database_server)",
+    "https://dbdb.io/db/drizzle"
+  ],
+  "lastVerified": "2026-10-27"
+}

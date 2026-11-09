@@ -1,0 +1,180 @@
+{
+  "slug": "arcticdb",
+  "name": "ArcticDB",
+  "aliases": [
+    "Arctic"
+  ],
+  "tagline": "Serverless DataFrame database from Man Group: Pandas in, versioned columnar data on S3 out.",
+  "description": "ArcticDB is a C++ storage engine with a Python API that stores Pandas and Polars DataFrames directly on S3, Azure Blob or local LMDB, with no server to run. Every write is versioned, so you can read a symbol as of any earlier version or snapshot, and data is chunked by row and column so slicing by date range and columns stays fast even on very wide tables. It was built by Man Group as the successor to its MongoDB-based Arctic library and open-sourced in 2023 under the Business Source License, with each version converting to Apache-2.0 two years after release. It is a research data store for Python quants, not a SQL database.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar"
+  ],
+  "workloads": [
+    "financial-tick-data",
+    "time-series",
+    "scientific",
+    "olap"
+  ],
+  "architecture": [
+    "embedded",
+    "serverless",
+    "shared-storage"
+  ],
+  "developer": "Man Group",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "6.28.2",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "C++",
+    "Python"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1 (converts to Apache-2.0 after 2 years)",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free under BSL except for offering it as a database service; commercial licences and support are available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": true,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Clients read and write object storage directly, so throughput scales with clients and the store."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Python API",
+    "QueryBuilder"
+  ],
+  "apis": [
+    "Python library"
+  ],
+  "compatibleWith": [
+    "s3"
+  ],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No server: Python clients talk straight to S3, Azure Blob or LMDB",
+    "Every write is versioned, with snapshots for reproducible research",
+    "Handles very wide DataFrames (hundreds of thousands of columns)",
+    "Fast date-range and column slicing",
+    "Built and used in production by a large hedge fund"
+  ],
+  "weaknesses": [
+    "Python-centric; no SQL interface",
+    "BSL licence restricts offering it as a database service",
+    "Concurrent writers to the same symbol need care",
+    "Not suited to low-latency streaming or many small writes"
+  ],
+  "useCases": [
+    "Quant research data stores",
+    "Versioned financial time series",
+    "Feature and factor libraries for backtesting",
+    "Scientific DataFrame storage on object storage"
+  ],
+  "notIdealFor": [
+    "SQL users and BI tools",
+    "Real-time ingestion",
+    "Multi-language application backends"
+  ],
+  "notableUsers": [
+    "Man Group"
+  ],
+  "alternatives": [
+    "kdb-plus",
+    "questdb",
+    "dolphindb",
+    "duckdb",
+    "lancedb",
+    "tiledb"
+  ],
+  "tags": [
+    "python",
+    "dataframe",
+    "capital-markets",
+    "object-storage",
+    "versioned"
+  ],
+  "links": {
+    "website": "https://arcticdb.io/",
+    "docs": "https://docs.arcticdb.io/",
+    "repository": "https://github.com/man-group/ArcticDB",
+    "changelog": "https://github.com/man-group/ArcticDB/releases"
+  },
+  "ids": {
+    "github": "man-group/ArcticDB",
+    "pypi": "arcticdb",
+    "hackerNewsQuery": "ArcticDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/man-group/ArcticDB/releases",
+    "https://github.com/man-group/ArcticDB/blob/master/LICENSE.txt",
+    "https://pypi.org/project/arcticdb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

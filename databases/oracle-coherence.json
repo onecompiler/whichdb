@@ -1,0 +1,191 @@
+{
+  "slug": "oracle-coherence",
+  "name": "Oracle Coherence",
+  "aliases": [
+    "Coherence",
+    "Coherence CE"
+  ],
+  "tagline": "Oracle's long-running Java data grid, with a UPL-licensed Community Edition on GitHub.",
+  "description": "Coherence is a partitioned, replicated in-memory data grid that Oracle acquired with Tangosol in 2007 and still ships with WebLogic. It provides distributed maps with queries, aggregations, entry processors, events and near caches, plus gRPC and REST access for non-Java clients. Since 2020 a Community Edition is developed in the open under the permissive UPL license, with calendar-versioned releases (26.07 in September 2026), while commercial Enterprise and Grid editions add features like federated caching. Recent releases add vector storage with HNSW indexes and Lucene-backed full-text search.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "real-time-analytics",
+    "pub-sub"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Oracle",
+  "vendorType": "company",
+  "initialRelease": 2001,
+  "latestVersion": {
+    "version": "CE 26.07",
+    "date": "2026-09-15"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Universal Permissive License 1.0 (Community Edition)",
+    "spdx": "UPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free; Enterprise and Grid editions are licensed per processor, often bundled with WebLogic."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "oracle-cloud"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Partitioned caches rebalance automatically; Federated Caching for multi-site active-active is a commercial Grid Edition feature."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "CohQL",
+    "Filter API",
+    "Java Streams"
+  ],
+  "apis": [
+    "Coherence*Extend",
+    "gRPC",
+    "REST",
+    "JCache (JSR-107)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#",
+    "C++",
+    "JavaScript",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Two decades of production use in finance and telecom",
+    "Entry processors run atomic logic where the data lives",
+    "Kubernetes Operator and Helidon/Micronaut/Spring integrations",
+    "Community Edition is permissively licensed (UPL)",
+    "Vector and full-text indexes inside the grid in recent releases"
+  ],
+  "weaknesses": [
+    "Most value is in Java; other languages go through gRPC/Extend proxies",
+    "Commercial features and support tied to Oracle licensing",
+    "Smaller open-source community than Hazelcast or Ignite",
+    "Two versioning schemes (CE calendar versions vs 14.x/15.x commercial)"
+  ],
+  "useCases": [
+    "Session and state replication for WebLogic and Java apps",
+    "Low-latency reference data caches in trading systems",
+    "Event-driven processing with map listeners"
+  ],
+  "notIdealFor": [
+    "Polyglot teams wanting native clients in every language",
+    "Simple TTL caching"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "hazelcast",
+    "apache-ignite",
+    "infinispan",
+    "vmware-tanzu-gemfire",
+    "gridgain"
+  ],
+  "tags": [
+    "data-grid",
+    "jvm",
+    "oracle",
+    "in-memory"
+  ],
+  "links": {
+    "website": "https://coherence.community/",
+    "docs": "https://docs.oracle.com/en/middleware/fusion-middleware/coherence/",
+    "repository": "https://github.com/oracle/coherence",
+    "changelog": "https://github.com/oracle/coherence/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Oracle_Coherence"
+  },
+  "ids": {
+    "github": "oracle/coherence",
+    "stackoverflowTag": "oracle-coherence",
+    "wikipedia": "Oracle_Coherence",
+    "dockerHub": "oraclecoherence/coherence-ce",
+    "npm": "@oracle/coherence",
+    "pypi": "coherence-client",
+    "hackerNewsQuery": "Oracle Coherence"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/oracle/coherence",
+    "https://repo1.maven.org/maven2/com/oracle/coherence/ce/coherence/",
+    "https://blogs.oracle.com/weblogicserver/announcing-oracle-weblogic-server-and-coherence-1511"
+  ],
+  "lastVerified": "2026-10-27"
+}

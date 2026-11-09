@@ -1,0 +1,154 @@
+{
+  "slug": "thrudb",
+  "name": "ThruDB",
+  "aliases": [
+    "Thrudb"
+  ],
+  "tagline": "2007-era document storage and search services on Apache Thrift with pluggable BerkeleyDB, MySQL or S3 stores.",
+  "description": "ThruDB, started by Jake Luciani, was a set of small network services built on Apache Thrift for scaling websites: Thrudoc for document storage, Thrudex for Lucene-based indexing and search, Thruqueue for persistent queues and Throxy for scaling. Storage back ends were pluggable (BerkeleyDB, plain disk, MySQL or Amazon S3), with memcached integration, redo logging and incremental backups, and Thrift generated clients for most languages. It never made a formal release, and its Google Code page declared it no longer under development; its author went on to work on Apache Cassandra. It is a snapshot of pre-NoSQL-boom thinking about document stores.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Project page states it is no longer under development; it never had a formal release and Google Code is archived. Use MongoDB, Couchbase or Elasticsearch.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "search"
+  ],
+  "workloads": [
+    "content-management",
+    "full-text-search",
+    "queue"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed"
+  ],
+  "developer": "Jake Luciani",
+  "vendorType": "community",
+  "initialRelease": 2007,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD License"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Thrift service API"
+  ],
+  "apis": [
+    "Apache Thrift RPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Ruby",
+    "PHP",
+    "Perl",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pluggable storage back ends including BerkeleyDB, MySQL and S3",
+    "Thrift-generated clients for many languages",
+    "Combined document storage, search and queue services in one kit"
+  ],
+  "weaknesses": [
+    "Never formally released and abandoned around 2008",
+    "Thin documentation and no community",
+    "Depends on very old Thrift and Lucene versions"
+  ],
+  "useCases": [
+    "History of early NoSQL document stores",
+    "Studying Thrift-based service design"
+  ],
+  "notIdealFor": [
+    "Any production workload"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "couchbase",
+    "elasticsearch",
+    "apache-cassandra"
+  ],
+  "tags": [
+    "thrift",
+    "document-store",
+    "search",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://code.google.com/archive/p/thrudb/",
+    "repository": "https://code.google.com/archive/p/thrudb/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://code.google.com/archive/p/thrudb/",
+    "https://storage.googleapis.com/google-code-archive/v2/code.google.com/thrudb/project.json",
+    "https://github.com/tjake/thrudb-java"
+  ],
+  "lastVerified": "2026-10-27"
+}

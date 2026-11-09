@@ -1,0 +1,159 @@
+{
+  "slug": "quickstep",
+  "name": "Quickstep",
+  "aliases": [
+    "Apache Quickstep",
+    "UW Quickstep"
+  ],
+  "tagline": "UW-Madison's single-node, in-memory analytical SQL engine; retired from the Apache Incubator in 2018.",
+  "description": "Quickstep is a research database engine from Jignesh Patel's group at the University of Wisconsin-Madison that set out to 'scale in' rather than out: squeeze every core and byte of memory in one large server before reaching for a cluster. It decouples data flow from control flow so many work orders from many queries run in parallel, uses template metaprogramming for vectorised operators, and mixes row and column storage blocks. It entered the Apache Incubator in 2016 and retired in December 2018; the UW repository still receives occasional build fixes, most recently in 2024, but no feature work. It is useful as a readable modern analytical engine for study, not as a product.",
+  "productType": "research",
+  "status": "maintenance",
+  "statusNote": "Apache Incubator podling retired on 2018-12-01; the UW repository gets only occasional build fixes (latest 2024). Use DuckDB for single-node analytics.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory"
+  ],
+  "developer": "University of Wisconsin-Madison (Apache Incubator 2016-2018)",
+  "vendorType": "academic",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "0.1.0",
+    "date": "2017"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Targets one many-core server with large memory; spills to disk if data exceeds RAM."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Command-line shell"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Work-order scheduler decouples control flow from data flow for high intra- and inter-query parallelism",
+    "Vectorised operators generated with C++ template metaprogramming",
+    "Hybrid row/column storage blocks with compression and bitmap indexes",
+    "Permissively licensed, compact codebase for teaching analytical engine design"
+  ],
+  "weaknesses": [
+    "Small SQL surface; many standard features missing",
+    "No active development, releases or community since 2018",
+    "Building requires patching third-party dependencies"
+  ],
+  "useCases": [
+    "Studying scale-in analytical engine architecture",
+    "Research baselines for single-node OLAP experiments"
+  ],
+  "notIdealFor": [
+    "Production analytics",
+    "Transactional workloads",
+    "Users who need a maintained engine"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "monetdb",
+    "clickhouse",
+    "apache-datafusion"
+  ],
+  "tags": [
+    "research",
+    "olap",
+    "in-memory",
+    "apache-retired",
+    "uw-madison"
+  ],
+  "links": {
+    "website": "https://github.com/UWQuickstep/quickstep",
+    "repository": "https://github.com/UWQuickstep/quickstep"
+  },
+  "ids": {
+    "github": "UWQuickstep/quickstep",
+    "hackerNewsQuery": "Quickstep database"
+  },
+  "brand": {},
+  "sources": [
+    "https://incubator.apache.org/projects/quickstep.html",
+    "https://github.com/UWQuickstep/quickstep",
+    "https://github.com/apache/incubator-retired-quickstep",
+    "https://dbdb.io/db/quickstep"
+  ],
+  "lastVerified": "2026-10-27"
+}

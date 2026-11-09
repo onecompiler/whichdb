@@ -1,0 +1,195 @@
+{
+  "slug": "google-cloud-sql",
+  "name": "Google Cloud SQL",
+  "aliases": [
+    "Cloud SQL",
+    "Cloud SQL for PostgreSQL",
+    "Cloud SQL for MySQL"
+  ],
+  "tagline": "Google Cloud's managed MySQL, PostgreSQL and SQL Server, with an Enterprise Plus tier for fast failover.",
+  "description": "Cloud SQL is Google Cloud's managed service for MySQL, PostgreSQL and SQL Server. It automates provisioning, patching, backups, point-in-time recovery, high availability with a regional standby, and cross-region read replicas, and it connects to the rest of GCP through the Cloud SQL Auth Proxy, IAM database authentication and language connectors. The Enterprise Plus edition adds a data cache on local SSD, near-zero-downtime maintenance and faster failover. It covers most standard OLTP needs on Google Cloud; teams that need higher Postgres throughput or built-in analytics usually step up to AlloyDB, and those that need horizontal write scale go to Spanner.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "metadata-store",
+    "vector-search"
+  ],
+  "architecture": [
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Google",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Google Cloud service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Billed per vCPU, memory and storage by edition (Enterprise, Enterprise Plus), with committed-use discounts; new Google Cloud accounts get trial credits and Cloud SQL offers time-limited free trial instances."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Cloud SQL",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/sql"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Vertical scaling with up to 64 TB storage; regional HA and cross-region read replicas for DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL",
+    "T-SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "PostgreSQL wire protocol",
+    "TDS",
+    "Cloud SQL Admin API"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "postgresql",
+    "sql-server"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C#",
+    "PHP",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stock MySQL, PostgreSQL and SQL Server with simple operations",
+    "Enterprise Plus edition: local-SSD data cache and near-zero-downtime maintenance",
+    "IAM database authentication and Auth Proxy for secure connectivity",
+    "pgvector and MySQL vector support for AI features",
+    "Tight integration with GKE, Cloud Run and BigQuery federation"
+  ],
+  "weaknesses": [
+    "Vertical scaling only",
+    "Google Cloud only",
+    "Extension allowlist and no superuser access",
+    "Throughput lags AlloyDB for demanding Postgres workloads"
+  ],
+  "useCases": [
+    "Standard web and mobile backends on Google Cloud",
+    "Migrating on-prem MySQL, Postgres or SQL Server to GCP",
+    "Cloud Run and GKE application databases",
+    "WordPress and CMS hosting"
+  ],
+  "notIdealFor": [
+    "Horizontal write scaling (use Spanner)",
+    "Heavy HTAP workloads (use AlloyDB)",
+    "Scale-to-zero dev databases"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-rds",
+    "alloydb",
+    "azure-database-for-postgresql",
+    "google-cloud-spanner",
+    "neon",
+    "postgresql"
+  ],
+  "tags": [
+    "google-cloud",
+    "managed",
+    "postgres",
+    "mysql",
+    "sql-server"
+  ],
+  "links": {
+    "website": "https://cloud.google.com/sql",
+    "docs": "https://cloud.google.com/sql/docs",
+    "pricing": "https://cloud.google.com/sql/pricing",
+    "changelog": "https://cloud.google.com/sql/docs/release-notes"
+  },
+  "ids": {
+    "stackoverflowTag": "google-cloud-sql",
+    "hackerNewsQuery": "\"Cloud SQL\" Google"
+  },
+  "brand": {
+    "color": "#4285F4",
+    "simpleIcon": "googlecloud"
+  },
+  "sources": [
+    "https://cloud.google.com/sql",
+    "https://cloud.google.com/sql/pricing",
+    "https://cloud.google.com/sql/docs/editions-intro"
+  ],
+  "lastVerified": "2026-10-27"
+}

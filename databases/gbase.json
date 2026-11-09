@@ -1,0 +1,161 @@
+{
+  "slug": "gbase",
+  "name": "GBase",
+  "aliases": [
+    "GBASE",
+    "南大通用",
+    "GBase 8a",
+    "GBase 8s",
+    "GBase 8c"
+  ],
+  "tagline": "Chinese commercial database family: GBase 8a analytics, 8s transactional cluster, 8c distributed.",
+  "description": "GBase is a family of commercial relational databases from GBASE (General Data Technology Co., Ltd., 南大通用) in Tianjin, China, developed since 2004. GBase 8a is a columnar MPP analytic database for large-scale queries, GBase 8s is a transactional database that clusters over shared storage, and GBase 8c is a newer multi-model distributed database; GCDW is a cloud data warehouse built on the same columnar technology. The products are sold mainly to Chinese government, telecom, finance and energy customers as part of domestic-substitution (xinchuang) programmes, with documentation and support primarily in Chinese. Consider it if you are building in China and need a locally supported Oracle or Teradata replacement.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "GBASE (General Data Technology Co., Ltd.)",
+  "vendorType": "company",
+  "initialRelease": 2004,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "GBase 8a and GCDW scale out as MPP clusters; GBase 8s scales through a shared-storage cluster."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Separate engines for MPP analytics, transactional clustering and distributed workloads",
+    "Strong position in Chinese government, telecom and finance procurement",
+    "Local vendor support and compliance with Chinese domestic-software requirements"
+  ],
+  "weaknesses": [
+    "Documentation, community and support are mostly in Chinese",
+    "Closed source with enterprise-only licensing",
+    "Little independent benchmarking or international adoption"
+  ],
+  "useCases": [
+    "Oracle or Teradata replacement in Chinese enterprises",
+    "Telecom and government data warehouses",
+    "Core transactional systems under domestic-substitution programmes"
+  ],
+  "notIdealFor": [
+    "Teams outside China needing English support",
+    "Open-source-first stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oceanbase",
+    "tidb",
+    "opengauss",
+    "huawei-gaussdb",
+    "kingbase",
+    "dameng"
+  ],
+  "tags": [
+    "china",
+    "mpp",
+    "columnar",
+    "xinchuang",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.gbase.cn/"
+  },
+  "ids": {
+    "hackerNewsQuery": "GBase database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.gbase.cn/",
+    "https://dbdb.io/db/gbase",
+    "https://db-engines.com/en/system/GBase%3BInformix%3BNuoDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

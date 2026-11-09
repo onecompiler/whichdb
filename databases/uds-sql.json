@@ -1,0 +1,159 @@
+{
+  "slug": "uds-sql",
+  "name": "UDS/SQL",
+  "aliases": [
+    "UDS",
+    "Universal Database System",
+    "Universelles Datenbanksystem"
+  ],
+  "tagline": "Fujitsu BS2000 mainframe DBMS combining a CODASYL network model with SQL on the same data.",
+  "description": "UDS/SQL is the CODASYL-style database system for Fujitsu's BS2000 mainframe operating system, originally introduced by Siemens as UDS in 1976. Data is designed as network-model record types and sets, but the same data can also be queried relationally: programs use COBOL DML or CALL DML, and ISO SQL is available alongside. It integrates with the openUTM transaction monitor, and the UDS-D add-on processes data across BS2000 networks with distributed transactions. Fujitsu still develops it: V2.9B (November 2024) added features such as CSV bulk loading, and V2.9C manuals were published in 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "navigational",
+  "models": [
+    "navigational",
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed"
+  ],
+  "developer": "Fujitsu (originally Siemens)",
+  "vendorType": "company",
+  "initialRelease": 1976,
+  "latestVersion": {
+    "version": "V2.9C",
+    "date": "2026"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (Fujitsu BS2000 software)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales on BS2000 hardware; UDS-D adds distributed processing across BS2000 hosts."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "COBOL DML",
+    "CALL DML",
+    "SQL"
+  ],
+  "apis": [
+    "COBOL DML",
+    "CALL DML",
+    "openUTM"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "COBOL"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Network-model and relational access coexist on the same data",
+    "Tight integration with openUTM for high-volume transaction processing",
+    "Decades of backward compatibility for BS2000 COBOL applications",
+    "Distributed transactions across hosts via UDS-D"
+  ],
+  "weaknesses": [
+    "Runs only on Fujitsu BS2000",
+    "Niche skills market concentrated in German-speaking enterprises and public sector",
+    "Proprietary and priced through enterprise contracts"
+  ],
+  "useCases": [
+    "Core banking, insurance and public-sector systems on BS2000",
+    "Maintaining CODASYL-era COBOL applications"
+  ],
+  "notIdealFor": [
+    "Anything outside a BS2000 estate",
+    "Cloud-native development"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "idms",
+    "ibm-ims",
+    "supra-server-sql",
+    "adabas"
+  ],
+  "tags": [
+    "mainframe",
+    "bs2000",
+    "codasyl",
+    "fujitsu",
+    "cobol"
+  ],
+  "links": {
+    "website": "https://bs2manuals.ts.fujitsu.com/",
+    "docs": "https://bs2manuals.ts.fujitsu.com/download/manual/13486"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://bs2manuals.ts.fujitsu.com/download/manual/21720",
+    "https://bs2manuals.ts.fujitsu.com/download/manual/21999",
+    "https://bs2manuals.ts.fujitsu.com/download/manual/13486",
+    "https://www.computerwoche.de/article/2850627/db-system-nach-codasyl-richtlinien.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

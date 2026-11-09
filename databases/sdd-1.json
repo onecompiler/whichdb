@@ -1,0 +1,140 @@
+{
+  "slug": "sdd-1",
+  "name": "SDD-1",
+  "aliases": [
+    "System for Distributed Databases",
+    "SDD-1 distributed database"
+  ],
+  "tagline": "Computer Corporation of America's 1970s ARPANET prototype, the first general distributed relational DBMS.",
+  "description": "SDD-1 (System for Distributed Databases) was built at Computer Corporation of America in the late 1970s with ARPA funding and described in a 1980 ACM TODS series by James Rothnie, Philip Bernstein, Nathan Goodman and colleagues. It spread a relational database across sites on the ARPANET, with transaction modules planning and coordinating work and data modules storing local fragments. SDD-1 is remembered for two ideas: semijoin-based distributed query optimisation, which ships reduced relations between sites to cut network cost, and timestamp-based concurrency control guided by 'conflict graph' analysis of transaction classes, plus a reliable-network layer for commit. It never became a product, but it shaped the distributed database textbooks and systems that followed, from R* to today's distributed SQL engines.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Industrial research prototype (about 1976-1980) at Computer Corporation of America; never sold. Its semijoin and concurrency-control ideas live on in distributed SQL engines.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Computer Corporation of America",
+  "vendorType": "company",
+  "initialRelease": 1980,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Not publicly released (research prototype)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never distributed; only papers remain."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Data fragments were placed and replicated across geographically separate ARPANET sites."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Datalanguage"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Introduced semijoin-based distributed query optimisation",
+    "Pioneered conflict-graph analysis to cheapen distributed concurrency control",
+    "Early end-to-end design for fragmentation, replication and reliable commit across a WAN",
+    "Foundational reading for distributed database theory"
+  ],
+  "weaknesses": [
+    "No surviving code; known only through papers",
+    "Designed for 1970s networks where communication dominated all costs"
+  ],
+  "useCases": [
+    "History and theory of distributed databases",
+    "Background reading for distributed query optimisation and concurrency control"
+  ],
+  "notIdealFor": [
+    "Any practical workload: nothing is available to run"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cockroachdb",
+    "google-cloud-spanner",
+    "yugabytedb",
+    "tidb"
+  ],
+  "tags": [
+    "research",
+    "distributed",
+    "historical",
+    "arpanet",
+    "semijoin"
+  ],
+  "links": {
+    "website": "https://doi.org/10.1145/320128.320129"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1145/320128.320129",
+    "https://dbdb.io/db/sdd-1",
+    "https://en.wikipedia.org/wiki/Computer_Corporation_of_America"
+  ],
+  "lastVerified": "2026-10-27"
+}

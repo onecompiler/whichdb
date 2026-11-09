@@ -1,0 +1,180 @@
+{
+  "slug": "mimer-sql",
+  "name": "Mimer SQL",
+  "aliases": [
+    "Mimer"
+  ],
+  "tagline": "Swedish standards-strict SQL engine built for embedded, automotive and real-time systems.",
+  "description": "Mimer SQL grew out of Uppsala University in the 1970s and is now developed by Mimer Information Technology in Sweden. It is unusually faithful to the ISO SQL standard (version 11 implements SQL:2016 core plus many optional features), uses optimistic concurrency so readers never block writers, and has a real-time edition with predictable latency for automotive and industrial controllers. The same engine scales from tiny embedded targets on Linux, RISC-V and OpenVMS up to enterprise servers. It is niche and commercially licensed, so pick it when you need a small, certifiable, standards-correct SQL database rather than a general web back end.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "iot",
+    "edge"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Mimer Information Technology AB",
+  "vendorType": "company",
+  "initialRelease": 1978,
+  "latestVersion": {
+    "version": "11.0.9",
+    "date": "2026-08"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free downloads for development and evaluation; production and embedded/OEM use is licensed."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "SQL/PSM"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "ADO.NET",
+    "Mimer SQL C API",
+    "ESQL"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very close adherence to the ISO SQL standard (SQL:2016 core and many optional features)",
+    "Optimistic concurrency: readers never block writers and no lock tuning is needed",
+    "Real-time edition with deterministic behaviour for automotive and industrial use",
+    "Runs on unusual targets including Linux on RISC-V and OpenVMS"
+  ],
+  "weaknesses": [
+    "Tiny community and few third-party tools",
+    "No built-in replication or horizontal scaling",
+    "Commercial licence for production use"
+  ],
+  "useCases": [
+    "In-vehicle infotainment and telematics data",
+    "Industrial controllers needing predictable SQL",
+    "OpenVMS application modernisation",
+    "Teaching and testing standard SQL behaviour"
+  ],
+  "notIdealFor": [
+    "Web-scale SaaS back ends",
+    "Analytics workloads",
+    "Teams wanting a large open-source ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "raima-database-manager",
+    "ittia-db",
+    "empress-embedded-database",
+    "postgresql",
+    "sap-sql-anywhere"
+  ],
+  "tags": [
+    "sql",
+    "embedded",
+    "automotive",
+    "real-time",
+    "standards"
+  ],
+  "links": {
+    "website": "https://www.mimer.com/",
+    "docs": "https://developer.mimer.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Mimer_SQL"
+  },
+  "ids": {
+    "wikipedia": "Mimer SQL",
+    "dockerHub": "mimersql/mimersql_v11.0",
+    "pypi": "mimerpy",
+    "hackerNewsQuery": "Mimer SQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://developer.mimer.com/mimer-sql-11-is-released/",
+    "https://developer.mimer.com/article/whats-new-in-mimer-sql-11/",
+    "https://en.wikipedia.org/wiki/Mimer_SQL"
+  ],
+  "lastVerified": "2026-10-27"
+}

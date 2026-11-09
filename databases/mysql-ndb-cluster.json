@@ -1,0 +1,193 @@
+{
+  "slug": "mysql-ndb-cluster",
+  "name": "MySQL NDB Cluster",
+  "aliases": [
+    "MySQL Cluster",
+    "NDB",
+    "NDBCLUSTER"
+  ],
+  "tagline": "Shared-nothing, auto-sharded in-memory MySQL engine built for telecom-grade availability.",
+  "description": "MySQL NDB Cluster pairs MySQL Server front ends with NDB, a distributed shared-nothing storage engine originally built at Ericsson for telecom subscriber databases. Data is automatically partitioned across data nodes and synchronously replicated within node groups, giving five-nines availability, online scaling and sub-millisecond primary-key access, with disk-backed tables for colder data. Beyond SQL it exposes NoSQL-style APIs (NDB API, ClusterJ, Node.js adapter) that bypass the SQL layer. It shines for HLR/5G, gaming and session state, but its join performance, operational complexity and differences from InnoDB make it a specialist tool.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "session-store",
+    "caching",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Oracle Corporation",
+  "vendorType": "company",
+  "initialRelease": 2004,
+  "latestVersion": {
+    "version": "26.10.0",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MySQL Server + NDB storage engine",
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-2.0 (Community) / commercial (CGE)",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Community edition under GPLv2; MySQL Cluster Carrier Grade Edition is a commercial Oracle subscription."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Up to 144 data nodes; automatic sharding by primary key hash. Geo-replication between clusters with conflict detection."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL client/server protocol",
+    "NDB API (C++)",
+    "ClusterJ (Java)",
+    "MGM API"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "C++",
+    "Java",
+    "JavaScript",
+    "C",
+    "Python",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Automatic sharding and synchronous replication with no single point of failure",
+    "Sub-millisecond primary-key reads and writes from memory",
+    "Online add-node, rolling upgrades and online schema changes",
+    "Direct NDB API access for millions of ops/sec without SQL parsing",
+    "Multi-cluster geo-replication with conflict resolution"
+  ],
+  "weaknesses": [
+    "Joins and range scans across data nodes are much slower than InnoDB",
+    "Different semantics from InnoDB (READ COMMITTED only, size limits per row)",
+    "Operationally complex: management, data and SQL nodes to size and tune",
+    "Memory-resident by default, so large datasets get expensive"
+  ],
+  "useCases": [
+    "Telecom subscriber databases (HLR, HSS, 5G UDM)",
+    "Online gaming player state",
+    "Session and user-profile stores needing five-nines uptime",
+    "Payment authorization with strict availability SLAs"
+  ],
+  "notIdealFor": [
+    "Join-heavy reporting queries",
+    "Applications relying on InnoDB-specific behavior",
+    "Small teams without dedicated DBA time"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mysql",
+    "galera-cluster",
+    "percona-xtradb-cluster",
+    "tidb",
+    "vitess",
+    "volt-active-data",
+    "cockroachdb"
+  ],
+  "tags": [
+    "mysql-compatible",
+    "distributed",
+    "in-memory",
+    "telecom",
+    "high-availability"
+  ],
+  "links": {
+    "website": "https://www.mysql.com/products/cluster/",
+    "docs": "https://dev.mysql.com/doc/refman/9.7/en/mysql-cluster.html",
+    "repository": "https://github.com/mysql/mysql-server",
+    "wikipedia": "https://en.wikipedia.org/wiki/MySQL_Cluster"
+  },
+  "ids": {
+    "stackoverflowTag": "mysql-cluster",
+    "wikipedia": "MySQL Cluster",
+    "dockerHub": "mysql/mysql-cluster",
+    "hackerNewsQuery": "\"MySQL NDB Cluster\""
+  },
+  "brand": {
+    "color": "#4479A1",
+    "simpleIcon": "mysql"
+  },
+  "sources": [
+    "https://www.mysql.com/products/cluster/",
+    "https://github.com/mysql/mysql-server/tags",
+    "https://dev.mysql.com/doc/relnotes/mysql/26.10/en/"
+  ],
+  "lastVerified": "2026-10-27"
+}

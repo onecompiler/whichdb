@@ -1,0 +1,144 @@
+{
+  "slug": "stormdb",
+  "name": "StormDB",
+  "aliases": [],
+  "tagline": "2012-2013 cloud database service built on a modified Postgres-XC cluster; its code became Postgres-XL.",
+  "description": "StormDB was a database-as-a-service startup that adopted Postgres-XC, the NTT Data and EnterpriseDB fork for clustering PostgreSQL, in 2012 and added its own extensions and fixes. Customers got a scale-out, PostgreSQL-compatible SQL database, including geospatial queries, without installing or tuning anything. TransLattice acquired StormDB in 2013 and open-sourced the improved code in 2014 as Postgres-XL, which 2ndQuadrant later supported until development stopped in 2018. The hosted service is long gone and the stormdb.com domain now points to an unrelated site, so StormDB matters mostly as an ancestor of distributed-Postgres designs.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Acquired by TransLattice in 2013; the service closed and its code was open-sourced as Postgres-XL in 2014. Use Citus, YugabyteDB or CockroachDB for distributed Postgres-style SQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "StormDB (acquired by TransLattice)",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Postgres-XC (PostgreSQL)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary hosted service (code later released as Postgres-XL)"
+  },
+  "pricing": {
+    "models": [
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "The hosted service no longer exists."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shared-nothing PostgreSQL cluster with a global transaction manager, as in Postgres-XC/XL."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "PostgreSQL-compatible SQL that scaled out across nodes",
+    "Fully managed, with no tuning or HA setup for customers",
+    "Its engineering lives on in Postgres-XL"
+  ],
+  "weaknesses": [
+    "Service shut down after the 2013 acquisition",
+    "Global transaction manager design needed fast interconnects and limited geo-distribution",
+    "Little documentation survives"
+  ],
+  "useCases": [
+    "Historical reference for distributed PostgreSQL",
+    "Tracing the lineage of Postgres-XL"
+  ],
+  "notIdealFor": [
+    "Any production workload: the service no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "citus",
+    "yugabytedb",
+    "cockroachdb",
+    "greenplum"
+  ],
+  "tags": [
+    "postgresql",
+    "dbaas",
+    "distributed-sql",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20141219020955/http://www.stormdb.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20141219020955/http://www.stormdb.com/",
+    "https://en.wikipedia.org/wiki/Postgres-XL",
+    "https://en.wikipedia.org/wiki/TransLattice"
+  ],
+  "lastVerified": "2026-10-27"
+}

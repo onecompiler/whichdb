@@ -1,0 +1,160 @@
+{
+  "slug": "chronix",
+  "name": "Chronix",
+  "aliases": [
+    "Chronix Server",
+    "ChronixDB"
+  ],
+  "tagline": "Time-series store on Apache Solr that packed compressed chunks of points into documents; archived since 2019.",
+  "description": "Chronix was an open-source time-series database from the German consultancy QAware that layered on Apache Solr and Lucene instead of implementing its own storage engine. It grouped consecutive data points into compressed chunks stored as Solr documents alongside descriptive attributes, so long histories of operational metrics took little space and could be filtered with ordinary Solr queries plus Chronix functions for aggregations and analyses; Spark and other integrations were separate modules. Development stopped after Chronix Server 0.5.2 in November 2019 and the main repository is archived. Its chunked-compression approach is now standard in engines such as Prometheus, VictoriaMetrics and QuestDB, which are the sensible choices today.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Repository archived on GitHub; last release Chronix Server 0.5.2 (Nov 2019).",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "time-series",
+    "observability"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "QAware GmbH",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "0.5.2",
+    "date": "2019-11-18"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Solr / Lucene",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Solr query syntax",
+    "Chronix query functions"
+  ],
+  "apis": [
+    "Solr HTTP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Chunked, compressed storage kept long metric histories small",
+    "Reused Solr/Lucene for indexing, replication and tooling",
+    "Attribute-rich series could be filtered with standard Solr queries"
+  ],
+  "weaknesses": [
+    "Archived and unmaintained since 2019",
+    "Pinned to old Solr versions",
+    "Small community with few integrations beyond the original team's"
+  ],
+  "useCases": [
+    "Historical reference for chunk-based time-series storage on a search engine",
+    "Planning migrations of existing deployments"
+  ],
+  "notIdealFor": [
+    "New monitoring or IoT projects",
+    "Production workloads that need updates or support"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "prometheus",
+    "victoriametrics",
+    "influxdb",
+    "timescaledb",
+    "questdb",
+    "apache-solr"
+  ],
+  "tags": [
+    "time-series",
+    "solr",
+    "lucene",
+    "archived"
+  ],
+  "links": {
+    "website": "https://github.com/ChronixDB/chronix.server",
+    "repository": "https://github.com/ChronixDB/chronix.server",
+    "changelog": "https://github.com/ChronixDB/chronix.server/releases"
+  },
+  "ids": {
+    "github": "ChronixDB/chronix.server",
+    "hackerNewsQuery": "ChronixDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/ChronixDB/chronix.server",
+    "https://github.com/ChronixDB/chronix.server/releases",
+    "https://dbdb.io/db/chronix"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,107 @@
+{
+  "slug": "exorbyte",
+  "name": "Exorbyte",
+  "aliases": ["exorbyte matchmaker", "exorbyte GmbH"],
+  "tagline": "German error-tolerant search and matching engine, now sold for identity resolution and data matching.",
+  "description": "exorbyte is a German company that has sold a fault-tolerant search and matching engine since about 2000, originally best known for e-commerce site search and now marketed as matchmaker, an identity-resolution and explainable data-matching engine. matchmaker pulls records from an organisation's existing systems into one in-memory index and runs parallel similarity algorithms, led by Levenshtein distance and including phonetic and semantic variants in more than 30 languages, to find people, companies or addresses despite typos, swapped fields or poor data quality. It is used for duplicate prevention, address validation, KYC and sanctions screening and input management in public administration, finance, insurance and utilities, deployed on premises or as a cloud web service. It is a specialised matching index rather than a general-purpose database.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": ["search"],
+  "workloads": ["full-text-search"],
+  "architecture": ["in-memory", "client-server"],
+  "developer": "exorbyte GmbH",
+  "vendorType": "company",
+  "initialRelease": 2000,
+  "writtenIn": ["Unknown"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["enterprise-contract"],
+    "freeTier": false,
+    "notes": "Sold through demos and sales contracts; no public price list."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Indexes the full reference dataset in memory on 64-bit servers; vendor claims millisecond responses at big-data volumes."
+  },
+  "consistency": { "acid": "none", "models": ["eventual"] },
+  "schemaMode": "flexible",
+  "queryLanguages": ["Search and match API"],
+  "apis": ["Web service API", "Language SDKs"],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Error-tolerant matching across fields: typos, phonetic variants and swapped name parts are handled",
+    "One in-memory index over several source systems, updated within milliseconds of source changes",
+    "Multilingual matching (30+ languages) with explainable match results",
+    "Packaged use cases for KYC, sanctions screening, deduplication and address checks"
+  ],
+  "weaknesses": [
+    "Not a system of record: it indexes data that lives elsewhere",
+    "Proprietary with no public documentation, pricing or benchmarks",
+    "Small vendor with a mainly German-speaking customer base"
+  ],
+  "useCases": [
+    "Duplicate detection and prevention in CRM and customer master data",
+    "Identity resolution and sanctions/AML screening",
+    "Address validation and enrichment",
+    "Matching scanned documents to customer records during input management"
+  ],
+  "notIdealFor": ["General-purpose storage or transactions", "Open-source or self-service projects"],
+  "notableUsers": [],
+  "alternatives": ["elasticsearch", "opensearch", "apache-solr", "typesense"],
+  "tags": ["fuzzy-search", "identity-resolution", "data-matching", "germany", "commercial"],
+  "links": {
+    "website": "https://exorbyte.ai/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://exorbyte.ai/",
+    "https://web.archive.org/web/2022/https://www.exorbyte.com/de/technologie",
+    "https://db-engines.com/en/system/Exorbyte",
+    "https://dbdb.io/db/exorbyte"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,168 @@
+{
+  "slug": "infinidb",
+  "name": "InfiniDB",
+  "aliases": [
+    "Calpont InfiniDB"
+  ],
+  "tagline": "Calpont's MySQL-fronted columnar MPP engine; vendor bankrupt in 2014, code lives on as MariaDB ColumnStore.",
+  "description": "InfiniDB was a column-oriented, massively parallel analytic database from Calpont (later renamed InfiniDB Inc.) of Frisco, Texas. It used MySQL as its SQL front end and connection layer, while its own user and performance modules stored data column by column, skipped unneeded columns and extents, and spread query work across threads and nodes without shared state. A Community Edition appeared around 2009 and the full product went GPL v2 in October 2013, with 4.6.2 in September 2014 as the final release. The company ceased operations and filed for bankruptcy that October. MariaDB forked the code into MariaDB ColumnStore in 2016, which is where the technology is maintained today.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "InfiniDB Inc. ceased operations and filed for bankruptcy in October 2014; the code continues as MariaDB ColumnStore.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "InfiniDB Inc. (formerly Calpont)",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "4.6.2",
+    "date": "2014-09-15"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MySQL (front end)",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2 (from 2013)",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Commercial subscriptions ended with the company in 2014."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "MPP scale-out across performance-module nodes."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "PHP",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Column storage with extent elimination for scan-heavy analytics",
+    "MySQL front end let existing tools and drivers connect",
+    "Shared-nothing MPP design scaled across nodes"
+  ],
+  "weaknesses": [
+    "Vendor bankrupt since 2014; no fixes or releases",
+    "Poor fit for frequent single-row updates"
+  ],
+  "useCases": [
+    "Understanding MariaDB ColumnStore's origins",
+    "Maintaining legacy InfiniDB installations during migration"
+  ],
+  "notIdealFor": [
+    "Any new deployment (use MariaDB ColumnStore, ClickHouse or StarRocks)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mariadb",
+    "clickhouse",
+    "starrocks",
+    "apache-doris",
+    "duckdb",
+    "infobright"
+  ],
+  "tags": [
+    "columnar",
+    "mpp",
+    "mysql",
+    "data-warehouse",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20140210150030/http://www.infinidb.co/",
+    "repository": "https://github.com/infinidb/infinidb",
+    "wikipedia": "https://en.wikipedia.org/wiki/InfiniDB"
+  },
+  "ids": {
+    "github": "infinidb/infinidb",
+    "wikipedia": "InfiniDB",
+    "hackerNewsQuery": "InfiniDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/InfiniDB",
+    "https://github.com/infinidb/infinidb",
+    "https://web.archive.org/web/2010/http://www.infinidb.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

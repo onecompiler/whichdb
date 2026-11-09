@@ -1,0 +1,163 @@
+{
+  "slug": "clustrix",
+  "name": "Clustrix",
+  "aliases": [
+    "ClustrixDB",
+    "MariaDB Xpand",
+    "Sprout-Clustrix"
+  ],
+  "tagline": "Scale-out, MySQL-compatible distributed SQL database; became MariaDB Xpand, which stopped selling in 2023.",
+  "description": "Clustrix (ClustrixDB) was one of the first NewSQL databases: a shared-nothing cluster that spoke the MySQL protocol and dialect, automatically split tables into slices that were spread and replicated across nodes, and shipped query fragments to the data so joins and aggregates ran in parallel, with MVCC and distributed locking providing ACID transactions. The Y Combinator-backed company launched it in 2010 as an InfiniBand hardware appliance and moved to downloadable software around 2014. MariaDB Corporation bought Clustrix in 2018 and turned it into MariaDB Xpand, a distributed engine behind MariaDB Enterprise Server and SkySQL. Standalone ClustrixDB 9.2 reached end of life in October 2021, and in October 2023 MariaDB announced it would stop selling Xpand. For MySQL-compatible scale-out today, TiDB, Vitess/PlanetScale and SingleStore are the usual choices.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by MariaDB (2018) and sold as MariaDB Xpand; ClustrixDB 9.2 reached EOL in Oct 2021 and MariaDB stopped selling Xpand in Oct 2023.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "htap"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Clustrix, Inc. (acquired by MariaDB Corporation)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Automatic slicing and rebalancing across nodes; parallel replication between clusters for disaster recovery."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Automatic data distribution and rebalancing across nodes without application sharding",
+    "Ran many MySQL applications unchanged over the MySQL protocol",
+    "Pushed query fragments to the nodes holding the data for parallel joins and aggregates",
+    "Survived node loss by keeping multiple replicas of every slice"
+  ],
+  "weaknesses": [
+    "No longer sold or developed by MariaDB",
+    "Proprietary, with no open-source release to fall back on",
+    "Not fully MySQL-compatible, e.g. restrictions on some foreign-key actions"
+  ],
+  "useCases": [
+    "Historical reference for early NewSQL design",
+    "Planning migrations off ClustrixDB or MariaDB Xpand"
+  ],
+  "notIdealFor": [
+    "New deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tidb",
+    "singlestore",
+    "planetscale",
+    "vitess",
+    "cockroachdb",
+    "mariadb",
+    "yugabytedb"
+  ],
+  "tags": [
+    "newsql",
+    "mysql-compatible",
+    "distributed-sql",
+    "acquired",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://mariadb.com/xpand-docs/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Clustrix"
+  },
+  "ids": {
+    "wikipedia": "Clustrix",
+    "hackerNewsQuery": "Clustrix"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Clustrix",
+    "https://www.theregister.com/2023/10/13/mariadb_restructure/",
+    "https://mariadb.com/xpand-docs/",
+    "https://dbdb.io/db/clustrix"
+  ],
+  "lastVerified": "2026-10-27"
+}

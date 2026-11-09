@@ -1,0 +1,198 @@
+{
+  "slug": "azure-sql-database",
+  "name": "Azure SQL Database",
+  "aliases": [
+    "SQL Azure",
+    "Azure SQL",
+    "Azure SQL Hyperscale"
+  ],
+  "tagline": "Microsoft's always-current managed SQL Server engine, from free serverless databases to 128 TB Hyperscale.",
+  "description": "Azure SQL Database is Microsoft's platform-as-a-service flavor of the SQL Server engine, running the latest engine build ahead of boxed SQL Server releases. It offers provisioned and serverless compute (with auto-pause), elastic pools for multi-tenant SaaS, and the Hyperscale tier, which separates compute from a page-server storage layer to reach roughly 128 TB with fast backups and named read replicas. Recent additions include a native vector type and JSON type, ledger tables and Fabric mirroring. It is the natural home for .NET and T-SQL estates moving to the cloud; teams that need instance-level features such as SQL Agent or cross-database queries should look at Azure SQL Managed Instance instead.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial",
+    "graph",
+    "vector",
+    "ledger"
+  ],
+  "workloads": [
+    "oltp",
+    "htap",
+    "content-management",
+    "ledger",
+    "vector-search"
+  ],
+  "architecture": [
+    "primary-replica",
+    "shared-storage",
+    "serverless"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Microsoft SQL Server",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Azure service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free offer gives up to 10 serverless General Purpose databases with 100,000 vCore-seconds and 32 GB each per month; paid tiers by vCore or DTU, with reserved capacity and Azure Hybrid Benefit."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Azure SQL Database",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/azure-sql/database/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Hyperscale reaches ~128 TB with up to 30 named replicas; active geo-replication and failover groups provide readable cross-region secondaries; sharding via Elastic Database tools."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "T-SQL"
+  ],
+  "apis": [
+    "TDS protocol",
+    "ODBC",
+    "JDBC",
+    "Data API builder (REST/GraphQL)"
+  ],
+  "compatibleWith": [
+    "sql-server"
+  ],
+  "drivers": [
+    "C#",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "PHP",
+    "Ruby",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Always runs the newest SQL Server engine features, including native VECTOR and JSON types",
+    "Serverless tier auto-scales and auto-pauses; permanent free offer for small databases",
+    "Hyperscale separates compute and storage for ~128 TB databases with near-instant backups",
+    "Columnstore indexes, in-memory OLTP and temporal tables built in",
+    "Ledger tables for tamper-evident records",
+    "Deep integration with Entra ID, Fabric mirroring and Defender"
+  ],
+  "weaknesses": [
+    "Azure-only and tied to T-SQL; porting away is costly",
+    "Lacks instance-level features (SQL Agent, cross-database queries, CLR) that Managed Instance offers",
+    "No native horizontal write sharding",
+    "DTU/vCore/tier matrix makes cost planning confusing"
+  ],
+  "useCases": [
+    "Lift-and-modernize of SQL Server applications",
+    ".NET SaaS backends with elastic pools per tenant",
+    "Large OLTP databases on Hyperscale",
+    "Intermittent dev/test workloads on serverless auto-pause",
+    "Vector search alongside relational data for copilots"
+  ],
+  "notIdealFor": [
+    "Multi-cloud portability requirements",
+    "Open-source-only stacks",
+    "Write-scaling beyond a single primary"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sql-server",
+    "azure-database-for-postgresql",
+    "amazon-rds",
+    "google-cloud-sql",
+    "amazon-aurora",
+    "oracle-autonomous-database"
+  ],
+  "tags": [
+    "azure",
+    "sql-server",
+    "managed",
+    "t-sql",
+    "serverless"
+  ],
+  "links": {
+    "website": "https://azure.microsoft.com/products/azure-sql/database/",
+    "docs": "https://learn.microsoft.com/azure/azure-sql/database/",
+    "pricing": "https://azure.microsoft.com/pricing/details/azure-sql-database/single/",
+    "changelog": "https://learn.microsoft.com/azure/azure-sql/database/doc-changes-updates-release-notes-whats-new",
+    "wikipedia": "https://en.wikipedia.org/wiki/Microsoft_Azure_SQL_Database"
+  },
+  "ids": {
+    "stackoverflowTag": "azure-sql-database",
+    "wikipedia": "Microsoft Azure SQL Database",
+    "hackerNewsQuery": "Azure SQL"
+  },
+  "brand": {
+    "color": "#0078D4"
+  },
+  "sources": [
+    "https://learn.microsoft.com/azure/azure-sql/database/free-offer",
+    "https://learn.microsoft.com/azure/azure-sql/database/service-tier-hyperscale",
+    "https://en.wikipedia.org/wiki/Microsoft_Azure_SQL_Database"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,189 @@
+{
+  "slug": "ontotext-graphdb",
+  "name": "Graphwise GraphDB (Ontotext)",
+  "aliases": [
+    "GraphDB",
+    "Ontotext GraphDB",
+    "OWLIM"
+  ],
+  "tagline": "Standards-compliant RDF triplestore with reasoning, connectors and MCP support for GraphRAG.",
+  "description": "GraphDB is an RDF database and SPARQL 1.1 engine built on Eclipse RDF4J, descended from Ontotext's OWLIM. It does forward-chaining inference (RDFS, OWL 2 RL/QL and custom rules) at load time, and connectors keep Elasticsearch, OpenSearch, Solr or Lucene indexes in sync for full-text search. Ontotext merged with Semantic Web Company in 2024 to form Graphwise, and GraphDB 11 added GraphQL, an MCP server and LLM integrations aimed at GraphRAG. It is one of the most complete enterprise triplestores, with a free edition for smaller deployments and a commercial cluster for HA.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "rag",
+    "metadata-store",
+    "content-management"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Graphwise",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "11.5.2",
+    "date": "2026-10-16"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Eclipse RDF4J",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Free and Enterprise editions)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "GraphDB Free has no license fee but limited concurrency and no cluster; Enterprise adds HA cluster and support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Raft-based cluster replicates full repositories for HA and read scale; tens of billions of triples per node."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SPARQL",
+    "GraphQL"
+  ],
+  "apis": [
+    "RDF4J REST API",
+    "SPARQL protocol",
+    "MCP server"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java (RDF4J)",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Mature forward-chaining reasoning over RDFS and OWL 2 profiles with incremental retraction",
+    "Connectors keep external full-text indexes synchronized with the graph",
+    "Full W3C stack: SPARQL 1.1, SHACL validation, GeoSPARQL, RDF-star",
+    "MCP server and LLM integrations make it easy to plug into agent and GraphRAG pipelines"
+  ],
+  "weaknesses": [
+    "Cluster replicates data, so dataset size is bounded by a single node",
+    "Materialized inference inflates storage and slows bulk loads with complex rulesets",
+    "Commercial license required for HA clustering",
+    "RDF modeling and SPARQL have a learning curve for property-graph teams"
+  ],
+  "useCases": [
+    "Enterprise knowledge graphs",
+    "Publishing and media content metadata",
+    "Life-sciences data integration",
+    "Taxonomy and ontology-backed search",
+    "GraphRAG over curated domain knowledge"
+  ],
+  "notIdealFor": [
+    "Property-graph apps written in Cypher",
+    "High-throughput OLTP",
+    "Graphs too large for one node"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "stardog",
+    "allegrograph",
+    "virtuoso",
+    "apache-jena-tdb",
+    "rdfox",
+    "amazon-neptune"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "reasoning",
+    "owl",
+    "knowledge-graph",
+    "rdf4j"
+  ],
+  "links": {
+    "website": "https://graphwise.ai/components/graphdb/",
+    "docs": "https://graphdb.ontotext.com/documentation/",
+    "changelog": "https://help.graphwise.ai/en/graphdb/graphdb-release-notes/graphdb-11-5-0-release-notes.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ontotext"
+  },
+  "ids": {
+    "stackoverflowTag": "graphdb",
+    "wikipedia": "Ontotext",
+    "dockerHub": "ontotext/graphdb",
+    "hackerNewsQuery": "Ontotext GraphDB"
+  },
+  "brand": {
+    "color": "#F15A2B"
+  },
+  "sources": [
+    "https://hub.docker.com/r/ontotext/graphdb",
+    "https://help.graphwise.ai/en/graphdb/graphdb-release-notes/graphdb-11-5-0-release-notes.html",
+    "https://www.kmworld.com/Articles/News/News/Graphwise-GraphDB-11-taps-into-enterprise-knowledge-to-deliver-reliable-AI-170390.aspx"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,154 @@
+{
+  "slug": "ancelus",
+  "name": "Ancelus",
+  "aliases": [
+    "AncelusDB",
+    "ancelusDB"
+  ],
+  "tagline": "Proprietary ACID 'algorithmic' database from Indianapolis claiming extreme speed without conventional indexes.",
+  "description": "Ancelus is a commercial database from Time Compression Strategies Corp. (formerly Prevel Technology) of Indianapolis, which analysts have described as an entity-relational, ACID-compliant engine aimed at both transactional and query workloads, with an 'algorithmic' storage design that avoids conventional index structures. The vendor stresses multiple schemas coexisting in one database, around 20:1 compression, low energy use and SQL integration so it can sit beside existing applications, and positions it today for manufacturing and AI workloads. Performance claims such as being millions of times faster than Oracle for joins come from the vendor and a few sponsored analyst write-ups, not reproducible public benchmarks. There is no public documentation, download or release history, so evaluate it only through a vendor trial.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Still marketed at ancelus.com with pricing tiers and demos, but there is no public release history or technical documentation.",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "time-series"
+  ],
+  "workloads": [
+    "oltp",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Time Compression Strategies Corp.",
+  "vendorType": "company",
+  "initialRelease": 1995,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Individual, business and government tiers plus educational trial versions, priced on request."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Vendor claims very large single-system capacity; no independently documented deployment sizes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (integration layer)",
+    "Proprietary API"
+  ],
+  "apis": [
+    "Proprietary API",
+    "SQL integration"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "ACID engine pitched at combined transactional and analytical workloads",
+    "Multiple schemas can coexist in one database",
+    "Vendor-reported high compression and low hardware and energy footprint",
+    "SQL integration intended to slot in beside existing applications"
+  ],
+  "weaknesses": [
+    "No public documentation, downloads or release notes",
+    "Extraordinary performance claims lack reproducible benchmarks",
+    "Tiny ecosystem; skills and tooling are vendor-only",
+    "Single small vendor with limited public track record"
+  ],
+  "useCases": [
+    "Vendor-led evaluations for latency-sensitive manufacturing or operational data",
+    "Complex-schema workloads where the vendor offers a proof of concept"
+  ],
+  "notIdealFor": [
+    "Teams that need open documentation, community support or cloud services",
+    "Projects that cannot accept single-vendor lock-in"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "sap-hana",
+    "singlestore",
+    "kdb-plus",
+    "volt-active-data"
+  ],
+  "tags": [
+    "proprietary",
+    "acid",
+    "niche",
+    "manufacturing"
+  ],
+  "links": {
+    "website": "https://www.ancelus.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Ancelus database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.ancelus.com/",
+    "https://bloorresearch.com/?p=7784",
+    "https://www.cbinsights.com/company/time-compression-strategies",
+    "https://dbdb.io/db/ancelusdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

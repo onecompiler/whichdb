@@ -1,0 +1,107 @@
+{
+  "slug": "eventql",
+  "name": "EventQL",
+  "aliases": ["eventql"],
+  "tagline": "Abandoned AGPL columnar SQL database for streaming event and time-series analytics, written in modern C++.",
+  "description": "EventQL was a distributed columnar database for event, time-series and sensor analytics, open-sourced in 2016 by DeepCortex GmbH under the AGPL. Tables were automatically split into ordered key-range partitions spread across equal, shared-nothing nodes coordinated by ZooKeeper, with no shard count to choose up front. Primary-key based UPSERT made exactly-once ingestion from streams easy, columnar storage with REPEATED and RECORD types allowed nested JSON-like rows, and queries used nearly complete SQL 2009, including joins, with vectorised execution and SSE. It also offered JavaScript MapReduce, an HTTP API and a native TCP protocol. The last release, 0.4.1, shipped in February 2017 and development stopped soon after; ClickHouse covers the same ground today.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release 0.4.1 (February 2017); no commits since May 2017. ClickHouse, Apache Druid or Apache Pinot fill this role today.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": ["columnar", "time-series", "relational"],
+  "workloads": ["olap", "real-time-analytics", "time-series"],
+  "architecture": ["distributed"],
+  "developer": "DeepCortex GmbH",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": { "version": "0.4.1", "date": "2017-02-28" },
+  "writtenIn": ["C++"],
+  "license": { "type": "copyleft", "name": "GNU AGPL v3", "spdx": "AGPL-3.0-only" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Automatic key-range partitioning across shared-nothing nodes; vendor claimed petabyte-scale tables."
+  },
+  "consistency": { "acid": "limited", "models": ["eventual"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "JavaScript MapReduce"],
+  "apis": ["HTTP API", "Native TCP protocol"],
+  "compatibleWith": [],
+  "drivers": ["JavaScript", "Python", "Ruby", "Rust"],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Automatic range partitioning: no shard count to pick up front",
+    "Idempotent primary-key UPSERT simplifies exactly-once ingestion from streams",
+    "Nested REPEATED/RECORD columns for JSON-like event data",
+    "Joins and near-complete SQL 2009 on a columnar engine"
+  ],
+  "weaknesses": [
+    "Abandoned since 2017; no security fixes or maintained builds",
+    "AGPL licence complicates embedding in hosted products",
+    "Small community; documentation site eventql.io is offline"
+  ],
+  "useCases": [
+    "Historical reference for columnar event-analytics engine design",
+    "Reading a compact C++ implementation of range-partitioned columnar storage"
+  ],
+  "notIdealFor": ["New analytics deployments", "OLTP workloads"],
+  "notableUsers": [],
+  "alternatives": ["clickhouse", "apache-druid", "apache-pinot", "questdb", "apache-doris"],
+  "tags": ["columnar", "analytics", "time-series", "sql", "abandoned"],
+  "links": {
+    "website": "https://github.com/eventql/eventql",
+    "repository": "https://github.com/eventql/eventql",
+    "changelog": "https://github.com/eventql/eventql/releases"
+  },
+  "ids": {
+    "github": "eventql/eventql",
+    "hackerNewsQuery": "EventQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/eventql/eventql",
+    "https://github.com/eventql/eventql/blob/master/LICENSE",
+    "https://dbdb.io/db/eventql"
+  ],
+  "lastVerified": "2026-10-27"
+}

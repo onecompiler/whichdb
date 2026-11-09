@@ -1,0 +1,157 @@
+{
+  "slug": "pincaster",
+  "name": "Pincaster",
+  "aliases": [],
+  "tagline": "Frank Denis's in-memory, persistent store for geographic points and key/value records with an HTTP/JSON API.",
+  "description": "Pincaster is a small NoSQL server in C by Frank Denis (author of libsodium and Pure-FTPd) that keeps data in memory, persists it to disk and speaks HTTP/JSON. A database holds independent layers, each a namespace with a flat or spherical geographic space; records in a layer can be empty, a set of binary-safe key/value properties, a latitude/longitude point, or both, and can expire automatically. It answers nearby-point and bounding-box queries, supports master-to-replica replication, and community client libraries exist for Ruby, Node.js, Python and PHP. Development peaked around 2010, but the author still patches it occasionally, most recently with security fixes to its bundled JSON parser in December 2025.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No feature work since the early 2010s; occasional fixes continue (security patches to the bundled YAJL parser, Dec 2025).",
+  "maturity": "legacy",
+  "primaryModel": "spatial",
+  "models": [
+    "spatial",
+    "key-value"
+  ],
+  "workloads": [
+    "geospatial",
+    "caching"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Frank Denis",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "ISC-style license",
+    "spdx": "ISC"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Working set in RAM on one server, with asynchronous replicas."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "HTTP/JSON API"
+  ],
+  "apis": [
+    "HTTP/JSON REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Ruby",
+    "JavaScript",
+    "Python",
+    "PHP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Radius and bounding-box queries over points with almost no setup",
+    "Points and arbitrary properties live in the same record",
+    "Tiny C server with record expiry and replication built in"
+  ],
+  "weaknesses": [
+    "Single-node in-memory design limits dataset size",
+    "Point data only: no polygons or spatial joins",
+    "Community client libraries are mostly unmaintained"
+  ],
+  "useCases": [
+    "Nearby-place or store-locator lookups",
+    "Ephemeral location data with automatic expiry"
+  ],
+  "notIdealFor": [
+    "Complex GIS analysis",
+    "Datasets larger than RAM"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tile38",
+    "redis",
+    "postgis",
+    "valkey"
+  ],
+  "tags": [
+    "geospatial",
+    "in-memory",
+    "http",
+    "json",
+    "c"
+  ],
+  "links": {
+    "website": "https://github.com/jedisct1/Pincaster",
+    "repository": "https://github.com/jedisct1/Pincaster"
+  },
+  "ids": {
+    "github": "jedisct1/Pincaster"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/jedisct1/Pincaster",
+    "https://github.com/jedisct1/Pincaster/blob/master/COPYING",
+    "https://dbdb.io/db/pincaster"
+  ],
+  "lastVerified": "2026-10-27"
+}

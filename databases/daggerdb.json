@@ -1,0 +1,153 @@
+{
+  "slug": "daggerdb",
+  "name": "DaggerDB",
+  "aliases": [],
+  "tagline": "Real-time dimensional aggregator for .NET: an ACID columnar OLAP cube engine that never left preview.",
+  "description": "DaggerDB is a small Swedish-made analytics engine for .NET that combines a column store with continuously maintained OLAP aggregates, so inserts arriving from a message queue are immediately reflected in dimensional queries without a separate cube-processing step. You define databases, dimensions, facts and measures in C#, commit data in transactions, and query through a fluent .NET API (select members, cross dimensions, filter), either in-process or against a DaggerDB server with a web admin console; cubes can be purely in memory or persistent. Version 1.0.1.0 (April 2015) added compressed bitmap indexes, a binary commit format and calculated measures, but it was explicitly labelled a preview not for production or commercial use, and no later release has appeared.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Only a preview build (1.0.1.0, April 2015) was ever published, marked not for production; no updates since.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "in-memory"
+  ],
+  "developer": "DaggerDB",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "1.0.1.0",
+    "date": "2015-04-27"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Evaluation-only preview license"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free preview download; commercial and production use not permitted."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Fluent .NET query API"
+  ],
+  "apis": [
+    ".NET client API",
+    "Web admin"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Aggregates kept up to date on insert, so dashboards see new data immediately",
+    "Simple fluent C# API instead of MDX or cube-processing pipelines",
+    "Runs in-process or as a server, in memory or persisted"
+  ],
+  "weaknesses": [
+    "Never reached a stable release; preview license forbids production use",
+    "Windows and .NET Framework 4.5 only",
+    "No updates since 2015"
+  ],
+  "useCases": [
+    "Historical reference for real-time aggregate cubes in .NET",
+    "Small experiments with dimensional aggregation"
+  ],
+  "notIdealFor": [
+    "Production analytics",
+    "Non-Windows environments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "clickhouse",
+    "apache-druid",
+    "apache-kylin"
+  ],
+  "tags": [
+    "dotnet",
+    "olap",
+    "columnar",
+    "preview"
+  ],
+  "links": {
+    "website": "https://daggerdb.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "DaggerDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://daggerdb.com/",
+    "https://daggerdb.com/Download.html",
+    "https://daggerdb.com/1.0.1.0.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

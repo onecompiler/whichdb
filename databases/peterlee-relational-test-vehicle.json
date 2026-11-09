@@ -1,0 +1,148 @@
+{
+  "slug": "peterlee-relational-test-vehicle",
+  "name": "Peterlee Relational Test Vehicle",
+  "aliases": [
+    "PRTV",
+    "IBM PRTV"
+  ],
+  "tagline": "IBM UK's 1970s research RDBMS: early cost-based optimizer, UDFs and relational GIS, queried via ISBL.",
+  "description": "The Peterlee Relational Test Vehicle was an experimental relational database built at IBM's UK Scientific Centre in Peterlee, County Durham, during the 1970s as a successor to the earlier IS1 prototype. It was a query-oriented system that followed Codd's relational model strictly and was driven by ISBL (Information System Base Language), a relational-algebra language, rather than SQL. PRTV is credited with several firsts: a relational optimizer that used cost estimates, user-defined functions inside the database, tables ranging up to around ten million rows, and a geographic information system built on relational tables. Update support was limited and there was no concurrent multi-user access; it ran on System/370 mainframes and was never sold, although an Urban Management System built on it was offered as a limited IBM product.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "IBM UK research prototype (1970s); never sold. Its optimizer and ISBL work fed into later relational systems.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "olap",
+    "geospatial"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "IBM UK Scientific Centre",
+  "vendorType": "company",
+  "initialRelease": 1976,
+  "writtenIn": [
+    "PL/I",
+    "System/370 assembler",
+    "MP/3"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Never released (IBM research)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Internal research system; never distributed."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Handled tables from about 1,000 up to 10,000,000 rows on System/370."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "ISBL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Among the first relational systems to handle significant data volumes",
+    "Pioneered cost-based relational optimization and in-database UDFs",
+    "Early demonstration of GIS on relational tables"
+  ],
+  "weaknesses": [
+    "Very limited updates and no multi-user concurrency",
+    "Never released outside IBM"
+  ],
+  "useCases": [
+    "Database history and relational-algebra teaching",
+    "Tracing the origins of query optimization and UDFs"
+  ],
+  "notIdealFor": [
+    "Any practical use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "system-r",
+    "ingres",
+    "ibm-db2",
+    "postgresql"
+  ],
+  "tags": [
+    "research",
+    "ibm",
+    "relational-algebra",
+    "historical",
+    "1970s"
+  ],
+  "links": {
+    "website": "https://doi.org/10.1147/sj.154.0285",
+    "wikipedia": "https://en.wikipedia.org/wiki/IBM_Peterlee_Relational_Test_Vehicle"
+  },
+  "ids": {
+    "wikipedia": "IBM Peterlee Relational Test Vehicle"
+  },
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1147/sj.154.0285",
+    "https://en.wikipedia.org/wiki/IBM_Peterlee_Relational_Test_Vehicle",
+    "https://dbdb.io/db/peterlee-relational-test-vehicle"
+  ],
+  "lastVerified": "2026-10-27"
+}

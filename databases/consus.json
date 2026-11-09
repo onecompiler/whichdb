@@ -1,0 +1,145 @@
+{
+  "slug": "consus",
+  "name": "Consus",
+  "aliases": [],
+  "tagline": "Cornell research key-value store that commits geo-replicated transactions in three wide-area delays.",
+  "description": "Consus is a geo-replicated, transactional key-value store built by Robert Escriva as the capstone of his Cornell PhD; Escriva was also a co-author of HyperDex. It keeps full replicas in several data centers so it can survive the loss of an entire site, and its commit protocol, built on generalized Paxos, completes a cross-data-center transaction in three wide-area message delays during normal operation, compared with the four that two-phase commit or classic Paxos round trips require. The C++ code is available under a BSD license, but the author's README warns of an unresolved deadlock under contention and advises against production use without substantial further testing. Development stopped in 2018, and the consus.io domain now belongs to an unrelated company.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "PhD research prototype (2015–2018); unmaintained, with a known deadlock bug noted in its README.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Robert Escriva (Cornell University)",
+  "vendorType": "academic",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Full replicas in multiple data centers; research-scale deployments only."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Client API"
+  ],
+  "apis": [
+    "Native client API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Commits cross-data-center transactions in three wide-area message delays in the common case",
+    "Tolerates loss of an entire data center while keeping strong consistency",
+    "README and thesis explain the latency versus fault-tolerance trade-offs clearly"
+  ],
+  "weaknesses": [
+    "Known deadlock bug under contention, per the author",
+    "Unmaintained since 2018",
+    "Generalized Paxos implementation is complex to debug"
+  ],
+  "useCases": [
+    "Studying low-latency geo-replicated commit protocols",
+    "Research baseline for wide-area transactions"
+  ],
+  "notIdealFor": [
+    "Production deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "google-cloud-spanner",
+    "cockroachdb",
+    "foundationdb",
+    "yugabytedb"
+  ],
+  "tags": [
+    "research",
+    "geo-replication",
+    "paxos",
+    "transactions",
+    "key-value"
+  ],
+  "links": {
+    "website": "https://github.com/rescrv/Consus",
+    "repository": "https://github.com/rescrv/Consus"
+  },
+  "ids": {
+    "github": "rescrv/Consus"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/rescrv/Consus",
+    "https://github.com/rescrv/Consus/blob/master/README.md",
+    "https://dbdb.io/db/consus"
+  ],
+  "lastVerified": "2026-10-27"
+}

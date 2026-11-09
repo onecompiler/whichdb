@@ -1,0 +1,187 @@
+{
+  "slug": "infinispan",
+  "name": "Infinispan",
+  "aliases": [
+    "Red Hat Data Grid"
+  ],
+  "tagline": "Red Hat's open-source distributed cache and key-value store, embeddable or as a RESP-compatible server.",
+  "description": "Infinispan is a Java in-memory data grid from Red Hat that can run embedded (it backs Hibernate second-level caching, Keycloak and WildFly clustering) or as a standalone server cluster. The server speaks its own Hot Rod protocol, REST, Memcached and the Redis RESP protocol, so many Redis clients can connect directly. It offers distributed and replicated caches, transactions, Ickle queries with indexing via Hibernate Search, cross-site replication and persistence to disk or databases. Red Hat sells it as Red Hat Data Grid; it is the natural choice in Quarkus and OpenShift shops.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Red Hat (IBM)",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "16.3.1",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free upstream; supported as Red Hat Data Grid via subscription."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Distributed caches use consistent hashing with configurable owners; cross-site replication connects clusters in different data centers."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Ickle (JPQL-like)",
+    "Redis commands (RESP)"
+  ],
+  "apis": [
+    "Hot Rod",
+    "REST",
+    "RESP",
+    "Memcached protocol",
+    "JCache (JSR-107)"
+  ],
+  "compatibleWith": [
+    "redis",
+    "memcached"
+  ],
+  "drivers": [
+    "Java",
+    "C#",
+    "C++",
+    "JavaScript",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Embeds directly in Java apps or runs as a server, same configuration model",
+    "Speaks Hot Rod, REST, RESP and Memcached from one cluster",
+    "Indexed queries and full-text search via Hibernate Search",
+    "Cross-site replication for multi-data-center deployments",
+    "Deep integration with Quarkus, Keycloak, WildFly and OpenShift operators"
+  ],
+  "weaknesses": [
+    "RESP support covers a subset of Redis commands",
+    "Configuration surface is large and XML-heavy",
+    "Less mindshare outside the Red Hat ecosystem"
+  ],
+  "useCases": [
+    "Hibernate second-level and Keycloak session caching",
+    "Clustered HTTP session storage for Java app servers",
+    "Distributed cache on OpenShift with operator management"
+  ],
+  "notIdealFor": [
+    "Non-JVM teams wanting a minimal cache",
+    "Full Redis feature parity"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "hazelcast",
+    "oracle-coherence",
+    "apache-ignite",
+    "ehcache",
+    "redis"
+  ],
+  "tags": [
+    "data-grid",
+    "jvm",
+    "red-hat",
+    "in-memory",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://infinispan.org/",
+    "docs": "https://infinispan.org/documentation/",
+    "repository": "https://github.com/infinispan/infinispan",
+    "changelog": "https://github.com/infinispan/infinispan/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Infinispan"
+  },
+  "ids": {
+    "github": "infinispan/infinispan",
+    "stackoverflowTag": "infinispan",
+    "wikipedia": "Infinispan",
+    "dockerHub": "infinispan/server",
+    "npm": "infinispan",
+    "hackerNewsQuery": "Infinispan"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/infinispan/infinispan/releases",
+    "https://infinispan.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,143 @@
+{
+  "slug": "cornerstone",
+  "name": "Cornerstone",
+  "aliases": [
+    "Infocom Cornerstone"
+  ],
+  "tagline": "Infocom's 1985 relational database for MS-DOS: praised for ease of use, its failure helped sink the company.",
+  "description": "Cornerstone was a relational database application for IBM PC compatibles released in 1985 by Infocom, the Cambridge, Massachusetts company best known for Zork. Infocom's founders wanted a business product, and Cornerstone aimed at non-programmers with menu-driven commands, context-sensitive help, command completion, natural date entry such as \"next Wednesday\", multi-valued fields and long searchable text fields. Like Infocom's games it ran on a custom virtual machine to ease porting, which let it fit on one floppy but made heavy operations such as imports and sorts painfully slow next to dBase III, and it had no programming or macro language. It sold about 10,000 copies; the cost of building it is widely blamed for Infocom's 1986 sale to Activision, after which the product was dropped.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Released 1985; discontinued after Activision acquired Infocom in 1986. No successor product.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "multivalue"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Infocom, Inc.",
+  "vendorType": "company",
+  "initialRelease": 1985,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Sold as boxed PC software in the mid-1980s; long out of print."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-user MS-DOS desktop database."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Menu-driven queries"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Menu-driven interface with context-sensitive help and command completion, unusual in 1985",
+    "Natural-language date entry and long searchable text fields",
+    "Usable by non-programmers without learning a command language"
+  ],
+  "weaknesses": [
+    "Ran on a virtual machine that made imports and sorts very slow",
+    "Not programmable: no macro or application language like dBase's",
+    "Long discontinued; runs only in DOS emulators"
+  ],
+  "useCases": [
+    "Computing history: early usability-first desktop databases",
+    "Case study in how a business product sank a games company"
+  ],
+  "notIdealFor": [
+    "Any practical use today"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "microsoft-access",
+    "filemaker",
+    "dbase",
+    "sqlite"
+  ],
+  "tags": [
+    "ms-dos",
+    "desktop",
+    "infocom",
+    "1980s",
+    "historical"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/Cornerstone_(software)",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cornerstone_(software)"
+  },
+  "ids": {
+    "wikipedia": "Cornerstone (software)"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Cornerstone_(software)",
+    "https://en.wikipedia.org/wiki/Infocom",
+    "https://dbdb.io/db/cornerstone"
+  ],
+  "lastVerified": "2026-10-27"
+}

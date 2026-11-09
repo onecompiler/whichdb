@@ -1,0 +1,186 @@
+{
+  "slug": "edgedb-gel",
+  "name": "Gel (formerly EdgeDB)",
+  "aliases": [
+    "Gel",
+    "EdgeDB",
+    "geldata"
+  ],
+  "tagline": "Graph-relational database on Postgres with EdgeQL; the company shut down and the team joined Vercel.",
+  "description": "Gel, called EdgeDB until February 2025, is a database layer built on PostgreSQL that adds a graph-relational schema language, the EdgeQL query language with nested link traversal and no explicit joins, built-in migrations, access policies, auth and AI extensions, and from version 6 a SQL interface over the Postgres wire protocol. It gave application developers a very productive alternative to ORMs. In December 2025 Gel Data Inc. shut down and its team joined Vercel. Gel Cloud closed on 31 January 2026. The Apache-2.0 code remains on GitHub, but development has effectively stopped, so existing users are pointed to managed Postgres.",
+  "productType": "engine",
+  "status": "deprecated",
+  "statusNote": "Gel Data Inc. shut down and the team joined Vercel (Dec 2025); Gel Cloud closed 31 Jan 2026. Code stays Apache-2.0 on GitHub; migrate to Postgres or self-host.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "graph"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Gel Data Inc. (defunct)",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "7.0",
+    "date": "2025-11-05"
+  },
+  "writtenIn": [
+    "Python",
+    "Rust",
+    "Cython"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Gel Cloud is closed; self-hosting is the only option."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Inherits the scale profile of the single Postgres instance underneath."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "EdgeQL",
+    "SQL"
+  ],
+  "apis": [
+    "Gel binary protocol",
+    "HTTP",
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "TypeScript",
+    "Python",
+    "Go",
+    "Rust",
+    ".NET",
+    "Java",
+    "Elixir"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "EdgeQL expresses nested object graphs without joins or N+1 queries",
+    "Declarative schema with built-in migrations and access policies",
+    "Runs on real Postgres, so data stays portable",
+    "Generated, typed query builders for TypeScript and other languages"
+  ],
+  "weaknesses": [
+    "Vendor has shut down; no roadmap, cloud or paid support",
+    "EdgeQL skills and tooling do not transfer elsewhere",
+    "Extra server layer on top of Postgres to operate and upgrade"
+  ],
+  "useCases": [
+    "Maintaining existing Gel/EdgeDB applications",
+    "Planning a migration from Gel to plain Postgres"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Teams needing vendor support",
+    "Horizontally scaled workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "supabase",
+    "neon",
+    "surrealdb",
+    "prisma-postgres",
+    "convex"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "graph-relational",
+    "edgeql",
+    "discontinued-vendor"
+  ],
+  "links": {
+    "website": "https://www.geldata.com/",
+    "docs": "https://docs.geldata.com/",
+    "repository": "https://github.com/geldata/gel",
+    "changelog": "https://github.com/geldata/gel/releases"
+  },
+  "ids": {
+    "github": "geldata/gel",
+    "stackoverflowTag": "edgedb",
+    "dockerHub": "geldata/gel",
+    "npm": "gel",
+    "pypi": "gel",
+    "hackerNewsQuery": "EdgeDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.geldata.com/p/sunset",
+    "https://github.com/geldata/gel/releases",
+    "https://www.npmjs.com/package/gel"
+  ],
+  "lastVerified": "2026-10-27"
+}

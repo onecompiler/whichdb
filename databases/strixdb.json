@@ -1,0 +1,164 @@
+{
+  "slug": "strixdb",
+  "name": "StrixDB",
+  "aliases": [
+    "StrixStore"
+  ],
+  "tagline": "Small Windows RDF store with SPARQL, SPARQL/Update and Datalog rule inference, embeddable via Lua or DLL.",
+  "description": "StrixDB is Olivier Poirel's RDF store for medium-sized graphs, built on the GigaBASE embedded database for ACID storage. It answers SPARQL 1.0 queries and SPARQL/Update, adds Datalog-style rules (including recursion and negation) that can be applied inside SPARQL queries for reasoning such as OWL property rules, and reads and writes RDF/XML and Turtle. You can use it as a Lua module, as a Windows DLL from C, C++ or Java, or as an Apache httpd module that serves the SPARQL protocol. It is free but closed-source and 32-bit Windows only, and the last release, 0.94.5, dates from April 2011, so it suits experiments more than production.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Downloads remain online, but the last release was 0.94.5 (April 2011) and the project is dormant. Apache Jena or RDF4J are maintained alternatives.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Olivier Poirel",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "0.94.5",
+    "date": "2011-04-13"
+  },
+  "writtenIn": [
+    "C++",
+    "Lua"
+  ],
+  "basedOn": "GigaBASE",
+  "license": {
+    "type": "proprietary",
+    "name": "Freeware (closed source)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "32-bit builds limit triple and resource IDs to 2^32."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL",
+    "SPARQL/Update",
+    "Datalog rules"
+  ],
+  "apis": [
+    "SPARQL protocol (via Apache httpd)",
+    "Lua module",
+    "Windows DLL"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Lua",
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Datalog rules with recursion and negation usable directly inside SPARQL",
+    "Several deployment modes: Lua module, DLL or SPARQL endpoint behind Apache",
+    "ACID storage on GigaBASE for a small footprint"
+  ],
+  "weaknesses": [
+    "Closed source, 32-bit, Windows only",
+    "No release since 2011 and no SPARQL 1.1",
+    "Sized for medium graphs, not billions of triples"
+  ],
+  "useCases": [
+    "Experimenting with rule-based reasoning over small RDF graphs",
+    "Teaching SPARQL and Datalog together"
+  ],
+  "notIdealFor": [
+    "Production knowledge graphs",
+    "Linux servers",
+    "Large datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-jena-tdb",
+    "eclipse-rdf4j",
+    "virtuoso",
+    "ontotext-graphdb"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "datalog",
+    "windows",
+    "lua"
+  ],
+  "links": {
+    "website": "http://opoirel.free.fr/strixDB/",
+    "docs": "http://opoirel.free.fr/strixDB/DOC/index.html",
+    "repository": "https://sourceforge.net/projects/strixdb/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://opoirel.free.fr/strixDB/",
+    "http://opoirel.free.fr/strixDB/faq.html",
+    "https://sourceforge.net/projects/strixdb/",
+    "https://fr.wikipedia.org/wiki/StrixDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,241 @@
+{
+  "slug": "oracle-database",
+  "name": "Oracle Database",
+  "aliases": [
+    "Oracle",
+    "Oracle AI Database 26ai",
+    "Oracle Database 23ai",
+    "Oracle 19c",
+    "Oracle RDBMS"
+  ],
+  "tagline": "The enterprise heavyweight: RAC, Data Guard and a converged engine for SQL, JSON, graph and vectors.",
+  "description": "Oracle Database is the commercial RDBMS that most banks, telcos and ERP estates are built on. It packs features competitors still split across products: Real Application Clusters for shared-disk scale-out, Data Guard for disaster recovery, partitioning, an in-memory column store and Flashback queries. The 26ai line (shipped as release update 23.26.0 in October 2025) is explicitly converged, putting JSON Relational Duality, SQL property graphs, AI Vector Search and Iceberg tables in one engine, and 23ai systems move to it by patching rather than upgrading. The catch is cost and lock-in: most headline capabilities are paid options on top of Enterprise Edition, and licence compliance is a real operational discipline.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "graph",
+    "vector",
+    "spatial",
+    "xml"
+  ],
+  "workloads": [
+    "oltp",
+    "htap",
+    "data-warehouse",
+    "vector-search",
+    "rag",
+    "geospatial",
+    "full-text-search"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "shared-storage",
+    "distributed"
+  ],
+  "developer": "Oracle Corporation",
+  "vendorType": "company",
+  "initialRelease": 1979,
+  "latestVersion": {
+    "version": "23.26.4 (26ai RU)",
+    "date": "2026-10"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Oracle commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Licensed per processor or named user; RAC, Partitioning, In-Memory, Active Data Guard etc. are extra-cost options. A resource-capped Oracle AI Database Free edition exists."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "oracle-cloud",
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Oracle Base Database Service",
+      "provider": "Oracle Cloud",
+      "url": "https://www.oracle.com/database/base-database-service/"
+    },
+    {
+      "name": "Oracle Database@Azure",
+      "provider": "Microsoft Azure / Oracle",
+      "url": "https://www.oracle.com/cloud/azure/oracle-database-at-azure/"
+    },
+    {
+      "name": "Oracle Database@AWS",
+      "provider": "AWS / Oracle",
+      "url": "https://www.oracle.com/cloud/aws/"
+    },
+    {
+      "name": "Amazon RDS for Oracle",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/rds/oracle/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "active-active",
+    "notes": "Scale-out via RAC (shared disk) or Globally Distributed Database (sharding, Raft replication); multi-region writes via GoldenGate. All are paid options."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/SQL",
+    "SQL/PGQ"
+  ],
+  "apis": [
+    "Oracle Net (TNS)",
+    "Oracle Call Interface (OCI)",
+    "ORDS REST",
+    "Oracle Database API for MongoDB"
+  ],
+  "compatibleWith": [
+    "oracle",
+    "mongodb"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "C#",
+    "Go",
+    "C",
+    "C++",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "RAC lets several servers write to one database for HA without sharding the schema",
+    "Data Guard and Active Data Guard give mature, well-understood DR with readable standbys",
+    "Converged engine: JSON Duality views, SQL property graphs and AI Vector Search beside relational tables",
+    "Flashback query/table/database makes recovering from bad writes a SQL statement, not a restore",
+    "Optimizer, partitioning and parallel query handle very large mixed OLTP and reporting workloads",
+    "Runs natively inside AWS, Azure and Google Cloud data centres via Oracle Database@ offerings"
+  ],
+  "weaknesses": [
+    "Expensive: core HA, scale and performance features are separately licensed options",
+    "Licensing rules (virtualisation, cloud vCPU counting) are complex and audit-prone",
+    "Operational depth required: patching, RMAN, ASM and RAC need specialist DBAs",
+    "Proprietary PL/SQL and features make migration away costly"
+  ],
+  "useCases": [
+    "Core banking and payment systems",
+    "Packaged ERP back ends (Oracle E-Business Suite, JD Edwards, PeopleSoft)",
+    "Telecom billing and subscriber management",
+    "Mixed OLTP plus in-database analytics and vector search",
+    "Consolidating many schemas onto Exadata with multitenant PDBs"
+  ],
+  "notIdealFor": [
+    "Cost-sensitive startups and side projects",
+    "Teams without DBA capacity for patching and licence management",
+    "Simple CRUD apps that PostgreSQL or MySQL serve fine"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "sql-server",
+    "ibm-db2",
+    "edb-postgres-advanced-server",
+    "oracle-autonomous-database",
+    "tibero",
+    "yugabytedb"
+  ],
+  "tags": [
+    "sql",
+    "enterprise",
+    "rac",
+    "converged",
+    "vector-search",
+    "pl-sql"
+  ],
+  "links": {
+    "website": "https://www.oracle.com/database/",
+    "docs": "https://docs.oracle.com/en/database/oracle/oracle-database/",
+    "pricing": "https://www.oracle.com/corporate/pricing/",
+    "changelog": "https://docs.oracle.com/en/database/oracle/oracle-database/26/refrn/changes-this-release-oracle-database-reference.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Oracle_Database"
+  },
+  "ids": {
+    "stackoverflowTag": "oracle-database",
+    "wikipedia": "Oracle Database",
+    "npm": "oracledb",
+    "pypi": [
+      "oracledb",
+      "cx-oracle"
+    ],
+    "crates": "oracle",
+    "hackerNewsQuery": "Oracle Database|Oracle DB"
+  },
+  "brand": {
+    "color": "#C74634"
+  },
+  "sources": [
+    "https://docs.oracle.com/en/database/oracle/oracle-database/26/refrn/changes-this-release-oracle-database-reference.html",
+    "https://blogs.oracle.com/database/oracle-announces-oracle-ai-database-26ai",
+    "https://oracle-base.com/blog/2025/10/15/oracle-ai-database-26ai-released/"
+  ],
+  "lastVerified": "2026-10-27"
+}

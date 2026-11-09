@@ -1,0 +1,181 @@
+{
+  "slug": "pgvectorscale",
+  "name": "pgvectorscale",
+  "aliases": [
+    "pgai vectorscale"
+  ],
+  "tagline": "TigerData's Postgres extension adding StreamingDiskANN indexes on top of pgvector.",
+  "description": "pgvectorscale is an open-source PostgreSQL extension from TigerData (formerly Timescale) that complements pgvector with a StreamingDiskANN index, based on Microsoft's DiskANN research, plus Statistical Binary Quantization and label-based filtered search. Indexes are designed to live on SSD rather than RAM, giving high recall and throughput at a lower cost than in-memory HNSW for large tables. It keeps pgvector's vector type and query syntax, so adopting it is mostly a matter of creating a different index. It is PostgreSQL-licensed and preinstalled on Tiger Cloud.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "relational"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "TigerData (formerly Timescale)",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "0.9.1",
+    "date": "2026-09-04"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "PostgreSQL (requires pgvector)",
+  "license": {
+    "type": "permissive",
+    "name": "PostgreSQL License",
+    "spdx": "PostgreSQL"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; included on TigerData's Tiger Cloud managed Postgres."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Tiger Cloud",
+      "provider": "TigerData",
+      "url": "https://www.tigerdata.com/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single Postgres primary; SSD-resident DiskANN indexes handle tens to hundreds of millions of vectors per node."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Any PostgreSQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "DiskANN-style index keeps vectors on SSD instead of RAM",
+    "Statistical Binary Quantization improves accuracy over plain binary quantization",
+    "Label-based filtering integrated into the index",
+    "Drop-in on top of pgvector types and operators",
+    "Permissive PostgreSQL licence"
+  ],
+  "weaknesses": [
+    "Not available on most hyperscaler managed Postgres",
+    "Index builds are still slower than IVF-based approaches",
+    "Feature set narrower than dedicated vector databases",
+    "Release cadence slowed between 0.9.0 and 0.9.1"
+  ],
+  "useCases": [
+    "Large pgvector tables that no longer fit HNSW in RAM",
+    "Cost-efficient RAG on Postgres",
+    "Filtered semantic search with labels"
+  ],
+  "notIdealFor": [
+    "RDS/Cloud SQL users who cannot install extensions",
+    "Tiny datasets",
+    "Workloads needing BM25 hybrid ranking out of the box"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pgvector",
+    "vectorchord",
+    "timescaledb",
+    "paradedb",
+    "lantern",
+    "qdrant"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "vector",
+    "extension",
+    "diskann",
+    "tigerdata"
+  ],
+  "links": {
+    "website": "https://github.com/timescale/pgvectorscale",
+    "docs": "https://github.com/timescale/pgvectorscale#readme",
+    "repository": "https://github.com/timescale/pgvectorscale",
+    "changelog": "https://github.com/timescale/pgvectorscale/releases"
+  },
+  "ids": {
+    "github": "timescale/pgvectorscale",
+    "hackerNewsQuery": "pgvectorscale"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/timescale/pgvectorscale",
+    "https://github.com/timescale/pgvectorscale/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

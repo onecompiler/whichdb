@@ -1,0 +1,188 @@
+{
+  "slug": "cloudflare-durable-objects",
+  "name": "Cloudflare Durable Objects",
+  "aliases": [
+    "Durable Objects",
+    "DO"
+  ],
+  "tagline": "Single-threaded stateful actors at the edge, each with its own strongly consistent SQLite store.",
+  "description": "Durable Objects give each instance of a class a globally unique ID, a single-threaded execution context and its own private storage, now an embedded SQLite database with point-in-time recovery. Because every request for a given object is routed to one place, you get strong consistency and simple coordination without locks: chat rooms, multiplayer game state, rate limiters, collaborative documents and per-tenant databases are the classic uses. WebSocket hibernation keeps idle connections cheap. The model scales by creating many objects, not by making one object big, so throughput per object is limited and data modelling has to follow that.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "relational"
+  ],
+  "workloads": [
+    "edge",
+    "oltp",
+    "session-store",
+    "pub-sub",
+    "local-first"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless",
+    "embedded"
+  ],
+  "developer": "Cloudflare",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "writtenIn": [
+    "C++",
+    "Rust"
+  ],
+  "basedOn": "SQLite (storage backend)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Cloudflare service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "free"
+    ],
+    "freeTier": true,
+    "startingPrice": "$0.15 per million requests beyond 1M/month on Workers Paid",
+    "notes": "Free plan allows SQLite-backed objects with daily limits; paid plan bills requests, GB-s duration, rows read/written and $0.20 per GB-month stored."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "cloudflare"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Durable Objects",
+      "provider": "Cloudflare",
+      "url": "https://developers.cloudflare.com/durable-objects/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales out across millions of independent objects; each object lives in one location (with optional jurisdiction or location hints) and holds up to 10 GB."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (SQLite)",
+    "Storage key-value API"
+  ],
+  "apis": [
+    "Workers binding",
+    "RPC",
+    "WebSocket hibernation API"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Strong consistency per object with no locking code: one thread, one owner",
+    "Each object gets a private SQLite database with transactions and indexes",
+    "30-day point-in-time recovery for SQLite-backed storage",
+    "WebSocket hibernation makes real-time apps cheap when idle",
+    "Alarms API for scheduled per-object work"
+  ],
+  "weaknesses": [
+    "Throughput per object is bounded by a single thread",
+    "No cross-object transactions or queries; aggregation needs fan-out",
+    "Object placement is fixed near first access, so far-away users see extra latency",
+    "Cloudflare-only programming model"
+  ],
+  "useCases": [
+    "Chat rooms and collaborative editing backends",
+    "Multiplayer game and session state",
+    "Rate limiters and distributed counters",
+    "Per-user or per-tenant databases",
+    "Coordinating AI agents with durable state"
+  ],
+  "notIdealFor": [
+    "Global analytical queries across all data",
+    "A single very hot entity needing high write throughput",
+    "Workloads that must run outside Cloudflare"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cloudflare-workers-kv",
+    "cloudflare-d1",
+    "deno-kv",
+    "turso",
+    "spacetimedb",
+    "amazon-dynamodb"
+  ],
+  "tags": [
+    "edge",
+    "actors",
+    "sqlite",
+    "cloudflare",
+    "stateful-serverless"
+  ],
+  "links": {
+    "website": "https://www.cloudflare.com/developer-platform/products/durable-objects/",
+    "docs": "https://developers.cloudflare.com/durable-objects/",
+    "pricing": "https://developers.cloudflare.com/durable-objects/platform/pricing/",
+    "changelog": "https://developers.cloudflare.com/durable-objects/release-notes/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Durable Objects"
+  },
+  "brand": {
+    "color": "#F38020",
+    "simpleIcon": "cloudflareworkers"
+  },
+  "sources": [
+    "https://developers.cloudflare.com/durable-objects/",
+    "https://developers.cloudflare.com/durable-objects/platform/pricing/",
+    "https://developers.cloudflare.com/durable-objects/api/sqlite-storage-api/"
+  ],
+  "lastVerified": "2026-10-27"
+}

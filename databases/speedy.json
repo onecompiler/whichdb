@@ -1,0 +1,154 @@
+{
+  "slug": "speedy",
+  "name": "Speedy",
+  "aliases": [
+    "Speedy1"
+  ],
+  "tagline": "Tiny main-memory SQL database for Windows and Linux built to make unit testing easy; last updated 2003.",
+  "description": "Speedy was a one-person project by Harald Wabnig: a small client/server main-memory SQL database, plus Speedy1, a variant linked straight into the application so end users never install a database. It was built to support unit-test environments, with sub-selects, joins, DISTINCT, cursors, transactions and unique indexes through a C API, and came with a viewer, a designer and code generators. The author listed its limits plainly: data must fit in virtual memory, no network access, transactions lock the whole database and query optimisation is manual. The last version, 2.0.1, came out in July 2003; the site still hosts the downloads.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Downloads remain online, but the last release was 2.0.1 (July 2003) and development stopped. Use SQLite or DuckDB for embedded SQL in tests.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "in-memory",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Harald Wabnig",
+  "vendorType": "community",
+  "initialRelease": 2002,
+  "latestVersion": {
+    "version": "2.0.1",
+    "date": "2003-07-12"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Permissive MIT-style distribution terms"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Whole database must fit in virtual memory on one machine."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset)"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very small footprint with both client/server and linked-in variants",
+    "Designed for repeatable unit-test databases",
+    "Supports sub-selects, joins, cursors and transactions despite its size"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2003",
+    "No network access and whole-database locking during transactions",
+    "Incomplete SQL (no views, privileges or ALTER TABLE)"
+  ],
+  "useCases": [
+    "Historical reference for small embedded SQL engines",
+    "Legacy C test harnesses that already use it"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Concurrent or networked workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "duckdb",
+    "h2",
+    "hsqldb"
+  ],
+  "tags": [
+    "in-memory",
+    "sql",
+    "embedded",
+    "testing",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://testready.net/",
+    "docs": "http://testready.net/docu.htm"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://testready.net/speedy.htm",
+    "http://testready.net/news.htm",
+    "https://dbdb.io/db/speedy"
+  ],
+  "lastVerified": "2026-10-27"
+}

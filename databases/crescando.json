@@ -1,0 +1,139 @@
+{
+  "slug": "crescando",
+  "name": "Crescando",
+  "aliases": [],
+  "tagline": "ETH Zurich main-memory table that answers every query by shared scans, guaranteeing latency and freshness.",
+  "description": "Crescando was a research storage engine from the ETH Zurich Systems Group, built with Amadeus and described in the VLDB 2009 paper \"Predictable Performance for Unpredictable Workloads\" by Philipp Unterbrunner, Georgios Giannikis, Gustavo Alonso, Dietmar Fauser and Donald Kossmann. Instead of building indexes on the data, it keeps a relational table partitioned in main memory across many cores and machines and continuously scans it with ClockScan, an algorithm that indexes the batch of pending queries and updates and joins them against the data in one pass, borrowing the query-data join idea from stream processing. Every query therefore completes within a bounded time regardless of workload mix, and reads always see recent writes. It targeted operational data such as airline booking, where unpredictable ad-hoc queries had overwhelmed index-based designs.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "ETH Zurich / Amadeus research prototype (c. 2009–2015); no public release. Shared-scan ideas live on in research systems.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "ETH Zurich Systems Group (with Amadeus)",
+  "vendorType": "academic",
+  "initialRelease": 2009,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Unreleased research code"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Research prototype; never publicly released."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Table partitioned in memory across cores and nodes, each scanned continuously."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Custom query API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Predictable, bounded latency for any mix of queries and updates",
+    "Indexes the queries rather than the data, so ad-hoc predicates cost the same as planned ones",
+    "Shared scans give high throughput under heavy concurrent load"
+  ],
+  "weaknesses": [
+    "Never released; no code to run",
+    "Full scans make single-row lookups slower than an index would",
+    "Whole dataset must fit in aggregate main memory"
+  ],
+  "useCases": [
+    "Studying shared-scan and query-data-join execution",
+    "Background for predictable-latency operational database research"
+  ],
+  "notIdealFor": [
+    "Any production use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "volt-active-data",
+    "sap-hana",
+    "singlestore",
+    "hyrise"
+  ],
+  "tags": [
+    "research",
+    "in-memory",
+    "shared-scan",
+    "eth-zurich",
+    "vldb-2009"
+  ],
+  "links": {
+    "website": "https://doi.org/10.14778/1687627.1687707"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.14778/1687627.1687707",
+    "https://www.vldb.org/pvldb/vol2/vldb09-428.pdf",
+    "https://dbdb.io/db/crescando"
+  ],
+  "lastVerified": "2026-10-27"
+}

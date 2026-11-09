@@ -1,0 +1,172 @@
+{
+  "slug": "sphinx",
+  "name": "Sphinx",
+  "aliases": [
+    "Sphinx Search",
+    "SphinxSearch"
+  ],
+  "tagline": "Veteran C++ full-text search server with SphinxQL, still shipping as Sphinx 3.",
+  "description": "Sphinx is one of the oldest open-source full-text engines, long paired with MySQL for site search before Elasticsearch existed. Development continues under Sphinx Technologies as Sphinx 3, which added a document store, its own HNSW and scalar-quantized vector indexes (3.8) and async replication (3.9). However, the public GitHub repository is frozen at 2.x, Sphinx 3 ships as free binaries rather than an open repo, and most of the community moved to its fork Manticore Search. Consider it mainly if you already run Sphinx; for new projects Manticore offers the same lineage with an open development model.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "vector"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Sphinx Technologies Inc.",
+  "vendorType": "company",
+  "initialRelease": 2001,
+  "latestVersion": {
+    "version": "3.9.1",
+    "date": "2025-12-19"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Sphinx 3: free binaries, dual-licensed (2.x was GPL-2.0)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Sphinx 3 binaries are free to download; commercial licensing and support from Sphinx Technologies."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Distributed indexes and agent mirrors are configured by hand; 3.9 adds async master-follower replication."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SphinxQL"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "PHP",
+    "Python",
+    "Java",
+    "Ruby",
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast indexing and querying with low memory use",
+    "SQL interface over the MySQL protocol works with existing MySQL clients",
+    "Long track record in production since the 2000s",
+    "Native vector (HNSW) indexes since 3.8"
+  ],
+  "weaknesses": [
+    "Sphinx 3 source is not developed in the open; GitHub repo stuck at 2.x",
+    "Small community, most users migrated to Manticore",
+    "Sparse ecosystem of modern client libraries and integrations",
+    "Manual sharding and limited HA story"
+  ],
+  "useCases": [
+    "Maintaining existing Sphinx deployments",
+    "MySQL-backed site search",
+    "Forum and classifieds search"
+  ],
+  "notIdealFor": [
+    "Greenfield projects wanting an active open-source community",
+    "Cloud-native or managed deployments",
+    "Log analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "manticore-search",
+    "elasticsearch",
+    "apache-solr",
+    "meilisearch",
+    "typesense"
+  ],
+  "tags": [
+    "search",
+    "sql",
+    "legacy",
+    "mysql-protocol"
+  ],
+  "links": {
+    "website": "https://sphinxsearch.com/",
+    "docs": "https://sphinxsearch.com/docs/sphinx3.html",
+    "repository": "https://github.com/sphinxsearch/sphinx",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sphinx_(search_engine)"
+  },
+  "ids": {
+    "wikipedia": "Sphinx (search engine)",
+    "hackerNewsQuery": "Sphinx search engine"
+  },
+  "brand": {},
+  "sources": [
+    "https://sphinxsearch.com/",
+    "https://sphinxsearch.com/docs/sphinx3.html",
+    "https://github.com/sphinxsearch/sphinx"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,165 @@
+{
+  "slug": "empress-embedded-database",
+  "name": "Empress Embedded Database",
+  "aliases": [
+    "Empress",
+    "Empress RDBMS",
+    "Empress Ultra Embedded"
+  ],
+  "tagline": "Veteran embedded SQL RDBMS for RTOS and Unix devices, still sold but with little visible development.",
+  "description": "Empress grew out of the MISTRESS project at the University of Toronto in the late 1970s and became a full-featured embeddable SQL database for real-time and embedded systems, with ports to QNX, VxWorks, LynxOS, Solaris and Windows CE. It offers ACID transactions, a SQL engine and C/C++, ODBC and JDBC interfaces, and has been used in telecom, medical, automotive and defence equipment. Empress Software still sells it, but its last widely listed release is v10.20-H (2023) and its website's news section has not moved in years. Treat it as a product for maintaining existing embedded designs rather than starting new ones.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Still offered by Empress Software, but the last listed release is v10.20-H (May 2023) and public product news has been static for years.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "iot"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Empress Software Inc.",
+  "vendorType": "company",
+  "initialRelease": 1979,
+  "latestVersion": {
+    "version": "10.20-H",
+    "date": "2023-05"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "OEM and runtime licensing by quote; evaluation SDKs have been offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "C API",
+    "C++ API",
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Mature embedded SQL with ACID transactions",
+    "Ports to many RTOS and Unix variants (QNX, VxWorks, LynxOS, Solaris)",
+    "Long field history in telecom, medical and defence devices"
+  ],
+  "weaknesses": [
+    "Little visible development or community since the early 2010s",
+    "Sparse public documentation and pricing",
+    "Superseded in most new designs by SQLite or RaimaDB"
+  ],
+  "useCases": [
+    "Maintaining existing embedded systems built on Empress",
+    "Legacy RTOS devices needing SQL storage"
+  ],
+  "notIdealFor": [
+    "New embedded designs",
+    "Server or cloud workloads",
+    "Teams needing active vendor roadmaps"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "raima-database-manager",
+    "ittia-db",
+    "sqlite",
+    "extremedb",
+    "mimer-sql"
+  ],
+  "tags": [
+    "embedded",
+    "rtos",
+    "legacy"
+  ],
+  "links": {
+    "website": "http://www.empress.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Empress_Embedded_Database"
+  },
+  "ids": {
+    "wikipedia": "Empress Embedded Database",
+    "hackerNewsQuery": "Empress Embedded Database"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Empress_Embedded_Database",
+    "https://www.eejournal.com/article/20100107-03/",
+    "http://www.empress.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

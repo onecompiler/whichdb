@@ -1,0 +1,151 @@
+{
+  "slug": "stig",
+  "name": "Stig",
+  "aliases": [
+    "StigDB"
+  ],
+  "tagline": "Tagged's social-scale graph-oriented database with causal time travel and a compiled Stigscript language.",
+  "description": "Stig was built at the social network Tagged between 2010 and 2014 to give applications a single path to data and drop the memcache-plus-MySQL layer. Its ideas were unusual: Points of View are optimistic, isolated workspaces that merge into a global view; the Flux Capacitor keeps a causality-ordered history so you can do consistent reads at any point in time; and Stigscript is a compiled, type-safe functional language, with compile-time unit tests, whose packages compile to shared libraries loaded by the server. It ran as a single node with failover and replication on its own block device, with sharding still on the drawing board. Tagged released it under Apache 2.0, but development ended; the only public copy is a 2019 archive repository.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Developed at Tagged 2010-2014 and open-sourced under Apache 2.0, then abandoned; the only public copy is a 2019 archive repo. Use Neo4j, Memgraph or FoundationDB.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "oltp",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Tagged, Inc. (Stig LLC)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single node with failover replication; a sharded design was planned but not delivered."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "causal"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Stigscript"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Causality-ordered history allows consistent reads at any point in time",
+    "Points of View give optimistic, isolated workspaces that merge back",
+    "Compiled, type-safe query language with compile-time unit tests",
+    "Back end was used in production at a large social network"
+  ],
+  "weaknesses": [
+    "Abandoned; no releases, maintainers or community",
+    "Linux only and needs a dedicated block device",
+    "Front end and tooling were never finished",
+    "No sharding despite the scale ambitions"
+  ],
+  "useCases": [
+    "Studying causal versioning and time-travel designs",
+    "Reference for compiled query languages in databases"
+  ],
+  "notIdealFor": [
+    "Any production deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "memgraph",
+    "foundationdb",
+    "janusgraph",
+    "dgraph"
+  ],
+  "tags": [
+    "graph",
+    "time-travel",
+    "social-network",
+    "c++",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/jssmith/stigdb",
+    "repository": "https://github.com/jssmith/stigdb",
+    "docs": "https://github.com/jssmith/stigdb/tree/master/docs"
+  },
+  "ids": {
+    "github": "jssmith/stigdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/jssmith/stigdb",
+    "https://github.com/jssmith/stigdb/blob/master/LICENSE",
+    "https://dbdb.io/db/stig"
+  ],
+  "lastVerified": "2026-10-27"
+}

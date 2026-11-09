@@ -1,0 +1,159 @@
+{
+  "slug": "beam",
+  "name": "Beam",
+  "aliases": [
+    "Akutan",
+    "eBay Beam",
+    "eBay Akutan"
+  ],
+  "tagline": "eBay's distributed knowledge-graph store, later renamed Akutan, built around one central log; archived 2019.",
+  "description": "Beam was a distributed RDF-style knowledge graph store that eBay open-sourced in April 2019 and renamed Akutan that July, shortly before archiving the repository. Every change is appended to a single central log (Apache Kafka in production, an in-memory log for development), and 'view' servers backed by RocksDB replay it to build partitioned indexes, which gives transactional updates and consistent historical snapshots in exchange for a global cap on write rate (tens of thousands of changes per second). Queries use a SPARQL-like language with a limited inference engine. eBay ran a 20-server development cluster with about 2.5 billion facts, but the authors stated it was not ready for production-critical use, lacking fact deletion, backup/restore and automated cluster management.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Renamed Akutan in July 2019 and the eBay GitHub repository was archived the same month; never production-ready.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "eBay",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "Apache Kafka log and RocksDB views",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Reads and storage scale with view servers; all writes go through one log, capping total change rate. Tested with ~2.5 billion facts on 20 servers."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Akutan Query Language (SPARQL-like)"
+  ],
+  "apis": [
+    "gRPC API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Simple log-centric architecture that yields transactions and global snapshots",
+    "Historical queries against any past log position",
+    "Read capacity scales by adding view servers",
+    "Well-documented design notes from eBay engineers"
+  ],
+  "weaknesses": [
+    "Archived in 2019; no maintenance",
+    "Global write throughput is limited by the single log",
+    "Missing fact deletion, backup/restore and cluster automation",
+    "Query language is close to, but not compatible with, SPARQL"
+  ],
+  "useCases": [
+    "Studying log-structured distributed graph store designs",
+    "Experiments with snapshot-consistent knowledge graphs"
+  ],
+  "notIdealFor": [
+    "Production knowledge graphs",
+    "Write-heavy graph workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dgraph",
+    "nebulagraph",
+    "janusgraph",
+    "apache-jena-tdb",
+    "amazon-neptune",
+    "xtdb"
+  ],
+  "tags": [
+    "knowledge-graph",
+    "rdf",
+    "ebay",
+    "kafka",
+    "archived"
+  ],
+  "links": {
+    "website": "https://github.com/eBay/akutan",
+    "repository": "https://github.com/eBay/akutan",
+    "docs": "https://github.com/eBay/akutan/tree/master/docs"
+  },
+  "ids": {
+    "github": "eBay/akutan",
+    "hackerNewsQuery": "eBay Akutan"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/eBay/akutan",
+    "https://innovation.ebayinc.com/stories/akutan-a-distributed-knowledge-graph-store/",
+    "https://github.com/eBay/akutan/blob/master/docs/central_log_arch.md"
+  ],
+  "lastVerified": "2026-10-27"
+}

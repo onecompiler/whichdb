@@ -1,0 +1,181 @@
+{
+  "slug": "momento",
+  "name": "Momento",
+  "aliases": [
+    "Momento Cache",
+    "Momento Topics"
+  ],
+  "tagline": "Managed Valkey and serverless cache/pub-sub from ex-DynamoDB engineers, plus self-hosted Valkey tooling.",
+  "description": "Momento launched in 2022 as an API-first serverless cache and Topics pub/sub service, priced per GB transferred with no clusters to size. Its offering has since shifted toward Valkey: managed dedicated Valkey in Flex and Cluster tiers, plus a Valkey router, Kubernetes operator and hardened Valkey images for self-hosted fleets. Founded by former AWS DynamoDB engineers, it targets media, gaming and fintech companies with spiky traffic. Pick it if you want someone else to run Valkey at large scale, or a cache you can call over gRPC without managing connections.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "pub-sub",
+    "session-store"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Momento Inc.",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Valkey",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary service (SDKs Apache-2.0)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Cache Flex from $13 per GB-month, Cluster from $0.0105 per instance-hour, Topics from $1 per million operations."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Momento SDK API",
+    "Redis commands (RESP)"
+  ],
+  "apis": [
+    "gRPC",
+    "HTTP",
+    "RESP"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "Go",
+    "Java",
+    "C#",
+    "Rust",
+    "PHP",
+    "Ruby",
+    "Swift",
+    "Kotlin"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No cluster sizing for the serverless cache and Topics",
+    "Managed Valkey run by a team focused on cache performance",
+    "Self-hosted Valkey operator and router for platform teams",
+    "SDKs for web, mobile and backend, including browser pub/sub"
+  ],
+  "weaknesses": [
+    "Proprietary API for the serverless cache means some lock-in",
+    "Not a durable store; data is cache-only",
+    "Smaller vendor than the hyperscalers"
+  ],
+  "useCases": [
+    "Caching for spiky media and live-event traffic",
+    "Real-time pub/sub to browsers and mobile apps",
+    "Outsourcing large Valkey fleet operations"
+  ],
+  "notIdealFor": [
+    "Durable primary data",
+    "Teams that need on-prem only"
+  ],
+  "notableUsers": [
+    "Snap",
+    "Paramount",
+    "Coinbase"
+  ],
+  "alternatives": [
+    "upstash",
+    "amazon-elasticache",
+    "valkey",
+    "redis",
+    "google-memorystore"
+  ],
+  "tags": [
+    "serverless",
+    "cache",
+    "valkey",
+    "pub-sub",
+    "managed"
+  ],
+  "links": {
+    "website": "https://www.gomomento.com/",
+    "docs": "https://docs.momentohq.com/",
+    "pricing": "https://www.gomomento.com/pricing/",
+    "repository": "https://github.com/momentohq/client-sdk-javascript"
+  },
+  "ids": {
+    "github": "momentohq/client-sdk-javascript",
+    "npm": "@gomomento/sdk",
+    "pypi": "momento",
+    "hackerNewsQuery": "Momento cache"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.gomomento.com/",
+    "https://techcrunch.com/?p=2432753",
+    "https://www.gomomento.com/blog/why-snap-was-willing-to-fork-and-why-they-still-came-back/"
+  ],
+  "lastVerified": "2026-10-27"
+}

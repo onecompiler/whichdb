@@ -1,0 +1,154 @@
+{
+  "slug": "scaledb",
+  "name": "ScaleDB",
+  "aliases": [
+    "ScaleDB storage engine",
+    "ScaleDB for MySQL"
+  ],
+  "tagline": "Shared-disk clustering storage engine for MySQL that later pivoted to time-series; company folded around 2017.",
+  "description": "ScaleDB was a startup that plugged a clustered storage engine into MySQL (and later MariaDB). Its first product used a shared-disk design in the spirit of Oracle RAC: many MySQL nodes ran against a common, highly available storage and caching tier, so applications could add database nodes without sharding or replica promotion. Around 2015 the company repositioned the engine for high-velocity time-series and IoT data, pushing queries down to parallel storage nodes while keeping MariaDB as the SQL front end. The company wound down around 2017 and the product is no longer available.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "The company ceased operations around 2017 and ScaleDB is no longer offered. For scale-out MySQL use Vitess, TiDB or Galera; for time-series use ClickHouse or TimescaleDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "time-series"
+  ],
+  "workloads": [
+    "oltp",
+    "time-series",
+    "iot"
+  ],
+  "architecture": [
+    "shared-storage",
+    "distributed"
+  ],
+  "developer": "ScaleDB Inc.",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MySQL / MariaDB (pluggable storage engine)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Historically offered as a downloadable commercial engine; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Added MySQL nodes against shared storage without sharding; later versions parallelised time-series queries across storage nodes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Scaled MySQL out without application-level sharding",
+    "Shared-disk design avoided replica promotion on node failure",
+    "Kept full MySQL/MariaDB compatibility for tools and drivers"
+  ],
+  "weaknesses": [
+    "Vendor is defunct; no downloads, fixes or support",
+    "Shared-disk clusters depend on a fast, highly available storage tier"
+  ],
+  "useCases": [
+    "History of shared-disk clustering for MySQL",
+    "Migrating legacy ScaleDB deployments"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vitess",
+    "tidb",
+    "galera-cluster",
+    "mysql-ndb-cluster",
+    "clickhouse",
+    "timescaledb"
+  ],
+  "tags": [
+    "mysql",
+    "storage-engine",
+    "shared-disk",
+    "time-series",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2016/http://www.scaledb.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "ScaleDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2011/http://www.scaledb.com/",
+    "https://web.archive.org/web/2016/http://www.scaledb.com/",
+    "https://dbdb.io/db/scaledb"
+  ],
+  "lastVerified": "2026-10-27"
+}

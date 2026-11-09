@@ -1,0 +1,115 @@
+{
+  "slug": "endeca",
+  "name": "Endeca",
+  "aliases": ["Endeca MDEX Engine", "Oracle Endeca", "Oracle Commerce Guided Search", "Oracle Endeca Information Discovery", "Endeca Server"],
+  "tagline": "Faceted-search and discovery engine (MDEX) that Oracle bought in 2011; now a frozen Oracle Commerce component.",
+  "description": "Endeca, founded in Cambridge, Massachusetts in 1999, built the MDEX Engine, a hybrid search and analytics store that made 'guided navigation' famous: every query returned matching records along with the facets and counts needed to refine them, which is why so many 2000s retail sites, library catalogues and intranets used it. Later versions added EQL, an analytic query language, and the Endeca Server used column-oriented, in-memory structures for business-discovery dashboards. Oracle announced the acquisition in October 2011 for about $1.1 billion and folded it into Oracle Commerce Guided Search/Experience Manager (current release 11.3.2) and Oracle Endeca Information Discovery (frozen at 3.2 with Endeca Server 7.7). Oracle still documents and supports these releases, but there is no new development; new projects use Elasticsearch, Solr or cloud commerce search.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Acquired by Oracle (announced Oct 2011). Guided Search 11.3.2 and Information Discovery 3.2 remain documented but receive no new feature releases.",
+  "maturity": "legacy",
+  "primaryModel": "search",
+  "models": ["search", "document", "columnar"],
+  "workloads": ["full-text-search", "olap", "content-management"],
+  "architecture": ["client-server", "in-memory"],
+  "developer": "Oracle (originally Endeca Technologies)",
+  "vendorType": "company",
+  "initialRelease": 1999,
+  "latestVersion": { "version": "11.3.2", "date": "2019" },
+  "writtenIn": ["C++", "Java"],
+  "license": { "type": "proprietary", "name": "Proprietary (Oracle)" },
+  "pricing": {
+    "models": ["enterprise-contract"],
+    "freeTier": false,
+    "notes": "Licensed through Oracle as part of Oracle Commerce or Endeca Information Discovery."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "windows", "unix"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Scaled by replicating MDEX instances behind load balancers; each instance holds a full index."
+  },
+  "consistency": { "acid": "limited", "models": ["eventual"] },
+  "schemaMode": "flexible",
+  "queryLanguages": ["EQL (Endeca Query Language)", "MDEX navigation queries"],
+  "apis": ["Presentation API (Java, .NET)", "XML/SOAP web services", "HTTP"],
+  "compatibleWith": [],
+  "drivers": ["Java", ".NET"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Facet-first query model: every search returns refinement dimensions and counts",
+    "Mature merchandising tooling (Experience Manager) for commerce sites",
+    "Combined text search with analytic aggregation in one engine (EQL)",
+    "Long Oracle support history for existing deployments"
+  ],
+  "weaknesses": [
+    "No new feature releases; Oracle's strategy has moved to cloud commerce and analytics",
+    "Heavyweight, batch-oriented indexing pipeline (Forge/CAS) compared with modern search engines",
+    "Expensive Oracle licensing with a shrinking skills pool"
+  ],
+  "useCases": [
+    "Running existing Oracle Commerce (ATG/Endeca) storefronts",
+    "Legacy faceted catalogue and intranet search",
+    "Migrating Endeca deployments to Elasticsearch, Solr or OpenSearch"
+  ],
+  "notIdealFor": ["New search or analytics projects", "Real-time indexing", "Vector or semantic search"],
+  "notableUsers": [],
+  "alternatives": ["elasticsearch", "apache-solr", "opensearch", "algolia", "vespa"],
+  "tags": ["faceted-search", "oracle", "e-commerce", "discovery", "legacy"],
+  "links": {
+    "website": "https://www.oracle.com/middleware/technologies/endeca.html",
+    "docs": "https://www.oracle.com/technical-resources/documentation/endeca-guided-search-doc.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Endeca"
+  },
+  "ids": {
+    "stackoverflowTag": "endeca",
+    "wikipedia": "Endeca",
+    "hackerNewsQuery": "Endeca"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Endeca",
+    "https://www.oracle.com/middleware/technologies/endeca.html",
+    "https://www.oracle.com/technical-resources/documentation/endeca-guided-search-doc.html",
+    "https://docs.oracle.com/cd/F25150_01/common.11-3-2/index.html",
+    "https://dbdb.io/db/endeca"
+  ],
+  "lastVerified": "2026-10-27"
+}

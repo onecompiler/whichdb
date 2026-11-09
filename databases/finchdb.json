@@ -1,0 +1,97 @@
+{
+  "slug": "finchdb",
+  "name": "FinchDB",
+  "aliases": ["Finch DB"],
+  "tagline": "Finch Computing's short-lived in-memory, JSON-style document and search analytics engine from 2015.",
+  "description": "FinchDB was a proprietary in-memory analytics engine released around 2015 by Finch Computing, a text-analytics company now known as FinchAI. It stored JSON-style documents in memory across a distributed cluster and combined document storage with search-engine style querying, so the entities and relationships extracted by Finch's natural-language tools could be filtered and aggregated interactively. It was never sold or documented widely as a standalone database: the product page disappeared after 2016, DB-Engines lists it as discontinued, and FinchAI today markets entity extraction and risk-intelligence products rather than a database. Very little technical detail survives, so treat this entry as a historical marker.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Product page gone since about 2016 and listed as discontinued by DB-Engines; Finch Computing (now FinchAI) no longer offers it.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": ["document", "search"],
+  "workloads": ["real-time-analytics", "full-text-search"],
+  "architecture": ["in-memory", "distributed"],
+  "developer": "Finch Computing (now FinchAI)",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "writtenIn": ["Unknown"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["enterprise-contract"],
+    "freeTier": false,
+    "notes": "Was available only commercially; no longer offered."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": { "tier": "medium", "horizontalScaling": "native", "multiRegion": "none" },
+  "consistency": { "acid": "none", "models": ["eventual"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["Proprietary query API"],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Combined document storage with search-style filtering in memory for interactive analysis",
+    "Built to sit behind Finch's entity-extraction pipeline"
+  ],
+  "weaknesses": [
+    "Discontinued, with almost no surviving documentation",
+    "Never available as a general-purpose, independently supported product"
+  ],
+  "useCases": [
+    "Historical reference only",
+    "Context for legacy Finch Computing analytics deployments"
+  ],
+  "notIdealFor": ["Any current workload"],
+  "notableUsers": [],
+  "alternatives": ["elasticsearch", "opensearch", "mongodb", "rockset"],
+  "tags": ["in-memory", "document", "search", "analytics", "discontinued"],
+  "links": {
+    "website": "https://web.archive.org/web/2015/http://www.finchcomputing.com/finchdb/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://db-engines.com/en/system/FinchDB",
+    "https://dbdb.io/db/finchdb",
+    "https://finchai.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

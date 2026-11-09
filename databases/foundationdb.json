@@ -1,0 +1,188 @@
+{
+  "slug": "foundationdb",
+  "name": "FoundationDB",
+  "aliases": [
+    "FDB"
+  ],
+  "tagline": "Apple's ordered, strictly serializable distributed key-value store, built to have layers on top.",
+  "description": "FoundationDB is a distributed, ordered key-value store that gives you multi-key ACID transactions with strict serializability across a whole cluster, and almost nothing else on purpose. Higher-level data models (records, documents, SQL, queues) are built as stateless 'layers' on top, which is how Apple runs CloudKit and Snowflake runs its metadata catalog on it. Its deterministic simulation testing is legendary and it is among the most correctness-focused databases you can run. The trade-offs are hard limits (5-second transactions, 10 MB transaction size, 100 KB values) and the need to build or adopt a layer for anything beyond raw keys.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "metadata-store",
+    "queue"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apple",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "7.3.77",
+    "date": "2026-04-16"
+  },
+  "writtenIn": [
+    "C++",
+    "Flow"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; no official managed service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Automatic range sharding and rebalancing; multi-region configurations replicate synchronously to a satellite and fail over to a standby region."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "FoundationDB API"
+  ],
+  "apis": [
+    "C client library",
+    "Tuple and Directory layers"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Python",
+    "Java",
+    "Go",
+    "Ruby",
+    "Rust",
+    "JavaScript",
+    "Swift"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Strictly serializable multi-key transactions across the whole cluster",
+    "Deterministic simulation testing gives exceptional reliability",
+    "Ordered keyspace enables efficient range scans and custom indexes",
+    "Layer architecture: Record Layer and others add data models on a common core",
+    "Self-healing: automatic data distribution, replication and recovery"
+  ],
+  "weaknesses": [
+    "Transactions limited to 5 seconds and 10 MB; values capped at 100 KB",
+    "Raw key-value API: you must build or adopt a layer for documents, SQL or secondary indexes",
+    "No official managed service and a steep operational learning curve",
+    "Smaller community; much development happens inside Apple and Snowflake"
+  ],
+  "useCases": [
+    "Metadata stores for larger systems (catalogs, object stores)",
+    "Foundation for custom databases and layers",
+    "Multi-tenant app backends via the Record Layer",
+    "Transactional queues and job systems"
+  ],
+  "notIdealFor": [
+    "Long-running analytical transactions",
+    "Teams wanting SQL out of the box",
+    "Storing large blobs directly"
+  ],
+  "notableUsers": [
+    "Apple",
+    "Snowflake"
+  ],
+  "alternatives": [
+    "tikv",
+    "etcd",
+    "cockroachdb",
+    "google-cloud-spanner",
+    "amazon-dynamodb"
+  ],
+  "tags": [
+    "transactional",
+    "ordered-kv",
+    "layers",
+    "apple",
+    "simulation-testing"
+  ],
+  "links": {
+    "website": "https://www.foundationdb.org/",
+    "docs": "https://apple.github.io/foundationdb/",
+    "repository": "https://github.com/apple/foundationdb",
+    "changelog": "https://github.com/apple/foundationdb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/FoundationDB"
+  },
+  "ids": {
+    "github": "apple/foundationdb",
+    "stackoverflowTag": "foundationdb",
+    "wikipedia": "FoundationDB",
+    "dockerHub": "foundationdb/foundationdb",
+    "pypi": "foundationdb",
+    "hackerNewsQuery": "FoundationDB"
+  },
+  "brand": {
+    "color": "#3A9AD9"
+  },
+  "sources": [
+    "https://github.com/apple/foundationdb/releases",
+    "https://apple.github.io/foundationdb/known-limitations.html",
+    "https://www.foundationdb.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

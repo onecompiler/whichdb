@@ -1,0 +1,173 @@
+{
+  "slug": "apache-paimon",
+  "name": "Apache Paimon",
+  "aliases": [
+    "Paimon",
+    "Flink Table Store"
+  ],
+  "tagline": "Streaming lakehouse table format with LSM-based upserts and changelogs, born in Apache Flink.",
+  "description": "Apache Paimon (formerly Flink Table Store) is a lake table format designed for real-time updates: each bucket is an LSM tree of Parquet or ORC files, so primary-key tables absorb high-rate upserts and deletes from Flink CDC while producing a changelog that downstream streaming jobs can consume. It offers snapshots, time travel, tags and branches, and is readable by Flink, Spark, Trino, StarRocks, Doris and Python. Paimon fits streaming lakehouse pipelines, especially CDC into the lake; Iceberg has broader engine support for mostly-append batch data.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "lakehouse",
+    "stream-processing",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "2.1.0",
+    "date": "2026-10-12"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; used in Alibaba Cloud Realtime Compute for Apache Flink and other managed Flink services."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales with the compute engine and object storage; bucketed tables parallelize writes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (via Flink, Spark, Trino, StarRocks, Doris)"
+  ],
+  "apis": [
+    "Java API",
+    "Python API (pypaimon)",
+    "REST catalog"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "LSM-based primary-key tables handle high-rate upserts from CDC",
+    "Native changelog output enables incremental streaming pipelines",
+    "Snapshots, tags, branches and time travel",
+    "Readable by Flink, Spark, Trino, StarRocks and Doris",
+    "Can expose tables in Iceberg-compatible metadata"
+  ],
+  "weaknesses": [
+    "A table format, not a query engine: needs Flink/Spark/Trino on top",
+    "Compaction tuning matters for read performance",
+    "Smaller engine ecosystem than Iceberg or Delta"
+  ],
+  "useCases": [
+    "Streaming CDC from databases into the lake",
+    "Real-time lakehouse with Flink",
+    "Incremental ETL with changelogs",
+    "Partial-update wide tables"
+  ],
+  "notIdealFor": [
+    "Standalone querying without an engine",
+    "OLTP",
+    "Batch-only shops standardized on Iceberg"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-kudu",
+    "starrocks",
+    "databricks-sql",
+    "apache-spark-sql",
+    "trino"
+  ],
+  "tags": [
+    "table-format",
+    "lakehouse",
+    "flink",
+    "streaming",
+    "cdc"
+  ],
+  "links": {
+    "website": "https://paimon.apache.org/",
+    "docs": "https://paimon.apache.org/docs/master/",
+    "repository": "https://github.com/apache/paimon",
+    "changelog": "https://paimon.apache.org/releases/"
+  },
+  "ids": {
+    "github": "apache/paimon",
+    "pypi": "pypaimon",
+    "hackerNewsQuery": "Apache Paimon"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apache/paimon/releases",
+    "https://paimon.apache.org/",
+    "https://pypi.org/project/pypaimon/"
+  ],
+  "lastVerified": "2026-10-27"
+}

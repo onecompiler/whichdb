@@ -1,0 +1,188 @@
+{
+  "slug": "percona-server-mysql",
+  "name": "Percona Server for MySQL",
+  "aliases": [
+    "Percona Server",
+    "PS for MySQL"
+  ],
+  "tagline": "A drop-in MySQL build that ships enterprise features (thread pool, audit, encryption) as free GPL code.",
+  "description": "Percona Server for MySQL is Percona's enhanced, fully compatible build of MySQL Community Server. It tracks upstream LTS releases and adds the features Oracle reserves for MySQL Enterprise Edition, including a thread pool, audit logging, PAM/LDAP authentication, data masking, Vault-backed keyring encryption and extra instrumentation, all under GPLv2. Since 8.x Percona releases only for MySQL LTS lines (8.4 and 9.7), which makes it a conservative choice for teams that want MySQL behavior with enterprise operability but no license fees. It pairs with Percona XtraBackup, Toolkit and the Percona Operator for Kubernetes.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "metadata-store"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Percona",
+  "vendorType": "company",
+  "initialRelease": 2006,
+  "latestVersion": {
+    "version": "9.7.2-2",
+    "date": "2026-09-28"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "basedOn": "MySQL",
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-2.0",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Software is free; Percona sells support, managed services and consulting."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Same topology options as MySQL: async/semi-sync replicas, Group Replication, or Vitess/ProxySQL for sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL client/server protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "PHP",
+    "C#",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "MySQL Enterprise-style features (thread pool, audit log, LDAP auth, data masking) at no cost",
+    "Binary-compatible drop-in for MySQL Community of the same version",
+    "Extra diagnostics: user/table statistics, slow-log extensions",
+    "Percona Operator gives a supported Kubernetes deployment path",
+    "Long-term support aligned with MySQL LTS lines"
+  ],
+  "weaknesses": [
+    "Releases lag upstream MySQL by weeks to months",
+    "Skips MySQL Innovation releases, so new features arrive only with LTS",
+    "Linux-only packages",
+    "Not offered as a managed service by the big clouds (use RDS MySQL or Percona's own services)"
+  ],
+  "useCases": [
+    "Self-hosted MySQL fleets needing enterprise security features",
+    "Replacing MySQL Enterprise Edition to cut license cost",
+    "High-concurrency OLTP needing a thread pool",
+    "MySQL on Kubernetes via the Percona Operator"
+  ],
+  "notIdealFor": [
+    "Teams wanting the newest MySQL Innovation features immediately",
+    "Windows or macOS server deployments",
+    "Fully managed serverless use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mysql",
+    "mariadb",
+    "percona-xtradb-cluster",
+    "amazon-aurora",
+    "tidb"
+  ],
+  "tags": [
+    "mysql-compatible",
+    "open-source",
+    "enterprise-features",
+    "percona"
+  ],
+  "links": {
+    "website": "https://www.percona.com/mysql/software/percona-server-for-mysql",
+    "docs": "https://docs.percona.com/percona-server/9.7/",
+    "repository": "https://github.com/percona/percona-server",
+    "changelog": "https://docs.percona.com/percona-server/9.7/release-notes/release-notes-index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Percona_Server_for_MySQL"
+  },
+  "ids": {
+    "github": "percona/percona-server",
+    "stackoverflowTag": "percona",
+    "wikipedia": "Percona Server for MySQL",
+    "dockerHub": "percona/percona-server",
+    "hackerNewsQuery": "\"Percona Server\""
+  },
+  "brand": {
+    "color": "#FF7E1A"
+  },
+  "sources": [
+    "https://docs.percona.com/percona-server/9.7/release-notes/release-notes-index.html",
+    "https://github.com/percona/percona-server/tags",
+    "https://www.percona.com/mysql/software/percona-server-for-mysql"
+  ],
+  "lastVerified": "2026-10-27"
+}

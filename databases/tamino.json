@@ -1,0 +1,148 @@
+{
+  "slug": "tamino",
+  "name": "Tamino",
+  "aliases": [
+    "Tamino XML Server",
+    "Software AG Tamino"
+  ],
+  "tagline": "Software AG's native XML database server from 2000, queried with XPath-based X-Query and later XQuery.",
+  "description": "Tamino XML Server was one of the first commercial native XML databases: instead of shredding XML into relational tables it stored documents in their tree form, indexed them according to schemas, and answered queries through Tamino X-Query, an XPath-based language, and later XQuery, over HTTP. Software AG launched it in the US in 2000, aiming it at XML-heavy content, publishing and document-exchange applications. Version 8 arrived in 2009, standard maintenance for 4.4 ended in December 2010, and the product has since been dropped from Software AG's site. Existing XML workloads usually move to MarkLogic, BaseX or eXist-db.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No longer offered by Software AG; the product page is gone. Last major version 8 (2009). Use MarkLogic, BaseX or eXist-db for native XML.",
+  "maturity": "legacy",
+  "primaryModel": "xml",
+  "models": [
+    "xml",
+    "document"
+  ],
+  "workloads": [
+    "content-management",
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Software AG",
+  "vendorType": "company",
+  "initialRelease": 2000,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Tamino X-Query",
+    "XQuery"
+  ],
+  "apis": [
+    "HTTP",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early native XML storage without relational shredding",
+    "Schema-driven indexing of XML documents",
+    "HTTP-native access suited to web publishing of the era"
+  ],
+  "weaknesses": [
+    "Discontinued and no longer supported",
+    "Proprietary query dialect before standard XQuery support",
+    "Niche skills; little documentation remains public"
+  ],
+  "useCases": [
+    "Maintaining legacy Tamino-based content systems",
+    "History of native XML databases"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "marklogic",
+    "basex",
+    "exist-db",
+    "sednadb"
+  ],
+  "tags": [
+    "xml",
+    "xquery",
+    "software-ag",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://tech.forums.softwareag.com/t/standard-maintenance-for-tamino-4-4-will-end-on-2010-12-31/94793"
+  },
+  "ids": {
+    "hackerNewsQuery": "Tamino XML Server"
+  },
+  "brand": {},
+  "sources": [
+    "https://tech.forums.softwareag.com/t/standard-maintenance-for-tamino-4-4-will-end-on-2010-12-31/94793",
+    "https://gilbane.com/2000/05/software-ag-launches-native-xml-database-in-us/",
+    "https://www.itreseller.ch/Artikel/25786/Software_AG_erneuert_Tamino.html",
+    "https://dbdb.io/db/tamino"
+  ],
+  "lastVerified": "2026-10-27"
+}

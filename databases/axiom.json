@@ -1,0 +1,182 @@
+{
+  "slug": "axiom",
+  "name": "Axiom",
+  "aliases": [
+    "Axiom EventDB",
+    "axiom.co"
+  ],
+  "tagline": "Managed event and telemetry store with schema-on-read ingest and the piped APL query language.",
+  "description": "Axiom is a fully managed platform for logs, traces, metrics and other event data, built on its own event store that keeps compressed data on object storage and separates ingest from query compute. Data is ingested without a schema and shaped at read time with APL, a piped query language modelled on Kusto, while a companion language, MPL, targets a dedicated metrics engine. It supports OpenTelemetry and common shippers, offers dashboards, monitors and an MCP server for AI agents, and prices by usage with a free personal tier and a bring-your-own-cloud option. It suits teams that want cheap retention of high-volume telemetry without operating a cluster; it is closed source and cloud-only.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series",
+    "search"
+  ],
+  "workloads": [
+    "observability",
+    "real-time-analytics",
+    "time-series"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Axiom, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary SaaS"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "startingPrice": "$25/month platform fee + usage",
+    "notes": "Free personal plan; paid plans bill ingest, query compute and storage; BYOC available for large customers."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Ingest and query are separate serverless tiers over object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "APL",
+    "MPL"
+  ],
+  "apis": [
+    "OTLP",
+    "HTTP ingest API",
+    "Elasticsearch bulk API",
+    "MCP server"
+  ],
+  "compatibleWith": [
+    "elasticsearch"
+  ],
+  "drivers": [
+    "Go",
+    "JavaScript",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No cluster to operate; ingest scales without capacity planning",
+    "Schema-on-read means new fields need no migrations",
+    "APL is expressive for piped log and event analysis",
+    "Low storage cost for long retention of high-volume telemetry",
+    "Free tier generous enough for side projects"
+  ],
+  "weaknesses": [
+    "Closed source and cloud-only (BYOC aside)",
+    "APL and MPL are proprietary query languages",
+    "Usage-based pricing needs monitoring at very high query volume",
+    "Smaller integration catalogue than Datadog or Splunk"
+  ],
+  "useCases": [
+    "Application and serverless logs",
+    "OpenTelemetry traces for startups",
+    "Product and security event analytics",
+    "Edge and CDN logs"
+  ],
+  "notIdealFor": [
+    "On-prem or air-gapped deployments",
+    "Transactional data",
+    "Teams requiring open-source tooling"
+  ],
+  "notableUsers": [
+    "Asana",
+    "Convex",
+    "Framer",
+    "Eventim"
+  ],
+  "alternatives": [
+    "hydrolix",
+    "openobserve",
+    "signoz",
+    "grafana-loki",
+    "elasticsearch",
+    "clickhouse"
+  ],
+  "tags": [
+    "observability",
+    "logs",
+    "saas",
+    "serverless",
+    "proprietary"
+  ],
+  "links": {
+    "website": "https://axiom.co/",
+    "docs": "https://axiom.co/docs",
+    "pricing": "https://axiom.co/pricing"
+  },
+  "ids": {
+    "npm": "@axiomhq/js",
+    "pypi": "axiom-py",
+    "hackerNewsQuery": "Axiom.co"
+  },
+  "brand": {},
+  "sources": [
+    "https://axiom.co/",
+    "https://axiom.co/pricing/llms.txt",
+    "https://axiom.co/blog/reimagining-pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

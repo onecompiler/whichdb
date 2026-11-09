@@ -1,0 +1,180 @@
+{
+  "slug": "berkeley-db",
+  "name": "Oracle Berkeley DB",
+  "aliases": [
+    "Berkeley DB",
+    "BDB",
+    "Sleepycat DB"
+  ],
+  "tagline": "The 1990s-era embedded key-value library, now Oracle-owned, AGPL-licensed and rarely updated.",
+  "description": "Berkeley DB started at UC Berkeley in 1991, was commercialised by Sleepycat Software and bought by Oracle in 2006. It is an embedded C library offering B-tree, hash, queue and record-number access methods with transactions, write-ahead logging, replication and hot backups, and for decades it was the storage under OpenLDAP, Subversion, sendmail and early MySQL. Oracle relicensed the open-source edition to AGPL-3.0 in 2013, which drove many projects to LMDB or SQLite, and the latest release, 18.1.40, dates from 2020. It still works, but treat it as a legacy dependency.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No new release since 18.1.40 (May 2020); Oracle still distributes it under AGPL-3.0 or a commercial license. LMDB or SQLite are the usual replacements.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "queue"
+  ],
+  "architecture": [
+    "embedded",
+    "primary-replica"
+  ],
+  "developer": "Oracle",
+  "vendorType": "company",
+  "initialRelease": 1991,
+  "latestVersion": {
+    "version": "18.1.40",
+    "date": "2020-05-29"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3 or Oracle commercial license",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "AGPL edition free; a commercial license is required to embed it in closed-source distributed software."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process library; built-in replication manager supports primary-replica HA groups."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API",
+    "C++ API",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "Python",
+    "Perl"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Decades of production use with full ACID transactions and recovery",
+    "Multiple access methods: B-tree, hash, queue and record number",
+    "Built-in replication manager for high availability",
+    "Small footprint suitable for appliances and embedded devices"
+  ],
+  "weaknesses": [
+    "AGPL or paid license makes embedding in proprietary products awkward",
+    "No new releases since 2020 and little community activity",
+    "Page-level locking and an older design limit concurrency",
+    "Many distributions and projects have already removed it"
+  ],
+  "useCases": [
+    "Maintaining legacy software built on BDB",
+    "Embedded appliances with existing BDB code",
+    "Local transactional queues"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Proprietary products unwilling to buy a license",
+    "High-concurrency modern servers"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "sqlite",
+    "rocksdb",
+    "wiredtiger",
+    "kyoto-cabinet"
+  ],
+  "tags": [
+    "embedded",
+    "legacy",
+    "oracle",
+    "agpl",
+    "c"
+  ],
+  "links": {
+    "website": "https://www.oracle.com/database/technologies/related/berkeleydb.html",
+    "docs": "https://docs.oracle.com/cd/E17276_01/html/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Berkeley_DB"
+  },
+  "ids": {
+    "stackoverflowTag": "berkeley-db",
+    "wikipedia": "Berkeley DB",
+    "hackerNewsQuery": "Berkeley DB"
+  },
+  "brand": {
+    "color": "#C74634"
+  },
+  "sources": [
+    "https://www.oracle.com/database/technologies/related/berkeleydb.html",
+    "https://formulae.brew.sh/formula/berkeley-db",
+    "https://fossies.org/linux/db/README"
+  ],
+  "lastVerified": "2026-10-27"
+}

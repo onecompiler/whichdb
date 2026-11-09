@@ -1,0 +1,159 @@
+{
+  "slug": "tajo",
+  "name": "Tajo",
+  "aliases": [
+    "Apache Tajo"
+  ],
+  "tagline": "Retired Apache SQL-on-Hadoop data warehouse engine with its own distributed executor; moved to the Attic.",
+  "description": "Apache Tajo was a distributed relational data warehouse for Hadoop that started at Korea University. Instead of compiling SQL to MapReduce like early Hive, it ran its own distributed execution engine with a cost-based optimizer, supported standard SQL with complex joins, and queried columnar and row-format files in HDFS or S3, with a JDBC driver for BI tools. It became an Apache top-level project in March 2014, but development faded after 0.11.3 in 2016; the project retired in September 2020 and moved to the Apache Attic in April 2021. Trino, Spark SQL or Hive on Tez cover its use cases today.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Retired by the ASF in September 2020 and moved to the Apache Attic in April 2021; last release 0.11.3 (2016). Use Trino, Spark SQL or Apache Hive.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Apache Software Foundation (originally Korea University)",
+  "vendorType": "foundation",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "0.11.3",
+    "date": "2016-05"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Ran on Hadoop clusters over HDFS or S3 storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Own distributed executor and cost-based optimizer instead of MapReduce",
+    "Standard SQL with complex joins over files in HDFS or S3",
+    "Permissive Apache license"
+  ],
+  "weaknesses": [
+    "Retired: no releases, fixes or security updates",
+    "Stuck on old Hadoop versions",
+    "Small community even at its peak compared with Hive, Impala or Presto"
+  ],
+  "useCases": [
+    "Maintaining legacy Tajo clusters",
+    "Studying SQL-on-Hadoop engine design"
+  ],
+  "notIdealFor": [
+    "New deployments",
+    "Real-time or transactional workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "apache-spark-sql",
+    "apache-hive",
+    "apache-impala",
+    "presto"
+  ],
+  "tags": [
+    "apache",
+    "hadoop",
+    "sql-on-hadoop",
+    "data-warehouse",
+    "retired"
+  ],
+  "links": {
+    "website": "https://attic.apache.org/projects/tajo.html",
+    "repository": "https://github.com/apache/tajo"
+  },
+  "ids": {
+    "github": "apache/tajo",
+    "hackerNewsQuery": "Apache Tajo"
+  },
+  "brand": {},
+  "sources": [
+    "https://attic.apache.org/projects/tajo.html",
+    "https://github.com/apache/tajo",
+    "https://archive.apache.org/dist/tajo/",
+    "https://dbdb.io/db/tajo"
+  ],
+  "lastVerified": "2026-10-27"
+}

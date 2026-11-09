@@ -1,0 +1,176 @@
+{
+  "slug": "intersystems-cache",
+  "name": "InterSystems Caché",
+  "aliases": [
+    "Caché",
+    "Cache",
+    "Ensemble"
+  ],
+  "tagline": "InterSystems' MUMPS-lineage object/SQL database, superseded by IRIS and winding down maintenance.",
+  "description": "Caché was InterSystems' database from 1997 to 2018: a MUMPS-descended engine storing data in hierarchical 'globals' with object and SQL projections, plus the Ensemble integration layer. It ran a huge share of hospital systems and some notable science projects. InterSystems replaced it with IRIS in 2018, froze it at the 2018.1 line, and has said no Caché/Ensemble maintenance releases are planned after March 31, 2027 (macOS maintenance already ended in 2024). Support contracts continue, but every remaining installation should be planning its IRIS migration.",
+  "productType": "engine",
+  "status": "deprecated",
+  "statusNote": "Superseded by InterSystems IRIS (2018). Frozen at 2018.1.x; InterSystems plans no maintenance releases after March 31, 2027 and recommends migrating to IRIS.",
+  "maturity": "legacy",
+  "primaryModel": "hierarchical",
+  "models": [
+    "hierarchical",
+    "object",
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "distributed"
+  ],
+  "developer": "InterSystems Corporation",
+  "vendorType": "company",
+  "initialRelease": 1997,
+  "writtenIn": [
+    "C",
+    "ObjectScript"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Existing customers only; new licences go to InterSystems IRIS."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "ECP application servers for scale-out reads and mirroring for HA/DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "ObjectScript",
+    "SQL",
+    "MUMPS (M)"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "Caché Object API",
+    "CSP/REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#",
+    "C++",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Globals storage gives very fast hierarchical reads and writes",
+    "Same data accessible as objects and SQL without mapping layers",
+    "Proven at scale in hospital systems for two decades",
+    "Migration path to IRIS is vendor-supported and largely in place"
+  ],
+  "weaknesses": [
+    "End of maintenance releases is announced for March 2027",
+    "No new features since 2018",
+    "Proprietary ObjectScript skills are increasingly scarce"
+  ],
+  "useCases": [
+    "Keeping existing Caché/Ensemble applications supported until migration",
+    "Planning in-place conversion to InterSystems IRIS"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Installations that need fixes beyond 2027",
+    "Running on macOS"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "intersystems-iris",
+    "yottadb",
+    "gt-m",
+    "postgresql"
+  ],
+  "tags": [
+    "mumps",
+    "globals",
+    "healthcare",
+    "legacy",
+    "end-of-life"
+  ],
+  "links": {
+    "website": "https://www.intersystems.com/products/cache/",
+    "docs": "https://docs.intersystems.com/cacheensemblelatest.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/InterSystems_Caché"
+  },
+  "ids": {
+    "stackoverflowTag": "intersystems-cache",
+    "wikipedia": "InterSystems Caché",
+    "hackerNewsQuery": "InterSystems Caché"
+  },
+  "brand": {
+    "color": "#333695"
+  },
+  "sources": [
+    "https://community.intersystems.com/node/570451",
+    "https://docs.intersystems.com/cacheensemblelatest.html",
+    "https://intersystems.com/minsta-version-som-stods"
+  ],
+  "lastVerified": "2026-10-27"
+}

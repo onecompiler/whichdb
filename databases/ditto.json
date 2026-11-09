@@ -1,0 +1,190 @@
+{
+  "slug": "ditto",
+  "name": "Ditto",
+  "aliases": [
+    "Ditto Live",
+    "DittoLive"
+  ],
+  "tagline": "Edge-native document database that syncs peer-to-peer over Bluetooth, P2P Wi-Fi and LAN without internet.",
+  "description": "Ditto is an embedded, offline-first document database whose distinguishing feature is mesh sync: devices running the same app discover each other and replicate over Bluetooth LE, peer-to-peer Wi-Fi and local networks, using CRDTs to merge concurrent edits, and sync opportunistically to Ditto's cloud or a self-managed Ditto Server when any peer gets connectivity. Apps read, write and observe data with SQL-like DQL statements. It targets operational settings where connectivity is unreliable, such as airline cabins, restaurants, retail floors and defence, and MongoDB pointed Realm Device Sync users to it. It is proprietary and enterprise-priced.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "edge",
+    "local-first",
+    "iot"
+  ],
+  "architecture": [
+    "embedded",
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "DittoLive Inc.",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "5.1.0 (JS SDK)",
+    "date": "2026-08-19"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free trial/developer tier; production use priced per contract."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "linux",
+      "macos",
+      "windows",
+      "browser"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Ditto Cloud Platform",
+      "provider": "Ditto",
+      "url": "https://www.ditto.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Every device is a writable peer; the cloud tier aggregates data from many meshes."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual",
+      "causal"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "DQL (Ditto Query Language)"
+  ],
+  "apis": [
+    "Native SDKs",
+    "HTTP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Swift",
+    "Kotlin",
+    "JavaScript",
+    "C#",
+    "C++",
+    "Rust",
+    "Dart"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Peer-to-peer mesh sync over Bluetooth LE, P2P Wi-Fi and LAN with no internet",
+    "CRDT merging keeps concurrent offline edits without manual conflict code",
+    "SDKs for Swift, Kotlin, JavaScript, Flutter, C#, C++ and Rust",
+    "Connectors to MongoDB and other backends for cloud integration"
+  ],
+  "weaknesses": [
+    "Proprietary and enterprise-priced",
+    "Eventual consistency makes strict invariants hard",
+    "Mesh networking adds battery and permission considerations on mobile"
+  ],
+  "useCases": [
+    "In-flight crew and cabin apps",
+    "Restaurant and retail point-of-sale that must work offline",
+    "Defence and field operations on disconnected networks",
+    "Replacing Realm Device Sync"
+  ],
+  "notIdealFor": [
+    "Always-online web apps",
+    "Analytics workloads",
+    "Budget-constrained hobby projects"
+  ],
+  "notableUsers": [
+    "Alaska Airlines",
+    "Chick-fil-A",
+    "Japan Airlines"
+  ],
+  "alternatives": [
+    "couchbase-lite",
+    "realm",
+    "objectbox",
+    "powersync",
+    "electricsql"
+  ],
+  "tags": [
+    "p2p",
+    "mesh",
+    "offline-first",
+    "crdt",
+    "edge",
+    "mobile"
+  ],
+  "links": {
+    "website": "https://www.ditto.com/",
+    "docs": "https://docs.ditto.live/",
+    "pricing": "https://www.ditto.com/pricing"
+  },
+  "ids": {
+    "npm": "@dittolive/ditto",
+    "hackerNewsQuery": "Ditto sync"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.ditto.com/",
+    "https://www.npmjs.com/package/@dittolive/ditto",
+    "https://github.com/realm/realm-js/discussions/6884"
+  ],
+  "lastVerified": "2026-10-27"
+}

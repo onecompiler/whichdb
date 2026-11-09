@@ -1,0 +1,148 @@
+{
+  "slug": "bojack",
+  "name": "BoJack",
+  "aliases": [],
+  "tagline": "Self-described 'unreliable' in-memory key-value server written in Crystal as a learning project; archived.",
+  "description": "BoJack is a small in-memory key-value server written in Crystal by Marcelo Boeira, born from his 2016 article 'Why you should build your own NoSQL Database'. It runs a TCP server (port 5000 by default) with a text command protocol and an interactive console supporting set, get, delete, increment and ping-style commands, and it deliberately calls itself 'the unreliable key-value store': there is no clustering, security layer or durable persistence. Releases stopped at v0.1.1 in August 2016, the last commit was in January 2018 and the repository is now archived. It is a readable example of a network server in Crystal, not a database to deploy.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Learning project; repository archived, last release v0.1.1 (Aug 2016) and last commit January 2018.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Marcelo Boeira",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "0.1.1",
+    "date": "2016-08-29"
+  },
+  "writtenIn": [
+    "Crystal"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Text command protocol"
+  ],
+  "apis": [
+    "TCP text protocol",
+    "Interactive console"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very small, readable Crystal codebase for learning server design",
+    "MIT licence"
+  ],
+  "weaknesses": [
+    "No persistence, clustering or security by design",
+    "Archived and pinned to an old Crystal version"
+  ],
+  "useCases": [
+    "Learning how to build a networked key-value store",
+    "Crystal language examples"
+  ],
+  "notIdealFor": [
+    "Any real caching or storage workload"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "memcached",
+    "dragonfly"
+  ],
+  "tags": [
+    "key-value",
+    "crystal",
+    "educational",
+    "archived"
+  ],
+  "links": {
+    "website": "https://github.com/marceloboeira/bojack",
+    "repository": "https://github.com/marceloboeira/bojack"
+  },
+  "ids": {
+    "github": "marceloboeira/bojack"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/marceloboeira/bojack",
+    "https://medium.com/@marceloboeira/why-you-should-build-your-own-nosql-database-9bbba42039f5"
+  ],
+  "lastVerified": "2026-10-27"
+}

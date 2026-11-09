@@ -1,0 +1,180 @@
+{
+  "slug": "rxdb",
+  "name": "RxDB",
+  "aliases": [
+    "Reactive Database"
+  ],
+  "tagline": "Reactive local-first NoSQL database for JavaScript with pluggable storage and replication.",
+  "description": "RxDB is a TypeScript document database that runs in browsers, React Native, Electron, Capacitor and Node, with every query exposed as an observable so UIs update automatically. Storage is pluggable (IndexedDB, OPFS, SQLite, memory and more) and replication plugins sync with CouchDB, GraphQL, HTTP endpoints, Firestore, Supabase, NATS or WebRTC peers. It is one of the most actively maintained JavaScript local-first options. The catch is that the fastest storage engines and some plugins are paid premium add-ons, and its JSON-schema document model is not a fit for relational queries.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "local-first",
+    "mobile-offline",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Daniel Meyer (pubkey)",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "17.6.0",
+    "date": "2026-10-05"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (core); commercial premium plugins",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Core is free; premium plugins (OPFS, SQLite, sharding and other storages) need a paid license."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "ios",
+      "android",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Client-side store; practical sizes are bounded by device storage and chosen backend."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Mango query syntax"
+  ],
+  "apis": [
+    "JavaScript/TypeScript API",
+    "RxJS observables"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Every query is an observable, so UI state stays in sync with stored data",
+    "Swappable storage engines from IndexedDB to OPFS and SQLite",
+    "Replication plugins for many backends, including peer-to-peer WebRTC",
+    "Field-level encryption and key compression plugins",
+    "Very active development with frequent releases"
+  ],
+  "weaknesses": [
+    "Best-performing storages and some features are paid",
+    "No joins; relational data must be denormalised or stitched in code",
+    "Large plugin surface makes configuration and bundle size easy to get wrong"
+  ],
+  "useCases": [
+    "Offline-first progressive web apps",
+    "React Native and Capacitor apps with background sync",
+    "Electron apps needing local reactive storage",
+    "Multi-tab browser apps sharing one database"
+  ],
+  "notIdealFor": [
+    "Relational data models with heavy joins",
+    "Server-side primary databases",
+    "Projects that cannot use paid plugins but need top performance"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pouchdb",
+    "dexie",
+    "watermelondb",
+    "tinybase",
+    "powersync",
+    "electricsql"
+  ],
+  "tags": [
+    "javascript",
+    "typescript",
+    "reactive",
+    "local-first",
+    "browser",
+    "offline-first"
+  ],
+  "links": {
+    "website": "https://rxdb.info/",
+    "docs": "https://rxdb.info/quickstart.html",
+    "repository": "https://github.com/pubkey/rxdb",
+    "pricing": "https://rxdb.info/premium/",
+    "changelog": "https://github.com/pubkey/rxdb/releases"
+  },
+  "ids": {
+    "github": "pubkey/rxdb",
+    "stackoverflowTag": "rxdb",
+    "npm": "rxdb",
+    "hackerNewsQuery": "RxDB"
+  },
+  "brand": {
+    "color": "#8D1F89",
+    "simpleIcon": "rxdb"
+  },
+  "sources": [
+    "https://github.com/pubkey/rxdb/releases",
+    "https://www.npmjs.com/package/rxdb",
+    "https://rxdb.info/"
+  ],
+  "lastVerified": "2026-10-27"
+}

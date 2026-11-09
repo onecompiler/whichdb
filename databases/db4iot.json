@@ -1,0 +1,147 @@
+{
+  "slug": "db4iot",
+  "name": "DB4IoT",
+  "aliases": [
+    "DB4IoT Mobility Analytics Platform"
+  ],
+  "tagline": "Moonshadow Mobile's hosted geospatial time-series engine for connected-vehicle analytics; offline since 2025.",
+  "description": "DB4IoT was a cloud-hosted database engine and analytics platform from Moonshadow Mobile in Oregon, built for the 'internet of moving things': billions of timestamped location points from connected vehicles, transit fleets and phones. It stored this data in a compact columnar format and served interactive, map-based queries, letting transportation planners draw polygons, build origin-destination matrices, trace routes through ordered pass-through filters and compare corridors in seconds, with packaged offerings on INRIX Trips and Wejo connected-vehicle data. By 2021 it was marketed mainly as a mobility analytics product rather than a general database. The db4iot.com site went offline in 2025, and Moonshadow now promotes engineering services and its Ephemeris datastore technology instead.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "db4iot.com went offline in 2025 and Moonshadow Mobile no longer markets the product; it now offers engineering services and its Ephemeris datastore.",
+  "maturity": "legacy",
+  "primaryModel": "spatial",
+  "models": [
+    "spatial",
+    "time-series"
+  ],
+  "workloads": [
+    "geospatial",
+    "iot",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Moonshadow Mobile",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary service"
+  },
+  "pricing": {
+    "models": [
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "No longer offered."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Hosted service handling large connected-vehicle trip datasets; architecture details were not published."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "REST API",
+    "Map-based query UI"
+  ],
+  "apis": [
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Interactive origin-destination and route analysis over very large trip datasets",
+    "Compact columnar storage tuned for location time series",
+    "Packaged integrations with INRIX Trips and Wejo connected-vehicle data"
+  ],
+  "weaknesses": [
+    "No longer offered; the product site is offline",
+    "Proprietary hosted service with no self-managed option"
+  ],
+  "useCases": [
+    "Historical reference for mobility analytics platforms",
+    "Understanding legacy transportation-planning workflows built on it"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgis",
+    "kinetica",
+    "heavydb",
+    "clickhouse",
+    "tile38"
+  ],
+  "tags": [
+    "geospatial",
+    "iot",
+    "mobility",
+    "time-series",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20230119/http://db4iot.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "DB4IoT"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20230119/http://db4iot.com/",
+    "https://moonshadowmobile.com/products/ephemeris-database-technology/",
+    "https://dbdb.io/db/db4iot"
+  ],
+  "lastVerified": "2026-10-27"
+}

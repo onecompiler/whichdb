@@ -1,0 +1,146 @@
+{
+  "slug": "angstromdb",
+  "name": "AngstromDB",
+  "aliases": [
+    "ÅngströmDB"
+  ],
+  "tagline": "Tiny teaching key-value server in C built on LMDB and nanomsg, written as a 2013 conference talk demo.",
+  "description": "AngstromDB is a deliberately minimal key-value server written in C by Amaury Bouchard in September 2013 as live example code for a talk. It stores data in LMDB, uses nanomsg sockets and a pool of worker threads, and speaks a tiny binary protocol with PUT, GET and DELETE commands, with a PHP command-line client. The author states it is for education only: there is no error handling, no replication and several naive code paths, and he pointed users to his separate FineDB project for real use. The repository has nine commits and has not changed since 2013, which makes it a compact read for anyone learning how a networked key-value store is put together.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Educational demo from 2013 with no changes since; the author marks it as not for real use.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Amaury Bouchard",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "LMDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Binary PUT/GET/DELETE protocol"
+  ],
+  "apis": [
+    "Custom binary TCP protocol",
+    "PHP CLI client"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very small codebase that shows LMDB, nanomsg and a thread pool wired into a server",
+    "Permissive Apache 2.0 license for reuse in teaching material"
+  ],
+  "weaknesses": [
+    "No error handling, replication or security by design",
+    "Unmaintained since 2013",
+    "Custom protocol with no client libraries beyond a PHP demo"
+  ],
+  "useCases": [
+    "Learning how to build a networked key-value store",
+    "Teaching examples for LMDB and nanomsg"
+  ],
+  "notIdealFor": [
+    "Any production use, per the author"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "redis",
+    "rocksdb",
+    "valkey"
+  ],
+  "tags": [
+    "key-value",
+    "educational",
+    "lmdb",
+    "c"
+  ],
+  "links": {
+    "website": "https://github.com/Amaury/AngstromDB",
+    "repository": "https://github.com/Amaury/AngstromDB"
+  },
+  "ids": {
+    "github": "Amaury/AngstromDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Amaury/AngstromDB",
+    "https://github.com/Amaury/AngstromDB/commits/master"
+  ],
+  "lastVerified": "2026-10-27"
+}

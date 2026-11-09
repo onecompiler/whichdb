@@ -1,0 +1,211 @@
+{
+  "slug": "arangodb",
+  "name": "ArangoDB",
+  "aliases": [
+    "Arango",
+    "ArangoGraph"
+  ],
+  "tagline": "Native multi-model database: documents, graphs, search and vectors behind one query language.",
+  "description": "ArangoDB stores JSON documents and lets you treat collections as graph vertices and edges, so document queries, joins, graph traversals and full-text search (ArangoSearch) share one query language, AQL. It runs as a single server or as a sharded cluster with SmartGraphs for locality. Recent 3.12 releases added a vector index aimed at GraphRAG. The company now markets itself as Arango (arango.ai). Since 3.12 the source is BSL 1.1, and the free Community binaries carry a 100 GiB production dataset limit and a ban on commercial production use, which changes the calculus for many teams. ArangoDB 4.0 is still in development.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "document",
+    "key-value",
+    "search",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "knowledge-graph",
+    "oltp",
+    "full-text-search",
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Arango (ArangoDB Inc.)",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "3.12.12.1",
+    "date": "2026-09-29"
+  },
+  "writtenIn": [
+    "C++",
+    "JavaScript"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1; ArangoDB Community License for binaries",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community binaries are free for non-commercial production up to 100 GiB; Enterprise subscriptions and the Arango Managed Platform (ex-ArangoGraph) for everything else."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Arango Managed Platform (ArangoGraph)",
+      "provider": "Arango",
+      "url": "https://arango.ai/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Cluster mode shards collections across DB-Servers; SmartGraphs and OneShard reduce network hops. Cross-datacenter replication was dropped in 3.12."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "AQL"
+  ],
+  "apis": [
+    "HTTP/JSON REST",
+    "Foxx microservices"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Java",
+    "Go",
+    "Python",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One query language (AQL) for documents, joins, graph traversals and search",
+    "ArangoSearch provides ranked full-text and hybrid search without Elasticsearch",
+    "Graphs are just document collections, so no separate graph store to sync",
+    "SmartGraphs and OneShard deployments for low-latency clustered graph queries",
+    "Kubernetes operator and managed cloud offering"
+  ],
+  "weaknesses": [
+    "BSL plus the Community License's 100 GiB / non-commercial limits make the free edition unsuitable for most businesses",
+    "Cluster transactions are not fully ACID across shards",
+    "Smaller ecosystem than Neo4j for graphs or MongoDB for documents",
+    "No built-in cross-region replication in current releases"
+  ],
+  "useCases": [
+    "Knowledge graphs and GraphRAG pipelines",
+    "Fraud and network analysis mixed with document data",
+    "Recommendation engines",
+    "Identity and access graphs"
+  ],
+  "notIdealFor": [
+    "Startups wanting a free production database over 100 GiB",
+    "Pure key-value caching",
+    "Heavy OLAP"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "surrealdb",
+    "orientdb",
+    "arcadedb",
+    "mongodb",
+    "azure-cosmos-db",
+    "memgraph"
+  ],
+  "tags": [
+    "multi-model",
+    "graph",
+    "document",
+    "aql",
+    "bsl",
+    "graphrag"
+  ],
+  "links": {
+    "website": "https://arango.ai/",
+    "docs": "https://docs.arango.ai/",
+    "repository": "https://github.com/arangodb/arangodb",
+    "changelog": "https://docs.arango.ai/arangodb/3.12/release-notes/",
+    "wikipedia": "https://en.wikipedia.org/wiki/ArangoDB"
+  },
+  "ids": {
+    "github": "arangodb/arangodb",
+    "stackoverflowTag": "arangodb",
+    "wikipedia": "ArangoDB",
+    "dockerHub": "library/arangodb",
+    "npm": "arangojs",
+    "pypi": "python-arango",
+    "hackerNewsQuery": "ArangoDB"
+  },
+  "brand": {
+    "color": "#DDDF72",
+    "simpleIcon": "arangodb"
+  },
+  "sources": [
+    "https://github.com/arangodb/arangodb/blob/devel/LICENSE",
+    "https://docs.arango.ai/arangodb/3.12/release-notes/version-3.12/incompatible-changes-in-3-12/",
+    "https://docs.arango.ai/arangodb/4.0/release-notes/",
+    "https://en.wikipedia.org/wiki/ArangoDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

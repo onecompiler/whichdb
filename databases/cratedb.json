@@ -1,0 +1,209 @@
+{
+  "slug": "cratedb",
+  "name": "CrateDB",
+  "aliases": [
+    "Crate"
+  ],
+  "tagline": "Distributed SQL database built on Lucene for real-time analytics over machine, IoT and JSON data.",
+  "description": "CrateDB is a distributed SQL engine that reuses Lucene and Elasticsearch-derived clustering, so every column is indexed by default and tables shard and replicate automatically. It speaks the PostgreSQL wire protocol, handles nested objects and arrays natively, and adds full-text, geospatial and vector search, which suits industrial IoT, fleet telemetry and log-like data that needs ad-hoc aggregation. Crate.io sells CrateDB Cloud and enterprise support, while the database itself is Apache-2.0. It is not a transactional database: there are no multi-statement transactions, and new writes become visible to queries after a refresh interval.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "time-series",
+    "search",
+    "spatial",
+    "vector"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "iot",
+    "time-series",
+    "full-text-search",
+    "vector-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Crate.io",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "6.4.6",
+    "date": "2026-10-08"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Lucene",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosting is free; CrateDB Cloud has a free single-node tier and usage-based dedicated clusters."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "CrateDB Cloud",
+      "provider": "Crate.io",
+      "url": "https://cratedb.com/product/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Automatic sharding and replication; logical replication can copy tables to clusters in other regions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "HTTP endpoint"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "PHP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Standard SQL over nested JSON with every column indexed automatically",
+    "Full-text, geospatial and vector search in the same SQL query",
+    "Shards and rebalances automatically as nodes are added",
+    "PostgreSQL wire protocol works with common drivers and BI tools",
+    "Apache-2.0 licence for the full database"
+  ],
+  "weaknesses": [
+    "No multi-statement transactions; writes are visible after refresh",
+    "JVM heap and Lucene segment tuning needed at scale",
+    "Postgres compatibility is partial: many Postgres functions and extensions are missing",
+    "Smaller community than Elasticsearch or ClickHouse"
+  ],
+  "useCases": [
+    "Industrial IoT and machine data analytics",
+    "Fleet and vehicle telemetry",
+    "Log and event analytics with SQL",
+    "Hybrid search over JSON documents",
+    "Real-time dashboards on high-ingest data"
+  ],
+  "notIdealFor": [
+    "OLTP needing transactions",
+    "Strict read-after-write workflows",
+    "Small single-node apps"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "elasticsearch",
+    "clickhouse",
+    "timescaledb",
+    "questdb",
+    "apache-druid",
+    "opensearch",
+    "singlestore"
+  ],
+  "tags": [
+    "sql",
+    "distributed",
+    "lucene",
+    "iot",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://cratedb.com/",
+    "docs": "https://cratedb.com/docs/",
+    "repository": "https://github.com/crate/crate",
+    "pricing": "https://cratedb.com/pricing",
+    "changelog": "https://cratedb.com/docs/crate/reference/en/latest/appendices/release-notes/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/CrateDB"
+  },
+  "ids": {
+    "github": "crate/crate",
+    "stackoverflowTag": "cratedb",
+    "wikipedia": "CrateDB",
+    "dockerHub": "library/crate",
+    "pypi": "crate",
+    "hackerNewsQuery": "CrateDB"
+  },
+  "brand": {
+    "color": "#009DC7",
+    "simpleIcon": "cratedb"
+  },
+  "sources": [
+    "https://github.com/crate/crate/releases",
+    "https://cratedb.com/",
+    "https://hub.docker.com/_/crate"
+  ],
+  "lastVerified": "2026-10-27"
+}

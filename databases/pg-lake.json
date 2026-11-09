@@ -1,0 +1,177 @@
+{
+  "slug": "pg-lake",
+  "name": "pg_lake",
+  "aliases": [
+    "pg_lake extensions",
+    "Crunchy Data Warehouse"
+  ],
+  "tagline": "Postgres extensions from Snowflake that read and write Iceberg tables and lake files, executed via DuckDB.",
+  "description": "pg_lake is a set of PostgreSQL extensions, open-sourced by Snowflake in November 2025 from the Crunchy Data Warehouse it acquired, that turns Postgres into a small lakehouse. You can create transactional Iceberg tables with CREATE TABLE ... USING iceberg, query Parquet, CSV, JSON and GDAL geospatial files on S3 as foreign tables, and COPY results back to object storage, mixing heap and lake tables in one transaction. Heavy scans are delegated to a companion pgduck_server process running DuckDB. It is a practical way to give Postgres-centric teams Iceberg access; it is young and adds an extra server process to operate.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "spatial"
+  ],
+  "workloads": [
+    "lakehouse",
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Snowflake (Snowflake Labs)",
+  "vendorType": "company",
+  "initialRelease": 2025,
+  "latestVersion": {
+    "version": "3.5.9",
+    "date": "2026-10-25"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "PostgreSQL + DuckDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; Snowflake also offers managed Postgres services."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "One Postgres server plus pgduck_server; data volume limited mainly by object storage and one machine's compute."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Transactional Iceberg tables created and modified with plain Postgres SQL",
+    "Query and COPY Parquet, CSV, JSON and geospatial files on S3",
+    "DuckDB-powered execution for fast analytical scans",
+    "Mix heap and Iceberg tables in one transaction",
+    "Apache-2.0 and backed by Snowflake"
+  ],
+  "weaknesses": [
+    "Young project with a short track record",
+    "Requires running and securing the extra pgduck_server process",
+    "Single-node compute; not a distributed warehouse"
+  ],
+  "useCases": [
+    "Giving Postgres apps access to an Iceberg lake",
+    "Exporting Postgres data to Parquet/Iceberg",
+    "Small lakehouse on Postgres",
+    "Querying raw files in S3 from SQL"
+  ],
+  "notIdealFor": [
+    "Multi-terabyte distributed analytics",
+    "Managed services that disallow custom extensions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pg-duckdb",
+    "pg-mooncake",
+    "duckdb",
+    "trino",
+    "hydra-columnar"
+  ],
+  "tags": [
+    "postgres-extension",
+    "iceberg",
+    "lakehouse",
+    "duckdb"
+  ],
+  "links": {
+    "website": "https://snowflake-labs.github.io/pg_lake/",
+    "docs": "https://snowflake-labs.github.io/pg_lake/",
+    "repository": "https://github.com/Snowflake-Labs/pg_lake",
+    "changelog": "https://github.com/Snowflake-Labs/pg_lake/releases"
+  },
+  "ids": {
+    "github": "Snowflake-Labs/pg_lake",
+    "hackerNewsQuery": "pg_lake"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Snowflake-Labs/pg_lake",
+    "https://github.com/Snowflake-Labs/pg_lake/releases",
+    "https://snowflake-labs.github.io/pg_lake/"
+  ],
+  "lastVerified": "2026-10-27"
+}

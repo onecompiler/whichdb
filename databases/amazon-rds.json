@@ -1,0 +1,122 @@
+{
+  "slug": "amazon-rds",
+  "name": "Amazon RDS",
+  "aliases": ["RDS", "Amazon Relational Database Service"],
+  "tagline": "AWS's managed service for six relational engines: PostgreSQL, MySQL, MariaDB, Oracle, SQL Server and Db2.",
+  "description": "Amazon RDS is AWS's long-running managed service for standard relational engines: PostgreSQL, MySQL, MariaDB, Oracle, SQL Server and IBM Db2. AWS handles provisioning, patching, automated backups with point-in-time restore, Multi-AZ failover (including the two-readable-standby cluster option) and read replicas, while you keep the stock engine behavior and choose instance and storage types. RDS Custom allows OS-level access for Oracle and SQL Server, and RDS Proxy pools connections. It is the safe default when you want a familiar engine on AWS without Aurora's proprietary storage layer or pricing, though you get vertical scaling only and must plan major-version upgrades.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "spatial"],
+  "workloads": ["oltp", "content-management", "metadata-store", "geospatial"],
+  "architecture": ["primary-replica", "client-server"],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2009,
+  "writtenIn": ["C", "C++"],
+  "license": { "type": "proprietary", "name": "Proprietary (AWS service; engine licenses vary)" },
+  "pricing": {
+    "models": ["usage-based", "subscription"],
+    "freeTier": true,
+    "notes": "Per instance-hour plus storage and I/O; Reserved Instances for discounts; Oracle/SQL Server/Db2 license-included or BYOL. AWS Free Tier covers small instances or credits for new accounts."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Amazon RDS", "provider": "AWS", "url": "https://aws.amazon.com/rds/" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Vertical scaling up to 64 TiB storage per instance; up to 15 read replicas (engine-dependent), including cross-region."
+  },
+  "consistency": { "acid": "full", "models": ["strong", "eventual"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL", "T-SQL", "PL/SQL"],
+  "apis": ["PostgreSQL wire protocol", "MySQL wire protocol", "TDS", "Oracle Net", "DRDA"],
+  "compatibleWith": ["postgresql", "mysql", "oracle", "sql-server"],
+  "drivers": ["Java", "Python", "JavaScript", "Go", "C#", "PHP", "Ruby"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stock engines with predictable behavior and easy migration in or out",
+    "Six engines, including licensed Oracle, SQL Server and Db2",
+    "Automated backups, point-in-time restore and Multi-AZ failover",
+    "Blue/green deployments for safer upgrades",
+    "RDS Proxy for connection pooling from Lambda and microservices"
+  ],
+  "weaknesses": [
+    "Vertical scaling only; no built-in write sharding",
+    "Failover is slower than Aurora's shared-storage design",
+    "Storage and IOPS tuning (gp3/io2) adds operational decisions",
+    "AWS-only and no superuser access to the instance"
+  ],
+  "useCases": [
+    "Lift-and-shift of existing PostgreSQL, MySQL or Oracle apps to AWS",
+    "Standard web and line-of-business application backends",
+    "Licensed commercial databases without managing servers",
+    "Cost-sensitive workloads where Aurora is overkill"
+  ],
+  "notIdealFor": [
+    "Horizontal write scaling",
+    "Multi-cloud or on-premises deployments",
+    "Workloads needing scale-to-zero"
+  ],
+  "notableUsers": [],
+  "alternatives": ["amazon-aurora", "google-cloud-sql", "azure-database-for-postgresql", "azure-sql-database", "postgresql", "mysql"],
+  "tags": ["aws", "managed", "postgres", "mysql", "oracle"],
+  "links": {
+    "website": "https://aws.amazon.com/rds/",
+    "docs": "https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/",
+    "pricing": "https://aws.amazon.com/rds/pricing/",
+    "changelog": "https://aws.amazon.com/rds/whats-new/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_Relational_Database_Service"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-rds",
+    "wikipedia": "Amazon Relational Database Service",
+    "hackerNewsQuery": "Amazon RDS"
+  },
+  "brand": { "color": "#527FFF" },
+  "sources": [
+    "https://aws.amazon.com/rds/",
+    "https://aws.amazon.com/rds/pricing/",
+    "https://en.wikipedia.org/wiki/Amazon_Relational_Database_Service"
+  ],
+  "lastVerified": "2026-10-27"
+}

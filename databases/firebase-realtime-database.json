@@ -1,0 +1,186 @@
+{
+  "slug": "firebase-realtime-database",
+  "name": "Firebase Realtime Database",
+  "aliases": [
+    "RTDB",
+    "Firebase RTDB"
+  ],
+  "tagline": "Firebase's original JSON-tree database that syncs every change to connected clients in milliseconds.",
+  "description": "Firebase Realtime Database is a cloud-hosted JSON tree that pushes changes to every subscribed client over a persistent connection. The Firebase SDKs handle offline writes and reconnection, and Security Rules control access. It predates Firestore and still wins on raw sync latency, simplicity and pricing for small, chatty payloads such as presence, typing indicators or live game state. Its limits are real, though: each database is one regional instance with caps on concurrent connections and writes, queries filter on one key at a time, and Google labels Firestore as the preferred choice for new apps. It remains fully supported and is still updated in the Firebase SDKs.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "pub-sub",
+    "session-store",
+    "oltp"
+  ],
+  "architecture": [
+    "serverless",
+    "single-node"
+  ],
+  "developer": "Google (Firebase)",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary Firebase service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "startingPrice": "Spark plan: 1 GB stored, 10 GB/month downloaded, 100 connections",
+    "notes": "Blaze plan bills per GB stored and downloaded; multiple database instances per project require Blaze."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Firebase Realtime Database",
+      "provider": "Google Firebase",
+      "url": "https://firebase.google.com/products/realtime-database"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Each instance tops out around 200k concurrent connections and ~1k writes/s; scale by sharding data across multiple instances yourself."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Firebase query API (orderBy/equalTo/limit)"
+  ],
+  "apis": [
+    "Firebase client SDKs (WebSocket)",
+    "REST",
+    "Server-Sent Events streaming"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Swift",
+    "Kotlin",
+    "Java",
+    "C++",
+    "Dart",
+    "Python",
+    "Go",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Lowest-latency client sync in the Firebase family",
+    "Bandwidth-and-storage billing is cheap for many small writes",
+    "Offline writes and automatic reconnection in every SDK",
+    "Presence detection via onDisconnect handlers",
+    "Very little to learn: it's a JSON tree with listeners"
+  ],
+  "weaknesses": [
+    "Queries can sort or filter on only one child key at a time",
+    "A single instance has hard connection and write-throughput limits",
+    "Deep JSON trees push you into denormalisation and fan-out writes",
+    "Single-region, with no multi-region replication"
+  ],
+  "useCases": [
+    "Presence, typing indicators and live cursors",
+    "Multiplayer game state and lobbies",
+    "Small realtime dashboards and chat"
+  ],
+  "notIdealFor": [
+    "Complex queries or reporting",
+    "Large datasets with many access patterns (use Firestore)",
+    "Apps needing multi-region availability"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "google-cloud-firestore",
+    "supabase",
+    "convex",
+    "pocketbase",
+    "instantdb",
+    "firebase"
+  ],
+  "tags": [
+    "firebase",
+    "realtime",
+    "mobile",
+    "serverless",
+    "json"
+  ],
+  "links": {
+    "website": "https://firebase.google.com/products/realtime-database",
+    "docs": "https://firebase.google.com/docs/database",
+    "pricing": "https://firebase.google.com/pricing",
+    "changelog": "https://firebase.google.com/support/release-notes/js"
+  },
+  "ids": {
+    "stackoverflowTag": "firebase-realtime-database",
+    "npm": "@firebase/database",
+    "hackerNewsQuery": "Firebase Realtime Database"
+  },
+  "brand": {
+    "color": "#FFCA28",
+    "simpleIcon": "firebase"
+  },
+  "sources": [
+    "https://firebase.google.com/docs/database",
+    "https://firebase.google.com/docs/database/usage/limits",
+    "https://firebase.google.com/support/release-notes/js"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,217 @@
+{
+  "slug": "neo4j",
+  "name": "Neo4j",
+  "aliases": [
+    "Neo4j Graph Database",
+    "Neo4j AuraDB"
+  ],
+  "tagline": "The default property-graph database, with Cypher, a big ecosystem and a managed cloud.",
+  "description": "Neo4j is the most widely deployed native property-graph database and the place where Cypher was born. It stores nodes and relationships with index-free adjacency, so multi-hop traversals stay fast as data grows, and it ships vector indexes, full-text search and a large graph-algorithms library (GDS). Since 2025 it has used calendar versioning (2026.x), with 5.26 kept as the long-term-support line, and Cypher 25 now covers most mandatory features of the ISO GQL standard. It is the safe, well-documented choice for most graph projects, though advanced clustering, security and hot backups sit in the commercial Enterprise edition and AuraDB.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "knowledge-graph",
+    "rag",
+    "vector-search",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Neo4j, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2007,
+  "latestVersion": {
+    "version": "2026.10.1",
+    "date": "2026-10"
+  },
+  "writtenIn": [
+    "Java",
+    "Scala"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-3.0 (Community) / commercial (Enterprise)",
+    "spdx": "GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free under GPLv3. AuraDB has a free instance plus usage-based Professional and Business Critical tiers; Enterprise is sold by contract."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Neo4j AuraDB",
+      "provider": "Neo4j",
+      "url": "https://neo4j.com/product/auradb/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Primaries replicate full copies via Raft; secondaries scale reads. Sharding a single graph needs Enterprise features (composite databases / Infinigraph)."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "causal"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Cypher",
+    "GQL"
+  ],
+  "apis": [
+    "Bolt protocol",
+    "HTTP API",
+    "GraphQL (Neo4j GraphQL Library)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "JavaScript",
+    "Python",
+    "Go",
+    ".NET",
+    "Rust (community)"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Cypher is the most widely known graph query language and now tracks ISO GQL closely",
+    "Index-free adjacency keeps deep traversals fast regardless of total graph size",
+    "Graph Data Science library ships 65+ production algorithms (PageRank, Louvain, node embeddings)",
+    "Native vector indexes make it a common GraphRAG backend alongside LLM frameworks",
+    "Largest graph ecosystem: Bloom, APOC, Kafka connector, drivers, training and talent pool"
+  ],
+  "weaknesses": [
+    "Clustering, RBAC, online backup and hot standby require the paid Enterprise edition",
+    "Every primary holds the full graph, so write throughput and size are bound by one machine",
+    "Bulk-loading and large analytical scans are slower than columnar or MPP graph engines",
+    "JVM memory tuning (heap vs page cache) matters a lot for stable latency"
+  ],
+  "useCases": [
+    "Fraud rings and entity resolution",
+    "Real-time recommendations",
+    "Knowledge graphs for GraphRAG",
+    "Network and IT dependency mapping",
+    "Identity and access graphs",
+    "Master data management"
+  ],
+  "notIdealFor": [
+    "Simple key-value or tabular CRUD",
+    "Petabyte-scale graph analytics on a single graph",
+    "Heavy aggregation reporting better suited to a warehouse"
+  ],
+  "notableUsers": [
+    "NASA",
+    "eBay",
+    "Walmart",
+    "Adobe"
+  ],
+  "alternatives": [
+    "memgraph",
+    "amazon-neptune",
+    "tigergraph",
+    "falkordb",
+    "arangodb",
+    "nebulagraph"
+  ],
+  "tags": [
+    "cypher",
+    "gql",
+    "property-graph",
+    "graphrag",
+    "graph-algorithms"
+  ],
+  "links": {
+    "website": "https://neo4j.com/",
+    "docs": "https://neo4j.com/docs/",
+    "repository": "https://github.com/neo4j/neo4j",
+    "pricing": "https://neo4j.com/pricing/",
+    "changelog": "https://github.com/neo4j/neo4j/wiki/Changelog",
+    "wikipedia": "https://en.wikipedia.org/wiki/Neo4j"
+  },
+  "ids": {
+    "github": "neo4j/neo4j",
+    "stackoverflowTag": "neo4j",
+    "wikipedia": "Neo4j",
+    "dockerHub": "library/neo4j",
+    "npm": "neo4j-driver",
+    "pypi": "neo4j",
+    "crates": "neo4rs",
+    "hackerNewsQuery": "Neo4j"
+  },
+  "brand": {
+    "color": "#4581C3",
+    "simpleIcon": "neo4j"
+  },
+  "sources": [
+    "https://github.com/neo4j/neo4j",
+    "https://hub.docker.com/_/neo4j",
+    "https://neo4j.com/docs/cypher-manual/current/appendix/gql-conformance/",
+    "https://neo4j.com/pricing/"
+  ],
+  "lastVerified": "2026-10-27"
+}

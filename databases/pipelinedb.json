@@ -1,0 +1,167 @@
+{
+  "slug": "pipelinedb",
+  "name": "PipelineDB",
+  "aliases": [],
+  "tagline": "PostgreSQL extension for continuous SQL aggregation over streams; frozen since its team joined Confluent.",
+  "description": "PipelineDB is a PostgreSQL extension (a full fork of PostgreSQL before its 1.0 release) for continuous time-series aggregation. You define continuous views in SQL over streams; incoming rows are aggregated incrementally and only the aggregate results are stored in ordinary tables, so raw events never hit disk, and continuous transforms and output streams let you chain queries. Built-in probabilistic structures such as HyperLogLog, Bloom filters, Count-Min sketches and t-digests give cheap approximate distinct counts, membership tests and percentiles. The PipelineDB team joined Confluent in May 2019, the README states there will be no releases beyond 1.0.0, and the last build targets PostgreSQL 10 and 11. For new work, TimescaleDB continuous aggregates, Materialize or RisingWave cover the same ground.",
+  "productType": "extension",
+  "status": "discontinued",
+  "statusNote": "Team joined Confluent in May 2019; no releases beyond 1.0.0 and support only for PostgreSQL 10–11. Use TimescaleDB, Materialize or RisingWave.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "time-series"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "PipelineDB, Inc. (team joined Confluent)",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "1.0.0-13",
+    "date": "2019-02-19"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Storage stays small because only aggregates are persisted; ingest is bounded by a single PostgreSQL node."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Continuous aggregation in plain SQL inside PostgreSQL",
+    "Stores only aggregates, keeping disk use tiny for high-volume streams",
+    "Built-in probabilistic types (HyperLogLog, Bloom filters, t-digest) for cheap approximations"
+  ],
+  "weaknesses": [
+    "Frozen since 2019 and limited to PostgreSQL 10 and 11",
+    "Raw events are not retained unless you store them separately",
+    "Single-node only"
+  ],
+  "useCases": [
+    "Maintaining existing real-time dashboards built on it",
+    "Studying incremental view maintenance in PostgreSQL"
+  ],
+  "notIdealFor": [
+    "New projects on current PostgreSQL versions",
+    "Workloads that need raw event history"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "timescaledb",
+    "materialize",
+    "risingwave",
+    "ksqldb",
+    "pg-ivm"
+  ],
+  "tags": [
+    "streaming",
+    "continuous-queries",
+    "postgres-extension",
+    "time-series",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/pipelinedb/pipelinedb",
+    "repository": "https://github.com/pipelinedb/pipelinedb"
+  },
+  "ids": {
+    "github": "pipelinedb/pipelinedb",
+    "hackerNewsQuery": "PipelineDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/pipelinedb/pipelinedb",
+    "https://www.confluent.io/blog/pipelinedb-team-joins-confluent",
+    "https://dbdb.io/db/pipelinedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

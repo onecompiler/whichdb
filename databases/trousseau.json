@@ -1,0 +1,154 @@
+{
+  "slug": "trousseau",
+  "name": "Trousseau",
+  "aliases": [
+    "oleiade/trousseau"
+  ],
+  "tagline": "Single-file encrypted key-value store for secrets, with GPG or AES-256 and S3/SSH/gist sync.",
+  "description": "Trousseau is a Go command-line tool and library that keeps key-value pairs in one encrypted file. Data is encrypted either for a set of OpenPGP recipients or symmetrically with AES-256, so a store can be committed to git, synced over Dropbox or pushed to and pulled from S3, SSH hosts or GitHub gists and only decrypted by the intended people or servers. It was written by Théo Crevon around 2013 for sharing keys and certificates across clusters and teams. After years of quiet, a February 2026 v0.5.0 release fixed security issues in key derivation and SSH handling, but the project sees fixes rather than feature work.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Long dormant after v0.4.1 (2019); v0.5.0 (Feb 2026) delivered security and bug fixes only.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "configuration"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Théo Crevon (oleiade)",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "v0.5.0",
+    "date": "2026-02-08"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Meant for hundreds or thousands of secrets, not bulk data."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "CLI commands (get/set/del/keys)"
+  ],
+  "apis": [
+    "CLI",
+    "Go package"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Whole store is one encrypted file, safe to version in git or sync via cloud drives",
+    "OpenPGP mode restricts decryption to named recipients; AES-256 mode for shared passphrases",
+    "Built-in push/pull to S3, SSH and GitHub gists"
+  ],
+  "weaknesses": [
+    "Not a general database: no queries beyond key lookup, no concurrency control",
+    "Sparse maintenance history; dedicated secret managers move faster"
+  ],
+  "useCases": [
+    "Sharing certificates and keys across servers",
+    "Small team password and secrets store"
+  ],
+  "notIdealFor": [
+    "Application data storage",
+    "Large or frequently written datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlcipher",
+    "hashicorp-consul-kv",
+    "etcd"
+  ],
+  "tags": [
+    "secrets",
+    "encryption",
+    "go",
+    "cli",
+    "key-value"
+  ],
+  "links": {
+    "website": "https://github.com/oleiade/trousseau",
+    "repository": "https://github.com/oleiade/trousseau"
+  },
+  "ids": {
+    "github": "oleiade/trousseau"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/oleiade/trousseau",
+    "https://github.com/oleiade/trousseau/tags"
+  ],
+  "lastVerified": "2026-10-27"
+}

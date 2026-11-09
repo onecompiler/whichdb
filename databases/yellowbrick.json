@@ -1,0 +1,179 @@
+{
+  "slug": "yellowbrick",
+  "name": "Yellowbrick",
+  "aliases": [
+    "Yellowbrick Data"
+  ],
+  "tagline": "PostgreSQL-compatible MPP warehouse that runs on its appliance, any cloud or Kubernetes.",
+  "description": "Yellowbrick is an MPP SQL data warehouse with a PostgreSQL-compatible front end and a custom C++ columnar engine that bypasses the OS for flash and memory access. It originally shipped as a high-density appliance and now runs as a Kubernetes-based software stack in AWS, Azure, GCP or on-prem, with storage on object stores and independent compute clusters. It targets enterprises replacing Netezza, Teradata or Greenplum who want predictable performance and deployment choice. In early 2026 its founder left to start a separate lakehouse company, Floe, while Yellowbrick kept shipping releases.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "spatial",
+    "document"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Yellowbrick Data",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "7.4.1",
+    "date": "2026-01"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "PostgreSQL (front end)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Subscription licensing per compute capacity; appliance and cloud options."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Independent compute clusters over shared storage; asynchronous replication between instances."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (PostgreSQL dialect)",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "C",
+    "Go",
+    ".NET"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "PostgreSQL-compatible SQL and drivers ease migration",
+    "Same software on appliance, private cloud, AWS, Azure and GCP",
+    "High concurrency with workload management and isolated clusters",
+    "Popular migration target for Netezza and Teradata customers"
+  ],
+  "weaknesses": [
+    "Small vendor with leadership changes in 2026",
+    "Closed source with limited community resources",
+    "Fewer lakehouse and AI integrations than larger rivals"
+  ],
+  "useCases": [
+    "Netezza and Teradata replacement",
+    "Hybrid on-prem and cloud warehousing",
+    "Regulated industries needing private deployment"
+  ],
+  "notIdealFor": [
+    "Small teams wanting serverless SaaS",
+    "OLTP",
+    "Open-source requirements"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-netezza",
+    "teradata-vantage",
+    "greenplum",
+    "vertica",
+    "snowflake",
+    "amazon-redshift"
+  ],
+  "tags": [
+    "mpp",
+    "postgres-compatible",
+    "hybrid-cloud",
+    "kubernetes",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://yellowbrick.com/",
+    "docs": "https://docs.yellowbrick.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Yellowbrick_Data"
+  },
+  "ids": {
+    "wikipedia": "Yellowbrick Data",
+    "hackerNewsQuery": "Yellowbrick Data"
+  },
+  "brand": {},
+  "sources": [
+    "https://yellowbrick.com/blog/yellowbrick-product/yellowbrick-2026-product-momentum-customer-focus-and-whats-next/",
+    "https://en.wikipedia.org/wiki/Yellowbrick_Data"
+  ],
+  "lastVerified": "2026-10-27"
+}

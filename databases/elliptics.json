@@ -1,0 +1,107 @@
+{
+  "slug": "elliptics",
+  "name": "Elliptics",
+  "aliases": ["Elliptics network"],
+  "tagline": "Reverbrain's DHT object store for medium and large files across datacenters, once used across Yandex services.",
+  "description": "Elliptics is a distributed key-value object store created by Linux kernel developer Evgeniy Polyakov, first as part of the POHMELFS file system in 2007 and as a standalone project from 2008, later developed by his company Reverbrain. Keys hash into a distributed hash table within a group, and each group is a full replica that can live in a different datacenter, so reads survive the loss of whole sites without a central metadata server. It was built for objects from kilobytes to gigabytes, with the append-oriented Eblob on-disk backend, SLRU caching, streaming reads and writes, eventual recovery tools and server-side scripting. As of 2014 it backed Yandex Maps, Disk, Music and Photos. The last tagged release was in 2017 and the last commit in 2019, and reverbrain.com is offline.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last tag 2.26.11.1 (2017) and last commit 2019; Reverbrain's site is offline. Consider a maintained object store or Riak/Cassandra-class KV instead.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["content-management"],
+  "architecture": ["distributed", "multi-primary"],
+  "developer": "Reverbrain (Evgeniy Polyakov)",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "writtenIn": ["C++", "Python"],
+  "license": { "type": "copyleft", "name": "GNU LGPL v3", "spdx": "LGPL-3.0-only" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "DHT per replica group, groups placed in separate datacenters; designed for billions of objects."
+  },
+  "consistency": { "acid": "none", "models": ["eventual"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["Key/object API"],
+  "apis": ["C/C++ client API", "Python bindings", "HTTP proxy"],
+  "compatibleWith": [],
+  "drivers": ["C", "C++", "Python"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No central metadata server: placement is computed from the DHT ring",
+    "Replica groups in different datacenters keep serving when a site goes down",
+    "Eblob backend and streaming I/O suit objects from KB to multi-GB",
+    "Proven at Yandex scale for photos, music and disk storage"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2019 with no vendor behind it",
+    "Eventual consistency with manual or scheduled recovery passes",
+    "Documentation was always thin and much of it lived on the now-dead vendor site"
+  ],
+  "useCases": [
+    "Studying DHT-based multi-datacenter object storage",
+    "Running or migrating existing Elliptics clusters"
+  ],
+  "notIdealFor": ["New deployments", "Workloads that need strong consistency or transactions"],
+  "notableUsers": ["Yandex"],
+  "alternatives": ["riak-kv", "apache-cassandra", "scylladb", "aerospike"],
+  "tags": ["object-storage", "dht", "key-value", "multi-datacenter", "yandex"],
+  "links": {
+    "website": "https://github.com/reverbrain/elliptics",
+    "repository": "https://github.com/reverbrain/elliptics",
+    "wikipedia": "https://en.wikipedia.org/wiki/Elliptics"
+  },
+  "ids": {
+    "github": "reverbrain/elliptics",
+    "wikipedia": "Elliptics",
+    "hackerNewsQuery": "Elliptics"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/reverbrain/elliptics",
+    "https://en.wikipedia.org/wiki/Elliptics",
+    "https://dbdb.io/db/elliptics"
+  ],
+  "lastVerified": "2026-10-27"
+}

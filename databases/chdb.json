@@ -1,0 +1,178 @@
+{
+  "slug": "chdb",
+  "name": "chDB",
+  "aliases": [],
+  "tagline": "Embedded, in-process OLAP engine powered by ClickHouse, used mainly from Python.",
+  "description": "chDB packages the ClickHouse engine as an in-process library, so a Python (or Go, Rust, Node, C) program can run ClickHouse SQL over Parquet, CSV, Arrow, pandas DataFrames, S3 or remote databases without a server. Sessions can persist tables to a local directory, and newer releases add a pandas-compatible DataStore API. It joined ClickHouse, Inc. in 2024. chDB gives you ClickHouse's function library and formats in a DuckDB-like footprint; it is single-process, the wheel is large, and its non-Python bindings are less mature.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "olap",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory",
+    "single-node"
+  ],
+  "developer": "ClickHouse, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "4.4.0",
+    "date": "2026-09-11"
+  },
+  "writtenIn": [
+    "C++",
+    "Python"
+  ],
+  "basedOn": "ClickHouse",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process using all local cores; bound by one machine."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ClickHouse dialect)",
+    "Python DataFrame API"
+  ],
+  "apis": [
+    "Python API",
+    "C API",
+    "DB-API 2.0"
+  ],
+  "compatibleWith": [
+    "clickhouse"
+  ],
+  "drivers": [
+    "Python",
+    "Go",
+    "Rust",
+    "JavaScript",
+    "C",
+    "Bun"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full ClickHouse SQL and function library inside a Python process",
+    "Reads 70+ formats including Parquet, Arrow and pandas DataFrames zero-copy",
+    "Queries S3, MySQL, Postgres and ClickHouse servers via table functions",
+    "Backed by ClickHouse, Inc. and tracks upstream releases"
+  ],
+  "weaknesses": [
+    "Large binary/wheel size",
+    "Single-process, no concurrent multi-user access",
+    "Bindings outside Python are less mature",
+    "Smaller community than DuckDB"
+  ],
+  "useCases": [
+    "Notebook analytics with ClickHouse SQL",
+    "Local ETL on Parquet and CSV",
+    "Testing ClickHouse queries without a server",
+    "Embedding analytics in Python services"
+  ],
+  "notIdealFor": [
+    "Multi-user server workloads",
+    "Windows-first environments",
+    "OLTP"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "clickhouse",
+    "apache-datafusion"
+  ],
+  "tags": [
+    "embedded",
+    "clickhouse",
+    "python",
+    "in-process",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://clickhouse.com/chdb",
+    "docs": "https://clickhouse.com/docs/chdb",
+    "repository": "https://github.com/chdb-io/chdb",
+    "changelog": "https://github.com/chdb-io/chdb/releases"
+  },
+  "ids": {
+    "github": "chdb-io/chdb",
+    "pypi": "chdb",
+    "npm": "chdb",
+    "hackerNewsQuery": "chDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/chdb-io/chdb/releases",
+    "https://clickhouse.com/chdb",
+    "https://pypi.org/project/chdb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

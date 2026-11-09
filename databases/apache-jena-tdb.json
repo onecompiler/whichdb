@@ -1,0 +1,179 @@
+{
+  "slug": "apache-jena-tdb",
+  "name": "Apache Jena TDB",
+  "aliases": [
+    "Jena TDB2",
+    "Apache Jena Fuseki",
+    "TDB2"
+  ],
+  "tagline": "Apache Jena's native RDF store, embeddable in Java or served over SPARQL with Fuseki.",
+  "description": "TDB2 is the persistent triple store inside Apache Jena, the Java framework most semantic-web tooling is built on. It stores RDF in B+tree indexes on local disk with serializable transactions and can be used embedded in a JVM application or exposed as a SPARQL 1.1 endpoint through Fuseki. Jena adds rule-based inference, SHACL/ShEx validation, a GeoSPARQL module and Lucene-backed text search. It is free, standards-focused and dependable for single-machine datasets up to a few billion triples, but it does not cluster and bulk loading very large dumps takes patience.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "metadata-store",
+    "embedded",
+    "scientific"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "6.2.0",
+    "date": "2026-07"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single machine; billions of triples are feasible with the parallel bulk loader and fast disks."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL"
+  ],
+  "apis": [
+    "Jena Java API",
+    "SPARQL protocol (Fuseki)",
+    "Graph Store Protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Reference-quality SPARQL 1.1 implementation from the core Java semantic-web toolkit",
+    "Runs embedded in a JVM process or as a standalone Fuseki server",
+    "Serializable transactions with single-writer, multi-reader concurrency",
+    "Free, Apache-licensed and maintained by an active ASF community"
+  ],
+  "weaknesses": [
+    "No clustering or replication; HA must be built around it",
+    "Single-writer model limits concurrent update throughput",
+    "Query performance trails specialized engines (QLever, Virtuoso) on very large datasets"
+  ],
+  "useCases": [
+    "Embedded RDF storage in Java applications",
+    "SPARQL endpoints for research datasets",
+    "Ontology and vocabulary management",
+    "Testing and prototyping semantic-web apps"
+  ],
+  "notIdealFor": [
+    "Multi-billion-triple public endpoints with heavy traffic",
+    "High-availability production clusters",
+    "Property-graph workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oxigraph",
+    "ontotext-graphdb",
+    "virtuoso",
+    "qlever",
+    "blazegraph",
+    "stardog"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "java",
+    "apache",
+    "fuseki",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://jena.apache.org/",
+    "docs": "https://jena.apache.org/documentation/tdb2/",
+    "repository": "https://github.com/apache/jena",
+    "changelog": "https://jena.apache.org/download/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Jena"
+  },
+  "ids": {
+    "github": "apache/jena",
+    "stackoverflowTag": "jena",
+    "wikipedia": "Apache_Jena",
+    "hackerNewsQuery": "Apache Jena"
+  },
+  "brand": {
+    "color": "#D22128"
+  },
+  "sources": [
+    "https://repo1.maven.org/maven2/org/apache/jena/jena-tdb2/maven-metadata.xml",
+    "https://jena.apache.org/documentation/tdb2/",
+    "https://github.com/apache/jena"
+  ],
+  "lastVerified": "2026-10-27"
+}

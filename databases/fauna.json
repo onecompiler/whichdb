@@ -1,0 +1,168 @@
+{
+  "slug": "fauna",
+  "name": "Fauna",
+  "aliases": [
+    "FaunaDB",
+    "Fauna DB"
+  ],
+  "tagline": "Former serverless document-relational database with global strong consistency; shut down May 30, 2025.",
+  "description": "Fauna was a serverless, globally distributed database that combined JSON documents with relational features such as joins, indexes and foreign-key-like references, queried through its own FQL language over HTTPS. Its Calvin-inspired transaction protocol gave strictly serializable transactions across regions without the application managing replicas, and it was popular with Jamstack and edge developers. In March 2025 the company announced it would wind down; the hosted service was switched off on May 30, 2025 and remaining data was deleted. Fauna published the core database source under Apache 2.0, but there is no maintained distribution or community release. Treat it as discontinued and migrate to another serverless database.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Fauna's hosted service shut down on May 30, 2025; source was released under Apache 2.0 but is unmaintained. Migrate to e.g. MongoDB Atlas, DynamoDB, Neon or Convex.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "edge"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed"
+  ],
+  "developer": "Fauna, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "FQL v10",
+    "date": "2023"
+  },
+  "writtenIn": [
+    "Scala",
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (source released 2025)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": false,
+    "notes": "The managed service no longer exists; the released source code is free but unsupported."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Historically replicated globally with Calvin-style deterministic transactions; no longer operated."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "FQL"
+  ],
+  "apis": [
+    "HTTPS API",
+    "GraphQL (legacy)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "Go",
+    "C#",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Strictly serializable global transactions without managing replicas (historically)",
+    "Released source is a useful reference implementation of Calvin-style transactions"
+  ],
+  "weaknesses": [
+    "Service shut down; all hosted data was deleted after May 30, 2025",
+    "Proprietary FQL made migrations hard",
+    "Released source has no maintained builds, docs or community"
+  ],
+  "useCases": [
+    "Historical reference only",
+    "Studying deterministic distributed transaction design"
+  ],
+  "notIdealFor": [
+    "Any production workload: the service no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb-atlas",
+    "amazon-dynamodb",
+    "convex",
+    "neon",
+    "surrealdb",
+    "google-cloud-firestore"
+  ],
+  "tags": [
+    "serverless",
+    "discontinued",
+    "document",
+    "fql"
+  ],
+  "links": {
+    "website": "https://github.com/fauna/faunadb",
+    "repository": "https://github.com/fauna/faunadb"
+  },
+  "ids": {
+    "github": "fauna/faunadb",
+    "stackoverflowTag": "faunadb",
+    "npm": "fauna",
+    "pypi": "fauna",
+    "hackerNewsQuery": "FaunaDB"
+  },
+  "brand": {
+    "color": "#3A1AB6",
+    "simpleIcon": "fauna"
+  },
+  "sources": [
+    "https://www.infoworld.com/article/3853569/fauna-to-shut-down-faunadb-service-in-may.html",
+    "https://www.theregister.com/2025/03/24/faunadb_shut_down/",
+    "https://github.com/fauna/faunadb"
+  ],
+  "lastVerified": "2026-10-27"
+}

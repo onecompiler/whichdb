@@ -1,0 +1,179 @@
+{
+  "slug": "apache-zookeeper",
+  "name": "Apache ZooKeeper",
+  "aliases": [
+    "ZooKeeper",
+    "ZK"
+  ],
+  "tagline": "The original coordination service: hierarchical znodes, watches and ephemeral nodes for clusters.",
+  "description": "ZooKeeper provides a replicated, in-memory tree of small data nodes (znodes) with ordered writes via the Zab protocol, watches and ephemeral nodes that disappear when a client session dies. Those primitives became the standard way to build leader election, locks, group membership and configuration for Hadoop, HBase, Solr, Pulsar and many other systems. Kafka removed its ZooKeeper dependency in 4.0 in favour of KRaft, and newer platforms tend to pick etcd, so ZooKeeper's role is now mostly supporting existing ecosystems. It is still a dependable, well-understood component where it already fits.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "hierarchical",
+  "models": [
+    "hierarchical",
+    "key-value"
+  ],
+  "workloads": [
+    "configuration",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "3.9.6",
+    "date": "2026-09-03"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Each ensemble member keeps the full tree in memory; observers can scale reads."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "ZooKeeper API"
+  ],
+  "apis": [
+    "Java client",
+    "C client",
+    "Apache Curator recipes"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Ephemeral and sequential znodes make leader election and locks straightforward",
+    "Totally ordered writes with sequential consistency for clients",
+    "Mature recipe library (Apache Curator)",
+    "Deep integration with Hadoop, HBase, Solr, Pulsar and others"
+  ],
+  "weaknesses": [
+    "Whole dataset lives in memory on every member; 1 MB znode limit",
+    "Session and GC tuning issues cause hard-to-debug outages",
+    "Declining adoption: Kafka dropped it and new systems prefer etcd",
+    "Watches are one-shot unless using persistent watches (3.6+)"
+  ],
+  "useCases": [
+    "Coordination for HBase, Solr, Pulsar and legacy Kafka",
+    "Leader election and distributed locks for JVM services",
+    "Cluster membership and small shared configuration"
+  ],
+  "notIdealFor": [
+    "Application data storage",
+    "Large or frequently updated datasets",
+    "New cloud-native platforms (consider etcd)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "etcd",
+    "hashicorp-consul-kv",
+    "foundationdb"
+  ],
+  "tags": [
+    "apache",
+    "coordination",
+    "hadoop",
+    "consensus",
+    "java"
+  ],
+  "links": {
+    "website": "https://zookeeper.apache.org/",
+    "docs": "https://zookeeper.apache.org/documentation.html",
+    "repository": "https://github.com/apache/zookeeper",
+    "changelog": "https://zookeeper.apache.org/releases.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_ZooKeeper"
+  },
+  "ids": {
+    "github": "apache/zookeeper",
+    "stackoverflowTag": "apache-zookeeper",
+    "wikipedia": "Apache ZooKeeper",
+    "dockerHub": "library/zookeeper",
+    "hackerNewsQuery": "ZooKeeper"
+  },
+  "brand": {
+    "color": "#6A6A6A"
+  },
+  "sources": [
+    "https://zookeeper.apache.org/releases.html",
+    "https://archive.apache.org/dist/zookeeper/zookeeper-3.9.6/",
+    "https://github.com/apache/zookeeper/tags"
+  ],
+  "lastVerified": "2026-10-27"
+}

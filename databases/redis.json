@@ -1,0 +1,246 @@
+{
+  "slug": "redis",
+  "name": "Redis",
+  "aliases": [
+    "Redis Open Source",
+    "Redis OSS",
+    "Redis Stack"
+  ],
+  "tagline": "The in-memory data structure server that became the default cache, now with search, JSON and vectors built in.",
+  "description": "Redis is a single-threaded-core, in-memory server for strings, hashes, lists, sets, sorted sets, streams and more, accessed over the simple RESP protocol. Since Redis 8 the former Stack modules (Query Engine with vector search, JSON, time series, probabilistic structures) ship in the core, so one binary covers caching, session storage, rate limiting, queues and semantic caching for LLM apps. Licensing is the big caveat: 7.4 moved to RSALv2/SSPLv1, and Redis 8 added AGPLv3 as a third option, which is why many clouds and distros now standardise on the BSD-licensed Valkey fork instead.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "vector",
+    "time-series",
+    "search"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "queue",
+    "pub-sub",
+    "vector-search",
+    "rag",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Redis Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "8.10.3",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Tri-license: AGPLv3, RSALv2 or SSPLv1 (Redis 8+)",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosted Redis Open Source is free; Redis Cloud and Redis Software (Enterprise) are commercial. Versions up to 7.2 remain BSD-3-Clause."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "digitalocean",
+      "heroku",
+      "render",
+      "railway",
+      "fly-io",
+      "akamai-linode"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Redis Cloud",
+      "provider": "Redis Ltd.",
+      "url": "https://redis.io/cloud/"
+    },
+    {
+      "name": "Azure Managed Redis",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/managed-redis"
+    },
+    {
+      "name": "Amazon ElastiCache (Redis OSS engine)",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/elasticache/redis/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Redis Cluster shards across 16,384 hash slots; dataset must fit in RAM. Active-Active (CRDT) geo-replication is a Redis Cloud/Software feature, not open source."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua",
+    "Redis Query Engine (FT.*)"
+  ],
+  "apis": [
+    "RESP2/RESP3",
+    "Redis Functions"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Sub-millisecond reads and writes from RAM with rich data structures (sorted sets, streams, HyperLogLog)",
+    "Redis 8 bundles vector search, JSON and time series in the core server",
+    "Every language has a mature client and every cloud has a compatible managed service",
+    "Streams with consumer groups double as a lightweight durable queue",
+    "Huge operational knowledge base: patterns for rate limiting, locks, leaderboards"
+  ],
+  "weaknesses": [
+    "Dataset must fit in memory; RAM is the dominant cost at scale",
+    "Mostly single-threaded command execution caps per-shard throughput",
+    "Redis 8 licenses (AGPLv3/RSAL/SSPL) are a blocker for some legal teams",
+    "MULTI/EXEC is not a rollback-capable ACID transaction",
+    "Async replication can lose acknowledged writes on failover"
+  ],
+  "useCases": [
+    "Application and database query caching",
+    "Session storage and user tokens",
+    "Rate limiting and distributed locks",
+    "Leaderboards and counters",
+    "Semantic caching and vector search for LLM apps",
+    "Lightweight job queues with Streams"
+  ],
+  "notIdealFor": [
+    "Primary system of record needing durable multi-key transactions",
+    "Datasets far larger than available RAM",
+    "Complex ad-hoc analytical queries"
+  ],
+  "notableUsers": [
+    "Twitter",
+    "GitHub",
+    "Snap",
+    "Stack Overflow"
+  ],
+  "alternatives": [
+    "valkey",
+    "dragonfly",
+    "garnet",
+    "memcached",
+    "amazon-elasticache",
+    "keydb"
+  ],
+  "tags": [
+    "cache",
+    "in-memory",
+    "resp",
+    "vector-search",
+    "source-available",
+    "agpl"
+  ],
+  "links": {
+    "website": "https://redis.io/",
+    "docs": "https://redis.io/docs/latest/",
+    "repository": "https://github.com/redis/redis",
+    "pricing": "https://redis.io/pricing/",
+    "changelog": "https://github.com/redis/redis/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Redis"
+  },
+  "ids": {
+    "github": "redis/redis",
+    "stackoverflowTag": "redis",
+    "wikipedia": "Redis",
+    "dockerHub": "library/redis",
+    "npm": [
+      "ioredis",
+      "redis"
+    ],
+    "pypi": "redis",
+    "crates": "redis",
+    "hackerNewsQuery": "Redis"
+  },
+  "brand": {
+    "color": "#FF4438",
+    "simpleIcon": "redis"
+  },
+  "sources": [
+    "https://redis.io/legal/licenses/",
+    "https://github.com/redis/redis/releases",
+    "https://redis.io/docs/latest/develop/whats-new/8-10/"
+  ],
+  "lastVerified": "2026-10-27"
+}

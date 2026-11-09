@@ -1,0 +1,175 @@
+{
+  "slug": "jade",
+  "name": "JADE",
+  "aliases": [
+    "Jade Platform",
+    "Jade Software",
+    "JADE object database"
+  ],
+  "tagline": "New Zealand's integrated object database, language and app server for building line-of-business systems.",
+  "description": "JADE, from Christchurch-based Jade Software Corporation, is an all-in-one platform: a Pascal/Modula-2 flavoured object-oriented language, an IDE and debugger, an application server and a transactional object database, so classes are persisted directly without an ORM. It first shipped in 1996 and still runs long-lived systems in logistics, rail freight, finance and government, mostly in New Zealand, Australia and the UK. The current release series is Jade 2025, which adds Orb (HTML-over-the-wire web apps), Direct REST, .NET (not just .NET Framework) support and an event stream producer; Synchronized Database Service keeps standby copies for high availability. It is a sound choice if you already have JADE skills or systems, but a hard sell for greenfield work given its small talent pool.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "Jade Software Corporation",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "latestVersion": {
+    "version": "2025 R2",
+    "date": "2025"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free development licence; paid deployment licences)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "A free, limited development licence is available; production deployments pay licence fees per process/server."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single primary database; Synchronized Database Service maintains secondary copies for failover and read offload."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "JADE language"
+  ],
+  "apis": [
+    ".NET",
+    "Java",
+    "C/C++",
+    "REST",
+    "Web services"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "Java",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Language, app server and object database in one stack; no ORM layer",
+    "Persistent objects and collections with full ACID transactions",
+    "Decades of production use in logistics, rail and finance systems",
+    "Synchronized Database Service for standby copies and failover",
+    "Still actively released (Jade 2025 series)"
+  ],
+  "weaknesses": [
+    "Proprietary language and runtime with a small developer pool",
+    "Strong lock-in: data and logic are tied to the JADE platform",
+    "Little presence in modern cloud, container or open-source tooling"
+  ],
+  "useCases": [
+    "Maintaining and extending existing JADE line-of-business systems",
+    "Domain-rich business applications modeled as persistent objects",
+    "Organisations in NZ/Australia with in-house JADE expertise"
+  ],
+  "notIdealFor": [
+    "Greenfield projects needing a large hiring pool",
+    "Analytics or SQL-first reporting workloads",
+    "Polyglot microservice architectures"
+  ],
+  "notableUsers": [
+    "DB Cargo",
+    "GreenTree"
+  ],
+  "alternatives": [
+    "gemstone-s",
+    "intersystems-iris",
+    "versant-object-database",
+    "objectivity-db",
+    "postgresql"
+  ],
+  "tags": [
+    "object-database",
+    "4gl",
+    "new-zealand",
+    "commercial",
+    "line-of-business"
+  ],
+  "links": {
+    "website": "https://www.jadeplatform.com/",
+    "docs": "https://www.jadeplatform.com/developer-centre",
+    "wikipedia": "https://en.wikipedia.org/wiki/JADE_(programming_language)"
+  },
+  "ids": {
+    "wikipedia": "JADE (programming language)",
+    "hackerNewsQuery": "Jade Software Corporation"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.jadeplatform.com/",
+    "https://www.jadeplatform.com/latest-platform",
+    "https://www.jadeplatform.com/developer-centre/support/release-policy",
+    "https://www.jadeplatform.com/features/synchronized-database-service",
+    "https://en.wikipedia.org/wiki/JADE_(programming_language)"
+  ],
+  "lastVerified": "2026-10-27"
+}

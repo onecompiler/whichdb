@@ -1,0 +1,187 @@
+{
+  "slug": "terminusdb",
+  "name": "TerminusDB",
+  "aliases": [
+    "Terminus"
+  ],
+  "tagline": "Git-for-data document and knowledge-graph database with branches, diffs and time travel.",
+  "description": "TerminusDB is an immutable, versioned database that stores JSON documents as an RDF-style graph and lets you branch, merge, diff, push and pull data like Git. Schemas are first-class and enforced, and queries use WOQL (a Datalog), GraphQL or a document API. Storage relies on compact succinct data structures, so every commit is cheap to keep. After the original company stepped back, maintenance passed to the Gettier team (DFRNT AB), which shipped v12 with arbitrary-precision decimals and temporal reasoning. 12.0.8 shipped in October 2026, and 12.1 is in release candidate. It fits collaborative, auditable data curation more than high-throughput OLTP.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "document",
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "content-management",
+    "metadata-store"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Gettier (DFRNT AB) and TerminusDB community",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "12.0.8",
+    "date": "2026-10-12"
+  },
+  "writtenIn": [
+    "Prolog",
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Gettier/DFRNT sells hosted and enterprise support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server; distributes collaboration through clone/push/pull of databases rather than sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "WOQL (Datalog)",
+    "GraphQL"
+  ],
+  "apis": [
+    "HTTP/JSON document API",
+    "GraphQL"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Rust",
+    "Elixir"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Branch, merge, diff and revert data with Git-like semantics",
+    "Full commit history with time travel queries",
+    "Schema-enforced JSON documents that are also a queryable graph",
+    "Datalog (WOQL) and GraphQL query options",
+    "Compact succinct storage makes keeping history cheap"
+  ],
+  "weaknesses": [
+    "Small community after the original company stepped back",
+    "Single-server only; not built for high write throughput",
+    "WOQL has a steep learning curve",
+    "No built-in full-text or vector search"
+  ],
+  "useCases": [
+    "Collaborative curation of reference or master data",
+    "Auditable knowledge graphs with review workflows",
+    "Versioned configuration and product data",
+    "Data products that need reproducible snapshots"
+  ],
+  "notIdealFor": [
+    "High-volume transactional apps",
+    "Search-heavy applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dolt",
+    "xtdb",
+    "neo4j",
+    "stardog",
+    "datomic",
+    "ontotext-graphdb"
+  ],
+  "tags": [
+    "versioning",
+    "git-for-data",
+    "knowledge-graph",
+    "open-source",
+    "prolog"
+  ],
+  "links": {
+    "website": "https://terminusdb.com/",
+    "docs": "https://terminusdb.com/docs/",
+    "repository": "https://github.com/terminusdb/terminusdb",
+    "changelog": "https://github.com/terminusdb/terminusdb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/TerminusDB"
+  },
+  "ids": {
+    "github": "terminusdb/terminusdb",
+    "stackoverflowTag": "terminusdb",
+    "wikipedia": "TerminusDB",
+    "dockerHub": "terminusdb/terminusdb-server",
+    "npm": "terminusdb",
+    "pypi": "terminusdb",
+    "hackerNewsQuery": "TerminusDB"
+  },
+  "brand": {
+    "color": "#1A1A40"
+  },
+  "sources": [
+    "https://github.com/terminusdb/terminusdb/releases/tag/v12.0.8",
+    "https://github.com/terminusdb/terminusdb",
+    "https://gettier.ai/",
+    "https://en.wikipedia.org/wiki/TerminusDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

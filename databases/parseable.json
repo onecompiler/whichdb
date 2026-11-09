@@ -1,0 +1,177 @@
+{
+  "slug": "parseable",
+  "name": "Parseable",
+  "aliases": [],
+  "tagline": "Rust telemetry datalake for logs, metrics and traces on S3, queried with SQL.",
+  "description": "Parseable is a lightweight, Rust-built telemetry store that writes logs, metrics, traces and events to object storage as Apache Parquet and queries them with SQL through Apache DataFusion. It ingests OpenTelemetry natively as well as plain HTTP JSON, ships its own console for search, dashboards and alerts, and keeps a local hot tier for recent data so common queries avoid round-trips to S3. The server is AGPL-3.0, and Parseable's enterprise edition and managed cloud add multi-node query, SSO and support. It suits teams that want an S3-native alternative to Elasticsearch or Loki with few moving parts.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Parseable, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "3.2.6",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Apache Arrow DataFusion",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Distributed mode runs separate ingest and query nodes over a shared object-storage bucket."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "OTLP",
+    "HTTP JSON ingest",
+    "Kafka connector",
+    "HTTP query API"
+  ],
+  "compatibleWith": [
+    "s3"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Single Rust binary with a small memory footprint",
+    "Open Parquet files on S3 avoid lock-in and stay cheap",
+    "Plain SQL for log and trace analysis",
+    "Native OpenTelemetry ingestion for logs, metrics and traces",
+    "Hot tier on local disk speeds up recent queries"
+  ],
+  "weaknesses": [
+    "AGPL-3.0 licence",
+    "No full-text index; text search is SQL filtering over columns",
+    "Smaller community than Loki or Elasticsearch",
+    "Fast-moving project with frequent breaking changes in major versions"
+  ],
+  "useCases": [
+    "Low-cost log retention on S3",
+    "OpenTelemetry backend for small and mid-size teams",
+    "Audit and compliance logs kept for years",
+    "SQL analysis of application events"
+  ],
+  "notIdealFor": [
+    "Relevance-ranked search",
+    "Prometheus-style metrics alerting at scale",
+    "Transactional data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "openobserve",
+    "grafana-loki",
+    "victorialogs",
+    "signoz",
+    "elasticsearch",
+    "quickwit",
+    "clickhouse"
+  ],
+  "tags": [
+    "observability",
+    "logs",
+    "rust",
+    "parquet",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://www.parseable.com/",
+    "docs": "https://www.parseable.com/docs",
+    "repository": "https://github.com/parseablehq/parseable",
+    "changelog": "https://github.com/parseablehq/parseable/releases"
+  },
+  "ids": {
+    "github": "parseablehq/parseable",
+    "dockerHub": "parseable/parseable",
+    "hackerNewsQuery": "Parseable"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/parseablehq/parseable/releases",
+    "https://github.com/parseablehq/parseable",
+    "https://www.parseable.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

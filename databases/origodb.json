@@ -1,0 +1,158 @@
+{
+  "slug": "origodb",
+  "name": "OrigoDB",
+  "aliases": [
+    "LiveDB"
+  ],
+  "tagline": "In-memory, command-sourced object database for .NET; superseded by its authors' Memstate rewrite.",
+  "description": "OrigoDB is an in-memory database engine for .NET and Mono in which the entire data model is an ordinary object graph you define in C#. Every write is a serializable command object that is appended to a journal before being applied, so state is rebuilt on startup by replaying commands, optionally from a snapshot, which makes it an early, practical example of command sourcing applied to a database. Queries are LINQ or custom query objects run against the in-memory graph under a reader/writer lock, giving serializable ACID behaviour on a single node, with optional immutable models. Devrex Labs stopped development after 0.19.0 in December 2016 and points users to Memstate, a ground-up rewrite.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No longer developed; last release 0.19.0 (Dec 2016). The authors recommend their rewrite, Memstate.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "event-store"
+  ],
+  "workloads": [
+    "oltp",
+    "event-sourcing"
+  ],
+  "architecture": [
+    "in-memory",
+    "embedded"
+  ],
+  "developer": "Devrex Labs",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "0.19.0",
+    "date": "2016-12-30"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Whole data model must fit in RAM on one machine."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "LINQ"
+  ],
+  "apis": [
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Domain model is plain C#, with no ORM or schema mapping",
+    "Command journal doubles as a full audit trail and allows point-in-time replay",
+    "Very fast reads because all data lives in process memory"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2016",
+    "Dataset limited by RAM, and startup replay time grows with the journal",
+    "Writes are serialized behind a single exclusive lock"
+  ],
+  "useCases": [
+    "Studying command/event-sourced in-memory databases",
+    "Maintaining older .NET apps built on it"
+  ],
+  "notIdealFor": [
+    "New production systems",
+    "Datasets larger than memory"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ncache",
+    "litedb",
+    "redis",
+    "kurrentdb"
+  ],
+  "tags": [
+    "in-memory",
+    "dotnet",
+    "event-sourcing",
+    "command-sourcing",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/DevrexLabs/OrigoDB",
+    "repository": "https://github.com/DevrexLabs/OrigoDB"
+  },
+  "ids": {
+    "github": "DevrexLabs/OrigoDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/DevrexLabs/OrigoDB",
+    "https://www.nuget.org/packages/OrigoDB.Core",
+    "https://dbdb.io/db/origodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

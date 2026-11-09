@@ -1,0 +1,153 @@
+{
+  "slug": "cleardb",
+  "name": "ClearDB",
+  "aliases": [
+    "ClearDB MySQL"
+  ],
+  "tagline": "MySQL database-as-a-service best known as a Heroku add-on; all services terminated November 30, 2024.",
+  "description": "ClearDB was a hosted MySQL service founded in 2010 that ran replicated MySQL with automatic failover and sold it directly and through cloud marketplaces. It became the default way to get MySQL on Heroku, where the ClearDB add-on and its CLEARDB_DATABASE_URL config var appeared in countless tutorials, and it was also sold through the Azure Marketplace until 2018. Regions were trimmed over time, including Brazil and India in 2019, and the service later operated under the Navisite DBaaS brand. After customer notices in October and November 2024, all ClearDB services were terminated on November 30, 2024 and the data was no longer recoverable; Heroku's platform API no longer lists the add-on. Applications still pointing at it need another managed MySQL such as Amazon RDS, Cloud SQL or PlanetScale.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "All ClearDB services were terminated on November 30, 2024 and the Heroku add-on is gone. Migrate to another managed MySQL (e.g. Amazon RDS, Cloud SQL, PlanetScale).",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "ClearDB, Inc. (later operated by Navisite)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MySQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary service"
+  },
+  "pricing": {
+    "models": [
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "The service no longer exists."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Mostly small shared and dedicated MySQL plans with replication and failover; no longer operated."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "PHP",
+    "Ruby",
+    "Python",
+    "Java",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Historically gave Heroku apps MySQL with a single add-on command",
+    "Managed replication and automatic failover without running MySQL yourself"
+  ],
+  "weaknesses": [
+    "Service terminated on November 30, 2024; data left behind was not recoverable",
+    "Shrinking footprint before shutdown: Azure Marketplace exit (2018), Brazil and India regions closed (2019)"
+  ],
+  "useCases": [
+    "Historical reference for Heroku-era MySQL hosting",
+    "Finding legacy apps that still read CLEARDB_DATABASE_URL"
+  ],
+  "notIdealFor": [
+    "Any workload: the service no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-rds",
+    "google-cloud-sql",
+    "planetscale",
+    "mysql",
+    "tidb"
+  ],
+  "tags": [
+    "mysql",
+    "dbaas",
+    "heroku",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20250124120112/https://www.cleardb.com/"
+  },
+  "ids": {
+    "stackoverflowTag": "cleardb",
+    "hackerNewsQuery": "ClearDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20250124120112/https://www.cleardb.com/",
+    "https://azure.microsoft.com/es-mx/updates/cleardb-removal-from-the-azure-marketplace/",
+    "https://www.navisite.com/blog/update-important-discontinuation-of-service-notice-for-brazil-and-india/",
+    "https://dbdb.io/db/cleardb"
+  ],
+  "lastVerified": "2026-10-27"
+}

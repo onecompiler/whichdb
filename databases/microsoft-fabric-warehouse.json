@@ -1,0 +1,178 @@
+{
+  "slug": "microsoft-fabric-warehouse",
+  "name": "Microsoft Fabric Data Warehouse",
+  "aliases": [
+    "Fabric Warehouse",
+    "Synapse Data Warehouse in Fabric"
+  ],
+  "tagline": "T-SQL warehouse in Microsoft Fabric that stores every table as Delta Parquet in OneLake.",
+  "description": "Fabric Data Warehouse is the SQL engine inside Microsoft Fabric, the SaaS analytics suite that bundles data engineering, real-time analytics and Power BI on a single capacity. It is the successor to Synapse dedicated pools: a distributed engine (from the Polaris project) that runs full T-SQL with multi-table transactions, while storing every table as open Delta Lake Parquet in OneLake so Spark notebooks and Power BI Direct Lake read the same files without copying. It suits Microsoft shops consolidating BI and warehousing; capacity-based billing and a fast-moving feature set are the trade-offs.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "C++",
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "startingPrice": "Fabric F2 capacity from ~$0.36/hour (pay-as-you-go)",
+    "notes": "Billed by Fabric capacity units shared across all Fabric workloads; reserved capacity discounts; 60-day trial capacity."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Compute is allocated automatically within the purchased Fabric capacity; storage in OneLake scales independently."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "T-SQL"
+  ],
+  "apis": [
+    "TDS (SQL Server protocol)",
+    "ODBC",
+    "JDBC",
+    "REST API"
+  ],
+  "compatibleWith": [
+    "sql-server"
+  ],
+  "drivers": [
+    ".NET",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tables are open Delta Parquet in OneLake, readable by Spark and Power BI Direct Lake",
+    "Full T-SQL with multi-table ACID transactions, familiar to SQL Server teams",
+    "No clusters or distributions to configure; compute is allocated automatically",
+    "Single capacity covers warehousing, Spark, pipelines and Power BI",
+    "Zero-copy table clones and time travel queries"
+  ],
+  "weaknesses": [
+    "Capacity-unit billing is hard to attribute and can throttle under bursts",
+    "T-SQL surface is still narrower than SQL Server (e.g. no triggers, limited types)",
+    "Azure-only, tied to the wider Fabric/Power BI licensing model",
+    "Younger product with frequent changes and preview features"
+  ],
+  "useCases": [
+    "Microsoft-centric enterprise data warehouse",
+    "Power BI backends with Direct Lake",
+    "Migrating Synapse dedicated SQL pools",
+    "Medallion lakehouse with a SQL serving layer"
+  ],
+  "notIdealFor": [
+    "Non-Microsoft or multi-cloud stacks",
+    "Low-latency user-facing analytics",
+    "OLTP workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "azure-synapse-analytics",
+    "snowflake",
+    "databricks-sql",
+    "google-bigquery",
+    "amazon-redshift"
+  ],
+  "tags": [
+    "cloud-data-warehouse",
+    "azure",
+    "t-sql",
+    "onelake",
+    "delta-lake"
+  ],
+  "links": {
+    "website": "https://www.microsoft.com/microsoft-fabric",
+    "docs": "https://learn.microsoft.com/fabric/data-warehouse/data-warehousing",
+    "pricing": "https://azure.microsoft.com/pricing/details/microsoft-fabric/",
+    "changelog": "https://learn.microsoft.com/fabric/fundamentals/whats-new",
+    "wikipedia": "https://en.wikipedia.org/wiki/Microsoft_Fabric"
+  },
+  "ids": {
+    "stackoverflowTag": "microsoft-fabric",
+    "wikipedia": "Microsoft Fabric",
+    "hackerNewsQuery": "Microsoft Fabric warehouse"
+  },
+  "brand": {},
+  "sources": [
+    "https://learn.microsoft.com/en-us/fabric/data-warehouse/data-warehousing",
+    "https://en.wikipedia.org/wiki/Microsoft_Fabric",
+    "https://blog.fabric.microsoft.com/blog/microsoft-fabric-explained-for-existing-synapse-users"
+  ],
+  "lastVerified": "2026-10-27"
+}

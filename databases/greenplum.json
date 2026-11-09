@@ -1,0 +1,183 @@
+{
+  "slug": "greenplum",
+  "name": "Greenplum",
+  "aliases": [
+    "VMware Tanzu Greenplum",
+    "Tanzu Greenplum",
+    "Pivotal Greenplum"
+  ],
+  "tagline": "PostgreSQL-based MPP data warehouse, closed-sourced by Broadcom in 2024 and sold in Tanzu Data.",
+  "description": "Greenplum is a shared-nothing MPP warehouse that shards PostgreSQL across many segment hosts, adding a parallel optimizer (GPORCA), append-optimized columnar tables and external tables for parallel loading. Pivotal open-sourced it in 2015, but after Broadcom acquired VMware it closed the source in May 2024 and archived the public repositories; Tanzu Greenplum 7 (on PostgreSQL 12) continues as a commercial product inside the Tanzu Data suite. Existing customers get a capable, Postgres-familiar MPP system; the open-source community moved to forks such as Apache Cloudberry.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Broadcom closed the source in May 2024 and archived the public GitHub repos; development continues only as commercial Tanzu Greenplum. Open fork: Apache Cloudberry.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "spatial",
+    "document"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Broadcom (VMware Tanzu)",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "7.8.0",
+    "date": "2026-05-07"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL 12",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (open source until May 2024)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold as part of the VMware Tanzu Data suite under Broadcom subscriptions."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Shared-nothing segments with mirrors; scales by adding segment hosts and redistributing data."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL",
+    "PL/Python",
+    "PL/R"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "PostgreSQL SQL, drivers and tools with MPP parallelism",
+    "GPORCA cost-based optimizer for complex analytic queries",
+    "Append-optimized row and column tables with compression",
+    "Parallel loading via external tables and gpfdist",
+    "In-database analytics with MADlib, PostGIS and procedural languages"
+  ],
+  "weaknesses": [
+    "Closed source since 2024; community and ecosystem largely moved on",
+    "Tied to Broadcom's Tanzu bundling and pricing",
+    "Based on an older PostgreSQL version",
+    "Expansion and rebalancing are heavy operations"
+  ],
+  "useCases": [
+    "Existing Greenplum estates",
+    "On-prem Postgres-compatible MPP warehousing",
+    "In-database analytics with MADlib"
+  ],
+  "notIdealFor": [
+    "New projects wanting open source",
+    "Cloud-native elastic workloads",
+    "OLTP"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-cloudberry",
+    "amazon-redshift",
+    "vertica",
+    "yellowbrick",
+    "snowflake",
+    "citus"
+  ],
+  "tags": [
+    "mpp",
+    "postgres-based",
+    "closed-source",
+    "broadcom",
+    "data-warehouse"
+  ],
+  "links": {
+    "website": "https://www.vmware.com/products/app-platform/tanzu-greenplum",
+    "docs": "https://techdocs.broadcom.com/us/en/vmware-tanzu/data-solutions/tanzu-greenplum/7/greenplum-database/landing-index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Greenplum"
+  },
+  "ids": {
+    "stackoverflowTag": "greenplum",
+    "wikipedia": "Greenplum",
+    "hackerNewsQuery": "Greenplum"
+  },
+  "brand": {},
+  "sources": [
+    "https://support.broadcom.com/web/ecx/support-content-notification/-/external/content/SecurityAdvisories/0/37465",
+    "https://en.wikipedia.org/wiki/Greenplum",
+    "https://enterprisedb.com/migration/greenplum"
+  ],
+  "lastVerified": "2026-10-27"
+}

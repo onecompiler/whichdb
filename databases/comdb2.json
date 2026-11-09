@@ -1,0 +1,173 @@
+{
+  "slug": "comdb2",
+  "name": "Comdb2",
+  "aliases": [
+    "comdb2"
+  ],
+  "tagline": "Bloomberg's clustered relational database with optimistic concurrency and synchronous replication.",
+  "description": "Comdb2 is the relational database Bloomberg has run in production since the mid-2000s and open-sourced in 2016. It combines a SQLite-derived SQL frontend with a heavily modified Berkeley DB storage layer, and clusters replicate synchronously so any node can serve reads and accept writes with serializable or snapshot isolation via optimistic concurrency. It supports stored procedures in Lua, triggers and queues for event delivery, online schema changes and table partitioning. It is battle-tested at Bloomberg scale, but outside Bloomberg the community, documentation and tooling are small.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "queue",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "Bloomberg",
+  "vendorType": "company",
+  "initialRelease": 2004,
+  "latestVersion": {
+    "version": "8.2.556",
+    "date": "2026-10-24"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "SQLite (SQL layer) and Berkeley DB (storage)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Full-replica clusters with synchronous replication; partitioning and remote-table queries for larger datasets."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Lua"
+  ],
+  "apis": [
+    "Comdb2 protocol (cdb2api)",
+    "JDBC"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Go",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Synchronous replication with serializable isolation across the cluster",
+    "Optimistic concurrency lets any node accept writes",
+    "Online schema changes without blocking traffic",
+    "Built-in queues and Lua triggers for event-driven designs",
+    "Two decades of production use at Bloomberg"
+  ],
+  "weaknesses": [
+    "Small external community and few third-party tools or drivers",
+    "Not wire-compatible with MySQL or PostgreSQL",
+    "Sparse documentation compared with mainstream databases",
+    "Optimistic concurrency causes retries on hot rows"
+  ],
+  "useCases": [
+    "Highly available financial OLTP systems",
+    "Event delivery via database queues and triggers",
+    "Clusters needing strong consistency across nodes"
+  ],
+  "notIdealFor": [
+    "Teams needing broad ORM and tooling support",
+    "Analytical workloads",
+    "Quick-start or managed cloud use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cockroachdb",
+    "postgresql",
+    "mysql",
+    "tidb",
+    "yugabytedb",
+    "foundationdb"
+  ],
+  "tags": [
+    "bloomberg",
+    "distributed",
+    "open-source",
+    "finance"
+  ],
+  "links": {
+    "website": "https://bloomberg.github.io/comdb2/",
+    "docs": "https://bloomberg.github.io/comdb2/overview_home.html",
+    "repository": "https://github.com/bloomberg/comdb2",
+    "wikipedia": "https://en.wikipedia.org/wiki/Comdb2"
+  },
+  "ids": {
+    "github": "bloomberg/comdb2",
+    "wikipedia": "Comdb2",
+    "hackerNewsQuery": "Comdb2"
+  },
+  "sources": [
+    "https://github.com/bloomberg/comdb2",
+    "https://github.com/bloomberg/comdb2/tags",
+    "https://bloomberg.github.io/comdb2/"
+  ],
+  "lastVerified": "2026-10-27"
+}

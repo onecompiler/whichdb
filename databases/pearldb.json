@@ -1,0 +1,151 @@
+{
+  "slug": "pearldb",
+  "name": "PearlDB",
+  "aliases": [],
+  "tagline": "Tiny C HTTP key-value server using LMDB for storage and H2O for HTTP, acking only after data is on disk.",
+  "description": "PearlDB is a minimal key-value database server in C with a RESTful HTTP interface: PUT, GET and DELETE on keys, with persistent connections and pipelining. It hands storage to LMDB and HTTP handling to the H2O library, batching LMDB writes so that a successful HTTP response means the write is durably on disk, and because the API is plain HTTP a caching reverse proxy can sit in front to scale reads. Written by Willem Thiart as a deliberately small, readable codebase, it stopped at version 0.1.0 and its last commits date from January 2018. It is best used as a reference for wiring LMDB to an HTTP server rather than as a production store.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since January 2018 (version 0.1.0); unmaintained.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "configuration"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Willem Thiart",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "0.1.0",
+    "date": "2015-09-20"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "LMDB",
+  "license": {
+    "type": "permissive",
+    "name": "BSD license"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "HTTP REST"
+  ],
+  "apis": [
+    "HTTP REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "HTTP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Durable acknowledgements: a 200 means the write reached disk",
+    "Very small codebase built on proven LMDB and H2O",
+    "Plain HTTP API works with any client and with HTTP caches"
+  ],
+  "weaknesses": [
+    "Abandoned since 2018",
+    "No auth, replication or range queries"
+  ],
+  "useCases": [
+    "Reference design for an LMDB-backed HTTP service",
+    "Toy or internal key-value endpoints"
+  ],
+  "notIdealFor": [
+    "Production systems",
+    "Internet-exposed services"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "redis",
+    "valkey",
+    "etcd"
+  ],
+  "tags": [
+    "key-value",
+    "http",
+    "lmdb",
+    "c",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/willemt/pearldb",
+    "repository": "https://github.com/willemt/pearldb"
+  },
+  "ids": {
+    "github": "willemt/pearldb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/willemt/pearldb",
+    "https://dbdb.io/db/pearldb"
+  ],
+  "lastVerified": "2026-10-27"
+}

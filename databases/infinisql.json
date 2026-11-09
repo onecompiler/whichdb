@@ -1,0 +1,151 @@
+{
+  "slug": "infinisql",
+  "name": "InfiniSQL",
+  "aliases": [],
+  "tagline": "2013 open-source in-memory distributed OLTP RDBMS speaking the PostgreSQL protocol; abandoned in 2014.",
+  "description": "InfiniSQL was an attempt by Mark Travis to build a relational database that scales transaction processing across many hosts without application sharding. Each node runs a multithreaded, actor-style engine holding all data in memory, transactions can span nodes, and clients connect over PostgreSQL's frontend/backend protocol v3, so ordinary PostgreSQL drivers work. It supported ad-hoc SQL, multi-statement transactions and stored procedures, and its launch in late 2013 claimed over 500,000 complex transactions per second on 12 servers. The catch: data was never written to disk, and the planned synchronous replicas and hybrid memory/disk storage were never implemented. Commits stopped in early 2014.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Development stopped in early 2014 at an early-alpha stage; durability features were never implemented.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Mark Travis",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Data is partitioned across nodes but held only in memory."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol v3"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Cross-node transactions without application-level sharding",
+    "PostgreSQL protocol compatibility for drivers",
+    "Published, reproducible benchmark configuration"
+  ],
+  "weaknesses": [
+    "No durability: all data is lost on power failure",
+    "Abandoned in 2014 at an early stage",
+    "No replication or failover"
+  ],
+  "useCases": [
+    "Studying actor-based distributed transaction engines",
+    "NewSQL history"
+  ],
+  "notIdealFor": [
+    "Any workload that needs its data to survive a restart"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "volt-active-data",
+    "cockroachdb",
+    "tidb",
+    "yugabytedb",
+    "singlestore",
+    "h-store"
+  ],
+  "tags": [
+    "newsql",
+    "in-memory",
+    "distributed",
+    "postgres-protocol",
+    "abandoned"
+  ],
+  "links": {
+    "website": "http://www.infinisql.org/",
+    "repository": "https://github.com/infinisql/infinisql"
+  },
+  "ids": {
+    "github": "infinisql/infinisql",
+    "hackerNewsQuery": "InfiniSQL"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.infinisql.org/",
+    "https://github.com/infinisql/infinisql",
+    "https://github.com/infinisql/infinisql/blob/master/docs/pubs/overview.xml"
+  ],
+  "lastVerified": "2026-10-27"
+}

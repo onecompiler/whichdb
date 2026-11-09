@@ -1,0 +1,169 @@
+{
+  "slug": "rocicorp-zero",
+  "name": "Zero (Rocicorp)",
+  "aliases": [
+    "Zero",
+    "Zero Sync",
+    "zero-cache"
+  ],
+  "tagline": "Query-driven sync engine: clients run ZQL locally against a Postgres-backed cache for instant UIs.",
+  "description": "Zero is a sync engine from Rocicorp, the makers of Replicache. A zero-cache server replicates your PostgreSQL database into SQLite and keeps client-side caches up to date. Clients write ZQL queries (relational, with nested relationships) that answer instantly from local data and are kept live by incremental view maintenance on the server. Writes are custom mutators that run optimistically on the client and authoritatively in a Postgres transaction on your server. Zero reached 1.0 and is under very active development. It is aimed at snappy web apps like Linear-style tools rather than offline-for-days mobile apps.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "local-first",
+    "oltp"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Rocicorp",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "1.11.3",
+    "date": "2026-10-23"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "basedOn": "PostgreSQL (upstream) and SQLite (zero-cache replica)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; you run zero-cache yourself."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "zero-cache supports multiple view-syncer nodes; write capacity is that of the upstream Postgres."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "causal"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "ZQL"
+  ],
+  "apis": [
+    "WebSocket sync protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Relational queries with nested relationships answered from local cache",
+    "Incremental view maintenance keeps many live queries cheap",
+    "Uses your existing Postgres as the source of truth",
+    "Custom mutators keep server-side validation in normal code"
+  ],
+  "weaknesses": [
+    "Not designed for long offline write sessions",
+    "You operate zero-cache yourself; no first-party managed service",
+    "TypeScript/web focus; native mobile SDKs are limited"
+  ],
+  "useCases": [
+    "Highly interactive SaaS web apps (issue trackers, editors, dashboards)",
+    "Adding instant UI updates over an existing Postgres schema",
+    "Replacing Replicache in existing apps"
+  ],
+  "notIdealFor": [
+    "Offline-first mobile apps",
+    "Non-Postgres backends",
+    "Analytics queries"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "replicache",
+    "electricsql",
+    "powersync",
+    "instantdb",
+    "convex",
+    "jazz"
+  ],
+  "tags": [
+    "sync",
+    "postgres-ecosystem",
+    "local-first",
+    "typescript",
+    "ivm"
+  ],
+  "links": {
+    "website": "https://zero.rocicorp.dev/",
+    "docs": "https://zero.rocicorp.dev/docs/introduction",
+    "repository": "https://github.com/rocicorp/mono"
+  },
+  "ids": {
+    "github": "rocicorp/mono",
+    "npm": "@rocicorp/zero",
+    "dockerHub": "rocicorp/zero",
+    "hackerNewsQuery": "Rocicorp Zero"
+  },
+  "brand": {},
+  "sources": [
+    "https://zero.rocicorp.dev/",
+    "https://www.npmjs.com/package/@rocicorp/zero",
+    "https://github.com/rocicorp/mono"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,183 @@
+{
+  "slug": "azure-ai-search",
+  "name": "Azure AI Search",
+  "aliases": [
+    "Azure Cognitive Search",
+    "Azure Search"
+  ],
+  "tagline": "Microsoft's managed search service for full-text, vector, hybrid and agentic retrieval on Azure.",
+  "description": "Azure AI Search (formerly Azure Search, then Azure Cognitive Search) is a fully managed retrieval service on Azure. It indexes JSON documents with inverted and vector indexes, adds hybrid ranking with a semantic reranker, and can chunk and vectorize content during indexing through skillsets and Azure OpenAI. Its newer agentic retrieval mode plans and fans out sub-queries over knowledge bases, and it underpins Foundry IQ for Microsoft Foundry agents. Pick it when your data and identity already live in Azure; it is not available elsewhere.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "vector",
+    "document"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Azure service)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Free tier for small indexes; dedicated tiers bill per search unit (partitions x replicas) per hour. A serverless pricing model is in preview. Semantic ranker and agentic retrieval are billed separately."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Azure AI Search",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/ai-services/ai-search"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scale by adding partitions (storage) and replicas (QPS/HA). Multi-region requires separate services kept in sync by your indexers."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Simple query syntax",
+    "Lucene query syntax",
+    "OData filters"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    ".NET",
+    "Java",
+    "JavaScript",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Integrated vectorization: chunk and embed during indexing with Azure OpenAI",
+    "Hybrid search with a semantic reranker built in",
+    "Agentic retrieval over multiple knowledge sources for agents",
+    "Indexers pull from Blob, Cosmos DB, SharePoint, OneLake and SQL",
+    "Entra ID RBAC, Private Link and document-level security trimming"
+  ],
+  "weaknesses": [
+    "Azure-only",
+    "Tier sizing and per-feature charges make costs hard to predict",
+    "Index schema changes often require full rebuilds",
+    "Less control over ranking internals than self-hosted engines"
+  ],
+  "useCases": [
+    "Enterprise RAG over SharePoint and Blob content",
+    "Copilot and Foundry agent grounding",
+    "Site and catalog search on Azure",
+    "Hybrid semantic search for internal knowledge bases"
+  ],
+  "notIdealFor": [
+    "Multi-cloud or on-prem deployments",
+    "Log analytics",
+    "Cheap large-scale vector storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "elasticsearch",
+    "opensearch",
+    "vertex-ai-vector-search",
+    "pinecone",
+    "algolia",
+    "amazon-cloudsearch"
+  ],
+  "tags": [
+    "search",
+    "azure",
+    "managed",
+    "rag",
+    "hybrid-search"
+  ],
+  "links": {
+    "website": "https://azure.microsoft.com/products/ai-services/ai-search",
+    "docs": "https://learn.microsoft.com/azure/search/",
+    "pricing": "https://azure.microsoft.com/pricing/details/search/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Azure_Cognitive_Search"
+  },
+  "ids": {
+    "stackoverflowTag": "azure-cognitive-search",
+    "wikipedia": "Azure Cognitive Search",
+    "npm": "@azure/search-documents",
+    "pypi": "azure-search-documents",
+    "hackerNewsQuery": "Azure AI Search"
+  },
+  "brand": {
+    "color": "#0078D4"
+  },
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/search/search-what-is-azure-search",
+    "https://azure.microsoft.com/pricing/details/search/",
+    "https://pypi.org/project/azure-search-documents/"
+  ],
+  "lastVerified": "2026-10-27"
+}

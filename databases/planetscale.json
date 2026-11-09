@@ -1,0 +1,125 @@
+{
+  "slug": "planetscale",
+  "name": "PlanetScale",
+  "aliases": ["PlanetScale Postgres", "PlanetScale Vitess", "PlanetScale Metal"],
+  "tagline": "Performance-focused managed MySQL (Vitess) and Postgres, with NVMe-backed Metal clusters and branching.",
+  "description": "PlanetScale is a managed database company built by core Vitess maintainers. It started with Vitess-based MySQL, adding schema branches and deploy requests for safe, non-blocking migrations, and in 2025 launched PlanetScale Postgres, followed by Neki, its own sharding layer for Postgres. Metal clusters run on local NVMe drives instead of network storage, trading elastic disks for much lower and steadier latency. The hobby free tier is gone; the entry point is now a $5 single-node Postgres, and production clusters are priced per primary-plus-two-replicas. Choose it when you care about tail latency, zero-downtime schema changes and a credible path to sharding, rather than scale-to-zero pricing.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "vector"],
+  "workloads": ["oltp", "content-management", "metadata-store", "vector-search"],
+  "architecture": ["primary-replica", "distributed"],
+  "developer": "PlanetScale, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "writtenIn": ["Go"],
+  "basedOn": "Vitess/MySQL and PostgreSQL",
+  "license": { "type": "proprietary", "name": "Proprietary (managed service; Vitess is Apache-2.0)" },
+  "pricing": {
+    "models": ["subscription", "usage-based", "enterprise-contract"],
+    "freeTier": false,
+    "startingPrice": "$5/month (single-node Postgres PS-5)",
+    "notes": "HA Postgres from $15/month, Metal Postgres from $50/month, Vitess from $39/month; Neki shards from $30/month plus routers. Storage, backups and egress extra."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws", "gcp"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "PlanetScale", "provider": "PlanetScale", "url": "https://planetscale.com/" }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Vitess databases shard horizontally today; Postgres scales vertically with replicas, with Neki providing sharding; cross-region read replicas available."
+  },
+  "consistency": { "acid": "full", "models": ["strong", "eventual"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["MySQL wire protocol", "PostgreSQL wire protocol", "HTTP serverless driver"],
+  "compatibleWith": ["mysql", "postgresql"],
+  "drivers": ["JavaScript", "Go", "Python", "Ruby", "PHP", "Java", "Rust"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": true,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Metal clusters on local NVMe give low, predictable query latency",
+    "Schema branches and deploy requests make migrations reviewable and non-blocking",
+    "Battle-tested Vitess sharding for MySQL at very large scale",
+    "Both MySQL and Postgres under one control plane",
+    "Query Insights surfaces slow queries and index recommendations"
+  ],
+  "weaknesses": [
+    "No free tier since 2024; even hobby use is paid",
+    "Vitess-based MySQL restricts some features (e.g. foreign keys were long unsupported)",
+    "No scale-to-zero; you pay for provisioned clusters",
+    "Postgres sharding (Neki) is new and less proven than Vitess"
+  ],
+  "useCases": [
+    "High-traffic SaaS backends sensitive to tail latency",
+    "Teams that want safe, reviewable schema changes in CI",
+    "Outgrowing a single MySQL primary",
+    "Migrating from RDS/Aurora to faster NVMe-backed Postgres"
+  ],
+  "notIdealFor": [
+    "Free hobby projects",
+    "Spiky workloads that benefit from scale-to-zero",
+    "Self-hosted or on-premises requirements"
+  ],
+  "notableUsers": ["Intercom", "Cash App"],
+  "alternatives": ["vitess", "neon", "supabase", "amazon-aurora", "tidb", "crunchy-bridge"],
+  "tags": ["managed", "mysql", "postgres", "vitess", "branching"],
+  "links": {
+    "website": "https://planetscale.com/",
+    "docs": "https://planetscale.com/docs",
+    "repository": "https://github.com/planetscale/cli",
+    "pricing": "https://planetscale.com/pricing",
+    "changelog": "https://planetscale.com/changelog"
+  },
+  "ids": {
+    "github": "planetscale/cli",
+    "stackoverflowTag": "planetscale",
+    "npm": "@planetscale/database",
+    "hackerNewsQuery": "PlanetScale"
+  },
+  "brand": { "color": "#000000", "simpleIcon": "planetscale" },
+  "sources": [
+    "https://planetscale.com/pricing",
+    "https://planetscale.com/blog/50-dollar-planetscale-metal",
+    "https://github.com/planetscale/cli"
+  ],
+  "lastVerified": "2026-10-27"
+}

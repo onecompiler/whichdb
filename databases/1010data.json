@@ -1,0 +1,168 @@
+{
+  "slug": "1010data",
+  "name": "1010data",
+  "aliases": [
+    "1010data Insights Platform",
+    "Trillion-Row Spreadsheet"
+  ],
+  "tagline": "Hosted columnar analytics platform with a spreadsheet-style interface, owned by SymphonyAI since 2023.",
+  "description": "1010data is a hosted analytical database and data-sharing platform that started in 2000 serving Wall Street firms and later became a fixture of retail and CPG point-of-sale analytics. Analysts work through the 'Trillion-Row Spreadsheet' web interface and the 1010data Macro Language, while engineers use Python, R, Java and .NET SDKs or ODBC/JDBC, Tableau and Power BI connectors. It is sold as a managed service bundled with vertical products (retail analytics suites, partner data collaboration, fixed income) rather than as a general-purpose warehouse. Advance Publications bought the company in 2015 and SymphonyAI acquired it in June 2023; the current release line is Insights Platform version 18.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "1010data (SymphonyAI)",
+  "vendorType": "company",
+  "initialRelease": 2000,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Sold as enterprise subscriptions, usually bundled with SymphonyAI/1010data retail, CPG or financial-services solutions."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Marketed for interactive analysis of multi-billion-row tables; capacity is managed by the vendor and internals are not publicly documented."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "1010data Macro Language",
+    "SQL (via ODBC/JDBC drivers)"
+  ],
+  "apis": [
+    "1010data API",
+    "ODBC",
+    "JDBC",
+    "Excel add-in"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "R",
+    "Java",
+    ".NET"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Spreadsheet-style web UI lets business analysts work directly on very large tables",
+    "Bundled retail, CPG and fixed-income data products plus retailer-supplier data sharing",
+    "Fully hosted: no cluster to provision, tune or upgrade",
+    "SDKs for Python, R, Java and .NET plus ODBC/JDBC, Tableau and Power BI connectors"
+  ],
+  "weaknesses": [
+    "Proprietary Macro Language is unfamiliar and not portable to other systems",
+    "Enterprise contracts only; no self-serve or free tier",
+    "Little public documentation of internals, limits or benchmarks",
+    "Roadmap now tied to SymphonyAI's vertical AI products rather than general warehousing"
+  ],
+  "useCases": [
+    "Retail and CPG point-of-sale and loyalty analytics",
+    "Retailer-to-supplier data sharing and collaboration",
+    "Fixed-income and market data analysis",
+    "Ad-hoc exploration of very large tables by non-engineers"
+  ],
+  "notIdealFor": [
+    "Transactional application backends",
+    "Teams that want an open-source or self-hosted warehouse",
+    "General SQL warehousing outside its vertical solutions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "snowflake",
+    "google-bigquery",
+    "databricks-sql",
+    "amazon-redshift",
+    "kdb-plus"
+  ],
+  "tags": [
+    "analytics",
+    "hosted",
+    "retail-analytics",
+    "financial-data",
+    "symphonyai"
+  ],
+  "links": {
+    "website": "https://www.1010data.com/",
+    "docs": "https://docs.1010data.com/",
+    "changelog": "https://docs.1010data.com/ReleaseNotes/v18/index.html"
+  },
+  "ids": {
+    "hackerNewsQuery": "1010data"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.1010data.com/",
+    "https://docs.1010data.com/",
+    "https://www.symphonyai.com/news/symphonyai-acquires-market-leader-1010data-to-expand-enterprise-ai-capabilities-in-retail-cpg-and-financial-services",
+    "https://www.businesswire.com/news/home/20150803006112/en/Advance-Acquires-1010data-for-500-Million"
+  ],
+  "lastVerified": "2026-10-27"
+}

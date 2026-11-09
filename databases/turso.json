@@ -1,0 +1,123 @@
+{
+  "slug": "turso",
+  "name": "Turso",
+  "aliases": ["Turso Cloud", "ChiselStrike"],
+  "tagline": "Managed SQLite-compatible cloud for database-per-tenant apps, with embedded replicas and offline sync.",
+  "description": "Turso is the managed cloud from the company behind libSQL and the Rust rewrite of SQLite now called Turso Database. It hosts SQLite-compatible databases that you reach over HTTP or WebSockets, or sync into an embedded replica inside your application for microsecond local reads and offline writes. Pricing and limits are built for very large numbers of small databases, so per-user or per-tenant databases are the intended pattern, and the free plan includes 100 databases and 5 GB. In 2026 the cloud began previewing MVCC-based concurrent writes from the new engine, which lifts SQLite's classic single-writer bottleneck. It fits mobile, edge and agent workloads well, but not large shared OLTP databases.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "vector"],
+  "workloads": ["oltp", "edge", "embedded", "mobile-offline", "local-first", "vector-search"],
+  "architecture": ["serverless", "primary-replica", "embedded"],
+  "developer": "Turso (ChiselStrike Inc.)",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "writtenIn": ["Rust", "C"],
+  "basedOn": "libSQL / Turso Database (SQLite-compatible)",
+  "license": { "type": "proprietary", "name": "Proprietary (cloud service; engines are MIT)" },
+  "pricing": {
+    "models": ["subscription", "usage-based", "free"],
+    "freeTier": true,
+    "startingPrice": "$4.99/month (Developer)",
+    "notes": "Free: 100 databases, 5 GB storage, 500M rows read and 10M rows written per month, 3 GB sync. Scaler $24.92/month, Pro $416.58/month; overages billed per unit."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws", "fly-io"],
+    "platforms": ["linux", "macos", "windows", "android", "ios", "browser", "wasm"]
+  },
+  "managedServices": [
+    { "name": "Turso Cloud", "provider": "Turso", "url": "https://turso.tech/" }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Scales by number of databases (database-per-tenant) rather than size of one database; embedded replicas push reads into the app process."
+  },
+  "consistency": { "acid": "full", "models": ["strong", "eventual"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["libSQL remote protocol (HTTP/WebSocket)", "Platform REST API", "SQLite C API (embedded)"],
+  "compatibleWith": ["sqlite"],
+  "drivers": ["JavaScript", "TypeScript", "Python", "Go", "Rust", "Swift", "Kotlin", "PHP"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": true
+  },
+  "strengths": [
+    "Cheap to run thousands of databases, ideal for database-per-tenant",
+    "Embedded replicas give in-process read latency and offline writes with sync",
+    "Native vector search inside SQLite-compatible databases",
+    "Point-in-time restore and database branching from a timestamp",
+    "Generous free plan and low entry price"
+  ],
+  "weaknesses": [
+    "Individual databases are small and single-writer outside the concurrent-writes preview",
+    "SQLite dialect lacks stored procedures, rich types and roles",
+    "Two engines (libSQL and Turso Database) in transition can confuse feature support",
+    "Not suited to large shared analytical or OLTP datasets"
+  ],
+  "useCases": [
+    "Per-user or per-tenant databases for SaaS",
+    "Local-first mobile and desktop apps with sync",
+    "AI agents that each get an isolated database",
+    "Edge-rendered sites needing low-latency reads"
+  ],
+  "notIdealFor": [
+    "One large multi-terabyte OLTP database",
+    "Heavy concurrent writes to a single database",
+    "Workloads needing Postgres extensions or stored procedures"
+  ],
+  "notableUsers": [],
+  "alternatives": ["cloudflare-d1", "turso-database", "libsql", "sqlite-cloud", "neon", "powersync"],
+  "tags": ["sqlite", "edge", "serverless", "embedded-replicas", "local-first"],
+  "links": {
+    "website": "https://turso.tech/",
+    "docs": "https://docs.turso.tech/",
+    "pricing": "https://turso.tech/pricing",
+    "changelog": "https://turso.tech/blog"
+  },
+  "ids": {
+    "stackoverflowTag": "turso",
+    "npm": "@tursodatabase/serverless",
+    "hackerNewsQuery": "Turso Cloud"
+  },
+  "brand": { "color": "#4FF8D2", "simpleIcon": "turso" },
+  "sources": [
+    "https://turso.tech/pricing",
+    "https://turso.tech/blog/concurrent-writes-on-turso-cloud",
+    "https://github.com/tursodatabase/turso"
+  ],
+  "lastVerified": "2026-10-27"
+}

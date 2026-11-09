@@ -1,0 +1,175 @@
+{
+  "slug": "graphite",
+  "name": "Graphite",
+  "aliases": [
+    "Graphite Carbon",
+    "Whisper",
+    "graphite-web"
+  ],
+  "tagline": "Veteran metrics stack: Carbon ingestion, Whisper files and the render API that shaped modern dashboards.",
+  "description": "Graphite is the open-source metrics stack, first released by Orbitz in 2008, that popularised dotted metric names, the plaintext \"path value timestamp\" protocol and the function-chaining render API Grafana was originally built around. Carbon daemons receive metrics, Whisper fixed-size files store them with pre-declared retention and rollups, and graphite-web serves the render and find APIs. It is easy to reason about but scales only by manual sharding with carbon-relay, and its tag support arrived late, so most new deployments pick a Prometheus-compatible system and keep the Graphite protocol only for legacy emitters. Volunteers still merge fixes, but there has been no tagged release since 2022.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Volunteer-maintained; last tagged release 1.1.10 (May 2022), with recent commits limited to fixes and dependency updates.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Graphite project (originally Orbitz)",
+  "vendorType": "community",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "1.1.10",
+    "date": "2022-05-22"
+  },
+  "writtenIn": [
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Hosted Graphite-compatible services exist, e.g. Grafana Cloud."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Scale by sharding Whisper files across hosts with carbon-relay consistent hashing."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Graphite render functions"
+  ],
+  "apis": [
+    "Carbon plaintext protocol",
+    "Carbon pickle protocol",
+    "Render API",
+    "Metrics find API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Dead-simple plaintext protocol supported by almost every metrics library and StatsD",
+    "Predictable disk usage: Whisper files are preallocated per retention policy",
+    "Rich library of render functions for transforming series",
+    "Mature, well understood and supported in Grafana"
+  ],
+  "weaknesses": [
+    "Disk I/O heavy: one file per metric and per-point writes",
+    "Clustering is manual sharding with no automatic rebalancing",
+    "Hierarchical names make label-style slicing awkward even with tags",
+    "Little active development; Python 2-era design"
+  ],
+  "useCases": [
+    "Legacy StatsD and Graphite pipelines",
+    "Small self-hosted metrics setups",
+    "Graphite-protocol ingest feeding newer backends"
+  ],
+  "notIdealFor": [
+    "Kubernetes-scale label-heavy metrics",
+    "High-cardinality workloads",
+    "Long retention at full resolution"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "prometheus",
+    "victoriametrics",
+    "influxdb",
+    "m3db",
+    "grafana-mimir",
+    "opentsdb"
+  ],
+  "tags": [
+    "metrics",
+    "monitoring",
+    "legacy",
+    "statsd",
+    "python"
+  ],
+  "links": {
+    "website": "https://graphiteapp.org/",
+    "docs": "https://graphite.readthedocs.io/",
+    "repository": "https://github.com/graphite-project/graphite-web",
+    "changelog": "https://graphite.readthedocs.io/en/latest/releases.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Graphite_(software)"
+  },
+  "ids": {
+    "github": "graphite-project/graphite-web",
+    "stackoverflowTag": "graphite",
+    "wikipedia": "Graphite (software)",
+    "dockerHub": "graphiteapp/graphite-statsd",
+    "hackerNewsQuery": "Graphite metrics"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/graphite-project/graphite-web/releases",
+    "https://github.com/graphite-project/carbon/commits/master",
+    "https://graphite.readthedocs.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

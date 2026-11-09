@@ -1,0 +1,162 @@
+{
+  "slug": "odaba",
+  "name": "ODABA",
+  "aliases": [],
+  "tagline": "RUN Software's terminology-oriented object database for C++ and .NET, still released on SourceForge.",
+  "description": "ODABA is an object database from the German company RUN Software-Werkstatt that extends ODMG-style object storage with what its authors call a terminology model: multilingual attributes, set relations, weakly typed collections and hierarchical classifications, so the schema doubles as documented domain terminology. Applications use C++ or .NET APIs or the ODABA Script Interface, whose ODL and OQL follow ODMG 3.0, and the bundled ODE tools and Active Data Link GUI framework generate data-bound user interfaces; schemas can also be mirrored to SQL Server, MySQL, Oracle or XML. Version 17 added a web database server, and 17.3.1 was published on SourceForge in March 2026 under the GPL. It is a niche, single-vendor system best suited to teams already invested in its modelling approach.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "oltp",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "RUN Software-Werkstatt GmbH",
+  "vendorType": "company",
+  "initialRelease": 1994,
+  "latestVersion": {
+    "version": "17.3.1",
+    "date": "2026-03-14"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free download under the GPL; services and support from RUN Software."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "OQL",
+    "OSI (ODABA Script Interface)"
+  ],
+  "apis": [
+    "C++ API",
+    ".NET API",
+    "HTTP (OHTTPServer)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Rich conceptual modelling: multilingual attributes, set relations and classifications",
+    "ODMG 3.0-style ODL/OQL plus C++ and .NET APIs",
+    "Still maintained, with a 2026 release",
+    "Can mirror data to relational databases or XML"
+  ],
+  "weaknesses": [
+    "Tiny community; documentation is dense and partly German-centric",
+    "Single small vendor",
+    "Unusual concepts take time to learn"
+  ],
+  "useCases": [
+    "Terminology- and ontology-heavy business applications",
+    "Rapid development of data-bound desktop GUIs with ODE tools"
+  ],
+  "notIdealFor": [
+    "Web-scale or distributed workloads",
+    "Teams wanting SQL-first tooling"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "versant-object-database",
+    "objectivity-db",
+    "gemstone-s",
+    "objectdb",
+    "postgresql"
+  ],
+  "tags": [
+    "object-database",
+    "odmg",
+    "c++",
+    "dotnet",
+    "terminology"
+  ],
+  "links": {
+    "website": "http://www.odaba.com/",
+    "repository": "https://sourceforge.net/projects/odaba/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Odaba"
+  },
+  "ids": {
+    "wikipedia": "Odaba"
+  },
+  "brand": {},
+  "sources": [
+    "https://sourceforge.net/projects/odaba/files/17.3.1/README/download",
+    "https://sourceforge.net/projects/odaba/",
+    "https://en.wikipedia.org/wiki/Odaba",
+    "http://www.odaba.com/content/start/"
+  ],
+  "lastVerified": "2026-10-27"
+}

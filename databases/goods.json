@@ -1,0 +1,163 @@
+{
+  "slug": "goods",
+  "name": "GOODS",
+  "aliases": [
+    "Generic Object Oriented Database System"
+  ],
+  "tagline": "Knizhnik's distributed object-oriented DBMS with an active-client model and C++/Java bindings.",
+  "description": "GOODS (Generic Object Oriented Database System) is a distributed object database by Konstantin Knizhnik. A multithreaded storage server, independent of any language or application, holds objects that can be spread across several servers, while the client library does the active work: it gives C++ and Java programs transparent persistence through a metaobject protocol and lets developers plug in locking and synchronisation policies in an aspect-oriented style, separately from application code. Later releases added external BLOBs, authentication, incremental backup and database encryption. Community bindings existed for Squeak Smalltalk and Perl. Version 3.20 from November 2012 is the last; the MIT-style source is still on garret.ru.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No release since 3.20 (November 2012); source remains downloadable but unmaintained.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed"
+  ],
+  "developer": "Konstantin Knizhnik",
+  "vendorType": "community",
+  "initialRelease": 1998,
+  "latestVersion": {
+    "version": "3.20",
+    "date": "2012-11-22"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT-style license",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Objects can live on several storage servers within one database."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C++/Java object API"
+  ],
+  "apis": [
+    "C++ API",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "Smalltalk",
+    "Perl"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Transparent persistence for C++ and Java objects",
+    "Pluggable synchronisation policies kept out of application code",
+    "Language-independent server that can be split across machines",
+    "Permissive license and compact codebase"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2012",
+    "No query language beyond navigation and application-built indexes",
+    "Tiny community and dated documentation"
+  ],
+  "useCases": [
+    "Studying active-client OODBMS designs",
+    "Maintaining legacy GOODS applications"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Ad-hoc querying or analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "zodb",
+    "objectivity-db",
+    "versant-object-database",
+    "gemstone-s",
+    "perst",
+    "objectdb"
+  ],
+  "tags": [
+    "oodbms",
+    "object-database",
+    "c++",
+    "distributed",
+    "historical"
+  ],
+  "links": {
+    "website": "http://www.garret.ru/goods.html",
+    "changelog": "http://www.garret.ru/news.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://www.garret.ru/goods.html",
+    "http://www.garret.ru/news.html",
+    "http://www.garret.ru/license.html",
+    "https://dbdb.io/db/goods"
+  ],
+  "lastVerified": "2026-10-27"
+}

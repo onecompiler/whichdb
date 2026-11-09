@@ -1,0 +1,147 @@
+{
+  "slug": "ndatabase",
+  "name": "NDatabase",
+  "aliases": [],
+  "tagline": "Embedded .NET object database ported from NeoDatis ODB: store plain C# objects in one file. Abandoned.",
+  "description": "NDatabase was an embedded object database for .NET by Polish developer Jacek Spólnik, derived from the NeoDatis ODB code base. It persisted ordinary C# objects without mapping files, attributes or base classes, offered ACID transactions with automatic recovery on the next open, indexes and type-safe queries, and kept everything in a single database file opened through OdbFactory. Releases ran on CodePlex and NuGet from 2012 to 3.8.0 in May 2013; CodePlex has shut down and the old ndatabase.net domain now serves unrelated content, though the NuGet packages remain. For new .NET work, LiteDB or SQLite with an ORM are the practical choices.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Last release 3.8.0 (May 2013); CodePlex is gone and ndatabase.net now hosts unrelated content. Use LiteDB or SQLite.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Jacek Spólnik",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "3.8.0",
+    "date": "2013-05-12"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "basedOn": "NeoDatis ODB",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "C# query API"
+  ],
+  "apis": [
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Persists plain C# objects with no mapping or attributes",
+    "ACID transactions with automatic recovery on restart",
+    "Single-file embedded deployment"
+  ],
+  "weaknesses": [
+    "Abandoned since 2013 and targets old .NET Framework versions",
+    "Original site and CodePlex source hosting are gone"
+  ],
+  "useCases": [
+    "Maintaining old .NET desktop apps that already use it",
+    "Studying a compact embedded object-store design in C#"
+  ],
+  "notIdealFor": [
+    "New .NET or .NET Core projects",
+    "Multi-user server workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "litedb",
+    "sqlite",
+    "realm",
+    "neodatis-odb",
+    "db4o"
+  ],
+  "tags": [
+    "object-database",
+    "dotnet",
+    "embedded",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20140101105519/http://ndatabase.net/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/20140101105519/http://ndatabase.net/",
+    "https://www.nuget.org/packages/NDatabase",
+    "https://dbdb.io/db/ndatabase"
+  ],
+  "lastVerified": "2026-10-27"
+}

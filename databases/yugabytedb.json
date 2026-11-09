@@ -1,0 +1,128 @@
+{
+  "slug": "yugabytedb",
+  "name": "YugabyteDB",
+  "aliases": ["Yugabyte", "YSQL", "YCQL"],
+  "tagline": "Apache-licensed distributed SQL that reuses the PostgreSQL query layer on a Raft-replicated storage engine.",
+  "description": "YugabyteDB is a distributed database that grafts the actual PostgreSQL query layer (YSQL) onto DocDB, a sharded, Raft-replicated storage engine derived from RocksDB. Because it reuses Postgres code rather than reimplementing it, compatibility with triggers, stored procedures, extensions like pgvector and most ORMs is unusually high for a distributed system. A second API, YCQL, speaks the Cassandra query language for wide-column workloads. It is a sensible pick when you want Postgres semantics plus horizontal write scaling and multi-region resilience under a permissive license, and you can accept somewhat higher per-query latency than single-node Postgres.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "wide-column", "vector"],
+  "workloads": ["oltp", "metadata-store", "iot", "vector-search"],
+  "architecture": ["distributed", "multi-primary", "client-server"],
+  "developer": "Yugabyte, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": { "version": "2026.1.2.0", "date": "2026-09-22" },
+  "writtenIn": ["C++", "C"],
+  "basedOn": "PostgreSQL (query layer), RocksDB (storage)",
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": {
+    "models": ["open-source", "usage-based", "enterprise-contract"],
+    "freeTier": true,
+    "notes": "Database is free and open source; YugabyteDB Aeon (managed) has a free Sandbox cluster; YugabyteDB Anywhere (self-managed control plane) is commercial."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": ["aws", "gcp", "azure"],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [
+    { "name": "YugabyteDB Aeon", "provider": "Yugabyte", "url": "https://www.yugabyte.com/managed/" }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Hash and range sharding into tablets with automatic rebalancing; supports synchronous multi-region clusters, xCluster async replication and geo-partitioning."
+  },
+  "consistency": { "acid": "full", "models": ["strong", "tunable"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL", "CQL"],
+  "apis": ["PostgreSQL wire protocol", "Cassandra CQL protocol"],
+  "compatibleWith": ["postgresql", "cassandra"],
+  "drivers": ["Java", "Go", "Python", "JavaScript", "C#", "Rust", "Ruby", "C++"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Reuses PostgreSQL's own query layer, so triggers, stored procedures and many extensions work",
+    "Fully Apache 2.0 database core, including enterprise-grade features like encryption and xCluster",
+    "Synchronous multi-region writes or async xCluster replication, chosen per deployment",
+    "Cassandra-compatible YCQL API alongside SQL in the same cluster",
+    "Online tablet splitting and rebalancing as nodes are added"
+  ],
+  "weaknesses": [
+    "Higher latency per statement than single-node Postgres, especially for chatty ORMs",
+    "Postgres version lags upstream (YSQL tracks an older major release)",
+    "Cross-shard joins and foreign keys can be slow without careful colocation",
+    "Operational footprint (masters, tservers, tuning flags) is heavier than plain Postgres"
+  ],
+  "useCases": [
+    "Scaling a Postgres application beyond one primary",
+    "Multi-region customer and order data with zone/region resilience",
+    "Retail and financial OLTP needing horizontal write capacity",
+    "IoT and telemetry metadata with TTL on YCQL tables",
+    "Migrating off Cassandra while gaining SQL"
+  ],
+  "notIdealFor": [
+    "Analytics-heavy workloads with large scans",
+    "Small single-region apps where Postgres is simpler",
+    "Ultra-low-latency key-value caching"
+  ],
+  "notableUsers": ["Kroger", "Narvar"],
+  "alternatives": ["cockroachdb", "postgresql", "tidb", "google-cloud-spanner", "citus", "apache-cassandra"],
+  "tags": ["distributed-sql", "postgres-compatible", "open-source", "multi-region", "raft"],
+  "links": {
+    "website": "https://www.yugabyte.com/",
+    "docs": "https://docs.yugabyte.com/",
+    "repository": "https://github.com/yugabyte/yugabyte-db",
+    "pricing": "https://www.yugabyte.com/pricing/",
+    "changelog": "https://docs.yugabyte.com/preview/releases/",
+    "wikipedia": "https://en.wikipedia.org/wiki/YugabyteDB"
+  },
+  "ids": {
+    "github": "yugabyte/yugabyte-db",
+    "stackoverflowTag": "yugabytedb",
+    "wikipedia": "YugabyteDB",
+    "dockerHub": "yugabytedb/yugabyte",
+    "hackerNewsQuery": "YugabyteDB"
+  },
+  "brand": { "color": "#FF6E42" },
+  "sources": [
+    "https://github.com/yugabyte/yugabyte-db/releases",
+    "https://docs.yugabyte.com/preview/releases/",
+    "https://www.yugabyte.com/pricing/"
+  ],
+  "lastVerified": "2026-10-27"
+}

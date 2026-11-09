@@ -1,0 +1,165 @@
+{
+  "slug": "hypertable",
+  "name": "Hypertable",
+  "aliases": [],
+  "tagline": "Discontinued C++ Bigtable clone on HDFS; development stopped in 2016.",
+  "description": "Hypertable was an open-source, C++ implementation of the Bigtable design, positioned in the late 2000s as a faster alternative to HBase, and was used for a while by Baidu. It stored sorted, sparse tables across range servers on top of HDFS or other distributed filesystems and offered an SQL-like HQL interface. Hypertable Inc. wound down and the final release, 0.9.8.11, shipped in March 2016; the GitHub repository has seen no meaningful activity since. It is listed here for historical context only; new projects should look at HBase, Bigtable, Cassandra or ScyllaDB.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Final release 0.9.8.11 in March 2016; the company wound down and the project is unmaintained. Use HBase, Bigtable or ScyllaDB instead.",
+  "maturity": "legacy",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "Hypertable Inc.",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "0.9.8.11",
+    "date": "2016-03-11"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Google Bigtable design",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "No longer sold or supported."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "HQL"
+  ],
+  "apis": [
+    "Thrift",
+    "C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "Python",
+    "PHP",
+    "Ruby",
+    "Perl"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native C++ implementation avoided JVM garbage-collection pauses",
+    "SQL-like HQL made the Bigtable model more approachable"
+  ],
+  "weaknesses": [
+    "Dead project: no releases, fixes or security patches since 2016",
+    "Depends on outdated Hadoop and Thrift versions",
+    "No community or commercial support"
+  ],
+  "useCases": [
+    "Maintaining legacy deployments until migration",
+    "Studying Bigtable-style system design"
+  ],
+  "notIdealFor": [
+    "Any new production system",
+    "Security-sensitive environments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-hbase",
+    "google-cloud-bigtable",
+    "scylladb",
+    "apache-cassandra"
+  ],
+  "tags": [
+    "discontinued",
+    "bigtable-clone",
+    "c++",
+    "hadoop"
+  ],
+  "links": {
+    "website": "https://github.com/hypertable/hypertable",
+    "repository": "https://github.com/hypertable/hypertable",
+    "wikipedia": "https://en.wikipedia.org/wiki/Hypertable"
+  },
+  "ids": {
+    "github": "hypertable/hypertable",
+    "stackoverflowTag": "hypertable",
+    "wikipedia": "Hypertable",
+    "hackerNewsQuery": "Hypertable"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/hypertable/hypertable",
+    "https://en.wikipedia.org/wiki/Hypertable"
+  ],
+  "lastVerified": "2026-10-27"
+}

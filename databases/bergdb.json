@@ -1,0 +1,163 @@
+{
+  "slug": "bergdb",
+  "name": "BergDB",
+  "aliases": [
+    "KissDB"
+  ],
+  "tagline": "Embedded Java/.NET time-key-value store with serializable transactions and queries against any past state.",
+  "description": "BergDB was an in-process database library for the JVM and .NET written by Frans Lundberg, first released in 2013 under the name KissDB. It stored time-key-value entries in an append-only file: keys are path-like strings, values are serialized objects, strings or bytes, and because every state is kept, any earlier point in time can be queried with the same API (historic queries). All writes ran in serializable ACID transactions, and it added secondary indexes (including on nested fields), replication and, in its final release, file encryption, all without a query language. The last release, 2015.4, shipped in July 2015; a serious restart bug reported that November was never fixed, and the bergdb.com domain now hosts unrelated content.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Last release 2015.4 (July 2015) with a known unfixed restart issue; project site gone. Consider H2, Nitrite or XTDB instead.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Frans Lundberg",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "2015.4",
+    "date": "2015-07-29"
+  },
+  "writtenIn": [
+    "Java",
+    "C#"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3 (commercial licence on request)",
+    "spdx": "AGPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process library; the author claimed it could reach terabytes and billions of entries."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java/.NET API (no query language)"
+  ],
+  "apis": [
+    "Java API",
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Historic queries: every past state is readable through the same API",
+    "Serializable ACID transactions in an embedded library",
+    "Same on-disk format across JVM and .NET languages",
+    "Transparent object serialization with minimal boilerplate"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2015 with an acknowledged unfixed restart bug",
+    "Single-developer project; documentation now only on archived pages",
+    "AGPL licence complicates embedding in proprietary apps",
+    "Append-only storage grows without compaction"
+  ],
+  "useCases": [
+    "Studying temporal, append-only embedded storage",
+    "Reference for time-travel query APIs"
+  ],
+  "notIdealFor": [
+    "Any new application",
+    "Workloads that need a query language or multi-process access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "xtdb",
+    "h2",
+    "nitrite",
+    "litedb",
+    "datomic"
+  ],
+  "tags": [
+    "embedded",
+    "java",
+    "dotnet",
+    "temporal",
+    "abandoned"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20141216223725/http://bergdb.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/20141216223725/http://bergdb.com/",
+    "http://web.archive.org/web/20170214233233/http://bergdb.com:80/about.html",
+    "http://web.archive.org/web/20161015075642/http://bergdb.com/log.html",
+    "http://web.archive.org/web/20161014062652/http://bergdb.com/releases.html",
+    "https://dbdb.io/db/bergdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

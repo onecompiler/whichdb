@@ -1,0 +1,160 @@
+{
+  "slug": "thinksql",
+  "name": "ThinkSQL",
+  "aliases": [],
+  "tagline": "One developer's ISO-SQL relational server written in Delphi, with MVCC; open-sourced under GPL in 2012.",
+  "description": "ThinkSQL is Greg Gaughan's cross-platform relational database server, written in Object Pascal (Delphi and Kylix) with the goal of following the ISO SQL standard closely: transactions, sub-selects, views, set operators, privileges and full referential constraints, on a multi-threaded server with multi-version concurrency control, hash indexes for joins, online backups and a statistical query optimizer. It shipped native ODBC, JDBC, dbExpress and Python DB-API drivers. Sold commercially in the early 2000s, with version 1.04 in 2004 and royalty-free redistribution licences, its server source was released on GitHub under the GPL on 1 January 2012 and has seen almost no changes since. It is a rare, readable example of a complete SQL engine built by one person.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Source on GitHub (GPL) since 2012 with no development since 2018; the website remains as an archive. Firebird or PostgreSQL are maintained alternatives.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Greg Gaughan",
+  "vendorType": "community",
+  "initialRelease": 2000,
+  "latestVersion": {
+    "version": "1.04",
+    "date": "2004-09-13"
+  },
+  "writtenIn": [
+    "Pascal"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "dbExpress",
+    "Python DB-API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Delphi",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Close adherence to ISO SQL, including views, set operators and referential constraints",
+    "MVCC on a multi-threaded server with online backups",
+    "Readable Pascal codebase useful for learning how a full SQL server works"
+  ],
+  "weaknesses": [
+    "Essentially unmaintained since its 2012 source release",
+    "Delphi/Kylix toolchain is hard to build today",
+    "No replication or modern features"
+  ],
+  "useCases": [
+    "Studying a complete single-author SQL server",
+    "Maintaining older applications built on it"
+  ],
+  "notIdealFor": [
+    "New production systems",
+    "High availability or scale-out needs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "firebird",
+    "postgresql",
+    "sqlite",
+    "interbase"
+  ],
+  "tags": [
+    "pascal",
+    "delphi",
+    "sql",
+    "mvcc",
+    "open-source"
+  ],
+  "links": {
+    "website": "http://www.thinksql.co.uk/",
+    "repository": "https://github.com/ggaughan/ThinkSQL"
+  },
+  "ids": {
+    "github": "ggaughan/ThinkSQL",
+    "hackerNewsQuery": "ThinkSQL"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.thinksql.co.uk/",
+    "http://www.thinksql.co.uk/main/news.html",
+    "https://github.com/ggaughan/ThinkSQL"
+  ],
+  "lastVerified": "2026-10-27"
+}

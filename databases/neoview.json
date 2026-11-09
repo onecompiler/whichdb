@@ -1,0 +1,147 @@
+{
+  "slug": "neoview",
+  "name": "Neoview",
+  "aliases": [
+    "HP Neoview"
+  ],
+  "tagline": "HP's 2007–2011 Itanium data-warehouse platform built on NonStop SQL; retired, lineage continues in Trafodion.",
+  "description": "Neoview was Hewlett-Packard's enterprise data-warehouse platform, launched in 2007 as an appliance-style cluster of Itanium Integrity servers running the NonStop operating system and a version of NonStop SQL retuned for parallel analytic queries instead of transaction processing. It was HP's answer to Teradata and the new MPP warehouse vendors, pairing shared-nothing parallel execution with the fault tolerance inherited from Tandem. HP stopped selling it to new customers on January 24, 2011, weeks before announcing its purchase of Vertica. HP later reused the NonStop SQL and Neoview engine work in the open-source Trafodion SQL-on-Hadoop project, which is carried on commercially by EsgynDB.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "HP stopped selling Neoview to new customers on Jan 24, 2011. Its NonStop SQL lineage continued in Trafodion and EsgynDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Hewlett-Packard",
+  "vendorType": "company",
+  "initialRelease": 2007,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "NonStop SQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (HP)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold as hardware-plus-software systems; no longer offered."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "First-generation systems scaled from 16 to 256 Itanium cores in a shared-nothing cluster."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Shared-nothing parallel SQL with NonStop-grade fault tolerance",
+    "Engine heritage that later fed into Trafodion and EsgynDB"
+  ],
+  "weaknesses": [
+    "Withdrawn from sale in 2011; tied to Itanium hardware",
+    "Never gained much share against Teradata, Netezza or Greenplum"
+  ],
+  "useCases": [
+    "Historical reference on MPP data-warehouse appliances",
+    "Understanding the roots of Trafodion"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "teradata-vantage",
+    "vertica",
+    "trafodion",
+    "esgyndb",
+    "hpe-nonstop-sql"
+  ],
+  "tags": [
+    "data-warehouse",
+    "mpp",
+    "hp",
+    "nonstop",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/HP_Neoview",
+    "wikipedia": "https://en.wikipedia.org/wiki/HP_Neoview"
+  },
+  "ids": {
+    "wikipedia": "HP Neoview",
+    "hackerNewsQuery": "HP Neoview"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.theregister.com/off-prem/2011/01/24/hp-euthanizes-neoview-data-warehouse-iron/780076",
+    "https://www.theregister.com/off-prem/2007/05/10/hp-neoview-comes-out-to-play/467822",
+    "https://en.wikipedia.org/wiki/HP_Neoview"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,163 @@
+{
+  "slug": "byconity",
+  "name": "ByConity",
+  "aliases": [],
+  "tagline": "ByteDance's cloud-native ClickHouse fork with separated storage; archived in 2026.",
+  "description": "ByConity was an open-source data warehouse from ByteDance's Volcano Engine, built on the ClickHouse 21.8 codebase and re-architected for storage-compute separation: data on HDFS or S3, stateless virtual warehouses, a FoundationDB-backed catalog, a cascades optimizer and ACID transactions. It was a notable experiment in making ClickHouse cloud-native. In 2026 Volcano Engine ended the project: a maintenance-only transition began on 1 June 2026, and the GitHub repository was archived after 1 August 2026 with no further fixes. Existing users should plan a migration.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Volcano Engine ended the project: maintenance-only from 1 Jun 2026 and the repo archived read-only after 1 Aug 2026. Consider ClickHouse Cloud, StarRocks or Apache Doris.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "ByteDance (Volcano Engine)",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.0.1-hotfix1",
+    "date": "2024-11-25"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "ClickHouse 21.8",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ClickHouse dialect, ANSI mode)"
+  ],
+  "apis": [
+    "ClickHouse native protocol",
+    "HTTP interface"
+  ],
+  "compatibleWith": [
+    "clickhouse"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Storage-compute separation with elastic virtual warehouses",
+    "ACID transactions and a cascades optimizer on a ClickHouse base",
+    "Compatible with ClickHouse clients and SQL"
+  ],
+  "weaknesses": [
+    "Archived: no security patches or bug fixes after August 2026",
+    "Based on an old ClickHouse version (21.8)",
+    "Heavy dependency stack (FoundationDB, HDFS/S3)"
+  ],
+  "useCases": [
+    "Existing deployments planning migration",
+    "Studying cloud-native ClickHouse architectures"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Production systems needing security updates"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "starrocks",
+    "apache-doris",
+    "databend"
+  ],
+  "tags": [
+    "discontinued",
+    "clickhouse-fork",
+    "bytedance",
+    "cloud-native"
+  ],
+  "links": {
+    "website": "https://byconity.github.io/",
+    "docs": "https://byconity.github.io/docs/",
+    "repository": "https://github.com/ByConity/ByConity"
+  },
+  "ids": {
+    "github": "ByConity/ByConity",
+    "dockerHub": "byconity/byconity-server",
+    "hackerNewsQuery": "ByConity"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/ByConity/ByConity",
+    "https://github.com/ByConity/ByConity/releases",
+    "https://byconity.github.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

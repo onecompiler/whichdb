@@ -1,0 +1,167 @@
+{
+  "slug": "isar",
+  "name": "Isar",
+  "aliases": [
+    "Isar Database",
+    "isar_community"
+  ],
+  "tagline": "Fast Flutter/Dart object database with rich indexed queries, now stalled upstream.",
+  "description": "Isar is a cross-platform embedded database for Flutter, written in Rust with a Dart API. Collections are annotated Dart classes, and you get composite and multi-entry indexes, full-text word indexes, links between objects, ACID transactions and a type-safe generated query builder. It became the most popular Flutter-native database after Hive. Upstream development has stalled: the last stable release is 3.1.0 from April 2023, and the announced 4.0 rewrite never shipped. Most active users now depend on the community fork isar_community or have moved to ObjectBox, Drift or Hive CE.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No stable release since 3.1.0 (April 2023) and the 4.0 rewrite never shipped; the community fork isar_community carries ongoing fixes.",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Simon Choi and the Isar community",
+  "vendorType": "community",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "3.1.0+1",
+    "date": "2023-04-25"
+  },
+  "writtenIn": [
+    "Rust",
+    "Dart"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Isar generated query builder (Dart)"
+  ],
+  "apis": [
+    "Dart API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Dart"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Type-safe, code-generated queries with composite and multi-entry indexes",
+    "Fast native core in Rust with async APIs that keep the UI thread free",
+    "Watchers make it easy to build reactive Flutter widgets",
+    "Built-in inspector for browsing data during development"
+  ],
+  "weaknesses": [
+    "Upstream is effectively stalled; long-term maintenance depends on a community fork",
+    "No built-in sync",
+    "Web support was limited in 3.x"
+  ],
+  "useCases": [
+    "Existing Flutter apps already built on Isar",
+    "Local caches and offline data for Flutter mobile apps"
+  ],
+  "notIdealFor": [
+    "New long-lived projects that need an active upstream",
+    "Apps needing sync out of the box",
+    "Non-Dart stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "objectbox",
+    "hive-dart",
+    "realm",
+    "sqlite",
+    "powersync"
+  ],
+  "tags": [
+    "flutter",
+    "dart",
+    "mobile",
+    "embedded",
+    "rust"
+  ],
+  "links": {
+    "website": "https://isar.dev/",
+    "docs": "https://isar.dev/tutorials/quickstart.html",
+    "repository": "https://github.com/isar/isar"
+  },
+  "ids": {
+    "github": "isar/isar",
+    "hackerNewsQuery": "Isar database"
+  },
+  "brand": {},
+  "sources": [
+    "https://pub.dev/packages/isar",
+    "https://pub.dev/packages/isar_community",
+    "https://github.com/isar/isar"
+  ],
+  "lastVerified": "2026-10-27"
+}

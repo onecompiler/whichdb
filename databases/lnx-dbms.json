@@ -1,0 +1,163 @@
+{
+  "slug": "lnx-dbms",
+  "name": "LNX-DBMS",
+  "aliases": [
+    "LNX",
+    "LNX-SQL-DBMS"
+  ],
+  "tagline": "1990s German client/server SQL database for Linux and Unix, bundled with and sold by S.u.S.E.",
+  "description": "LNX-DBMS was a relational client/server database for Linux and Unix from Villwock Softwareentwicklung in Rieden, Germany, distributed through S.u.S.E.: version 3 shipped free on the S.u.S.E. Linux distribution and version 4 (around 1996) was sold for DM 240 per server. It offered ANSI SQL with transactions, locking, indexes, a clustered index layout on the file system, database procedures and rules, user management, online backup, and in V4 referential integrity and ALTER TABLE. Access came through ESQL/C, an ODBC driver aimed at Windows clients, a WWW interface, a Java API, a Python interface and a fast non-transactional bulk-load API (LNX-XA). It ran on Linux, SCO, OSF/1 on DEC Alpha and Siemens Nixdorf RM systems. It disappeared as PostgreSQL and MySQL took over Linux.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Sold via S.u.S.E. in the mid/late 1990s; no longer available. PostgreSQL or MariaDB are the natural modern equivalents on Linux.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Villwock Softwareentwicklung",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "latestVersion": {
+    "version": "4",
+    "date": "1996"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (V3 free with S.u.S.E. Linux)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "V3 was included free with S.u.S.E. Linux; V4 server cost DM 240, with ODBC, WWW, Java, Python and XA add-ons at DM 50-150."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Embedded SQL (ESQL/C)"
+  ],
+  "apis": [
+    "ESQL/C",
+    "ODBC",
+    "Java API",
+    "Python interface",
+    "LNX-XA bulk-load API",
+    "WWW interface"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Shipped free (V3) with S.u.S.E. Linux, an early bundled SQL server for Linux users",
+    "Broad access options for its time: ESQL/C, ODBC, Java, Python and web",
+    "Online backup and referential integrity in a low-cost package",
+    "Bulk-load API about 100x faster than ESQL/C inserts"
+  ],
+  "weaknesses": [
+    "Discontinued; no documentation or binaries in circulation",
+    "Small vendor and German-language documentation"
+  ],
+  "useCases": [
+    "History of commercial databases on early Linux",
+    "Context for S.u.S.E.'s 1990s commercial software catalogue"
+  ],
+  "notIdealFor": [
+    "Any present-day deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "mariadb",
+    "mysql",
+    "ingres",
+    "firebird"
+  ],
+  "tags": [
+    "historical",
+    "linux",
+    "germany",
+    "suse",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/19980128215759/http://www.suse.de/kommerz/LNX_Titel.html"
+  },
+  "ids": {
+    "hackerNewsQuery": "LNX-DBMS"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/19980128215759/http://www.suse.de/kommerz/LNX_Titel.html",
+    "https://web.archive.org/web/1998/http://www.suse.de/kommerz/LNX_1_Paketumfang.html",
+    "https://web.archive.org/web/1998/http://www.suse.de/kommerz/LNX_6_Preise.html",
+    "https://web.archive.org/web/1998/http://www.suse.de/kommerz/LNX_5_XA.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

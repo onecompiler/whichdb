@@ -1,0 +1,160 @@
+{
+  "slug": "nudb",
+  "name": "NuDB",
+  "aliases": [],
+  "tagline": "Header-only C++11 append-only key-value store tuned for random reads on SSDs, built for the XRP Ledger.",
+  "description": "NuDB is an insert-only key-value store packaged as a header-only C++11 library, designed by Vinnie Falco (also the author of Boost.Beast) for content-addressable data where the key is a cryptographic digest. It keeps a data file and a separate key file of fixed-size hash buckets, so a lookup costs roughly one SSD read regardless of database size, memory use stays low, inserts are atomic, and the key file can be rebuilt from the data file; there are no updates or deletes, and all keys share one size. It was written for rippled, the XRP Ledger server, which runs it in production as a node-store backend. The code now lives under the C++ Alliance and receives occasional maintenance releases such as 2.0.9 in April 2025.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Feature-complete; the C++ Alliance repository gets occasional fixes (2.0.9, April 2025).",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "ledger"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "C++ Alliance (Vinnie Falco)",
+  "vendorType": "foundation",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "2.0.9",
+    "date": "2025-04-24"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Boost Software License 1.0",
+    "spdx": "BSL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "File format supports databases up to 281 TB; read cost is designed to be independent of size."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "About one SSD read per lookup no matter how large the database grows",
+    "Low, size-independent memory footprint",
+    "Header-only with no separate library to build",
+    "Proven in production in the XRP Ledger's rippled server"
+  ],
+  "weaknesses": [
+    "Append-only: no updates or deletes",
+    "All keys must be the same size",
+    "Only point lookups and full iteration; no range queries"
+  ],
+  "useCases": [
+    "Content-addressable storage keyed by hashes",
+    "Blockchain and ledger node stores",
+    "Write-once archival lookups on SSDs"
+  ],
+  "notIdealFor": [
+    "Mutable records",
+    "Range scans or secondary indexes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "lmdb",
+    "leveldb",
+    "badger",
+    "pebble"
+  ],
+  "tags": [
+    "key-value",
+    "embedded",
+    "c++",
+    "ssd",
+    "append-only",
+    "header-only"
+  ],
+  "links": {
+    "website": "https://github.com/cppalliance/NuDB",
+    "repository": "https://github.com/cppalliance/NuDB",
+    "docs": "http://vinniefalco.github.io/nudb/"
+  },
+  "ids": {
+    "github": "cppalliance/NuDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/cppalliance/NuDB",
+    "https://github.com/vinniefalco/NuDB",
+    "https://dbdb.io/db/nudb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "bedrock",
+  "name": "Bedrock",
+  "aliases": [
+    "Bedrock by Expensify",
+    "BedrockDB"
+  ],
+  "tagline": "Expensify's WAN-replicated SQLite server with Paxos leader election, MySQL protocol and job/cache plugins.",
+  "description": "Bedrock is a networking and distributed-transaction layer that Expensify built on SQLite and runs as the primary database behind its product. Every node holds a full SQLite copy; nodes synchronise a hashed transaction journal (marketed as a 'private blockchain'), use Paxos to elect the highest-priority node as leader, and keep accepting work across data centres and availability zones, with zero-priority 'permafollowers' adding read capacity. Clients connect with any MySQL client or driver, or Bedrock's own text protocol, and functionality comes from plugins such as DB, Jobs (a durable job queue) and Cache. Because plugins run in-process next to SQLite, custom logic avoids network round trips. The C++ codebase is LGPL-licensed and still receives near-daily commits and date-stamped releases.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "queue",
+    "caching"
+  ],
+  "architecture": [
+    "distributed",
+    "primary-replica"
+  ],
+  "developer": "Expensify",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "2026-10-23",
+    "date": "2026-10-23"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL v3",
+    "spdx": "LGPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Every node stores the full dataset; reads scale across nodes and zones while writes go through one elected leader."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (SQLite dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "Bedrock text protocol"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "sqlite"
+  ],
+  "drivers": [
+    "Any MySQL driver",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Multi-datacentre replication with automatic Paxos-based failover and split-brain avoidance",
+    "Full SQLite SQL with in-process plugins that skip network serialisation",
+    "Drop-in MySQL protocol so standard clients and drivers work",
+    "Built-in durable job queue and cache plugins",
+    "Battle-tested as Expensify's production database and actively developed"
+  ],
+  "weaknesses": [
+    "Single-leader writes; no sharding, so the full dataset must fit every node",
+    "Small community outside Expensify and sparse operational documentation",
+    "Plugin development requires C++",
+    "LGPL licence and Linux-only builds"
+  ],
+  "useCases": [
+    "Highly available SQL backend spanning multiple data centres",
+    "Durable job queues alongside relational data",
+    "Teams that like SQLite semantics but need replication and failover"
+  ],
+  "notIdealFor": [
+    "Write-heavy workloads that need horizontal write scaling",
+    "Datasets too large to replicate in full to every node"
+  ],
+  "notableUsers": [
+    "Expensify"
+  ],
+  "alternatives": [
+    "rqlite",
+    "dqlite",
+    "libsql",
+    "cockroachdb",
+    "mysql",
+    "comdb2"
+  ],
+  "tags": [
+    "sqlite",
+    "replication",
+    "paxos",
+    "mysql-protocol",
+    "expensify"
+  ],
+  "links": {
+    "website": "https://bedrockdb.com/",
+    "docs": "https://bedrockdb.com/synchronization.html",
+    "repository": "https://github.com/Expensify/Bedrock",
+    "changelog": "https://github.com/Expensify/Bedrock/releases"
+  },
+  "ids": {
+    "github": "Expensify/Bedrock",
+    "hackerNewsQuery": "Expensify Bedrock"
+  },
+  "brand": {},
+  "sources": [
+    "https://bedrockdb.com/",
+    "https://bedrockdb.com/synchronization.html",
+    "https://bedrockdb.com/mysql.html",
+    "https://github.com/Expensify/Bedrock"
+  ],
+  "lastVerified": "2026-10-27"
+}

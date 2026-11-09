@@ -1,0 +1,174 @@
+{
+  "slug": "blazegraph",
+  "name": "Blazegraph",
+  "aliases": [
+    "Bigdata"
+  ],
+  "tagline": "Abandoned Java RDF/SPARQL store, still known as the engine behind Wikidata Query Service.",
+  "description": "Blazegraph (originally Bigdata) is a Java triple store and graph database from SYSTAP that supports SPARQL 1.1, RDF reification and a Blueprints/TinkerPop API, with an optional GPU-accelerated edition. It became famous as the engine behind the Wikidata Query Service. Development stopped years ago: the last tagged build is 2.1.6 RC from February 2020 and the GitHub repository is archived, so it receives no security fixes. Existing users are migrating to maintained engines such as QLever, Virtuoso, GraphDB or Amazon Neptune, and new projects should not start on it.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Unmaintained since ~2020 (last build 2.1.6 RC, Feb 2020); GitHub repo archived. Migrate to QLever, Virtuoso, GraphDB or Neptune.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "SYSTAP, LLC",
+  "vendorType": "company",
+  "initialRelease": 2006,
+  "latestVersion": {
+    "version": "2.1.6 RC",
+    "date": "2020-02-03"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "No commercial support is offered anymore."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server journal mode in practice; Wikidata runs many replicated copies behind a load balancer."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL",
+    "Gremlin (Blueprints)"
+  ],
+  "apis": [
+    "SPARQL REST API",
+    "Sesame/RDF4J API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Battle-tested at Wikidata scale for years",
+    "Simple single-JAR deployment with a built-in SPARQL workbench",
+    "Supports RDF reification-style statement identifiers for edge metadata"
+  ],
+  "weaknesses": [
+    "Abandoned: no releases since 2020 and the repository is archived",
+    "No security patches, and the dependency stack is outdated",
+    "Known scaling limits that pushed Wikimedia to evaluate replacements"
+  ],
+  "useCases": [
+    "Keeping legacy Wikidata-style deployments running during migration",
+    "Reading historical SPARQL setups"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Security-sensitive production",
+    "Large growing datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "qlever",
+    "virtuoso",
+    "ontotext-graphdb",
+    "amazon-neptune",
+    "apache-jena-tdb",
+    "oxigraph"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "legacy",
+    "wikidata",
+    "unmaintained"
+  ],
+  "links": {
+    "website": "https://blazegraph.com/",
+    "repository": "https://github.com/blazegraph/database",
+    "wikipedia": "https://en.wikipedia.org/wiki/Blazegraph"
+  },
+  "ids": {
+    "github": "blazegraph/database",
+    "stackoverflowTag": "blazegraph",
+    "wikipedia": "Blazegraph",
+    "dockerHub": "lyrasis/blazegraph",
+    "hackerNewsQuery": "Blazegraph"
+  },
+  "brand": {
+    "color": "#1C75BC"
+  },
+  "sources": [
+    "https://github.com/blazegraph/database",
+    "https://en.wikipedia.org/wiki/Blazegraph",
+    "https://repo1.maven.org/maven2/com/blazegraph/bigdata-core/maven-metadata.xml"
+  ],
+  "lastVerified": "2026-10-27"
+}

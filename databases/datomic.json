@@ -1,0 +1,179 @@
+{
+  "slug": "datomic",
+  "name": "Datomic",
+  "aliases": [
+    "Datomic Pro",
+    "Datomic Cloud",
+    "Datomic Local"
+  ],
+  "tagline": "Immutable Datalog database from Nubank where every fact is timestamped and queries run in the app process.",
+  "description": "Datomic stores data as immutable facts (datoms: entity, attribute, value, transaction) and never overwrites them, so any past database value can be queried with Datalog, and the full history is an ordinary query away. A single transactor serialises writes while peers cache index segments and run queries inside the application process, on top of pluggable storage such as DynamoDB, PostgreSQL or Cassandra. Nubank, which acquired Cognitect in 2020, runs it at large scale and made the Datomic binaries free under Apache-2.0 in 2023. It is excellent for audit-heavy domain models in Clojure or Java, and far less common outside the JVM.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "graph"
+  ],
+  "workloads": [
+    "oltp",
+    "event-sourcing",
+    "ledger",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Nubank (Cognitect)",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "1.0.7745",
+    "date": "2026-10-16"
+  },
+  "writtenIn": [
+    "Clojure",
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache-2.0 (binaries only; source not published)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Datomic Pro, Cloud and Local are free to use; you pay only for the underlying storage and compute."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Reads scale with peers; the single transactor caps write throughput."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Datalog",
+    "Pull API"
+  ],
+  "apis": [
+    "Peer library",
+    "Client API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Clojure",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Immutable facts with as-of, since and history queries built in",
+    "Datalog makes recursive and graph-style queries concise",
+    "Queries run in-process on cached indexes, scaling reads with app servers",
+    "Proven at Nubank's scale and now free to use"
+  ],
+  "weaknesses": [
+    "Single transactor limits write throughput",
+    "Closed source despite the Apache-2.0 binary licence",
+    "Ecosystem is largely Clojure; tooling outside the JVM is thin",
+    "Storage grows forever unless you excise data"
+  ],
+  "useCases": [
+    "Financial and banking domain models needing auditability",
+    "Systems that must answer what was known at a given time",
+    "Complex domain graphs in Clojure services"
+  ],
+  "notIdealFor": [
+    "Write-heavy event ingestion",
+    "Teams outside the JVM ecosystem",
+    "Analytics over very large datasets"
+  ],
+  "notableUsers": [
+    "Nubank"
+  ],
+  "alternatives": [
+    "xtdb",
+    "terminusdb",
+    "postgresql",
+    "immudb",
+    "cozodb"
+  ],
+  "tags": [
+    "datalog",
+    "immutable",
+    "clojure",
+    "time-travel",
+    "jvm"
+  ],
+  "links": {
+    "website": "https://www.datomic.com/",
+    "docs": "https://docs.datomic.com/",
+    "changelog": "https://docs.datomic.com/changes/pro.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Datomic"
+  },
+  "ids": {
+    "stackoverflowTag": "datomic",
+    "wikipedia": "Datomic",
+    "hackerNewsQuery": "Datomic"
+  },
+  "brand": {},
+  "sources": [
+    "https://docs.datomic.com/changes/pro.html",
+    "https://www.datomic.com/",
+    "https://en.wikipedia.org/wiki/Datomic"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,169 @@
+{
+  "slug": "kognitio",
+  "name": "Kognitio",
+  "aliases": [
+    "Kognitio Analytical Platform",
+    "Kognitio on Hadoop",
+    "WX2",
+    "White Cross"
+  ],
+  "tagline": "UK in-memory MPP SQL engine for analytics, last offered free on Hadoop; the company was liquidated in 2021.",
+  "description": "Kognitio was a massively parallel, in-memory SQL engine for analytics whose roots go back to White Cross Systems, which shipped a scale-out in-memory analytical appliance in 1992; the two companies merged in 2005. It kept working data in RAM across a cluster of commodity servers and was known for high-concurrency, complex SQL against large data sets, serving retail analytics, telecoms and betting firms. From 2016 it was distributed free as Kognitio on Hadoop (a YARN application), plus standalone-cluster, MapR and cloud editions, with revenue from support. The final 8.2.x releases date from 2020. Kognitio Limited entered creditors' voluntary liquidation in December 2021 and was dissolved in April 2023, and kognitio.com is now a domain for sale.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Kognitio Ltd entered creditors' voluntary liquidation in Dec 2021 and was dissolved on 30 Apr 2023; no releases since 8.2.x (2020).",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Kognitio Ltd (formerly White Cross Systems)",
+  "vendorType": "company",
+  "initialRelease": 1992,
+  "latestVersion": {
+    "version": "8.2.4",
+    "date": "2020-02"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free to use from 2016; paid support)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Software was free to download and use from 2016, with paid support; nothing is offered now."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shared-nothing MPP; one published case study served Tableau users over 9 PB in Hadoop."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "ODBC",
+    "JDBC"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Mature parallel SQL engine with decades of in-memory MPP experience",
+    "High concurrency for BI tools querying large data sets",
+    "Ran directly on Hadoop clusters via YARN, reading HDFS, ORC and Parquet"
+  ],
+  "weaknesses": [
+    "Company liquidated; no updates, security fixes or support",
+    "Closed source, so existing installs cannot be maintained independently",
+    "In-memory design needed large RAM footprints across the cluster"
+  ],
+  "useCases": [
+    "Running legacy installations until migration",
+    "Historical reference for in-memory MPP analytics"
+  ],
+  "notIdealFor": [
+    "Any new analytics deployment",
+    "Environments requiring vendor support"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "exasol",
+    "trino",
+    "clickhouse",
+    "apache-impala",
+    "starrocks",
+    "vertica"
+  ],
+  "tags": [
+    "mpp",
+    "in-memory",
+    "analytics",
+    "hadoop",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20210120042415/https://kognitio.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Kognitio"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20210120042415/https://kognitio.com/",
+    "https://web.archive.org/web/20210120032556/https://kognitio.com/about/",
+    "https://web.archive.org/web/20211204161420/https://kognitio.com/all-downloads/",
+    "https://www.thegazette.co.uk/notice/3955682",
+    "https://find-and-update.company-information.service.gov.uk/company/02127833"
+  ],
+  "lastVerified": "2026-10-27"
+}

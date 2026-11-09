@@ -1,0 +1,210 @@
+{
+  "slug": "questdb",
+  "name": "QuestDB",
+  "aliases": [
+    "QuestDB Enterprise"
+  ],
+  "tagline": "Columnar time-series SQL database built for market data and very high ingest rates.",
+  "description": "QuestDB is an open-source time-series database written in low-GC Java, C++ and Rust, designed for very high ingest rates and fast time-sliced SQL. Its SQL extensions (SAMPLE BY, LATEST ON, ASOF and LT joins) make it popular with trading desks, exchanges and sensor-heavy industries. Data lands in a time-partitioned columnar format, and older partitions can be stored as Parquet. Version 10 (August 2026) added QWP, a binary columnar WebSocket protocol for both ingest and query, and live views for incrementally maintained window results. The open-source build is single-node; QuestDB Enterprise adds replication, RBAC, tiered storage and a BYOC managed option.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "time-series",
+    "financial-tick-data",
+    "real-time-analytics",
+    "iot",
+    "observability"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "QuestDB",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "10.1.0",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Java",
+    "C++",
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (open source); Enterprise is commercial",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open source is free; QuestDB Enterprise (self-managed or BYOC) is sold on contract."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Scales up on one large node; Enterprise replicates via object storage to read replicas and hot standbys."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "QWP (WebSocket)",
+    "InfluxDB line protocol",
+    "PostgreSQL wire protocol",
+    "REST HTTP"
+  ],
+  "compatibleWith": [
+    "postgresql",
+    "influxdb"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "Rust",
+    "C",
+    "C++",
+    "C#",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Millions of rows per second ingest on a single node",
+    "Time-series SQL extensions: SAMPLE BY, LATEST ON, ASOF/LT joins, materialized and live views",
+    "Out-of-order writes are handled without a separate buffering tier",
+    "Parquet partitions keep cold data open to Spark, DuckDB and Polars",
+    "Apache-2.0 core with a strong capital-markets user base"
+  ],
+  "weaknesses": [
+    "No horizontal sharding; open source is a single node",
+    "Replication, RBAC and tiered storage require Enterprise",
+    "No multi-statement transactions; updates are limited compared with Postgres",
+    "Smaller ecosystem than Postgres-based TimescaleDB"
+  ],
+  "useCases": [
+    "Market data and order book analytics",
+    "Trading and risk dashboards",
+    "Industrial and aerospace telemetry",
+    "Crypto exchange tick storage",
+    "Real-time OHLC and VWAP aggregation"
+  ],
+  "notIdealFor": [
+    "General-purpose OLTP",
+    "Full-text log search",
+    "Workloads that need multi-node write scaling"
+  ],
+  "notableUsers": [
+    "B3",
+    "SIX Exchange",
+    "OKX",
+    "Airbus",
+    "Aquis Exchange",
+    "HDFC Bank",
+    "Brevan Howard",
+    "Airtel"
+  ],
+  "alternatives": [
+    "kdb-plus",
+    "timescaledb",
+    "influxdb",
+    "clickhouse",
+    "tdengine",
+    "dolphindb",
+    "arcticdb"
+  ],
+  "tags": [
+    "time-series",
+    "sql",
+    "open-source",
+    "capital-markets",
+    "parquet"
+  ],
+  "links": {
+    "website": "https://questdb.com/",
+    "docs": "https://questdb.com/docs/",
+    "repository": "https://github.com/questdb/questdb",
+    "pricing": "https://questdb.com/pricing/",
+    "changelog": "https://questdb.com/release-notes/",
+    "wikipedia": "https://en.wikipedia.org/wiki/QuestDB"
+  },
+  "ids": {
+    "github": "questdb/questdb",
+    "stackoverflowTag": "questdb",
+    "wikipedia": "QuestDB",
+    "dockerHub": "questdb/questdb",
+    "npm": "@questdb/nodejs-client",
+    "pypi": "questdb",
+    "hackerNewsQuery": "QuestDB"
+  },
+  "brand": {
+    "color": "#D14671"
+  },
+  "sources": [
+    "https://github.com/questdb/questdb/releases",
+    "https://questdb.com/customers/",
+    "https://questdb.com/blog/questdb-10-release/"
+  ],
+  "lastVerified": "2026-10-27"
+}

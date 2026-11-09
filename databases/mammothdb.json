@@ -1,0 +1,160 @@
+{
+  "slug": "mammothdb",
+  "name": "MammothDB",
+  "aliases": [
+    "Mammoth DB",
+    "MammothDB Storm"
+  ],
+  "tagline": "Bulgarian MPP SQL analytics engine over Hadoop with a MySQL front end; acquired by MariaDB in 2018.",
+  "description": "MammothDB, founded in Sofia in 2012, built a low-cost shared-nothing data warehouse on commodity Hadoop clusters. Clients connected to a MySQL front-end instance; incoming SQL was rewritten into per-node fragments executed against local column-oriented engines (Infobright Community Edition by default), with partial results combined through Hadoop MapReduce. Small dimension tables were replicated to every node and fact tables hash-partitioned, and it worked with ODBC/JDBC reporting tools such as Excel, Cognos, MicroStrategy and SSAS. It was offered on-premises and as a cloud data-warehouse service (MammothDB Storm, 50 GB to 50 TB) and partnered with MapR. MariaDB Corporation acquired the company in March 2018 to bolster MariaDB AX, and the product was folded into MariaDB's analytics work.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by MariaDB Corporation in March 2018 and folded into MariaDB AX/ColumnStore efforts; no longer sold separately.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "MammothDB (Sofia, Bulgaria)",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "MySQL front end with Infobright local engines on Hadoop",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold as a cloud data-warehouse service and on-premises licence; no longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Marketed for 50 GB to 50 TB; rows hash-partitioned across Hadoop nodes."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL protocol",
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Standard SQL over Hadoop with interactive response times for BI tools",
+    "MySQL wire compatibility meant existing ODBC/JDBC tools just connected",
+    "Columnar local engines gave around 8:1 compression on warehouse data",
+    "Much cheaper than appliance data warehouses of its time"
+  ],
+  "weaknesses": [
+    "Discontinued after the 2018 acquisition",
+    "Not transactional; designed for batch-loaded analytics only",
+    "Complex stack (MySQL + Infobright + Hadoop) to operate"
+  ],
+  "useCases": [
+    "Historical reference for SQL-on-Hadoop warehouse designs",
+    "Background on MariaDB's analytics acquisitions"
+  ],
+  "notIdealFor": [
+    "Any new deployment: the product is unavailable",
+    "Transactional workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mariadb",
+    "trino",
+    "clickhouse",
+    "apache-doris",
+    "starrocks",
+    "greenplum"
+  ],
+  "tags": [
+    "mpp",
+    "hadoop",
+    "data-warehouse",
+    "mysql-compatible",
+    "acquired"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2015/http://www.mammothdb.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "MammothDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://techcrunch.com/2018/03/27/mariadb-acquires-business-analytics-service-mammothdb/",
+    "https://web.archive.org/web/2016/https://wiki.mammothdb.com/_export/xhtml/engine",
+    "https://web.archive.org/web/2015/http://www.mammothdb.com/",
+    "https://dbdb.io/db/mammothdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

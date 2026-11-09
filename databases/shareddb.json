@@ -1,0 +1,141 @@
+{
+  "slug": "shareddb",
+  "name": "SharedDB",
+  "aliases": [
+    "Shared DB (ETH Zurich)"
+  ],
+  "tagline": "ETH Zurich prototype (VLDB 2012) that runs batches of concurrent queries through one shared, always-on plan.",
+  "description": "SharedDB, by Georgios Giannikis, Gustavo Alonso and Donald Kossmann at ETH Zurich's Systems Group, inverted the query-at-a-time model. Instead of optimising each statement separately, it compiles the whole workload into one global plan of shared operators, queues incoming queries and updates into batches, and pushes each batch through that plan so a single join or scan serves hundreds of queries, with results routed back by query ID. That caps the work per batch regardless of load, which gives predictable response times at high throughput, at the cost of extra work when the system is lightly loaded. Built on the Crescando shared-scan storage manager, it reported about twice the TPC-W throughput of a leading commercial database and nearly eight times MySQL's. It remained a research prototype.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype from ETH Zurich (about 2012-2014); never released as a product. Its shared-execution ideas inform work on batch and multi-query processing.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "htap"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory"
+  ],
+  "developer": "ETH Zurich Systems Group",
+  "vendorType": "academic",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "basedOn": "Crescando",
+  "license": {
+    "type": "proprietary",
+    "name": "Not publicly released (research prototype)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Research prototype; no public distribution."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Optimised for throughput and latency guarantees under heavy concurrent load rather than data volume."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One global plan shares scans and joins across hundreds of concurrent queries",
+    "Bounded work per batch gives predictable latency under heavy load",
+    "Handles OLTP, OLAP and mixed workloads with the same mechanism",
+    "Reported roughly 2x a commercial RDBMS and 8x MySQL on TPC-W"
+  ],
+  "weaknesses": [
+    "Does extra, wasted work at low load compared with query-at-a-time engines",
+    "Workload must be known in advance to build the global plan",
+    "No public code or release"
+  ],
+  "useCases": [
+    "Research on shared and batch query execution",
+    "Background for designing systems with strict latency SLAs under high concurrency"
+  ],
+  "notIdealFor": [
+    "Any practical deployment: no software is available"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "singlestore",
+    "volt-active-data",
+    "postgresql"
+  ],
+  "tags": [
+    "research",
+    "eth-zurich",
+    "shared-execution",
+    "multi-query-optimization"
+  ],
+  "links": {
+    "website": "https://vldb.org/pvldb/vol5/p526_georgiosgiannikis_vldb2012.pdf"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://vldb.org/pvldb/vol5/p526_georgiosgiannikis_vldb2012.pdf",
+    "https://dbdb.io/db/shareddb"
+  ],
+  "lastVerified": "2026-10-27"
+}

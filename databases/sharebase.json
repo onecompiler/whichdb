@@ -1,0 +1,145 @@
+{
+  "slug": "sharebase",
+  "name": "ShareBase",
+  "aliases": [
+    "Britton Lee IDM",
+    "Britton Lee Intelligent Database Machine",
+    "ShareBase II"
+  ],
+  "tagline": "Britton Lee's relational database machines, built by Ingres veterans; absorbed by Teradata in 1990.",
+  "description": "ShareBase was the late name of Britton Lee, Inc., founded in 1979 by David Britton, Geoffrey Lee and members of Berkeley's Ingres team, including Robert Epstein, Michael Ubell and Paula Hawthorn. The company sold database machines: dedicated back-end computers such as the Intelligent Database Machine (IDM) that ran a relational engine on special-purpose hardware and served queries to host systems like DEC VAXes, PCs, Macs and Unix workstations, an early form of client-server database. By 1989 the line comprised ShareBase I and the client/server ShareBase II on RISC/ECL database processors. Epstein left to co-found Sybase, the company renamed itself ShareBase Corporation in 1989, and Teradata acquired it in June 1990. It is a historical system that shaped both Sybase and the database-appliance idea.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Teradata in June 1990 and folded into its product line; ShareBase products have not been sold for decades.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Britton Lee, Inc. (renamed ShareBase Corporation)",
+  "vendorType": "company",
+  "initialRelease": 1979,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (hardware and software)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold as database server hardware with software; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "1989-era Server/300 supported up to 50 databases, 200 concurrent users and a few GB of disk."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early commercial client-server relational database, decoupling the DBMS from host computers",
+    "Dedicated database processors offloaded query work from minicomputers",
+    "Served a wide mix of clients from PCs and Macs to VAX and IBM mainframes"
+  ],
+  "weaknesses": [
+    "Proprietary hardware became uncompetitive as general-purpose servers improved",
+    "Products discontinued after the 1990 Teradata acquisition"
+  ],
+  "useCases": [
+    "History of database machines and client-server databases",
+    "Background on the people and ideas behind Sybase and Teradata"
+  ],
+  "notIdealFor": [
+    "Any practical workload today"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "teradata-vantage",
+    "sap-ase",
+    "ingres",
+    "oracle-exadata"
+  ],
+  "tags": [
+    "database-machine",
+    "historical",
+    "ingres",
+    "teradata",
+    "acquired"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/Britton_Lee,_Inc.",
+    "wikipedia": "https://en.wikipedia.org/wiki/Britton_Lee,_Inc."
+  },
+  "ids": {
+    "wikipedia": "Britton Lee, Inc.",
+    "hackerNewsQuery": "Britton Lee database machine"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Britton_Lee,_Inc.",
+    "https://dbdb.io/db/sharebase",
+    "https://www.techmonitor.ai/hardware/teradata_to_buy_sharebase_formerly_britton_lee"
+  ],
+  "lastVerified": "2026-10-27"
+}

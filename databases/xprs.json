@@ -1,0 +1,140 @@
+{
+  "slug": "xprs",
+  "name": "XPRS",
+  "aliases": [
+    "eXtended Postgres on Raid and Sprite"
+  ],
+  "tagline": "1988 Berkeley research DBMS: POSTGRES on RAID disks and the Sprite OS for parallel, highly available queries.",
+  "description": "XPRS (eXtended Postgres on Raid and Sprite) was a late-1980s UC Berkeley project led by Michael Stonebraker, Randy Katz, David Patterson and John Ousterhout. It set out to show that a general-purpose DBMS on a general-purpose operating system and a shared-memory multiprocessor could match specialised systems in transaction processing, complex ad-hoc queries and large objects at once. The design combined a modified POSTGRES, the Sprite network OS and RAID disk arrays, with a fast-path interface, special concurrency control, a two-dimensional file system and intra-query parallelism. Its parallel query optimisation work, notably by Wei Hong, and its pairing with RAID made it influential, though it never became a product.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Late-1980s research prototype at UC Berkeley; never released as a product. Ideas carried into parallel query optimisation and POSTGRES lineage.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "olap"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "University of California, Berkeley",
+  "vendorType": "academic",
+  "initialRelease": 1988,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "POSTGRES",
+  "license": {
+    "type": "proprietary",
+    "name": "Not publicly released (research prototype)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never sold or distributed as a product."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Targeted shared-memory multiprocessors such as the Sequent Symmetry with RAID storage."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "POSTQUEL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early demonstration of intra-query parallelism on shared-memory multiprocessors",
+    "Co-designed DBMS, operating system and RAID storage in one research effort",
+    "Influential work on two-phase parallel query optimisation"
+  ],
+  "weaknesses": [
+    "Research prototype only; no code or product available",
+    "Tied to 1980s hardware and the Sprite OS"
+  ],
+  "useCases": [
+    "Studying the history of parallel database systems",
+    "Background reading for query parallelism courses"
+  ],
+  "notIdealFor": [
+    "Any practical deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "gamma",
+    "c-store",
+    "mariposa"
+  ],
+  "tags": [
+    "research",
+    "berkeley",
+    "postgres",
+    "parallel",
+    "historical"
+  ],
+  "links": {
+    "website": "http://www.vldb.org/conf/1988/P318.PDF"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://www.vldb.org/conf/1988/P318.PDF",
+    "https://dl.acm.org/citation.cfm?id=671803",
+    "https://dbdb.io/db/xprs"
+  ],
+  "lastVerified": "2026-10-27"
+}

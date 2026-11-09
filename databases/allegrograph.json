@@ -1,0 +1,191 @@
+{
+  "slug": "allegrograph",
+  "name": "AllegroGraph",
+  "aliases": [],
+  "tagline": "Lisp-built RDF and document knowledge graph with vector store, reasoning and LLM agents.",
+  "description": "AllegroGraph from Franz Inc. is a commercial RDF triplestore that also stores JSON-LD documents and vector embeddings, positioned as a neuro-symbolic AI platform. It supports SPARQL 1.1, Prolog rules, RDFS++ reasoning, SHACL, geospatial and temporal queries, and FedShard for distributing a knowledge graph across shards. Version 9.0 (May 2026) introduced GraphTalker, an agent that iteratively writes and runs SPARQL from natural language, and 9.1 followed in October 2026. It suits enterprises building knowledge graphs with heavy reasoning or LLM integration; the free edition is capped at a few million triples.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "rag",
+    "vector-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Franz Inc.",
+  "vendorType": "company",
+  "initialRelease": 2004,
+  "latestVersion": {
+    "version": "9.1.0",
+    "date": "2026-10-15"
+  },
+  "writtenIn": [
+    "Common Lisp"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free edition with triple limit)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free edition limited in triple count; Enterprise and AllegroGraph Cloud are priced by quote."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "AllegroGraph Cloud",
+      "provider": "Franz Inc.",
+      "url": "https://allegrograph.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "FedShard partitions knowledge graphs across shards; multi-master replication supports HA."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SPARQL",
+    "Prolog",
+    "Lisp"
+  ],
+  "apis": [
+    "HTTP REST",
+    "SPARQL protocol",
+    "MCP server"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Common Lisp"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Combines RDF, JSON-LD documents and vector embeddings in one store",
+    "Prolog rules and RDFS++ reasoning for rich symbolic inference",
+    "FedShard distributes very large knowledge graphs across shards",
+    "Built-in geospatial and temporal reasoning over events",
+    "GraphTalker agent turns natural-language questions into iterative SPARQL"
+  ],
+  "weaknesses": [
+    "Proprietary with opaque pricing and a restrictive free tier",
+    "Lisp-based internals and Prolog are unfamiliar to most teams",
+    "Smaller ecosystem and community than Neo4j or GraphDB"
+  ],
+  "useCases": [
+    "Neuro-symbolic AI and GraphRAG",
+    "Healthcare and life-sciences knowledge graphs",
+    "Intelligence and event analytics with spatio-temporal reasoning",
+    "Entity-event knowledge graphs"
+  ],
+  "notIdealFor": [
+    "Simple property-graph apps",
+    "Fully open-source stacks",
+    "High-volume OLTP"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "stardog",
+    "ontotext-graphdb",
+    "virtuoso",
+    "rdfox",
+    "neo4j",
+    "amazon-neptune"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "prolog",
+    "vector",
+    "neuro-symbolic",
+    "knowledge-graph"
+  ],
+  "links": {
+    "website": "https://allegrograph.com/",
+    "docs": "https://franz.com/agraph/support/documentation/",
+    "changelog": "https://franz.com/agraph/support/documentation/release-notes.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/AllegroGraph"
+  },
+  "ids": {
+    "stackoverflowTag": "allegrograph",
+    "wikipedia": "AllegroGraph",
+    "dockerHub": "franzinc/agraph",
+    "pypi": "agraph-python",
+    "hackerNewsQuery": "AllegroGraph"
+  },
+  "brand": {
+    "color": "#E2231A"
+  },
+  "sources": [
+    "https://allegrograph.com/press_room/franz-inc-launches-allegrograph-9-0-with-graphtalker-the-ai-agent-for-enterprise-knowledge-graphs/",
+    "https://franz.com/agraph/support/documentation/release-notes.html",
+    "https://hub.docker.com/r/franzinc/agraph"
+  ],
+  "lastVerified": "2026-10-27"
+}

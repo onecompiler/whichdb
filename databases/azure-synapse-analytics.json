@@ -1,0 +1,181 @@
+{
+  "slug": "azure-synapse-analytics",
+  "name": "Azure Synapse Analytics",
+  "aliases": [
+    "Azure SQL Data Warehouse",
+    "Synapse",
+    "Synapse dedicated SQL pool"
+  ],
+  "tagline": "Azure analytics service combining MPP dedicated SQL pools, serverless SQL and Spark.",
+  "description": "Azure Synapse Analytics, the 2019 rebrand of Azure SQL Data Warehouse, bundles a provisioned MPP warehouse (dedicated SQL pools with clustered columnstore and hash distribution), a pay-per-TB serverless SQL endpoint over the data lake, Apache Spark pools and pipelines in one workspace. It still runs many large enterprise warehouses, but Microsoft now steers new analytics investment to Microsoft Fabric, and parts of Synapse (Data Explorer pools, Synapse Link for Cosmos DB) have retirement dates. Treat it as a stable platform for existing estates rather than a starting point for new projects.",
+  "productType": "managed-service",
+  "status": "maintenance",
+  "statusNote": "No retirement date for Synapse itself, but Microsoft directs new investment to Microsoft Fabric; Data Explorer pools retired Oct 2025 and Synapse Link for Cosmos DB ends 2029.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "serverless"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "C++",
+    "C#"
+  ],
+  "basedOn": "SQL Server (Parallel Data Warehouse)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "startingPrice": "Serverless SQL $5 per TB processed; dedicated pools from DW100c hourly",
+    "notes": "Dedicated SQL pools billed per DWU-hour and can be paused; serverless SQL billed per TB scanned; Spark pools per vCore-hour."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Dedicated pools spread data across 60 distributions and scale up to DW30000c; geo-backups enable cross-region restore."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "T-SQL",
+    "Spark SQL",
+    "Python (PySpark)",
+    "KQL"
+  ],
+  "apis": [
+    "TDS (SQL Server protocol)",
+    "ODBC",
+    "JDBC",
+    "REST API"
+  ],
+  "compatibleWith": [
+    "sql-server"
+  ],
+  "drivers": [
+    ".NET",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Mature MPP engine with clustered columnstore, workload management and result-set caching",
+    "Serverless SQL queries Parquet/Delta/CSV in ADLS with no infrastructure",
+    "Dedicated pools can be paused to stop compute charges",
+    "Familiar T-SQL and SQL Server tooling (SSMS, SSDT)",
+    "Tight integration with Azure AD, Purview and Power BI"
+  ],
+  "weaknesses": [
+    "Microsoft's strategic focus has moved to Fabric; little new feature work",
+    "Dedicated pools need manual distribution, indexing and scaling decisions",
+    "Limited T-SQL surface compared with SQL Server",
+    "Concurrency caps on dedicated pools (max 128 concurrent queries)"
+  ],
+  "useCases": [
+    "Existing Azure enterprise data warehouses",
+    "Ad-hoc SQL over data lake files",
+    "Lift-and-shift from SQL Server PDW/APS"
+  ],
+  "notIdealFor": [
+    "New greenfield analytics platforms on Azure (prefer Fabric)",
+    "Low-latency or high-concurrency apps",
+    "Multi-cloud deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "microsoft-fabric-warehouse",
+    "databricks-sql",
+    "snowflake",
+    "google-bigquery",
+    "amazon-redshift"
+  ],
+  "tags": [
+    "cloud-data-warehouse",
+    "azure",
+    "t-sql",
+    "mpp",
+    "spark"
+  ],
+  "links": {
+    "website": "https://azure.microsoft.com/products/synapse-analytics/",
+    "docs": "https://learn.microsoft.com/azure/synapse-analytics/",
+    "pricing": "https://azure.microsoft.com/pricing/details/synapse-analytics/"
+  },
+  "ids": {
+    "stackoverflowTag": "azure-synapse",
+    "hackerNewsQuery": "Azure Synapse"
+  },
+  "brand": {},
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/synapse-analytics/overview-what-is",
+    "https://mc.merill.net/message/AZ484968",
+    "https://mc.merill.net/message/AZ558560",
+    "https://www.directionsonmicrosoft.com/roadmaps/ref/synapse-analytics-roadmap/"
+  ],
+  "lastVerified": "2026-10-27"
+}

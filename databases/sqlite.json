@@ -1,0 +1,227 @@
+{
+  "slug": "sqlite",
+  "name": "SQLite",
+  "aliases": [
+    "SQLite3"
+  ],
+  "tagline": "The in-process SQL engine that ships in every phone, browser and OS: one file, zero servers.",
+  "description": "SQLite is a self-contained C library that implements a full transactional SQL database in a single cross-platform file. It is the most widely deployed database in the world, embedded in Android, iOS, every major browser, desktop apps and countless devices, and it has become a serious option for server-side apps too, thanks to WAL mode, litestream-style replication and the libSQL/Turso ecosystem. The code is in the public domain and maintained by a small team at Hwaci that does not accept outside patches, with an exhaustive test suite backing its reliability. It is ideal when the database lives next to the application; it is not a networked multi-writer server.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline",
+    "edge",
+    "local-first",
+    "configuration",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "D. Richard Hipp / Hwaci (SQLite Consortium)",
+  "vendorType": "company",
+  "initialRelease": 2000,
+  "latestVersion": {
+    "version": "3.54.1",
+    "date": "2026-10-16"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Public Domain",
+    "spdx": "blessing"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Public domain. Optional paid support, encryption extension (SEE) and Consortium membership from Hwaci."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios",
+      "browser",
+      "wasm",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Cloudflare D1",
+      "provider": "Cloudflare",
+      "url": "https://developers.cloudflare.com/d1/"
+    },
+    {
+      "name": "Turso Cloud",
+      "provider": "Turso",
+      "url": "https://turso.tech/"
+    },
+    {
+      "name": "SQLite Cloud",
+      "provider": "SQLite Cloud Inc.",
+      "url": "https://sqlitecloud.io/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Databases up to terabytes are possible, but one writer at a time; replication needs external tools (Litestream, LiteFS, rqlite)."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "C",
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "C#",
+    "Swift",
+    "Kotlin",
+    "PHP",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Zero configuration: the whole database is one portable file",
+    "Extremely well tested (100% branch coverage, billions of deployments)",
+    "In-process calls avoid network round trips, so simple reads take microseconds",
+    "FTS5, JSON functions and R*Tree indexes built into the amalgamation",
+    "Public domain with a stable file format guaranteed through 2050"
+  ],
+  "weaknesses": [
+    "Single writer at a time; write-heavy concurrent workloads serialize",
+    "No built-in network server, user accounts or replication",
+    "Dynamic typing by default surprises people used to strict schemas (STRICT tables help)",
+    "ALTER TABLE support is limited compared with server databases"
+  ],
+  "useCases": [
+    "Mobile and desktop application storage",
+    "Embedded devices and IoT",
+    "Local-first apps and offline caches",
+    "Test fixtures and data interchange files",
+    "Low-to-moderate traffic web apps on a single server"
+  ],
+  "notIdealFor": [
+    "Many concurrent writers across processes or hosts",
+    "Multi-tenant client-server deployments needing access control",
+    "Distributed or multi-region databases"
+  ],
+  "notableUsers": [
+    "Apple",
+    "Google",
+    "Microsoft",
+    "Mozilla",
+    "Airbus",
+    "Expensify"
+  ],
+  "alternatives": [
+    "libsql",
+    "turso-database",
+    "duckdb",
+    "h2",
+    "realm",
+    "postgresql",
+    "cloudflare-d1"
+  ],
+  "tags": [
+    "embedded",
+    "serverless",
+    "public-domain",
+    "mobile",
+    "file-based"
+  ],
+  "links": {
+    "website": "https://sqlite.org/",
+    "docs": "https://sqlite.org/docs.html",
+    "repository": "https://sqlite.org/src/",
+    "changelog": "https://sqlite.org/changes.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/SQLite"
+  },
+  "ids": {
+    "github": "sqlite/sqlite",
+    "stackoverflowTag": "sqlite",
+    "wikipedia": "SQLite",
+    "npm": [
+      "better-sqlite3",
+      "sqlite3"
+    ],
+    "crates": "rusqlite",
+    "hackerNewsQuery": "SQLite"
+  },
+  "brand": {
+    "color": "#003B57",
+    "simpleIcon": "sqlite"
+  },
+  "sources": [
+    "https://sqlite.org/news.html",
+    "https://sqlite.org/copyright.html",
+    "https://sqlite.org/mostdeployed.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

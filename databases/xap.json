@@ -1,0 +1,163 @@
+{
+  "slug": "xap",
+  "name": "GigaSpaces XAP",
+  "aliases": [
+    "XAP",
+    "eXtreme Application Platform",
+    "GigaSpaces"
+  ],
+  "tagline": "GigaSpaces' Java in-memory data grid with space-based processing, SQL queries and tiered storage.",
+  "description": "XAP is the in-memory data grid and application platform from GigaSpaces, a New York-headquartered company founded in 2000. It grew out of the JavaSpaces 'space-based architecture' model: data objects and the code that processes them are co-located in partitioned, replicated in-memory spaces, with event-driven processing units, transactions, SQL-style queries and a mirror service that persists changes to a backing database. Tiered storage lets cold data spill from RAM to SSD. XAP 6.0 introduced the name in 2007; the product is now the core of GigaSpaces' Smart DIH (digital integration hub) and of its Zaphira layer for AI-agent access to enterprise systems, and it is sold under commercial licences.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "oltp",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "GigaSpaces Technologies",
+  "vendorType": "company",
+  "initialRelease": 2007,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Partitioned spaces with backup partitions scale out across a cluster."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (space queries)",
+    "Java API"
+  ],
+  "apis": [
+    "Java API",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Co-locates business logic with partitioned data for very low latency",
+    "Space-based architecture with event-driven processing units built in",
+    "Write-behind mirror keeps a relational system of record in sync",
+    "Long track record in trading, payments and retail systems"
+  ],
+  "weaknesses": [
+    "Proprietary and sales-led; the former open-source edition is no longer maintained",
+    "Programming model (spaces, processing units) has a learning curve",
+    "Vendor focus has shifted to Smart DIH and AI products built on XAP"
+  ],
+  "useCases": [
+    "Low-latency trading and risk calculations",
+    "Digital integration hub in front of mainframe or legacy systems",
+    "Large-scale caching with co-located processing"
+  ],
+  "notIdealFor": [
+    "Small teams wanting a simple open-source cache",
+    "Durable primary storage without a backing database"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "hazelcast",
+    "apache-ignite",
+    "gridgain",
+    "oracle-coherence",
+    "vmware-tanzu-gemfire",
+    "infinispan"
+  ],
+  "tags": [
+    "in-memory-data-grid",
+    "java",
+    "space-based-architecture",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.gigaspaces.com/",
+    "docs": "https://docs.gigaspaces.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/GigaSpaces"
+  },
+  "ids": {
+    "wikipedia": "GigaSpaces",
+    "hackerNewsQuery": "GigaSpaces XAP"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.gigaspaces.com/",
+    "https://en.wikipedia.org/wiki/GigaSpaces",
+    "https://insidehpc.com/2007/06/gigaspaces-launches-extreme-application-platform/",
+    "https://docs.gigaspaces.com/17.1/landing.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

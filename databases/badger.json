@@ -1,0 +1,167 @@
+{
+  "slug": "badger",
+  "name": "Badger",
+  "aliases": [
+    "BadgerDB"
+  ],
+  "tagline": "Pure-Go LSM key-value store that separates keys from values to cut write amplification.",
+  "description": "Badger is an embeddable, persistent key-value store written in pure Go, created by Dgraph Labs as the storage engine for the Dgraph graph database. It follows the WiscKey design: keys live in the LSM tree while larger values go to a value log, which keeps the tree small and reduces write amplification on SSDs. It offers serializable snapshot-isolation transactions, TTLs, encryption at rest and a change subscription API, without cgo. Ownership passed from Dgraph Labs to Hypermode and, in October 2025, to Istari Digital with the rest of Dgraph; releases have continued in the v4 line. Value-log garbage collection needs attention in write-heavy deployments.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Dgraph (Istari Digital)",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "4.9.6",
+    "date": "2026-08-05"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process library; terabyte-scale stores are used under Dgraph."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Go API"
+  ],
+  "apis": [
+    "Go API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Go with no cgo, so builds and cross-compiles cleanly",
+    "Key-value separation reduces write amplification for larger values",
+    "Serializable snapshot-isolation transactions with MVCC",
+    "Built-in TTL, encryption at rest and an in-memory mode",
+    "Subscribe API streams key changes to the application"
+  ],
+  "weaknesses": [
+    "Value-log garbage collection must be scheduled and tuned",
+    "Go-only API",
+    "Ownership changed twice since 2023 (Hypermode, then Istari Digital)",
+    "Higher memory use than B-tree stores like bbolt"
+  ],
+  "useCases": [
+    "Storage layer for Go databases and services",
+    "Embedded state for Go daemons and CLIs",
+    "Write-heavy local key-value workloads with medium-to-large values"
+  ],
+  "notIdealFor": [
+    "Non-Go applications",
+    "Tiny memory-constrained devices",
+    "Distributed storage without an extra layer"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "bbolt",
+    "pebble",
+    "rocksdb",
+    "nutsdb",
+    "lmdb"
+  ],
+  "tags": [
+    "go",
+    "lsm-tree",
+    "wisckey",
+    "embedded",
+    "dgraph"
+  ],
+  "links": {
+    "website": "https://github.com/dgraph-io/badger",
+    "docs": "https://pkg.go.dev/github.com/dgraph-io/badger/v4",
+    "repository": "https://github.com/dgraph-io/badger",
+    "changelog": "https://github.com/dgraph-io/badger/releases"
+  },
+  "ids": {
+    "github": "dgraph-io/badger",
+    "stackoverflowTag": "badgerdb",
+    "hackerNewsQuery": "BadgerDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/dgraph-io/badger/releases",
+    "https://www.istaridigital.com/resources/istari-acquires-dgraph",
+    "https://pkg.go.dev/github.com/dgraph-io/badger/v4"
+  ],
+  "lastVerified": "2026-10-27"
+}

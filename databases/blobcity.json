@@ -1,0 +1,169 @@
+{
+  "slug": "blobcity",
+  "name": "BlobCity",
+  "aliases": [
+    "BlobCity DB",
+    "InfinitumDB"
+  ],
+  "tagline": "AGPL Java 'all-in-one' database that ingested JSON, XML, CSV and office files into SQL-queryable collections.",
+  "description": "BlobCity DB, from India's BlobCity iSolutions and earlier called InfinitumDB, pitched itself as an all-in-one data lake database: you could push JSON, XML, CSV, plain text, logs, PDF, Word, Excel, images and other formats (17 in all) into one collection, and it would infer and merge columns so the lot could be queried with SQL over REST, ODBC or JDBC. It ran two storage engines, an in-memory one for real-time analytics and an on-disk one for larger data, and let users run Java or Scala stored procedures inside the database. The engine was open-sourced under AGPLv3 on GitHub, with Docker images, but the last release was 1.7.10 in October 2019 and blobcity.com has since been repurposed for an unrelated crypto/AI venture.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No release since 1.7.10 (Oct 2019) and the company website now promotes an unrelated product; effectively abandoned.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "BlobCity iSolutions Pvt. Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "1.7.10",
+    "date": "2019-10-30"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3",
+    "spdx": "AGPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server; the in-memory engine is bounded by RAM."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "REST API",
+    "ODBC",
+    "JDBC",
+    "TCP console"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Ingests many file formats into one SQL-queryable collection with automatic schema merging",
+    "Choice of in-memory or on-disk storage engine per collection",
+    "Java and Scala stored procedures run next to the data"
+  ],
+  "weaknesses": [
+    "Abandoned since 2019; vendor has moved on",
+    "AGPL licence and a very small user base",
+    "No clustering or replication"
+  ],
+  "useCases": [
+    "Experiments with schema-on-ingest over mixed file formats",
+    "Legacy installations planning migration"
+  ],
+  "notIdealFor": [
+    "New data lake or analytics projects",
+    "Production systems needing support"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "clickhouse",
+    "mongodb",
+    "apache-doris",
+    "trino"
+  ],
+  "tags": [
+    "multi-format",
+    "data-lake",
+    "java",
+    "agpl",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/blobcity/db",
+    "repository": "https://github.com/blobcity/db",
+    "changelog": "https://github.com/blobcity/db/releases"
+  },
+  "ids": {
+    "github": "blobcity/db",
+    "dockerHub": "blobcity/db"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/blobcity/db",
+    "https://github.com/blobcity/db/releases/tag/1.7.10",
+    "https://dbdb.io/db/blobcity",
+    "https://hub.docker.com/r/blobcity/db"
+  ],
+  "lastVerified": "2026-10-27"
+}

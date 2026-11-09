@@ -1,0 +1,152 @@
+{
+  "slug": "histore",
+  "name": "Histore",
+  "aliases": [],
+  "tagline": "200-byte browser key-value store that persists data in the page's history.state.",
+  "description": "Histore is a tiny JavaScript library by Jason Miller (developit) that turns the browser's navigation state into a key-value store. Values are written with history.replaceState, so they survive reloads of the same tab and back/forward navigation but, unlike localStorage or sessionStorage, are not shared with other tabs. Objects are cloned with the structured clone algorithm, and the README cites room for about 640 KB of data. The whole library is about 200 bytes and exposes only get and set. It shipped as 1.0.0 in May 2018 and has not changed since. It is a neat trick for per-tab UI state, not a database for application data.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Single 1.0.0 release in May 2018 and no commits since; still installable from npm.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "session-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Jason Miller (developit)",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "1.0.0",
+    "date": "2018-05-07"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by the browser's history-state size limit (the README cites about 640 KB)."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "get/set API"
+  ],
+  "apis": [
+    "JavaScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "About 200 bytes with no dependencies",
+    "State is scoped to one tab, unlike localStorage",
+    "Survives reloads and back/forward navigation"
+  ],
+  "weaknesses": [
+    "Tiny capacity",
+    "No queries, indexes or durability beyond the tab's history entry",
+    "Unmaintained since 2018"
+  ],
+  "useCases": [
+    "Per-tab UI state such as form drafts or scroll position",
+    "Demonstrating unusual browser storage APIs"
+  ],
+  "notIdealFor": [
+    "Application data",
+    "Anything shared across tabs or devices"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "indexeddb",
+    "dexie",
+    "lokijs",
+    "tinybase"
+  ],
+  "tags": [
+    "javascript",
+    "browser",
+    "key-value",
+    "tiny"
+  ],
+  "links": {
+    "website": "https://github.com/developit/histore",
+    "repository": "https://github.com/developit/histore"
+  },
+  "ids": {
+    "github": "developit/histore",
+    "npm": "histore"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/developit/histore",
+    "https://www.npmjs.com/package/histore"
+  ],
+  "lastVerified": "2026-10-27"
+}

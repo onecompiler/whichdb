@@ -1,0 +1,113 @@
+{
+  "slug": "dbmaker",
+  "name": "DBMaker",
+  "aliases": ["SYSCOM DBMaker", "凌群 DBMaker"],
+  "tagline": "SYSCOM's ODBC-native SQL database from Taiwan, known for letting COBOL programs use SQL tables.",
+  "description": "DBMaker is a commercial relational database developed by Taiwan's SYSCOM Group since the mid-1990s and still actively released: version 5.4.8 arrived in July 2026, adding AES network encryption and per-user connection limits. Its ODBC interface is native rather than a translation layer, it ships JDBC drivers, and it supports SQL stored procedures, triggers, large-object and file-object storage, online backup and crash recovery. The feature that keeps it relevant is DCI, a COBOL interface that maps AcuCOBOL, isCOBOL and Micro Focus file I/O (READ, WRITE, REWRITE, DELETE) straight onto database tables, so legacy indexed-file COBOL applications can move to SQL without rewriting their data access. Outside Taiwan and its partner network it is rarely seen.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp", "content-management"],
+  "architecture": ["client-server", "single-node"],
+  "developer": "SYSCOM Group (Syscom Computer Engineering Co.)",
+  "vendorType": "company",
+  "initialRelease": 1994,
+  "latestVersion": { "version": "5.4.8", "date": "2026-07-28" },
+  "writtenIn": ["Unknown"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["enterprise-contract"],
+    "freeTier": false,
+    "notes": "Commercial licences through SYSCOM and partners; a 90-day evaluation edition is downloadable."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows", "linux"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server engine scaled vertically; aimed at departmental and ISV-embedded deployments."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["ODBC", "JDBC", "DCI (COBOL interface)"],
+  "compatibleWith": [],
+  "drivers": ["C", "Java", "COBOL", "PHP", "Perl"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "DCI lets AcuCOBOL, isCOBOL and Micro Focus programs keep their file-I/O verbs while data lives in SQL tables",
+    "ODBC is the native call interface, so ODBC tools connect without an extra translation layer",
+    "Stores multimedia as BLOBs or as database-managed external file objects",
+    "Steady release cadence: 5.4.7 in June 2025 and 5.4.8 in July 2026"
+  ],
+  "weaknesses": [
+    "Tiny footprint outside Taiwan; English documentation and community help are thin",
+    "No clustering, sharding or managed cloud offering",
+    "Proprietary licensing with prices only via sales"
+  ],
+  "useCases": [
+    "Migrating legacy COBOL indexed-file applications to a relational store",
+    "ISV-bundled databases for Taiwanese enterprise and government software",
+    "Departmental OLTP on Windows or Linux servers"
+  ],
+  "notIdealFor": [
+    "Cloud-native or horizontally scaled applications",
+    "Teams needing a large global talent pool or ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": ["actian-zen", "ibm-informix", "progress-openedge", "postgresql", "sql-server", "mimer-sql"],
+  "tags": ["sql", "cobol", "odbc", "taiwan", "commercial"],
+  "links": {
+    "website": "https://www.dbmaker.com/",
+    "changelog": "https://www.dbmaker.com/downloads.html"
+  },
+  "ids": {
+    "hackerNewsQuery": "DBMaker database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.dbmaker.com/products.html",
+    "https://www.dbmaker.com/downloads.html",
+    "https://www.dbmaker.com/news/news.html",
+    "https://dbdb.io/db/dbmaker"
+  ],
+  "lastVerified": "2026-10-27"
+}

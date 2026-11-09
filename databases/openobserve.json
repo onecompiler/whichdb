@@ -1,0 +1,195 @@
+{
+  "slug": "openobserve",
+  "name": "OpenObserve",
+  "aliases": [
+    "O2",
+    "ZincObserve"
+  ],
+  "tagline": "Single-binary Rust observability platform storing logs, metrics and traces as Parquet on object storage.",
+  "description": "OpenObserve, originally ZincObserve from the team behind ZincSearch, is an observability platform that ingests logs, metrics, traces, real-user monitoring and session replays and stores them as Parquet files on S3-compatible storage. It queries them with SQL through Apache DataFusion, plus PromQL for metrics. It ships as one binary with built-in UI, dashboards, alerts and ingestion pipelines, positioning itself as a cheaper replacement for Elasticsearch and Kibana or for SaaS tools such as Datadog. The open-source build is AGPL-3.0; the Enterprise edition, free below a daily ingest threshold, adds SSO, RBAC and federated search, and OpenObserve Cloud is the hosted option.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "time-series",
+    "columnar"
+  ],
+  "workloads": [
+    "observability",
+    "full-text-search",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "OpenObserve Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.1.2",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Apache Arrow DataFusion",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0 (open source); Enterprise is commercial",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Open source is free; Enterprise is free under an ingest threshold; OpenObserve Cloud bills by ingested data."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "OpenObserve Cloud",
+      "provider": "OpenObserve",
+      "url": "https://cloud.openobserve.ai/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Stateless ingesters and queriers over object storage; HA mode uses NATS and a metadata store."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SQL",
+    "PromQL"
+  ],
+  "apis": [
+    "Elasticsearch-compatible bulk API",
+    "OTLP",
+    "Prometheus remote write",
+    "Syslog",
+    "Kinesis Firehose",
+    "HTTP JSON"
+  ],
+  "compatibleWith": [
+    "elasticsearch",
+    "prometheus",
+    "s3"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Logs, metrics, traces, RUM and dashboards in one binary",
+    "Parquet on object storage keeps retention cost low",
+    "SQL for log analytics instead of a bespoke query language",
+    "Elasticsearch-compatible ingest lets existing shippers point at it",
+    "Simple single-node start with a path to HA clusters"
+  ],
+  "weaknesses": [
+    "AGPL-3.0 licence, with SSO and RBAC in the commercial edition",
+    "Young project; APIs and storage formats have changed quickly",
+    "Broad scope means some features are shallower than specialised tools",
+    "Object-storage reads make cold queries slower than local indexes"
+  ],
+  "useCases": [
+    "Self-hosted Datadog or Elastic replacement",
+    "Kubernetes logs and traces on S3",
+    "Small teams needing one observability tool",
+    "Front-end RUM and session replay with backend logs"
+  ],
+  "notIdealFor": [
+    "Relevance-ranked document search",
+    "Transactional workloads",
+    "Organisations that cannot accept AGPL"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "grafana-loki",
+    "elasticsearch",
+    "signoz",
+    "parseable",
+    "victorialogs",
+    "opensearch",
+    "quickwit"
+  ],
+  "tags": [
+    "observability",
+    "logs",
+    "rust",
+    "parquet",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://openobserve.ai/",
+    "docs": "https://openobserve.ai/docs/",
+    "repository": "https://github.com/openobserve/openobserve",
+    "pricing": "https://openobserve.ai/pricing/",
+    "changelog": "https://github.com/openobserve/openobserve/releases"
+  },
+  "ids": {
+    "github": "openobserve/openobserve",
+    "dockerHub": "openobserve/openobserve",
+    "hackerNewsQuery": "OpenObserve"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/openobserve/openobserve/releases",
+    "https://github.com/openobserve/openobserve",
+    "https://openobserve.ai/"
+  ],
+  "lastVerified": "2026-10-27"
+}

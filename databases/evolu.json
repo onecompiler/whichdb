@@ -1,0 +1,175 @@
+{
+  "slug": "evolu",
+  "name": "Evolu",
+  "aliases": [
+    "Evolu local-first"
+  ],
+  "tagline": "Local-first TypeScript platform: SQLite on each device, end-to-end encrypted sync through relays.",
+  "description": "Evolu is a local-first library and platform for TypeScript apps. Each device keeps its data in SQLite (WASM in browsers, native on React Native/Expo and Electron), queries it with type-safe SQL via Kysely, and syncs changes end-to-end encrypted through relays you can self-host, so the relay never sees plaintext. Identity is a mnemonic-based owner key rather than a server account. It suits privacy-sensitive apps where the server should never see user data; Trezor Suite uses it in production. The project is small and the platform still describes its general release as upcoming.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "local-first",
+    "mobile-offline",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "distributed"
+  ],
+  "developer": "Daniel Steigerwald and Evolu contributors",
+  "vendorType": "community",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "@evolu/common 8.23.2",
+    "date": "2026-10-17"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; relays can be self-hosted."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "ios",
+      "android",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "active-active",
+    "notes": "Every device is a writer; data converges via CRDT-style merge through relays."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (via Kysely query builder)"
+  ],
+  "apis": [
+    "TypeScript API",
+    "Relay sync protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": true
+  },
+  "strengths": [
+    "End-to-end encrypted sync; relays store only ciphertext",
+    "Real SQLite on every device with type-safe queries",
+    "Self-hostable relays with no vendor account",
+    "Used in production by Trezor Suite"
+  ],
+  "weaknesses": [
+    "Small project with a single lead maintainer",
+    "Key-based identity makes account recovery a UX problem you must solve",
+    "No server-side querying of user data by design"
+  ],
+  "useCases": [
+    "Privacy-first personal apps (notes, finance, health)",
+    "Wallet and security tooling",
+    "Offline-capable apps without a backend team"
+  ],
+  "notIdealFor": [
+    "Apps where the server must query or aggregate user data",
+    "Large multi-tenant SaaS backends"
+  ],
+  "notableUsers": [
+    "Trezor"
+  ],
+  "alternatives": [
+    "jazz",
+    "tinybase",
+    "powersync",
+    "rxdb",
+    "triplit",
+    "electricsql"
+  ],
+  "tags": [
+    "local-first",
+    "sqlite",
+    "e2ee",
+    "typescript",
+    "privacy"
+  ],
+  "links": {
+    "website": "https://www.evolu.dev/",
+    "docs": "https://www.evolu.dev/docs",
+    "repository": "https://github.com/evoluhq/evolu",
+    "changelog": "https://github.com/evoluhq/evolu/releases"
+  },
+  "ids": {
+    "github": "evoluhq/evolu",
+    "npm": "@evolu/common",
+    "dockerHub": "evoluhq/relay",
+    "hackerNewsQuery": "Evolu"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.evolu.dev/",
+    "https://github.com/evoluhq/evolu/releases",
+    "https://www.npmjs.com/package/@evolu/common"
+  ],
+  "lastVerified": "2026-10-27"
+}

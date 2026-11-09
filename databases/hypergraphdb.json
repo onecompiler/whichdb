@@ -1,0 +1,158 @@
+{
+  "slug": "hypergraphdb",
+  "name": "HyperGraphDB",
+  "aliases": [],
+  "tagline": "Embedded Java hypergraph database where edges can link any number of atoms, including other edges.",
+  "description": "HyperGraphDB is an open-source, embeddable Java database built on a generalized hypergraph: every stored item is an atom, and links can point to any number of atoms, including other links. That makes it suited to knowledge representation, AI and semantic-web research where n-ary and higher-order relations are first-class. It stores data on BerkeleyDB Java Edition, includes a type system that maps Java objects directly, and offers peer-to-peer replication. The last formal release is 1.3, and development is sporadic (a burst of fixes in October 2026 after years of quiet), so it fits research rather than production.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Last formal release 1.3; development is sporadic, with occasional bug-fix commits (latest in Oct 2026).",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "object"
+  ],
+  "workloads": [
+    "embedded",
+    "knowledge-graph",
+    "scientific"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Kobrix Software",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "1.3",
+    "date": "2016"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Java query API"
+  ],
+  "apis": [
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "True hypergraph model: n-ary links and links-to-links are native",
+    "Stores Java objects directly through an extensible type system",
+    "Embeddable with ACID transactions on BerkeleyDB JE"
+  ],
+  "weaknesses": [
+    "Sporadic maintenance and no recent formal release",
+    "Java-only API with no standard query language",
+    "Tiny community and limited documentation"
+  ],
+  "useCases": [
+    "AI and knowledge-representation research",
+    "Modeling higher-order relations",
+    "Embedded object-graph storage"
+  ],
+  "notIdealFor": [
+    "Production web backends",
+    "Non-JVM stacks",
+    "Large distributed graphs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "typedb",
+    "neo4j",
+    "sparksee",
+    "cozodb",
+    "apache-jena-tdb"
+  ],
+  "tags": [
+    "hypergraph",
+    "java",
+    "embedded",
+    "research"
+  ],
+  "links": {
+    "website": "https://hypergraphdb.org/",
+    "repository": "https://github.com/hypergraphdb/hypergraphdb"
+  },
+  "ids": {
+    "github": "hypergraphdb/hypergraphdb",
+    "hackerNewsQuery": "HyperGraphDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/hypergraphdb/hypergraphdb",
+    "https://github.com/hypergraphdb/hypergraphdb/tags"
+  ],
+  "lastVerified": "2026-10-27"
+}

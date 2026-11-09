@@ -1,0 +1,182 @@
+{
+  "slug": "pinecone",
+  "name": "Pinecone",
+  "aliases": [
+    "Pinecone Serverless"
+  ],
+  "tagline": "Fully managed serverless vector database with built-in embedding, reranking and assistants.",
+  "description": "Pinecone is the best-known managed vector database: you create an index, upsert vectors with metadata and query, with no clusters to size. Its serverless architecture separates storage on object storage from compute, so you pay for reads, writes and storage rather than pods, and Dedicated Read Nodes give predictable latency for heavy query loads. Pinecone also hosts embedding and reranking models (Pinecone Inference) and a RAG 'Assistant' API. It is closed source and cloud-only (with BYOC for enterprises), so you trade portability and cost control for convenience.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Pinecone Systems, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary SaaS"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "Free Starter; Standard $50/month minimum",
+    "notes": "Starter: 2 GB storage, 2M write and 1M read units/month. Standard ($50 min) and Enterprise ($500 min) are pay-as-you-go above the minimum; BYOC priced via sales."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Pinecone",
+      "provider": "Pinecone",
+      "url": "https://www.pinecone.io/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Serverless indexes scale storage and query capacity automatically; namespaces support large multi-tenant workloads. Indexes live in a single region."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Pinecone API (metadata filter expressions)"
+  ],
+  "apis": [
+    "REST/JSON",
+    "gRPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "Go",
+    ".NET",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No infrastructure to run; indexes scale automatically",
+    "Dense and sparse vectors for hybrid retrieval",
+    "Hosted embedding and reranking models in the same API",
+    "Namespaces make per-tenant isolation cheap",
+    "Mature SDKs and integrations with LangChain, LlamaIndex and most RAG frameworks"
+  ],
+  "weaknesses": [
+    "Closed source, cloud-only outside enterprise BYOC",
+    "Read-unit pricing makes high-QPS workloads expensive",
+    "Limited query expressiveness beyond vector plus metadata filters",
+    "Plan minimums ($50/$500) add cost for small production apps"
+  ],
+  "useCases": [
+    "RAG over company documents",
+    "Semantic search in SaaS products",
+    "Recommendation and similarity lookups",
+    "Multi-tenant AI apps with per-customer namespaces"
+  ],
+  "notIdealFor": [
+    "Teams needing self-hosted or open-source software",
+    "Complex relational filtering or joins",
+    "Very high QPS on a tight budget"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "weaviate",
+    "qdrant",
+    "milvus",
+    "zilliz-cloud",
+    "turbopuffer",
+    "pgvector",
+    "chroma"
+  ],
+  "tags": [
+    "vector-database",
+    "serverless",
+    "managed",
+    "rag",
+    "ai"
+  ],
+  "links": {
+    "website": "https://www.pinecone.io/",
+    "docs": "https://docs.pinecone.io/",
+    "pricing": "https://www.pinecone.io/pricing/",
+    "changelog": "https://docs.pinecone.io/release-notes"
+  },
+  "ids": {
+    "stackoverflowTag": "pinecone",
+    "npm": "@pinecone-database/pinecone",
+    "pypi": "pinecone",
+    "hackerNewsQuery": "Pinecone vector database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.pinecone.io/pricing/",
+    "https://docs.pinecone.io/",
+    "https://pypi.org/project/pinecone/"
+  ],
+  "lastVerified": "2026-10-27"
+}

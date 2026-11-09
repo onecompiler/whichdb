@@ -1,0 +1,178 @@
+{
+  "slug": "raima-database-manager",
+  "name": "Raima Database Manager",
+  "aliases": [
+    "RaimaDB",
+    "RDM",
+    "RDM Embedded",
+    "db_VISTA"
+  ],
+  "tagline": "Small-footprint embedded database with SQL and network-model APIs for RTOS, edge and safety-certified devices.",
+  "description": "RaimaDB (long known as RDM, and before that db_VISTA) is an embedded database library for devices where SQLite is too heavy or not deterministic enough. It offers both SQL and a lower-level navigational (network model) API, in-memory or on-disk tables, and runs on RTOSes such as VxWorks, QNX and AUTOSAR Classic as well as Linux and Android. Raima sells a functional-safety certified edition with a sub-500 KB footprint and has shipped RaimaDB 16.1 (April 2026) with Python support and broader RTOS coverage. It is a specialist tool for avionics, telecom and industrial embedded systems.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "navigational"
+  ],
+  "workloads": [
+    "embedded",
+    "iot",
+    "edge"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Raima Inc.",
+  "vendorType": "company",
+  "initialRelease": 1984,
+  "latestVersion": {
+    "version": "16.1",
+    "date": "2026-04-09"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Royalty or per-device OEM licensing by quote; free trial download; source-code licences available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "android",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Core navigational API"
+  ],
+  "apis": [
+    "C API",
+    "C++ API",
+    "ODBC",
+    "JDBC",
+    "ADO.NET"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Functional-safety certified edition for regulated embedded systems",
+    "Runs on RTOS targets including VxWorks, QNX and AUTOSAR Classic",
+    "Choice of SQL or a deterministic navigational API for tight loops",
+    "Mix in-memory and persistent tables in one database"
+  ],
+  "weaknesses": [
+    "Commercial, quote-based licensing",
+    "Small community compared with SQLite",
+    "Not designed for server-side or multi-node workloads"
+  ],
+  "useCases": [
+    "Avionics and defence embedded systems",
+    "Telecom network equipment",
+    "Industrial controllers and medical devices",
+    "Automotive ECUs on AUTOSAR"
+  ],
+  "notIdealFor": [
+    "Web or cloud back ends",
+    "Hobby projects needing a free licence",
+    "Large analytical datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "extremedb",
+    "ittia-db",
+    "sqlite",
+    "empress-embedded-database",
+    "berkeley-db",
+    "mimer-sql"
+  ],
+  "tags": [
+    "embedded",
+    "rtos",
+    "safety-certified",
+    "edge",
+    "network-model"
+  ],
+  "links": {
+    "website": "https://raima.com/",
+    "docs": "https://docs.raima.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "RaimaDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://raima.com/",
+    "https://raima.com/raimadb-16-0-datasheet/",
+    "https://muckrack.com/media-outlet/odbms"
+  ],
+  "lastVerified": "2026-10-27"
+}

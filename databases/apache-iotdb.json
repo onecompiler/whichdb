@@ -1,0 +1,188 @@
+{
+  "slug": "apache-iotdb",
+  "name": "Apache IoTDB",
+  "aliases": [
+    "IoTDB",
+    "TimechoDB"
+  ],
+  "tagline": "Apache time-series database for industrial IoT with tree and table models and edge-to-cloud sync.",
+  "description": "Apache IoTDB is a time-series database that came out of Tsinghua University and became an Apache top-level project in 2020. It stores data in its own TsFile columnar format and offers two models: a hierarchical tree of device paths (root.plant.line1.temp) and, since 2.0, a relational table model queried with standard SQL. It is designed to run on edge gateways and synchronise to cloud clusters through its Pipe framework, and integrates with Spark, Flink and Grafana. Timecho, founded by the original authors, sells an enterprise distribution and support.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "relational",
+    "hierarchical"
+  ],
+  "workloads": [
+    "iot",
+    "time-series",
+    "edge",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "2.0.11",
+    "date": "2026-09-11"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free under Apache-2.0; Timecho sells an enterprise edition and support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "ConfigNodes manage metadata and DataNodes hold partitioned regions replicated via Ratis or IoTConsensus."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "tunable"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "Session API (Thrift)",
+    "REST",
+    "MQTT"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "C++",
+    "Go",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "TsFile columnar format with strong compression for sensor data",
+    "Lightweight enough for edge gateways, with Pipe-based edge-to-cloud replication",
+    "Tree model maps naturally onto plant, line and device hierarchies",
+    "Table model in 2.x brings standard SQL and joins",
+    "Apache governance and Apache-2.0 licence"
+  ],
+  "weaknesses": [
+    "Two data models and two SQL dialects make docs and tooling confusing",
+    "JVM footprint and tuning compared with C/Rust-based competitors",
+    "Most production references are in China",
+    "No managed cloud service from the Apache project itself"
+  ],
+  "useCases": [
+    "Industrial equipment and PLC data",
+    "Power plant and wind turbine monitoring",
+    "Edge gateways syncing to a central cluster",
+    "Rail and vehicle telemetry"
+  ],
+  "notIdealFor": [
+    "Transactional business data",
+    "Log analytics",
+    "Teams wanting a fully managed SaaS"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tdengine",
+    "influxdb",
+    "timescaledb",
+    "cnosdb",
+    "griddb",
+    "opengemini",
+    "questdb"
+  ],
+  "tags": [
+    "time-series",
+    "iot",
+    "apache",
+    "industrial",
+    "edge"
+  ],
+  "links": {
+    "website": "https://iotdb.apache.org/",
+    "docs": "https://iotdb.apache.org/UserGuide/latest/QuickStart/QuickStart.html",
+    "repository": "https://github.com/apache/iotdb",
+    "changelog": "https://github.com/apache/iotdb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_IoTDB"
+  },
+  "ids": {
+    "github": "apache/iotdb",
+    "stackoverflowTag": "apache-iotdb",
+    "wikipedia": "Apache IoTDB",
+    "dockerHub": "apache/iotdb",
+    "pypi": "apache-iotdb",
+    "hackerNewsQuery": "Apache IoTDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apache/iotdb/releases",
+    "https://iotdb.apache.org/",
+    "https://pypi.org/project/apache-iotdb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

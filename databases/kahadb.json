@@ -1,0 +1,160 @@
+{
+  "slug": "kahadb",
+  "name": "KahaDB",
+  "aliases": [
+    "Kaha DB",
+    "ActiveMQ KahaDB"
+  ],
+  "tagline": "Apache ActiveMQ Classic's built-in journal-plus-B-tree message store; a persistence engine, not a general DB.",
+  "description": "KahaDB is the file-based persistence layer embedded in Apache ActiveMQ Classic: it arrived with ActiveMQ 5.3 in 2009 and has been the default message store since 5.4 (2010). Messages are appended to rolling journal files and located through a B-tree index kept in a page file, with checkpoints, checksums and recovery tooling to survive crashes; mKahaDB spreads destinations across several instances. It replaced the older AMQ Message Store with fewer file descriptors and faster recovery, and it ships with every ActiveMQ Classic release (6.3.2 in September 2026). You do not query KahaDB as a database: it exists to make broker messages durable, so it belongs on this list only as the storage engine behind a widely deployed broker.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "event-store"
+  ],
+  "workloads": [
+    "queue",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Apache Software Foundation (ActiveMQ project)",
+  "vendorType": "foundation",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "6.3.2 (ActiveMQ Classic)",
+    "date": "2026-09"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "One store per broker; multiKahaDB partitions destinations across instances; HA via shared-storage master/slave."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "None (internal broker API)"
+  ],
+  "apis": [
+    "ActiveMQ persistence adapter (Java)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Append-only journal gives fast durable message writes",
+    "Default and battle-tested store for ActiveMQ Classic",
+    "Configurable checksums, checkpoints and corrupt-journal recovery",
+    "Zero extra infrastructure: lives in the broker's data directory"
+  ],
+  "weaknesses": [
+    "Not a general-purpose database; no query interface",
+    "Large backlogs or slow consumers can bloat journals and index files",
+    "Single-broker scope; HA relies on shared storage or replication of the broker"
+  ],
+  "useCases": [
+    "Durable message persistence for ActiveMQ Classic brokers",
+    "Example of a journal plus B-tree index storage design"
+  ],
+  "notIdealFor": [
+    "Storing or querying application data",
+    "Use outside ActiveMQ"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "leveldb",
+    "berkeley-db",
+    "kurrentdb"
+  ],
+  "tags": [
+    "activemq",
+    "message-store",
+    "journal",
+    "java",
+    "apache"
+  ],
+  "links": {
+    "website": "https://activemq.apache.org/components/classic/documentation/kahadb",
+    "docs": "https://activemq.apache.org/components/classic/documentation/kahadb",
+    "repository": "https://github.com/apache/activemq"
+  },
+  "ids": {
+    "hackerNewsQuery": "KahaDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://activemq.apache.org/components/classic/documentation/kahadb",
+    "https://repo1.maven.org/maven2/org/apache/activemq/activemq-kahadb-store/maven-metadata.xml",
+    "https://github.com/apache/activemq"
+  ],
+  "lastVerified": "2026-10-27"
+}

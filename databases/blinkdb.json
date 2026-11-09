@@ -1,0 +1,155 @@
+{
+  "slug": "blinkdb",
+  "name": "BlinkDB",
+  "aliases": [
+    "Blink DB"
+  ],
+  "tagline": "Berkeley AMPLab/MIT approximate query engine on Spark/Shark returning answers with error bars from samples.",
+  "description": "BlinkDB was a research system from UC Berkeley's AMPLab and MIT, led by Sameer Agarwal, that answered HiveQL aggregate queries on very large data in seconds by running them on pre-built stratified samples and returning results with confidence intervals. It chose which samples to build from past query workloads and data distribution within a storage budget, and at query time picked a sample to meet a user-specified error or response-time bound. Built on Shark and Spark and compatible with Apache Hive, it was described in a EuroSys 2013 paper and released as alpha code supporting AVG, SUM, COUNT, VAR and STDEV. Development stopped in early 2014; its ideas fed into later approximate query processing work and sampling features in modern engines.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "AMPLab research prototype (2012-2014); alpha releases only and no commits since February 2014.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "UC Berkeley AMPLab and MIT",
+  "vendorType": "academic",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Scala",
+    "Java"
+  ],
+  "basedOn": "Shark / Apache Spark and Apache Hive",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Ran on Spark clusters; evaluated on multi-terabyte datasets in the research paper."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "HiveQL (with error/time bounds)"
+  ],
+  "apis": [
+    "Hive-compatible CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Bounded-error or bounded-time answers on very large tables",
+    "Workload-aware stratified sampling within a storage budget",
+    "Influential, well-cited design for approximate query processing"
+  ],
+  "weaknesses": [
+    "Alpha-quality code tied to Spark 0.9 and Shark, both long obsolete",
+    "Only aggregates with closed-form error estimates were supported",
+    "No maintenance since 2014"
+  ],
+  "useCases": [
+    "Studying approximate query processing and sampling-based analytics",
+    "Teaching trade-offs between accuracy and latency"
+  ],
+  "notIdealFor": [
+    "Production analytics",
+    "Queries that need exact answers"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-spark-sql",
+    "trino",
+    "clickhouse",
+    "apache-druid",
+    "duckdb"
+  ],
+  "tags": [
+    "approximate-query",
+    "sampling",
+    "spark",
+    "amplab",
+    "research"
+  ],
+  "links": {
+    "website": "https://github.com/sameeragarwal/blinkdb",
+    "repository": "https://github.com/sameeragarwal/blinkdb",
+    "docs": "https://github.com/sameeragarwal/blinkdb/wiki"
+  },
+  "ids": {
+    "github": "sameeragarwal/blinkdb",
+    "hackerNewsQuery": "BlinkDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/sameeragarwal/blinkdb",
+    "https://dbdb.io/db/blinkdb",
+    "https://dl.acm.org/doi/10.1145/2465351.2465355"
+  ],
+  "lastVerified": "2026-10-27"
+}

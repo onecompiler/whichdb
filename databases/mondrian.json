@@ -1,0 +1,167 @@
+{
+  "slug": "mondrian",
+  "name": "Mondrian",
+  "aliases": [
+    "Mondrian OLAP",
+    "Pentaho Analysis"
+  ],
+  "tagline": "Java ROLAP engine that answers MDX queries by generating SQL against your relational warehouse.",
+  "description": "Mondrian is a relational OLAP (ROLAP) engine written in Java. You describe cubes, dimensions and measures over existing star or snowflake schemas in an XML schema file, and Mondrian turns MDX queries into SQL against the underlying database, caching cell results and using aggregate tables when they exist. It exposes the olap4j API and XML for Analysis, powers Pentaho's analysis tools and has been embedded in other BI front ends. First released in 2002 and acquired by Pentaho in 2005, it is still developed in the pentaho/mondrian repository, but since Pentaho 10.3 (late 2024) the source has been published under the Business Source License 1.1 instead of the EPL. It is only a query engine: storage, durability and scale come from the SQL database beneath it.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Pentaho",
+  "vendorType": "company",
+  "initialRelease": 2002,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1 (since 10.3; older releases EPL)",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Source is free for non-production use under BSL; production use needs a Pentaho commercial license. Each version converts to Apache 2.0 after four years."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales with the SQL database underneath; Mondrian itself is a JVM process with an in-memory cell cache."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "MDX"
+  ],
+  "apis": [
+    "olap4j",
+    "XML for Analysis (XMLA)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Adds an MDX/OLAP layer over an existing relational warehouse without copying data",
+    "Aggregate-table awareness and a cell cache cut repeated query cost",
+    "Standard olap4j and XMLA interfaces for pivot-table clients",
+    "Two decades of production use inside Pentaho deployments"
+  ],
+  "weaknesses": [
+    "Speed is bounded by the SQL it generates and the database underneath",
+    "Verbose XML cube schemas are hard to maintain",
+    "Moved to BSL 1.1, so production use now requires a commercial license",
+    "MDX skills and client tooling are increasingly niche"
+  ],
+  "useCases": [
+    "Pivot-style analytics over a star schema in PostgreSQL, MySQL or a warehouse",
+    "Embedding OLAP cubes in Java BI applications",
+    "Pentaho Business Analytics deployments"
+  ],
+  "notIdealFor": [
+    "Real-time analytics on streaming data",
+    "Teams wanting a SQL-first semantic layer",
+    "Huge data volumes without a fast columnar database underneath"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-kylin",
+    "essbase",
+    "clickhouse",
+    "apache-druid",
+    "duckdb"
+  ],
+  "tags": [
+    "olap",
+    "mdx",
+    "rolap",
+    "java",
+    "pentaho",
+    "bi"
+  ],
+  "links": {
+    "website": "https://mondrian.pentaho.com/",
+    "repository": "https://github.com/pentaho/mondrian",
+    "wikipedia": "https://en.wikipedia.org/wiki/Mondrian_OLAP_server"
+  },
+  "ids": {
+    "github": "pentaho/mondrian",
+    "wikipedia": "Mondrian OLAP server",
+    "stackoverflowTag": "mondrian",
+    "hackerNewsQuery": "Mondrian OLAP"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/pentaho/mondrian",
+    "https://github.com/pentaho/mondrian/blob/master/LICENSE.TXT",
+    "https://en.wikipedia.org/wiki/Mondrian_OLAP_server",
+    "https://mondrian.pentaho.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

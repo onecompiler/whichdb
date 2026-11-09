@@ -1,0 +1,207 @@
+{
+  "slug": "ravendb",
+  "name": "RavenDB",
+  "aliases": [
+    "Raven DB"
+  ],
+  "tagline": "ACID document database for .NET and beyond, with auto-indexing, Corax search and multi-master replication.",
+  "description": "RavenDB is a C# document database built around fully ACID transactions on JSON documents and an indexing engine that creates indexes automatically from the queries you run. Its own Corax engine (or Lucene) handles full-text search, and map-reduce indexes give materialized aggregates. The 7.x line added vector search and AI integrations, and 7.2 is the current LTS (7.2.7 shipped in October 2026). Clusters use multi-master replication with Raft for cluster-wide operations, and sharding has been built in since 6.0. It is especially popular with .NET teams who want an opinionated, batteries-included database with a strong management Studio.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "search",
+    "time-series",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "full-text-search",
+    "vector-search",
+    "time-series",
+    "embedded",
+    "content-management"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "RavenDB Ltd. (Hibernating Rhinos)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "7.2.7",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "AGPL-3.0 or commercial licence",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Free Community licence (renewed yearly, must run the latest major); Professional and Enterprise subscriptions; RavenDB Cloud is billed per instance."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "RavenDB Cloud",
+      "provider": "RavenDB Ltd.",
+      "url": "https://cloud.ravendb.net/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Multi-master replication across nodes and data centers; native sharding since 6.0."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "RQL (Raven Query Language)",
+    "LINQ"
+  ],
+  "apis": [
+    "HTTP/JSON REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "Java",
+    "JavaScript",
+    "Python",
+    "Go",
+    "PHP",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "ACID transactions across documents on a single node, plus cluster-wide transactions",
+    "Automatic indexes created from query patterns, with no manual index design for simple cases",
+    "Built-in full-text, spatial and vector search",
+    "Map-reduce indexes act as always-up-to-date materialized aggregates",
+    "Document revisions allow reverting a database to a point in time",
+    "Excellent .NET client and a polished web Studio"
+  ],
+  "weaknesses": [
+    "Smaller community and talent pool than MongoDB",
+    "AGPL or paid licences; the free Community licence has feature and version limits",
+    "Indexes are eventually consistent with writes by default",
+    "Many features skew towards .NET; other clients are thinner"
+  ],
+  "useCases": [
+    ".NET business applications and line-of-business systems",
+    "Embedded databases in desktop or edge applications",
+    "Search-heavy catalogs and content",
+    "Multi-site deployments needing offline-tolerant replication"
+  ],
+  "notIdealFor": [
+    "Teams outside the .NET ecosystem needing broad tooling",
+    "Large-scale analytical scans"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "couchbase",
+    "azure-cosmos-db",
+    "postgresql",
+    "arangodb",
+    "litedb"
+  ],
+  "tags": [
+    "dotnet",
+    "document",
+    "acid",
+    "full-text-search",
+    "agpl"
+  ],
+  "links": {
+    "website": "https://ravendb.net/",
+    "docs": "https://docs.ravendb.net/",
+    "repository": "https://github.com/ravendb/ravendb",
+    "pricing": "https://ravendb.net/buy",
+    "changelog": "https://ravendb.net/docs/article-page/7.2/csharp/start/whats-new",
+    "wikipedia": "https://en.wikipedia.org/wiki/RavenDB"
+  },
+  "ids": {
+    "github": "ravendb/ravendb",
+    "stackoverflowTag": "ravendb",
+    "wikipedia": "RavenDB",
+    "dockerHub": "ravendb/ravendb",
+    "npm": "ravendb",
+    "pypi": "ravendb",
+    "hackerNewsQuery": "RavenDB"
+  },
+  "brand": {
+    "color": "#D82D3D"
+  },
+  "sources": [
+    "https://github.com/ravendb/ravendb/releases",
+    "https://docs.ravendb.net/7.2/licensing/overview",
+    "https://en.wikipedia.org/wiki/RavenDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

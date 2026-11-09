@@ -1,0 +1,186 @@
+{
+  "slug": "grafana-tempo",
+  "name": "Grafana Tempo",
+  "aliases": [
+    "Tempo"
+  ],
+  "tagline": "Object-storage-backed distributed tracing backend with TraceQL search and trace-derived metrics.",
+  "description": "Grafana Tempo is a high-volume tracing backend that writes spans as Parquet blocks to object storage and keeps only minimal indexes, which makes storing 100% of traces affordable. It ingests OpenTelemetry, Jaeger and Zipkin formats, and TraceQL lets you search spans by attributes, structure and duration and compute metrics from traces. Tempo 3.0 (May 2026) completed a move to a new ingest architecture that replaces legacy ingesters, made TraceQL metrics generally available and removed deprecated 2.x components, so upgrades need a migration. It pairs naturally with Grafana, Mimir and Loki.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series"
+  ],
+  "workloads": [
+    "observability"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Grafana Labs",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "3.1.1",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Grafana Cloud Traces has a free tier."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Grafana Cloud Traces",
+      "provider": "Grafana Labs",
+      "url": "https://grafana.com/products/cloud/traces/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Distributors, block-builders, live-stores and queriers scale independently over object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "TraceQL"
+  ],
+  "apis": [
+    "OTLP",
+    "Jaeger",
+    "Zipkin",
+    "Tempo HTTP API"
+  ],
+  "compatibleWith": [
+    "s3"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stores all traces cheaply on object storage with Parquet blocks",
+    "TraceQL searches by span attributes and trace structure",
+    "Generates RED metrics and service graphs from spans",
+    "Accepts OpenTelemetry, Jaeger and Zipkin",
+    "Tight Grafana integration for traces-to-logs and traces-to-metrics"
+  ],
+  "weaknesses": [
+    "3.0 brought breaking architecture and config changes",
+    "Attribute search over long ranges can be slow without dedicated columns",
+    "AGPL-3.0 licence",
+    "Traces only; logs and metrics need other systems"
+  ],
+  "useCases": [
+    "Distributed tracing for microservices",
+    "Storing full-fidelity OpenTelemetry traces",
+    "Deriving service-level metrics from spans"
+  ],
+  "notIdealFor": [
+    "Log or metric storage",
+    "Ad-hoc SQL analytics",
+    "Teams without Grafana in their stack"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "signoz",
+    "openobserve",
+    "clickhouse",
+    "elasticsearch",
+    "greptimedb"
+  ],
+  "tags": [
+    "tracing",
+    "observability",
+    "grafana",
+    "opentelemetry",
+    "object-storage"
+  ],
+  "links": {
+    "website": "https://grafana.com/oss/tempo/",
+    "docs": "https://grafana.com/docs/tempo/latest/",
+    "repository": "https://github.com/grafana/tempo",
+    "changelog": "https://github.com/grafana/tempo/blob/main/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "grafana/tempo",
+    "stackoverflowTag": "grafana-tempo",
+    "dockerHub": "grafana/tempo",
+    "hackerNewsQuery": "Grafana Tempo"
+  },
+  "brand": {
+    "color": "#F46800",
+    "simpleIcon": "grafana"
+  },
+  "sources": [
+    "https://github.com/grafana/tempo/releases",
+    "https://github.com/grafana/tempo/releases/tag/v3.0.0",
+    "https://grafana.com/oss/tempo/"
+  ],
+  "lastVerified": "2026-10-27"
+}

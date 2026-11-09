@@ -1,0 +1,204 @@
+{
+  "slug": "firebase",
+  "name": "Firebase",
+  "aliases": [
+    "Google Firebase"
+  ],
+  "tagline": "Google's app platform: Firestore, Realtime Database and Data Connect, plus auth, functions and hosting.",
+  "description": "Firebase is Google's backend platform for mobile and web apps. Its databases are Cloud Firestore (a serverless document store with realtime listeners, offline persistence in the SDKs, vector search and TTL), the original Realtime Database (a JSON tree synced over websockets), and Data Connect, which puts a GraphQL layer over Cloud SQL for PostgreSQL. Around them sit Authentication, Cloud Functions, Hosting, Storage, Remote Config and analytics. Firebase is the fastest way for a small team to ship a synced mobile app, but security rules, query limits and per-operation billing need care as usage grows.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational",
+    "vector"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "oltp",
+    "content-management",
+    "vector-search"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed"
+  ],
+  "developer": "Google",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "C++",
+    "Java",
+    "TypeScript"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary service (client SDKs Apache-2.0)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Spark plan is free with quotas; Blaze is pay-as-you-go, billed per document read/write, storage and egress."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": [
+      "browser",
+      "ios",
+      "android"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Cloud Firestore",
+      "provider": "Google",
+      "url": "https://firebase.google.com/products/firestore"
+    },
+    {
+      "name": "Firebase Data Connect",
+      "provider": "Google",
+      "url": "https://firebase.google.com/products/data-connect"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Firestore scales automatically and offers multi-region locations; Realtime Database shards per instance."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Firestore query API",
+    "GraphQL (Data Connect)",
+    "Security Rules language"
+  ],
+  "apis": [
+    "Client SDKs",
+    "REST",
+    "gRPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Swift",
+    "Kotlin",
+    "Java",
+    "Dart",
+    "C++",
+    "Python",
+    "Go",
+    "Node.js"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Realtime listeners and offline persistence built into the mobile and web SDKs",
+    "One console for database, auth, functions, hosting and analytics",
+    "Serverless Firestore scales without capacity planning",
+    "Security Rules let clients talk to the database directly",
+    "Data Connect adds relational Postgres when documents are not enough"
+  ],
+  "weaknesses": [
+    "Per-read billing can surprise you at scale or with chatty listeners",
+    "Firestore queries are restricted: no joins, limited OR/inequality combinations",
+    "Security Rules are easy to get wrong and hard to test",
+    "Locked to Google Cloud with no self-hosted option"
+  ],
+  "useCases": [
+    "Mobile apps needing realtime sync and offline support",
+    "MVPs and startups that want auth and database in one",
+    "Chat, presence and collaborative features",
+    "Push notifications and remote config alongside app data"
+  ],
+  "notIdealFor": [
+    "Complex relational queries in Firestore",
+    "Analytics workloads (export to BigQuery instead)",
+    "Teams needing portability or self-hosting"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "supabase",
+    "appwrite",
+    "convex",
+    "pocketbase",
+    "google-cloud-firestore",
+    "firebase-realtime-database",
+    "instantdb"
+  ],
+  "tags": [
+    "baas",
+    "google-cloud",
+    "mobile",
+    "realtime",
+    "serverless"
+  ],
+  "links": {
+    "website": "https://firebase.google.com/",
+    "docs": "https://firebase.google.com/docs",
+    "repository": "https://github.com/firebase/firebase-js-sdk",
+    "pricing": "https://firebase.google.com/pricing",
+    "changelog": "https://firebase.google.com/support/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Firebase"
+  },
+  "ids": {
+    "github": "firebase/firebase-js-sdk",
+    "stackoverflowTag": "firebase",
+    "wikipedia": "Firebase",
+    "npm": "firebase",
+    "pypi": "firebase-admin",
+    "hackerNewsQuery": "Firebase"
+  },
+  "brand": {
+    "color": "#DD2C00",
+    "simpleIcon": "firebase"
+  },
+  "sources": [
+    "https://firebase.google.com/",
+    "https://firebase.google.com/pricing",
+    "https://www.npmjs.com/package/firebase"
+  ],
+  "lastVerified": "2026-10-27"
+}

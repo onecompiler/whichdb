@@ -1,0 +1,170 @@
+{
+  "slug": "unqlite",
+  "name": "UnQLite",
+  "aliases": [],
+  "tagline": "Embedded, transactional key-value and JSON document engine in a single C file, with Jx9 scripting.",
+  "description": "UnQLite is a self-contained, serverless database engine for C and C++ that stores data in a single portable file. It has two layers: a binary-safe key-value store with cursors, and a JSON document store driven by Jx9, a small embedded scripting language with a JavaScript-like syntax. It is ACID-transactional, ships as an amalgamation (unqlite.c and unqlite.h) like SQLite, and runs on everything from servers to embedded devices. After years of slow activity, Symisc resumed releases in 2026 (1.2.1 in May). It fits native apps that want a key-value or document store with SQLite-style deployment.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "iot",
+    "configuration",
+    "edge"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Symisc Systems",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "1.2.1",
+    "date": "2026-05-01"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 2-Clause",
+    "spdx": "BSD-2-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Jx9",
+    "Key-value C API"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Single-file amalgamation, easy to vendor into any C/C++ project",
+    "ACID transactions on a portable single-file database",
+    "Both raw key-value and JSON document APIs",
+    "Permissive BSD license"
+  ],
+  "weaknesses": [
+    "Jx9 is a niche language with little tooling",
+    "No secondary indexes for documents",
+    "Small maintainer team and sparse community"
+  ],
+  "useCases": [
+    "Embedded devices and firmware needing local storage",
+    "Desktop or game apps storing JSON state",
+    "Local caches inside native services"
+  ],
+  "notIdealFor": [
+    "Multi-user servers",
+    "Complex querying"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "ejdb",
+    "lmdb",
+    "leveldb",
+    "berkeley-db",
+    "polodb"
+  ],
+  "tags": [
+    "embedded",
+    "c",
+    "key-value",
+    "json",
+    "single-file"
+  ],
+  "links": {
+    "website": "https://unqlite.symisc.net/",
+    "docs": "https://unqlite.symisc.net/c_api.html",
+    "repository": "https://github.com/symisc/unqlite",
+    "changelog": "https://github.com/symisc/unqlite/releases"
+  },
+  "ids": {
+    "github": "symisc/unqlite",
+    "hackerNewsQuery": "UnQLite"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/symisc/unqlite",
+    "https://github.com/symisc/unqlite/releases/tag/1.2.1",
+    "https://unqlite.symisc.net/"
+  ],
+  "lastVerified": "2026-10-27"
+}

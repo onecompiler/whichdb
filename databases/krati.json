@@ -1,0 +1,160 @@
+{
+  "slug": "krati",
+  "name": "Krati",
+  "aliases": [
+    "sna-projects Krati"
+  ],
+  "tagline": "LinkedIn's hash-based persistent key-value store for the JVM, tuned for low latency and little GC.",
+  "description": "Krati is a Java library from LinkedIn's Search, Network and Analytics (SNA) team, released in 2010. It offers array-style stores keyed by integer index and hash-based stores for arbitrary byte keys, writing values into segment files and relying on periodic checkpoints for durability. The pitch was very low latency and high throughput for read-write-heavy services with little effort spent on configuration, performance tuning or JVM garbage collection, and a krati-avro module added Avro-serialized stores. The last release, 0.4.9, came out in February 2013 and the repository has been dormant since.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No commits since Sept 2013; last release 0.4.9 (Feb 2013). For embedded JVM key-value storage use RocksDB (RocksJava), LMDB or MapDB.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "LinkedIn (SNA team, Jingwei Wu)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "0.4.9",
+    "date": "2013-02-01"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-JVM library; sharding is up to the application."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java API"
+  ],
+  "apis": [
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Low, predictable latency for read-write-heavy JVM workloads",
+    "Minimal tuning and little garbage-collection pressure",
+    "Simple array and hash store abstractions with Avro support"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2013",
+    "No transactions, range scans or secondary indexes",
+    "Durability limited to checkpoints and segment logs"
+  ],
+  "useCases": [
+    "Studying segment-log plus memory-mapped index designs",
+    "Legacy JVM services that still embed it"
+  ],
+  "notIdealFor": [
+    "New projects (choose RocksDB, LMDB or MapDB)",
+    "Workloads needing ordered scans or transactions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "lmdb",
+    "mapdb",
+    "berkeley-db",
+    "leveldb"
+  ],
+  "tags": [
+    "java",
+    "key-value",
+    "embedded",
+    "linkedin",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/jingwei/krati",
+    "repository": "https://github.com/jingwei/krati"
+  },
+  "ids": {
+    "github": "jingwei/krati",
+    "hackerNewsQuery": "Krati LinkedIn"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/jingwei/krati",
+    "https://search.maven.org/artifact/com.sna-projects.krati/krati",
+    "https://web.archive.org/web/2012/http://sna-projects.com/krati/",
+    "https://dbdb.io/db/krati"
+  ],
+  "lastVerified": "2026-10-27"
+}

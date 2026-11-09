@@ -1,0 +1,178 @@
+{
+  "slug": "apache-lucene",
+  "name": "Apache Lucene",
+  "aliases": [
+    "Lucene"
+  ],
+  "tagline": "The Java search library at the heart of Elasticsearch, OpenSearch and Solr, now with HNSW vectors.",
+  "description": "Lucene is the Apache Software Foundation's Java library for inverted-index search, first written by Doug Cutting in 1999 and still the engine inside Elasticsearch, OpenSearch and Solr. It provides analyzers, BM25 and other similarities, points for numeric and geo data, doc values for sorting and aggregations, and since 9.0 HNSW vector indexes with scalar and binary quantization. Lucene 10 brought better concurrency and I/O, and the 10.5 line continues to improve vector and query performance. Use it directly when you need search embedded in a JVM application with full control; otherwise use one of the servers built on it.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "embedded",
+    "geospatial"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 1999,
+  "latestVersion": {
+    "version": "10.5.2",
+    "date": "2026-10-04"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "A single index can hold billions of documents; distribution comes from Elasticsearch, OpenSearch or Solr."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Lucene query syntax",
+    "Java API"
+  ],
+  "apis": [
+    "Java"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Kotlin",
+    "Scala"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Two decades of relevance and performance engineering",
+    "HNSW vectors with int4/int8/binary quantization",
+    "Doc values, points and geo shapes for rich filtering and sorting",
+    "Foundation of the biggest search engines",
+    "Apache governance"
+  ],
+  "weaknesses": [
+    "Library only: no networking, replication or cluster management",
+    "Low-level API with a steep learning curve",
+    "JVM required",
+    "Frequent major-version index format changes"
+  ],
+  "useCases": [
+    "Embedding search in JVM applications",
+    "Building custom search servers",
+    "Desktop and IDE search features",
+    "Research on retrieval algorithms"
+  ],
+  "notIdealFor": [
+    "Teams wanting a hosted or server search engine",
+    "Non-JVM stacks",
+    "Quick prototypes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tantivy",
+    "bleve",
+    "elasticsearch",
+    "apache-solr",
+    "opensearch"
+  ],
+  "tags": [
+    "search",
+    "library",
+    "java",
+    "apache",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://lucene.apache.org/",
+    "docs": "https://lucene.apache.org/core/documentation.html",
+    "repository": "https://github.com/apache/lucene",
+    "changelog": "https://lucene.apache.org/core/corenews.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Lucene"
+  },
+  "ids": {
+    "github": "apache/lucene",
+    "stackoverflowTag": "lucene",
+    "wikipedia": "Apache Lucene",
+    "hackerNewsQuery": "Lucene"
+  },
+  "brand": {
+    "color": "#019B8F",
+    "simpleIcon": "apachelucene"
+  },
+  "sources": [
+    "https://github.com/apache/lucene/releases",
+    "https://lucene.apache.org/core/corenews.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

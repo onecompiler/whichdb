@@ -1,0 +1,191 @@
+{
+  "slug": "amazon-elasticache",
+  "name": "Amazon ElastiCache",
+  "aliases": [
+    "ElastiCache",
+    "ElastiCache Serverless"
+  ],
+  "tagline": "AWS's managed Valkey, Redis OSS and Memcached service, provisioned or serverless.",
+  "description": "ElastiCache is AWS's managed in-memory caching service, running Valkey, Redis OSS (up to 7.1) or Memcached on node-based clusters or as ElastiCache Serverless, which scales capacity automatically and bills per ECPU and GB-hour. Since 2024 AWS leads with Valkey and prices it below Redis OSS; Valkey 9.1 arrived in June 2026, and recent Valkey versions add full-text and vector search through valkey-search. Global Datastore provides cross-region read replicas with promotion for DR. It is the default cache for workloads already on AWS; for durable primary storage AWS points you at MemoryDB instead.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "vector",
+    "search"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub",
+    "queue",
+    "vector-search"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2011,
+  "latestVersion": {
+    "version": "Valkey 9.1 engine",
+    "date": "2026-06-23"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Valkey / Redis OSS / Memcached",
+  "license": {
+    "type": "proprietary",
+    "name": "AWS service terms"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Node-hour pricing for provisioned clusters; Serverless bills ECPUs and stored GB-hours. Valkey is priced lower than Redis OSS."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Cluster mode up to 500 shards; Global Datastore replicates to up to two secondary regions for reads and DR."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Memcached protocol",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2/RESP3",
+    "Memcached text protocol",
+    "AWS SDK management API"
+  ],
+  "compatibleWith": [
+    "redis",
+    "memcached"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fully managed patching, failover and backups inside your VPC",
+    "Serverless option removes capacity planning for spiky traffic",
+    "Valkey engine is cheaper than Redis OSS on the same nodes",
+    "IAM authentication, encryption at rest and in transit",
+    "Global Datastore for cross-region DR"
+  ],
+  "weaknesses": [
+    "AWS-only and VPC-bound; awkward from outside AWS",
+    "Some admin commands are disabled or renamed",
+    "Serverless ECPU pricing can surprise at high request rates",
+    "Durability is still async-replication based (use MemoryDB for durability)"
+  ],
+  "useCases": [
+    "Database query caching for RDS and DynamoDB",
+    "Session storage for web apps on AWS",
+    "Leaderboards and real-time counters",
+    "Semantic caching for generative AI apps"
+  ],
+  "notIdealFor": [
+    "Multi-cloud or on-prem deployments",
+    "Primary durable data storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-memorydb",
+    "valkey",
+    "redis",
+    "upstash",
+    "google-memorystore",
+    "azure-cache-for-redis"
+  ],
+  "tags": [
+    "aws",
+    "managed",
+    "cache",
+    "valkey",
+    "redis",
+    "memcached"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/elasticache/",
+    "docs": "https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/WhatIs.html",
+    "pricing": "https://aws.amazon.com/elasticache/pricing/",
+    "changelog": "https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/engine-versions.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_ElastiCache"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-elasticache",
+    "wikipedia": "Amazon_ElastiCache",
+    "hackerNewsQuery": "ElastiCache"
+  },
+  "brand": {},
+  "sources": [
+    "https://aws.amazon.com/about-aws/whats-new/2026/06/amazon-elasticache-valkey-9-1/",
+    "https://docs.aws.amazon.com/AmazonElastiCache/latest/dg/engine-versions.html",
+    "https://aws.amazon.com/elasticache/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,121 @@
+{
+  "slug": "azure-database-for-postgresql",
+  "name": "Azure Database for PostgreSQL",
+  "aliases": ["Azure PostgreSQL Flexible Server", "Azure Postgres"],
+  "tagline": "Microsoft's managed community PostgreSQL, with zone-redundant HA, DiskANN vectors and Citus elastic clusters.",
+  "description": "Azure Database for PostgreSQL (Flexible Server) is Microsoft's managed service for community PostgreSQL, running versions 14 through 18 on Azure VMs with zone-redundant high availability, PgBouncer built in and burstable to memory-optimized SKUs. Microsoft has invested heavily in it: the azure_ai extension and DiskANN-based vector indexes for AI apps, Apache AGE for graph queries, Fabric mirroring for analytics, and Elastic Clusters, which bring Citus sharding into the same service. The older Single Server deployment option was retired in 2025. It is the obvious Postgres choice for Azure-centric organizations; storage-level innovations like AlloyDB's or Aurora's are not part of it.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "spatial", "vector", "graph"],
+  "workloads": ["oltp", "vector-search", "rag", "geospatial", "content-management"],
+  "architecture": ["primary-replica", "client-server", "distributed"],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2017,
+  "writtenIn": ["C"],
+  "basedOn": "PostgreSQL",
+  "license": { "type": "proprietary", "name": "Proprietary (Azure service; engine is PostgreSQL License)" },
+  "pricing": {
+    "models": ["usage-based", "subscription"],
+    "freeTier": true,
+    "notes": "Billed per vCore-hour by tier (Burstable, General Purpose, Memory Optimized) plus storage; Azure free account includes 750 hours/month of a Burstable B1MS server for 12 months."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["azure"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Azure Database for PostgreSQL", "provider": "Microsoft Azure", "url": "https://azure.microsoft.com/products/postgresql/" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Vertical scaling with near-zero-downtime HA scaling, cascading and geo read replicas; Elastic Clusters (Citus) add horizontal sharding."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["PostgreSQL wire protocol"],
+  "compatibleWith": ["postgresql"],
+  "drivers": ["C#", "Java", "Python", "JavaScript", "Go", "PHP", "Ruby", "Rust"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Community PostgreSQL 14-18 with fast minor-version uptake",
+    "DiskANN vector indexes and azure_ai extension for in-database AI",
+    "Elastic Clusters provide Citus sharding inside the same managed service",
+    "Zone-redundant HA, built-in PgBouncer and Entra ID authentication",
+    "Fabric mirroring for near-real-time analytics"
+  ],
+  "weaknesses": [
+    "Azure-only",
+    "No serverless scale-to-zero or branching",
+    "Extensions limited to an allowlist",
+    "Storage performance tied to Premium SSD tiers and IOPS settings"
+  ],
+  "useCases": [
+    "Postgres backends for Azure-hosted apps",
+    "AI copilots with vectors and relational data together",
+    "Migrating Oracle or on-prem Postgres into Azure",
+    "Multi-tenant SaaS using Elastic Clusters"
+  ],
+  "notIdealFor": [
+    "Multi-cloud portability",
+    "Bursty dev databases needing scale-to-zero",
+    "Teams needing unrestricted extensions"
+  ],
+  "notableUsers": [],
+  "alternatives": ["amazon-rds", "google-cloud-sql", "alloydb", "amazon-aurora", "citus", "neon"],
+  "tags": ["azure", "postgres", "managed", "vector", "microsoft"],
+  "links": {
+    "website": "https://azure.microsoft.com/products/postgresql/",
+    "docs": "https://learn.microsoft.com/azure/postgresql/",
+    "pricing": "https://azure.microsoft.com/pricing/details/postgresql/flexible-server/",
+    "changelog": "https://learn.microsoft.com/azure/postgresql/release-notes/release-notes"
+  },
+  "ids": {
+    "stackoverflowTag": "azure-postgresql",
+    "hackerNewsQuery": "\"Azure Database for PostgreSQL\""
+  },
+  "brand": { "color": "#0078D4" },
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/postgresql/flexible-server/release-notes",
+    "https://learn.microsoft.com/azure/postgresql/elastic-clusters/concepts-elastic-clusters",
+    "https://azure.microsoft.com/products/postgresql/"
+  ],
+  "lastVerified": "2026-10-27"
+}

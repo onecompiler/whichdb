@@ -1,0 +1,147 @@
+{
+  "slug": "abhot",
+  "name": "abhot",
+  "aliases": [],
+  "tagline": "Short-lived 2017 Java time-series database derived from KairosDB code, with Cassandra and H2 datastores.",
+  "description": "abhot is a small Java time-series database published on GitHub in June 2017; its name nods to Hawking's 'A Brief History of Time'. The code is a repackaging of KairosDB (its core classes still carry KairosDB names) with Cassandra (via Hector) and H2 datastores, Jetty and Jersey for the HTTP API, and Spring added on top. The repository received about ten commits over two days and nothing since, has no documentation beyond a build note, and never shipped a release. Anyone needing this design should use KairosDB itself or a maintained time-series database.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Ten commits in June 2017 and no activity since; never released. Use KairosDB or a maintained TSDB instead.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "time-series",
+    "observability"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "quqiangsheng (GitHub)",
+  "vendorType": "community",
+  "initialRelease": 2017,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "KairosDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scaling would depend entirely on the Cassandra backend; the project itself was never operated at scale publicly."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "KairosDB-style JSON query API"
+  ],
+  "apis": [
+    "HTTP REST (JSON)"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Readable example of how KairosDB's datastore abstraction can be repackaged",
+    "Permissive Apache 2.0 license"
+  ],
+  "weaknesses": [
+    "Abandoned after two days of commits; never released",
+    "No documentation, tests of note or community",
+    "Adds nothing substantive over upstream KairosDB"
+  ],
+  "useCases": [
+    "Code archaeology on KairosDB derivatives",
+    "Reference when evaluating forks of KairosDB"
+  ],
+  "notIdealFor": [
+    "Any production metrics or IoT workload",
+    "Teams needing support or documentation"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kairosdb",
+    "opentsdb",
+    "victoriametrics",
+    "influxdb",
+    "timescaledb"
+  ],
+  "tags": [
+    "time-series",
+    "kairosdb",
+    "java",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/quqiangsheng/abhot",
+    "repository": "https://github.com/quqiangsheng/abhot"
+  },
+  "ids": {
+    "github": "quqiangsheng/abhot"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/quqiangsheng/abhot",
+    "https://github.com/quqiangsheng/abhot/commits/master",
+    "https://github.com/quqiangsheng/abhot/blob/master/pom.xml"
+  ],
+  "lastVerified": "2026-10-27"
+}

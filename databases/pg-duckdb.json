@@ -1,0 +1,187 @@
+{
+  "slug": "pg-duckdb",
+  "name": "pg_duckdb",
+  "aliases": [
+    "pg_duckdb",
+    "pgduckdb"
+  ],
+  "tagline": "PostgreSQL extension that embeds DuckDB's vectorized engine for fast analytics and data-lake queries.",
+  "description": "pg_duckdb is the official DuckDB extension for PostgreSQL, built by DuckDB Labs with MotherDuck and Hydra. It embeds DuckDB inside the Postgres process so analytical queries over Postgres tables can be executed by DuckDB's columnar, vectorized engine, often orders of magnitude faster than the Postgres executor for scans and aggregations. It can also read and write Parquet, CSV, JSON, Iceberg and Delta Lake files on S3, GCS, Azure and R2, and optionally offload work to MotherDuck. It reached 1.0 in September 2025 and supports current PostgreSQL majors including 18; it complements Postgres for analytics rather than replacing a warehouse.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics",
+    "lakehouse",
+    "htap"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded"
+  ],
+  "developer": "DuckDB Labs, MotherDuck and Hydra",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "1.1.1",
+    "date": "2025-12-18"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "basedOn": "DuckDB",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Free; optional MotherDuck integration is billed by MotherDuck."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Runs inside a single Postgres server; can push compute to MotherDuck for larger data."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql",
+    "s3"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "DuckDB's vectorized execution accelerates analytical queries on Postgres tables",
+    "Query Parquet, Iceberg and Delta Lake on object storage directly from SQL",
+    "No data movement to a separate warehouse for moderate analytics",
+    "Optional hybrid execution with MotherDuck",
+    "Backed by the DuckDB core team"
+  ],
+  "weaknesses": [
+    "Analytics still run on the OLTP server and compete for its resources",
+    "Not available on most hyperscaler managed Postgres services",
+    "Type and function mismatches between DuckDB and Postgres need care",
+    "Release cadence slowed after 1.1 (last release December 2025)"
+  ],
+  "useCases": [
+    "Dashboards and reports directly on Postgres data",
+    "Joining Postgres tables with Parquet/Iceberg data in S3",
+    "Exporting query results to Parquet for data lakes",
+    "Ad-hoc analytics without standing up a warehouse"
+  ],
+  "notIdealFor": [
+    "Petabyte-scale warehousing",
+    "High-concurrency BI serving many users",
+    "Managed Postgres platforms that do not allow custom extensions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "pg-mooncake",
+    "hydra-columnar",
+    "citus",
+    "clickhouse",
+    "motherduck",
+    "paradedb"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "duckdb",
+    "analytics",
+    "extension",
+    "lakehouse"
+  ],
+  "links": {
+    "website": "https://github.com/duckdb/pg_duckdb",
+    "docs": "https://github.com/duckdb/pg_duckdb/tree/main/docs",
+    "repository": "https://github.com/duckdb/pg_duckdb",
+    "changelog": "https://github.com/duckdb/pg_duckdb/releases"
+  },
+  "ids": {
+    "github": "duckdb/pg_duckdb",
+    "dockerHub": "pgduckdb/pgduckdb",
+    "hackerNewsQuery": "pg_duckdb"
+  },
+  "brand": {
+    "color": "#FFF000",
+    "simpleIcon": "duckdb"
+  },
+  "sources": [
+    "https://github.com/duckdb/pg_duckdb/releases",
+    "https://github.com/duckdb/pg_duckdb",
+    "https://motherduck.com/blog/pg-duckdb-release/"
+  ],
+  "lastVerified": "2026-10-27"
+}

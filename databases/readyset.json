@@ -1,0 +1,179 @@
+{
+  "slug": "readyset",
+  "name": "Readyset",
+  "aliases": [
+    "ReadySet",
+    "Readyset Cloud"
+  ],
+  "tagline": "A wire-compatible SQL cache for Postgres and MySQL that keeps cached queries fresh from replication.",
+  "description": "Readyset sits between your application and Postgres or MySQL, speaking their wire protocols, and lets you cache specific SELECT queries. Instead of TTLs it consumes the database's replication stream and updates cached results incrementally using a dataflow engine derived from MIT's Noria research, so cached results stay within replication lag of the source. Uncached queries are proxied to the database. It suits read-heavy apps with repetitive queries that are tired of hand-built cache invalidation. Releases ship monthly under the Business Source License, with a managed Readyset Cloud option.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "caching",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "ReadySet, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "stable-261022",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosted free under BSL; Readyset Cloud and support are paid."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Readyset Cloud",
+      "provider": "ReadySet",
+      "url": "https://readyset.io/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Scale reads by running multiple Readyset instances against the same upstream."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "MySQL protocol"
+  ],
+  "compatibleWith": [
+    "postgresql",
+    "mysql"
+  ],
+  "drivers": [
+    "Any Postgres/MySQL driver"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No application code changes beyond the connection string",
+    "Cache invalidation handled automatically from the replication stream",
+    "Sub-millisecond reads for cached queries",
+    "Uncached queries transparently proxied to the primary"
+  ],
+  "weaknesses": [
+    "Eventual consistency bounded by replication lag",
+    "Not every SQL construct is cacheable",
+    "BSL license restricts offering it as a service",
+    "Adds another stateful component in the request path"
+  ],
+  "useCases": [
+    "Offloading repetitive read queries from Postgres or MySQL",
+    "Replacing Redis-based query caches with automatic invalidation",
+    "Scaling read-heavy SaaS dashboards"
+  ],
+  "notIdealFor": [
+    "Read-after-write consistency requirements",
+    "Write-heavy workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "epsio",
+    "materialize",
+    "redis",
+    "valkey",
+    "amazon-elasticache"
+  ],
+  "tags": [
+    "sql-cache",
+    "postgres",
+    "mysql",
+    "incremental-view-maintenance",
+    "bsl"
+  ],
+  "links": {
+    "website": "https://readyset.io/",
+    "docs": "https://docs.readyset.io/",
+    "repository": "https://github.com/readysettech/readyset",
+    "changelog": "https://github.com/readysettech/readyset/releases"
+  },
+  "ids": {
+    "github": "readysettech/readyset",
+    "dockerHub": "readysettech/readyset",
+    "hackerNewsQuery": "Readyset"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/readysettech/readyset/releases",
+    "https://github.com/readysettech/readyset/blob/main/LICENSE",
+    "https://www.readyset.io"
+  ],
+  "lastVerified": "2026-10-27"
+}

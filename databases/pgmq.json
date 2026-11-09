@@ -1,0 +1,186 @@
+{
+  "slug": "pgmq",
+  "name": "PGMQ",
+  "aliases": [
+    "Postgres Message Queue",
+    "pgmq"
+  ],
+  "tagline": "An SQS-style message queue implemented as a lightweight Postgres extension.",
+  "description": "PGMQ gives Postgres an SQS-like queue API: send, read with a visibility timeout, archive and delete, all as SQL functions over ordinary tables. Because messages live in Postgres, enqueueing can join the same transaction as your business writes, removing dual-write problems, and you avoid running a separate broker. Originally built at Tembo, the project now lives in its own community GitHub organization, is written in plain SQL so it installs even on managed Postgres without custom binaries, and is bundled by Supabase as Supabase Queues. Expect thousands, not millions, of messages per second.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "queue"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "PGMQ community (originally Tembo)",
+  "vendorType": "community",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.13.1",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "PostgreSQL License",
+    "spdx": "PostgreSQL"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Supabase Queues",
+      "provider": "Supabase",
+      "url": "https://supabase.com/docs/guides/queues"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Throughput bounded by the host Postgres; partitioned queues via pg_partman help retention."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "Rust",
+    "JavaScript",
+    "Go",
+    "Java",
+    "C#",
+    "Elixir"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Transactional enqueue in the same commit as application data",
+    "No extra infrastructure if you already run Postgres",
+    "Pure SQL install works on many managed Postgres services",
+    "Exactly-once delivery within the visibility timeout semantics, plus archiving"
+  ],
+  "weaknesses": [
+    "Throughput and latency limited by Postgres write capacity and vacuum",
+    "Polling model; no push delivery to consumers",
+    "No fan-out pub/sub or consumer groups like Kafka"
+  ],
+  "useCases": [
+    "Background job queues for Postgres-backed apps",
+    "Outbox pattern without a separate broker",
+    "Lightweight task queues on Supabase"
+  ],
+  "notIdealFor": [
+    "Very high-throughput event streaming",
+    "Multi-subscriber pub/sub"
+  ],
+  "notableUsers": [
+    "Supabase"
+  ],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "kurrentdb",
+    "postgresql"
+  ],
+  "tags": [
+    "postgres-extension",
+    "queue",
+    "postgres-ecosystem",
+    "sqs-like"
+  ],
+  "links": {
+    "website": "https://github.com/pgmq/pgmq",
+    "docs": "https://pgmq.github.io/pgmq/",
+    "repository": "https://github.com/pgmq/pgmq",
+    "changelog": "https://github.com/pgmq/pgmq/releases"
+  },
+  "ids": {
+    "github": "pgmq/pgmq",
+    "pypi": "pgmq",
+    "hackerNewsQuery": "pgmq"
+  },
+  "brand": {
+    "simpleIcon": "postgresql"
+  },
+  "sources": [
+    "https://github.com/pgmq/pgmq",
+    "https://github.com/pgmq/pgmq/releases",
+    "https://supabase.com/docs/guides/queues"
+  ],
+  "lastVerified": "2026-10-27"
+}

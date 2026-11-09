@@ -1,0 +1,177 @@
+{
+  "slug": "lealone",
+  "name": "Lealone",
+  "aliases": [
+    "Lealone Database",
+    "Lealone Agent"
+  ],
+  "tagline": "Chinese Java OLTP database derived from H2, now repositioned as an AI agent platform built on its SQL engine.",
+  "description": "Lealone is an open-source Java database started in 2012-2013 by a Chinese developer (zhh), originally forked from H2 and rebuilt around an asynchronous, thread-scheduled architecture for high-concurrency OLTP. It offers SQL with MVCC transactions, embedded and client-server modes, replication and sharding, an ORM, and 'services' declared in SQL that are exposed over HTTP; first-party plugins speak the MySQL, PostgreSQL and MongoDB wire protocols. Since 2025-26 the project describes itself as a 'self-evolving general AI agent': the 8.0 line adds an agent console that calls LLMs (Doubao, DeepSeek) to generate applications, while commits still mostly touch the storage and transaction engine. The last stable release is 6.0.1 (2024) and 8.0.0-beta1 was tagged in February 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "distributed"
+  ],
+  "developer": "Lealone Database Group (zhh)",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "6.0.1",
+    "date": "2024-08-18"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "H2",
+  "license": {
+    "type": "source-available",
+    "name": "Server Side Public License v1 (H2-derived files under the H2 license)",
+    "spdx": "SSPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Supports replication and sharding; production references outside China are scarce."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "HTTP services",
+    "MySQL protocol (plugin)",
+    "PostgreSQL protocol (plugin)",
+    "MongoDB protocol (plugin)"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "postgresql",
+    "mongodb"
+  ],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Asynchronous, scheduler-based engine aimed at very high OLTP concurrency",
+    "Runs embedded in a JVM or as a server, with replication and sharding",
+    "First-party plugins for MySQL, PostgreSQL and MongoDB protocols",
+    "Business services can be declared in SQL and served over HTTP"
+  ],
+  "weaknesses": [
+    "SSPL licensing restricts offering it as a service",
+    "Documentation and community are almost entirely Chinese-language",
+    "Shifting focus toward LLM agents makes the roadmap hard to predict",
+    "Few public production references"
+  ],
+  "useCases": [
+    "Embedded or standalone OLTP in Java applications",
+    "Experimenting with SQL-defined services and LLM-generated apps",
+    "Learning a modern rework of the H2 codebase"
+  ],
+  "notIdealFor": [
+    "Teams needing English documentation and commercial support",
+    "Vendors planning to resell it as a managed service (SSPL)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "tidb",
+    "cockroachdb"
+  ],
+  "tags": [
+    "java",
+    "oltp",
+    "h2-derived",
+    "ai-agent",
+    "china"
+  ],
+  "links": {
+    "website": "https://github.com/lealone/Lealone",
+    "repository": "https://github.com/lealone/Lealone",
+    "docs": "https://github.com/lealone/Lealone-Docs",
+    "changelog": "https://github.com/lealone/Lealone/releases"
+  },
+  "ids": {
+    "github": "lealone/Lealone",
+    "hackerNewsQuery": "Lealone"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/lealone/Lealone",
+    "https://github.com/lealone/Lealone/releases",
+    "https://github.com/lealone/Lealone/blob/master/LICENSE.md",
+    "https://github.com/lealone-plugins/lealone-plugins",
+    "https://dbdb.io/db/lealone"
+  ],
+  "lastVerified": "2026-10-27"
+}

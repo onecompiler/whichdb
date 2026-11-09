@@ -1,0 +1,210 @@
+{
+  "slug": "azure-cosmos-db",
+  "name": "Azure Cosmos DB",
+  "aliases": [
+    "Cosmos DB",
+    "CosmosDB",
+    "Azure DocumentDB (legacy name)"
+  ],
+  "tagline": "Microsoft's globally distributed, multi-API NoSQL and vector database with SLA-backed latency.",
+  "description": "Azure Cosmos DB is a fully managed, horizontally partitioned NoSQL service with turnkey multi-region writes, five well-defined consistency levels and a 99.999% availability SLA for multi-region accounts. The native API for NoSQL queries JSON with a SQL dialect, and other APIs expose MongoDB (RU-based), Cassandra, Gremlin and Table semantics on the same backend. It has leaned hard into AI workloads with DiskANN-based vector search, full-text and hybrid search, and it powers ChatGPT's chat history at OpenAI. Billing is in request units, which rewards careful partition-key and indexing design and punishes careless queries.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value",
+    "graph",
+    "wide-column",
+    "vector",
+    "search"
+  ],
+  "workloads": [
+    "oltp",
+    "iot",
+    "session-store",
+    "vector-search",
+    "rag",
+    "real-time-analytics",
+    "htap"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "serverless"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2017,
+  "writtenIn": [
+    "C++",
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary Azure service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "startingPrice": "Lifetime free tier: 1,000 RU/s and 25 GB",
+    "notes": "Provisioned, autoscale or serverless throughput billed in request units plus storage; reserved capacity discounts up to 63%."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Azure Cosmos DB",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/cosmos-db/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Automatic partitioning by partition key (with hierarchical keys); any number of Azure regions with multi-region writes."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable",
+      "strong",
+      "causal",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Cosmos DB NoSQL (SQL dialect)",
+    "MongoDB Query API",
+    "CQL",
+    "Gremlin"
+  ],
+  "apis": [
+    "NoSQL REST API",
+    "MongoDB wire protocol",
+    "Cassandra protocol",
+    "Gremlin",
+    "Table API"
+  ],
+  "compatibleWith": [
+    "mongodb",
+    "cassandra"
+  ],
+  "drivers": [
+    "C#",
+    "Java",
+    "JavaScript",
+    "Python",
+    "Go",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Multi-region writes with automatic failover and a 99.999% SLA",
+    "Five consistency levels let you trade latency against guarantees per request",
+    "Automatic indexing of every property by default",
+    "DiskANN vector search plus full-text and hybrid search next to operational data",
+    "Change feed and Fabric mirroring for event-driven and no-ETL analytics",
+    "Serverless and autoscale throughput modes"
+  ],
+  "weaknesses": [
+    "Request-unit pricing is hard to forecast; cross-partition queries get expensive",
+    "Transactions are limited to a single logical partition",
+    "No joins across documents in the NoSQL API",
+    "The MongoDB (RU) and other compatibility APIs lag their originals",
+    "Azure-only"
+  ],
+  "useCases": [
+    "Globally distributed user and session data",
+    "IoT telemetry and device state",
+    "Chat history and memory for AI agents",
+    "Retail carts, catalogs and personalization",
+    "Gaming leaderboards and player profiles"
+  ],
+  "notIdealFor": [
+    "Highly relational apps (use Azure SQL or PostgreSQL)",
+    "Analytical workloads (use Fabric or a warehouse)",
+    "Teams wanting predictable flat-rate pricing"
+  ],
+  "notableUsers": [
+    "OpenAI"
+  ],
+  "alternatives": [
+    "amazon-dynamodb",
+    "azure-documentdb",
+    "mongodb-atlas",
+    "google-cloud-firestore",
+    "google-cloud-spanner",
+    "couchbase-capella"
+  ],
+  "tags": [
+    "azure",
+    "multi-model",
+    "global-distribution",
+    "serverless",
+    "vector-search"
+  ],
+  "links": {
+    "website": "https://azure.microsoft.com/products/cosmos-db/",
+    "docs": "https://learn.microsoft.com/azure/cosmos-db/",
+    "pricing": "https://azure.microsoft.com/pricing/details/cosmos-db/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cosmos_DB"
+  },
+  "ids": {
+    "stackoverflowTag": "azure-cosmosdb",
+    "wikipedia": "Cosmos_DB",
+    "npm": "@azure/cosmos",
+    "pypi": "azure-cosmos",
+    "hackerNewsQuery": "Cosmos DB"
+  },
+  "brand": {
+    "color": "#0078D4"
+  },
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/cosmos-db/introduction",
+    "https://learn.microsoft.com/en-us/azure/cosmos-db/free-tier",
+    "https://en.wikipedia.org/wiki/Cosmos_DB"
+  ],
+  "lastVerified": "2026-10-27"
+}

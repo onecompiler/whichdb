@@ -1,0 +1,195 @@
+{
+  "slug": "presto",
+  "name": "Presto",
+  "aliases": [
+    "PrestoDB",
+    "Prestissimo",
+    "Presto C++"
+  ],
+  "tagline": "Distributed SQL query engine from Meta for interactive queries over data lakes and many sources.",
+  "description": "Presto is the federated SQL query engine Facebook open-sourced in 2013 and now governed by the Presto Foundation under the Linux Foundation. It has no storage of its own: coordinators plan ANSI SQL and workers pull data through connectors for Hive, Iceberg, Delta, Hudi, Kafka, relational databases and more. The project's focus has shifted to Prestissimo, a C++ worker built on Meta's Velox library that replaces the Java workers for much better efficiency. Presto remains a solid lakehouse engine at Meta and Uber, though Trino (the 2019 fork) has the larger community today.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "lakehouse",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Presto Foundation (Linux Foundation)",
+  "vendorType": "foundation",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "0.299",
+    "date": "2026-08-28"
+  },
+  "writtenIn": [
+    "Java",
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; IBM watsonx.data offers a managed Presto (C++) engine."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "IBM watsonx.data",
+      "provider": "IBM",
+      "url": "https://www.ibm.com/products/watsonx-data"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales by adding workers; used at Meta and Uber on exabyte-scale lakes."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ANSI)"
+  ],
+  "apis": [
+    "HTTP REST client protocol",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Federates queries across lakes, warehouses and operational databases",
+    "Native C++ workers (Prestissimo/Velox) cut CPU and memory cost",
+    "Battle-tested at exabyte scale at Meta and Uber",
+    "Open governance under the Linux Foundation",
+    "Rich connector set for Hive, Iceberg, Delta and Hudi"
+  ],
+  "weaknesses": [
+    "Smaller community and release cadence than Trino",
+    "No storage layer; performance depends on file layout and connectors",
+    "Coordinator is a single point of contention in large clusters",
+    "Long-running ETL is less resilient than Spark"
+  ],
+  "useCases": [
+    "Interactive SQL on data lakes",
+    "Federated queries across sources",
+    "Lakehouse analytics on Iceberg/Hudi"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Low-latency user-facing analytics",
+    "Small datasets on one machine"
+  ],
+  "notableUsers": [
+    "Meta",
+    "Uber"
+  ],
+  "alternatives": [
+    "trino",
+    "apache-spark-sql",
+    "starburst",
+    "amazon-athena",
+    "dremio",
+    "apache-impala"
+  ],
+  "tags": [
+    "query-engine",
+    "federated",
+    "lakehouse",
+    "open-source",
+    "linux-foundation"
+  ],
+  "links": {
+    "website": "https://prestodb.io/",
+    "docs": "https://prestodb.io/docs/current/",
+    "repository": "https://github.com/prestodb/presto",
+    "changelog": "https://prestodb.io/docs/current/release.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Presto_(SQL_query_engine)"
+  },
+  "ids": {
+    "github": "prestodb/presto",
+    "stackoverflowTag": "presto",
+    "wikipedia": "Presto (SQL query engine)",
+    "dockerHub": "prestodb/presto",
+    "pypi": "presto-python-client",
+    "npm": "presto-client",
+    "hackerNewsQuery": "PrestoDB"
+  },
+  "brand": {
+    "color": "#5890FF",
+    "simpleIcon": "presto"
+  },
+  "sources": [
+    "https://github.com/prestodb/presto/releases",
+    "https://en.wikipedia.org/wiki/Presto_(SQL_query_engine)",
+    "https://hub.docker.com/r/prestodb/presto"
+  ],
+  "lastVerified": "2026-10-27"
+}

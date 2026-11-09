@@ -1,0 +1,180 @@
+{
+  "slug": "orioledb",
+  "name": "OrioleDB",
+  "aliases": [
+    "Oriole"
+  ],
+  "tagline": "Cloud-native storage engine for PostgreSQL with undo logs, no VACUUM bloat and row-level WAL.",
+  "description": "OrioleDB is a table access method for PostgreSQL that replaces the heap with an index-organized, copy-on-write design: undo logs instead of dead tuples, page-level compression, lock-free in-memory page access and row-level WAL that suits replication and S3-backed storage. It aims to fix Postgres' classic pain points (VACUUM, bloat, buffer contention, write amplification) without forking the SQL layer, though today it still requires a set of patches to PostgreSQL 17 that are being upstreamed. Supabase acquired the project in 2024 and launched it as a public beta on Supabase in October 2026, explicitly not yet recommended for production.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "shared-storage"
+  ],
+  "developer": "Supabase (OrioleDB team)",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "beta19",
+    "date": "2026-10-01"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL (patched 17.x)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Open source; available on Supabase paid plans as a public beta."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Supabase (OrioleDB public beta)",
+      "provider": "Supabase",
+      "url": "https://supabase.com/changelog/orioledb-public-beta"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single-primary Postgres scaling; experimental S3 mode decouples storage."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Undo-log MVCC eliminates table bloat and routine VACUUM",
+    "Index-organized tables with page-level compression cut storage",
+    "Lock-free page access scales better on many-core machines",
+    "Row-level WAL reduces write amplification and enables S3-native storage",
+    "Keeps full PostgreSQL SQL and extension compatibility at the query layer"
+  ],
+  "weaknesses": [
+    "Still beta; not recommended for production by its own maintainers",
+    "Requires a patched PostgreSQL build rather than stock Postgres",
+    "Some index types and features are not yet supported on OrioleDB tables",
+    "Small operational track record"
+  ],
+  "useCases": [
+    "Write-heavy Postgres OLTP suffering from bloat",
+    "Evaluating next-generation Postgres storage on Supabase",
+    "High-concurrency workloads on large multi-core servers"
+  ],
+  "notIdealFor": [
+    "Production systems needing proven stability today",
+    "Managed Postgres services other than Supabase",
+    "Workloads relying on unsupported index access methods"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "neon",
+    "supabase",
+    "yugabytedb",
+    "postgres-pro"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "storage-engine",
+    "table-access-method",
+    "supabase"
+  ],
+  "links": {
+    "website": "https://www.orioledb.com/",
+    "docs": "https://www.orioledb.com/docs",
+    "repository": "https://github.com/orioledb/orioledb",
+    "changelog": "https://github.com/orioledb/orioledb/releases"
+  },
+  "ids": {
+    "github": "orioledb/orioledb",
+    "dockerHub": "orioledb/orioledb",
+    "hackerNewsQuery": "OrioleDB"
+  },
+  "sources": [
+    "https://github.com/orioledb/orioledb/releases",
+    "https://supabase.com/changelog/orioledb-public-beta",
+    "https://github.com/orioledb/orioledb"
+  ],
+  "lastVerified": "2026-10-27"
+}

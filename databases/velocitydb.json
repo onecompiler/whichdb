@@ -1,0 +1,159 @@
+{
+  "slug": "velocitydb",
+  "name": "VelocityDB",
+  "aliases": [
+    "VelocityGraph"
+  ],
+  "tagline": "C# .NET object database with a graph layer (VelocityGraph); last release 11.1.1 in 2022.",
+  "description": "VelocityDB is a commercial object database for .NET written in C#, letting applications persist their own object graphs and data structures directly instead of mapping them to tables. Developers control placement of objects into database locations and pages and choose their own indexes and collections, which suits performance-sensitive or unusually shaped data. VelocityGraph, an open-source property-graph API, sits on top of it. Features include optional page-level encryption, incremental backup and Windows authentication for server access. VelocityDB Inc. still sells it, but the last release, 11.1.1, dates from June 2022.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Still sold by VelocityDB Inc., but no release since 11.1.1 (June 27, 2022).",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "graph"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "VelocityDB Inc.",
+  "vendorType": "company",
+  "initialRelease": 2011,
+  "latestVersion": {
+    "version": "11.1.1",
+    "date": "2022-06-27"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (VelocityGraph is open source)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Commercial licences with a free trial download."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Data can be spread across database locations on multiple servers under application control."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "C# / .NET API"
+  ],
+  "apis": [
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Persists .NET objects directly with no ORM layer",
+    "Fine-grained control over object placement, pages and indexes for tuning",
+    "Graph API (VelocityGraph) on the same engine"
+  ],
+  "weaknesses": [
+    "Closed source from a very small vendor",
+    "No release since 2022",
+    "Tied to .NET; no SQL access for other tools"
+  ],
+  "useCases": [
+    "Performance-critical .NET apps with complex object models",
+    "Embedded graph storage in .NET"
+  ],
+  "notIdealFor": [
+    "Polyglot environments needing SQL access",
+    "Teams needing a large support ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ravendb",
+    "litedb",
+    "versant-object-database",
+    "objectdb",
+    "perst",
+    "neo4j"
+  ],
+  "tags": [
+    "object-database",
+    "dotnet",
+    "csharp",
+    "graph",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://velocitydb.com/",
+    "repository": "https://github.com/VelocityDB/VelocityDB"
+  },
+  "ids": {
+    "github": "VelocityDB/VelocityDB",
+    "hackerNewsQuery": "VelocityDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://velocitydb.com/",
+    "https://github.com/VelocityDB/VelocityDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,186 @@
+{
+  "slug": "oracle-timesten",
+  "name": "Oracle TimesTen",
+  "aliases": [
+    "TimesTen",
+    "TimesTen In-Memory Database",
+    "TimesTen Scaleout"
+  ],
+  "tagline": "Oracle's in-memory relational database: microsecond SQL, PL/SQL, and a cache tier for Oracle Database.",
+  "description": "TimesTen is an in-memory relational database that keeps the full dataset in RAM while logging and checkpointing to disk, giving microsecond-level response times for SQL and PL/SQL. It comes in two shapes: Classic, often used as a read/write cache in front of Oracle Database (Cache for Oracle), and Scaleout, a shared-nothing distributed edition. It is common in telecom charging, trading and real-time fraud checks where Oracle-compatible SQL at memory speed matters. Oracle shipped a new major line, TimesTen 26.1, in April 2026 with support to 2034, while 22.1 is supported to 2030.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "real-time-analytics",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "primary-replica",
+    "embedded"
+  ],
+  "developer": "Oracle Corporation",
+  "vendorType": "company",
+  "initialRelease": 1998,
+  "latestVersion": {
+    "version": "26.1.1",
+    "date": "2026-04"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensed per processor like other Oracle products; Cache for Oracle is often bundled with Oracle EE deals."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Scaleout edition distributes data across nodes with K-safety replicas; Classic uses active-standby pairs."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/SQL"
+  ],
+  "apis": [
+    "Oracle Call Interface (OCI)",
+    "ODBC",
+    "JDBC",
+    "Pro*C"
+  ],
+  "compatibleWith": [
+    "oracle"
+  ],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Microsecond SQL latency with the dataset held in RAM",
+    "Oracle SQL, PL/SQL and OCI compatibility; apps can move between TimesTen and Oracle",
+    "Cache for Oracle keeps hot tables in memory and syncs writes back",
+    "Direct-linked mode runs the database inside the application process"
+  ],
+  "weaknesses": [
+    "Dataset must fit in RAM across the cluster",
+    "Oracle licensing cost",
+    "Smaller community; few third-party tools target it directly"
+  ],
+  "useCases": [
+    "Telecom online charging and policy control",
+    "Trading and market-data applications",
+    "Real-time fraud and authorisation checks",
+    "In-memory cache tier in front of Oracle Database"
+  ],
+  "notIdealFor": [
+    "Datasets much larger than available memory",
+    "Cost-sensitive caching (Redis/Valkey are cheaper)",
+    "Analytical workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "sap-hana",
+    "altibase",
+    "volt-active-data",
+    "oracle-database",
+    "apache-ignite",
+    "extremedb"
+  ],
+  "tags": [
+    "in-memory",
+    "oracle",
+    "low-latency",
+    "cache",
+    "telecom"
+  ],
+  "links": {
+    "website": "https://docs.oracle.com/en/database/other-databases/timesten/",
+    "docs": "https://docs.oracle.com/en/database/other-databases/timesten/22.1/",
+    "changelog": "https://docs.oracle.com/en/database/other-databases/timesten/22.1/release-notes/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/TimesTen"
+  },
+  "ids": {
+    "stackoverflowTag": "timesten",
+    "wikipedia": "TimesTen",
+    "hackerNewsQuery": "TimesTen"
+  },
+  "brand": {
+    "color": "#C74634"
+  },
+  "sources": [
+    "https://www.oracle.com/a/otn/docs/database/whats-new-in-oracle-timesten.pdf",
+    "https://docs.oracle.com/en/database/other-databases/timesten/22.1/release-notes/index.html",
+    "https://blogs.oracle.com/oracle4engineer/oracle-timesten-in-memory-database-22-1-1-2025-12-16"
+  ],
+  "lastVerified": "2026-10-27"
+}

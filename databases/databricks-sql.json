@@ -1,0 +1,194 @@
+{
+  "slug": "databricks-sql",
+  "name": "Databricks SQL",
+  "aliases": [
+    "DBSQL",
+    "Databricks SQL Warehouse",
+    "Databricks SQL Serverless"
+  ],
+  "tagline": "Serverless SQL warehouses on the Databricks lakehouse, powered by the Photon C++ engine.",
+  "description": "Databricks SQL is the warehousing layer of the Databricks platform: SQL warehouses (classic, pro or serverless) run the vectorized Photon engine directly over Delta Lake and Iceberg tables governed by Unity Catalog. Because the data stays in open formats in your cloud storage, the same tables serve Spark jobs, ML and BI without copies. It adds materialized views, streaming tables, AI functions and predictive optimization. It is strongest for organizations already on Databricks that want to retire a separate warehouse; for pure SQL shops it can feel like more platform than they need.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "lakehouse",
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Databricks",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "writtenIn": [
+    "C++",
+    "Scala"
+  ],
+  "basedOn": "Apache Spark + Photon",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "Serverless SQL from ~$0.70 per DBU (plus cloud costs for classic)",
+    "notes": "Billed in DBUs per warehouse size and uptime; Databricks Free Edition available for learning."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Azure Databricks",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/databricks/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Warehouses autoscale clusters for concurrency; storage is your own object storage, so capacity is effectively unbounded."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (Databricks SQL / ANSI)",
+    "Python"
+  ],
+  "apis": [
+    "SQL Statement Execution REST API",
+    "JDBC",
+    "ODBC",
+    "Arrow Flight-based connectors"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    ".NET"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Warehouse over open Delta Lake/Iceberg tables in your own cloud storage",
+    "Photon vectorized engine gives strong price/performance on large scans",
+    "Unity Catalog provides one governance layer for SQL, ML and AI assets",
+    "Serverless warehouses start in seconds and scale for concurrency",
+    "Streaming tables and materialized views for incremental pipelines"
+  ],
+  "weaknesses": [
+    "DBU pricing plus underlying cloud costs is hard to forecast",
+    "Platform breadth means a steeper learning curve for SQL-only teams",
+    "Small, frequent writes create small-file and optimization overhead",
+    "No on-premises option"
+  ],
+  "useCases": [
+    "Lakehouse SQL and BI on Delta Lake",
+    "Consolidating a separate warehouse into Databricks",
+    "dbt transformations on the lakehouse",
+    "Serving features and aggregates for ML"
+  ],
+  "notIdealFor": [
+    "OLTP workloads",
+    "Sub-second user-facing analytics at high QPS",
+    "Small teams with only a few GB of data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "snowflake",
+    "google-bigquery",
+    "microsoft-fabric-warehouse",
+    "starburst",
+    "dremio",
+    "apache-spark-sql"
+  ],
+  "tags": [
+    "lakehouse",
+    "delta-lake",
+    "photon",
+    "serverless",
+    "unity-catalog"
+  ],
+  "links": {
+    "website": "https://www.databricks.com/product/databricks-sql",
+    "docs": "https://docs.databricks.com/aws/en/sql/",
+    "pricing": "https://www.databricks.com/product/pricing/databricks-sql",
+    "changelog": "https://docs.databricks.com/aws/en/sql/release-notes/"
+  },
+  "ids": {
+    "stackoverflowTag": "databricks-sql",
+    "pypi": "databricks-sql-connector",
+    "npm": "@databricks/sql",
+    "hackerNewsQuery": "Databricks SQL"
+  },
+  "brand": {
+    "color": "#FF3621",
+    "simpleIcon": "databricks"
+  },
+  "sources": [
+    "https://www.databricks.com/product/databricks-sql",
+    "https://docs.databricks.com/aws/en/sql/",
+    "https://pypi.org/project/databricks-sql-connector/"
+  ],
+  "lastVerified": "2026-10-27"
+}

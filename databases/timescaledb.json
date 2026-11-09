@@ -1,0 +1,213 @@
+{
+  "slug": "timescaledb",
+  "name": "TimescaleDB",
+  "aliases": [
+    "Timescale",
+    "TigerData",
+    "Tiger Data",
+    "Tiger Cloud"
+  ],
+  "tagline": "PostgreSQL extension adding hypertables, columnar compression and continuous aggregates for time series.",
+  "description": "TimescaleDB turns PostgreSQL into a time-series and real-time analytics database: hypertables partition data by time automatically, the hypercore engine converts older chunks into compressed columnar form, and continuous aggregates keep rollups incrementally up to date. Because it is an extension, you keep full SQL, joins, foreign keys and the rest of the Postgres ecosystem in the same database. Its developer renamed itself from Timescale to TigerData in June 2025 and sells the managed Tiger Cloud. The core is Apache-2.0, but compression, continuous aggregates and other advanced features sit under the source-available Timescale License, which bars offering them as a hosted DBaaS.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "time-series",
+    "real-time-analytics",
+    "iot",
+    "observability",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "TigerData (formerly Timescale)",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "2.31.0",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "source-available",
+    "name": "Apache-2.0 core + Timescale License (TSL) for advanced features"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Community edition (with TSL features) is free to self-host; Tiger Cloud bills compute and storage by usage."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Tiger Cloud",
+      "provider": "TigerData",
+      "url": "https://www.tigerdata.com/cloud"
+    },
+    {
+      "name": "Azure Database for PostgreSQL (Apache-licensed TimescaleDB only)",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/postgresql/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "One primary plus Postgres read replicas; the multi-node option was removed in 2.14. Tiger Cloud adds tiering of old chunks to object storage."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "C#",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "It is PostgreSQL: transactions, joins, foreign keys and every Postgres driver, ORM and BI tool work unchanged",
+    "Columnar compression of older chunks often shrinks storage by an order of magnitude",
+    "Continuous aggregates maintain rollups incrementally and can merge in not-yet-materialised recent data",
+    "Keeps time series next to relational business data, avoiding a second database",
+    "Automatic time partitioning with chunk-level retention and compression policies"
+  ],
+  "weaknesses": [
+    "Single-primary write path; write throughput is bounded by one server since multi-node was dropped",
+    "Compression and continuous aggregates are TSL-licensed, so third-party clouds only ship the Apache subset",
+    "Ingest at very high series cardinality trails purpose-built TSDBs",
+    "Updates and deletes on compressed chunks cost more than on row data"
+  ],
+  "useCases": [
+    "IoT and sensor data joined with relational metadata",
+    "Financial tick and market data analytics in SQL",
+    "Product and application metrics dashboards",
+    "Energy and utility metering",
+    "Adding time-series analytics to an existing Postgres app"
+  ],
+  "notIdealFor": [
+    "Prometheus-scale metrics with millions of active series",
+    "Petabyte-scale log storage",
+    "Workloads that need horizontal write sharding"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "influxdb",
+    "questdb",
+    "clickhouse",
+    "postgresql",
+    "tdengine",
+    "apache-iotdb",
+    "cratedb",
+    "greptimedb"
+  ],
+  "tags": [
+    "time-series",
+    "postgres-ecosystem",
+    "sql",
+    "extension",
+    "iot"
+  ],
+  "links": {
+    "website": "https://www.tigerdata.com/",
+    "docs": "https://docs.tigerdata.com/",
+    "repository": "https://github.com/timescale/timescaledb",
+    "pricing": "https://www.tigerdata.com/pricing",
+    "changelog": "https://github.com/timescale/timescaledb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/TimescaleDB"
+  },
+  "ids": {
+    "github": "timescale/timescaledb",
+    "stackoverflowTag": "timescaledb",
+    "wikipedia": "TimescaleDB",
+    "dockerHub": "timescale/timescaledb",
+    "hackerNewsQuery": "TimescaleDB"
+  },
+  "brand": {
+    "color": "#FDB515",
+    "simpleIcon": "timescale"
+  },
+  "sources": [
+    "https://www.tigerdata.com/blog/timescale-becomes-tigerdata",
+    "https://github.com/timescale/timescaledb/blob/main/LICENSE",
+    "https://github.com/timescale/timescaledb/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

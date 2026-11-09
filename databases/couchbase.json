@@ -1,0 +1,223 @@
+{
+  "slug": "couchbase",
+  "name": "Couchbase Server",
+  "aliases": [
+    "Couchbase",
+    "Membase"
+  ],
+  "tagline": "Memory-first distributed JSON database with SQL++, search, vector indexes and mobile sync.",
+  "description": "Couchbase Server is a distributed JSON document database that grew out of Membase, so it keeps a memcached-style, memory-first key-value path in front of disk storage. Services (data, query, index, search, analytics, eventing) can be placed on separate nodes and scaled independently, and SQL++ gives full SQL-style querying with joins over JSON. Release 8.0 (October 2025) added Hyperscale and Composite vector indexes and native encryption at rest, and 8.0.3 shipped in September 2026. Couchbase was taken private by Haveli Investments in 2025. It suits latency-sensitive, high-throughput apps that need more query power than a pure key-value store, especially with Couchbase Lite at the edge.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value",
+    "search",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "session-store",
+    "full-text-search",
+    "vector-search",
+    "mobile-offline",
+    "edge"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "in-memory"
+  ],
+  "developer": "Couchbase, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "8.0.3",
+    "date": "2026-09"
+  },
+  "writtenIn": [
+    "C++",
+    "Erlang",
+    "Go",
+    "Java"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1 (source); commercial Enterprise Edition",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition binaries are free; Enterprise Edition is licensed per node/subscription. Capella is the managed version."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Couchbase Capella",
+      "provider": "Couchbase, Inc.",
+      "url": "https://www.couchbase.com/products/capella/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Data is hash-partitioned into vBuckets and rebalanced online; XDCR provides bidirectional cross-cluster replication with conflict resolution."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL++ (N1QL)",
+    "Full Text Search query DSL"
+  ],
+  "apis": [
+    "Key-value binary protocol",
+    "REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C#",
+    "Go",
+    "Java",
+    "Kotlin",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Integrated managed cache gives sub-millisecond key-value reads",
+    "SQL++ brings joins, subqueries and aggregations to JSON",
+    "Multi-dimensional scaling: run query, index, search and data services on different nodes",
+    "XDCR offers active-active replication across data centers",
+    "Couchbase Lite and Sync Gateway give first-party offline sync to mobile and edge devices",
+    "Vector, full-text and geospatial search inside the same cluster"
+  ],
+  "weaknesses": [
+    "Operationally heavy: many services, index placement and memory quotas to tune",
+    "Most advanced features and support are Enterprise-only; BSL source license",
+    "Smaller community and hiring pool than MongoDB",
+    "Global secondary indexes must be designed carefully or queries fall back to slow scans"
+  ],
+  "useCases": [
+    "User profiles and session stores at high concurrency",
+    "Travel, retail and gaming backends with strict latency SLAs",
+    "Offline-first mobile and edge apps with Couchbase Lite",
+    "Caching layer that also persists and can be queried",
+    "Vector search for recommendation and RAG features"
+  ],
+  "notIdealFor": [
+    "Small teams wanting a simple single-node database",
+    "Heavy analytics over historical data",
+    "Strictly open-source (OSI) environments"
+  ],
+  "notableUsers": [
+    "LinkedIn",
+    "Amadeus"
+  ],
+  "alternatives": [
+    "mongodb",
+    "couchbase-capella",
+    "aerospike",
+    "redis",
+    "apache-cassandra",
+    "azure-cosmos-db",
+    "couchbase-lite"
+  ],
+  "tags": [
+    "nosql",
+    "document",
+    "memory-first",
+    "sql++",
+    "mobile-sync",
+    "xdcr"
+  ],
+  "links": {
+    "website": "https://www.couchbase.com/products/server/",
+    "docs": "https://docs.couchbase.com/server/current/introduction/intro.html",
+    "pricing": "https://www.couchbase.com/pricing/",
+    "changelog": "https://docs.couchbase.com/server/current/release-notes/relnotes.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Couchbase_Server"
+  },
+  "ids": {
+    "stackoverflowTag": "couchbase",
+    "wikipedia": "Couchbase_Server",
+    "dockerHub": "library/couchbase",
+    "npm": "couchbase",
+    "pypi": "couchbase",
+    "hackerNewsQuery": "Couchbase"
+  },
+  "brand": {
+    "color": "#EA2328",
+    "simpleIcon": "couchbase"
+  },
+  "sources": [
+    "https://docs.couchbase.com/server/current/release-notes/relnotes.html",
+    "https://docs.couchbase.com/server/current/introduction/whats-new.html",
+    "https://www.couchbase.com/forums/t/general-availability-of-couchbase-server-8-0/41008",
+    "https://en.wikipedia.org/wiki/Couchbase,_Inc."
+  ],
+  "lastVerified": "2026-10-27"
+}

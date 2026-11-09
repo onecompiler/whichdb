@@ -1,0 +1,182 @@
+{
+  "slug": "apple-cloudkit",
+  "name": "Apple CloudKit",
+  "aliases": [
+    "iCloud CloudKit",
+    "CKContainer"
+  ],
+  "tagline": "Apple's iCloud record store for apps: private per-user data, a public database and built-in sync.",
+  "description": "CloudKit is the backend Apple runs inside iCloud for third-party apps. Each app gets a container with a public database, a private database per iCloud user and a shared database for records shared through CKShare; data is organised as typed records in zones, with subscriptions that push changes to devices. Private data counts against the user's own iCloud storage rather than the developer's bill, which is why so many indie and Apple-platform apps use it as their only backend. Core Data and SwiftData can mirror into it automatically, and CKSyncEngine (iOS 17, 2023) handles the hard parts of incremental sync for custom stores. The catch is reach: it is tied to Apple IDs and Apple platforms, with only CloudKit JS and web services for the browser, and querying is far simpler than a general database.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed"
+  ],
+  "developer": "Apple",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary Apple service"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free for developers within generous public-database and request limits that grow with active users; each user's private data counts against their own iCloud storage plan."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "macos",
+      "browser"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "CloudKit",
+      "provider": "Apple (iCloud)",
+      "url": "https://developer.apple.com/icloud/cloudkit/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Private data scales with the user base because it lives in each user's iCloud account; Apple advertises up to 1 PB for the public database. Apple does not document regional placement or replication."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual",
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "CKQuery (NSPredicate)"
+  ],
+  "apis": [
+    "CloudKit framework (Swift/Objective-C)",
+    "CKSyncEngine",
+    "CloudKit JS",
+    "CloudKit Web Services (REST)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Swift",
+    "Objective-C",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Private data is stored in each user's iCloud quota, so per-user storage costs the developer nothing",
+    "No sign-up flow: users are already authenticated with their Apple ID",
+    "Core Data and SwiftData sync to it with NSPersistentCloudKitContainer and almost no code",
+    "CKSyncEngine (iOS 17+) manages change tokens, batching and retries for custom sync",
+    "Sharing between users is built in through CKShare and the share sheet",
+    "Encrypted fields in the private database for sensitive data"
+  ],
+  "weaknesses": [
+    "Only works for users with an Apple ID; Android and other platforms are second-class",
+    "Simple predicate queries only: no joins, aggregates or server-side logic",
+    "Schema must be promoted from development to production in the CloudKit Console",
+    "You cannot export or self-host it; migrating off means rebuilding sync elsewhere"
+  ],
+  "useCases": [
+    "Syncing app data across a user's iPhone, iPad and Mac",
+    "Indie and Apple-only apps that want a backend without servers",
+    "Collaborative documents and lists shared between iCloud users",
+    "Core Data or SwiftData apps that need cloud backup and sync"
+  ],
+  "notIdealFor": [
+    "Cross-platform apps with Android or web-first users",
+    "Analytics, reporting or complex queries",
+    "Server-side workloads that need a general-purpose database"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "firebase",
+    "google-cloud-firestore",
+    "supabase",
+    "realm",
+    "powersync",
+    "couchbase-lite"
+  ],
+  "tags": [
+    "apple",
+    "icloud",
+    "mobile",
+    "sync",
+    "swift",
+    "serverless"
+  ],
+  "links": {
+    "website": "https://developer.apple.com/icloud/cloudkit/",
+    "docs": "https://developer.apple.com/documentation/cloudkit"
+  },
+  "ids": {
+    "stackoverflowTag": "cloudkit",
+    "wikipedia": "CloudKit",
+    "hackerNewsQuery": "CloudKit"
+  },
+  "brand": {
+    "color": "#3693F3",
+    "simpleIcon": "icloud"
+  },
+  "sources": [
+    "https://developer.apple.com/icloud/cloudkit/",
+    "https://developer.apple.com/documentation/cloudkit/cksyncengine-5sie5",
+    "https://en.wikipedia.org/wiki/CloudKit"
+  ],
+  "lastVerified": "2026-10-27"
+}

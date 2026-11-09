@@ -1,0 +1,176 @@
+{
+  "slug": "apache-geode",
+  "name": "Apache Geode",
+  "aliases": [
+    "Geode"
+  ],
+  "tagline": "The open-source core of GemFire: a consistent, partitioned in-memory data grid for Java.",
+  "description": "Apache Geode is the open-sourced core of GemFire, donated by Pivotal in 2015. It provides partitioned and replicated regions with strong consistency, OQL queries, continuous queries, function execution and WAN gateways between clusters. After development stalled and the PMC voted in 2024 to retire it, a group of contributors revived the project, shipping 1.15.2 in 2025 and a modernised 2.0 (Java 17, Jakarta EE 10) announced in January 2026, with 2.0.3 in September 2026. It is again usable, but most enterprise users get the same technology through Tanzu GemFire.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "object"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "oltp",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "2.0.3",
+    "date": "2026-09-19"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "GemFire",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Partitioned regions with redundant copies; WAN gateway senders replicate between clusters."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "OQL"
+  ],
+  "apis": [
+    "Java client API",
+    "REST",
+    "gfsh"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C++",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Strong consistency within a cluster with synchronous redundant copies",
+    "Continuous queries push matching changes to clients",
+    "WAN gateways for multi-site replication",
+    "Proven GemFire lineage in large financial deployments"
+  ],
+  "weaknesses": [
+    "Community nearly went to the Attic in 2024; contributor base is small",
+    "Java-centric; limited modern client libraries",
+    "Docker images and ecosystem tooling are dated",
+    "Steep learning curve (regions, locators, gfsh)"
+  ],
+  "useCases": [
+    "Low-latency, consistent caches for Java systems",
+    "Open-source alternative to commercial GemFire",
+    "Event notification via continuous queries"
+  ],
+  "notIdealFor": [
+    "Teams wanting a large, active community",
+    "Polyglot or serverless stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vmware-tanzu-gemfire",
+    "hazelcast",
+    "apache-ignite",
+    "oracle-coherence",
+    "infinispan"
+  ],
+  "tags": [
+    "data-grid",
+    "jvm",
+    "gemfire",
+    "apache",
+    "in-memory"
+  ],
+  "links": {
+    "website": "https://geode.apache.org/",
+    "docs": "https://geode.apache.org/docs/",
+    "repository": "https://github.com/apache/geode",
+    "changelog": "https://github.com/apache/geode/releases"
+  },
+  "ids": {
+    "github": "apache/geode",
+    "stackoverflowTag": "geode",
+    "dockerHub": "apachegeode/geode",
+    "hackerNewsQuery": "Apache Geode"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apache/geode/releases",
+    "https://www.hpcwire.com/?p=187402",
+    "https://i-programmer.info/news/197-data-mining/18700-apache-geode-2-released.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

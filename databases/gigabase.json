@@ -1,0 +1,172 @@
+{
+  "slug": "gigabase",
+  "name": "GigaBASE",
+  "aliases": [],
+  "tagline": "Knizhnik's embedded object-relational DBMS for C++ with a page pool, SubSQL and R-tree indexes.",
+  "description": "GigaBASE is an embedded object-relational database by Konstantin Knizhnik, the disk-oriented sibling of his main-memory FastDB. Where FastDB maps the whole file into memory, GigaBASE reads pages through a buffer pool, so databases can be far larger than RAM. C++ classes are described with macros and the schema is derived and evolved automatically; queries use SubSQL, a SQL-like language with direct object references, arrays, B-tree, R-tree and time-series support, and transactions use shadow paging, so there is no log and recovery is instant. APIs exist for C, C++, C#, Java, PHP and Perl. The last release, 3.91, shipped in May 2014 under an MIT-style license; it still compiles for embedded C++ use but is unmaintained.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No release since 3.91 (May 2014); the code remains downloadable from garret.ru and SourceForge but is unmaintained.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "object",
+    "spatial",
+    "time-series"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Konstantin Knizhnik",
+  "vendorType": "community",
+  "initialRelease": 1999,
+  "latestVersion": {
+    "version": "3.91",
+    "date": "2014-05-04"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT-style license",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-file databases up to the terabyte range on one machine; optional replication to a standby."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SubSQL"
+  ],
+  "apis": [
+    "C++ API",
+    "C CLI",
+    "Remote CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "C",
+    "C#",
+    "Java",
+    "PHP",
+    "Perl"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tight C++ integration with automatic schema derivation and evolution",
+    "Shadow-page transactions: no write-ahead log and instant recovery",
+    "B-tree, R-tree and time-series data types in a small embeddable library",
+    "Direct object references avoid join overhead for navigational access",
+    "Permissive license"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2014",
+    "Small user base and dated documentation",
+    "Single-writer concurrency model limits write-heavy multithreaded use"
+  ],
+  "useCases": [
+    "Embedded C++ applications that need an object-relational store",
+    "Studying shadow-paging transaction design",
+    "Maintaining legacy software built on GigaBASE"
+  ],
+  "notIdealFor": [
+    "New projects needing an active community",
+    "Distributed or multi-node deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "fastdb",
+    "perst",
+    "objectbox",
+    "raima-database-manager"
+  ],
+  "tags": [
+    "embedded",
+    "object-relational",
+    "c++",
+    "historical"
+  ],
+  "links": {
+    "website": "http://www.garret.ru/gigabase.html",
+    "repository": "https://sourceforge.net/projects/gigabase/",
+    "changelog": "http://www.garret.ru/news.html"
+  },
+  "ids": {
+    "hackerNewsQuery": "GigaBASE"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.garret.ru/gigabase.html",
+    "http://www.garret.ru/news.html",
+    "http://www.garret.ru/license.html",
+    "https://sourceforge.net/projects/gigabase/"
+  ],
+  "lastVerified": "2026-10-27"
+}

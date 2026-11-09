@@ -1,0 +1,171 @@
+{
+  "slug": "watermelondb",
+  "name": "WatermelonDB",
+  "aliases": [
+    "Watermelon DB"
+  ],
+  "tagline": "Lazy-loading reactive database for React Native and React apps, built on SQLite.",
+  "description": "WatermelonDB is an observable, lazily loaded database layer for React Native and web apps, built by Nozbe for their task manager. On mobile it stores data in SQLite through a native bridge (JSI on modern React Native), and on the web it falls back to LokiJS over IndexedDB. Records load only when a component needs them, so apps with tens of thousands of rows still start quickly. It ships a sync protocol (pull/push of changes since a timestamp) but leaves the server side to you. Releases have slowed since 0.28 in 2025.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "local-first",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Nozbe",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "0.28.0",
+    "date": "2025-04-07"
+  },
+  "writtenIn": [
+    "JavaScript",
+    "Objective-C",
+    "Kotlin",
+    "C++"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Comfortable with tens of thousands of records per device thanks to lazy loading."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "WatermelonDB Query API (Q)"
+  ],
+  "apis": [
+    "JavaScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Lazy loading keeps React Native app start-up fast with large local datasets",
+    "Observable queries re-render React components automatically",
+    "SQLite under the hood on iOS and Android, accessed via JSI",
+    "Simple, documented sync protocol that works with any backend"
+  ],
+  "weaknesses": [
+    "You must implement the sync server endpoints and conflict policy yourself",
+    "Slow release cadence and a shrinking core maintainer pool",
+    "Web adapter relies on LokiJS, which is itself unmaintained"
+  ],
+  "useCases": [
+    "Offline-capable React Native productivity apps",
+    "Apps with large local lists that must render instantly",
+    "Custom sync to an existing REST backend"
+  ],
+  "notIdealFor": [
+    "Teams wanting managed, turnkey sync",
+    "Web-first apps (the web adapter is the weak spot)",
+    "Server-side storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "powersync",
+    "rxdb",
+    "realm",
+    "objectbox",
+    "electricsql",
+    "sqlite"
+  ],
+  "tags": [
+    "react-native",
+    "react",
+    "sqlite",
+    "offline-first",
+    "mobile"
+  ],
+  "links": {
+    "website": "https://watermelondb.dev/",
+    "docs": "https://watermelondb.dev/docs",
+    "repository": "https://github.com/Nozbe/WatermelonDB",
+    "changelog": "https://github.com/Nozbe/WatermelonDB/blob/master/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "Nozbe/WatermelonDB",
+    "stackoverflowTag": "watermelondb",
+    "npm": "@nozbe/watermelondb",
+    "hackerNewsQuery": "WatermelonDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Nozbe/WatermelonDB",
+    "https://www.npmjs.com/package/@nozbe/watermelondb"
+  ],
+  "lastVerified": "2026-10-27"
+}

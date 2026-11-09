@@ -1,0 +1,155 @@
+{
+  "slug": "daffodil-db",
+  "name": "Daffodil DB",
+  "aliases": [
+    "One$DB",
+    "OneDollarDB"
+  ],
+  "tagline": "Pure-Java SQL database from India's Daffodil Software, with an open-source edition called One$DB; abandoned.",
+  "description": "Daffodil DB was a relational database written entirely in Java by Daffodil Software, an Indian software company, that could run embedded inside a Java application or as a network server. It aimed at standards compliance, with JDBC and ODBC access, a broad SQL-99 feature set and MVCC, and competed with Derby, HSQLDB and other Java engines of the mid-2000s. Alongside the commercial product the company published an open-source edition, One$DB, on SourceForge; its last files, version 4.1, date from 2006. Development stopped by the early 2010s and Daffodil Software, which still operates as a software services firm, no longer sells or supports it. Java projects today should use H2, HSQLDB, Derby or SQLite instead.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Abandoned; the last open-source One$DB files (4.1) date from 2006 and the vendor no longer sells or supports it.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Daffodil Software",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "One$DB 4.1",
+    "date": "2006-06-06"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL v2 (One$DB edition); commercial edition proprietary",
+    "spdx": "LGPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "No longer sold; One$DB files remain on SourceForge."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Java, so it ran anywhere a JVM did, embedded or as a server",
+    "Standards-oriented SQL with JDBC and ODBC access",
+    "Open-source One$DB edition alongside the commercial product"
+  ],
+  "weaknesses": [
+    "Abandoned for well over a decade",
+    "Small community; documentation survives only in archives"
+  ],
+  "useCases": [
+    "Maintaining legacy Java applications that embed it",
+    "Historical comparison of 2000s-era Java SQL engines"
+  ],
+  "notIdealFor": [
+    "New Java projects",
+    "Anything needing support or security fixes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "sqlite"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "sql",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://daffodildb.sourceforge.net/",
+    "repository": "https://sourceforge.net/projects/daffodildb/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://sourceforge.net/projects/daffodildb/",
+    "https://sourceforge.net/projects/daffodildb/files/",
+    "https://dbdb.io/db/daffodil-db"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,162 @@
+{
+  "slug": "4store",
+  "name": "4store",
+  "aliases": [
+    "4store RDF"
+  ],
+  "tagline": "Clustered RDF quad store in C, built at Garlik for billions of triples; now receives only rare fixes.",
+  "description": "4store is an RDF quad store and SPARQL server designed by Steve Harris at Garlik, where it underpinned the company's semantic web products for several years and held datasets of around 15 billion triples. It runs as a set of storage backends with data hashed across segments, plus a SPARQL HTTP front end, and depends only on Raptor, Rasqal and GLib. Garlik open-sourced it under GPLv3 in 2009. Feature development stopped in the mid-2010s; v1.1.6 appeared in 2015 and a lone build-fix release, v1.1.7, in May 2024, so treat it as a stable legacy system rather than a choice for new work.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Only sporadic build fixes (v1.1.7, May 2024, after a 2015 release); no feature work for about a decade. Prefer Jena TDB, Oxigraph, Virtuoso or QLever.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Garlik / 4store community",
+  "vendorType": "community",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "1.1.7",
+    "date": "2024-05-10"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Data is hashed into segments spread over storage nodes; Garlik reported running stores of roughly 15 billion triples."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL"
+  ],
+  "apis": [
+    "SPARQL HTTP endpoint",
+    "Command-line tools (4s-query, 4s-import)"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Proven at billions of triples on modest commodity clusters",
+    "Few dependencies (Raptor, Rasqal, GLib) and a compact C codebase",
+    "Segment-based partitioning parallelises imports and queries across nodes",
+    "GPLv3 with no vendor or licensing strings"
+  ],
+  "weaknesses": [
+    "No feature development in roughly a decade",
+    "Incomplete SPARQL 1.1 coverage compared with current stores",
+    "No real transactions, reasoning or fine-grained access control",
+    "Cluster administration tooling is dated and manual"
+  ],
+  "useCases": [
+    "Keeping legacy 4store-backed semantic web apps running",
+    "Read-mostly SPARQL endpoints over static datasets",
+    "Studying clustered triple-store design"
+  ],
+  "notIdealFor": [
+    "New knowledge graph projects",
+    "Workloads that need full SPARQL 1.1, inference or transactional updates"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-jena-tdb",
+    "oxigraph",
+    "virtuoso",
+    "qlever",
+    "ontotext-graphdb",
+    "blazegraph"
+  ],
+  "tags": [
+    "rdf",
+    "triple-store",
+    "sparql",
+    "semantic-web",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://github.com/4store/4store",
+    "repository": "https://github.com/4store/4store",
+    "changelog": "https://github.com/4store/4store/releases"
+  },
+  "ids": {
+    "github": "4store/4store",
+    "hackerNewsQuery": "4store"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/4store/4store",
+    "https://github.com/4store/4store/releases/tag/v1.1.7",
+    "https://4store.github.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

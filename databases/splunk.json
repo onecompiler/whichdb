@@ -1,0 +1,193 @@
+{
+  "slug": "splunk",
+  "name": "Splunk",
+  "aliases": [
+    "Splunk Enterprise",
+    "Splunk Cloud Platform"
+  ],
+  "tagline": "Machine-data indexing and search platform with schema-on-read SPL queries, now owned by Cisco.",
+  "description": "Splunk ingests logs, metrics and events from almost anything, indexes them into time-bucketed files on its own indexers, and lets you search and aggregate them later with SPL (and the newer SPL2), applying structure at search time rather than at ingest. That schema-on-read model, plus thousands of Splunkbase apps, made it the default SIEM and log analytics tool in large enterprises, sold both as self-hosted Splunk Enterprise and as Splunk Cloud Platform. Cisco completed its $28 billion acquisition in March 2024, and Splunk Enterprise 10.6.1 shipped in October 2026. The trade-off is cost: licensing by ingest or workload makes high-volume logging expensive, which pushes many teams to Elasticsearch, OpenSearch, Loki or ClickHouse for bulk logs.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "full-text-search",
+    "time-series",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Splunk (a Cisco company)",
+  "vendorType": "company",
+  "initialRelease": 2004,
+  "latestVersion": {
+    "version": "10.6.1",
+    "date": "2026-10-16"
+  },
+  "writtenIn": [
+    "C++",
+    "Python"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Priced by ingest volume or workload/compute; a limited free license exists for small volumes."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Splunk Cloud Platform",
+      "provider": "Splunk (Cisco)",
+      "url": "https://www.splunk.com/en_us/products/splunk-cloud-platform.html"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Indexer clusters replicate buckets, and multisite clustering copies data across sites."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPL",
+    "SPL2"
+  ],
+  "apis": [
+    "REST API",
+    "HTTP Event Collector"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Schema-on-read: ingest anything now and extract fields at search time",
+    "SPL is a powerful pipeline language for search, statistics and correlation",
+    "Huge ecosystem of Splunkbase apps and add-ons for security and IT data sources",
+    "Mature SIEM, SOAR and observability products built on the same data platform",
+    "Available self-hosted with a Kubernetes operator or as a managed cloud service"
+  ],
+  "weaknesses": [
+    "Expensive at high ingest volumes; cost often drives data sampling or dropping",
+    "Proprietary SPL and storage formats create lock-in",
+    "Running large indexer clusters yourself is operationally heavy",
+    "Not a general-purpose database: no transactions or row-level updates"
+  ],
+  "useCases": [
+    "Security information and event management (SIEM)",
+    "Centralised log search and alerting",
+    "IT operations monitoring and incident investigation",
+    "Compliance reporting over machine data"
+  ],
+  "notIdealFor": [
+    "Cost-sensitive bulk log retention",
+    "Transactional application data",
+    "Teams wanting open-source or self-modifiable software"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "elasticsearch",
+    "opensearch",
+    "grafana-loki",
+    "victorialogs",
+    "clickhouse",
+    "openobserve"
+  ],
+  "tags": [
+    "logs",
+    "siem",
+    "observability",
+    "search",
+    "cisco"
+  ],
+  "links": {
+    "website": "https://www.splunk.com/",
+    "docs": "https://help.splunk.com/en/splunk-enterprise",
+    "pricing": "https://www.splunk.com/en_us/products/pricing.html",
+    "changelog": "https://help.splunk.com/en/splunk-enterprise/release-notes-and-updates/release-notes",
+    "wikipedia": "https://en.wikipedia.org/wiki/Splunk"
+  },
+  "ids": {
+    "stackoverflowTag": "splunk",
+    "wikipedia": "Splunk",
+    "dockerHub": "splunk/splunk",
+    "npm": "splunk-sdk",
+    "pypi": "splunk-sdk",
+    "hackerNewsQuery": "Splunk"
+  },
+  "brand": {
+    "simpleIcon": "splunk"
+  },
+  "sources": [
+    "https://help.splunk.com/en/splunk-enterprise/release-notes-and-updates/release-notes/10.6/whats-new/whats-new-in-10.6.1",
+    "https://www.splunk.com/en_us/products/splunk-enterprise.html",
+    "https://en.wikipedia.org/wiki/Splunk",
+    "https://github.com/splunk/splunk-operator"
+  ],
+  "lastVerified": "2026-10-27"
+}

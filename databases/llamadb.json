@@ -1,0 +1,152 @@
+{
+  "slug": "llamadb",
+  "name": "LlamaDB",
+  "aliases": [
+    "llamadb"
+  ],
+  "tagline": "Hobby SQL database in Rust built to learn SQL internals; archived and explicitly not for real use.",
+  "description": "LlamaDB is a learning project by Dan Spencer, started in 2015 when Rust was barely 1.0, to understand how SQL databases work and to test whether Rust suited large systems software. It implements a SQL parser, a query planner and executor, and a B-tree storage layer modelled on SQLite's documentation, with a small CLI prompt for running queries. The author states plainly that it will never be production-ready. Development ended in 2017 and the repository is archived, but it remains a readable, MIT-licensed example of a from-scratch SQL engine in early Rust.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Hobby project, archived on GitHub; last commit Dec 2017. The author marks it unmaintained and not for real use.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Dan Spencer",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset)"
+  ],
+  "apis": [
+    "CLI",
+    "Rust crate API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Compact, readable SQL parser, planner and executor in Rust",
+    "B-tree design modelled on SQLite's documented format",
+    "Permissive MIT license for reuse in teaching"
+  ],
+  "weaknesses": [
+    "Archived and explicitly never production-ready",
+    "Written against pre-stable nightly Rust; needs work to build today"
+  ],
+  "useCases": [
+    "Studying how a small SQL engine is put together",
+    "Historical example of early systems programming in Rust"
+  ],
+  "notIdealFor": [
+    "Storing any real data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "duckdb",
+    "turso-database",
+    "redb",
+    "sled"
+  ],
+  "tags": [
+    "rust",
+    "sql",
+    "educational",
+    "hobby",
+    "archived"
+  ],
+  "links": {
+    "website": "https://github.com/nukep/llamadb",
+    "repository": "https://github.com/nukep/llamadb"
+  },
+  "ids": {
+    "github": "nukep/llamadb",
+    "hackerNewsQuery": "LlamaDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/nukep/llamadb",
+    "https://dbdb.io/db/llamadb"
+  ],
+  "lastVerified": "2026-10-27"
+}

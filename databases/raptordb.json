@@ -1,0 +1,164 @@
+{
+  "slug": "raptordb",
+  "name": "RaptorDB",
+  "aliases": [
+    "RaptorDB Document Store",
+    "RaptorDB-Document"
+  ],
+  "tagline": "Embedded .NET JSON document store with compiled C# views and automatic bitmap indexes; inactive since 2019.",
+  "description": "RaptorDB is Mehdi Gholam's open-source document database for .NET, introduced through a long-running CodeProject article in 2012. Applications store plain C# objects as JSON documents and define views as compiled .NET map functions; RaptorDB maintains those views with automatic hybrid bitmap indexes and lets you filter them with LINQ predicates, so queries feel native to C# code. Later versions added a standalone server mode, transactions, backup and active restore, server-side queries, Mono/Android support and headquarters-to-branch replication. The last tagged version, 4.0.10, landed in October 2019 and the project has been dormant since, so it is best treated as a reference design rather than a dependency.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No commits since October 2019 (v4.0.10). For embedded .NET storage consider LiteDB, RavenDB or SQLite.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "Mehdi Gholam",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "4.0.10",
+    "date": "2019-10"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process or server; replication is HQ-to-branch copying rather than clustering."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "LINQ filters over views"
+  ],
+  "apis": [
+    "Embedded .NET API",
+    "TCP server mode"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Views are compiled C# map functions, so indexing logic is type-checked code",
+    "Automatic bitmap indexes on view columns make LINQ filters fast",
+    "Runs embedded or as a server with the same API",
+    "Built-in backup, restore and HQ-to-branch replication"
+  ],
+  "weaknesses": [
+    "Single maintainer and no activity since 2019",
+    "Targets older .NET Framework and Mono runtimes",
+    "No SQL and only a .NET client"
+  ],
+  "useCases": [
+    "Studying bitmap-indexed document stores in .NET",
+    "Maintaining older .NET apps that embed RaptorDB"
+  ],
+  "notIdealFor": [
+    "New .NET projects needing long-term support",
+    "Non-.NET stacks",
+    "Large distributed datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "litedb",
+    "ravendb",
+    "sqlite",
+    "realm"
+  ],
+  "tags": [
+    "dotnet",
+    "csharp",
+    "document",
+    "embedded",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://www.codeproject.com/Articles/375413/RaptorDB-the-Document-Store",
+    "repository": "https://github.com/mgholam/RaptorDB-Document"
+  },
+  "ids": {
+    "github": "mgholam/RaptorDB-Document",
+    "hackerNewsQuery": "RaptorDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/mgholam/RaptorDB-Document",
+    "https://www.nuget.org/packages/RaptorDB_doc",
+    "https://dbdb.io/db/raptordb"
+  ],
+  "lastVerified": "2026-10-27"
+}

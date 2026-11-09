@@ -1,0 +1,194 @@
+{
+  "slug": "paradedb",
+  "name": "ParadeDB",
+  "aliases": [
+    "pg_search"
+  ],
+  "tagline": "Elasticsearch-quality BM25 search and fast aggregations inside Postgres via the pg_search extension.",
+  "description": "ParadeDB brings real search-engine indexing into PostgreSQL. Its pg_search extension embeds Tantivy to build BM25 inverted indexes with tokenizers, fuzzy and phrase matching, faceting and columnar 'fast fields' for aggregations, all queried with plain SQL and kept transactionally in sync with your tables. Combined with pgvector it covers hybrid retrieval without running a separate Elasticsearch cluster and an ETL pipeline. The community build is AGPL-3.0; ParadeDB Enterprise adds physical replication of search indexes for HA, and ParadeDB Cloud/BYOC offer managed options.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "relational",
+    "vector"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "real-time-analytics",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "ParadeDB, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "0.26.3",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "PostgreSQL (pg_search built on Tantivy)",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3 (Community); commercial license for Enterprise",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community edition is free. Enterprise (index replication, HA, support), ParadeDB Cloud and BYOC are priced via sales."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "railway",
+      "render",
+      "fly-io",
+      "digitalocean"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "ParadeDB Cloud",
+      "provider": "ParadeDB",
+      "url": "https://www.paradedb.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Scales like Postgres: vertically and with read replicas. Replicating BM25 indexes to physical replicas requires Enterprise; logical replication from an existing primary is supported."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Any PostgreSQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "BM25 full-text search that stays transactionally consistent with your Postgres rows",
+    "Fast faceting and aggregations via Tantivy columnar fast fields",
+    "Hybrid keyword plus pgvector retrieval in one SQL query",
+    "Removes the Elasticsearch sync pipeline for many apps",
+    "Runs as an extension or as a logical replica beside managed Postgres"
+  ],
+  "weaknesses": [
+    "AGPL licence and Enterprise-only index replication",
+    "Not installable on most hyperscaler managed Postgres (RDS, Cloud SQL)",
+    "Single-node write scaling bounded by Postgres",
+    "Younger than Elasticsearch for exotic relevance features"
+  ],
+  "useCases": [
+    "Search inside a Postgres-backed SaaS app",
+    "Hybrid search for RAG next to relational data",
+    "Faceted catalog and marketplace search",
+    "Replacing Elasticsearch + ETL with one database"
+  ],
+  "notIdealFor": [
+    "Petabyte log analytics",
+    "Teams locked to RDS/Cloud SQL without logical replicas",
+    "Massive multi-tenant search clusters"
+  ],
+  "notableUsers": [
+    "Modern Treasury",
+    "Bilt"
+  ],
+  "alternatives": [
+    "elasticsearch",
+    "pgvector",
+    "postgresql",
+    "opensearch",
+    "typesense",
+    "supabase"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "search",
+    "bm25",
+    "tantivy",
+    "hybrid-search"
+  ],
+  "links": {
+    "website": "https://www.paradedb.com/",
+    "docs": "https://docs.paradedb.com/",
+    "repository": "https://github.com/paradedb/paradedb",
+    "pricing": "https://www.paradedb.com/pricing",
+    "changelog": "https://github.com/paradedb/paradedb/releases"
+  },
+  "ids": {
+    "github": "paradedb/paradedb",
+    "dockerHub": "paradedb/paradedb",
+    "hackerNewsQuery": "ParadeDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/paradedb/paradedb/releases",
+    "https://www.paradedb.com/pricing",
+    "https://github.com/paradedb/paradedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

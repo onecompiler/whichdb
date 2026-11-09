@@ -1,0 +1,153 @@
+{
+  "slug": "superbase",
+  "name": "Superbase",
+  "aliases": [
+    "Superbase NG",
+    "Superbase Classic",
+    "SIMPOL"
+  ],
+  "tagline": "Desktop database born on the Commodore 64 in 1983, still sold as Superbase NG with the SIMPOL language.",
+  "description": "Superbase was created in 1983 by the UK's Precision Software for the Commodore 64 and 128, then ported to the Amiga, Atari ST and Windows. The Amiga version popularised VCR-style record browsing, multimedia fields and a built-in programming language years before Microsoft Access, and in 1989 it was the first database product to run on Windows. After passing through several owners, it was rebuilt as Superbase NG with the object-oriented SIMPOL language; the current owner, Superbase Software Ltd, sells Superbase NG Professional 2.10 (July 2017) and has offered a free non-commercial edition since 2018. It survives mainly in long-lived small-business applications.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Superbase Software Ltd still sells Superbase NG Professional 2.10 (July 2017); no newer version has been published.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Superbase Software Limited",
+  "vendorType": "company",
+  "initialRelease": 1983,
+  "latestVersion": {
+    "version": "2.10",
+    "date": "2017-07"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "Commercial licences for Superbase NG Professional; free edition for non-commercial use."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SIMPOL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Decades of continuity for small-business desktop applications",
+    "Integrated forms, reports and programming language in one tool",
+    "Multi-user engine plus migration path from Superbase Classic"
+  ],
+  "weaknesses": [
+    "No new release since 2017 and a very small vendor",
+    "Proprietary SIMPOL language with a tiny developer pool",
+    "Windows desktop focus; no cloud or managed option"
+  ],
+  "useCases": [
+    "Maintaining legacy Superbase business applications",
+    "Small desktop database apps on Windows"
+  ],
+  "notIdealFor": [
+    "Web-scale or cloud applications",
+    "New projects needing a large ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "microsoft-access",
+    "filemaker",
+    "4d",
+    "sqlite"
+  ],
+  "tags": [
+    "desktop",
+    "rad",
+    "windows",
+    "commodore",
+    "historical"
+  ],
+  "links": {
+    "website": "https://www.superbase.com/",
+    "docs": "https://www.simpol.eu/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Superbase_(database)"
+  },
+  "ids": {
+    "wikipedia": "Superbase (database)"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.superbase.com/",
+    "https://www.simpol.eu/",
+    "https://en.wikipedia.org/wiki/Superbase_(database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

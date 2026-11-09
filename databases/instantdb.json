@@ -1,0 +1,169 @@
+{
+  "slug": "instantdb",
+  "name": "InstantDB",
+  "aliases": [
+    "Instant"
+  ],
+  "tagline": "Realtime client-side database with relational queries, auth and permissions; cloud sunsets in 2027.",
+  "description": "Instant is a backend-as-a-service built around a client-side database: apps query with InstaQL (a nested, relational query language over a triple store), writes apply optimistically and sync in real time, and the server stores everything in Postgres with permission rules, auth, file storage, presence and streams. It was popular for AI-generated apps because one SDK replaced a whole backend. In 2026 the team joined OpenAI. Instant Cloud closed to new sign-ups and will shut down on 31 August 2027. The Apache-2.0 code stays available for self-hosting, so existing apps have a migration path but no vendor roadmap.",
+  "productType": "platform",
+  "status": "deprecated",
+  "statusNote": "Team joined OpenAI in 2026; Instant Cloud is closed to sign-ups and shuts down 31 Aug 2027. The Apache-2.0 code remains available for self-hosting.",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "relational"
+  ],
+  "workloads": [
+    "local-first",
+    "oltp",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Instant (team now at OpenAI)",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "1.0.67",
+    "date": "2026-08-31"
+  },
+  "writtenIn": [
+    "Clojure",
+    "TypeScript"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": false,
+    "notes": "Instant Cloud no longer accepts sign-ups; subscriptions started after 31 Jul 2026 are refunded. Self-hosting is free."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "ios",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "InstaQL",
+    "InstaML"
+  ],
+  "apis": [
+    "JavaScript SDK",
+    "Admin HTTP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Relational, nested queries on the client with optimistic updates",
+    "Auth, permissions, storage and presence in one SDK",
+    "Everything is open source and self-hostable"
+  ],
+  "weaknesses": [
+    "Hosted service is sunsetting; self-hosting means running Clojure plus Postgres yourself",
+    "No vendor roadmap after the team's move to OpenAI",
+    "Permission rules are a separate, custom language to learn"
+  ],
+  "useCases": [
+    "Existing Instant apps planning a self-hosted migration",
+    "Prototypes and AI-generated apps needing a quick realtime backend"
+  ],
+  "notIdealFor": [
+    "New long-lived production apps",
+    "Teams unwilling to operate the backend themselves"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "convex",
+    "firebase",
+    "supabase",
+    "rocicorp-zero",
+    "triplit",
+    "jazz"
+  ],
+  "tags": [
+    "baas",
+    "realtime",
+    "local-first",
+    "sunsetting",
+    "typescript"
+  ],
+  "links": {
+    "website": "https://www.instantdb.com/",
+    "docs": "https://www.instantdb.com/docs",
+    "repository": "https://github.com/instantdb/instant"
+  },
+  "ids": {
+    "github": "instantdb/instant",
+    "npm": "@instantdb/core",
+    "hackerNewsQuery": "InstantDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.instantdb.com/essays/instant_team_joins_openai",
+    "https://www.instantdb.com/pricing",
+    "https://github.com/instantdb/instant"
+  ],
+  "lastVerified": "2026-10-27"
+}

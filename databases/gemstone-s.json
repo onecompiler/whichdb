@@ -1,0 +1,166 @@
+{
+  "slug": "gemstone-s",
+  "name": "GemStone/S",
+  "aliases": [
+    "GemStone/S 64 Bit",
+    "GemStone",
+    "GemTalk"
+  ],
+  "tagline": "Smalltalk object database where application code runs inside the transactional object repository.",
+  "description": "GemStone/S is an object database and Smalltalk application server: objects persist in a shared, transactional repository, and methods execute inside the database in Gem processes, so code and data live together without a mapping layer. GemStone/S 64 Bit supports very large repositories, a shared page cache across many sessions, optimistic and pessimistic concurrency, and hot standby. It underpins long-running financial, shipping and logistics systems and the open-source Seaside web stack (GLASS). GemTalk Systems still ships regular releases, and a free Community licence makes it easy to try.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "shared-storage"
+  ],
+  "developer": "GemTalk Systems",
+  "vendorType": "company",
+  "initialRelease": 1986,
+  "latestVersion": {
+    "version": "3.7.6",
+    "date": "2026-08"
+  },
+  "writtenIn": [
+    "C",
+    "Smalltalk"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial; free Community licence"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free Community licence with limits; enterprise licences quoted by system size."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Many sessions share one repository via a shared page cache; hot standby for failover."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "GemStone Smalltalk"
+  ],
+  "apis": [
+    "GemBuilder for Smalltalk (GBS)",
+    "GemBuilder for C",
+    "GemBuilder for Java (GBJ)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Smalltalk",
+    "C",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Code runs next to persistent objects, so there is no ORM or network round-trip per object",
+    "Mature transactional engine with decades of production use",
+    "Class versioning lets schemas evolve on live systems",
+    "Regular releases from an active vendor and a free Community licence"
+  ],
+  "weaknesses": [
+    "Requires Smalltalk skills, which are scarce",
+    "Proprietary, with a small ecosystem",
+    "Limited interoperability with mainstream data tooling"
+  ],
+  "useCases": [
+    "Long-lived Smalltalk business systems in finance and logistics",
+    "Seaside web applications (GLASS stack)"
+  ],
+  "notIdealFor": [
+    "Teams without Smalltalk experience",
+    "SQL analytics and BI integration"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "versant-object-database",
+    "objectdb",
+    "objectivity-db",
+    "zodb",
+    "intersystems-iris"
+  ],
+  "tags": [
+    "object-database",
+    "smalltalk",
+    "application-server",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://gemtalksystems.com/products/gs64/",
+    "docs": "https://gemtalksystems.com/products/gs64/versions37x/",
+    "changelog": "https://gemtalksystems.com/products/gs64/history/",
+    "wikipedia": "https://en.wikipedia.org/wiki/GemStone/S"
+  },
+  "ids": {
+    "wikipedia": "GemStone/S",
+    "hackerNewsQuery": "GemStone/S"
+  },
+  "brand": {},
+  "sources": [
+    "https://gemtalksystems.com/products/gs64/history/",
+    "https://en.wikipedia.org/wiki/GemStone/S"
+  ],
+  "lastVerified": "2026-10-27"
+}

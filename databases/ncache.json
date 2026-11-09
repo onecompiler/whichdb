@@ -1,0 +1,186 @@
+{
+  "slug": "ncache",
+  "name": "NCache",
+  "aliases": [
+    "Alachisoft NCache"
+  ],
+  "tagline": "A native .NET distributed cache and data grid for Windows and Linux, with an Apache-licensed edition.",
+  "description": "NCache is a distributed in-memory cache built in .NET by Alachisoft, aimed at ASP.NET and .NET Core applications that need session state, IDistributedCache and EF Core caching without leaving the Microsoft stack. It supports partitioned and replicated topologies, client-side caches, SQL-like queries, pub/sub, continuous queries and cache dependencies on databases. A free Open Source edition (Apache 2.0) is capped at 3 nodes and 4 GB, so production clusters generally use the commercial Enterprise edition; 5.3.8 in October 2026 added a managed NCache Cloud on Azure and AWS.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Alachisoft",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "5.3.8",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache 2.0 (Open Source edition); Enterprise is commercial",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "Open Source edition limited to 3 nodes and 4 GB; Enterprise priced per server; NCache Cloud is usage-based."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "azure",
+      "aws"
+    ],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "NCache Cloud",
+      "provider": "Alachisoft",
+      "url": "https://www.alachisoft.com/ncache/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Partition-replica topology scales out; WAN replication (Enterprise) links data centers."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SQL-like query API",
+    "LINQ"
+  ],
+  "apis": [
+    "NCache API",
+    "IDistributedCache",
+    "ASP.NET session provider"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "Java",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native .NET server and client with deep ASP.NET Core integration",
+    "Client-side near cache for in-process read speed",
+    "Database dependencies keep cache entries in sync with SQL Server and Oracle",
+    "Runs on Windows servers where many Redis builds do not"
+  ],
+  "weaknesses": [
+    "Open Source edition is heavily capped (3 nodes, 4 GB)",
+    "Enterprise pricing is per server and not cheap",
+    "Small community outside the .NET enterprise world",
+    "Fewer managed-cloud options than Redis-compatible services"
+  ],
+  "useCases": [
+    "ASP.NET session and output caching",
+    "EF Core second-level caching",
+    "Shared cache for .NET microservices on Windows or Linux"
+  ],
+  "notIdealFor": [
+    "Polyglot stacks better served by Redis/Valkey",
+    "Large free deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "garnet",
+    "hazelcast",
+    "azure-cache-for-redis",
+    "valkey"
+  ],
+  "tags": [
+    "cache",
+    "dotnet",
+    "data-grid",
+    "windows",
+    "open-core"
+  ],
+  "links": {
+    "website": "https://www.alachisoft.com/ncache/",
+    "docs": "https://www.alachisoft.com/resources/docs/",
+    "repository": "https://github.com/Alachisoft/NCache",
+    "changelog": "https://www.alachisoft.com/resources/release-notes"
+  },
+  "ids": {
+    "github": "Alachisoft/NCache",
+    "stackoverflowTag": "ncache",
+    "dockerHub": "alachisoft/ncache",
+    "hackerNewsQuery": "NCache"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.alachisoft.com/resources/release-notes",
+    "https://www.alachisoft.com/blogs/ncache-5-3-sp6-1-released/",
+    "https://github.com/Alachisoft/NCache"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,166 @@
+{
+  "slug": "bayesdb",
+  "name": "BayesDB",
+  "aliases": [
+    "bayeslite",
+    "Bayesian Query Language",
+    "BQL"
+  ],
+  "tagline": "MIT research 'Bayesian database' that answers probabilistic questions about tables via BQL on SQLite.",
+  "description": "BayesDB was a research system from MIT's Probabilistic Computing Project that let users ask what their data probably implies, not just what it contains. Its Bayesian Query Language (BQL) extended SQL with statements to estimate dependence between columns, infer missing values, simulate plausible new rows and find statistically similar records, backed by automatically learned generative models (initially CrossCat). The first implementation (2013) was replaced by bayeslite, a Python library that stores data and models inside SQLite and was distributed through PyPI and Anaconda. The authors always labelled it experimental; the last code change was in April 2020, the project page is gone, and the lab's later work moved to GenSQL.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "MIT ProbComp research prototype; no commits since April 2020 and the project page is offline. Ideas continue in the lab's GenSQL work.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "scientific",
+    "olap"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "MIT Probabilistic Computing Project",
+  "vendorType": "academic",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "bayeslite 0.1.8 (PyPI)",
+    "date": "2016-05-16"
+  },
+  "writtenIn": [
+    "Python"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Model fitting is compute-heavy and runs on one machine; suited to tables of thousands to low millions of rows."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "BQL (Bayesian Query Language)",
+    "SQL"
+  ],
+  "apis": [
+    "Python API"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "SQL-like statements for inference: dependence probabilities, imputation, simulation, similarity",
+    "Generative models are learned automatically, so no statistics expertise is needed to start",
+    "Everything lives in a single SQLite file alongside the data",
+    "Influential example of probabilistic programming inside a database"
+  ],
+  "weaknesses": [
+    "Explicitly experimental; authors warned behaviour would change and data handling was not secure",
+    "Unmaintained since 2020 and tied to old Python dependencies",
+    "Model training is slow and single-machine"
+  ],
+  "useCases": [
+    "Teaching and research on probabilistic databases",
+    "Exploratory analysis of small tabular datasets with missing values",
+    "Reproducing published BayesDB/CrossCat results"
+  ],
+  "notIdealFor": [
+    "Production data science pipelines",
+    "Large datasets or real-time inference"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "sqlite",
+    "postgresql"
+  ],
+  "tags": [
+    "probabilistic",
+    "research",
+    "mit",
+    "sqlite",
+    "machine-learning"
+  ],
+  "links": {
+    "website": "https://github.com/probcomp/bayeslite",
+    "repository": "https://github.com/probcomp/bayeslite"
+  },
+  "ids": {
+    "github": "probcomp/bayeslite",
+    "pypi": "bayeslite",
+    "hackerNewsQuery": "BayesDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/probcomp/bayeslite",
+    "https://github.com/probcomp/BayesDB",
+    "https://pypi.org/project/bayeslite/"
+  ],
+  "lastVerified": "2026-10-27"
+}

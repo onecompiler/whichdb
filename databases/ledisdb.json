@@ -1,0 +1,173 @@
+{
+  "slug": "ledisdb",
+  "name": "LedisDB",
+  "aliases": [
+    "Ledis"
+  ],
+  "tagline": "Redis-like data-structure server in Go that keeps data on disk via LevelDB, RocksDB or goleveldb.",
+  "description": "LedisDB, started by Siddon Tang in 2014, implements Redis-style KV, list, hash, set and sorted-set commands in Go but persists them to an embedded disk engine (goleveldb, LevelDB, RocksDB or an in-memory backend), so datasets are not limited by RAM. It speaks enough of the Redis protocol to be managed with redis-cli and many Redis clients, adds an HTTP API with JSON/BSON/msgpack output, Lua scripting, TTLs, master-slave replication and repair tools, and can be embedded as a Go library; clustering relied on the separate xcodis proxy. It was a popular 'Redis on disk' option in China around 2015-2017. The last tagged release is v0.6 (2017) and the last commit was in May 2020; the repository is not archived but is effectively unmaintained.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since May 2020 and no release since v0.6 (Nov 2017); not formally archived. Kvrocks or Pika are maintained disk-backed Redis alternatives.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "embedded"
+  ],
+  "developer": "Siddon Tang and contributors",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.6",
+    "date": "2017-11-28"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Disk-backed so datasets can exceed RAM; sharding via the separate xcodis proxy."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis-style commands",
+    "Lua"
+  ],
+  "apis": [
+    "Redis protocol (partial)",
+    "HTTP API",
+    "Go embedded API"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Go",
+    "Python",
+    "JavaScript",
+    "Lua",
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Redis data structures without the RAM limit, persisted to LevelDB/RocksDB",
+    "Manageable with redis-cli and many existing Redis clients",
+    "Embeddable as a Go library or run as a server",
+    "HTTP API with JSON/BSON/msgpack responses"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2020",
+    "Only a subset of Redis commands and semantics",
+    "Clustering needs an external proxy; replication is asynchronous"
+  ],
+  "useCases": [
+    "Existing deployments that need disk-backed Redis-style structures",
+    "Reference for mapping Redis types onto an LSM store"
+  ],
+  "notIdealFor": [
+    "New projects (use Apache Kvrocks, Pika or Redis/Valkey)",
+    "Workloads requiring full Redis compatibility"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-kvrocks",
+    "pika",
+    "ssdb",
+    "ardb",
+    "redis",
+    "valkey"
+  ],
+  "tags": [
+    "redis-compatible",
+    "go",
+    "leveldb",
+    "rocksdb",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/ledisdb/ledisdb",
+    "repository": "https://github.com/ledisdb/ledisdb",
+    "docs": "https://github.com/ledisdb/ledisdb/wiki"
+  },
+  "ids": {
+    "github": "ledisdb/ledisdb",
+    "hackerNewsQuery": "LedisDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/ledisdb/ledisdb",
+    "https://github.com/ledisdb/ledisdb/releases",
+    "https://dbdb.io/db/ledisdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

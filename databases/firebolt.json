@@ -1,0 +1,179 @@
+{
+  "slug": "firebolt",
+  "name": "Firebolt",
+  "aliases": [
+    "Firebolt Core"
+  ],
+  "tagline": "Low-latency analytical database with a Postgres-compliant dialect, as cloud service or self-hosted Core.",
+  "description": "Firebolt is an analytical database focused on low-latency, high-concurrency SQL for data-intensive applications. Its engine combines sparse primary indexes, aggregating indexes and a distributed vectorized executor over decoupled object storage, and its SQL dialect follows PostgreSQL. Beyond the managed cloud on AWS, Firebolt Core is a free, self-hosted edition that runs from a single binary to Kubernetes clusters and reads Iceberg. Firebolt says a fully open-source release is in preview. It targets customer-facing analytics and AI-agent workloads; the ecosystem is smaller than the big warehouses'.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics",
+    "data-warehouse",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "single-node"
+  ],
+  "developer": "Firebolt Analytics",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Elastic License 2.0 (Firebolt Core); open-source release in preview",
+    "spdx": "Elastic-2.0"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Firebolt Core is free to self-host without usage limits; the managed service bills per engine node-hour plus storage."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Engines scale out by nodes and clusters; storage on S3. Core scales from one node to many on Kubernetes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (PostgreSQL-compliant dialect)"
+  ],
+  "apis": [
+    "HTTP/REST API",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "Go",
+    ".NET"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Sparse and aggregating indexes give low-latency queries at high concurrency",
+    "PostgreSQL-compliant SQL dialect eases tooling and migration",
+    "Free self-hosted Core edition with no usage limits",
+    "Decoupled storage and compute with workload-isolated engines",
+    "Reads Iceberg tables for lakehouse use"
+  ],
+  "weaknesses": [
+    "Smaller community and integration ecosystem than Snowflake or ClickHouse",
+    "Core's license is source-available (ELv2), not OSI open source, until the OSS release ships",
+    "Managed service runs only on AWS",
+    "Index design still matters for best latency"
+  ],
+  "useCases": [
+    "Customer-facing analytics in SaaS products",
+    "High-concurrency dashboards",
+    "Serving data to AI agents",
+    "Self-hosted analytics on Kubernetes"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Teams wanting a mature, broad SaaS ecosystem",
+    "Multi-cloud managed deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "snowflake",
+    "starrocks",
+    "apache-pinot",
+    "amazon-redshift",
+    "duckdb"
+  ],
+  "tags": [
+    "cloud-data-warehouse",
+    "low-latency",
+    "postgres-dialect",
+    "self-hosted",
+    "iceberg"
+  ],
+  "links": {
+    "website": "https://www.firebolt.io/",
+    "docs": "https://docs.firebolt.io/",
+    "repository": "https://github.com/firebolt-db/firebolt-core",
+    "pricing": "https://www.firebolt.io/pricing"
+  },
+  "ids": {
+    "github": "firebolt-db/firebolt-core",
+    "pypi": "firebolt-sdk",
+    "npm": "firebolt-sdk",
+    "hackerNewsQuery": "Firebolt database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.firebolt.io/",
+    "https://github.com/firebolt-db/firebolt-core",
+    "https://pypi.org/project/firebolt-sdk/"
+  ],
+  "lastVerified": "2026-10-27"
+}

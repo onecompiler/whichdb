@@ -1,0 +1,173 @@
+{
+  "slug": "apache-accumulo",
+  "name": "Apache Accumulo",
+  "aliases": [
+    "Accumulo"
+  ],
+  "tagline": "Sorted, distributed key-value store on HDFS with cell-level security labels.",
+  "description": "Accumulo began at the NSA in 2008 as a Bigtable implementation and was donated to Apache in 2011. Like HBase it stores sorted key-value pairs in tablets over HDFS with ZooKeeper coordination, but it adds two distinctive features: visibility labels on every cell, so one table can serve users with different clearances, and server-side iterators that filter or aggregate data during scans and compactions. It remains relevant in government, defence and other security-sensitive environments; elsewhere it is a niche choice with a small community.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "metadata-store",
+    "graph-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "2.1.6",
+    "date": "2026-07-13"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Google Bigtable design (on HDFS)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Tablets split and migrate automatically; trillion-entry tables have been reported. Replication between instances is asynchronous."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Accumulo Java API"
+  ],
+  "apis": [
+    "Java client",
+    "Thrift proxy"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Cell-level visibility labels for fine-grained, multi-level security",
+    "Server-side iterators push filtering and aggregation into scans and compactions",
+    "Scales to very large sorted tables on commodity HDFS clusters",
+    "Long-term-maintenance (LTM) release line with regular patch releases"
+  ],
+  "weaknesses": [
+    "Requires HDFS and ZooKeeper, a heavy operational footprint",
+    "Java-only first-class API; no SQL layer",
+    "Small community and few managed options",
+    "Feature releases are slow: 3.0.0 dates from 2023 and 4.0 is still alpha"
+  ],
+  "useCases": [
+    "Multi-level-security data platforms in government",
+    "Large graph and index storage with custom iterators",
+    "Secure data lakes needing per-cell authorization"
+  ],
+  "notIdealFor": [
+    "Cloud-native greenfield apps",
+    "Small teams without Hadoop skills",
+    "SQL-oriented workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-hbase",
+    "google-cloud-bigtable",
+    "apache-cassandra",
+    "scylladb"
+  ],
+  "tags": [
+    "apache",
+    "hadoop",
+    "security",
+    "bigtable-clone",
+    "wide-column"
+  ],
+  "links": {
+    "website": "https://accumulo.apache.org/",
+    "docs": "https://accumulo.apache.org/docs/2.x/",
+    "repository": "https://github.com/apache/accumulo",
+    "changelog": "https://accumulo.apache.org/release/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Accumulo"
+  },
+  "ids": {
+    "github": "apache/accumulo",
+    "stackoverflowTag": "accumulo",
+    "wikipedia": "Apache Accumulo",
+    "hackerNewsQuery": "Apache Accumulo"
+  },
+  "brand": {
+    "color": "#C5262D"
+  },
+  "sources": [
+    "https://accumulo.apache.org/downloads/",
+    "https://github.com/apache/accumulo/tags",
+    "https://accumulo.apache.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

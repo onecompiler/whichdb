@@ -1,0 +1,180 @@
+{
+  "slug": "scaleout-stateserver",
+  "name": "ScaleOut StateServer",
+  "aliases": [
+    "SOSS",
+    "ScaleOut StateServer Pro",
+    "ScaleOut Product Suite"
+  ],
+  "tagline": "Commercial in-memory data grid for .NET and Java with parallel query, Redis support and in-cache code.",
+  "description": "ScaleOut StateServer is the in-memory data grid at the core of ScaleOut Software's product suite, sold since the mid-2000s and long popular as a distributed ASP.NET session and object cache. It partitions objects across a cluster of Windows or Linux servers, keeps up to three replicas of each, and rebalances and self-heals automatically as servers join or fail. Objects can be indexed and queried in parallel (LINQ from C#, filter methods from Java and C++), and the grid also implements the core Redis data structures and pub/sub using open-source Redis code. Version 6 of the suite (September 2025) added Active Caching, which hosts application modules inside the cache, alongside existing digital-twin and streaming products. It is commercial, quote-priced software aimed mainly at .NET enterprises.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "real-time-analytics",
+    "pub-sub"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "ScaleOut Software, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "6",
+    "date": "2025-09"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Quote-based licensing; a free trial is available for Windows and Linux."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Partitions data across a cluster with up to three replicas per object; adding a server triggers automatic rebalancing. Separate products add WAN replication."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "LINQ",
+    "Java/C++ filter APIs",
+    "Redis commands"
+  ],
+  "apis": [
+    "Native .NET API",
+    "Java API",
+    "C/C++ API",
+    "REST API",
+    "Redis protocol"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "C#",
+    "Java",
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Mature, self-healing in-memory grid with automatic partitioning and up to three replicas",
+    "Parallel, indexed queries over cached objects using LINQ or Java filters",
+    "Implements core Redis data structures and pub/sub on the same grid",
+    "Active Caching runs application code inside the cache to cut network round trips",
+    "First-class ASP.NET and Java session-state providers"
+  ],
+  "weaknesses": [
+    "Commercial with opaque, quote-only pricing",
+    "Much smaller community than Redis, Hazelcast or Apache Ignite",
+    "Persistence relies on backing-store integration rather than a durable on-disk engine"
+  ],
+  "useCases": [
+    "Distributed session state for ASP.NET and Java web farms",
+    "Low-latency shared object cache for .NET services",
+    "Real-time analytics and digital twins over fast-changing data",
+    "Replacing self-managed Redis in Windows-centric shops"
+  ],
+  "notIdealFor": [
+    "Primary durable system of record",
+    "Teams wanting open-source software",
+    "Large analytical datasets beyond RAM"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ncache",
+    "redis",
+    "hazelcast",
+    "apache-ignite",
+    "oracle-coherence",
+    "garnet"
+  ],
+  "tags": [
+    "in-memory-data-grid",
+    "cache",
+    "dotnet",
+    "java",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.scaleoutsoftware.com/products/stateserver/",
+    "repository": "https://github.com/scaleoutsoftware"
+  },
+  "ids": {
+    "hackerNewsQuery": "ScaleOut StateServer"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.scaleoutsoftware.com/products/stateserver/",
+    "https://sdtimes.com/data/scaleout-software-delivers-next-generation-caching/",
+    "https://www.dbta.com/Editorial/News-Flashes/ScaleOut-Software-Delivers-Innovative-Caching-Capabilities-with-Version-6-of-its-Product-Suite-171503.aspx",
+    "https://dbdb.io/db/scaleout-stateserver"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,151 @@
+{
+  "slug": "chaozzdb",
+  "name": "chaozzDB",
+  "aliases": [],
+  "tagline": "Single-file PHP flat-file database that stores tables as TSV files and runs a tiny SQL-like dialect.",
+  "description": "chaozzDB is a hobby project by Dutch developer Elmar Wenners: one PHP include that treats tab-separated text files in a folder as tables and runs a minimal SQL-like dialect (SELECT, INSERT, UPDATE and DELETE with simple WHERE clauses) through a single chaozzdb_query() call. There is no server, extension or binary format; each table is a plain .tsv file whose first line lists the fields, starting with a mandatory id column, and a helper salts passwords before storage. That makes it handy for tiny sites on hosting without MySQL and easy to inspect or fix by hand. The engine code has been static for years; repository activity since 2024 consists of README edits and adding an MIT license in May 2026.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Hobby project; engine code effectively unchanged for years, with only README edits and an MIT license added (May 2026).",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Elmar Wenners (chaozz)",
+  "vendorType": "community",
+  "initialRelease": 2008,
+  "writtenIn": [
+    "PHP"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Every query reads the table file; SELECT results are capped by a configurable maximum (999 rows by default)."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL-like subset"
+  ],
+  "apis": [
+    "PHP function API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "PHP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero dependencies: one PHP file and a folder of text tables",
+    "Tables are human-readable TSV files you can edit in any text editor",
+    "Familiar SQL-like syntax for basic CRUD"
+  ],
+  "weaknesses": [
+    "No indexes, joins or transactions; every query scans the file",
+    "No concurrency control beyond what the filesystem provides",
+    "Requires world-writable data directories on the web server",
+    "Hobby project with no active development"
+  ],
+  "useCases": [
+    "Tiny PHP sites on hosting without a database server",
+    "Learning projects and quick prototypes"
+  ],
+  "notIdealFor": [
+    "Multi-user write workloads",
+    "Tables beyond a few thousand rows",
+    "Sensitive data on shared hosting"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "sleekdb",
+    "lowdb",
+    "tinydb"
+  ],
+  "tags": [
+    "php",
+    "flat-file",
+    "tsv",
+    "hobby"
+  ],
+  "links": {
+    "website": "https://chaozz.nl/chaozzdb",
+    "repository": "https://github.com/chaozznl/chaozzDB"
+  },
+  "ids": {
+    "github": "chaozznl/chaozzDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/chaozznl/chaozzDB",
+    "https://github.com/chaozznl/chaozzDB/commits/master",
+    "https://dbdb.io/db/chaozzdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

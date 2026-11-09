@@ -1,0 +1,157 @@
+{
+  "slug": "tokyo-cabinet",
+  "name": "Tokyo Cabinet",
+  "aliases": [
+    "TC"
+  ],
+  "tagline": "Classic C DBM library from FAL Labs; unmaintained since 2012 and twice superseded.",
+  "description": "Tokyo Cabinet was a fast C library implementing hash, B+tree, fixed-length and table (schemaless record) databases, and with its companion network server Tokyo Tyrant it was one of the original 'NoSQL' darlings around 2008-2010, used notably at mixi. Its author moved on to Kyoto Cabinet and later Tkrzw, and the final release, 1.4.48, dates from August 2012. FAL Labs' page itself recommends Tkrzw. It should be considered discontinued.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No release since 1.4.48 (Aug 2012); superseded by Kyoto Cabinet and then Tkrzw, which the author recommends.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "FAL Labs (Mikio Hirabayashi)",
+  "vendorType": "community",
+  "initialRelease": 2007,
+  "latestVersion": {
+    "version": "1.4.48",
+    "date": "2012-08-10"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL v2.1",
+    "spdx": "LGPL-2.1-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Perl",
+    "Ruby",
+    "Java",
+    "Lua"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast hash and B+tree files for its era",
+    "Table database offered simple schemaless records with column indexes"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2012, with no security fixes",
+    "Known corruption risks without careful shutdown",
+    "Bindings and Tokyo Tyrant are equally abandoned"
+  ],
+  "useCases": [
+    "Reading data from legacy Tokyo Cabinet files during migration",
+    "Studying classic DBM file-format design"
+  ],
+  "notIdealFor": [
+    "Any new project"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kyoto-cabinet",
+    "lmdb",
+    "rocksdb",
+    "leveldb"
+  ],
+  "tags": [
+    "discontinued",
+    "dbm",
+    "embedded",
+    "c"
+  ],
+  "links": {
+    "website": "https://dbmx.net/tokyocabinet/",
+    "docs": "https://dbmx.net/tokyocabinet/spex-en.html"
+  },
+  "ids": {
+    "stackoverflowTag": "tokyo-cabinet",
+    "hackerNewsQuery": "Tokyo Cabinet"
+  },
+  "brand": {},
+  "sources": [
+    "https://dbmx.net/tokyocabinet/",
+    "https://dbmx.net/tkrzw/"
+  ],
+  "lastVerified": "2026-10-27"
+}

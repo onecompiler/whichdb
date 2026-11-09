@@ -1,0 +1,160 @@
+{
+  "slug": "infogrid",
+  "name": "InfoGrid",
+  "aliases": [
+    "InfoGrid Web Graph Database",
+    "NetMesh InfoGrid"
+  ],
+  "tagline": "Java 'web graph database' and REST app framework from NetMesh; abandoned, with source no longer online.",
+  "description": "InfoGrid was an open-source Java platform sponsored by NetMesh Inc. and led by Johannes Ernst, pitched as a 'Web Graph Database'. Its core GraphDatabase stored typed MeshObjects and relationships; a Stores layer persisted them to SQL databases or distributed hashtables behind one API; a Grid project replicated graphs across many cooperating databases; and the Probe framework mapped external sources such as web feeds into the graph. On top sat REST-style URL mapping with 'Viewlets' for rendering objects, plus OpenID/LID identity support. It was AGPL v3 and active roughly 2008-2013. The code repository and Trac site are gone and infogrid.org shows only a placeholder, so it survives as history.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No activity since about 2013; source and documentation are offline and infogrid.org shows a placeholder. Use Neo4j, JanusGraph or ArangoDB instead.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "object"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "content-management"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "distributed"
+  ],
+  "developer": "NetMesh Inc. (Johannes Ernst)",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "AGPL open source with commercial support from NetMesh; nothing is offered today."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "The Grid add-on replicated graphs across cooperating GraphDatabases."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Java API"
+  ],
+  "apis": [
+    "Java API",
+    "REST (URL-mapped objects)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Typed object graph with pluggable persistence to SQL or distributed stores",
+    "REST-style URLs and Viewlets made graph objects web-addressable",
+    "Probes imported external web data as graph objects",
+    "Replication protocol for federating many graph databases"
+  ],
+  "weaknesses": [
+    "Abandoned; source, docs and downloads are offline",
+    "No standard graph query language (pre-Cypher/Gremlin era API only)",
+    "AGPL licensing limited commercial embedding"
+  ],
+  "useCases": [
+    "History of early graph databases and linked-data web apps",
+    "Ideas for REST-addressable object graphs"
+  ],
+  "notIdealFor": [
+    "Any current project: the software is no longer available"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "janusgraph",
+    "arangodb",
+    "orientdb",
+    "terminusdb"
+  ],
+  "tags": [
+    "graph",
+    "java",
+    "rest",
+    "agpl",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2010/http://infogrid.org/"
+  },
+  "ids": {
+    "hackerNewsQuery": "InfoGrid graph database"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2010/http://infogrid.org/",
+    "http://infogrid.org/",
+    "https://github.com/jernst/infogrid.org",
+    "https://dbdb.io/db/infogrid"
+  ],
+  "lastVerified": "2026-10-27"
+}

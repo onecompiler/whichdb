@@ -1,0 +1,195 @@
+{
+  "slug": "apache-druid",
+  "name": "Apache Druid",
+  "aliases": [
+    "Druid"
+  ],
+  "tagline": "Real-time analytics database for sub-second slice-and-dice over streaming event data.",
+  "description": "Apache Druid is a distributed column store built for interactive analytics on event data. It ingests straight from Kafka or Kinesis so events are queryable within seconds, stores data in time-partitioned, bitmap-indexed segments on deep storage, and answers high-concurrency group-by and filter queries in sub-second time. Its multi-stage query engine added SQL-based batch ingestion and querying of data in deep storage. Druid is a strong fit for user-facing dashboards and operational analytics; it has many process types to operate and is less suited to ad-hoc warehouse-style joins.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series",
+    "relational"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "time-series",
+    "observability"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "38.0.0",
+    "date": "2026-10-01"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Imply offers commercial distributions and the Imply Polaris cloud service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Imply Polaris",
+      "provider": "Imply",
+      "url": "https://imply.io/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales each service (brokers, historicals, ingestion) independently; segments live in S3/HDFS deep storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Druid SQL",
+    "Druid native JSON queries"
+  ],
+  "apis": [
+    "HTTP/JSON API",
+    "Avatica JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Exactly-once streaming ingestion from Kafka and Kinesis with seconds of latency",
+    "Sub-second queries at high concurrency for dashboards and APIs",
+    "Bitmap indexes and time partitioning make filters and group-bys fast",
+    "Rollup at ingest time cuts storage for high-cardinality events",
+    "Tiered storage and query-from-deep-storage for cheap historical data"
+  ],
+  "weaknesses": [
+    "Many node types (coordinator, overlord, broker, historical, middle manager) to operate",
+    "Joins are limited compared with a full SQL warehouse",
+    "Updates require re-ingesting segments",
+    "Smaller community momentum than ClickHouse in recent years"
+  ],
+  "useCases": [
+    "User-facing analytics dashboards",
+    "Clickstream and ad-tech analytics",
+    "Network and application telemetry",
+    "Real-time operational monitoring"
+  ],
+  "notIdealFor": [
+    "Ad-hoc complex joins across many tables",
+    "Transactional workloads",
+    "Small datasets where a single-node DB suffices"
+  ],
+  "notableUsers": [
+    "Netflix",
+    "Confluent",
+    "Airbnb"
+  ],
+  "alternatives": [
+    "apache-pinot",
+    "clickhouse",
+    "starrocks",
+    "apache-doris",
+    "tinybird",
+    "rockset"
+  ],
+  "tags": [
+    "real-time",
+    "olap",
+    "streaming",
+    "open-source",
+    "apache"
+  ],
+  "links": {
+    "website": "https://druid.apache.org/",
+    "docs": "https://druid.apache.org/docs/latest/",
+    "repository": "https://github.com/apache/druid",
+    "changelog": "https://github.com/apache/druid/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Druid"
+  },
+  "ids": {
+    "github": "apache/druid",
+    "stackoverflowTag": "druid",
+    "wikipedia": "Apache Druid",
+    "dockerHub": "apache/druid",
+    "pypi": "pydruid",
+    "hackerNewsQuery": "Apache Druid"
+  },
+  "brand": {
+    "color": "#29F1FB",
+    "simpleIcon": "apachedruid"
+  },
+  "sources": [
+    "https://github.com/apache/druid/releases",
+    "https://druid.apache.org/",
+    "https://en.wikipedia.org/wiki/Apache_Druid"
+  ],
+  "lastVerified": "2026-10-27"
+}

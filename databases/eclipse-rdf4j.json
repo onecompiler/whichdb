@@ -1,0 +1,176 @@
+{
+  "slug": "eclipse-rdf4j",
+  "name": "Eclipse RDF4J",
+  "aliases": [
+    "RDF4J",
+    "Sesame"
+  ],
+  "tagline": "Eclipse Foundation's Java RDF framework with native, LMDB and in-memory SPARQL stores.",
+  "description": "Eclipse RDF4J, the successor to Sesame, is a Java framework for working with RDF: parsers and writers for every major format, a SPARQL 1.1 query and update engine, SHACL validation, federation (FedX), and pluggable stores including an in-memory store, the disk-based Native Store and an LMDB-backed store. RDF4J Server and Workbench expose repositories over the standard SPARQL protocol, and its SAIL API is the foundation of commercial triplestores such as GraphDB. It is the practical choice for Java teams that want an embeddable, BSD-licensed RDF store or a common API in front of several triplestores; for very large datasets, pair it with a dedicated backend.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "embedded",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Eclipse Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "6.0.0",
+    "date": "2026-08-10"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Sesame",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Native and LMDB stores handle up to hundreds of millions of triples per repository."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL"
+  ],
+  "apis": [
+    "RDF4J Java API (SAIL)",
+    "SPARQL protocol",
+    "RDF4J REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Complete Java RDF toolkit: parsers, SPARQL engine, SHACL and federation",
+    "Embeddable stores (memory, Native, LMDB) with transactional semantics",
+    "SAIL API lets one codebase target GraphDB, Neptune or other SPARQL backends",
+    "Permissive BSD license under Eclipse Foundation governance"
+  ],
+  "weaknesses": [
+    "Built-in stores are not designed for billion-triple datasets",
+    "No clustering or replication in the open-source server",
+    "Java-only API"
+  ],
+  "useCases": [
+    "Embedding RDF storage in Java applications",
+    "SHACL validation pipelines",
+    "A common RDF API across multiple triplestores",
+    "Federated SPARQL queries"
+  ],
+  "notIdealFor": [
+    "Very large public SPARQL endpoints",
+    "Non-JVM stacks",
+    "Property-graph workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-jena-tdb",
+    "ontotext-graphdb",
+    "oxigraph",
+    "virtuoso",
+    "qlever"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "java",
+    "eclipse",
+    "shacl",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://rdf4j.org/",
+    "docs": "https://rdf4j.org/documentation/",
+    "repository": "https://github.com/eclipse-rdf4j/rdf4j",
+    "changelog": "https://rdf4j.org/release-notes/"
+  },
+  "ids": {
+    "github": "eclipse-rdf4j/rdf4j",
+    "stackoverflowTag": "rdf4j",
+    "dockerHub": "eclipse/rdf4j-workbench",
+    "hackerNewsQuery": "RDF4J"
+  },
+  "brand": {
+    "color": "#F28C28"
+  },
+  "sources": [
+    "https://github.com/eclipse-rdf4j/rdf4j/releases",
+    "https://rdf4j.org/",
+    "https://hub.docker.com/r/eclipse/rdf4j-workbench"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,166 @@
+{
+  "slug": "pebble",
+  "name": "Pebble",
+  "aliases": [
+    "CockroachDB Pebble"
+  ],
+  "tagline": "Cockroach Labs' Go LSM engine, inspired by RocksDB and tuned for CockroachDB.",
+  "description": "Pebble is a LevelDB/RocksDB-inspired log-structured merge-tree key-value store written in Go by Cockroach Labs, which replaced RocksDB as CockroachDB's storage engine in 2020. Writing it in Go removed the cgo boundary and let the team implement only the features CockroachDB needs, with improvements such as range keys, faster ingestion and better compaction heuristics. Outside CockroachDB it is used by Ethereum's Geth client and other Go systems that want a fast, well-tested LSM. Its API and feature set track CockroachDB's needs, so some RocksDB features (transactions, column families) are deliberately absent.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Cockroach Labs",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "2.1.7",
+    "date": "2026-08-24"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "RocksDB/LevelDB design",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process engine; multi-TB stores per node in CockroachDB."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Go API"
+  ],
+  "apis": [
+    "Go API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Go LSM with no cgo overhead",
+    "Battle-tested as CockroachDB's storage engine",
+    "Range keys, range deletions and efficient SST ingestion",
+    "Extensive metrics and tooling for compaction debugging"
+  ],
+  "weaknesses": [
+    "No built-in transactions or column families",
+    "API evolves with CockroachDB's needs",
+    "Go-only",
+    "Tuning LSM compaction still requires expertise"
+  ],
+  "useCases": [
+    "Storage engine for Go databases",
+    "Blockchain node state (Geth)",
+    "Write-heavy embedded key-value stores in Go services"
+  ],
+  "notIdealFor": [
+    "Applications needing multi-key transactions from the engine",
+    "Non-Go stacks",
+    "Simple read-mostly embedded storage (bbolt is simpler)"
+  ],
+  "notableUsers": [
+    "Cockroach Labs"
+  ],
+  "alternatives": [
+    "rocksdb",
+    "badger",
+    "bbolt",
+    "leveldb",
+    "cockroachdb"
+  ],
+  "tags": [
+    "go",
+    "lsm-tree",
+    "embedded",
+    "cockroachdb"
+  ],
+  "links": {
+    "website": "https://github.com/cockroachdb/pebble",
+    "docs": "https://pkg.go.dev/github.com/cockroachdb/pebble",
+    "repository": "https://github.com/cockroachdb/pebble",
+    "changelog": "https://github.com/cockroachdb/pebble/releases"
+  },
+  "ids": {
+    "github": "cockroachdb/pebble",
+    "hackerNewsQuery": "Pebble CockroachDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/cockroachdb/pebble",
+    "https://www.cockroachlabs.com/blog/pebble-rocksdb-kv-store/"
+  ],
+  "lastVerified": "2026-10-27"
+}

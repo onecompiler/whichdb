@@ -1,0 +1,223 @@
+{
+  "slug": "influxdb",
+  "name": "InfluxDB",
+  "aliases": [
+    "InfluxDB 3",
+    "InfluxDB 3 Core",
+    "InfluxDB 3 Enterprise",
+    "Influx"
+  ],
+  "tagline": "Purpose-built time-series database, rebuilt in Rust on Arrow, DataFusion and Parquet for version 3.",
+  "description": "InfluxDB is InfluxData's purpose-built time-series database and probably the most widely deployed one. Version 3 is a ground-up rewrite in Rust on the FDAP stack (Arrow Flight, DataFusion, Arrow, Parquet): writes land in a WAL, are persisted as Parquet on object storage or local disk, and are queried with SQL or InfluxQL. The open-source Core edition (MIT/Apache-2.0) is a single node aimed at recent data, while the commercial Enterprise edition adds clustering, high availability, compaction for long-range queries and RBAC. Teams on 1.x or 2.x should plan a real migration, because Flux is not carried forward into v3.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar"
+  ],
+  "workloads": [
+    "time-series",
+    "observability",
+    "iot",
+    "real-time-analytics",
+    "edge"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "InfluxData",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "3.12.1",
+    "date": "2026-10-15"
+  },
+  "writtenIn": [
+    "Rust",
+    "Go"
+  ],
+  "basedOn": "Apache Arrow DataFusion",
+  "license": {
+    "type": "permissive",
+    "name": "MIT or Apache-2.0 (Core); Enterprise is commercial",
+    "spdx": "MIT OR Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Core is free; Enterprise is licensed per deployment (with a free at-home licence); InfluxDB Cloud Serverless is usage-based and Cloud Dedicated is contract-priced."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "InfluxDB Cloud Serverless",
+      "provider": "InfluxData",
+      "url": "https://www.influxdata.com/products/influxdb-cloud/serverless/"
+    },
+    {
+      "name": "InfluxDB Cloud Dedicated",
+      "provider": "InfluxData",
+      "url": "https://www.influxdata.com/products/influxdb-cloud/dedicated/"
+    },
+    {
+      "name": "Amazon Timestream for InfluxDB",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/timestream/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Core is single-node. Enterprise and InfluxDB Clustered separate ingest, query and compaction nodes over shared object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "InfluxQL"
+  ],
+  "apis": [
+    "Line protocol",
+    "InfluxDB v1/v2 write HTTP API",
+    "InfluxDB v3 HTTP API",
+    "Arrow Flight SQL"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Python",
+    "Java",
+    "JavaScript",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Accepts line protocol and the v1/v2 write APIs, so Telegraf and existing agents keep working on v3",
+    "Parquet on object storage makes long retention cheap and readable by other Arrow/Parquet tools",
+    "Full SQL through Apache DataFusion, plus InfluxQL for existing dashboards",
+    "Embedded Python processing engine runs transforms, downsampling and alerts on write or on a schedule",
+    "Large ecosystem: Telegraf's 300+ input plugins and first-class Grafana support"
+  ],
+  "weaknesses": [
+    "Flux is not supported in v3, so 2.x users must rewrite Flux queries in SQL or InfluxQL",
+    "Clustering, high availability and long-range compaction are Enterprise-only",
+    "Three generations (1.x, 2.x, 3.x) with different APIs and docs cause confusion",
+    "No transactions; updates and deletes are coarse compared with a relational database"
+  ],
+  "useCases": [
+    "Infrastructure and application metrics",
+    "IoT sensor telemetry",
+    "Industrial equipment monitoring at the edge",
+    "Real-time Grafana dashboards",
+    "Downsampling and alerting pipelines with Python plugins"
+  ],
+  "notIdealFor": [
+    "Transactional application data",
+    "Full-text log search",
+    "Workloads that rely on Flux scripts"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "timescaledb",
+    "questdb",
+    "victoriametrics",
+    "prometheus",
+    "tdengine",
+    "greptimedb",
+    "clickhouse",
+    "amazon-timestream"
+  ],
+  "tags": [
+    "time-series",
+    "open-source",
+    "rust",
+    "parquet",
+    "iot",
+    "telegraf"
+  ],
+  "links": {
+    "website": "https://www.influxdata.com/",
+    "docs": "https://docs.influxdata.com/influxdb3/core/",
+    "repository": "https://github.com/influxdata/influxdb",
+    "pricing": "https://www.influxdata.com/influxdb-pricing/",
+    "changelog": "https://docs.influxdata.com/influxdb3/core/release-notes/",
+    "wikipedia": "https://en.wikipedia.org/wiki/InfluxDB"
+  },
+  "ids": {
+    "github": "influxdata/influxdb",
+    "stackoverflowTag": "influxdb",
+    "wikipedia": "InfluxDB",
+    "dockerHub": "library/influxdb",
+    "npm": "@influxdata/influxdb-client",
+    "pypi": "influxdb-client",
+    "hackerNewsQuery": "InfluxDB"
+  },
+  "brand": {
+    "color": "#22ADF6",
+    "simpleIcon": "influxdb"
+  },
+  "sources": [
+    "https://github.com/influxdata/influxdb/releases",
+    "https://docs.influxdata.com/influxdb3/core/release-notes/",
+    "https://www.influxdata.com/blog/influxdata-announces-influxdb-3-oss-ga/"
+  ],
+  "lastVerified": "2026-10-27"
+}

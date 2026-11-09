@@ -1,0 +1,146 @@
+{
+  "slug": "pnuts",
+  "name": "PNUTS",
+  "aliases": [
+    "Sherpa",
+    "Platform for Nimble Universal Table Storage"
+  ],
+  "tagline": "Yahoo's geo-replicated record store (2008) that introduced per-record timeline consistency.",
+  "description": "PNUTS was Yahoo's massively parallel, geographically distributed data-serving platform for web applications, described in a VLDB 2008 paper and run internally under the name Sherpa. It offered a simplified relational model of tables of flexible-schema records, stored in hash or ordered tables partitioned into tablets across storage units, with data replicated asynchronously between regions over Yahoo's own message broker. Its signature idea was per-record timeline consistency: each record has a master region that serializes its updates, and applications choose per call between read-any, read-critical, read-latest and test-and-set writes to trade latency against freshness. It was never released outside Yahoo, but its per-call menu of consistency levels became a recurring theme in later NoSQL and geo-replicated systems.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Yahoo-internal system (2008 onward, also called Sherpa); never released publicly and its current internal status is unknown.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "wide-column"
+  ],
+  "workloads": [
+    "oltp",
+    "session-store"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Yahoo Research",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Internal (never released)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never offered outside Yahoo."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Tablets spread across storage units in multiple data centers; each record is mastered in one region."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "get/set/scan API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Per-record timeline consistency: a practical middle ground between strong and eventual",
+    "Per-call choice of read freshness versus latency",
+    "Designed from the start for multi-datacenter replication"
+  ],
+  "weaknesses": [
+    "Never available outside Yahoo",
+    "Writes to a record must route to its master region, adding cross-region latency",
+    "No general transactions across records"
+  ],
+  "useCases": [
+    "Distributed-systems courses on consistency models",
+    "Background reading for designing geo-replicated stores"
+  ],
+  "notIdealFor": [
+    "Any deployment: there is no public implementation"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-cassandra",
+    "amazon-dynamodb",
+    "google-cloud-bigtable",
+    "cockroachdb",
+    "espresso"
+  ],
+  "tags": [
+    "research",
+    "yahoo",
+    "geo-replication",
+    "nosql",
+    "timeline-consistency"
+  ],
+  "links": {
+    "website": "https://doi.org/10.14778/1454159.1454167"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.14778/1454159.1454167",
+    "https://doi.org/10.1109/mic.2011.142",
+    "https://dbdb.io/db/pnuts"
+  ],
+  "lastVerified": "2026-10-27"
+}

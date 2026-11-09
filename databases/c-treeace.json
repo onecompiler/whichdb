@@ -1,0 +1,182 @@
+{
+  "slug": "c-treeace",
+  "name": "c-treeACE",
+  "aliases": [
+    "FairCom DB",
+    "c-tree",
+    "c-treePLUS",
+    "c-tree Plus"
+  ],
+  "tagline": "FairCom's embeddable ISAM, SQL and JSON database engine, now sold as FairCom DB; roots in 1984's c-tree.",
+  "description": "c-treeACE is the long-running name of FairCom's database engine, which began as the c-tree B-tree/ISAM file handler for C developers in 1984, became c-treePLUS in 1990, then c-treeACE, and is now marketed as FairCom DB. The engine is unusual in exposing the same tables through several APIs at once: low-level ISAM and record-buffer calls for raw speed, full SQL through ODBC and JDBC, and, since V13, a JSON DB API over HTTP that mixes typed and JSON fields. It is embedded inside many commercial and industrial applications, scales from small devices to servers, and includes synchronous, asynchronous and bidirectional replication. FairCom builds FairCom Edge (IIoT integration), FairCom MQ and its Btrieve/COBOL migration products on the same core. Choose it for embedded, high-throughput record access where a commercial vendor relationship is acceptable.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Still developed and sold by FairCom under the FairCom DB name (current major version V13).",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "iot",
+    "edge"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "FairCom Corporation",
+  "vendorType": "company",
+  "initialRelease": 1984,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free developer download; production licensing is quoted through FairCom sales."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "active-active",
+    "notes": "Scales vertically; replication supports HA pairs, read-only replicas and bidirectional, eventually consistent replication between sites."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "JSON DB API"
+  ],
+  "apis": [
+    "ISAM API",
+    "c-treeDB record API",
+    "ODBC",
+    "JDBC",
+    "JSON DB API over HTTP"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Same data reachable through ISAM, record-buffer, SQL and JSON APIs without copying",
+    "Small footprint suited to embedding in devices and packaged software",
+    "Decades of production use; FairCom cites millions of deployments in 100+ countries",
+    "Migration paths for legacy Btrieve/ISAM and COBOL applications",
+    "Synchronous, asynchronous and bidirectional replication options"
+  ],
+  "weaknesses": [
+    "Proprietary with sales-led pricing",
+    "Small developer community and little third-party tooling compared with SQLite or PostgreSQL",
+    "Repeated renames (c-tree, c-treePLUS, c-treeACE, FairCom DB) make documentation searches confusing"
+  ],
+  "useCases": [
+    "Embedded database inside commercial or industrial software",
+    "Modernising Btrieve, ISAM or COBOL applications",
+    "High-speed record access with SQL reporting on the same tables",
+    "Edge and IIoT data collection with FairCom Edge"
+  ],
+  "notIdealFor": [
+    "Teams that require an open-source stack",
+    "Large-scale analytics",
+    "Fully managed cloud database needs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "berkeley-db",
+    "extremedb",
+    "progress-openedge",
+    "postgresql"
+  ],
+  "tags": [
+    "embedded",
+    "isam",
+    "sql",
+    "json",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.faircom.com/products/faircom-db",
+    "docs": "https://docs.faircom.com/docs/"
+  },
+  "ids": {
+    "hackerNewsQuery": "FairCom"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.faircom.com/products/faircom-db",
+    "https://www.faircom.com/products/db/v13",
+    "https://www.faircom.com/products/c-tree",
+    "https://www.faircom.com/learn/blog/celebrating-45-years-of-data-excellence",
+    "https://dbdb.io/db/faircom-db"
+  ],
+  "lastVerified": "2026-10-27"
+}

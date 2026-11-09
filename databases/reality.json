@@ -1,0 +1,165 @@
+{
+  "slug": "reality",
+  "name": "Reality",
+  "aliases": [
+    "Reality X",
+    "Microdata Reality",
+    "Northgate Reality",
+    "NEC Reality"
+  ],
+  "tagline": "The original commercial Pick MultiValue database (1973), still sold and updated by NEC Software Solutions.",
+  "description": "Reality was the first commercial implementation of the Pick operating system and MultiValue database, released by Microdata in 1973, and has passed through McDonnell Douglas, Northgate and now NEC Software Solutions UK. Records are variable-length items whose fields can hold repeating values and sub-values, so an order and its lines live in one record that DataBasic programs read and write by key; the ENGLISH query language, SQL access and multiple databases per host sit on top. It now runs as a hosted environment on Linux, Unix and Windows, mainly underpinning long-lived public-sector and business applications. NEC continues to ship service packs, with V15.5 documentation published in September 2024.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "multivalue",
+  "models": [
+    "multivalue",
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "NEC Software Solutions UK (formerly Northgate Public Services)",
+  "vendorType": "company",
+  "initialRelease": 1973,
+  "latestVersion": {
+    "version": "V15.5",
+    "date": "2024-09"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensed through NEC Software Solutions; support for a version ends six months after its successor ships."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales up on a single host with multiple databases; resilience via replication and backup tooling rather than sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "DataBasic",
+    "ENGLISH",
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "Reality client APIs"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Nested multivalue records model orders, lines and histories in a single key lookup",
+    "Fifty years of backward compatibility for Pick applications",
+    "Still maintained with regular service packs by NEC",
+    "SQL access alongside native DataBasic and ENGLISH queries"
+  ],
+  "weaknesses": [
+    "Small, ageing talent pool and ecosystem",
+    "Proprietary, sales-led licensing",
+    "Non-relational data model complicates integration with modern tooling"
+  ],
+  "useCases": [
+    "Running established Pick-based public-sector and housing applications",
+    "Line-of-business systems already written in DataBasic",
+    "Migrating Pick applications between hardware platforms"
+  ],
+  "notIdealFor": [
+    "Greenfield projects",
+    "Cloud-native microservices",
+    "Analytics at scale"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocket-unidata-universe",
+    "rocket-d3",
+    "jbase",
+    "openqm",
+    "intersystems-iris"
+  ],
+  "tags": [
+    "pick",
+    "multivalue",
+    "legacy",
+    "public-sector"
+  ],
+  "links": {
+    "website": "https://reality.necsws.com/",
+    "docs": "https://download.necsws.com/reality/V15.5_Manuals_Sept24/content/common/relinfo/releaseinformation.htm"
+  },
+  "ids": {
+    "hackerNewsQuery": "Reality Pick database"
+  },
+  "brand": {},
+  "sources": [
+    "https://download.necsws.com/reality/V15.5_Manuals_Sept24/content/common/relinfo/releaseinformation.htm",
+    "https://download.necsws.com/reality/V15.4_Manuals_Dec23/content/common/relinfo/releaseinformation.htm",
+    "https://dbdb.io/db/reality",
+    "https://en.wikipedia.org/wiki/Pick_operating_system"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,172 @@
+{
+  "slug": "puppygraph",
+  "name": "PuppyGraph",
+  "aliases": [],
+  "tagline": "Zero-ETL graph query engine that runs Cypher and Gremlin directly on your lakehouse and SQL tables.",
+  "description": "PuppyGraph is a graph query engine rather than a graph store: you map existing tables in Iceberg, Delta Lake, Hudi, Postgres, Snowflake, BigQuery, Redshift, DuckDB and others to a graph schema, and it answers openCypher and Gremlin queries against them in place, with no data copy. A distributed, vectorized execution engine targets multi-hop queries over very large tables. It fits organizations that want graph analytics over data already in a lakehouse or warehouse without running ETL into a separate graph database. It is read-only, and latency depends on the underlying sources.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-analytics",
+    "graph-traversal",
+    "lakehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "PuppyGraph, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.16.0",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free Developer Edition)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Developer Edition is free (single node, two data sources); Enterprise is priced on CPU and memory, not data volume."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Enterprise runs multi-node clusters; storage scale is that of the underlying lakehouse or warehouse."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "openCypher",
+    "Gremlin"
+  ],
+  "apis": [
+    "Bolt",
+    "Gremlin Server",
+    "HTTP"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Any Neo4j driver",
+    "Any Gremlin driver"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No ETL: queries graph structure directly over Iceberg, Delta, Postgres, Snowflake and more",
+    "One copy of data avoids sync drift between warehouse and graph database",
+    "Speaks both openCypher and Gremlin, so standard drivers and tools work",
+    "Pricing is by compute, not stored data volume"
+  ],
+  "weaknesses": [
+    "Read-only engine; writes go through the source systems",
+    "Latency depends on the source table formats and partitioning",
+    "Closed source and young product with frequent breaking changes in 0.x/1.x"
+  ],
+  "useCases": [
+    "Graph analytics over a lakehouse",
+    "Cybersecurity and log relationship analysis",
+    "Fraud detection on warehouse data",
+    "Supply-chain lineage across existing tables"
+  ],
+  "notIdealFor": [
+    "Transactional graph writes",
+    "Embedded or offline apps",
+    "RDF/SPARQL workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "tigergraph",
+    "amazon-neptune-analytics",
+    "apache-age",
+    "kuzu",
+    "ladybugdb"
+  ],
+  "tags": [
+    "zero-etl",
+    "lakehouse",
+    "cypher",
+    "gremlin",
+    "query-engine"
+  ],
+  "links": {
+    "website": "https://www.puppygraph.com/",
+    "docs": "https://docs.puppygraph.com/",
+    "pricing": "https://www.puppygraph.com/pricing",
+    "changelog": "https://docs.puppygraph.com/releases/"
+  },
+  "ids": {
+    "dockerHub": "puppygraph/puppygraph",
+    "hackerNewsQuery": "PuppyGraph"
+  },
+  "brand": {
+    "color": "#6C4DF6"
+  },
+  "sources": [
+    "https://docs.puppygraph.com/releases/",
+    "https://www.puppygraph.com/pricing",
+    "https://hub.docker.com/r/puppygraph/puppygraph"
+  ],
+  "lastVerified": "2026-10-27"
+}

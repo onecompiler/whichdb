@@ -1,0 +1,179 @@
+{
+  "slug": "amazon-keyspaces",
+  "name": "Amazon Keyspaces",
+  "aliases": [
+    "Amazon Keyspaces (for Apache Cassandra)",
+    "AWS Keyspaces"
+  ],
+  "tagline": "Serverless, CQL-compatible Cassandra service on AWS with no clusters to manage.",
+  "description": "Amazon Keyspaces lets you point existing Cassandra drivers and CQL at a serverless AWS endpoint instead of running a ring yourself. Under the hood it is not Cassandra but AWS's own storage layer, so there is no compaction, repair or node sizing; capacity is on-demand or provisioned, and data is replicated across three AZs with optional multi-region replication. It is a pragmatic landing zone for Cassandra workloads moving to AWS, but compatibility is partial: some CQL features, consistency levels and system tables differ, so test before you migrate.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "iot",
+    "time-series",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2020,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (AWS service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "On-demand per read/write request unit or provisioned capacity, plus storage. Limited first-year free tier."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon Keyspaces",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/keyspaces/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Automatic partition scaling; multi-Region replication with last-writer-wins conflict resolution."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "CQL"
+  ],
+  "apis": [
+    "CQL native protocol (TLS + SigV4)"
+  ],
+  "compatibleWith": [
+    "cassandra"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No Cassandra operations: no repair, compaction or node management",
+    "Works with standard open-source Cassandra drivers and CQL",
+    "Point-in-time recovery and encryption at rest by default",
+    "IAM authentication and integration with the AWS security model"
+  ],
+  "weaknesses": [
+    "Partial CQL compatibility; unsupported features include some secondary index and UDF patterns",
+    "Per-request pricing can exceed self-managed Cassandra at sustained high throughput",
+    "AWS-only, with no on-prem option",
+    "Lightweight transactions are billed at a premium and behave differently from Cassandra"
+  ],
+  "useCases": [
+    "Moving existing Cassandra apps to AWS without ops",
+    "Spiky workloads that suit on-demand pricing",
+    "Serverless apps that need a CQL data model",
+    "Industrial and IoT device data"
+  ],
+  "notIdealFor": [
+    "Apps relying on full Cassandra feature parity",
+    "Steady very high-throughput workloads (cost)",
+    "Hybrid or multi-cloud deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-cassandra",
+    "amazon-dynamodb",
+    "datastax-astra-db",
+    "scylladb",
+    "azure-cosmos-db"
+  ],
+  "tags": [
+    "aws",
+    "serverless",
+    "cassandra-compatible",
+    "cql",
+    "managed"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/keyspaces/",
+    "docs": "https://docs.aws.amazon.com/keyspaces/",
+    "pricing": "https://aws.amazon.com/keyspaces/pricing/",
+    "changelog": "https://docs.aws.amazon.com/keyspaces/latest/devguide/doc-history.html"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-keyspaces",
+    "hackerNewsQuery": "Amazon Keyspaces"
+  },
+  "brand": {
+    "color": "#4053D6"
+  },
+  "sources": [
+    "https://aws.amazon.com/keyspaces/",
+    "https://docs.aws.amazon.com/keyspaces/latest/devguide/doc-history.html",
+    "https://aws.amazon.com/keyspaces/pricing/"
+  ],
+  "lastVerified": "2026-10-27"
+}

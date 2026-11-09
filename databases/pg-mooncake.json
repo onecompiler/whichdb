@@ -1,0 +1,175 @@
+{
+  "slug": "pg-mooncake",
+  "name": "pg_mooncake",
+  "aliases": [
+    "Mooncake",
+    "moonlink"
+  ],
+  "tagline": "Postgres extension that mirrors tables into Iceberg columnstores for real-time analytics via DuckDB.",
+  "description": "pg_mooncake adds real-time analytics to PostgreSQL by maintaining a columnstore mirror of regular Postgres tables in Apache Iceberg, fed by the moonlink engine with sub-second freshness for inserts, updates and deletes. Analytical queries run through DuckDB (it is now a sub-extension of pg_duckdb), while other engines can read the Iceberg tables directly. Databricks acquired Mooncake Labs in October 2025 to strengthen its Postgres-based Lakebase, and the public repo has seen almost no activity since, so treat it as promising technology with an uncertain open-source future.",
+  "productType": "extension",
+  "status": "maintenance",
+  "statusNote": "Mooncake Labs was acquired by Databricks (Oct 2025) for Lakebase; the public repo has had no commits since Oct 2025.",
+  "maturity": "emerging",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "htap",
+    "real-time-analytics",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Mooncake Labs (Databricks)",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "0.1.3",
+    "date": "2025-12-03"
+  },
+  "writtenIn": [
+    "Rust",
+    "C++"
+  ],
+  "basedOn": "PostgreSQL + DuckDB (pg_duckdb)",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Runs inside one Postgres instance; columnstore data can live in object storage as Iceberg."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Analytics on live Postgres tables without ETL",
+    "Columnstore mirror written as open Iceberg tables",
+    "DuckDB execution ranks near the top of ClickBench",
+    "MIT-licensed"
+  ],
+  "weaknesses": [
+    "Development has stalled since the Databricks acquisition",
+    "Young code base with few production references",
+    "Requires pg_duckdb and a Rust build toolchain"
+  ],
+  "useCases": [
+    "Real-time dashboards on Postgres data",
+    "Mirroring Postgres tables to Iceberg",
+    "HTAP experiments"
+  ],
+  "notIdealFor": [
+    "Production systems needing long-term support",
+    "Multi-node analytics at scale"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pg-duckdb",
+    "hydra-columnar",
+    "citus",
+    "lakebase",
+    "duckdb",
+    "clickhouse"
+  ],
+  "tags": [
+    "postgres-extension",
+    "htap",
+    "iceberg",
+    "duckdb"
+  ],
+  "links": {
+    "website": "https://pgmooncake.com/",
+    "docs": "https://pgmooncake.com/docs",
+    "repository": "https://github.com/Mooncake-Labs/pg_mooncake"
+  },
+  "ids": {
+    "github": "Mooncake-Labs/pg_mooncake",
+    "dockerHub": "mooncakelabs/pg_mooncake",
+    "hackerNewsQuery": "pg_mooncake"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Mooncake-Labs/pg_mooncake",
+    "https://www.databricks.com/blog/mooncake-labs-joins-databricks-accelerate-vision-lakebase"
+  ],
+  "lastVerified": "2026-10-27"
+}

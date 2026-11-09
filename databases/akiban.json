@@ -1,0 +1,149 @@
+{
+  "slug": "akiban",
+  "name": "Akiban",
+  "aliases": [
+    "Akiban Server",
+    "Akiban Technologies"
+  ],
+  "tagline": "SQL engine that stored related tables together as 'table groups' to make joins cheap; bought by FoundationDB.",
+  "description": "Akiban was a 2009-era database startup whose engine physically co-located parent and child rows (a customer with its orders and line items) in 'table groups', so hierarchical joins became sequential reads instead of index lookups; it started as a MySQL storage engine and grew into the standalone Akiban Server. FoundationDB acquired the company in July 2013 and rebuilt the technology as the FoundationDB SQL Layer on top of its transactional key-value store. When Apple bought FoundationDB in 2015, public downloads were withdrawn, and the SQL Layer was not revived when Apple open-sourced the FoundationDB core in 2018. The table-group idea survives mainly as a reference point in discussions of join-friendly physical layouts.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by FoundationDB in July 2013 and turned into its SQL Layer, which disappeared after Apple bought FoundationDB in 2015.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Akiban Technologies (acquired by FoundationDB)",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (Akiban Technologies)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold or downloadable."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "The standalone server was single-node; scale-out only arrived via FoundationDB's distributed key-value store."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL storage engine (early versions)",
+    "SQL server protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Table-group layout turned parent-child joins into cheap sequential scans",
+    "Could return a whole object hierarchy (e.g. an order with its lines) in one read",
+    "Influenced FoundationDB's layered SQL-on-key-value approach"
+  ],
+  "weaknesses": [
+    "Product no longer exists; no downloads, docs or support",
+    "Table groups only help strictly hierarchical schemas",
+    "Never reached a broad community before the acquisition"
+  ],
+  "useCases": [
+    "Historical reference for join-optimised physical layouts",
+    "Understanding the lineage of FoundationDB's SQL Layer"
+  ],
+  "notIdealFor": [
+    "Any current workload: the software is unavailable"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "foundationdb",
+    "postgresql",
+    "cockroachdb",
+    "yugabytedb",
+    "mysql"
+  ],
+  "tags": [
+    "sql",
+    "acquired",
+    "foundationdb",
+    "historical"
+  ],
+  "links": {
+    "website": "https://dbdb.io/db/akiban"
+  },
+  "ids": {
+    "hackerNewsQuery": "Akiban"
+  },
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/akiban",
+    "https://sdtimes.com/akiban/foundationdb-acquires-akiban/",
+    "https://sdtimes.com/big-data/foundationdb-adds-sql-layer-nosql-database/",
+    "https://www.dbta.com/Editorial/News-Flashes/Acquisition-of-Akiban-by-FoundationDB-Merges-SQL-and-NoSQL-Worlds-90899.aspx"
+  ],
+  "lastVerified": "2026-10-27"
+}

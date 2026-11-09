@@ -1,0 +1,186 @@
+{
+  "slug": "grafana-mimir",
+  "name": "Grafana Mimir",
+  "aliases": [
+    "Mimir"
+  ],
+  "tagline": "Grafana Labs' horizontally scalable, multi-tenant long-term store for Prometheus and OTLP metrics.",
+  "description": "Grafana Mimir is a horizontally scalable Prometheus backend that keeps metric blocks in object storage and adds multi-tenancy, high availability and global query federation. Forked from Cortex in 2022 and licensed AGPL-3.0, it is the engine behind Grafana Cloud Metrics. Mimir 3.0 (October 2025) introduced an ingest-storage architecture that places a Kafka-compatible log between the write and read paths so they scale independently, and made the streaming Mimir Query Engine the default, which sharply cuts querier memory. It is powerful but it is a microservices system: expect many components, a Kafka-compatible broker in the new mode, and per-tenant limit tuning.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Grafana Labs",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "3.2.3",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "Cortex / Prometheus TSDB",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Grafana Cloud Metrics has a free tier; Grafana Enterprise Metrics is contract-priced."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Grafana Cloud Metrics",
+      "provider": "Grafana Labs",
+      "url": "https://grafana.com/products/cloud/metrics/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Distributors, ingesters, store-gateways and compactors scale independently over S3/GCS/Azure Blob."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "PromQL"
+  ],
+  "apis": [
+    "Prometheus remote write",
+    "Prometheus HTTP query API",
+    "OTLP"
+  ],
+  "compatibleWith": [
+    "prometheus",
+    "s3"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Scales to very large active-series counts across many tenants",
+    "Object storage for blocks keeps long retention cheap",
+    "Ingest storage separates read and write paths for predictable performance",
+    "Streaming PromQL engine uses far less memory than the Prometheus engine",
+    "Same code that runs Grafana Cloud Metrics"
+  ],
+  "weaknesses": [
+    "Many microservices to deploy, monitor and upgrade",
+    "AGPL-3.0 can be a blocker for embedding or reselling",
+    "New ingest-storage mode adds a Kafka-compatible dependency",
+    "Overkill for a single cluster that fits one Prometheus"
+  ],
+  "useCases": [
+    "Centralised multi-tenant metrics for many clusters",
+    "Long-term Prometheus storage on object storage",
+    "Platform teams offering metrics-as-a-service internally"
+  ],
+  "notIdealFor": [
+    "Small single-cluster setups",
+    "Logs and traces (use Loki and Tempo)",
+    "SQL analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "thanos",
+    "victoriametrics",
+    "m3db",
+    "prometheus",
+    "cortex",
+    "greptimedb"
+  ],
+  "tags": [
+    "metrics",
+    "prometheus-compatible",
+    "grafana",
+    "multi-tenant",
+    "object-storage"
+  ],
+  "links": {
+    "website": "https://grafana.com/oss/mimir/",
+    "docs": "https://grafana.com/docs/mimir/latest/",
+    "repository": "https://github.com/grafana/mimir",
+    "changelog": "https://github.com/grafana/mimir/blob/main/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "grafana/mimir",
+    "stackoverflowTag": "grafana-mimir",
+    "dockerHub": "grafana/mimir",
+    "hackerNewsQuery": "Grafana Mimir"
+  },
+  "brand": {
+    "color": "#F46800",
+    "simpleIcon": "grafana"
+  },
+  "sources": [
+    "https://github.com/grafana/mimir/releases",
+    "https://github.com/grafana/mimir/releases/tag/mimir-3.0.0",
+    "https://grafana.com/oss/mimir/"
+  ],
+  "lastVerified": "2026-10-27"
+}

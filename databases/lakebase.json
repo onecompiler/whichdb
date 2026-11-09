@@ -1,0 +1,119 @@
+{
+  "slug": "lakebase",
+  "name": "Databricks Lakebase",
+  "aliases": ["Lakebase", "Lakebase Postgres"],
+  "tagline": "Databricks' serverless Postgres built on Neon tech, with branching and sync to Delta tables in Unity Catalog.",
+  "description": "Lakebase is Databricks' managed OLTP database: serverless PostgreSQL built on the storage and compute separation it acquired with Neon, wired into the Databricks platform. It offers autoscaling with scale-to-zero, instant copy-on-write branching, point-in-time recovery and high availability, plus synced tables that move data between Postgres and Delta Lake tables governed by Unity Catalog. That makes it a natural backend for Databricks Apps, AI agents and feature serving that need low-latency reads and writes next to lakehouse data. It reached general availability on AWS in January 2026 and on Azure in March 2026, supporting Postgres 16 to 18. Outside a Databricks estate, plain Neon is usually the simpler choice.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "vector"],
+  "workloads": ["oltp", "ml-feature-store", "vector-search", "rag", "lakehouse"],
+  "architecture": ["serverless", "shared-storage", "primary-replica"],
+  "developer": "Databricks",
+  "vendorType": "company",
+  "initialRelease": 2025,
+  "writtenIn": ["Rust", "C"],
+  "basedOn": "PostgreSQL (Neon architecture)",
+  "license": { "type": "proprietary", "name": "Proprietary (Databricks service)" },
+  "pricing": {
+    "models": ["usage-based"],
+    "freeTier": false,
+    "notes": "Billed in Databricks units for compute plus storage; snapshot storage billable since June 2026; requires a Databricks workspace."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws", "azure"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Lakebase", "provider": "Databricks", "url": "https://www.databricks.com/product/lakebase" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Autoscaling single-writer Postgres with readable secondaries; storage up to 8 TB at GA."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["PostgreSQL wire protocol", "Lakebase REST API", "Databricks SDKs"],
+  "compatibleWith": ["postgresql"],
+  "drivers": ["Python", "Java", "Go", "JavaScript", "Scala"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Postgres next to lakehouse data with managed sync to and from Delta tables",
+    "Unity Catalog governance and Databricks identity for OLTP data",
+    "Instant branching and scale-to-zero inherited from Neon",
+    "Low-latency serving layer for Databricks Apps, agents and features",
+    "Supports Postgres 16, 17 and 18"
+  ],
+  "weaknesses": [
+    "Only usable inside a Databricks workspace",
+    "Young service; features rolling out region by region",
+    "Single-writer scaling; no sharding",
+    "Pricing in DBUs is harder to predict than plain per-hour billing"
+  ],
+  "useCases": [
+    "Backends for Databricks Apps and AI agents",
+    "Online feature and embedding serving from lakehouse pipelines",
+    "Operational stores whose data must land in Delta tables",
+    "Reverse-ETL style serving of gold tables to applications"
+  ],
+  "notIdealFor": [
+    "Teams not already on Databricks",
+    "Very high write throughput needing horizontal scale",
+    "Multi-cloud or on-premises deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": ["neon", "databricks-sql", "snowflake", "supabase", "amazon-aurora", "alloydb"],
+  "tags": ["postgres", "databricks", "serverless", "lakehouse", "branching"],
+  "links": {
+    "website": "https://www.databricks.com/product/lakebase",
+    "docs": "https://docs.databricks.com/aws/en/oltp/",
+    "changelog": "https://docs.databricks.com/aws/en/release-notes/lakebase/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Databricks Lakebase"
+  },
+  "brand": { "color": "#FF3621", "simpleIcon": "databricks" },
+  "sources": [
+    "https://docs.databricks.com/aws/en/release-notes/lakebase/",
+    "https://www.databricks.com/blog/azure-databricks-lakebase-generally-available",
+    "https://neon.com/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

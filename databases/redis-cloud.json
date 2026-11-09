@@ -1,0 +1,183 @@
+{
+  "slug": "redis-cloud",
+  "name": "Redis Cloud",
+  "aliases": [
+    "Redis Enterprise Cloud"
+  ],
+  "tagline": "Redis Ltd.'s own managed Redis on AWS, Azure and GCP, with Active-Active geo-replication and tiering.",
+  "description": "Redis Cloud is the managed service run by Redis Ltd., the company behind Redis, built on Redis Software (Enterprise). It offers a free 30 MB database, shared Essentials plans from about $5 per month, and dedicated Pro deployments with Active-Active CRDT-based multi-region replication, auto-tiering of cold data to SSD (Redis Flex), private connectivity and up to 99.999% availability. It is the place where Redis's newest features (search, vectors, JSON, time series) land first, available in all three hyperscalers' regions and marketplaces.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "vector",
+    "time-series",
+    "search"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "vector-search",
+    "rag",
+    "pub-sub",
+    "queue"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed"
+  ],
+  "developer": "Redis Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Redis Software (Enterprise)",
+  "license": {
+    "type": "proprietary",
+    "name": "Redis Cloud service terms"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "$5/month (Essentials)",
+    "notes": "Free 30 MB database; Pro from $0.014/hour with a $200/month minimum."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Pro plans shard across nodes, tier to SSD with Redis Flex and replicate Active-Active across regions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual",
+      "causal"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua",
+    "Redis Query Engine (FT.*)"
+  ],
+  "apis": [
+    "RESP2/RESP3",
+    "REST management API"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Newest Redis features first, operated by the Redis core team",
+    "Active-Active CRDT replication for multi-region writes",
+    "Redis Flex tiers cold data to SSD for lower cost",
+    "Runs on AWS, Azure and GCP with marketplace billing"
+  ],
+  "weaknesses": [
+    "Pro plans have a $200/month minimum",
+    "Proprietary service; Active-Active semantics are Redis-specific",
+    "Costs rise quickly with large in-memory datasets"
+  ],
+  "useCases": [
+    "Global session stores and leaderboards with multi-region writes",
+    "Vector search and semantic caching for AI apps",
+    "Managed caching across multiple clouds"
+  ],
+  "notIdealFor": [
+    "Teams standardising on Valkey for licensing reasons",
+    "Very cost-sensitive hobby workloads beyond the free tier"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "azure-cache-for-redis",
+    "amazon-elasticache",
+    "upstash",
+    "google-memorystore"
+  ],
+  "tags": [
+    "managed",
+    "redis",
+    "active-active",
+    "multi-cloud"
+  ],
+  "links": {
+    "website": "https://redis.io/cloud/",
+    "docs": "https://redis.io/docs/latest/operate/rc/",
+    "pricing": "https://redis.io/pricing/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Redis Cloud"
+  },
+  "brand": {
+    "color": "#FF4438",
+    "simpleIcon": "redis"
+  },
+  "sources": [
+    "https://redis.io/pricing/",
+    "https://redis.io/cloud/"
+  ],
+  "lastVerified": "2026-10-27"
+}

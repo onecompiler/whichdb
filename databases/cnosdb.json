@@ -1,0 +1,179 @@
+{
+  "slug": "cnosdb",
+  "name": "CnosDB",
+  "aliases": [],
+  "tagline": "Rust cloud-native time-series database with SQL on DataFusion and InfluxDB-style ingestion.",
+  "description": "CnosDB is an open-source distributed time-series database whose 2.x line was rewritten in Rust on Apache Arrow and DataFusion. It separates compute from storage, offers multi-tenancy and SQL with time-series extensions, and accepts InfluxDB line protocol, Prometheus remote write and OpenTSDB writes so existing collectors can be reused. The Beijing-based company behind it targets IoT, energy and observability workloads and sells an enterprise edition and cloud service. It is AGPL-3.0 and, while still actively released, has a small community outside China.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar"
+  ],
+  "workloads": [
+    "time-series",
+    "iot",
+    "observability"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "CnosDB",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "2.5.0",
+    "date": "2026-10-23"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Apache Arrow DataFusion",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Meta, query and storage nodes scale separately; data is split into vnodes with replica sets."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "HTTP",
+    "Arrow Flight SQL",
+    "InfluxDB line protocol",
+    "Prometheus remote write/read",
+    "OpenTSDB"
+  ],
+  "compatibleWith": [
+    "influxdb",
+    "prometheus",
+    "opentsdb"
+  ],
+  "drivers": [
+    "Go",
+    "Java",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Rust engine with Arrow/DataFusion gives full SQL with time-series functions",
+    "Accepts Influx, Prometheus and OpenTSDB writes for easy migration",
+    "Built-in multi-tenancy and per-tenant resource limits",
+    "Compute-storage separation for elastic scaling"
+  ],
+  "weaknesses": [
+    "AGPL-3.0 licence",
+    "Small community and limited English material",
+    "Few public large-scale references",
+    "Ecosystem integrations lag InfluxDB and Prometheus backends"
+  ],
+  "useCases": [
+    "Energy and utility telemetry",
+    "IoT platforms needing multi-tenancy",
+    "Replacing InfluxDB 1.x with a SQL-capable engine"
+  ],
+  "notIdealFor": [
+    "Teams needing a large support ecosystem",
+    "Transactional data",
+    "Log search"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "influxdb",
+    "tdengine",
+    "apache-iotdb",
+    "greptimedb",
+    "opengemini",
+    "timescaledb"
+  ],
+  "tags": [
+    "time-series",
+    "rust",
+    "open-source",
+    "iot"
+  ],
+  "links": {
+    "website": "https://www.cnosdb.com/",
+    "docs": "https://docs.cnosdb.com/",
+    "repository": "https://github.com/cnosdb/cnosdb",
+    "changelog": "https://github.com/cnosdb/cnosdb/releases"
+  },
+  "ids": {
+    "github": "cnosdb/cnosdb",
+    "dockerHub": "cnosdb/cnosdb",
+    "hackerNewsQuery": "CnosDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/cnosdb/cnosdb/releases",
+    "https://github.com/cnosdb/cnosdb",
+    "https://hub.docker.com/r/cnosdb/cnosdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

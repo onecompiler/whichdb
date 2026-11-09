@@ -1,0 +1,162 @@
+{
+  "slug": "akumuli",
+  "name": "Akumuli",
+  "aliases": [],
+  "tagline": "Single-node C++ time-series database with a hybrid LSM/B+tree engine and strong compression; archived.",
+  "description": "Akumuli is a time-series database written in C++ by Eugene Lazin, designed to get very high write throughput out of one machine with SSD or NVMe storage. Its NB+tree storage engine mixes LSM and B+tree ideas with MVCC, compresses values better than Facebook's Gorilla scheme, and can aggregate or downsample without pre-configured rollups; queries are JSON over HTTP and ingestion accepts OpenTSDB's telnet-style protocol, so collectors such as collectd and netdata work unchanged. It could also run embedded as a library, and a Grafana datasource existed. The last release was v0.8.80 in May 2020 and the GitHub repository is now archived, so it is a source of design ideas rather than something to deploy.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "GitHub repository archived; last release v0.8.80 (May 2020). Use VictoriaMetrics, QuestDB or TimescaleDB instead.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "time-series",
+    "observability",
+    "iot"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded"
+  ],
+  "developer": "Eugene Lazin",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.8.80",
+    "date": "2020-05-21"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales up across cores on one server; benchmarks claimed millions of writes per second on a single box. No clustering."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JSON query API"
+  ],
+  "apis": [
+    "HTTP/JSON",
+    "OpenTSDB telnet-style ingestion",
+    "C API (embedded)"
+  ],
+  "compatibleWith": [
+    "opentsdb"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very high single-node ingest rates on SSD/NVMe",
+    "Compression ratio that beat the Gorilla scheme in the author's tests",
+    "Downsampling and aggregation without pre-defined rollups",
+    "Can be embedded as a library as well as run as a server"
+  ],
+  "weaknesses": [
+    "Repository archived; no fixes or releases since 2020",
+    "No clustering or replication",
+    "JSON query API instead of SQL or PromQL limits tool support",
+    "Small user base and few integrations beyond Grafana"
+  ],
+  "useCases": [
+    "Studying time-series storage engine and compression design",
+    "Existing single-node metrics deployments that already run it"
+  ],
+  "notIdealFor": [
+    "New production metrics systems",
+    "Highly available or multi-node deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "victoriametrics",
+    "questdb",
+    "timescaledb",
+    "influxdb",
+    "prometheus"
+  ],
+  "tags": [
+    "time-series",
+    "c++",
+    "compression",
+    "archived"
+  ],
+  "links": {
+    "website": "https://akumuli.org/",
+    "repository": "https://github.com/akumuli/Akumuli",
+    "changelog": "https://github.com/akumuli/Akumuli/releases"
+  },
+  "ids": {
+    "github": "akumuli/Akumuli",
+    "dockerHub": "akumuli/akumuli",
+    "hackerNewsQuery": "Akumuli"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/akumuli/Akumuli",
+    "https://akumuli.org/",
+    "https://github.com/akumuli/Akumuli/releases/tag/v0.8.80"
+  ],
+  "lastVerified": "2026-10-27"
+}

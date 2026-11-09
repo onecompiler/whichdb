@@ -1,0 +1,181 @@
+{
+  "slug": "janusgraph",
+  "name": "JanusGraph",
+  "aliases": [],
+  "tagline": "Open-source distributed graph database layered on Cassandra, HBase, ScyllaDB or Bigtable.",
+  "description": "JanusGraph is a Linux Foundation project, forked from Titan in 2017, that turns a wide-column store (Cassandra, ScyllaDB, HBase, Bigtable) or BerkeleyDB into a TinkerPop-compatible graph database. Indexes for full-text, geo and range queries are delegated to Elasticsearch, OpenSearch, Solr or Lucene, and Spark-based OLAP is available through TinkerPop's GraphComputer. It scales to very large graphs because storage scales horizontally, but operators must run and tune two or three distributed systems, and release cadence is slow (1.1.0 in late 2024, with 1.2.0 staged in October 2026).",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server",
+    "embedded"
+  ],
+  "developer": "JanusGraph community (LF AI & Data Foundation)",
+  "vendorType": "foundation",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "1.1.0",
+    "date": "2024-11-09"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Titan",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (code), CC-BY-4.0 (docs)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; cost comes from operating the storage and index backends."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Inherits scale and multi-DC replication from the storage backend (e.g. Cassandra or ScyllaDB)."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Gremlin"
+  ],
+  "apis": [
+    "Gremlin Server (WebSocket/HTTP)",
+    "TinkerPop Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    ".NET",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fully open source under Apache 2.0 with neutral foundation governance",
+    "Scales storage horizontally by delegating to Cassandra, ScyllaDB, HBase or Bigtable",
+    "Pluggable mixed indexes (Elasticsearch, OpenSearch, Solr) for full-text and geo predicates",
+    "Standard TinkerPop/Gremlin, so tooling and queries port to other Gremlin databases"
+  ],
+  "weaknesses": [
+    "Running JanusGraph means operating a storage cluster and an index cluster as well",
+    "Traversal latency is higher than native graph engines because each hop hits a KV backend",
+    "ACID guarantees depend on the backend and are weak on eventually consistent stores",
+    "Slow release cadence and a small core maintainer team"
+  ],
+  "useCases": [
+    "Large-scale graphs on existing Cassandra or ScyllaDB clusters",
+    "Telecom and network inventory graphs",
+    "Security and identity graphs",
+    "Open-source alternative to managed Gremlin services"
+  ],
+  "notIdealFor": [
+    "Small teams without distributed-systems ops experience",
+    "Low-latency deep traversals",
+    "Cypher or SPARQL users"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "nebulagraph",
+    "apache-hugegraph",
+    "amazon-neptune",
+    "neo4j",
+    "aerospike-graph",
+    "apache-tinkerpop-gremlin-server"
+  ],
+  "tags": [
+    "gremlin",
+    "tinkerpop",
+    "open-source",
+    "distributed",
+    "linux-foundation"
+  ],
+  "links": {
+    "website": "https://janusgraph.org/",
+    "docs": "https://docs.janusgraph.org/",
+    "repository": "https://github.com/JanusGraph/janusgraph",
+    "changelog": "https://docs.janusgraph.org/changelog/",
+    "wikipedia": "https://en.wikipedia.org/wiki/JanusGraph"
+  },
+  "ids": {
+    "github": "JanusGraph/janusgraph",
+    "stackoverflowTag": "janusgraph",
+    "wikipedia": "JanusGraph",
+    "dockerHub": "janusgraph/janusgraph",
+    "hackerNewsQuery": "JanusGraph"
+  },
+  "brand": {
+    "color": "#1E2C3B"
+  },
+  "sources": [
+    "https://github.com/JanusGraph/janusgraph/releases",
+    "https://janusgraph.org/",
+    "https://repo1.maven.org/maven2/org/janusgraph/janusgraph-core/maven-metadata.xml"
+  ],
+  "lastVerified": "2026-10-27"
+}

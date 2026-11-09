@@ -1,0 +1,161 @@
+{
+  "slug": "blueflood",
+  "name": "Blueflood",
+  "aliases": [
+    "Rackspace Blueflood"
+  ],
+  "tagline": "Rackspace's multi-tenant metrics ingestion, rollup and query service on Cassandra; dormant since 2022.",
+  "description": "Blueflood is a distributed, multi-tenant metrics system that Rackspace's monitoring team built from 2013 to back Rackspace Metrics, its monitoring service and its public cloud. It runs as Java services for ingestion, query and rollup: raw points land in Apache Cassandra, background jobs pre-compute coarser rollups so long time ranges return quickly, and Elasticsearch indexes metric names for discovery. Data is queryable milliseconds after ingest and the cluster grows by adding Cassandra nodes. The project moved from rackerlabs to the rax-maas GitHub organisation; its last release, 2.1.0, shipped in September 2022, and since then only automated dependency pull requests have appeared.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No commits to master since September 2022 (release 2.1.0); only dependency-bot PRs since. Prefer a maintained TSDB for new work.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Rackspace",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "2.1.0",
+    "date": "2022-09-07"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Cassandra (storage) and Elasticsearch (metric discovery)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Stateless ingest/query/rollup services in front of Cassandra; capacity grows by adding Cassandra nodes."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "HTTP query API"
+  ],
+  "apis": [
+    "HTTP ingestion API",
+    "HTTP query API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Multi-tenant by design, suited to monitoring-as-a-service backends",
+    "Pre-computed rollups make long-range queries fast",
+    "Scales horizontally on Cassandra with no single storage node",
+    "Ran in production behind Rackspace's monitoring products"
+  ],
+  "weaknesses": [
+    "Effectively dormant since 2022 and still built for Java 8",
+    "Operating Cassandra plus Elasticsearch is heavy for small teams",
+    "No PromQL, SQL or Graphite-native query language",
+    "Small community and dated documentation"
+  ],
+  "useCases": [
+    "Existing Blueflood deployments",
+    "Reference design for multi-tenant metrics on Cassandra"
+  ],
+  "notIdealFor": [
+    "New observability stacks",
+    "Teams without Cassandra operations experience"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kairosdb",
+    "victoriametrics",
+    "grafana-mimir",
+    "m3db",
+    "opentsdb",
+    "cortex"
+  ],
+  "tags": [
+    "metrics",
+    "cassandra",
+    "rackspace",
+    "time-series",
+    "multi-tenant"
+  ],
+  "links": {
+    "website": "http://blueflood.io/",
+    "repository": "https://github.com/rax-maas/blueflood",
+    "changelog": "https://github.com/rax-maas/blueflood/releases"
+  },
+  "ids": {
+    "github": "rax-maas/blueflood",
+    "hackerNewsQuery": "Blueflood metrics"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/rax-maas/blueflood",
+    "http://blueflood.io/",
+    "https://github.com/rax-maas/blueflood/releases/tag/blueflood-2.1.0"
+  ],
+  "lastVerified": "2026-10-27"
+}

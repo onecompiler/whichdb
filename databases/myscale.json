@@ -1,0 +1,171 @@
+{
+  "slug": "myscale",
+  "name": "MyScale",
+  "aliases": [
+    "MyScaleDB"
+  ],
+  "tagline": "Former SQL vector database forked from ClickHouse; the company shut down in 2025.",
+  "description": "MyScale was a managed SQL vector database built on a fork of ClickHouse, adding its MSTG vector index, Tantivy-based full-text search and SQL functions for hybrid and filtered vector queries. The engine was open-sourced as MyScaleDB under Apache-2.0 in 2024. The company announced it was ceasing operations in April 2025 and closed in May 2025; the cloud console is offline and the repository has had no commits since February 2025. Existing users should migrate, typically to ClickHouse (which now has native vector similarity indexes) or a dedicated vector database.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "MyScale announced it was ceasing operations in April 2025 and closed in May 2025; the cloud service is offline and the MyScaleDB repo is inactive since Feb 2025. Migrate to ClickHouse vector indexes or a vector DB.",
+  "maturity": "legacy",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "relational",
+    "columnar",
+    "search"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "olap",
+    "full-text-search"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "MyScale (Moqi)",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.8.0",
+    "date": "2024-10-21"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "ClickHouse",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "The managed MyScale Cloud no longer operates; only the archived-in-practice open-source code remains."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Inherited ClickHouse sharding and replication."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ClickHouse dialect)"
+  ],
+  "apis": [
+    "HTTP",
+    "ClickHouse native protocol"
+  ],
+  "compatibleWith": [
+    "clickhouse"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Vector search combined with full ClickHouse SQL analytics",
+    "Filtered and hybrid search expressed in SQL",
+    "Columnar storage made metadata filters cheap"
+  ],
+  "weaknesses": [
+    "Vendor ceased operations in 2025",
+    "No security patches or releases since late 2024",
+    "Fork has diverged from upstream ClickHouse"
+  ],
+  "useCases": [
+    "Historical reference for SQL-plus-vector designs",
+    "Planning migrations of existing MyScale data to ClickHouse"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Production workloads needing support or security fixes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "milvus",
+    "pgvector",
+    "lancedb",
+    "singlestore",
+    "qdrant"
+  ],
+  "tags": [
+    "vector-database",
+    "clickhouse-fork",
+    "sql",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://myscale.com/",
+    "repository": "https://github.com/myscale/MyScaleDB"
+  },
+  "ids": {
+    "github": "myscale/MyScaleDB",
+    "hackerNewsQuery": "MyScale"
+  },
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/myscaledb",
+    "https://github.com/myscale/MyScaleDB",
+    "https://twitter.com/MyScaleDB/status/1917163010311037327"
+  ],
+  "lastVerified": "2026-10-27"
+}

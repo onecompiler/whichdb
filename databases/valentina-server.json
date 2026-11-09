@@ -1,0 +1,163 @@
+{
+  "slug": "valentina-server",
+  "name": "Valentina Server",
+  "aliases": [
+    "Valentina DB Server",
+    "ValentinaDB"
+  ],
+  "tagline": "Paradigma Software's multi-engine server: ValentinaDB, DuckDB and SQLite plus report and form servers.",
+  "description": "Valentina Server is a commercial database and reporting server from Paradigma Software. One installation bundles three database servers, for Paradigma's own object-relational ValentinaDB engine, DuckDB and SQLite (with SQLCipher encryption), plus Valentina Reports Server and Forms Server, so a small vendor can ship data storage and reporting as one component. It is popular with Xojo developers and pairs with the free Valentina Studio admin tool and Valentina's embeddable ADKs. Paradigma releases often: version 17 arrived in February 2026 and a version 18 Docker image (18.2.1) was published in September 2026. Windows, macOS and Linux are supported.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "object"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Paradigma Software",
+  "vendorType": "company",
+  "initialRelease": 2001,
+  "latestVersion": {
+    "version": "18.2.1",
+    "date": "2026-09-29"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Commercial licences from Paradigma's store; free evaluation download; OEM licensing via Valentina Developer Network."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server product aimed at departmental and ISV-embedded deployments."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Valentina ADK",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Xojo"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One install serves ValentinaDB, DuckDB and SQLite databases side by side",
+    "Built-in reports and forms servers, unusual for a database product",
+    "Frequent releases and a maintained Docker image",
+    "Strong integration with Xojo and the free Valentina Studio GUI"
+  ],
+  "weaknesses": [
+    "Proprietary ValentinaDB engine with a small community outside the Xojo world",
+    "Single-server design without clustering or sharding",
+    "Little public information on internals or large-scale benchmarks"
+  ],
+  "useCases": [
+    "ISVs shipping a database and reporting server with their app",
+    "Serving DuckDB or SQLite files to networked clients",
+    "Xojo desktop and web applications"
+  ],
+  "notIdealFor": [
+    "Horizontally scaled cloud services",
+    "Teams requiring open-source licensing"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "duckdb",
+    "4d",
+    "filemaker"
+  ],
+  "tags": [
+    "commercial",
+    "xojo",
+    "duckdb",
+    "sqlite",
+    "reporting"
+  ],
+  "links": {
+    "website": "https://valentina-db.com/en/"
+  },
+  "ids": {
+    "dockerHub": "paradigmasoft/valentina-server",
+    "hackerNewsQuery": "Valentina Server"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20260505033350/https://valentina-db.com/en/",
+    "https://forum.xojo.com/t/paradigma-software-releases-valentina-17/87701",
+    "https://forum.xojo.com/t/valentina-release-17-5-2-improves-valentina-studio-query-editor-duckdb-support/88625",
+    "https://hub.docker.com/r/paradigmasoft/valentina-server"
+  ],
+  "lastVerified": "2026-10-27"
+}

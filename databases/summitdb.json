@@ -1,0 +1,165 @@
+{
+  "slug": "summitdb",
+  "name": "SummitDB",
+  "aliases": [],
+  "tagline": "In-memory key-value database with Raft replication, ACID transactions and a Redis-style API; archived.",
+  "description": "SummitDB is Josh Baker's (tidwall) experiment in making a strongly consistent Redis-like server: an in-memory, ordered key space persisted to disk, replicated with the Raft consensus algorithm, with ACID transactions, custom value indexes including spatial ones, JSON document fields, JavaScript scripting through EVAL and fencing tokens. Under the hood it combines his BuntDB storage engine, the Redcon Redis protocol server and the Finn Raft framework. It never got past 0.4.0 (2017), and the repository is now archived. The same author's BuntDB and Tile38 are the maintained descendants.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Repository archived on GitHub; last release 0.4.0 (February 2017). Consider BuntDB, Tile38, etcd or Redis/Valkey.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "configuration"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "primary-replica"
+  ],
+  "developer": "Josh Baker (tidwall)",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "0.4.0",
+    "date": "2017-02-03"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "BuntDB",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Raft replicates the full dataset to every node; capacity is bounded by one node's RAM."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis-style commands",
+    "JavaScript (EVAL)"
+  ],
+  "apis": [
+    "Redis protocol (RESP)"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Strong consistency via Raft instead of Redis's asynchronous replication",
+    "ACID transactions over an ordered key space",
+    "Value indexes, including spatial and JSON-field indexes",
+    "Works with existing Redis clients for its command subset"
+  ],
+  "weaknesses": [
+    "Archived and never reached 1.0",
+    "No sharding; every node holds all data in memory",
+    "Command set differs from Redis in places"
+  ],
+  "useCases": [
+    "Studying Raft-replicated key-value design",
+    "Reference for strongly consistent Redis-like servers"
+  ],
+  "notIdealFor": [
+    "Production systems",
+    "Datasets larger than one node's memory"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "buntdb",
+    "tile38",
+    "redis",
+    "valkey",
+    "foundationdb"
+  ],
+  "tags": [
+    "go",
+    "raft",
+    "redis-compatible",
+    "in-memory",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/tidwall/summitdb",
+    "repository": "https://github.com/tidwall/summitdb",
+    "docs": "https://github.com/tidwall/summitdb/wiki"
+  },
+  "ids": {
+    "github": "tidwall/summitdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/tidwall/summitdb",
+    "https://github.com/tidwall/summitdb/releases",
+    "https://dbdb.io/db/summitdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

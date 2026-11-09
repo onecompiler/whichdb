@@ -1,0 +1,184 @@
+{
+  "slug": "cloudflare-d1",
+  "name": "Cloudflare D1",
+  "aliases": [
+    "D1"
+  ],
+  "tagline": "Serverless SQLite for Cloudflare Workers, priced per row read and written, with read replicas and time travel.",
+  "description": "D1 is Cloudflare's managed serverless database built on SQLite and run inside Durable Objects. You query it from Workers through a binding (or over HTTP), pay per row read and written rather than per instance, and get Time Travel point-in-time restore for 30 days plus global read replication via the Sessions API. Each database is capped at 10 GB and executes writes on a single primary, so the intended pattern is many small databases, such as one per tenant or user, rather than one big one. It is an easy, cheap default for apps already on Workers; for larger relational datasets, Cloudflare points you to Hyperdrive in front of external Postgres or MySQL.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "edge",
+    "content-management",
+    "configuration"
+  ],
+  "architecture": [
+    "serverless",
+    "primary-replica"
+  ],
+  "developer": "Cloudflare",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2022,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Cloudflare service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "free"
+    ],
+    "freeTier": true,
+    "startingPrice": "Included in Workers Paid ($5/month)",
+    "notes": "Free: 5M rows read/day, 100k rows written/day, 5 GB storage. Paid: 25B reads and 50M writes/month included, then $0.001/M reads, $1/M writes, $0.75/GB-month. No egress fees."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "cloudflare"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Cloudflare D1",
+      "provider": "Cloudflare",
+      "url": "https://developers.cloudflare.com/d1/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "10 GB per database (500 MB on Free), up to 50,000 databases per account; scale out by sharding per tenant; read replicas in multiple regions."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "causal"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Workers binding API",
+    "REST API",
+    "Wrangler CLI"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-config SQL database bound directly to Cloudflare Workers",
+    "Per-row pricing with large free daily allowances and no egress fees",
+    "Time Travel restores to any minute in the last 30 days",
+    "Global read replicas with sequential consistency via the Sessions API",
+    "Familiar SQLite dialect, FTS5 and JSON functions"
+  ],
+  "weaknesses": [
+    "Hard 10 GB limit per database",
+    "Single-writer per database limits write throughput",
+    "Usable mainly from Cloudflare Workers; no wire protocol for standard drivers",
+    "No fine-grained database users or roles"
+  ],
+  "useCases": [
+    "Database-per-tenant SaaS on Workers",
+    "Edge apps, blogs and CMS backends",
+    "Configuration and feature metadata near users",
+    "Prototypes needing SQL without managing servers"
+  ],
+  "notIdealFor": [
+    "Single databases larger than 10 GB",
+    "Write-heavy workloads",
+    "Applications outside the Cloudflare platform"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "turso",
+    "neon",
+    "cloudflare-durable-objects",
+    "sqlite",
+    "supabase",
+    "prisma-postgres"
+  ],
+  "tags": [
+    "sqlite",
+    "serverless",
+    "edge",
+    "cloudflare",
+    "workers"
+  ],
+  "links": {
+    "website": "https://developers.cloudflare.com/d1/",
+    "docs": "https://developers.cloudflare.com/d1/",
+    "pricing": "https://developers.cloudflare.com/d1/platform/pricing/",
+    "changelog": "https://developers.cloudflare.com/d1/platform/release-notes/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Cloudflare D1"
+  },
+  "brand": {
+    "color": "#F38020",
+    "simpleIcon": "cloudflare"
+  },
+  "sources": [
+    "https://developers.cloudflare.com/d1/platform/pricing/",
+    "https://developers.cloudflare.com/d1/platform/limits/",
+    "https://developers.cloudflare.com/d1/reference/faq/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,163 @@
+{
+  "slug": "mcdb",
+  "name": "mcdb",
+  "aliases": [
+    "mmap constant database"
+  ],
+  "tagline": "Memory-mapped constant database: a faster, thread-safe, >4 GB rewrite of D. J. Bernstein's cdb.",
+  "description": "mcdb is a C library for building and reading constant (write-once, read-many) key-value files, derived from Dan Bernstein's cdb. A database is written in one pass and then mmap'd read-only, so a lookup is a hash plus one or two page touches with no locking, and the format removes cdb's 4 GB ceiling and adds thread-safe readers. The package also includes nss_mcdb, which compiles passwd, group, hosts and similar files into mcdb databases as a faster alternative to nscd. The last code change was v0.10 in late 2022; it is finished, working code with a single maintainer rather than a living project.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No commits since December 2022 (v0.10); stable and usable but effectively unmaintained.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "configuration",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Glenn Strauss",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "0.10",
+    "date": "2022-09-28"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "cdb",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL v2.1 or later",
+    "spdx": "LGPL-2.1-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "One immutable file per database; updates mean rebuilding the file and atomically renaming it into place."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Perl"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Lookups touch only one or two mmap'd pages with no locking on the read path",
+    "Supports databases larger than 4 GB, unlike the original cdb",
+    "Thread-safe readers and a simple build-then-rename update model",
+    "nss_mcdb serves passwd/group/hosts lookups faster than nscd"
+  ],
+  "weaknesses": [
+    "Immutable: any change requires rebuilding the whole file",
+    "Single maintainer and no commits since 2022",
+    "C API (plus a Perl binding) only; no server or network access"
+  ],
+  "useCases": [
+    "Read-only lookup tables shipped with an application",
+    "Fast NSS backends for passwd, group and hosts data",
+    "Static routing or configuration maps rebuilt in batch",
+    "Studying cdb-style constant hash file formats"
+  ],
+  "notIdealFor": [
+    "Data that changes frequently",
+    "Multi-writer or networked access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cdb",
+    "lmdb",
+    "bbolt",
+    "rocksdb"
+  ],
+  "tags": [
+    "key-value",
+    "embedded",
+    "immutable",
+    "cdb-family",
+    "c"
+  ],
+  "links": {
+    "website": "https://github.com/gstrauss/mcdb",
+    "repository": "https://github.com/gstrauss/mcdb",
+    "changelog": "https://github.com/gstrauss/mcdb/blob/master/CHANGELOG"
+  },
+  "ids": {
+    "github": "gstrauss/mcdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/gstrauss/mcdb",
+    "https://github.com/gstrauss/mcdb/blob/master/CHANGELOG",
+    "https://dbdb.io/db/mcdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

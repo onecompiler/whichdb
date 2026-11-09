@@ -1,0 +1,161 @@
+{
+  "slug": "tokumx",
+  "name": "TokuMX",
+  "aliases": [
+    "Percona TokuMX"
+  ],
+  "tagline": "MongoDB 2.4 fork on fractal-tree indexes with compression and transactions; EOL since 2017.",
+  "description": "TokuMX was Tokutek's fork of MongoDB 2.4 that swapped the storage layer for fractal tree indexes. Compared with MongoDB of that era it offered document-level concurrency instead of a database-wide lock, compression of all data by default, MVCC with multi-statement transactions on a single server, and no fragmentation, while keeping MongoDB's drivers, replication and sharding. It lacked text and geospatial indexes. Percona acquired it with Tokutek in 2015, made its last release in September 2015 and ended support on May 1, 2017, recommending Percona Server for MongoDB instead.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Percona's last TokuMX release was Sept 2015 and support ended May 1, 2017; Percona recommends migrating to Percona Server for MongoDB.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Tokutek, later Percona",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "2.0.2",
+    "date": "2015-09-15"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MongoDB 2.4",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Community edition was free; an enterprise edition with hot backup was sold until EOL."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Inherited MongoDB 2.4 replica sets and sharding."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "MongoDB Query Language"
+  ],
+  "apis": [
+    "MongoDB wire protocol"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "Any MongoDB 2.4-era driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Document-level locking at a time when MongoDB locked whole databases",
+    "Default compression cut storage dramatically for large collections",
+    "Single-node multi-statement transactions with MVCC snapshots",
+    "Drop-in for MongoDB 2.4 drivers and tooling"
+  ],
+  "weaknesses": [
+    "Frozen at MongoDB 2.4 semantics; no modern drivers or features",
+    "No text search or geospatial indexes",
+    "End of life since 2017 with no security fixes"
+  ],
+  "useCases": [
+    "Historical reference for write-optimised MongoDB storage",
+    "Planning migrations off legacy TokuMX"
+  ],
+  "notIdealFor": [
+    "Any new deployment",
+    "Workloads needing current MongoDB features"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "percona-server-mongodb",
+    "mongodb",
+    "ferretdb"
+  ],
+  "tags": [
+    "mongodb-compatible",
+    "fractal-tree",
+    "percona",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/Tokutek/mongo",
+    "repository": "https://github.com/Tokutek/mongo"
+  },
+  "ids": {
+    "github": "Tokutek/mongo",
+    "hackerNewsQuery": "TokuMX"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Tokutek/mongo",
+    "https://www.percona.com/blog/migrate-tokumx-percona-server-mongodb/",
+    "https://github.com/Tokutek/mongo/tags"
+  ],
+  "lastVerified": "2026-10-27"
+}

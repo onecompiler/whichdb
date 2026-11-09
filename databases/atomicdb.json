@@ -1,0 +1,144 @@
+{
+  "slug": "atomicdb",
+  "name": "AtomicDB",
+  "aliases": [
+    "Atomic Information Systems AtomicDB",
+    "AtomicDB Enterprise"
+  ],
+  "tagline": "Proprietary 'associative' database that stored each unique item once and modelled data as links; now defunct.",
+  "description": "AtomicDB was a proprietary associative database from Atomic Information Systems Corp., a small upstate New York firm, marketed through the 2010s as AtomicDB Enterprise and an online edition. Instead of tables it stored every unique data item once and recorded associations between items, which the vendor described as an '(N)th normal form' beyond Codd's normal forms and pitched for data warehousing, healthcare records and smart-city projects. The technical claims were never documented in a form others could test, there was no public download or developer documentation, and by 2026 the vendor's site shows only a 'Coming Soon' placeholder. It belongs to the long line of associative-model databases that stayed niche.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No product available; the vendor site (aisys.us) has shown only a 'Coming Soon' placeholder since at least 2025.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "key-value"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Atomic Information Systems Corp.",
+  "vendorType": "company",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "No verifiable deployment sizes were ever published."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Proprietary API"
+  ],
+  "apis": [
+    "Proprietary API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Associative model stores each distinct value once and links it to every context",
+    "Example of a long-running alternative to relational normalisation"
+  ],
+  "weaknesses": [
+    "Product unavailable and vendor inactive",
+    "Bold efficiency claims were never independently tested",
+    "No public documentation, query language spec or drivers"
+  ],
+  "useCases": [
+    "Historical reference on associative-model databases",
+    "Market research on niche database vendors"
+  ],
+  "notIdealFor": [
+    "Any current workload: there is nothing to install"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "typedb",
+    "terminusdb",
+    "datomic"
+  ],
+  "tags": [
+    "associative",
+    "proprietary",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://dbdb.io/db/atomicdb"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/atomicdb",
+    "http://web.archive.org/web/20160730015640/http://aisys.us:80/adb-tech.html",
+    "http://web.archive.org/web/20160728144322/http://aisys.us:80/Aboutus.html",
+    "https://aisys.us/"
+  ],
+  "lastVerified": "2026-10-27"
+}

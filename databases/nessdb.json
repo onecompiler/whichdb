@@ -1,0 +1,145 @@
+{
+  "slug": "nessdb",
+  "name": "nessDB",
+  "aliases": [],
+  "tagline": "Bohu Tang's ANSI C embedded key-value engine for exploring LSM and buffered trees; archived teaching code.",
+  "description": "nessDB is an embedded key-value storage engine in ANSI C with no external dependencies, written by Bohu Tang (later a co-founder of Databend) as a vehicle for experimenting with write-optimised indexes. Early versions used an LSM tree, v2 a small-splittable tree, and v3 a buffered (B-epsilon, fractal-style) tree with range queries, compression and simple transactions, behind a Redis-like SET/GET/DEL interface. The author labels it for teaching and research only, and the repository is now archived. It is a compact codebase for studying buffered-tree ideas, not something to deploy.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Repository archived; the author marks it teaching/research only. Use RocksDB, Pebble or another maintained engine.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Bohu Tang",
+  "vendorType": "community",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD license"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Small, dependency-free C code showing LSM and buffered-tree designs",
+    "Good companion to papers on fractal and B-epsilon trees"
+  ],
+  "weaknesses": [
+    "Archived; explicitly not intended for production",
+    "No recovery/checkpointing and only coarse locking"
+  ],
+  "useCases": [
+    "Teaching storage-engine internals",
+    "Benchmarking write-optimised index ideas"
+  ],
+  "notIdealFor": [
+    "Production data",
+    "Multi-threaded high-concurrency workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "leveldb",
+    "pebble",
+    "wiredtiger",
+    "sophia"
+  ],
+  "tags": [
+    "key-value",
+    "embedded",
+    "storage-engine",
+    "fractal-tree",
+    "archived"
+  ],
+  "links": {
+    "website": "https://github.com/BohuTANG/nessDB",
+    "repository": "https://github.com/BohuTANG/nessDB"
+  },
+  "ids": {
+    "github": "bohutang/nessDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/BohuTANG/nessDB",
+    "https://dbdb.io/db/nessdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

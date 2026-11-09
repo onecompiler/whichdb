@@ -1,0 +1,168 @@
+{
+  "slug": "datahike",
+  "name": "Datahike",
+  "aliases": [
+    "datahike.io"
+  ],
+  "tagline": "Open-source, durable Datalog database for Clojure with Datomic-style immutable history.",
+  "description": "Datahike is an open-source Datalog database for Clojure and ClojureScript that began as a durable fork of DataScript and follows Datomic's model: immutable datoms, as-of and history queries, and a pull API. Its persistent indexes are stored through the konserve abstraction, so the same database can live in memory, on files, in S3, JDBC databases or the browser, and readers can query directly from storage. It is the main open-source alternative for teams who like Datomic's model but want source access, embedded use or ClojureScript support. Throughput and tooling are modest, and the ecosystem is almost entirely Clojure.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "graph"
+  ],
+  "workloads": [
+    "oltp",
+    "knowledge-graph",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "replikativ (Christian Weilbach and contributors)",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "0.8.1913",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "Clojure"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Eclipse Public License 1.0",
+    "spdx": "EPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single writer per database; readers can scale by reading indexes from shared storage."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Datalog",
+    "Pull API"
+  ],
+  "apis": [
+    "Clojure API",
+    "HTTP (datahike-server)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Clojure",
+    "ClojureScript",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Datomic-like immutable model with as-of and history queries, fully open source",
+    "Pluggable storage from memory and files to S3, JDBC and IndexedDB",
+    "Runs embedded in JVM apps or in the browser via ClojureScript"
+  ],
+  "weaknesses": [
+    "Single-writer design limits write throughput",
+    "Small community; mostly Clojure-only tooling",
+    "Pre-1.0 versioning"
+  ],
+  "useCases": [
+    "Clojure apps wanting Datalog and history without Datomic",
+    "Knowledge graphs and research data with provenance",
+    "Embedded databases in ClojureScript apps"
+  ],
+  "notIdealFor": [
+    "High-write OLTP",
+    "Non-Clojure teams"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "datomic",
+    "xtdb",
+    "cozodb",
+    "terminusdb"
+  ],
+  "tags": [
+    "datalog",
+    "clojure",
+    "immutable",
+    "time-travel",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://datahike.io/",
+    "docs": "https://cljdoc.org/d/io.replikativ/datahike/",
+    "repository": "https://github.com/replikativ/datahike",
+    "changelog": "https://github.com/replikativ/datahike/releases"
+  },
+  "ids": {
+    "github": "replikativ/datahike",
+    "hackerNewsQuery": "Datahike"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/replikativ/datahike",
+    "https://github.com/replikativ/datahike/releases",
+    "https://datahike.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

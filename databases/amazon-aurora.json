@@ -1,0 +1,125 @@
+{
+  "slug": "amazon-aurora",
+  "name": "Amazon Aurora",
+  "aliases": ["Aurora", "Aurora MySQL", "Aurora PostgreSQL", "Aurora Serverless"],
+  "tagline": "AWS's MySQL- and PostgreSQL-compatible engine on a shared, six-way replicated storage layer.",
+  "description": "Aurora is AWS's re-engineered MySQL- and PostgreSQL-compatible relational service. It keeps the familiar engines' query layers but replaces their storage with a log-structured volume replicated six ways across three Availability Zones, which gives fast crash recovery, up to 15 low-lag read replicas sharing the same storage, and copy-on-write clones. Aurora Serverless v2 scales capacity in fine-grained ACUs and can now pause to zero, while Global Database replicates to other regions for DR and local reads. It is the default choice for AWS shops that want managed MySQL or Postgres with better availability than RDS, at the cost of AWS lock-in and I/O-sensitive pricing.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "spatial", "vector"],
+  "workloads": ["oltp", "content-management", "metadata-store", "vector-search", "geospatial"],
+  "architecture": ["shared-storage", "primary-replica", "serverless"],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2015,
+  "writtenIn": ["C", "C++"],
+  "basedOn": "MySQL and PostgreSQL",
+  "license": { "type": "proprietary", "name": "Proprietary (AWS service)" },
+  "pricing": {
+    "models": ["usage-based"],
+    "freeTier": false,
+    "notes": "Pay per instance-hour or Serverless v2 ACU-hour plus storage; Aurora Standard bills I/O, Aurora I/O-Optimized bundles it. New AWS accounts get Free Tier credits rather than a dedicated Aurora free tier."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Amazon Aurora", "provider": "AWS", "url": "https://aws.amazon.com/rds/aurora/" }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Single writer per cluster with up to 15 read replicas; storage grows automatically to 128 TiB-class volumes; Aurora PostgreSQL Limitless Database adds managed sharding."
+  },
+  "consistency": { "acid": "full", "models": ["strong", "eventual"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["MySQL wire protocol", "PostgreSQL wire protocol", "RDS Data API (HTTP)"],
+  "compatibleWith": ["mysql", "postgresql"],
+  "drivers": ["Java", "Python", "JavaScript", "Go", "C#", "PHP", "Ruby"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Six-way replicated storage across three AZs with fast failover (typically under 30 s)",
+    "Up to 15 read replicas sharing one storage volume with millisecond-level lag",
+    "Copy-on-write fast clones for test environments and analytics snapshots",
+    "Serverless v2 scales in half-ACU steps and can pause to zero capacity",
+    "Global Database for cross-region DR and local reads",
+    "Zero-ETL integrations into Redshift and other AWS analytics services"
+  ],
+  "weaknesses": [
+    "AWS-only; storage layer and features are not portable",
+    "Single writer per cluster limits write scaling without Limitless",
+    "Costs can spike with I/O-heavy workloads on the Standard configuration",
+    "Engine versions and extensions lag upstream MySQL/PostgreSQL releases"
+  ],
+  "useCases": [
+    "Production MySQL or PostgreSQL backends on AWS",
+    "Read-heavy web and SaaS applications",
+    "Spiky or dev/test workloads on Serverless v2",
+    "Cross-region disaster recovery with Global Database",
+    "pgvector-based semantic search next to relational data"
+  ],
+  "notIdealFor": [
+    "Multi-cloud or on-premises deployments",
+    "Write-heavy workloads exceeding one large writer",
+    "Low-budget hobby projects"
+  ],
+  "notableUsers": ["Samsung"],
+  "alternatives": ["amazon-rds", "alloydb", "google-cloud-sql", "azure-database-for-postgresql", "neon", "amazon-aurora-dsql"],
+  "tags": ["aws", "managed", "mysql-compatible", "postgres-compatible", "cloud-native"],
+  "links": {
+    "website": "https://aws.amazon.com/rds/aurora/",
+    "docs": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/",
+    "pricing": "https://aws.amazon.com/rds/aurora/pricing/",
+    "changelog": "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/WhatsNew.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_Aurora"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-aurora",
+    "wikipedia": "Amazon Aurora",
+    "hackerNewsQuery": "Amazon Aurora"
+  },
+  "brand": { "color": "#527FFF" },
+  "sources": [
+    "https://aws.amazon.com/rds/aurora/",
+    "https://aws.amazon.com/rds/aurora/pricing/",
+    "https://docs.aws.amazon.com/AmazonRDS/latest/AuroraUserGuide/limitless.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

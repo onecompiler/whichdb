@@ -1,0 +1,194 @@
+{
+  "slug": "datastax-astra-db",
+  "name": "DataStax Astra DB",
+  "aliases": [
+    "Astra DB",
+    "Astra",
+    "IBM Astra DB"
+  ],
+  "tagline": "Serverless Cassandra-as-a-service with vector search and a JSON Data API, now owned by IBM.",
+  "description": "Astra DB is DataStax's serverless database built on Apache Cassandra: you get CQL tables plus a document-style Data API and native vector search without sizing nodes or running repairs. DataStax repositioned it around generative AI and RAG workloads, and after IBM completed its acquisition of DataStax in 2025 it became part of IBM's watsonx data portfolio. It suits teams that want Cassandra's multi-region scale and vector search behind a pay-per-use API, but pricing and roadmap now follow IBM's priorities.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "document",
+    "vector",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "vector-search",
+    "rag",
+    "iot",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "DataStax (IBM)",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Cassandra",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (managed service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Pay-as-you-go serverless billing on reads, writes and storage with a free tier; dedicated and enterprise plans via IBM."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Astra DB Serverless",
+      "provider": "IBM DataStax",
+      "url": "https://www.datastax.com/products/datastax-astra"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Serverless storage and compute separation on Cassandra; databases can be replicated to multiple regions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "CQL",
+    "Data API (JSON)"
+  ],
+  "apis": [
+    "CQL native protocol",
+    "Data API (HTTP/JSON)",
+    "GraphQL",
+    "REST"
+  ],
+  "compatibleWith": [
+    "cassandra"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Cassandra scale without operating Cassandra",
+    "Native vector search alongside regular data, aimed at RAG apps",
+    "JSON Data API with official TypeScript and Python clients",
+    "Runs on AWS, Google Cloud and Azure"
+  ],
+  "weaknesses": [
+    "Serverless pricing is hard to predict for heavy, steady workloads",
+    "Product direction now set by IBM; hosted Langflow was removed in 2026",
+    "Inherits Cassandra's query-first modelling limits",
+    "Some CQL features and tuning knobs are restricted in serverless mode"
+  ],
+  "useCases": [
+    "RAG and semantic search backends",
+    "Cassandra workloads moving to a managed service",
+    "Multi-cloud, multi-region apps needing high availability",
+    "Session and user-profile stores"
+  ],
+  "notIdealFor": [
+    "Join-heavy relational workloads",
+    "Self-hosted or air-gapped deployments",
+    "Teams wary of vendor roadmap changes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-cassandra",
+    "amazon-keyspaces",
+    "scylladb",
+    "amazon-dynamodb",
+    "pinecone",
+    "mongodb-atlas"
+  ],
+  "tags": [
+    "cassandra",
+    "serverless",
+    "vector",
+    "ibm",
+    "managed"
+  ],
+  "links": {
+    "website": "https://www.datastax.com/products/datastax-astra",
+    "docs": "https://docs.datastax.com/en/astra-db-serverless/",
+    "pricing": "https://www.datastax.com/pricing",
+    "changelog": "https://docs.datastax.com/en/astra-db-serverless/release-notes.html"
+  },
+  "ids": {
+    "stackoverflowTag": "datastax-astra",
+    "npm": "@datastax/astra-db-ts",
+    "pypi": "astrapy",
+    "hackerNewsQuery": "Astra DB"
+  },
+  "brand": {
+    "color": "#000000",
+    "simpleIcon": "datastax"
+  },
+  "sources": [
+    "https://www.ibm.com/products/datastax",
+    "https://siliconangle.com/2025/02/25/ibm-buys-datastax-boost-watsonx-data-platform-ai-applications/",
+    "https://docs.datastax.com/en/astra-db-serverless/"
+  ],
+  "lastVerified": "2026-10-27"
+}

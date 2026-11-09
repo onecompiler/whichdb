@@ -1,0 +1,172 @@
+{
+  "slug": "tantivy",
+  "name": "Tantivy",
+  "aliases": [],
+  "tagline": "Lucene-inspired full-text search library in Rust, the engine under Quickwit and ParadeDB.",
+  "description": "Tantivy is a full-text search engine library written in Rust and modeled on Lucene's architecture: segment-based inverted indexes, BM25 scoring, phrase and fuzzy queries, faceting, columnar 'fast fields' for aggregations and JSON fields. It starts quickly, uses memory efficiently and often outperforms Lucene in benchmarks. It is maintained by the Quickwit team (part of Datadog since 2025) and embedded by Quickwit, ParadeDB's pg_search and many Rust applications, with Python bindings via tantivy-py. It is a library: you bring the server, replication and distribution.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search"
+  ],
+  "workloads": [
+    "full-text-search",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Quickwit (Datadog) and contributors",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "0.27.0",
+    "date": "2026-10-17"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Single-index library; Quickwit and others build distribution on top."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Tantivy query parser (Lucene-like)",
+    "Rust API"
+  ],
+  "apis": [
+    "Rust",
+    "Python (tantivy-py)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fast indexing and BM25 queries with low startup time",
+    "Columnar fast fields for aggregations and sorting",
+    "Rich query types: phrase, fuzzy, regex, range, faceting",
+    "Memory-safe Rust and permissive MIT licence",
+    "Proven inside Quickwit and ParadeDB"
+  ],
+  "weaknesses": [
+    "Library only: no server, replication or clustering",
+    "No native vector search",
+    "Pre-1.0 API changes between releases",
+    "Smaller analyzer ecosystem than Lucene"
+  ],
+  "useCases": [
+    "Embedding full-text search in Rust applications",
+    "Building custom search services",
+    "Search inside other databases (e.g., Postgres extensions)"
+  ],
+  "notIdealFor": [
+    "Teams wanting a ready-made search server",
+    "Vector or semantic search",
+    "Non-Rust stacks beyond Python"
+  ],
+  "notableUsers": [
+    "ParadeDB",
+    "Quickwit"
+  ],
+  "alternatives": [
+    "apache-lucene",
+    "bleve",
+    "quickwit",
+    "paradedb",
+    "sonic",
+    "usearch"
+  ],
+  "tags": [
+    "search",
+    "library",
+    "rust",
+    "bm25",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://github.com/quickwit-oss/tantivy",
+    "docs": "https://docs.rs/tantivy",
+    "repository": "https://github.com/quickwit-oss/tantivy",
+    "changelog": "https://github.com/quickwit-oss/tantivy/blob/main/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "quickwit-oss/tantivy",
+    "pypi": "tantivy",
+    "crates": "tantivy",
+    "hackerNewsQuery": "Tantivy"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/quickwit-oss/tantivy",
+    "https://crates.io/crates/tantivy",
+    "https://pypi.org/project/tantivy/"
+  ],
+  "lastVerified": "2026-10-27"
+}

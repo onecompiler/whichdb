@@ -1,0 +1,195 @@
+{
+  "slug": "pgedge",
+  "name": "pgEdge",
+  "aliases": [
+    "pgEdge Distributed Postgres",
+    "pgEdge Enterprise Postgres",
+    "Spock"
+  ],
+  "tagline": "Fully open-source multi-master distributed PostgreSQL built on the Spock logical replication extension.",
+  "description": "pgEdge packages standard PostgreSQL with Spock, its multi-master logical replication extension, plus Snowflake sequences and large-object replication, to run active-active Postgres clusters across regions or edge sites. Each node is a normal Postgres server accepting writes, and Spock replicates changes asynchronously with configurable conflict resolution and delta-apply for counters. In September 2025 pgEdge relicensed all components under the PostgreSQL License, and it sells Enterprise Postgres builds, support and a managed offering. It suits globally distributed apps that can tolerate eventual consistency between nodes, not workloads needing distributed serializable transactions.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "edge",
+    "geospatial"
+  ],
+  "architecture": [
+    "multi-primary",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "pgEdge, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "Spock 5.0.13",
+    "date": "2026-10-07"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "PostgreSQL License",
+    "spdx": "PostgreSQL"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "All components open source; paid support, Enterprise Postgres builds and managed cloud."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "pgEdge Cloud",
+      "provider": "pgEdge",
+      "url": "https://www.pgedge.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "active-active",
+    "notes": "Full copies on each node with async multi-master replication; no automatic sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "eventual",
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "libpq"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Active-active writes in every region using standard PostgreSQL",
+    "Conflict resolution and delta-apply columns for counters",
+    "Automatic DDL replication across nodes",
+    "Entirely PostgreSQL-licensed, including Spock",
+    "Runs on any cloud or on-prem, including air-gapped sites"
+  ],
+  "weaknesses": [
+    "Asynchronous replication means conflicts and eventual consistency between nodes",
+    "No automatic sharding: every node holds all data",
+    "Schema and sequence design must account for multi-master",
+    "Smaller vendor and community than mainstream Postgres distributions"
+  ],
+  "useCases": [
+    "Multi-region active-active applications with low local latency",
+    "Edge deployments that must keep writing during network partitions",
+    "Zero-downtime major-version upgrades via logical replication",
+    "Data residency setups with regional write nodes"
+  ],
+  "notIdealFor": [
+    "Workloads needing globally serializable transactions",
+    "Datasets too large to replicate fully to every node",
+    "Teams wanting a single-region primary-replica setup"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "cockroachdb",
+    "yugabytedb",
+    "edb-postgres-advanced-server",
+    "citus",
+    "google-cloud-spanner"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "multi-master",
+    "distributed",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://www.pgedge.com/",
+    "docs": "https://docs.pgedge.com/",
+    "repository": "https://github.com/pgEdge/spock",
+    "changelog": "https://docs.pgedge.com/platform/pgedge_rel_notes/"
+  },
+  "ids": {
+    "github": "pgEdge/spock",
+    "hackerNewsQuery": "pgEdge"
+  },
+  "sources": [
+    "https://github.com/pgEdge/spock",
+    "https://docs.pgedge.com/platform/pgedge_rel_notes/",
+    "https://www.hpcwire.com/bigdatawire/this-just-in/pgedge-announces-pgedge-enterprise-postgres-alongside-full-commitment-to-open-source/"
+  ],
+  "lastVerified": "2026-10-27"
+}

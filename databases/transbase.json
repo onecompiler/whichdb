@@ -1,0 +1,187 @@
+{
+  "slug": "transbase",
+  "name": "Transbase",
+  "aliases": [
+    "Transbase Hypercube",
+    "Transbase CD",
+    "Merkur"
+  ],
+  "tagline": "Compact German SQL RDBMS from Transaction Software, with a Z-curve multidimensional index (Hypercube).",
+  "description": "Transbase is a relational SQL database developed by Transaction Software GmbH in Munich, which grew out of Rudolf Bayer's 'Merkur' research at TU Munich and has been the company's core product since 1987. It targets SQL-92 with later extensions (CTEs, window functions, PSM stored procedures), runs as a client/server or embedded engine on everything from Raspberry Pi to Windows, Linux, macOS, iOS and Android, and offers replication and distributed queries. Its distinctive feature is Hypercube, a patented multidimensional index that maps several dimensions onto a Z-order curve for fast range queries over space and time. Version 8.4 (February 2023) is current; licences are sold as subscriptions.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "ledger"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "iot",
+    "edge",
+    "ledger"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "primary-replica"
+  ],
+  "developer": "Transaction Software GmbH",
+  "vendorType": "company",
+  "initialRelease": 1987,
+  "latestVersion": {
+    "version": "8.4",
+    "date": "2023-02-02"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial subscription"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "startingPrice": "Under EUR 100 per core per month (Basic support)",
+    "notes": "Subscription tiers by support level; degressive pricing by installations; evaluation version available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "unix",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Up to 64 TB per database on 32-bit builds; synchronous and asynchronous replication with hot standby."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "SQL/PSM"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    ".NET",
+    "TCI (C API)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "PHP",
+    "Swift",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Hypercube (Z-curve) indexing answers multi-dimensional range queries with few I/Os",
+    "Small footprint: the same engine runs embedded on ARM boards and phones or as a server",
+    "Broad standard SQL including window functions, CTEs and CONNECT BY",
+    "Ledger tables with cryptographically chained records for tamper evidence"
+  ],
+  "weaknesses": [
+    "Closed source with a small, mostly German-speaking ecosystem",
+    "Infrequent public releases (8.4 in 2023)",
+    "No horizontal sharding"
+  ],
+  "useCases": [
+    "Embedded SQL in industrial and automotive software",
+    "Space-time range queries over IoT or sensor data",
+    "Read-only databases distributed on media (Transbase CD)"
+  ],
+  "notIdealFor": [
+    "Teams wanting open-source licensing",
+    "Scale-out cloud-native workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "mimer-sql",
+    "firebird",
+    "raima-database-manager",
+    "sqlite"
+  ],
+  "tags": [
+    "sql",
+    "embedded",
+    "germany",
+    "multidimensional-index",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.transaction.de/en/index.html",
+    "docs": "https://www.transaction.de/transbase/doku-v84.html",
+    "pricing": "https://www.transaction.de/en/products/transbase/licensing.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Transbase"
+  },
+  "ids": {
+    "wikipedia": "Transbase",
+    "hackerNewsQuery": "Transbase"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.transaction.de/en/products/transbase/specifications.html",
+    "https://www.transaction.de/en/news.html",
+    "https://www.transaction.de/en/products/transbase/licensing.html",
+    "https://en.wikipedia.org/wiki/Transbase"
+  ],
+  "lastVerified": "2026-10-27"
+}

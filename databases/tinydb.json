@@ -1,0 +1,172 @@
+{
+  "slug": "tinydb",
+  "name": "TinyDB",
+  "aliases": [
+    "tinydb"
+  ],
+  "tagline": "Pure-Python document store that keeps every table in one human-readable JSON file.",
+  "description": "TinyDB is a small document-oriented database written in pure Python with no dependencies. Documents are plain dicts grouped into tables inside a single JSON file (or held in memory), and you query them with a Python Query DSL instead of SQL. It shines in scripts, CLI tools, prototypes and small desktop apps where SQLite feels heavy or a diffable text file is handy. The trade-off is deliberate: the whole file is read into memory, there are no indexes, no ACID guarantees and no safe access from multiple processes or threads. Release 4.9.0 (August 2026) is current and requires Python 3.10 or newer.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "configuration",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Markus Siemens and contributors",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "4.9.0",
+    "date": "2026-08-06"
+  },
+  "writtenIn": [
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free on PyPI; no commercial edition."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Whole database lives in memory and is rewritten to disk on change; comfortable up to a few MB to tens of MB."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Python Query API"
+  ],
+  "apis": [
+    "Python API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero dependencies and pure Python: pip install and go, on any platform CPython runs",
+    "Data sits in a single readable JSON file you can inspect, diff or commit to git",
+    "Pluggable storages and middlewares (e.g. in-memory storage, write caching) are easy to write",
+    "Tiny, fully tested codebase that is easy to read and extend"
+  ],
+  "weaknesses": [
+    "No indexes: every query scans all documents in the table",
+    "Entire database is loaded into memory and serialized on writes",
+    "Not safe for concurrent access from multiple processes or threads (e.g. a Flask app)",
+    "No transactions or ACID guarantees"
+  ],
+  "useCases": [
+    "State and config storage for CLI tools and scripts",
+    "Prototypes and test fixtures",
+    "Small single-user desktop or hobby apps",
+    "Collecting small scraped or logged datasets"
+  ],
+  "notIdealFor": [
+    "Web backends with concurrent requests",
+    "Datasets larger than comfortably fit in RAM as JSON",
+    "Workloads needing indexes, joins or transactions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "lowdb",
+    "nedb",
+    "zodb",
+    "unqlite",
+    "nitrite"
+  ],
+  "tags": [
+    "python",
+    "embedded",
+    "json",
+    "document",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://tinydb.readthedocs.io/",
+    "docs": "https://tinydb.readthedocs.io/en/latest/",
+    "repository": "https://github.com/msiemens/tinydb",
+    "changelog": "https://tinydb.readthedocs.io/en/latest/changelog.html"
+  },
+  "ids": {
+    "github": "msiemens/tinydb",
+    "stackoverflowTag": "tinydb",
+    "pypi": "tinydb",
+    "hackerNewsQuery": "TinyDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/msiemens/tinydb",
+    "https://github.com/msiemens/tinydb/releases/tag/v4.9.0",
+    "https://tinydb.readthedocs.io/en/latest/intro.html",
+    "https://pypi.org/project/tinydb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

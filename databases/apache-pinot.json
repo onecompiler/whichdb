@@ -1,0 +1,192 @@
+{
+  "slug": "apache-pinot",
+  "name": "Apache Pinot",
+  "aliases": [
+    "Pinot"
+  ],
+  "tagline": "Real-time OLAP store from LinkedIn for user-facing analytics at very high query rates.",
+  "description": "Apache Pinot is a distributed columnar datastore designed to serve analytics to end users: think 'who viewed my profile' at LinkedIn scale. It ingests from Kafka and batch sources, supports upserts on streaming data, and offers a rich index menu (inverted, sorted, range, star-tree, JSON, text, geospatial H3, vector) so queries stay in the millisecond range at tens of thousands of QPS. The multi-stage engine adds distributed joins. Pinot is excellent when latency and concurrency matter more than SQL breadth; it needs a ZooKeeper-backed cluster and careful table and index design.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "time-series"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "observability"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "1.5.1",
+    "date": "2026-06-05"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; StarTree offers StarTree Cloud and commercial support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "StarTree Cloud",
+      "provider": "StarTree",
+      "url": "https://startree.ai/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Controllers, brokers, servers and minions scale independently; tiered storage offloads old segments to S3."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (Calcite-based)"
+  ],
+  "apis": [
+    "HTTP/JSON broker API",
+    "JDBC",
+    "gRPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Millisecond latency at tens of thousands of queries per second",
+    "Star-tree index pre-aggregates for predictable fast group-bys",
+    "Real-time upserts on Kafka streams for mutable entities",
+    "Broad index types: inverted, range, JSON, text, H3 geospatial, vector",
+    "Proven at LinkedIn, Uber and Stripe scale"
+  ],
+  "weaknesses": [
+    "Requires ZooKeeper (or Helix) plus several component types to operate",
+    "Schema and index design is manual and drives performance",
+    "SQL coverage and join support trail general-purpose warehouses",
+    "Smaller ecosystem of BI connectors than mainstream warehouses"
+  ],
+  "useCases": [
+    "User-facing analytics in products",
+    "Real-time business metrics and anomaly detection",
+    "Ad and marketplace analytics",
+    "Operational dashboards on streaming data"
+  ],
+  "notIdealFor": [
+    "Ad-hoc warehouse exploration with heavy joins",
+    "OLTP",
+    "Small single-node analytics"
+  ],
+  "notableUsers": [
+    "LinkedIn",
+    "Uber",
+    "Stripe"
+  ],
+  "alternatives": [
+    "apache-druid",
+    "clickhouse",
+    "starrocks",
+    "apache-doris",
+    "rockset",
+    "tinybird"
+  ],
+  "tags": [
+    "real-time",
+    "olap",
+    "user-facing-analytics",
+    "open-source",
+    "apache"
+  ],
+  "links": {
+    "website": "https://pinot.apache.org/",
+    "docs": "https://docs.pinot.apache.org/",
+    "repository": "https://github.com/apache/pinot",
+    "changelog": "https://github.com/apache/pinot/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Pinot"
+  },
+  "ids": {
+    "github": "apache/pinot",
+    "stackoverflowTag": "apache-pinot",
+    "wikipedia": "Apache Pinot",
+    "dockerHub": "apachepinot/pinot",
+    "pypi": "pinotdb",
+    "hackerNewsQuery": "Apache Pinot"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apache/pinot/releases",
+    "https://pinot.apache.org/",
+    "https://en.wikipedia.org/wiki/Apache_Pinot"
+  ],
+  "lastVerified": "2026-10-27"
+}

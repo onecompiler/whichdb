@@ -1,0 +1,127 @@
+{
+  "slug": "oceanbase",
+  "name": "OceanBase",
+  "aliases": ["OceanBase Database", "OceanBase CE", "OceanBase Cloud"],
+  "tagline": "Alipay-proven distributed SQL with MySQL (and Oracle, in Enterprise) compatibility, HTAP and vector search.",
+  "description": "OceanBase is a shared-nothing distributed relational database originally built inside Ant Group to run Alipay's payment core, now developed by OceanBase as an independent company. It partitions tables across zones, replicates each partition with Paxos, and stores data in an LSM-tree engine with strong compression, which keeps storage costs low at very large scale. The open-source Community Edition is MySQL-compatible; the Enterprise Edition adds Oracle-compatible tenants, which is why it is a frequent Oracle replacement in Chinese banking. Recent 4.x/5.x releases add columnar storage, materialized views, full-text and vector search, so one cluster can cover OLTP, real-time analytics and AI retrieval.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "columnar", "vector", "spatial"],
+  "workloads": ["oltp", "htap", "real-time-analytics", "vector-search", "ledger"],
+  "architecture": ["distributed", "client-server", "single-node"],
+  "developer": "OceanBase (Ant Group)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": { "version": "5.0.1 CE", "date": "2026-08-06" },
+  "writtenIn": ["C++"],
+  "license": { "type": "permissive", "name": "Apache License 2.0 (Community Edition)", "spdx": "Apache-2.0" },
+  "pricing": {
+    "models": ["open-source", "enterprise-contract", "usage-based"],
+    "freeTier": true,
+    "notes": "Community Edition is free; Enterprise Edition (Oracle mode, extra tooling) is licensed; OceanBase Cloud is billed per instance with trial credits."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": ["aws", "gcp", "azure", "alibaba-cloud", "huawei-cloud", "tencent-cloud"],
+    "platforms": ["linux"]
+  },
+  "managedServices": [
+    { "name": "OceanBase Cloud", "provider": "OceanBase", "url": "https://en.oceanbase.com/product/cloud" },
+    { "name": "ApsaraDB for OceanBase", "provider": "Alibaba Cloud", "url": "https://www.alibabacloud.com/product/oceanbase" }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Paxos-replicated partitions across zones/regions with leaders spread per partition; runs Alipay-scale workloads; multi-tenant resource isolation within a cluster."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/SQL (Enterprise Oracle mode)"],
+  "apis": ["MySQL wire protocol", "OBKV (table/HBase-style API)"],
+  "compatibleWith": ["mysql", "oracle", "hbase"],
+  "drivers": ["Java", "Python", "Go", "C", "JavaScript", "C#"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Proven at Alipay/Double-11 scale with RPO=0 Paxos replication",
+    "LSM storage with aggressive compression cuts disk cost versus B-tree MySQL",
+    "Oracle-compatible tenants (Enterprise) ease Oracle migrations",
+    "Row and columnar storage in one engine for HTAP",
+    "Multi-tenant resource isolation inside a single cluster",
+    "Built-in vector and full-text indexes for AI retrieval"
+  ],
+  "weaknesses": [
+    "Oracle compatibility and some tooling are Enterprise-only",
+    "Operational tooling and much documentation are Chinese-first",
+    "Heavy minimum footprint for small deployments",
+    "Smaller Western community and ecosystem than TiDB or CockroachDB"
+  ],
+  "useCases": [
+    "Core banking and payment systems",
+    "Oracle-to-distributed-SQL migrations",
+    "Consolidating many MySQL instances into one multi-tenant cluster",
+    "HTAP reporting on live order data",
+    "Hybrid search for RAG applications"
+  ],
+  "notIdealFor": [
+    "Small apps that fit on a single MySQL instance",
+    "Teams needing Oracle compatibility without an enterprise license",
+    "Embedded or edge deployments"
+  ],
+  "notableUsers": ["Alipay"],
+  "alternatives": ["tidb", "polardb-x", "tencent-tdsql", "cockroachdb", "mysql", "oracle-database"],
+  "tags": ["distributed-sql", "mysql-compatible", "oracle-compatible", "htap", "open-source"],
+  "links": {
+    "website": "https://en.oceanbase.com/",
+    "docs": "https://en.oceanbase.com/docs",
+    "repository": "https://github.com/oceanbase/oceanbase",
+    "changelog": "https://github.com/oceanbase/oceanbase/releases"
+  },
+  "ids": {
+    "github": "oceanbase/oceanbase",
+    "stackoverflowTag": "oceanbase",
+    "dockerHub": "oceanbase/oceanbase-ce",
+    "pypi": "pyobvector",
+    "hackerNewsQuery": "OceanBase"
+  },
+  "brand": { "color": "#006AFF" },
+  "sources": [
+    "https://github.com/oceanbase/oceanbase/releases/tag/v5.0.1_CE",
+    "https://en.oceanbase.com/docs",
+    "https://github.com/oceanbase/oceanbase"
+  ],
+  "lastVerified": "2026-10-27"
+}

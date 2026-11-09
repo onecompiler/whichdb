@@ -1,0 +1,191 @@
+{
+  "slug": "usearch",
+  "name": "USearch",
+  "aliases": [],
+  "tagline": "Single-header C++ HNSW library with SIMD distance kernels and bindings for a dozen languages.",
+  "description": "USearch is a compact HNSW implementation from Unum Cloud, shipped as a single C++11 header with bindings for Python, JavaScript, Rust, Java, Go, C#, Swift, Objective-C, Wolfram and WebAssembly. It uses SimSIMD kernels for fast distance computation, supports custom metrics and f64 to binary quantization, and can serve an index directly from disk via memory-mapping. Its small footprint and permissive licence have made it the ANN engine inside other databases, including ClickHouse's vector similarity index and DuckDB's VSS extension. Use it when you are building search into software, not when you need a database.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "embedded",
+    "edge"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Unum Cloud",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "2.26.6",
+    "date": "2026-10-25"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios",
+      "wasm"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Single-process index; billion-scale indexes on one machine are demonstrated, distribution is up to the host application."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Library API"
+  ],
+  "apis": [
+    "C",
+    "C++",
+    "Python",
+    "JavaScript",
+    "Rust",
+    "Java",
+    "Go",
+    "C#",
+    "Swift"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "C",
+    "Python",
+    "JavaScript",
+    "Rust",
+    "Java",
+    "Go",
+    "C#",
+    "Swift",
+    "Objective-C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Single header, tiny binary, easy to embed anywhere",
+    "SIMD-accelerated distances with f16, i8 and binary quantization",
+    "Serve indexes from disk via mmap without loading into RAM",
+    "Custom metrics, including JIT-compiled user functions",
+    "Used inside ClickHouse and DuckDB"
+  ],
+  "weaknesses": [
+    "A library only: no metadata store, filters or durability layer",
+    "HNSW only; no IVF or DiskANN options",
+    "Mostly a single-company project",
+    "API surface varies slightly across language bindings"
+  ],
+  "useCases": [
+    "Embedding ANN search into a database or application",
+    "On-device semantic search on mobile",
+    "Fast similarity joins and clustering in data pipelines"
+  ],
+  "notIdealFor": [
+    "Teams wanting a ready-made vector database server",
+    "Rich metadata filtering",
+    "Multi-node deployments"
+  ],
+  "notableUsers": [
+    "ClickHouse",
+    "DuckDB Labs"
+  ],
+  "alternatives": [
+    "faiss",
+    "sqlite-vec",
+    "lancedb",
+    "qdrant",
+    "tantivy"
+  ],
+  "tags": [
+    "vector",
+    "library",
+    "hnsw",
+    "simd",
+    "embedded",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://unum-cloud.github.io/USearch/",
+    "docs": "https://unum-cloud.github.io/USearch/",
+    "repository": "https://github.com/unum-cloud/USearch",
+    "changelog": "https://github.com/unum-cloud/USearch/releases"
+  },
+  "ids": {
+    "github": "unum-cloud/USearch",
+    "npm": "usearch",
+    "pypi": "usearch",
+    "hackerNewsQuery": "USearch"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/unum-cloud/USearch",
+    "https://github.com/unum-cloud/USearch/releases",
+    "https://pypi.org/project/usearch/"
+  ],
+  "lastVerified": "2026-10-27"
+}

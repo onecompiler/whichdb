@@ -1,0 +1,163 @@
+{
+  "slug": "vistadb",
+  "name": "VistaDB",
+  "aliases": [
+    "VistaDB.NET"
+  ],
+  "tagline": "Embedded, single-file SQL database for .NET with a T-SQL dialect and ADO.NET provider.",
+  "description": "VistaDB is a commercial embedded relational database written in managed .NET code: the engine is one small assembly you ship with your application and each database is a single file. It speaks a T-SQL-flavoured SQL dialect and is a full ADO.NET provider with Entity Framework support, so code can switch between VistaDB and SQL Server through the provider factory. It targets .NET Standard 2.0, so it also runs on .NET Core/.NET 6 and Xamarin. First sold around 2003 and now owned by Gibraltar Software, it is licensed per development site with royalty-free runtime distribution; the latest release, 6.3, shipped in December 2021.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Still sold by Gibraltar Software, but no release since VistaDB 6.3 (Dec 2021).",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Gibraltar Software",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "6.3",
+    "date": "2021-12-20"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial site licence"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "startingPrice": "$1,595 per development site",
+    "notes": "Runtime is royalty-free; 30-day trial; optional upgrade assurance and support plans."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (T-SQL dialect)"
+  ],
+  "apis": [
+    "ADO.NET",
+    "Entity Framework",
+    "Direct Data Access API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "VB.NET"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "100% managed .NET engine: xcopy-deploy one DLL, no installer or admin rights",
+    "T-SQL dialect and ADO.NET provider make moving to or from SQL Server easy",
+    "Multi-process access to the same database file",
+    "Royalty-free runtime distribution"
+  ],
+  "weaknesses": [
+    "Closed source and paid, while SQLite and LiteDB are free",
+    "Release cadence has stalled since 2021",
+    "Only useful inside the .NET ecosystem"
+  ],
+  "useCases": [
+    "Desktop .NET apps needing a local SQL database",
+    "Demo or standalone editions of SQL Server-backed apps"
+  ],
+  "notIdealFor": [
+    "Server-side multi-user workloads",
+    "Non-.NET stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "litedb",
+    "sql-server",
+    "firebird"
+  ],
+  "tags": [
+    "dotnet",
+    "embedded",
+    "t-sql",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://vistadb.com/",
+    "pricing": "https://vistadb.com/pricing/"
+  },
+  "ids": {
+    "stackoverflowTag": "vistadb",
+    "hackerNewsQuery": "VistaDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://vistadb.com/",
+    "https://vistadb.com/pricing/",
+    "https://vistadb.com/blog/",
+    "https://web.archive.org/web/20031003075954/http://vistadb.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

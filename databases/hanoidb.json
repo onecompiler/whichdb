@@ -1,0 +1,151 @@
+{
+  "slug": "hanoidb",
+  "name": "HanoiDB",
+  "aliases": [],
+  "tagline": "Pure-Erlang LSM B-tree storage engine from Trifork and Basho, usable as a Riak backend.",
+  "description": "HanoiDB is an indexed key-value storage engine written in about 2,000 lines of Erlang by Trifork with Basho. Its primary index is an LSM B-tree built from levels that double in size, and merging is done incrementally on every insert, so inserts, deletes and reads have a worst-case O(log2 N) cost without background merge storms. It is append-only with CRC-checked, optionally compressed data, uses Bloom filters to skip disk lookups, supports per-key and global expiry, and gives efficient range scans for Riak secondary indexes; its level visualiser looks like the Towers of Hanoi puzzle. It plugged into Riak through riak_kv_tower_backend. The last commit was in 2016.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Unmaintained: no commits since 2016 and Riak has moved on to other backends.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Trifork (Kresten Krab Thorup) with Basho Technologies",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Erlang"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node engine; distribution comes from Riak when used as its backend."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Erlang API"
+  ],
+  "apis": [
+    "Erlang API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Erlang"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Incremental merging gives predictable worst-case latency",
+    "Pure Erlang: no NIFs to crash the BEAM VM",
+    "Fast range scans and key listing for Riak 2i",
+    "Append-only, checksummed files make crash recovery simple"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2016",
+    "Slower than native-code engines such as LevelDB for raw throughput",
+    "Tied to old Erlang/OTP and Riak versions"
+  ],
+  "useCases": [
+    "Studying incremental LSM merge designs",
+    "Maintaining old Riak clusters that use the tower backend"
+  ],
+  "notIdealFor": [
+    "New Erlang or Elixir projects needing active support"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "leveldb",
+    "rocksdb",
+    "riak-kv",
+    "pebble"
+  ],
+  "tags": [
+    "erlang",
+    "lsm",
+    "riak",
+    "storage-engine",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/krestenkrab/hanoidb",
+    "repository": "https://github.com/krestenkrab/hanoidb"
+  },
+  "ids": {
+    "github": "krestenkrab/hanoidb",
+    "hackerNewsQuery": "HanoiDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/krestenkrab/hanoidb",
+    "https://dbdb.io/db/hanoidb"
+  ],
+  "lastVerified": "2026-10-27"
+}

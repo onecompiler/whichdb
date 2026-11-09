@@ -1,0 +1,177 @@
+{
+  "slug": "datascript",
+  "name": "DataScript",
+  "aliases": [],
+  "tagline": "Immutable in-memory database with Datomic-style Datalog queries for Clojure, ClojureScript and JavaScript.",
+  "description": "DataScript, by Nikita Prokopov (tonsky), is an immutable in-memory database and Datalog query engine that brings Datomic's data model to the browser and the JVM. Data is stored as entity-attribute-value datoms in sorted indexes, every transaction returns a new database value instead of mutating state, and you query with Datalog, the pull API or entity navigation. That makes it a natural single source of truth for front-end application state: views can query it reactively and old values are cheap to keep for undo. Since version 1.5 it can also persist to pluggable durable storage on the JVM. It is actively maintained (1.8.1, August 2026) and underpins tools such as Roam Research, Logseq and Athens.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "local-first",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Nikita Prokopov (tonsky)",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "1.8.1",
+    "date": "2026-08-15"
+  },
+  "writtenIn": [
+    "Clojure"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Eclipse Public License 1.0",
+    "spdx": "EPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Whole database lives in memory of one process; optional JVM storage persists and lazily loads index segments."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Datalog",
+    "Pull API"
+  ],
+  "apis": [
+    "Clojure API",
+    "ClojureScript API",
+    "JavaScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Clojure",
+    "ClojureScript",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Datomic-compatible data model and Datalog queries in the browser",
+    "Immutable database values make undo, diffing and reactive views simple",
+    "Pull API and entity navigation for tree-shaped reads",
+    "Small, dependency-light library with long-term active maintenance"
+  ],
+  "weaknesses": [
+    "Entire database must fit in memory",
+    "No built-in history or as-of queries like Datomic",
+    "Durable storage only on the JVM, not in JavaScript",
+    "Datalog performance degrades on very large datasets"
+  ],
+  "useCases": [
+    "Client-side application state for ClojureScript apps",
+    "Local-first note-taking and outliner tools",
+    "In-memory graph queries over modest datasets"
+  ],
+  "notIdealFor": [
+    "Datasets larger than memory",
+    "Multi-user server-side databases",
+    "Audit history requirements"
+  ],
+  "notableUsers": [
+    "Roam Research",
+    "Logseq",
+    "Athens Research"
+  ],
+  "alternatives": [
+    "datomic",
+    "datahike",
+    "xtdb",
+    "cozodb",
+    "rxdb"
+  ],
+  "tags": [
+    "clojure",
+    "datalog",
+    "in-memory",
+    "immutable",
+    "browser"
+  ],
+  "links": {
+    "website": "https://github.com/tonsky/datascript",
+    "docs": "https://github.com/tonsky/datascript/wiki",
+    "repository": "https://github.com/tonsky/datascript",
+    "changelog": "https://github.com/tonsky/datascript/blob/master/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "tonsky/datascript",
+    "npm": "datascript",
+    "stackoverflowTag": "datascript",
+    "hackerNewsQuery": "DataScript"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/tonsky/datascript",
+    "https://github.com/tonsky/datascript/blob/master/CHANGELOG.md",
+    "https://www.npmjs.com/package/datascript"
+  ],
+  "lastVerified": "2026-10-27"
+}

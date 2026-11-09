@@ -1,0 +1,199 @@
+{
+  "slug": "marklogic",
+  "name": "MarkLogic",
+  "aliases": [
+    "MarkLogic Server",
+    "Progress MarkLogic"
+  ],
+  "tagline": "Enterprise multi-model database for XML, JSON and RDF with built-in search and semantic RAG.",
+  "description": "MarkLogic Server is an enterprise database that stores XML, JSON, text, binary and RDF triples together and indexes everything for search out of the box. It is queried with XQuery, server-side JavaScript, SPARQL, SQL or the Optic API. It combines ACID transactions, element-level security and point-in-time queries with a universal index that makes full-text and structured search fast, which is why publishers, government agencies and financial institutions use it for data hubs. Progress Software acquired MarkLogic in 2023. Version 12 added native vector search and graph RAG, and 12.1.0 shipped in September 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "xml",
+    "rdf",
+    "search",
+    "graph",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "content-management",
+    "full-text-search",
+    "knowledge-graph",
+    "metadata-store",
+    "rag",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Progress Software",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "12.1.0",
+    "date": "2026-09-10"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial licence"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free developer licence for non-production use; production is licensed by contract, also via cloud marketplaces."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Shared-nothing cluster with forests distributed across hosts; database replication for DR across sites."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "XQuery",
+    "Server-side JavaScript",
+    "SPARQL",
+    "SQL",
+    "Optic API"
+  ],
+  "apis": [
+    "REST",
+    "Java Client API",
+    "Node.js Client API",
+    "XCC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "JavaScript",
+    "Python",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Indexes every word and structure on ingest, so search works without separate tooling",
+    "XML, JSON and RDF triples in one ACID store",
+    "Element-level security and redaction for regulated data",
+    "Point-in-time queries and bitemporal support",
+    "Version 12 adds native vector search and graph RAG"
+  ],
+  "weaknesses": [
+    "Expensive, contract-based licensing",
+    "XQuery-centric heritage and a niche skill set",
+    "Smaller developer community than mainstream databases",
+    "Heavyweight to operate for small projects"
+  ],
+  "useCases": [
+    "Publishing and media content repositories",
+    "Government and intelligence data hubs",
+    "Financial regulatory and trade data integration",
+    "Semantic knowledge graphs combined with documents",
+    "Enterprise RAG over curated content"
+  ],
+  "notIdealFor": [
+    "Startups and small budgets",
+    "Simple CRUD apps",
+    "High-throughput key-value workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "exist-db",
+    "basex",
+    "stardog",
+    "ontotext-graphdb",
+    "elasticsearch"
+  ],
+  "tags": [
+    "xml",
+    "enterprise",
+    "multi-model",
+    "semantic",
+    "search"
+  ],
+  "links": {
+    "website": "https://www.progress.com/marklogic",
+    "docs": "https://docs.progress.com/category/marklogic",
+    "changelog": "https://docs.progress.com/bundle/marklogic-server-whats-new-12/page/topics/release-notes.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/MarkLogic_Server"
+  },
+  "ids": {
+    "stackoverflowTag": "marklogic",
+    "wikipedia": "MarkLogic_Server",
+    "dockerHub": "progressofficial/marklogic-db",
+    "npm": "marklogic",
+    "pypi": "marklogic-python-client",
+    "hackerNewsQuery": "MarkLogic"
+  },
+  "brand": {
+    "color": "#4CAF50"
+  },
+  "sources": [
+    "https://docs.progress.com/bundle/marklogic-server-whats-new-12/page/topics/release-notes.html",
+    "https://www.progress.com/company/press-coverage/progress-software-rolls-out-the-general-availability-of-marklogic-server-12",
+    "https://en.wikipedia.org/wiki/MarkLogic_Server"
+  ],
+  "lastVerified": "2026-10-27"
+}

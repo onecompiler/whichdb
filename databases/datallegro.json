@@ -1,0 +1,149 @@
+{
+  "slug": "datallegro",
+  "name": "DATAllegro",
+  "aliases": [
+    "DATAllegro v3"
+  ],
+  "tagline": "MPP data warehouse appliance on commodity hardware; bought by Microsoft in 2008 to become SQL Server PDW.",
+  "description": "DATAllegro was a data warehouse appliance vendor founded in 2003 by Stuart Frost that competed with Teradata and Netezza on price and performance. Its DATAllegro v3 appliances combined patent-pending MPP software with off-the-shelf hardware, Dell and Bull servers with EMC storage, and an open-source database engine (Ingres) on each node, targeting warehouses of tens to hundreds of terabytes; product lines included single- and multi-rack appliances, an archive tier and grid options. Microsoft announced the acquisition on July 24, 2008 and folded the technology and team into SQL Server, where it surfaced as SQL Server 2008 R2 Parallel Data Warehouse, later the Analytics Platform System, whose MPP lineage continues in Azure Synapse dedicated SQL pools. DATAllegro appliances themselves are long out of support.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Microsoft in 2008; the technology became SQL Server Parallel Data Warehouse (later APS, then Azure Synapse dedicated SQL pools).",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "DATAllegro Inc. (acquired by Microsoft)",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "Ingres",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold as hardware-plus-software appliances; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Microsoft cited installations of hundreds of terabytes on a single system."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "MPP warehouse on non-proprietary servers and storage rather than custom hardware",
+    "Scaled to hundreds of terabytes at lower cost than incumbent appliances",
+    "Its architecture lives on in Microsoft's MPP warehouse products"
+  ],
+  "weaknesses": [
+    "Discontinued after the 2008 acquisition; appliances are long out of support",
+    "Appliance model meant fixed hardware configurations and big upfront purchases"
+  ],
+  "useCases": [
+    "Historical reference for the 2000s data warehouse appliance wave",
+    "Understanding the origins of SQL Server PDW and Azure Synapse"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "azure-synapse-analytics",
+    "teradata-vantage",
+    "ibm-netezza",
+    "greenplum",
+    "snowflake",
+    "amazon-redshift"
+  ],
+  "tags": [
+    "data-warehouse",
+    "appliance",
+    "mpp",
+    "acquired",
+    "microsoft"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2008/http://www.datallegro.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "DATAllegro"
+  },
+  "brand": {},
+  "sources": [
+    "https://news.microsoft.com/source/2008/07/24/microsoft-to-acquire-datallegro/",
+    "https://web.archive.org/web/2008/http://www.datallegro.com/",
+    "https://dbdb.io/db/datallegro"
+  ],
+  "lastVerified": "2026-10-27"
+}

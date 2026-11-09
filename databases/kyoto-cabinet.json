@@ -1,0 +1,167 @@
+{
+  "slug": "kyoto-cabinet",
+  "name": "Kyoto Cabinet",
+  "aliases": [
+    "KC"
+  ],
+  "tagline": "FAL Labs' C++ DBM library with hash and B+tree files; superseded by its author's Tkrzw.",
+  "description": "Kyoto Cabinet is the C++ successor to Tokyo Cabinet, written by Mikio Hirabayashi at FAL Labs: a family of DBM-style databases (file hash, file B+tree, directory and in-memory variants) with thread-safe access, transactions and very fast single-node throughput. Together with the Kyoto Tycoon network server it was a popular lightweight store around 2010. It now receives only occasional build fixes (1.2.80 in 2023), and the author's own pages recommend Tkrzw, his modern replacement. Use it only to keep existing software running.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Only occasional build fixes (last release 1.2.80, April 2023); the author recommends his successor library Tkrzw.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "FAL Labs (Mikio Hirabayashi)",
+  "vendorType": "community",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "1.2.80",
+    "date": "2023-04-14"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Tokyo Cabinet",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C++ API"
+  ],
+  "apis": [
+    "C++ API",
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "C",
+    "Java",
+    "Python",
+    "Ruby",
+    "Perl",
+    "Lua"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast single-node hash and B+tree storage",
+    "Multiple database types behind a common polymorphic API",
+    "Thread-safe with fine-grained locking"
+  ],
+  "weaknesses": [
+    "Effectively unmaintained apart from build fixes",
+    "GPL license limits use in proprietary software",
+    "Language bindings are dated and largely unmaintained"
+  ],
+  "useCases": [
+    "Keeping legacy Kyoto Cabinet/Tycoon deployments alive",
+    "Simple local DBM storage in existing C++ code"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Proprietary embedded products",
+    "Concurrent multi-process access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "rocksdb",
+    "tokyo-cabinet",
+    "leveldb",
+    "berkeley-db"
+  ],
+  "tags": [
+    "dbm",
+    "embedded",
+    "c++",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://dbmx.net/kyotocabinet/",
+    "docs": "https://dbmx.net/kyotocabinet/spex.html"
+  },
+  "ids": {
+    "stackoverflowTag": "kyotocabinet",
+    "hackerNewsQuery": "Kyoto Cabinet"
+  },
+  "brand": {},
+  "sources": [
+    "https://dbmx.net/kyotocabinet/",
+    "https://dbmx.net/kyotocabinet/pkg/",
+    "https://en.wikipedia.org/wiki/Tkrzw"
+  ],
+  "lastVerified": "2026-10-27"
+}

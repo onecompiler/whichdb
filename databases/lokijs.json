@@ -1,0 +1,162 @@
+{
+  "slug": "lokijs",
+  "name": "LokiJS",
+  "aliases": [],
+  "tagline": "In-memory JavaScript document store with indexes and pluggable persistence; no longer maintained.",
+  "description": "LokiJS is a small in-memory document database for JavaScript that keeps collections in RAM, supports binary and unique indexes, dynamic views and simple MapReduce, and persists snapshots through adapters for IndexedDB, the file system or custom stores. It was popular in Cordova, Electron and Node apps that needed fast queries over a few thousand objects, and WatermelonDB still uses it as its web adapter. The project has had no release since 1.5.12 in 2021 and no commits since 2023, so treat it as legacy and prefer Dexie, RxDB or TinyBase for new work.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No release since 1.5.12 (April 2021) and no repository activity since 2023; effectively unmaintained.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Joe Minichino and contributors (techfort)",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "1.5.12",
+    "date": "2021-04-20"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Entire dataset lives in memory, so practical sizes are tens of MB."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "MongoDB-style query objects"
+  ],
+  "apis": [
+    "JavaScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast queries because everything is in memory",
+    "Tiny dependency with no native code",
+    "Dynamic views and binary indexes for quick filtered lists"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2021, with open bugs and no security fixes",
+    "Snapshot persistence can lose recent writes on crash",
+    "Whole dataset must fit in memory"
+  ],
+  "useCases": [
+    "Legacy apps that already depend on it",
+    "Small in-memory caches in Node or the browser"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Durable storage of important data",
+    "Datasets larger than available memory"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dexie",
+    "rxdb",
+    "tinybase",
+    "nedb",
+    "pouchdb",
+    "watermelondb"
+  ],
+  "tags": [
+    "javascript",
+    "in-memory",
+    "embedded",
+    "unmaintained"
+  ],
+  "links": {
+    "website": "https://github.com/techfort/LokiJS",
+    "docs": "https://techfort.github.io/LokiJS/",
+    "repository": "https://github.com/techfort/LokiJS"
+  },
+  "ids": {
+    "github": "techfort/LokiJS",
+    "stackoverflowTag": "lokijs",
+    "npm": "lokijs",
+    "hackerNewsQuery": "LokiJS"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/techfort/LokiJS",
+    "https://www.npmjs.com/package/lokijs"
+  ],
+  "lastVerified": "2026-10-27"
+}

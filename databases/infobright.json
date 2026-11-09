@@ -1,0 +1,168 @@
+{
+  "slug": "infobright",
+  "name": "Infobright",
+  "aliases": [
+    "Infobright DB",
+    "Infobright Enterprise Edition",
+    "Infobright AI",
+    "Brighthouse"
+  ],
+  "tagline": "Compressed columnar analytics engine on a MySQL front end, now sold by IgniteTech as Infobright AI.",
+  "description": "Infobright is a column-oriented analytic database that plugs into MySQL as a storage engine. Instead of user-defined indexes it splits each column into data packs of 65,536 values and keeps a 'knowledge grid' of statistics about every pack, so queries skip or answer from metadata most of the data without decompressing it; heavy compression lets one server hold tens to hundreds of terabytes of machine-generated data. Founded in Toronto in 2005, the company opened a Community Edition in 2008 and dropped it in July 2016. IgniteTech (ESW Capital) bought the Enterprise Edition and its customers in 2017 and still markets it, now as Infobright AI, while the original team's work moved to AQ Technologies in Poland.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Owned by IgniteTech (ESW Capital) since 2017 and marketed as Infobright AI; the open-source Community Edition ended in July 2016.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse",
+    "observability"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "IgniteTech (originally Infobright Inc.)",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MySQL (front end)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Community Edition was GPL until 2016)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold by IgniteTech; no public pricing."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server design relying on compression; vendor cites several hundred TB on commodity hardware."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "PHP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Knowledge-grid metadata skips most data without user-defined indexes",
+    "High compression for machine-generated and log data",
+    "MySQL protocol and tooling compatibility",
+    "Little tuning or index administration"
+  ],
+  "weaknesses": [
+    "No longer open source; owned by a private-equity software holding company",
+    "Single-node design without native scale-out",
+    "Slow single-row updates and deletes",
+    "Little public development activity since 2017"
+  ],
+  "useCases": [
+    "Existing deployments for log and machine-data analytics",
+    "Embedded analytics in OEM appliances"
+  ],
+  "notIdealFor": [
+    "New analytics projects (ClickHouse, DuckDB or StarRocks are active alternatives)",
+    "OLTP workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "mariadb",
+    "starrocks",
+    "apache-doris",
+    "duckdb",
+    "infinidb"
+  ],
+  "tags": [
+    "columnar",
+    "mysql",
+    "compression",
+    "analytics",
+    "ignitetech"
+  ],
+  "links": {
+    "website": "https://ignitetech.ai/software-library/infobrightdb",
+    "wikipedia": "https://en.wikipedia.org/wiki/Infobright"
+  },
+  "ids": {
+    "wikipedia": "Infobright",
+    "hackerNewsQuery": "Infobright"
+  },
+  "brand": {},
+  "sources": [
+    "https://ignitetech.ai/software-library/infobrightdb",
+    "https://bigdatawire.com/2017/05/02/ignite-buys-database-vendor-infobright",
+    "https://en.wikipedia.org/wiki/Infobright",
+    "https://dbdb.io/db/infobright"
+  ],
+  "lastVerified": "2026-10-27"
+}

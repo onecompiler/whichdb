@@ -1,0 +1,185 @@
+{
+  "slug": "google-memorystore",
+  "name": "Google Cloud Memorystore",
+  "aliases": [
+    "Memorystore",
+    "Memorystore for Valkey",
+    "Memorystore for Redis",
+    "Memorystore for Memcached"
+  ],
+  "tagline": "Google Cloud's managed in-memory family: Valkey, Redis, Redis Cluster and Memcached.",
+  "description": "Memorystore is Google Cloud's umbrella for managed caches: Memorystore for Valkey (Google's lead engine, with 9.0 as default and 9.1 in preview), Memorystore for Redis Cluster, the older single-node/standard Memorystore for Redis, and Memorystore for Memcached. The Valkey and Redis Cluster products offer zero-downtime scaling, Private Service Connect networking, persistence (RDB/AOF) and up to 99.99% SLA, and Valkey adds vector search. It is the default choice for GKE and Cloud Run apps that need a cache; cross-region options are limited to replicas and DR.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "vector"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub",
+    "vector-search"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "distributed"
+  ],
+  "developer": "Google Cloud",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "Valkey 9.1 (preview)",
+    "date": "2026-07-27"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Valkey / Redis / Memcached",
+  "license": {
+    "type": "proprietary",
+    "name": "Google Cloud service terms"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed per node or per GB-hour depending on product; committed-use discounts available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Valkey and Redis Cluster shard across nodes with online scaling; cross-region replication for DR."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Memcached protocol",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2/RESP3",
+    "Memcached text protocol"
+  ],
+  "compatibleWith": [
+    "redis",
+    "memcached"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Managed Valkey with fast adoption of new Valkey releases",
+    "Zero-downtime scaling for Valkey and Redis Cluster",
+    "IAM auth and Private Service Connect networking",
+    "Vector search on Memorystore for Valkey"
+  ],
+  "weaknesses": [
+    "Four overlapping products with different feature sets",
+    "GCP-only",
+    "Redis Cluster product stays on Redis 7.x",
+    "Limited multi-region write options"
+  ],
+  "useCases": [
+    "Caching for GKE, Cloud Run and App Engine apps",
+    "Session storage and rate limiting on Google Cloud",
+    "Vector similarity lookups close to app data"
+  ],
+  "notIdealFor": [
+    "Multi-cloud deployments",
+    "Durable primary storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "valkey",
+    "amazon-elasticache",
+    "azure-cache-for-redis",
+    "redis",
+    "momento"
+  ],
+  "tags": [
+    "gcp",
+    "managed",
+    "valkey",
+    "redis",
+    "memcached"
+  ],
+  "links": {
+    "website": "https://cloud.google.com/memorystore",
+    "docs": "https://cloud.google.com/memorystore/docs",
+    "pricing": "https://cloud.google.com/memorystore/pricing",
+    "changelog": "https://cloud.google.com/memorystore/docs/valkey/release-notes"
+  },
+  "ids": {
+    "stackoverflowTag": "google-cloud-memorystore",
+    "hackerNewsQuery": "Memorystore"
+  },
+  "brand": {
+    "color": "#4285F4",
+    "simpleIcon": "googlecloud"
+  },
+  "sources": [
+    "https://docs.cloud.google.com/memorystore/docs/valkey/supported-versions",
+    "https://docs.cloud.google.com/memorystore/docs/cluster/release-notes"
+  ],
+  "lastVerified": "2026-10-27"
+}

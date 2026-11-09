@@ -1,0 +1,168 @@
+{
+  "slug": "bitsy",
+  "name": "Bitsy",
+  "aliases": [
+    "Bitsy Graph Database"
+  ],
+  "tagline": "Small embeddable Java graph database for TinkerPop: in-memory, ACID, persisted to readable JSON text files.",
+  "description": "Bitsy is an embeddable graph database for the JVM from LambdaZen that implements the Apache TinkerPop API, so applications traverse it with Gremlin like any other TinkerPop graph. The whole graph lives in memory for speed, while every transaction is written durably to human-readable JSON text files and recovered cleanly after crashes on journaling file systems; concurrency is optimistic, with ACID guarantees aimed at multi-threaded OLTP apps, and online backups are exposed through JMX. It first shipped in 2013 for TinkerPop 2 and was later rewritten for TinkerPop 3. Development has picked up again: release 3.6.6 (June 2026) aligns with TinkerPop 3.8.1 and drops Java 8.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "LambdaZen",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "3.6.6",
+    "date": "2026-06-04"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Entire graph must fit in the JVM heap of one process."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Gremlin"
+  ],
+  "apis": [
+    "Apache TinkerPop (Java)",
+    "JMX (backups)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in TinkerPop/Gremlin graph that embeds in any JVM app with no server",
+    "ACID transactions with optimistic concurrency for multi-threaded use",
+    "Human-readable JSON data files simplify debugging and recovery",
+    "Clean crash recovery and online backups via JMX",
+    "Tiny footprint and permissive licence; active again in 2026"
+  ],
+  "weaknesses": [
+    "Graph must fit in memory of a single JVM",
+    "No clustering, replication or server mode",
+    "Small community and documentation limited to the project wiki"
+  ],
+  "useCases": [
+    "Embedded graph storage in desktop or server Java applications",
+    "Unit and integration tests for TinkerPop-based code",
+    "Small to medium OLTP graphs that need durability without a server"
+  ],
+  "notIdealFor": [
+    "Graphs larger than available heap",
+    "Distributed or multi-process graph workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "janusgraph",
+    "apache-tinkerpop-gremlin-server",
+    "arcadedb",
+    "kuzu",
+    "hypergraphdb"
+  ],
+  "tags": [
+    "graph",
+    "tinkerpop",
+    "gremlin",
+    "embedded",
+    "java"
+  ],
+  "links": {
+    "website": "https://github.com/lambdazen/bitsy",
+    "docs": "https://github.com/lambdazen/bitsy/wiki",
+    "repository": "https://github.com/lambdazen/bitsy",
+    "changelog": "https://github.com/lambdazen/bitsy/releases"
+  },
+  "ids": {
+    "github": "lambdazen/bitsy",
+    "hackerNewsQuery": "Bitsy graph database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/lambdazen/bitsy",
+    "https://github.com/lambdazen/bitsy/wiki",
+    "https://github.com/lambdazen/bitsy/releases/tag/release-3.6.6",
+    "https://repo1.maven.org/maven2/com/lambdazen/bitsy/bitsy/"
+  ],
+  "lastVerified": "2026-10-27"
+}

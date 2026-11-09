@@ -1,0 +1,188 @@
+{
+  "slug": "hydrolix",
+  "name": "Hydrolix",
+  "aliases": [
+    "TrafficPeak"
+  ],
+  "tagline": "Streaming data lake for log-scale event data, with ClickHouse-based SQL over object storage.",
+  "description": "Hydrolix is a commercial streaming data lake for very high-volume log and event data such as CDN, security and video telemetry. Streams are transformed on ingest, compressed into its own columnar, heavily indexed format on object storage, and queried through a ClickHouse-based SQL engine over the ClickHouse HTTP and native protocols, so Grafana, Kibana-style tools and Splunk connectors work on top. Compute is stateless on Kubernetes and scales separately from storage. It is usually deployed in the customer's cloud account and managed by Hydrolix, and Akamai resells it as TrafficPeak. The value is cheap long retention of full-fidelity data; the cost is a proprietary platform with usage-based contracts.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "real-time-analytics",
+    "time-series",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Hydrolix",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "6.4.14",
+    "date": "2026-10-23"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "akamai-linode"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Akamai TrafficPeak",
+      "provider": "Akamai"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Stateless ingest and query pools on Kubernetes over object storage; designed for petabyte-scale retention."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ClickHouse dialect)"
+  ],
+  "apis": [
+    "ClickHouse HTTP",
+    "ClickHouse native protocol",
+    "MySQL protocol",
+    "HTTP query API",
+    "Kafka and Kinesis ingest"
+  ],
+  "compatibleWith": [
+    "clickhouse",
+    "mysql"
+  ],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Keeps full-fidelity log data for long periods at object-storage cost",
+    "ClickHouse SQL and protocols open up Grafana, DBeaver and JDBC tools",
+    "Ingest-time transforms and summary tables",
+    "Stateless Kubernetes compute scales separately from storage",
+    "Proven on very large CDN and live-event traffic"
+  ],
+  "weaknesses": [
+    "Proprietary platform with contract pricing",
+    "Needs a defined transform schema per table",
+    "Smaller community than open-source alternatives",
+    "Mostly a fit for very large volumes; overkill for small datasets"
+  ],
+  "useCases": [
+    "CDN and edge log analytics",
+    "Security and bot detection data",
+    "Video streaming quality telemetry",
+    "Long-term retention of SIEM-scale logs"
+  ],
+  "notIdealFor": [
+    "Small or occasional log volumes",
+    "Open-source-only environments",
+    "Transactional workloads"
+  ],
+  "notableUsers": [
+    "Fox",
+    "TF1",
+    "Mux"
+  ],
+  "alternatives": [
+    "clickhouse",
+    "elasticsearch",
+    "apache-druid",
+    "axiom",
+    "openobserve",
+    "azure-data-explorer"
+  ],
+  "tags": [
+    "logs",
+    "data-lake",
+    "object-storage",
+    "proprietary",
+    "clickhouse-compatible"
+  ],
+  "links": {
+    "website": "https://hydrolix.io/",
+    "docs": "https://docs.hydrolix.io/",
+    "changelog": "https://docs.hydrolix.io/latest/release-notes/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Hydrolix"
+  },
+  "brand": {},
+  "sources": [
+    "https://hydrolix.io/",
+    "https://docs.hydrolix.io/latest/release-notes/",
+    "https://docs.hydrolix.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

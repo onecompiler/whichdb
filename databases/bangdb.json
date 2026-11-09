@@ -1,0 +1,176 @@
+{
+  "slug": "bangdb",
+  "name": "BangDB",
+  "aliases": [
+    "IQLECT BangDB"
+  ],
+  "tagline": "Converged C/C++ NoSQL platform mixing key-value, documents, time-series, stream processing, graph and ML.",
+  "description": "BangDB, from IQLECT, is a C/C++ NoSQL engine that tries to replace a stack of separate systems: key-value and document tables, wide and time-series tables, an S3-like store for large objects, continuous stream processing with sliding windows and complex event processing, a graph layer queried with a modified Cypher, and in-database model training and prediction. It ships as an embedded library or a client/server database (primary/replica), with a quasi-SQL CLI, plus a hosted BangDB Cloud and the Ampere no-code app platform aimed at real-time analytics, IoT and log monitoring. BangDB 2.0 binaries and a Docker image are free to download, but the core source is not published, and its performance claims are vendor benchmarks.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value",
+    "time-series",
+    "graph",
+    "wide-column"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics",
+    "iot",
+    "time-series",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "IQLECT (Sachin Sinha)",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "2.0",
+    "date": "2025-05"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free binary download)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Server binaries and Docker image are free to download (registration encouraged); BangDB Cloud and the Ampere platform are paid, with a one-month app trial. Deep-learning features need the Enterprise Edition."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Embedded or primary/replica server today; a peer-to-peer distributed mode has been described as upcoming."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "BangDB quasi-SQL (CLI)",
+    "Cypher (modified)"
+  ],
+  "apis": [
+    "C++ client (TCP)",
+    "HTTP interface",
+    "CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java/Scala (wrapper)"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One engine covers documents, time-series, streams, graph and ML scoring",
+    "Stream processing with sliding windows, CEP and running statistics built in",
+    "Same API for embedded and client/server deployments",
+    "Vendor offers a hosted cloud and no-code app platform on top"
+  ],
+  "weaknesses": [
+    "Core source is not public; free binaries only",
+    "Small community and limited third-party documentation",
+    "Performance claims are vendor-published benchmarks",
+    "No shipped horizontal sharding"
+  ],
+  "useCases": [
+    "Real-time IoT and sensor stream analytics with alerts",
+    "Log and clickstream monitoring with anomaly detection",
+    "Edge or device deployments using the embedded flavour"
+  ],
+  "notIdealFor": [
+    "Teams requiring open-source licensing",
+    "Large multi-node clusters needing automatic sharding"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "couchbase",
+    "influxdb",
+    "materialize",
+    "surrealdb",
+    "arangodb"
+  ],
+  "tags": [
+    "multi-model",
+    "stream-processing",
+    "iot",
+    "embedded",
+    "ml"
+  ],
+  "links": {
+    "website": "https://bangdb.com/",
+    "repository": "https://github.com/sachin-sinha/BangDB",
+    "pricing": "https://bangdb.com/pricing"
+  },
+  "ids": {
+    "github": "sachin-sinha/BangDB",
+    "dockerHub": "bangdb/bangdb",
+    "hackerNewsQuery": "BangDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://bangdb.com/",
+    "https://github.com/sachin-sinha/BangDB",
+    "https://hub.docker.com/r/bangdb/bangdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

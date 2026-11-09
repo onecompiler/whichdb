@@ -1,0 +1,181 @@
+{
+  "slug": "xtdb",
+  "name": "XTDB",
+  "aliases": [
+    "Crux",
+    "XTDB v2"
+  ],
+  "tagline": "Bitemporal SQL database on object storage that keeps every version of every row.",
+  "description": "XTDB (originally Crux) is an immutable database from JUXT that records both system time and valid time for every row, so you can query what was true at any point and what the database believed at any point, including retroactive corrections. Version 2 is SQL-first: it speaks the PostgreSQL wire protocol and Arrow Flight SQL, stores columnar Apache Arrow data on object storage such as S3, and adds XTQL for Datalog-flavoured queries over semi-structured records. It fits audit-heavy domains such as finance, insurance and healthcare where reconstructing history is a requirement. Write throughput and ecosystem size are modest next to mainstream SQL engines.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "event-sourcing",
+    "ledger",
+    "htap"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "JUXT Ltd",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "2.2.0",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "Kotlin",
+    "Clojure",
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open source; JUXT offers support and workshops."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Compute nodes scale out for reads on shared object storage; writes go through a single transaction log."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "XTQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "Arrow Flight SQL",
+    "HTTP"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "Kotlin",
+    "Clojure",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native bitemporality: valid-time and system-time queries in standard SQL:2011 syntax",
+    "Immutable history makes audit and regulatory reconstruction straightforward",
+    "Columnar Arrow storage on S3-style object stores",
+    "Postgres wire compatibility for existing drivers and tools"
+  ],
+  "weaknesses": [
+    "Single transaction log limits write throughput",
+    "Smaller ecosystem and fewer managed options than Postgres",
+    "Bitemporal modelling has a learning curve"
+  ],
+  "useCases": [
+    "Financial and insurance systems needing as-of reporting",
+    "Audit trails with retroactive corrections",
+    "Event-sourced systems wanting SQL over history"
+  ],
+  "notIdealFor": [
+    "High-write OLTP with hot rows",
+    "Simple CRUD where history is not needed"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "datomic",
+    "immudb",
+    "postgresql",
+    "terminusdb",
+    "dolt"
+  ],
+  "tags": [
+    "bitemporal",
+    "immutable",
+    "sql",
+    "clojure",
+    "time-travel"
+  ],
+  "links": {
+    "website": "https://xtdb.com/",
+    "docs": "https://docs.xtdb.com/",
+    "repository": "https://github.com/xtdb/xtdb",
+    "changelog": "https://github.com/xtdb/xtdb/releases"
+  },
+  "ids": {
+    "github": "xtdb/xtdb",
+    "stackoverflowTag": "xtdb",
+    "hackerNewsQuery": "XTDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://xtdb.com/",
+    "https://github.com/xtdb/xtdb/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

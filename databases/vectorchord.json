@@ -1,0 +1,183 @@
+{
+  "slug": "vectorchord",
+  "name": "VectorChord",
+  "aliases": [
+    "vchord",
+    "pgvecto.rs successor"
+  ],
+  "tagline": "Disk-friendly Postgres vector extension using IVF + RaBitQ, the successor to pgvecto.rs.",
+  "description": "VectorChord (vchord) is a PostgreSQL extension from TensorChord that replaces its earlier pgvecto.rs. It builds on pgvector's data types but uses IVF partitioning with RaBitQ quantization instead of in-memory HNSW, which makes index builds much faster and lets large indexes live mostly on disk with good recall. The companion VectorChord-bm25 extension adds BM25 ranking for hybrid search. It suits teams who started on pgvector and hit build-time or memory walls in the 50M to 1B vector range but want to stay in Postgres.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "relational"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "TensorChord Inc.",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "1.1.1",
+    "date": "2026-02-28"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "PostgreSQL (requires pgvector)",
+  "license": {
+    "type": "copyleft",
+    "name": "AGPL-3.0 or Elastic License 2.0 (dual)",
+    "spdx": "AGPL-3.0-only OR Elastic-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "startingPrice": "Free Starter; Enterprise $500/month (VectorChord Cloud)",
+    "notes": "Free to self-host under AGPL or ELv2. VectorChord Cloud offers managed Postgres with the extension preinstalled."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "VectorChord Cloud",
+      "provider": "TensorChord",
+      "url": "https://vectorchord.ai/pricing"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single Postgres primary; IVF+RaBitQ indexes keep most data on disk, making 100M+ vectors on one node practical."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Any PostgreSQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Index builds far faster than pgvector HNSW at large scale",
+    "RaBitQ quantization keeps recall high with low memory",
+    "Uses pgvector types, so migration is mostly an index swap",
+    "Companion BM25 extension for hybrid search",
+    "Full Postgres transactions and joins"
+  ],
+  "weaknesses": [
+    "AGPL/ELv2 licensing is restrictive for some vendors",
+    "Not available on most hyperscaler managed Postgres",
+    "Smaller community than pgvector",
+    "Tuning IVF lists and probes adds a learning curve"
+  ],
+  "useCases": [
+    "Scaling Postgres vector search past pgvector's comfort zone",
+    "Cost-efficient disk-based RAG retrieval",
+    "Hybrid BM25 plus vector search in Postgres"
+  ],
+  "notIdealFor": [
+    "Teams restricted to RDS or Cloud SQL",
+    "Tiny datasets where pgvector is enough",
+    "Licence-sensitive SaaS redistribution"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pgvector",
+    "pgvectorscale",
+    "paradedb",
+    "lantern",
+    "qdrant",
+    "milvus"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "vector",
+    "extension",
+    "rabitq",
+    "rust"
+  ],
+  "links": {
+    "website": "https://vectorchord.ai/",
+    "docs": "https://docs.vectorchord.ai/",
+    "repository": "https://github.com/supervc-stack/VectorChord",
+    "pricing": "https://vectorchord.ai/pricing",
+    "changelog": "https://github.com/supervc-stack/VectorChord/releases"
+  },
+  "ids": {
+    "github": "supervc-stack/VectorChord",
+    "dockerHub": "tensorchord/vchord-postgres",
+    "hackerNewsQuery": "VectorChord"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/supervc-stack/VectorChord/releases",
+    "https://github.com/supervc-stack/VectorChord/blob/main/LICENSE",
+    "https://vectorchord.ai/"
+  ],
+  "lastVerified": "2026-10-27"
+}

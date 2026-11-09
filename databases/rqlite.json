@@ -1,0 +1,176 @@
+{
+  "slug": "rqlite",
+  "name": "rqlite",
+  "aliases": [],
+  "tagline": "Lightweight distributed database that replicates SQLite over Raft behind a simple HTTP API.",
+  "description": "rqlite turns SQLite into a fault-tolerant, highly available cluster: a single Go binary runs Raft consensus and applies every write to a local SQLite database on each node. Clients talk to it over a JSON HTTP API (or a Go/Python/JS client) and can choose read consistency levels from fast local reads to fully linearizable ones. It adds hot backups to S3, change data capture streams, SQLite extension loading (for example sqlite-vec) and Kubernetes-friendly auto-clustering. It is a pragmatic choice for small, critical datasets such as control-plane state, not a scale-out database: all data must fit on every node and writes go through one leader.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "configuration",
+    "metadata-store",
+    "edge",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Philip O'Toole and contributors",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "10.6.5",
+    "date": "2026-10-24"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Typically 3-5 voting nodes plus optional read-only nodes; every node holds the full dataset and writes go through the Raft leader."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "HTTP/JSON API"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "Go",
+    "Python",
+    "JavaScript",
+    "Java",
+    "Rust",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One binary, no dependencies: easiest way to make SQLite highly available",
+    "Per-request read consistency: none, weak, linearizable",
+    "Automatic S3/GCS backups and restore from plain SQLite files",
+    "Change data capture to stream writes elsewhere",
+    "Load SQLite extensions such as sqlite-vec for vector search"
+  ],
+  "weaknesses": [
+    "Write throughput limited to one Raft leader and disk fsync speed",
+    "No interactive multi-statement transactions; only batched requests are atomic",
+    "Non-deterministic SQL functions need care under replication",
+    "Full dataset must fit on every node"
+  ],
+  "useCases": [
+    "Control-plane and configuration state for distributed systems",
+    "Small HA databases at the edge or in IoT gateways",
+    "Service metadata where SQLite simplicity is wanted with failover",
+    "Read-heavy reference data across sites"
+  ],
+  "notIdealFor": [
+    "Write-heavy OLTP",
+    "Datasets larger than a single node",
+    "Apps needing interactive transactions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dqlite",
+    "sqlite",
+    "libsql",
+    "etcd",
+    "cockroachdb",
+    "turso"
+  ],
+  "tags": [
+    "sqlite",
+    "raft",
+    "distributed",
+    "lightweight"
+  ],
+  "links": {
+    "website": "https://rqlite.io/",
+    "docs": "https://rqlite.io/docs/",
+    "repository": "https://github.com/rqlite/rqlite",
+    "changelog": "https://github.com/rqlite/rqlite/releases"
+  },
+  "ids": {
+    "github": "rqlite/rqlite",
+    "dockerHub": "rqlite/rqlite",
+    "hackerNewsQuery": "rqlite"
+  },
+  "sources": [
+    "https://github.com/rqlite/rqlite/releases",
+    "https://github.com/rqlite/rqlite",
+    "https://rqlite.io/docs/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,140 @@
+{
+  "slug": "prisma",
+  "name": "PRISMA",
+  "aliases": [
+    "PRISMA/DB",
+    "PRISMA project"
+  ],
+  "tagline": "Dutch research prototype (1986-1991) of a parallel, main-memory relational DBMS; a MonetDB ancestor.",
+  "description": "PRISMA/DB was the database half of PRISMA, a Dutch national research project run by CWI, the University of Twente and Philips Research in the late 1980s. It was one of the earliest attempts at a shared-nothing, parallel relational DBMS that kept all data in main memory, with each fragment of a relation managed by its own process on a multi-node machine and queries executed with intra- and inter-operator parallelism. Results were published through 1992 in IEEE TKDE and elsewhere, and the CWI team around Martin Kersten later built MonetDB on lessons from it. It never shipped as a product and is now of interest only for the history of parallel and in-memory databases.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (1986-1991); never released as a product. Its in-memory, parallel ideas carried into MonetDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "CWI, University of Twente and Philips Research",
+  "vendorType": "academic",
+  "initialRelease": 1986,
+  "writtenIn": [
+    "POOL-X"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Not publicly released (research prototype)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never distributed; only papers remain."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Data fragmented across the nodes of a single parallel machine; sized by that machine's total memory."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early demonstration of a shared-nothing parallel relational engine",
+    "Kept all relations in main memory years before in-memory databases were commercial",
+    "Direct intellectual ancestor of CWI's MonetDB"
+  ],
+  "weaknesses": [
+    "Never released; no code or binaries are publicly available",
+    "Tied to custom research hardware and languages of its era"
+  ],
+  "useCases": [
+    "Studying the history of parallel and main-memory databases",
+    "Background reading for database systems courses"
+  ],
+  "notIdealFor": [
+    "Any practical workload: there is nothing to install"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "monetdb",
+    "duckdb",
+    "singlestore"
+  ],
+  "tags": [
+    "research",
+    "parallel",
+    "in-memory",
+    "cwi",
+    "historical"
+  ],
+  "links": {
+    "website": "https://doi.org/10.1109/69.180605"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1109/69.180605",
+    "https://dbdb.io/db/prisma",
+    "https://doi.org/10.1007/3-540-54132-2_69"
+  ],
+  "lastVerified": "2026-10-27"
+}

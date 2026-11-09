@@ -1,0 +1,193 @@
+{
+  "slug": "arcadedb",
+  "name": "ArcadeDB",
+  "aliases": [],
+  "tagline": "Multi-model Java database speaking SQL, Cypher, Gremlin, MongoDB and Redis protocols.",
+  "description": "ArcadeDB is an open-source multi-model database by Luca Garulli, the creator of OrientDB, and is a conceptual successor to it rebuilt for lower overhead. A single engine stores graphs, documents, key-value pairs, time series and vector embeddings, and you can query it with its SQL dialect, openCypher, Gremlin or GraphQL, or connect over the PostgreSQL, MongoDB and Redis wire protocols. It runs embedded in a JVM or as a server with Raft-based replication. It is a good fit when you want one flexible, Apache-licensed store for mixed graph and document data, but it is a small project with modest community adoption.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "document",
+    "key-value",
+    "vector",
+    "time-series"
+  ],
+  "workloads": [
+    "oltp",
+    "graph-traversal",
+    "vector-search",
+    "embedded",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Arcade Data Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "26.10.2",
+    "date": "2026-10-15"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; commercial support available from Arcade Data."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Leader-replica HA via Raft; each server holds a full copy."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "Cypher",
+    "Gremlin",
+    "GraphQL",
+    "MongoDB query language"
+  ],
+  "apis": [
+    "HTTP/JSON",
+    "PostgreSQL wire protocol",
+    "MongoDB wire protocol",
+    "Redis protocol",
+    "Java embedded API"
+  ],
+  "compatibleWith": [
+    "postgresql",
+    "mongodb",
+    "redis"
+  ],
+  "drivers": [
+    "Java",
+    "Any PostgreSQL driver",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Graph, document, key-value, time-series and vector in one ACID engine",
+    "Many query languages and wire protocols lower migration effort",
+    "Embeddable in JVM apps or run as a server",
+    "Apache 2.0 with a monthly release cadence"
+  ],
+  "weaknesses": [
+    "Small community and few large public references",
+    "No sharding; scale-out is replication only",
+    "Protocol compatibility layers cover subsets of each foreign API"
+  ],
+  "useCases": [
+    "Migrating off OrientDB",
+    "Mixed graph and document app backends",
+    "Embedded multi-model storage in Java",
+    "Graph plus vector retrieval"
+  ],
+  "notIdealFor": [
+    "Very large distributed graphs",
+    "RDF/SPARQL workloads",
+    "Teams wanting a large vendor ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "orientdb",
+    "arangodb",
+    "surrealdb",
+    "neo4j",
+    "memgraph"
+  ],
+  "tags": [
+    "multi-model",
+    "java",
+    "orientdb-successor",
+    "open-source",
+    "vector"
+  ],
+  "links": {
+    "website": "https://arcadedb.com/",
+    "docs": "https://docs.arcadedb.com/",
+    "repository": "https://github.com/ArcadeData/arcadedb",
+    "changelog": "https://github.com/ArcadeData/arcadedb/releases"
+  },
+  "ids": {
+    "github": "ArcadeData/arcadedb",
+    "stackoverflowTag": "arcadedb",
+    "dockerHub": "arcadedata/arcadedb",
+    "hackerNewsQuery": "ArcadeDB"
+  },
+  "brand": {
+    "color": "#2D9CDB"
+  },
+  "sources": [
+    "https://github.com/ArcadeData/arcadedb/releases",
+    "https://arcadedb.com/",
+    "https://hub.docker.com/r/arcadedata/arcadedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

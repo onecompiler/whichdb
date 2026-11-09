@@ -1,0 +1,196 @@
+{
+  "slug": "weaviate",
+  "name": "Weaviate",
+  "aliases": [],
+  "tagline": "Open-source AI-native vector database with hybrid search, modules for embeddings and multi-tenancy.",
+  "description": "Weaviate is an open-source vector database written in Go that stores objects and their vectors together, with BM25 and hybrid search, filtering, multi-tenancy and pluggable vectorizer and generative modules that call OpenAI, Cohere, Hugging Face and others for you. It shards and replicates natively, offers tunable consistency, and supports PQ, BQ and rotational quantization to fit large indexes in memory. The core is BSD-3-Clause, while some enterprise features are now in a separately licensed directory. Weaviate Cloud provides shared (Flex) and dedicated (Premium) managed clusters.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "document",
+    "search"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "full-text-search"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Weaviate B.V.",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "1.40.2",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD-3-Clause (core); enterprise features under the Weaviate License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "startingPrice": "Free cluster; Flex from $45/month",
+    "notes": "Free sandbox-style cluster (100K objects). Flex is pay-as-you-go on shared clusters; Premium is prepaid with dedicated options, HIPAA and SSO."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Weaviate Cloud",
+      "provider": "Weaviate",
+      "url": "https://weaviate.io/deployment/serverless"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Sharding and Raft-based schema replication across nodes; tenants can be offloaded to object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "GraphQL",
+    "Weaviate query API"
+  ],
+  "apis": [
+    "REST/JSON",
+    "gRPC",
+    "GraphQL"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "TypeScript",
+    "Go",
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Hybrid BM25 plus vector search with fusion options in one query",
+    "Vectorizer and generative modules remove glue code for embeddings and RAG",
+    "Native multi-tenancy with tenant offloading to cold storage",
+    "Quantization (PQ/BQ/RQ) cuts memory for large indexes",
+    "Open-source core with a straightforward managed cloud"
+  ],
+  "weaknesses": [
+    "Memory-hungry HNSW unless you tune quantization",
+    "GraphQL-era API surface has been reworked several times",
+    "Enterprise features moving to a separate license",
+    "No joins or relational modeling"
+  ],
+  "useCases": [
+    "RAG over documents with hybrid retrieval",
+    "Multi-tenant SaaS semantic search",
+    "Product and content recommendation",
+    "Agent memory stores"
+  ],
+  "notIdealFor": [
+    "Transactional workloads",
+    "Analytics and aggregations",
+    "Tiny embedded apps (use sqlite-vec or LanceDB)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "qdrant",
+    "milvus",
+    "pinecone",
+    "chroma",
+    "vespa",
+    "elasticsearch",
+    "pgvector"
+  ],
+  "tags": [
+    "vector-database",
+    "hybrid-search",
+    "rag",
+    "open-source",
+    "go"
+  ],
+  "links": {
+    "website": "https://weaviate.io/",
+    "docs": "https://docs.weaviate.io/",
+    "repository": "https://github.com/weaviate/weaviate",
+    "pricing": "https://weaviate.io/pricing",
+    "changelog": "https://github.com/weaviate/weaviate/releases"
+  },
+  "ids": {
+    "github": "weaviate/weaviate",
+    "stackoverflowTag": "weaviate",
+    "dockerHub": "semitechnologies/weaviate",
+    "npm": "weaviate-client",
+    "pypi": "weaviate-client",
+    "hackerNewsQuery": "Weaviate"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/weaviate/weaviate/releases",
+    "https://github.com/weaviate/weaviate/blob/main/LICENSE",
+    "https://weaviate.io/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,98 @@
+{
+  "slug": "easedb",
+  "name": "EaseDB",
+  "aliases": ["EaseDB cache-oblivious query processor"],
+  "tagline": "HKUST research prototype of an in-memory query processor built entirely from cache-oblivious algorithms.",
+  "description": "EaseDB was a research prototype from Bingsheng He, Yinan Li, Qiong Luo (HKUST) and Dongqing Yang (Peking University), demonstrated at SIGMOD 2007. It explored whether an in-memory relational query processor could be fast on any memory hierarchy without knowing cache sizes or line lengths: data structures, joins, sorting and selection used cache-oblivious algorithms based on recursive partitioning instead of hand-tuned, cache-conscious parameters. The group's companion papers (cache-oblivious nested-loop joins at CIKM 2006, 'Cache-oblivious databases' in TODS 2008) found these designs close to tuned cache-conscious code while being far easier to port. It was never released as a product; it matters as a reference point for hardware-oblivious query processing. (Not to be confused with an unrelated 2013 Ruby file store of the same name on GitHub.)",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (SIGMOD 2007 demo, HKUST); no public release. Ideas live on in cache-aware/oblivious work in in-memory engines.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["olap"],
+  "architecture": ["single-node", "in-memory"],
+  "developer": "HKUST and Peking University (B. He, Y. Li, Q. Luo, D. Yang)",
+  "vendorType": "academic",
+  "initialRelease": 2007,
+  "writtenIn": ["Unknown"],
+  "license": { "type": "proprietary", "name": "Not released (research prototype)" },
+  "pricing": {
+    "models": ["free"],
+    "freeTier": false,
+    "notes": "Never distributed; the papers are the only artefact."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "none", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["Relational operators (research API)"],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Showed a whole query processor can run without cache-size tuning parameters",
+    "Cache-oblivious joins and indexes stayed competitive with tuned cache-conscious code in published experiments",
+    "Clear, citable reference for hardware-oblivious database design"
+  ],
+  "weaknesses": [
+    "No released code or binaries",
+    "Single-threaded, read-only analytical scope; no transactions or persistence"
+  ],
+  "useCases": [
+    "Studying cache-oblivious algorithms applied to joins, sorting and indexing",
+    "Background reading for in-memory analytical engine design"
+  ],
+  "notIdealFor": ["Anything beyond study: there is no runnable system"],
+  "notableUsers": [],
+  "alternatives": ["monetdb", "duckdb", "hyper"],
+  "tags": ["research", "in-memory", "cache-oblivious", "query-processing", "sigmod"],
+  "links": {
+    "website": "https://doi.org/10.1145/1247480.1247607"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1145/1247480.1247607",
+    "https://doi.org/10.1145/1366102.1366105",
+    "https://doi.org/10.1145/1183614.1183717"
+  ],
+  "lastVerified": "2026-10-27"
+}

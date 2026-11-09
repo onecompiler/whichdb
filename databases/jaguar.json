@@ -1,0 +1,174 @@
+{
+  "slug": "jaguar",
+  "name": "JaguarDB",
+  "aliases": [
+    "Jaguar",
+    "DataJaguar",
+    "Jaguar vector database",
+    "JaguarLite"
+  ],
+  "tagline": "Distributed vector database from DataJaguar that also handles time series and geospatial data.",
+  "description": "JaguarDB began around 2017 as DataJaguar's distributed SQL-ish store for time series and location data and was repositioned in 2023 as a vector database for AI workloads. It indexes text and image embeddings across a multi-node cluster, keeps raw media in an 'AI datalake', and computes rolling aggregates over time windows as data arrives. Its distinctive claim is ZeroMove hashing, which lets a cluster grow without rebalancing existing data. It ships as a Docker image, Linux tarballs and an embedded variant (JaguarLite), with HTTP and socket client packages on PyPI and integrations for LangChain-style frameworks. It is a small vendor with a thin community; evaluate carefully against mainstream vector databases.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "time-series",
+    "spatial"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "time-series",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server",
+    "embedded"
+  ],
+  "developer": "DataJaguar, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "jaguardb-http-client 3.6.1",
+    "date": "2026-10-09"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary binaries (free download); client SDKs Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Server, cluster and JaguarLite packages are free downloads; support terms are by arrangement."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Vendor claims instant scale-out with no data migration via ZeroMove hashing; independent benchmarks are scarce."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL-like Jaguar query language"
+  ],
+  "apis": [
+    "HTTP gateway",
+    "Socket client",
+    "C/C++ client"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Vector, time-series and geospatial data in one distributed engine",
+    "Scale-out designed to avoid data movement when nodes are added",
+    "Real-time windowed aggregates computed during ingest",
+    "Embedded JaguarLite variant for edge or single-process use"
+  ],
+  "weaknesses": [
+    "Small vendor; little independent documentation, benchmarks or community",
+    "Licensing of the server is not clearly published",
+    "Few managed-service options compared with mainstream vector databases"
+  ],
+  "useCases": [
+    "Similarity search over text and image embeddings",
+    "Combining vector search with time-series or location filters",
+    "Self-hosted RAG retrieval on Linux clusters"
+  ],
+  "notIdealFor": [
+    "Teams wanting a managed cloud vector service",
+    "Transactional application data",
+    "Organisations that require a well-known vendor with SLAs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "milvus",
+    "qdrant",
+    "weaviate",
+    "pinecone",
+    "pgvector"
+  ],
+  "tags": [
+    "vector-database",
+    "time-series",
+    "geospatial",
+    "ai"
+  ],
+  "links": {
+    "website": "http://www.jaguardb.com/",
+    "docs": "http://www.jaguardb.com/docguide.html",
+    "repository": "https://github.com/fserv/jaguar-sdk"
+  },
+  "ids": {
+    "dockerHub": "jaguardb/jaguardb",
+    "pypi": "jaguardb-http-client",
+    "hackerNewsQuery": "JaguarDB"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.jaguardb.com/windex.html",
+    "http://www.jaguardb.com/download.html",
+    "https://pypi.org/project/jaguardb-http-client/",
+    "https://hub.docker.com/r/jaguardb/jaguardb",
+    "https://dbdb.io/db/jaguardb"
+  ],
+  "lastVerified": "2026-10-27"
+}

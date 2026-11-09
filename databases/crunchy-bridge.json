@@ -1,0 +1,120 @@
+{
+  "slug": "crunchy-bridge",
+  "name": "Crunchy Bridge",
+  "aliases": ["Crunchy Data Bridge", "Crunchy Bridge for Analytics"],
+  "tagline": "Crunchy Data's developer-friendly managed Postgres across AWS, GCP and Azure, now owned by Snowflake.",
+  "description": "Crunchy Bridge is the managed PostgreSQL service from Crunchy Data, a long-time Postgres contributor whose team joined Snowflake in 2025 and now builds Snowflake Postgres. Bridge runs community Postgres on AWS, Google Cloud or Azure, with superuser-level access, a broad extension set (PostGIS, pgvector, pg_cron, pg_partman), per-minute billing and strong support from Postgres experts. Its analytics offering embeds a DuckDB-based engine to query and write Iceberg and Parquet data in object storage from Postgres. Bridge remains on sale and supported, but new feature investment is now directed at Snowflake Postgres, so weigh the roadmap if you are starting fresh.",
+  "productType": "managed-service",
+  "status": "active",
+  "statusNote": "Crunchy Data was acquired by Snowflake in June 2025; Bridge is still sold and supported while the team builds Snowflake Postgres.",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "spatial", "vector"],
+  "workloads": ["oltp", "geospatial", "vector-search", "lakehouse"],
+  "architecture": ["primary-replica", "client-server"],
+  "developer": "Crunchy Data (Snowflake)",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "writtenIn": ["C", "Go"],
+  "basedOn": "PostgreSQL",
+  "license": { "type": "proprietary", "name": "Proprietary (managed service; engine is PostgreSQL License)" },
+  "pricing": {
+    "models": ["usage-based"],
+    "freeTier": false,
+    "notes": "Billed per minute for compute and storage, invoiced monthly; low-cost hobby instances; backups included."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws", "gcp", "azure"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Crunchy Bridge", "provider": "Crunchy Data (Snowflake)", "url": "https://www.crunchydata.com/products/crunchy-bridge" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Vertical scaling with HA standby and read replicas, including cross-region and cross-cloud replicas."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["PostgreSQL wire protocol", "Platform REST API", "CLI (cb)"],
+  "compatibleWith": ["postgresql", "s3"],
+  "drivers": ["Java", "Python", "JavaScript", "Go", "Ruby", "C#", "PHP", "Rust"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs on AWS, GCP or Azure with cross-cloud replicas",
+    "Superuser-level access and a wide extension catalog",
+    "Postgres expert support from long-time core contributors",
+    "Iceberg/Parquet analytics from Postgres via an embedded DuckDB engine",
+    "Simple per-minute billing"
+  ],
+  "weaknesses": [
+    "Roadmap uncertainty after the Snowflake acquisition",
+    "No free tier, branching or scale-to-zero",
+    "Single-writer scaling only",
+    "Smaller platform surface than hyperscaler Postgres services"
+  ],
+  "useCases": [
+    "Production Postgres for teams wanting cloud choice",
+    "PostGIS-heavy geospatial applications",
+    "Querying data lakes in Iceberg from Postgres",
+    "Teams that value hands-on Postgres expertise in support"
+  ],
+  "notIdealFor": [
+    "Hobby projects needing a free tier",
+    "Write workloads needing sharding",
+    "Ephemeral preview databases"
+  ],
+  "notableUsers": [],
+  "alternatives": ["amazon-rds", "neon", "supabase", "planetscale", "google-cloud-sql", "azure-database-for-postgresql"],
+  "tags": ["postgres", "managed", "multi-cloud", "snowflake", "iceberg"],
+  "links": {
+    "website": "https://www.crunchydata.com/products/crunchy-bridge",
+    "docs": "https://docs.crunchybridge.com/",
+    "pricing": "https://www.crunchydata.com/pricing"
+  },
+  "ids": {
+    "hackerNewsQuery": "Crunchy Bridge"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.crunchydata.com/products/crunchy-bridge",
+    "https://www.crunchydata.com/blog/crunchy-data-joins-snowflake",
+    "https://www.fool.com/investing/2025/06/04/snowflakes-smart-250-million-acquisition/"
+  ],
+  "lastVerified": "2026-10-27"
+}

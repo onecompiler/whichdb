@@ -1,0 +1,181 @@
+{
+  "slug": "zilliz-cloud",
+  "name": "Zilliz Cloud",
+  "aliases": [
+    "Zilliz"
+  ],
+  "tagline": "Fully managed Milvus from its creators, with serverless, dedicated and BYOC deployments.",
+  "description": "Zilliz Cloud is the commercial managed service from Zilliz, the company behind most Milvus development. It exposes the Milvus API but runs Zilliz's proprietary Cardinal search engine and tiered storage, and offers Free, Serverless (pay per use), Dedicated and BYOC options across AWS, Google Cloud and Azure. Extras over open-source Milvus include automatic index tuning, data migration and import pipelines, backups, RBAC, audit logs and CMEK on Business Critical. Choose it if you want Milvus scale without running etcd, Pulsar/Woodpecker and object storage yourself.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "search"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "full-text-search"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless",
+    "shared-storage"
+  ],
+  "developer": "Zilliz",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "writtenIn": [
+    "Go",
+    "C++"
+  ],
+  "basedOn": "Milvus",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary SaaS"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "Free tier; Serverless pay-as-you-go",
+    "notes": "Free: 5 GB storage and 2.5M vCUs/month. Serverless bills per vCU and storage; Dedicated clusters billed per CU-hour; Business Critical and BYOC via sales."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Zilliz Cloud",
+      "provider": "Zilliz",
+      "url": "https://zilliz.com/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Dedicated clusters scale query and storage capacity independently; tiered storage keeps cold vectors on object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "tunable",
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Milvus API (boolean filter expressions)"
+  ],
+  "apis": [
+    "gRPC",
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "Go",
+    "Node.js",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Milvus-compatible API, so you can move between self-hosted and managed",
+    "Cardinal engine and AutoIndex reduce manual index tuning",
+    "Serverless tier for spiky or small workloads",
+    "Available on all three hyperscalers plus BYOC",
+    "Enterprise controls: SSO, audit logs, CMEK, HIPAA eligibility"
+  ],
+  "weaknesses": [
+    "Proprietary engine means performance differs from open-source Milvus",
+    "Pricing units (vCU/CU) take effort to model",
+    "Cloud-only unless you negotiate BYOC",
+    "Same strict-schema modeling as Milvus"
+  ],
+  "useCases": [
+    "Production RAG without running Milvus",
+    "Large-scale semantic and image search",
+    "Multi-tenant AI SaaS backends"
+  ],
+  "notIdealFor": [
+    "Air-gapped on-prem without BYOC",
+    "Relational or transactional data",
+    "Tiny hobby projects with strict cost caps"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "milvus",
+    "pinecone",
+    "qdrant",
+    "weaviate",
+    "turbopuffer",
+    "vertex-ai-vector-search"
+  ],
+  "tags": [
+    "vector-database",
+    "managed",
+    "milvus",
+    "serverless",
+    "byoc"
+  ],
+  "links": {
+    "website": "https://zilliz.com/cloud",
+    "docs": "https://docs.zilliz.com/",
+    "pricing": "https://zilliz.com/pricing"
+  },
+  "ids": {
+    "hackerNewsQuery": "Zilliz Cloud"
+  },
+  "brand": {},
+  "sources": [
+    "https://zilliz.com/pricing",
+    "https://docs.zilliz.com/",
+    "https://zilliz.com/cloud"
+  ],
+  "lastVerified": "2026-10-27"
+}

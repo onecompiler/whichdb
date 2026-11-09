@@ -1,0 +1,173 @@
+{
+  "slug": "mapdb",
+  "name": "MapDB",
+  "aliases": [
+    "Map<D,B>",
+    "JDBM4"
+  ],
+  "tagline": "Embedded Java database exposing concurrent Maps, Sets and Queues backed by disk or off-heap memory.",
+  "description": "MapDB, by Jan Kotek, is an embedded storage engine for the JVM that hands you familiar java.util collections (HTreeMap, BTreeMap, sets, queues) persisted to a file, to memory-mapped storage or to off-heap memory outside the garbage-collected heap. It grew out of the JDBM project in 2012, and the 3.x line is written in Kotlin and Java. Optional write-ahead-log transactions, snapshots, entry expiration with size or time limits and overflow from memory to disk make it popular as a local cache, an off-heap buffer or a simple embedded key-value store. The last feature release is 3.1.0 (January 2024); 2026 commits on the 3.1 branch only pin dependencies and patch CVEs, so treat it as stable but in maintenance.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Last release 3.1.0 (Jan 2024); 2026 activity is dependency pinning and CVE fixes on the 3.1 branch, with no new feature releases.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Jan Kotek",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "3.1.0",
+    "date": "2024-01-10"
+  },
+  "writtenIn": [
+    "Java",
+    "Kotlin"
+  ],
+  "basedOn": "JDBM",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; the author has offered paid support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single JVM; stores can grow to large files on disk."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java collections API"
+  ],
+  "apis": [
+    "Java API",
+    "Kotlin API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Kotlin"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in persistent replacements for java.util Map, Set and Queue",
+    "Off-heap storage keeps large data out of GC pressure",
+    "Expiration by time or size plus disk overflow for cache use",
+    "Single dependency, Apache-licensed, widely used in JVM projects"
+  ],
+  "weaknesses": [
+    "No feature release since January 2024; maintenance-only",
+    "Transactions are optional and limited; no query language or secondary indexes",
+    "Historic format changes between 1.x, 2.x and 3.x complicate upgrades"
+  ],
+  "useCases": [
+    "Local persistent caches and off-heap buffers in Java services",
+    "Embedded key-value storage in desktop or Android apps",
+    "Spilling large in-memory collections to disk"
+  ],
+  "notIdealFor": [
+    "Multi-process or networked access",
+    "Workloads needing SQL, secondary indexes or strong durability guarantees"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "lmdb",
+    "h2",
+    "ehcache",
+    "chronicle-map",
+    "berkeley-db"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "off-heap",
+    "key-value",
+    "cache"
+  ],
+  "links": {
+    "website": "https://mapdb.org/",
+    "docs": "https://jankotek.gitbooks.io/mapdb/content/",
+    "repository": "https://github.com/jankotek/mapdb"
+  },
+  "ids": {
+    "github": "jankotek/mapdb",
+    "stackoverflowTag": "mapdb",
+    "hackerNewsQuery": "MapDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/jankotek/mapdb",
+    "https://search.maven.org/artifact/org.mapdb/mapdb",
+    "https://mapdb.org/",
+    "https://dbdb.io/db/mapdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

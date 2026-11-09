@@ -1,0 +1,136 @@
+{
+  "slug": "bubba",
+  "name": "Bubba",
+  "aliases": [],
+  "tagline": "MCC's late-1980s shared-nothing parallel database prototype, programmed in the set-oriented FAD language.",
+  "description": "Bubba was a highly parallel database system built as industrial research at the Microelectronics and Computer Technology Corporation (MCC) in Austin, described by Haran Boral, George Copeland, Patrick Valduriez and colleagues in IEEE TKDE in 1990. It ran on a shared-nothing collection of processor-plus-disk nodes and explored how to decluster, place and replicate data across many nodes, how to run queries in parallel close to the data, and how to fold programming-language features into the database through FAD, a functional, set-oriented language over complex objects. Alongside Wisconsin's Gamma it is one of the canonical early shared-nothing prototypes in the parallel-database literature. It was never released, so today it is only of interest for the history of MPP database design.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Industrial research prototype at MCC (late 1980s); never released. Its shared-nothing ideas live on in MPP databases.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "olap",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Microelectronics and Computer Technology Corporation (MCC)",
+  "vendorType": "company",
+  "initialRelease": 1988,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Never released"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Research prototype; never sold or publicly released."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Designed for a shared-nothing cluster of processor/disk nodes; research scale only."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "FAD"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early end-to-end test of shared-nothing parallelism on commodity processor/disk nodes",
+    "Systematic study of data declustering and placement across nodes",
+    "FAD combined complex objects with set-oriented, functional programming inside the database"
+  ],
+  "weaknesses": [
+    "Never released; no code or binaries exist to run",
+    "Research prototype with no production use"
+  ],
+  "useCases": [
+    "Studying the history of parallel database machines",
+    "Background reading for data placement and declustering research"
+  ],
+  "notIdealFor": [
+    "Any practical deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "greenplum",
+    "teradata-vantage",
+    "vertica"
+  ],
+  "tags": [
+    "research",
+    "parallel",
+    "shared-nothing",
+    "mcc",
+    "1980s"
+  ],
+  "links": {
+    "website": "https://doi.org/10.1109/69.50903"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1109/69.50903",
+    "http://dl.acm.org/citation.cfm?id=627396",
+    "https://dbdb.io/db/bubba"
+  ],
+  "lastVerified": "2026-10-27"
+}

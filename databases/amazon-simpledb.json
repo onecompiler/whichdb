@@ -1,0 +1,170 @@
+{
+  "slug": "amazon-simpledb",
+  "name": "Amazon SimpleDB",
+  "aliases": [
+    "SimpleDB",
+    "SDB"
+  ],
+  "tagline": "AWS's original 2007 schemaless attribute store; still running but frozen in time.",
+  "description": "Amazon SimpleDB is one of AWS's earliest data services. It is a schemaless store of items with multi-valued string attributes, grouped into domains, that indexes every attribute automatically and offers a SQL-like Select with eventual or consistent reads. Domains are capped at 10 GB, values are strings (so numbers need zero-padding to sort), and throughput per domain is modest, which is why AWS built DynamoDB as its successor in 2012. SimpleDB still works for existing users through the API, but it has seen no meaningful feature work in over a decade and is not in the AWS console.",
+  "productType": "managed-service",
+  "status": "maintenance",
+  "statusNote": "Still operating for existing users via the API, but frozen for over a decade with no console support; DynamoDB is AWS's NoSQL successor.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "metadata-store",
+    "configuration"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2007,
+  "writtenIn": [
+    "Erlang"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary AWS service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed per machine-hour of request processing, storage and data transfer."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon SimpleDB",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/simpledb/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "10 GB and 1 billion attributes per domain; scale out by partitioning data across domains in the application."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SimpleDB Select (SQL-like)"
+  ],
+  "apis": [
+    "REST",
+    "SOAP"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Ruby",
+    "PHP",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Every attribute is indexed automatically",
+    "No servers or capacity to manage",
+    "Conditional puts and consistent reads when needed"
+  ],
+  "weaknesses": [
+    "10 GB per domain and low per-domain throughput",
+    "All values are strings; numeric sorting needs padding tricks",
+    "No feature development and no console support",
+    "Sparse, aging SDK support"
+  ],
+  "useCases": [
+    "Maintaining legacy AWS applications built on it",
+    "Tiny metadata stores in old systems"
+  ],
+  "notIdealFor": [
+    "Any new application (use DynamoDB)",
+    "Datasets over a few GB"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-dynamodb",
+    "amazon-documentdb",
+    "azure-table-storage"
+  ],
+  "tags": [
+    "aws",
+    "legacy",
+    "key-value",
+    "serverless"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/simpledb/",
+    "docs": "https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html",
+    "pricing": "https://aws.amazon.com/simpledb/pricing/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_SimpleDB"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-simpledb",
+    "wikipedia": "Amazon_SimpleDB",
+    "hackerNewsQuery": "SimpleDB"
+  },
+  "brand": {
+    "color": "#C925D1"
+  },
+  "sources": [
+    "https://aws.amazon.com/simpledb/",
+    "https://docs.aws.amazon.com/AmazonSimpleDB/latest/DeveloperGuide/Welcome.html",
+    "https://en.wikipedia.org/wiki/Amazon_SimpleDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

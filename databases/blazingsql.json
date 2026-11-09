@@ -1,0 +1,166 @@
+{
+  "slug": "blazingsql",
+  "name": "BlazingSQL",
+  "aliases": [
+    "BlazingDB",
+    "Blazing SQL"
+  ],
+  "tagline": "GPU-accelerated SQL engine for Python on RAPIDS cuDF; development ended as its team joined Voltron Data.",
+  "description": "BlazingSQL was an open-source SQL engine that ran queries on NVIDIA GPUs as part of the RAPIDS ecosystem. Python users created a BlazingContext, registered cuDF DataFrames or files (CSV, Parquet and others, locally or in S3/GCS-style object storage) as tables, and got GPU DataFrames back from SQL, so results flowed straight into other RAPIDS libraries; SQL parsing and planning used Apache Calcite, with execution in C++/CUDA over Arrow-format columns. Its company, BlazingDB, open-sourced the engine in 2019, and in 2021 the team helped found Voltron Data around Apache Arrow. The last release, v21.08, appeared in August 2021 and the repository has been idle since, so it should be treated as discontinued.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since September 2021 (last release v21.08); the BlazingSQL team joined Voltron Data in 2021. Consider HeavyDB, DuckDB or Spark RAPIDS.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed"
+  ],
+  "developer": "BlazingDB, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "21.08",
+    "date": "2021-08-16"
+  },
+  "writtenIn": [
+    "C++",
+    "CUDA",
+    "Python",
+    "Java"
+  ],
+  "basedOn": "RAPIDS cuDF and Apache Calcite",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Ran on one or more NVIDIA GPUs, with multi-node execution coordinated through Dask; per-node data bounded by GPU and host memory."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Python API (BlazingContext)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "SQL results land directly in GPU DataFrames for RAPIDS ML and analytics",
+    "Queries Parquet, CSV and other files in local or object storage without loading a database",
+    "Calcite-based planner gave broad SQL coverage",
+    "Apache 2.0 licence"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2021 and pinned to old RAPIDS/CUDA versions",
+    "Requires NVIDIA GPUs and a conda-based install",
+    "Query engine only: no storage, transactions or concurrency control",
+    "Original website and hosted notebooks are gone"
+  ],
+  "useCases": [
+    "Reproducing 2019-2021 GPU SQL benchmarks",
+    "Studying how SQL planners integrate with GPU DataFrame libraries"
+  ],
+  "notIdealFor": [
+    "New GPU analytics projects (use maintained engines)",
+    "Machines without NVIDIA GPUs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "heavydb",
+    "duckdb",
+    "apache-spark-sql",
+    "kinetica",
+    "apache-datafusion"
+  ],
+  "tags": [
+    "gpu",
+    "rapids",
+    "sql",
+    "python",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/BlazingDB/blazingsql",
+    "repository": "https://github.com/BlazingDB/blazingsql",
+    "changelog": "https://github.com/BlazingDB/blazingsql/releases"
+  },
+  "ids": {
+    "github": "BlazingDB/blazingsql",
+    "hackerNewsQuery": "BlazingSQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/BlazingDB/blazingsql",
+    "https://wesmckinney.com/blog/from-ursa-to-voltrondata/",
+    "https://dbdb.io/db/blazingsql"
+  ],
+  "lastVerified": "2026-10-27"
+}

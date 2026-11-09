@@ -1,0 +1,214 @@
+{
+  "slug": "ibm-db2",
+  "name": "IBM Db2",
+  "aliases": [
+    "DB2",
+    "Db2 LUW",
+    "Db2 for z/OS"
+  ],
+  "tagline": "IBM's enterprise RDBMS for Linux, UNIX, Windows and z/OS, with BLU columnar and pureScale clustering.",
+  "description": "IBM Db2 is the relational database family behind a large share of mainframe banking and insurance systems, plus a capable Linux/UNIX/Windows edition. Db2 LUW combines BLU Acceleration (in-memory columnar tables) with row-store OLTP, pureScale shared-disk clustering and HADR replication; Db2 for z/OS is a separate code base tuned for Parallel Sysplex. Recent 12.1 mod packs added a vector data type and, in 12.1.5 (June 2026), DiskANN-based vector indexes plus an AI query optimiser. It is technically solid and very stable, but its ecosystem and hiring pool are shrinking outside IBM-centric enterprises.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "document",
+    "spatial",
+    "vector",
+    "xml"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "data-warehouse",
+    "htap",
+    "vector-search"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "shared-storage",
+    "distributed"
+  ],
+  "developer": "IBM",
+  "vendorType": "company",
+  "initialRelease": 1983,
+  "latestVersion": {
+    "version": "12.1.5 (LUW)",
+    "date": "2026-06"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Licensed by VPC/core or subscription; free Db2 Community Edition with core and memory limits; Db2 on Cloud and Amazon RDS for Db2 are usage-based."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "ibm-cloud",
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix",
+      "mainframe"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "IBM Db2 on Cloud",
+      "provider": "IBM Cloud",
+      "url": "https://www.ibm.com/products/db2/cloud"
+    },
+    {
+      "name": "Amazon RDS for Db2",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/rds/db2/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "pureScale (shared-disk) for OLTP scale-out and database partitioning (DPF) for warehouses; HADR for DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "SQL PL"
+  ],
+  "apis": [
+    "DRDA",
+    "CLI/ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C",
+    "C#",
+    "Python",
+    "JavaScript",
+    "Go",
+    "PHP",
+    "Ruby",
+    "COBOL"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "BLU Acceleration column-organised tables give fast analytics inside an OLTP database",
+    "Adaptive and actual compression routinely cut storage by large factors",
+    "pureScale provides active-active clustering on shared storage for continuous availability",
+    "Db2 for z/OS is the proven system of record for many of the world's largest banks",
+    "SQL compatibility features ease migration from Oracle PL/SQL"
+  ],
+  "weaknesses": [
+    "Smaller community and tooling ecosystem than PostgreSQL, Oracle or SQL Server",
+    "pureScale and z/OS deployments need specialised skills and hardware",
+    "Pricing models (PVU/VPC) are complex",
+    "Docker Hub images are stale; current containers come from IBM's own registry"
+  ],
+  "useCases": [
+    "Mainframe core banking and insurance policy systems",
+    "SAP and other packaged apps on IBM infrastructure",
+    "Operational data warehouses with BLU columnar tables",
+    "Continuous-availability OLTP with pureScale"
+  ],
+  "notIdealFor": [
+    "Greenfield cloud-native startups",
+    "Teams without IBM platform expertise",
+    "Workloads needing a large open-source extension ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-database",
+    "sql-server",
+    "postgresql",
+    "ibm-db2-for-i",
+    "ibm-informix",
+    "edb-postgres-advanced-server"
+  ],
+  "tags": [
+    "sql",
+    "enterprise",
+    "mainframe",
+    "ibm",
+    "columnar"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/products/db2",
+    "docs": "https://www.ibm.com/docs/en/db2/12.1",
+    "pricing": "https://www.ibm.com/products/db2/pricing",
+    "wikipedia": "https://en.wikipedia.org/wiki/IBM_Db2"
+  },
+  "ids": {
+    "stackoverflowTag": "db2",
+    "wikipedia": "IBM Db2",
+    "dockerHub": "ibmcom/db2",
+    "npm": "ibm_db",
+    "pypi": "ibm-db",
+    "hackerNewsQuery": "Db2"
+  },
+  "brand": {
+    "color": "#0F62FE"
+  },
+  "sources": [
+    "https://www.ibm.com/support/pages/node/7278094",
+    "https://www.triton.co.uk/whats-new-in-db2-12-1-5-preparing-for-the-ai-era/",
+    "https://www.ibm.com/products/db2"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,186 @@
+{
+  "slug": "deno-kv",
+  "name": "Deno KV",
+  "aliases": [
+    "Deno.Kv",
+    "denokv"
+  ],
+  "tagline": "Key-value store built into the Deno runtime; its hosted backend ends with Deno Deploy in 2027.",
+  "description": "Deno KV is a key-value database exposed directly in the Deno runtime as Deno.openKv(): keys are ordered tuples, values are structured-cloneable JavaScript, and atomic operations give optimistic-concurrency transactions. Locally it is backed by SQLite; on Deno Deploy it was backed by a globally replicated FoundationDB-based service, and the open-source denokv server lets you self-host it. On 9 October 2026 Deno announced its team is joining Cloudflare and that Deno Deploy will shut down six months later; the runtime gets one more year of maintenance releases. The hosted KV service therefore has an end date, and new projects should choose another store.",
+  "productType": "engine",
+  "status": "deprecated",
+  "statusNote": "Deno announced (Oct 9, 2026) its team is joining Cloudflare; Deno Deploy, the hosted KV backend, shuts down ~6 months later. Self-hosted denokv remains MIT. Consider Durable Objects or Workers KV.",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "edge",
+    "session-store",
+    "queue",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded",
+    "serverless",
+    "client-server"
+  ],
+  "developer": "Deno Land Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "0.14.0",
+    "date": "2026-06-06"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "SQLite (local and self-hosted); FoundationDB (Deno Deploy)",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Local and self-hosted (denokv) use is free; hosted KV is billed through Deno Deploy until its shutdown."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Deno Deploy KV",
+      "provider": "Deno",
+      "url": "https://deno.com/deploy"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Local/self-hosted instances are single-node SQLite; the hosted service replicated reads globally."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Deno KV API"
+  ],
+  "apis": [
+    "Deno.Kv runtime API",
+    "KV Connect protocol (self-hosted)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero setup: built into the Deno runtime with no dependencies",
+    "Atomic operations with versionstamp checks for optimistic transactions",
+    "Ordered tuple keys make prefix and range listing natural",
+    "Watch API for change notifications and expireIn for TTL",
+    "Self-hostable via the open-source denokv server and npm client"
+  ],
+  "weaknesses": [
+    "Hosted backend ends with Deno Deploy's shutdown (~April 2027)",
+    "Queues (enqueue/listenQueue) were already unsupported on the new Deno Deploy",
+    "Small values (64 KiB) and keys (2 KiB) limits",
+    "No secondary indexes or query language"
+  ],
+  "useCases": [
+    "Prototypes and small Deno apps needing persistence",
+    "Local development storage for Deno tools",
+    "Self-hosted denokv for existing Deno KV codebases"
+  ],
+  "notIdealFor": [
+    "New long-lived production projects",
+    "Large datasets or analytics",
+    "Non-Deno runtimes (beyond the npm client)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cloudflare-durable-objects",
+    "cloudflare-workers-kv",
+    "upstash",
+    "turso",
+    "vercel-edge-config"
+  ],
+  "tags": [
+    "deno",
+    "edge",
+    "serverless",
+    "deprecated",
+    "typescript"
+  ],
+  "links": {
+    "website": "https://deno.com/kv",
+    "docs": "https://docs.deno.com/deploy/kv/",
+    "repository": "https://github.com/denoland/denokv",
+    "changelog": "https://github.com/denoland/denokv/releases"
+  },
+  "ids": {
+    "github": "denoland/denokv",
+    "npm": "@deno/kv",
+    "hackerNewsQuery": "Deno KV"
+  },
+  "brand": {
+    "color": "#000000",
+    "simpleIcon": "deno"
+  },
+  "sources": [
+    "https://deno.com/blog/cloudflare",
+    "https://docs.deno.com/deploy/migration_guide/",
+    "https://github.com/denoland/denokv"
+  ],
+  "lastVerified": "2026-10-27"
+}

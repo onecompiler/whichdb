@@ -1,0 +1,171 @@
+{
+  "slug": "zodb",
+  "name": "ZODB",
+  "aliases": [
+    "Zope Object Database"
+  ],
+  "tagline": "Transparent persistence for Python objects with ACID transactions and history.",
+  "description": "ZODB is a native object database for Python. You subclass Persistent, attach objects to a root mapping, and they are saved transparently at transaction commit, with no ORM or schema involved. It provides ACID transactions with optimistic concurrency and conflict resolution, scalable BTrees for large collections, history and undo in FileStorage, and multi-client access through ZEO or RelStorage. It has backed Zope and Plone for over two decades, and the Zope Foundation still ships regular releases (6.4 in October 2026). It fits Python apps with deep object graphs better than tabular data or non-Python consumers.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "content-management"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Zope Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 1998,
+  "latestVersion": {
+    "version": "6.4",
+    "date": "2026-10-12"
+  },
+  "writtenIn": [
+    "Python",
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Zope Public License 2.1",
+    "spdx": "ZPL-2.1"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single storage server (ZEO) or a relational backend via RelStorage; clients cache objects locally."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Python (object traversal)"
+  ],
+  "apis": [
+    "Python API",
+    "ZEO client/server protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Persist arbitrary Python object graphs with no mapping layer",
+    "ACID transactions with optimistic concurrency and conflict resolution hooks",
+    "Object history and undo",
+    "Decades of production use in Zope and Plone"
+  ],
+  "weaknesses": [
+    "Python-only; data is pickles, unreadable from other languages",
+    "No query language; you build indexes yourself (BTrees, catalogs)",
+    "Class renames and refactors need migration care",
+    "FileStorage needs periodic packing"
+  ],
+  "useCases": [
+    "Plone and Zope CMS deployments",
+    "Python apps with complex, deeply nested object models",
+    "Prototyping persistence without designing a schema"
+  ],
+  "notIdealFor": [
+    "Multi-language data access",
+    "Analytics and reporting",
+    "High-concurrency write-heavy web apps"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "postgresql",
+    "mongodb",
+    "objectdb",
+    "gemstone-s"
+  ],
+  "tags": [
+    "python",
+    "object-database",
+    "embedded",
+    "zope"
+  ],
+  "links": {
+    "website": "https://zodb.org/",
+    "docs": "https://zodb-docs.readthedocs.io/",
+    "repository": "https://github.com/zopefoundation/ZODB",
+    "changelog": "https://github.com/zopefoundation/ZODB/blob/master/CHANGES.rst",
+    "wikipedia": "https://en.wikipedia.org/wiki/Zope_Object_Database"
+  },
+  "ids": {
+    "github": "zopefoundation/ZODB",
+    "stackoverflowTag": "zodb",
+    "wikipedia": "Zope_Object_Database",
+    "pypi": "ZODB",
+    "hackerNewsQuery": "ZODB"
+  },
+  "brand": {},
+  "sources": [
+    "https://pypi.org/project/ZODB/",
+    "https://github.com/zopefoundation/ZODB",
+    "https://en.wikipedia.org/wiki/Zope_Object_Database"
+  ],
+  "lastVerified": "2026-10-27"
+}

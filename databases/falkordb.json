@@ -1,0 +1,197 @@
+{
+  "slug": "falkordb",
+  "name": "FalkorDB",
+  "aliases": [],
+  "tagline": "Low-latency graph database using sparse matrices, the maintained successor to RedisGraph.",
+  "description": "FalkorDB is a property-graph database that represents adjacency as sparse matrices and evaluates Cypher queries with linear algebra (GraphBLAS). It started in 2023 as a fork of RedisGraph after Redis announced that product's end of life, runs as a Redis-compatible server and speaks openCypher, and its core has since been rewritten in Rust for the 5.x/6.x line. It targets GraphRAG and agent memory, with vector and full-text indexes, multi-tenant graphs and a managed cloud. Licensing is SSPL, so it is source-available rather than open source.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "rag",
+    "knowledge-graph",
+    "vector-search",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "FalkorDB Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "6.0.3",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Rust",
+    "C"
+  ],
+  "basedOn": "RedisGraph",
+  "license": {
+    "type": "source-available",
+    "name": "Server Side Public License v1",
+    "spdx": "SSPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosting is free under SSPL; FalkorDB Cloud has a free tier and paid plans."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "FalkorDB Cloud",
+      "provider": "FalkorDB",
+      "url": "https://www.falkordb.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Each graph lives in memory on one shard; many independent graphs (multi-tenancy) spread across a cluster."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Cypher"
+  ],
+  "apis": [
+    "Redis protocol (RESP)",
+    "Bolt (experimental)"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "Go",
+    "Rust",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Sparse-matrix (GraphBLAS) execution gives very low traversal latency",
+    "Drop-in path off RedisGraph with the same Redis-protocol command model",
+    "Thousands of isolated graphs per instance suit multi-tenant SaaS and per-user agent memory",
+    "Vector and full-text indexes alongside Cypher for GraphRAG"
+  ],
+  "weaknesses": [
+    "SSPL license restricts offering it as a managed service and is not OSI-approved",
+    "A single graph must fit in one node's memory",
+    "Cypher coverage is narrower than Neo4j's",
+    "Young company and fast-moving codebase after the Rust rewrite"
+  ],
+  "useCases": [
+    "GraphRAG knowledge graphs for LLM apps",
+    "Agent and user memory graphs",
+    "Migrating off RedisGraph",
+    "Real-time recommendation and fraud lookups"
+  ],
+  "notIdealFor": [
+    "Single graphs larger than RAM",
+    "RDF/SPARQL workloads",
+    "Teams needing permissive licensing"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redisgraph",
+    "memgraph",
+    "neo4j",
+    "kuzu",
+    "ladybugdb",
+    "helixdb"
+  ],
+  "tags": [
+    "cypher",
+    "graphblas",
+    "redis-compatible",
+    "graphrag",
+    "in-memory"
+  ],
+  "links": {
+    "website": "https://www.falkordb.com/",
+    "docs": "https://docs.falkordb.com/",
+    "repository": "https://github.com/FalkorDB/FalkorDB",
+    "pricing": "https://www.falkordb.com/plans/",
+    "changelog": "https://github.com/FalkorDB/FalkorDB/releases"
+  },
+  "ids": {
+    "github": "FalkorDB/FalkorDB",
+    "stackoverflowTag": "falkordb",
+    "dockerHub": "falkordb/falkordb",
+    "npm": "falkordb",
+    "pypi": "falkordb",
+    "hackerNewsQuery": "FalkorDB"
+  },
+  "brand": {
+    "color": "#FF5B37"
+  },
+  "sources": [
+    "https://github.com/FalkorDB/FalkorDB/releases",
+    "https://www.falkordb.com/blog/redisgraph-eol-migration-guide/",
+    "https://hub.docker.com/r/falkordb/falkordb"
+  ],
+  "lastVerified": "2026-10-27"
+}

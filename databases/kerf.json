@@ -1,0 +1,172 @@
+{
+  "slug": "kerf",
+  "name": "Kerf",
+  "aliases": [
+    "Kerf1",
+    "Kerf2",
+    "Kerf Software"
+  ],
+  "tagline": "Columnar tick database and array language from Kona's author, with JSON and SQL syntax; open-sourced in 2022.",
+  "description": "Kerf is a K/q-style system for financial time series: an interpreted array language and a columnar tick database in one small C binary, built by Kevin Lawler (author of the Kona K implementation) and first sold commercially by Kerf Software around 2015. Unlike kdb+, it uses JSON literals for data and accepts SQL-like select statements, which makes it gentler for people who do not read K. Tables can live in memory or be memory-mapped to disk for transactional writes, and it targets trading platforms, feed handlers, log processing and real-time analytics. The complete Kerf1 was released under BSD-2-Clause in 2022; Kerf2, a concurrent C++ rewrite, is public but explicitly incomplete. Commits are occasional.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Commercial product open-sourced (BSD-2-Clause) in 2022; occasional maintenance commits since, and the Kerf2 rewrite is unfinished.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "financial-tick-data",
+    "time-series",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Kevin Lawler (Kerf Software)",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 2-Clause License",
+    "spdx": "BSD-2-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix",
+      "ios",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process; memory-mapped tables can exceed RAM up to the virtual address limit."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Kerf language",
+    "SQL-like select"
+  ],
+  "apis": [
+    "Network IPC clients (Java, Node.js, Python, R)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "JavaScript",
+    "Python",
+    "R"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Vector language plus columnar tick store in one small binary",
+    "JSON data literals and SQL-style selects lower the barrier versus kdb+/q",
+    "Memory-mapped on-disk tables with transactional writes",
+    "Permissive BSD license since 2022"
+  ],
+  "weaknesses": [
+    "Essentially a one-person project with sporadic maintenance",
+    "Kerf2 rewrite is incomplete; Kerf1 lacks multi-core concurrency",
+    "Tiny ecosystem and few production references"
+  ],
+  "useCases": [
+    "Experimenting with array-language time-series analytics",
+    "Tick-data research without a kdb+ license",
+    "Log-file and CSV crunching from a REPL"
+  ],
+  "notIdealFor": [
+    "Teams needing a supported, multi-node time-series platform",
+    "General OLTP applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kdb-plus",
+    "questdb",
+    "dolphindb",
+    "clickhouse",
+    "duckdb"
+  ],
+  "tags": [
+    "array-language",
+    "tick-data",
+    "time-series",
+    "finance",
+    "k"
+  ],
+  "links": {
+    "website": "https://github.com/kevinlawler/kerf1",
+    "repository": "https://github.com/kevinlawler/kerf1",
+    "docs": "https://github.com/kevinlawler/kerf1/tree/master/manual"
+  },
+  "ids": {
+    "github": "kevinlawler/kerf1",
+    "hackerNewsQuery": "Kerf tick database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/kevinlawler/kerf1",
+    "https://github.com/kevinlawler/kerf",
+    "https://web.archive.org/web/2016/http://www.kerfsoftware.com/",
+    "https://dbdb.io/db/kerf"
+  ],
+  "lastVerified": "2026-10-27"
+}

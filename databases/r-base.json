@@ -1,0 +1,163 @@
+{
+  "slug": "r-base",
+  "name": "R:BASE",
+  "aliases": [
+    "RBASE",
+    "R:Base",
+    "R:BASE 11",
+    "MicroRim R:BASE"
+  ],
+  "tagline": "Windows desktop relational database and 4GL app builder, sold continuously since the 1980s; now at R:BASE 11.",
+  "description": "R:BASE is a relational database and rapid application development environment for Windows, created by Wayne Erickson in 1981 and first sold by Microrim as R:BASE 4000 for MS-DOS in 1983. In the 1980s it was the main rival to dBASE; since 1998 it has been owned by R:BASE Technologies of Murrysville, Pennsylvania, which still ships regular builds. A single package bundles the database engine, SQL, a 4GL programming language, form, report and label designers, multi-user file sharing and ODBC connectivity, plus a family of companion utilities. R:BASE 11 Update 3 shipped in June 2026, and an AI assistant for plain-English queries was added in September 2026. It suits small businesses and long-lived line-of-business apps that already run on it.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "R:BASE Technologies, Inc.",
+  "vendorType": "company",
+  "initialRelease": 1983,
+  "latestVersion": {
+    "version": "11 Update 3 (11.0.3.20611)",
+    "date": "2026-06-11"
+  },
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Sold per license with update/support plans; a 30-day trial is available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "File-sharing multi-user database on a Windows network share; sized for departmental applications."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "R:BASE 4GL"
+  ],
+  "apis": [
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "All-in-one: database, SQL, 4GL, forms and reports in one Windows package",
+    "More than four decades of backward-compatible applications",
+    "Still actively maintained with frequent update builds",
+    "Low barrier for small businesses building line-of-business apps"
+  ],
+  "weaknesses": [
+    "Windows-only desktop/file-share architecture",
+    "Small, ageing ecosystem and developer pool",
+    "Not suited to web-scale, cloud-native or high-concurrency use"
+  ],
+  "useCases": [
+    "Small-business and departmental line-of-business applications",
+    "Maintaining long-running R:BASE applications",
+    "Desktop data entry and reporting tools"
+  ],
+  "notIdealFor": [
+    "Web or SaaS backends",
+    "Large or highly concurrent workloads",
+    "Linux or macOS environments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "microsoft-access",
+    "filemaker",
+    "4d",
+    "sqlite"
+  ],
+  "tags": [
+    "desktop",
+    "windows",
+    "4gl",
+    "rad",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.rbase.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/R:Base",
+    "changelog": "https://www.rbase.com/news/"
+  },
+  "ids": {
+    "wikipedia": "R:Base",
+    "hackerNewsQuery": "R:BASE database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.rbase.com/",
+    "https://www.rbase.com/news/",
+    "https://www.rbase.com/rbg11/require.php",
+    "https://en.wikipedia.org/wiki/R:Base"
+  ],
+  "lastVerified": "2026-10-27"
+}

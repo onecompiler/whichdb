@@ -1,0 +1,195 @@
+{
+  "slug": "google-bigquery",
+  "name": "Google BigQuery",
+  "aliases": [
+    "BigQuery",
+    "BQ"
+  ],
+  "tagline": "Google's serverless, pay-per-query data warehouse built on Dremel and Colossus.",
+  "description": "BigQuery is Google Cloud's serverless analytics warehouse: you load or stream data into tables (or point it at Iceberg and other open formats via BigLake) and run SQL without provisioning any cluster. Queries fan out across thousands of Dremel workers, so scanning terabytes in seconds is routine. It pairs well with the rest of GCP (Pub/Sub, Dataflow, Looker, Vertex AI) and offers in-SQL ML, vector search and geospatial functions. The main thing to manage is cost: on-demand pricing bills bytes scanned, so partitioning, clustering and reservations matter.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Google",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "startingPrice": "$6.25 per TiB scanned (on-demand)",
+    "notes": "First 1 TiB of queries and 10 GiB storage free each month; capacity (slot) reservations via editions."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Multi-region datasets (US/EU) and cross-region dataset replication; compute scales automatically by slots."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "GoogleSQL",
+    "Legacy SQL",
+    "Python (BigQuery DataFrames)"
+  ],
+  "apis": [
+    "REST API",
+    "Storage Read/Write API (gRPC)",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "Go",
+    "JavaScript",
+    "C#",
+    "Ruby",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Truly serverless: no clusters, nodes or vacuuming to manage",
+    "Scans terabytes in seconds thanks to Dremel's massive fan-out",
+    "Generous free tier and per-query billing suit sporadic workloads",
+    "BigQuery ML, vector search and Gemini functions directly in SQL",
+    "Streaming inserts via the Storage Write API land data within seconds",
+    "Tight integration with Looker, Dataflow, Pub/Sub and Vertex AI"
+  ],
+  "weaknesses": [
+    "On-demand cost scales with bytes scanned; careless SELECT * gets expensive",
+    "Only available on Google Cloud (Omni for other clouds is limited)",
+    "DML quotas and per-query latency make it a poor fit for point lookups",
+    "Slot contention can add unpredictable latency on shared reservations"
+  ],
+  "useCases": [
+    "Cloud data warehouse on GCP",
+    "Marketing and product analytics (GA4 export)",
+    "Log and event analytics",
+    "Ad-hoc exploration of very large datasets",
+    "In-database ML with BigQuery ML"
+  ],
+  "notIdealFor": [
+    "Transactional workloads",
+    "Low-latency point reads",
+    "Multi-cloud or on-prem requirements"
+  ],
+  "notableUsers": [
+    "Spotify",
+    "The Home Depot"
+  ],
+  "alternatives": [
+    "snowflake",
+    "amazon-redshift",
+    "databricks-sql",
+    "microsoft-fabric-warehouse",
+    "amazon-athena",
+    "clickhouse"
+  ],
+  "tags": [
+    "cloud-data-warehouse",
+    "serverless",
+    "gcp",
+    "sql",
+    "pay-per-query"
+  ],
+  "links": {
+    "website": "https://cloud.google.com/bigquery",
+    "docs": "https://cloud.google.com/bigquery/docs",
+    "pricing": "https://cloud.google.com/bigquery/pricing",
+    "changelog": "https://cloud.google.com/bigquery/docs/release-notes",
+    "wikipedia": "https://en.wikipedia.org/wiki/BigQuery"
+  },
+  "ids": {
+    "stackoverflowTag": "google-bigquery",
+    "wikipedia": "BigQuery",
+    "npm": "@google-cloud/bigquery",
+    "pypi": "google-cloud-bigquery",
+    "hackerNewsQuery": "BigQuery"
+  },
+  "brand": {
+    "color": "#669DF6",
+    "simpleIcon": "googlebigquery"
+  },
+  "sources": [
+    "https://cloud.google.com/bigquery",
+    "https://cloud.google.com/bigquery/pricing",
+    "https://en.wikipedia.org/wiki/BigQuery"
+  ],
+  "lastVerified": "2026-10-27"
+}

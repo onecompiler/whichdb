@@ -1,0 +1,148 @@
+{
+  "slug": "metalbase",
+  "name": "MetalBase",
+  "aliases": [],
+  "tagline": "Early-1990s freeware relational DBMS in C with curses data entry and a report writer; archive only.",
+  "description": "MetalBase was a small relational database package written in C by Richard P. Jernigan IV and shared over FTP and Usenet in the early 1990s. Version 5.0 (1992) bundled a C library with AVL-tree indexes and file locking, a curses-based data-entry interface, a template-driven report writer, field encryption and a converter for older 4.x relation files, and it built on Unix as well as MS-DOS. Development stopped in the mid-1990s; the only known copy of the source is a 2018 archive mirror created while researching dbdb.io, and its original license terms are unknown. It is a museum piece showing how hobbyist databases were built before MySQL and SQLite.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Abandoned in the mid-1990s; only an archived source mirror (apavlo/metalbase) remains.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Richard P. Jernigan IV",
+  "vendorType": "community",
+  "initialRelease": 1992,
+  "latestVersion": {
+    "version": "5.0",
+    "date": "1992"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Unknown (freeware; original terms not preserved)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Distributed free of charge; source available only from an archive mirror."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API",
+    "curses UI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Compact, readable C codebase from the pre-SQLite era",
+    "Shows a complete small RDBMS toolkit: library, data entry UI and report writer"
+  ],
+  "weaknesses": [
+    "Abandoned for three decades with unclear licensing",
+    "No SQL, no transactions and only basic locking"
+  ],
+  "useCases": [
+    "Database history and teaching",
+    "Reading a small AVL-tree index implementation"
+  ],
+  "notIdealFor": [
+    "Any production or new project"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "berkeley-db",
+    "dbase"
+  ],
+  "tags": [
+    "historical",
+    "c",
+    "freeware",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/apavlo/metalbase",
+    "repository": "https://github.com/apavlo/metalbase"
+  },
+  "ids": {
+    "github": "apavlo/metalbase"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apavlo/metalbase",
+    "https://github.com/apavlo/metalbase/blob/master/README",
+    "https://dbdb.io/db/metalbase"
+  ],
+  "lastVerified": "2026-10-27"
+}

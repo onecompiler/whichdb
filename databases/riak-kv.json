@@ -1,0 +1,189 @@
+{
+  "slug": "riak-kv",
+  "name": "Riak KV",
+  "aliases": [
+    "Riak",
+    "OpenRiak"
+  ],
+  "tagline": "Erlang-based, Dynamo-style key-value store built to stay up through ugly failures.",
+  "description": "Riak KV is a masterless, Dynamo-inspired key-value database written in Erlang: consistent hashing spreads data over a ring, sloppy quorums and hinted handoff keep writes flowing through node failures, and active anti-entropy repairs divergence in the background. Basho, its creator, collapsed in 2017; bet365 bought the IP and open-sourced the enterprise replication features, and development now continues as OpenRiak in conjunction with the Erlang Ecosystem Foundation, with 3.4.x releases in 2026. It is still a solid choice for high-availability blob and record storage where you can live with eventual consistency, but its ecosystem is small compared to Cassandra or DynamoDB.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "session-store",
+    "metadata-store",
+    "content-management"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "OpenRiak (Erlang Ecosystem Foundation)",
+  "vendorType": "community",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "3.4.1",
+    "date": "2026-06-29"
+  },
+  "writtenIn": [
+    "Erlang",
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial support available from independent consultancies."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Ring-based partitioning; multi-datacenter replication (formerly enterprise-only) is open source since 2.2.5/3.0."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual",
+      "causal"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Riak HTTP API",
+    "Protocol Buffers API"
+  ],
+  "apis": [
+    "HTTP/REST",
+    "Protocol Buffers"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Erlang",
+    "Java",
+    "Python",
+    "Go",
+    "C#",
+    "Ruby",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Masterless ring keeps accepting writes during node and network failures",
+    "Active anti-entropy and read repair heal replicas automatically",
+    "Built-in CRDT data types (counters, sets, maps) for conflict-free merges",
+    "Open-source multi-datacenter replication",
+    "Erlang/OTP gives predictable behaviour under overload"
+  ],
+  "weaknesses": [
+    "Eventual consistency forces applications to handle siblings or use CRDTs",
+    "Small community and few client libraries are actively maintained",
+    "No rich query language; secondary indexes are basic",
+    "Basho-era documentation and tooling are dated"
+  ],
+  "useCases": [
+    "Highly available session and profile storage",
+    "Healthcare or betting systems needing extreme uptime",
+    "Object and blob metadata stores",
+    "Shopping carts with CRDT merges"
+  ],
+  "notIdealFor": [
+    "Strongly consistent transactional workloads",
+    "Ad-hoc querying and analytics",
+    "Teams without Erlang operational experience"
+  ],
+  "notableUsers": [
+    "bet365",
+    "NHS England"
+  ],
+  "alternatives": [
+    "apache-cassandra",
+    "scylladb",
+    "amazon-dynamodb",
+    "foundationdb",
+    "aerospike"
+  ],
+  "tags": [
+    "dynamo-style",
+    "erlang",
+    "masterless",
+    "crdt",
+    "high-availability"
+  ],
+  "links": {
+    "website": "https://github.com/OpenRiak",
+    "docs": "https://docs.riak.com/riak/kv/latest/",
+    "repository": "https://github.com/OpenRiak/riak",
+    "changelog": "https://github.com/OpenRiak/riak/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Riak"
+  },
+  "ids": {
+    "github": "OpenRiak/riak",
+    "stackoverflowTag": "riak",
+    "wikipedia": "Riak",
+    "hackerNewsQuery": "Riak"
+  },
+  "brand": {
+    "color": "#F15A29"
+  },
+  "sources": [
+    "https://github.com/OpenRiak/riak",
+    "https://github.com/OpenRiak/riak/releases",
+    "https://github.com/basho/riak"
+  ],
+  "lastVerified": "2026-10-27"
+}

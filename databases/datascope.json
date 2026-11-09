@@ -1,0 +1,156 @@
+{
+  "slug": "datascope",
+  "name": "Datascope",
+  "aliases": [
+    "Antelope Datascope"
+  ],
+  "tagline": "Flat-file relational database at the heart of BRTT's Antelope seismic and environmental monitoring suite.",
+  "description": "Datascope is the relational database layer of Antelope, the environmental and seismic monitoring software sold by Boulder Real Time Technologies (BRTT). It grew out of tools that Dan Quinlan and Danny Harvey wrote for the IRIS Joint Seismic Program to manage large volumes of continuous seismograms. Each table is a plain ASCII file of fixed-width, space-separated records, one per line, and a separate schema file defines the tables and their fields, typically the CSS 3.0 seismic schema with local extensions. Relational operations such as subset, join, sort and group are available as command-line tools, a GUI browser and C, Perl and Tcl libraries, so analysts can inspect and fix data with ordinary text tools. It remains in use wherever Antelope runs seismic networks and field data pipelines.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Ships as the database layer of BRTT's commercial Antelope software rather than as a standalone product.",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "scientific",
+    "time-series"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Boulder Real Time Technologies (BRTT)",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (part of Antelope)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensed with Antelope from BRTT; academic seismology users have historically received licenses through IRIS."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Tables are flat files on local disk; sized for network catalogs and waveform metadata."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Datascope expressions and command-line operators"
+  ],
+  "apis": [
+    "C library",
+    "Perl interface",
+    "Tcl interface",
+    "Command-line tools"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Perl",
+    "Tcl"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tables are human-readable ASCII files that standard text tools can inspect and repair",
+    "Built around the CSS 3.0 seismic schema used across the seismology community",
+    "Relational operators available as composable command-line tools",
+    "Tightly integrated with Antelope's real-time acquisition and processing"
+  ],
+  "weaknesses": [
+    "Proprietary and tied to the Antelope ecosystem",
+    "Flat-file storage offers no concurrency control or transactions",
+    "Niche outside seismology and environmental monitoring"
+  ],
+  "useCases": [
+    "Seismic network catalogs, station metadata and waveform indexes",
+    "Field data management for temporary seismic deployments",
+    "Environmental monitoring pipelines built on Antelope"
+  ],
+  "notIdealFor": [
+    "General application backends",
+    "High-concurrency OLTP",
+    "Teams outside the Antelope ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "sqlite",
+    "timescaledb"
+  ],
+  "tags": [
+    "seismology",
+    "scientific",
+    "flat-file",
+    "antelope"
+  ],
+  "links": {
+    "website": "https://brtt.com/products/antelope"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://ds.iris.edu/ds/newsletter/vol4/no2/268/using-antelope-for-passcal-field-data-management/",
+    "https://brtt.com/products/antelope",
+    "https://dbdb.io/db/datascope"
+  ],
+  "lastVerified": "2026-10-27"
+}

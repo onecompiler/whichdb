@@ -1,0 +1,164 @@
+{
+  "slug": "kirbybase",
+  "name": "KirbyBase",
+  "aliases": [
+    "Kirby Base"
+  ],
+  "tagline": "Tiny pure-Ruby and pure-Python DBMS that stores tables as plain-text files.",
+  "description": "KirbyBase is Jamey Cribbs's small database management system, written once in pure Python and again in pure Ruby, that keeps each table as a human-readable delimited text file. You define typed fields, then insert, update and select records; the Ruby version uses code blocks as query predicates, supports lookups and links between tables, computed fields and indexes, and can run embedded in a script or as a simple client-server process. It was popular in the mid-2000s Ruby scene for scripts and small apps that wanted structure without SQLite. The last Ruby gem (2.6.1) dates from 2012 and the Python package stopped at 1.9; the original netpromi.com site is gone.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No releases since the 2.6.1 Ruby gem (2012); original site offline. Use SQLite or a small JSON store instead.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Jamey Cribbs (NetPro Technologies)",
+  "vendorType": "community",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "2.6.1 (Ruby gem)",
+    "date": "2012-04-17"
+  },
+  "writtenIn": [
+    "Ruby",
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Ruby License (Ruby); PSF License (Python)"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Plain-text files; fine for thousands of records, slow beyond that."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Ruby blocks",
+    "Python API"
+  ],
+  "apis": [
+    "Ruby API",
+    "Python API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Ruby",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Data files are plain text you can read and edit by hand",
+    "Pure Ruby/Python with no native dependencies",
+    "Ruby blocks as query predicates feel natural in scripts",
+    "Embedded or simple client-server modes"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2012",
+    "No transactions or crash safety; whole-file rewrites",
+    "Performance falls off quickly as tables grow"
+  ],
+  "useCases": [
+    "Legacy Ruby or Python scripts already using it",
+    "Teaching what a minimal DBMS needs"
+  ],
+  "notIdealFor": [
+    "Concurrent or multi-user applications",
+    "Any dataset beyond a few megabytes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "tinydb",
+    "lowdb",
+    "lazer",
+    "sleekdb"
+  ],
+  "tags": [
+    "ruby",
+    "python",
+    "plain-text",
+    "embedded",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://rubygems.org/gems/KirbyBase",
+    "repository": "https://github.com/manveru/KirbyBase"
+  },
+  "ids": {
+    "hackerNewsQuery": "KirbyBase"
+  },
+  "brand": {},
+  "sources": [
+    "https://rubygems.org/gems/KirbyBase",
+    "https://pypi.org/project/kirbybase/",
+    "https://github.com/manveru/KirbyBase",
+    "https://web.archive.org/web/2008/http://www.netpromi.com/kirbybase_ruby.html",
+    "https://dbdb.io/db/kirbybase"
+  ],
+  "lastVerified": "2026-10-27"
+}

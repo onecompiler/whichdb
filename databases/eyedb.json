@@ -1,0 +1,100 @@
+{
+  "slug": "eyedb",
+  "name": "EyeDB",
+  "aliases": ["IDB", "EyeDB Object Database"],
+  "tagline": "French open-source object database with ODL schemas, OQL queries and C++/Java bindings, born at Genethon.",
+  "description": "EyeDB is an object database management system that grew out of IDB, a 1992 prototype built at the Genethon genome-research laboratory in France to manage genomic data, and was rewritten and renamed EyeDB in 1994. Developed later by SYSRA, it offers a rich object model with inheritance, collections, arrays, methods, triggers and constraints; schemas are written in an ODMG-style Object Definition Language and data is queried with OQL, through native C++ and Java bindings plus Python via SWIG. It was released under the LGPL, with the OQL command-line interpreter under the GPL, and distributed on SourceForge, where the last tarball is 2.8.8 from 2010. A 2018-2019 GitHub import exists, but eyedb.org is now a parked domain and nothing has moved since.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last SourceForge release 2.8.8 (2010); GitHub mirror idle since 2019 and eyedb.org is parked.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": ["object"],
+  "workloads": ["scientific", "oltp"],
+  "architecture": ["client-server"],
+  "developer": "SYSRA (originally Genethon Laboratories)",
+  "vendorType": "company",
+  "initialRelease": 1994,
+  "latestVersion": { "version": "2.8.8", "date": "2010-05" },
+  "writtenIn": ["C++"],
+  "license": { "type": "copyleft", "name": "GNU LGPL v2.1 (OQL interpreter under GPL)", "spdx": "LGPL-2.1-or-later" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "unix"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["OQL", "ODL"],
+  "apis": ["C++ API", "Java API", "Python (SWIG)"],
+  "compatibleWith": [],
+  "drivers": ["C++", "Java", "Python"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full ODMG-style object model: inheritance, collections, arrays, methods, triggers and constraints",
+    "Declarative OQL queries over objects, not just navigation",
+    "Open source (LGPL) with native C++ and Java bindings",
+    "Designed for complex scientific (genomic) data"
+  ],
+  "weaknesses": [
+    "No release since 2010 and no active maintainers",
+    "Builds target old compilers and JDKs; little surviving documentation",
+    "Tiny user community compared with relational or modern document stores"
+  ],
+  "useCases": [
+    "Studying ODMG-era object database design",
+    "Maintaining legacy bioinformatics systems built on EyeDB"
+  ],
+  "notIdealFor": ["New applications", "Distributed or cloud deployments"],
+  "notableUsers": [],
+  "alternatives": ["objectstore", "versant-object-database", "objectivity-db", "db4o", "gemstone-s", "zodb"],
+  "tags": ["object-database", "oql", "odmg", "bioinformatics", "france"],
+  "links": {
+    "website": "https://sourceforge.net/projects/eyedb/",
+    "repository": "https://github.com/eyedb/eyedb"
+  },
+  "ids": {
+    "github": "eyedb/eyedb"
+  },
+  "brand": {},
+  "sources": [
+    "https://sourceforge.net/projects/eyedb/",
+    "https://github.com/eyedb/eyedb",
+    "https://dbdb.io/db/eyedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

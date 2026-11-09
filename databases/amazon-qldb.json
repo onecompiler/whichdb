@@ -1,0 +1,156 @@
+{
+  "slug": "amazon-qldb",
+  "name": "Amazon QLDB",
+  "aliases": [
+    "Quantum Ledger Database",
+    "QLDB"
+  ],
+  "tagline": "AWS's serverless ledger database with a cryptographically verifiable journal, retired in July 2025.",
+  "description": "Amazon Quantum Ledger Database was a fully managed ledger service: an immutable, append-only journal hashed into a verifiable chain, with documents in Amazon Ion queried through PartiQL, built-in history views and journal streaming to Kinesis. It targeted systems of record that need a trustworthy change history without running a blockchain. AWS announced its retirement in 2024 and ended support on 31 July 2025, and directed customers to Aurora PostgreSQL with audit extensions. It is listed here for migration context only.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "AWS ended support for QLDB on 31 July 2025; customers were directed to migrate to Amazon Aurora PostgreSQL.",
+  "maturity": "legacy",
+  "primaryModel": "ledger",
+  "models": [
+    "ledger",
+    "document"
+  ],
+  "workloads": [
+    "ledger",
+    "oltp"
+  ],
+  "architecture": [
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (AWS service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Service retired; no longer billable or available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "PartiQL"
+  ],
+  "apis": [
+    "QLDB Session API",
+    "AWS SDK"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Node.js",
+    "Go",
+    ".NET"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Cryptographically verifiable, append-only journal",
+    "Built-in history() queries over every document revision",
+    "Serverless with no capacity management"
+  ],
+  "weaknesses": [
+    "Retired by AWS in 2025; no new workloads possible",
+    "Low transaction limits and OCC conflicts under contention",
+    "Ion/PartiQL tooling was niche"
+  ],
+  "useCases": [
+    "Historical reference when migrating legacy QLDB ledgers",
+    "Comparing ledger designs against immudb or TigerBeetle"
+  ],
+  "notIdealFor": [
+    "Any new project"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "immudb",
+    "amazon-aurora",
+    "tigerbeetle",
+    "postgresql",
+    "xtdb"
+  ],
+  "tags": [
+    "aws",
+    "ledger",
+    "serverless",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/qldb/",
+    "docs": "https://docs.aws.amazon.com/qldb/latest/developerguide/"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-qldb",
+    "hackerNewsQuery": "Amazon QLDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.infoq.com/news/2024/07/aws-kill-qldb/",
+    "https://docs.aws.amazon.com/qldb/latest/developerguide/",
+    "https://repost.aws/questions/QUaY32ffDmSoajSETUhEfbJg/why-has-aws-decided-to-abandon"
+  ],
+  "lastVerified": "2026-10-27"
+}

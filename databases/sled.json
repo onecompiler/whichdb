@@ -1,0 +1,159 @@
+{
+  "slug": "sled",
+  "name": "sled",
+  "aliases": [],
+  "tagline": "Ambitious lock-free embedded Rust database whose 1.0 rewrite has stalled in alpha.",
+  "description": "sled is an embedded key-value store for Rust that popularised modern lock-free, log-structured B-tree ideas in the Rust ecosystem, with an API similar to a thread-safe BTreeMap plus transactions, watch subscriptions and merge operators. The stable 0.34.x line dates from 2021, and the author's ground-up 1.0 rewrite has been in alpha since 2024 with only sporadic commits since. The project calls itself beta software and warns of high space usage and an unstable on-disk format. Many Rust projects have moved to redb or Fjall; sled remains interesting as a design reference.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Stable 0.34.7 is from 2021; the 1.0 rewrite has sat at alpha since 2024 with only occasional commits. redb or Fjall are common replacements.",
+  "maturity": "emerging",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Tyler Neely",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "0.34.7",
+    "date": "2021-09-12"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT or Apache License 2.0",
+    "spdx": "MIT OR Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Rust API"
+  ],
+  "apis": [
+    "Rust API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Thread-safe BTreeMap-like API that is pleasant to use from Rust",
+    "Watch-prefix subscriptions and merge operators",
+    "Serializable multi-tree transactions",
+    "Influential lock-free storage design"
+  ],
+  "weaknesses": [
+    "Beta quality by the author's own description; on-disk format not stable",
+    "High disk space usage compared with alternatives",
+    "Development has largely stalled",
+    "Rust-only"
+  ],
+  "useCases": [
+    "Prototypes and hobby projects in Rust",
+    "Studying lock-free storage engine design"
+  ],
+  "notIdealFor": [
+    "Production data you cannot afford to lose",
+    "Long-lived on-disk formats",
+    "Non-Rust applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redb",
+    "fjall",
+    "rocksdb",
+    "lmdb"
+  ],
+  "tags": [
+    "rust",
+    "embedded",
+    "lock-free",
+    "beta"
+  ],
+  "links": {
+    "website": "https://sled.rs/",
+    "docs": "https://docs.rs/sled",
+    "repository": "https://github.com/spacejam/sled",
+    "changelog": "https://github.com/spacejam/sled/blob/main/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "spacejam/sled",
+    "crates": "sled",
+    "hackerNewsQuery": "sled database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/spacejam/sled",
+    "https://crates.io/crates/sled"
+  ],
+  "lastVerified": "2026-10-27"
+}

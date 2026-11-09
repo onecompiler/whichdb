@@ -1,0 +1,171 @@
+{
+  "slug": "cloudflare-vectorize",
+  "name": "Cloudflare Vectorize",
+  "aliases": [
+    "Vectorize"
+  ],
+  "tagline": "Globally distributed serverless vector index for Cloudflare Workers and Workers AI.",
+  "description": "Vectorize is Cloudflare's managed vector database, queried from Workers through a binding or over the REST API, and designed to pair with Workers AI embedding models, R2 and D1 for RAG at the edge. Indexes hold up to 20 million vectors of up to 1,536 dimensions with metadata filtering on up to 10 indexed fields and namespaces for tenant isolation. Pricing is based on queried and stored vector dimensions, with a free allowance on the Workers Free plan. It is the obvious choice inside a Cloudflare stack, but limits on index size, topK and dimensions rule it out for large or high-dimensional workloads.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "edge"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed"
+  ],
+  "developer": "Cloudflare",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Cloudflare service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "startingPrice": "$0.01 per 1M queried dimensions",
+    "notes": "Workers Free: 30M queried and 5M stored dimensions/month. Workers Paid includes 50M queried and 10M stored, then $0.01/1M queried and $0.05/100M stored dimensions."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "cloudflare"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Vectorize",
+      "provider": "Cloudflare",
+      "url": "https://developers.cloudflare.com/vectorize/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Up to 20M vectors per index and 50,000 indexes per account on Workers Paid; topK capped at 100 (50 with metadata)."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Vectorize Workers binding API",
+    "REST API"
+  ],
+  "apis": [
+    "Workers binding",
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript",
+    "Python (Workers)"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-ops vector search callable directly from Workers",
+    "Pairs with Workers AI embeddings, R2 and D1 for full RAG on Cloudflare",
+    "Generous free allowance and dimension-based pricing",
+    "Namespaces and metadata indexes for multi-tenant filtering"
+  ],
+  "weaknesses": [
+    "Hard limits: 20M vectors/index, 1,536 dims, topK 100",
+    "Writes are asynchronous and not immediately queryable",
+    "No full-text or hybrid search",
+    "Cloudflare-only"
+  ],
+  "useCases": [
+    "RAG chatbots on Cloudflare Workers",
+    "Semantic search for edge-hosted sites",
+    "Per-tenant knowledge bases in Workers apps"
+  ],
+  "notIdealFor": [
+    "Indexes beyond 20M vectors",
+    "High-dimensional embeddings over 1,536 dims",
+    "Hybrid keyword ranking"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pinecone",
+    "turbopuffer",
+    "amazon-s3-vectors",
+    "upstash",
+    "sqlite-vec",
+    "qdrant"
+  ],
+  "tags": [
+    "vector-search",
+    "serverless",
+    "edge",
+    "cloudflare",
+    "workers"
+  ],
+  "links": {
+    "website": "https://developers.cloudflare.com/vectorize/",
+    "docs": "https://developers.cloudflare.com/vectorize/",
+    "pricing": "https://developers.cloudflare.com/vectorize/platform/pricing/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Cloudflare Vectorize"
+  },
+  "brand": {
+    "color": "#F38020",
+    "simpleIcon": "cloudflare"
+  },
+  "sources": [
+    "https://developers.cloudflare.com/vectorize/platform/limits/",
+    "https://developers.cloudflare.com/vectorize/platform/pricing/"
+  ],
+  "lastVerified": "2026-10-27"
+}

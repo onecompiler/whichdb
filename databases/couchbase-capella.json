@@ -1,0 +1,191 @@
+{
+  "slug": "couchbase-capella",
+  "name": "Couchbase Capella",
+  "aliases": [
+    "Capella"
+  ],
+  "tagline": "Couchbase's managed DBaaS: Couchbase Server clusters plus App Services sync and AI tooling.",
+  "description": "Couchbase Capella is the fully managed form of Couchbase Server on AWS, Google Cloud and Azure. Couchbase runs the clusters, upgrades and backups, and you keep SQL++, the memory-first key-value path, full-text and vector search, and XDCR. Capella adds App Services, which syncs data to Couchbase Lite on mobile and edge devices, plus Capella Analytics for columnar analysis and Capella iQ for AI-assisted query writing. New operational clusters run Couchbase Server 8.0.3 as of September 2026. It suits teams that want Couchbase's latency and offline-sync story without operating a multi-service cluster themselves.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value",
+    "search",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "session-store",
+    "mobile-offline",
+    "edge",
+    "vector-search",
+    "full-text-search"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "Couchbase, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "writtenIn": [
+    "C++",
+    "Erlang",
+    "Go",
+    "Java"
+  ],
+  "basedOn": "Couchbase Server",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary managed service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free-tier operational cluster for development; paid clusters billed hourly by node size, with credits or committed contracts."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Couchbase Capella",
+      "provider": "Couchbase, Inc.",
+      "url": "https://www.couchbase.com/products/capella/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Clusters scale to 50 nodes on GCP and Azure (more on request); XDCR links clusters across regions and clouds."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL++ (N1QL)",
+    "Full Text Search query DSL"
+  ],
+  "apis": [
+    "Key-value binary protocol",
+    "REST",
+    "Capella Management API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C#",
+    "Go",
+    "Java",
+    "Kotlin",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Couchbase's memory-first latency without running the cluster yourself",
+    "App Services provides managed sync to Couchbase Lite for offline-first apps",
+    "Available on all three major clouds with XDCR between them",
+    "Customer-managed keys, private networking and fine-grained RBAC"
+  ],
+  "weaknesses": [
+    "Pricing is opaque compared with per-request serverless databases",
+    "No true serverless or scale-to-zero option for operational clusters",
+    "Smaller ecosystem of integrations than Atlas or the hyperscaler services"
+  ],
+  "useCases": [
+    "Managed backends for mobile apps with offline sync",
+    "Low-latency profile, session and catalog stores",
+    "Multi-cloud deployments using XDCR"
+  ],
+  "notIdealFor": [
+    "Hobby projects that outgrow the free tier but have tiny budgets",
+    "Teams that need to run on-premises (use Couchbase Server)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "couchbase",
+    "mongodb-atlas",
+    "azure-cosmos-db",
+    "amazon-dynamodb",
+    "google-cloud-firestore"
+  ],
+  "tags": [
+    "dbaas",
+    "document",
+    "mobile-sync",
+    "multi-cloud"
+  ],
+  "links": {
+    "website": "https://www.couchbase.com/products/capella/",
+    "docs": "https://docs.couchbase.com/cloud/index.html",
+    "pricing": "https://www.couchbase.com/pricing/",
+    "changelog": "https://docs.couchbase.com/cloud/release-notes/release-notes.html"
+  },
+  "ids": {
+    "hackerNewsQuery": "Couchbase Capella"
+  },
+  "brand": {
+    "color": "#EA2328",
+    "simpleIcon": "couchbase"
+  },
+  "sources": [
+    "https://docs.couchbase.com/cloud/release-notes/release-notes.html",
+    "https://www.couchbase.com/products/capella/",
+    "https://www.couchbase.com/pricing/"
+  ],
+  "lastVerified": "2026-10-27"
+}

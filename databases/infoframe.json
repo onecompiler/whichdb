@@ -1,0 +1,165 @@
+{
+  "slug": "infoframe",
+  "name": "InfoFrame Relational Store",
+  "aliases": [
+    "InfoFrame",
+    "IRS",
+    "InfoFrame Elastic Relational Store",
+    "IERS",
+    "NEC InfoFrame"
+  ],
+  "tagline": "NEC's scale-out SQL database for OLTP on commodity servers, built on its MicroSharding technique.",
+  "description": "InfoFrame Relational Store was NEC's attempt to sell a scale-out relational database before 'NewSQL' was a common label. It layered an SQL interface and ACID transactions over a key-value style storage tier spread across commodity servers, using NEC Labs America's MicroSharding technique to keep related rows together so most transactions stayed on one node. Servers could be added or removed while the system ran, and stored data could be read directly by Hadoop jobs. It launched in Japan in February 2012 (V2.1 followed that September) and was marketed abroad as InfoFrame Elastic Relational Store, including on AWS. NEC has since pulled the product pages, and no current release or sales channel is visible.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "NEC removed the English product pages around 2022 and the Japanese ones afterwards; no current release is offered. Consider TiDB, CockroachDB or YugabyteDB for scale-out SQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server",
+    "in-memory"
+  ],
+  "developer": "NEC Corporation",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "2.1",
+    "date": "2012-09"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (NEC commercial license)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold in Japan from about 5.1 million yen (minimum configuration) at launch in 2012; no longer marketed."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shared-nothing tiers of transaction and storage servers that could be grown or shrunk online."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "ACID SQL transactions over a horizontally scaled key-value storage tier",
+    "MicroSharding grouped related records so most transactions avoided cross-node coordination",
+    "Nodes could be added or removed without downtime",
+    "Stored data was directly readable from Hadoop MapReduce jobs"
+  ],
+  "weaknesses": [
+    "Withdrawn from sale; no updates, documentation or support channel today",
+    "SQL support was limited (SQL-89 level), far behind modern distributed SQL engines",
+    "Sold mainly in Japan, so almost no community knowledge exists outside NEC customers"
+  ],
+  "useCases": [
+    "Understanding early commercial NewSQL designs",
+    "Maintaining legacy NEC systems that still run it"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Workloads needing modern SQL features or a cloud service"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tidb",
+    "cockroachdb",
+    "yugabytedb",
+    "volt-active-data",
+    "singlestore",
+    "mysql-ndb-cluster"
+  ],
+  "tags": [
+    "newsql",
+    "scale-out",
+    "japan",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20141020195341/http://www.nec.com/en/global/prod/infoframe/relationalstore/"
+  },
+  "ids": {
+    "hackerNewsQuery": "InfoFrame Relational Store"
+  },
+  "brand": {
+    "color": "#1414A0",
+    "simpleIcon": "nec"
+  },
+  "sources": [
+    "https://web.archive.org/web/20141020195341/http://www.nec.com/en/global/prod/infoframe/relationalstore/",
+    "https://web.archive.org/web/20130302020737/http://www.nec.com:80/en/global/prod/infoframe/relationalstore/en/key_features.html",
+    "https://web.archive.org/web/20221206050550/https://jpn.nec.com/infoframe/relationalstore/",
+    "https://jpn.nec.com/press/201209/20120926_01.html",
+    "https://cloud.watch.impress.co.jp/docs/news/511802.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

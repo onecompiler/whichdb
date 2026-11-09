@@ -1,0 +1,181 @@
+{
+  "slug": "hashicorp-consul-kv",
+  "name": "Consul KV",
+  "aliases": [
+    "HashiCorp Consul",
+    "Consul"
+  ],
+  "tagline": "The key-value store built into HashiCorp Consul for service config, locks and discovery.",
+  "description": "Consul KV is the hierarchical key-value store that ships inside every Consul server cluster, replicated with Raft and exposed over HTTP and DNS alongside Consul's service discovery and service mesh. It is commonly used for dynamic application configuration, feature flags, sessions-based locks and leader election, often with consul-template or Vault on top. HashiCorp moved Consul to the Business Source License in 2023 and is now owned by IBM (acquisition completed February 2025). Use it when you already run Consul; on its own it is a convenience store, not a database.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "configuration",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "HashiCorp (IBM)",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "2.1.0",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community edition free under BSL; Consul Enterprise adds namespaces, admin partitions and support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "KV data is per datacenter and fully replicated across 3-5 servers; cross-datacenter KV needs external replication tooling."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Consul HTTP API"
+  ],
+  "apis": [
+    "HTTP/JSON",
+    "CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Python",
+    "Java",
+    "JavaScript",
+    "C#",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Ships with Consul: no extra system if you already use it for discovery or mesh",
+    "Blocking queries and watches for change notification",
+    "Sessions provide locks and leader election",
+    "ACLs and integration with Vault and consul-template"
+  ],
+  "weaknesses": [
+    "512 KB value limit and small total dataset by design",
+    "BSL license restricts competing commercial use",
+    "No cross-datacenter KV replication out of the box",
+    "Coupled to Consul's release cadence and operational model"
+  ],
+  "useCases": [
+    "Dynamic configuration for services in a Consul mesh",
+    "Feature flags rendered via consul-template",
+    "Distributed locks and leader election"
+  ],
+  "notIdealFor": [
+    "Application data storage",
+    "Large values or datasets",
+    "Organisations that require an OSI open-source license"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "etcd",
+    "apache-zookeeper",
+    "vercel-edge-config",
+    "cloudflare-workers-kv"
+  ],
+  "tags": [
+    "hashicorp",
+    "ibm",
+    "service-discovery",
+    "configuration",
+    "raft"
+  ],
+  "links": {
+    "website": "https://www.consul.io/",
+    "docs": "https://developer.hashicorp.com/consul/docs/dynamic-app-config/kv",
+    "repository": "https://github.com/hashicorp/consul",
+    "changelog": "https://github.com/hashicorp/consul/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Consul_(software)"
+  },
+  "ids": {
+    "github": "hashicorp/consul",
+    "stackoverflowTag": "consul",
+    "wikipedia": "Consul (software)",
+    "dockerHub": "hashicorp/consul",
+    "hackerNewsQuery": "Consul"
+  },
+  "brand": {
+    "color": "#F24C53",
+    "simpleIcon": "consul"
+  },
+  "sources": [
+    "https://github.com/hashicorp/consul/releases",
+    "https://github.com/hashicorp/consul/blob/main/LICENSE",
+    "https://developer.hashicorp.com/consul/docs/dynamic-app-config/kv"
+  ],
+  "lastVerified": "2026-10-27"
+}

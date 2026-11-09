@@ -1,0 +1,164 @@
+{
+  "slug": "modeshape",
+  "name": "ModeShape",
+  "aliases": [
+    "JBoss DNA"
+  ],
+  "tagline": "Red Hat's open-source JCR 2.0 hierarchical content repository for Java; no release since 2017.",
+  "description": "ModeShape is a Java implementation of the JCR 2.0 (JSR-283) content-repository standard: a transactional, hierarchical store of nodes and properties with versioning, references, observation events, full-text search and JCR-SQL2 queries, plus a REST API and a JDBC driver. Sponsored by Red Hat in the JBoss community, it could also federate external systems such as file systems, Git repositories and JDBC metadata into one virtual tree, and the 5.x line persists content to relational databases or the file system. The last release, 5.4.1.Final, shipped in April 2017 and the repository has had no commits since March 2019. For new JCR work, Apache Jackrabbit (Oak) is the maintained option.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No release since 5.4.1.Final (April 2017) and no commits since 2019; Red Hat no longer develops it. Use Apache Jackrabbit Oak.",
+  "maturity": "legacy",
+  "primaryModel": "hierarchical",
+  "models": [
+    "hierarchical"
+  ],
+  "workloads": [
+    "content-management",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Red Hat (JBoss Community)",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "5.4.1.Final",
+    "date": "2017-04-18"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Clustering was supported, but capacity depends on the persistence store underneath."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "JCR-SQL2",
+    "JCR-JQOM",
+    "XPath"
+  ],
+  "apis": [
+    "JCR 2.0 (JSR-283) Java API",
+    "REST",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Standard JCR 2.0 API, so applications can move between JCR implementations",
+    "Hierarchical model with versioning, references and observation built in",
+    "Federation connectors exposed external systems as part of the content tree"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2019; dependencies are years out of date",
+    "JCR is a niche API outside Java CMS products",
+    "Performance tuning depended heavily on the chosen persistence store"
+  ],
+  "useCases": [
+    "Maintaining legacy Java CMS or repository applications built on it",
+    "Reference implementation when studying JCR semantics"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Non-Java stacks",
+    "High-throughput transactional workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "jackrabbit",
+    "postgresql",
+    "mongodb"
+  ],
+  "tags": [
+    "jcr",
+    "content-repository",
+    "java",
+    "hierarchical",
+    "jboss"
+  ],
+  "links": {
+    "website": "https://modeshape.jboss.org/",
+    "repository": "https://github.com/ModeShape/modeshape"
+  },
+  "ids": {
+    "github": "ModeShape/modeshape",
+    "stackoverflowTag": "modeshape",
+    "hackerNewsQuery": "ModeShape"
+  },
+  "brand": {},
+  "sources": [
+    "https://modeshape.jboss.org/",
+    "https://github.com/ModeShape/modeshape",
+    "https://repo1.maven.org/maven2/org/modeshape/modeshape-jcr/"
+  ],
+  "lastVerified": "2026-10-27"
+}

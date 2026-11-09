@@ -1,0 +1,176 @@
+{
+  "slug": "rocket-unidata-universe",
+  "name": "Rocket UniData / UniVerse",
+  "aliases": [
+    "Rocket U2",
+    "UniVerse",
+    "UniData",
+    "U2",
+    "IBM U2"
+  ],
+  "tagline": "Rocket's Pick-style MultiValue databases, powering thousands of vertical business applications.",
+  "description": "UniVerse and UniData are the two MultiValue (Pick-family) databases sold together as Rocket U2. Records are dynamic arrays whose fields can hold multiple values and sub-values, described by optional dictionaries, so one record can hold an order with all its lines; applications are written in a BASIC dialect with English-like query languages (RetrieVe/UniQuery) and an SQL layer. Rocket bought U2 from IBM in 2009 and keeps both lines current: UniVerse 14.2.1 shipped in November 2025 with an optional recoverable file system, and UniData 8.3.2 in 2024. Expect to find them inside long-lived ERP, healthcare, banking and distribution packages rather than in new builds.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "multivalue",
+  "models": [
+    "multivalue"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "Rocket Software",
+  "vendorType": "company",
+  "initialRelease": 1985,
+  "latestVersion": {
+    "version": "UniVerse 14.2.1",
+    "date": "2025-11-05"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Commercial per-user licensing, often via application resellers; free personal editions for learning."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single-server engines; U2 Data Replication provides hot standby and DR."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "UniVerse BASIC / UniBasic",
+    "RetrieVe / UniQuery",
+    "SQL"
+  ],
+  "apis": [
+    "UniObjects",
+    "U2 Toolkit for .NET",
+    "UCI/ODBC",
+    "JDBC",
+    "RESTful Web Services"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "Java",
+    "Python",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Nested multi-value records model orders, invoices and patient charts without join tables",
+    "Embedded Python and REST services help modernise BASIC applications",
+    "Very fast keyed access on hashed files",
+    "Active vendor releases from Rocket for both UniVerse and UniData"
+  ],
+  "weaknesses": [
+    "Niche skills; Pick BASIC developers are increasingly rare",
+    "SQL layer is an afterthought compared with the native query languages",
+    "No horizontal scaling; HA relies on replication add-ons"
+  ],
+  "useCases": [
+    "Running vertical ERP, distribution and healthcare packages built on U2",
+    "Higher-education student information systems",
+    "Modernising Pick applications behind REST and .NET"
+  ],
+  "notIdealFor": [
+    "Greenfield applications",
+    "Analytics without exporting to SQL systems",
+    "Teams without MultiValue experience"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "jbase",
+    "openqm",
+    "intersystems-iris",
+    "adabas",
+    "sql-server"
+  ],
+  "tags": [
+    "multivalue",
+    "pick",
+    "rocket",
+    "legacy",
+    "erp"
+  ],
+  "links": {
+    "website": "https://www.rocketsoftware.com/products/rocket-multivalue-application-development-platform/rocket-universe",
+    "docs": "https://docs.rocketsoftware.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Rocket_U2"
+  },
+  "ids": {
+    "stackoverflowTag": "u2",
+    "wikipedia": "Rocket U2",
+    "hackerNewsQuery": "Rocket UniVerse"
+  },
+  "brand": {},
+  "sources": [
+    "https://community.rocketsoftware.com/product-updates/rocket-universe-14-2-1-is-here-built-for-performance-trusted-for-stability-27468",
+    "https://community.rocketsoftware.com/rocket-u2-universe-unidata-6/rocket-unidata-8-3-2-with-rocket-mvx-performance-1-10-elevates-your-hadr-experience-9408",
+    "https://en.wikipedia.org/wiki/Rocket_U2"
+  ],
+  "lastVerified": "2026-10-27"
+}

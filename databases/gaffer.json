@@ -1,0 +1,168 @@
+{
+  "slug": "gaffer",
+  "name": "Gaffer",
+  "aliases": [],
+  "tagline": "GCHQ's open-source graph framework on Accumulo with in-database property aggregation; archived 2025.",
+  "description": "Gaffer is a Java framework from the UK's GCHQ for storing very large graphs of entities and edges on top of Apache Accumulo (or an in-memory map store for testing). Its distinctive idea is aggregation inside the store: properties such as counts, histograms or HyperLogLog sketches are merged automatically as data arrives, and queries can summarise, filter and transform them at read time under fine-grained visibility labels. Queries are chains of typed operations sent as JSON over a REST API, with Spark export and a Gremlin layer (GafferPop) in the 2.x line. GCHQ released 2.3.2 in February 2025 and archived the repository in June 2025, so there will be no further fixes. Existing users should plan a move to JanusGraph, NebulaGraph or a custom Accumulo design.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "GCHQ archived the project in June 2025 and no longer maintains it; last release 2.3.2 (February 2025).",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "wide-column"
+  ],
+  "workloads": [
+    "graph-analytics",
+    "graph-traversal",
+    "stream-processing"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "GCHQ",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "2.3.2",
+    "date": "2025-02-04"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Accumulo",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales with the underlying Accumulo cluster; designed for continuous high-rate ingest plus MapReduce or Spark bulk loads."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Gaffer Operations (JSON)",
+    "Gremlin (GafferPop)"
+  ],
+  "apis": [
+    "REST API",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Automatic in-store aggregation of counts, histograms and sketches on nodes and edges",
+    "Cell-level visibility controls inherited from Accumulo",
+    "Continuous ingest at high rates plus MapReduce or Spark bulk loading",
+    "Query-time summarisation and filtering without moving raw data",
+    "Rule-based age-off of old data"
+  ],
+  "weaknesses": [
+    "Archived by GCHQ in 2025: no security fixes or releases",
+    "Requires running and tuning an Accumulo, Hadoop and ZooKeeper stack",
+    "Operation-chain query model is verbose compared with Cypher or GQL",
+    "Schema must be defined up front, including aggregation functions"
+  ],
+  "useCases": [
+    "Maintaining existing Gaffer deployments",
+    "Studying aggregation-on-write graph designs",
+    "Large entity/relationship graphs with summarised statistics"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Teams without Hadoop/Accumulo operations experience",
+    "Transactional graph updates"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "janusgraph",
+    "nebulagraph",
+    "apache-hugegraph",
+    "apache-accumulo",
+    "tigergraph"
+  ],
+  "tags": [
+    "graph",
+    "accumulo",
+    "aggregation",
+    "gchq",
+    "archived"
+  ],
+  "links": {
+    "website": "https://github.com/gchq/Gaffer",
+    "repository": "https://github.com/gchq/Gaffer",
+    "docs": "https://gchq.github.io/gaffer-doc/latest/",
+    "changelog": "https://github.com/gchq/Gaffer/releases"
+  },
+  "ids": {
+    "github": "gchq/Gaffer",
+    "hackerNewsQuery": "GCHQ Gaffer"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/gchq/Gaffer",
+    "https://github.com/gchq/Gaffer/releases/tag/gaffer2-2.3.2",
+    "https://dbdb.io/db/gaffer"
+  ],
+  "lastVerified": "2026-10-27"
+}

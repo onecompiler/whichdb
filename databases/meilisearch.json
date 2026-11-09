@@ -1,0 +1,199 @@
+{
+  "slug": "meilisearch",
+  "name": "Meilisearch",
+  "aliases": [
+    "MeiliSearch",
+    "Meili"
+  ],
+  "tagline": "Developer-friendly Rust search engine with typo tolerance and built-in hybrid semantic search.",
+  "description": "Meilisearch is a single-binary search engine written in Rust that gives you instant, typo-tolerant search with sane defaults and almost no tuning. Its hybrid search lets you plug in embedders (OpenAI, Hugging Face, Ollama, REST) so documents are vectorized automatically and ranked alongside keyword matches, and it now ships conversational chat endpoints for RAG-style answers. The core is MIT-licensed, while newer enterprise features such as sharding sit under BUSL-1.1. It shines for site, app and e-commerce search up to tens of millions of documents; it is not built for log analytics or heavy aggregations.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Meili SAS",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "1.56.0",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT (Community Edition); BUSL-1.1 for Enterprise Edition features",
+    "spdx": "MIT AND BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "startingPrice": "$20/month (Meilisearch Cloud)",
+    "notes": "Self-hosting the Community Edition is free. Meilisearch Cloud has a 14-day free trial; Enterprise adds dedicated infra, SSO and SLAs."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Meilisearch Cloud",
+      "provider": "Meili",
+      "url": "https://www.meilisearch.com/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Single-node by default; sharding and replication across instances are Enterprise Edition features."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Meilisearch search API (JSON)"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "PHP",
+    "Ruby",
+    "Go",
+    "Rust",
+    "Java",
+    "Swift",
+    "Dart",
+    ".NET"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Excellent out-of-the-box relevance with typo tolerance and prefix search",
+    "Hybrid search with auto-embedding via configurable embedders",
+    "Single binary, minutes to production",
+    "Tenant tokens and scoped API keys for multi-tenant front-end search",
+    "Strong front-end tooling (InstantSearch compatibility)"
+  ],
+  "weaknesses": [
+    "Indexing is asynchronous via a task queue; large reindexes can be slow",
+    "Horizontal scaling is an Enterprise feature",
+    "Limited aggregations and analytics compared with Elasticsearch",
+    "Dataset should fit comfortably on one machine's disk and memory-mapped working set"
+  ],
+  "useCases": [
+    "Website and documentation search",
+    "E-commerce product search with facets",
+    "SaaS in-app search",
+    "Semantic search over a product catalog"
+  ],
+  "notIdealFor": [
+    "Log and metrics analytics",
+    "Billion-document corpora",
+    "Complex aggregation dashboards"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "typesense",
+    "algolia",
+    "elasticsearch",
+    "orama",
+    "manticore-search",
+    "zincsearch"
+  ],
+  "tags": [
+    "search",
+    "rust",
+    "typo-tolerance",
+    "hybrid-search",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://www.meilisearch.com/",
+    "docs": "https://www.meilisearch.com/docs",
+    "repository": "https://github.com/meilisearch/meilisearch",
+    "pricing": "https://www.meilisearch.com/pricing",
+    "changelog": "https://github.com/meilisearch/meilisearch/releases"
+  },
+  "ids": {
+    "github": "meilisearch/meilisearch",
+    "stackoverflowTag": "meilisearch",
+    "dockerHub": "getmeili/meilisearch",
+    "npm": "meilisearch",
+    "pypi": "meilisearch",
+    "crates": "meilisearch-sdk",
+    "hackerNewsQuery": "Meilisearch"
+  },
+  "brand": {
+    "color": "#FF5CAA",
+    "simpleIcon": "meilisearch"
+  },
+  "sources": [
+    "https://github.com/meilisearch/meilisearch/releases",
+    "https://github.com/meilisearch/meilisearch/blob/main/LICENSE",
+    "https://www.meilisearch.com/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,161 @@
+{
+  "slug": "relaxo",
+  "name": "Relaxo",
+  "aliases": [
+    "relaxo gem"
+  ],
+  "tagline": "Ruby transactional document store that keeps every change as a commit in a Git repository.",
+  "description": "Relaxo is a small Ruby library by Samuel Williams (ioquatix) that uses a Git repository as its database. Documents are blobs at paths in the tree, every write happens inside a commit block with an author and message, and readers always see a consistent snapshot of a commit, which gives atomic multi-document transactions and a complete, diffable history for free. Values can be any bytes, so JSON, MessagePack or images all work, and the companion relaxo-model gem layers models and sorted indexes on top. The README is upfront that Git's data structures limit it to roughly hundreds of thousands of documents with modest write concurrency. It still receives occasional modernisation releases (1.8.0 in January 2025) and suits small apps that value auditability over throughput.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Small single-maintainer gem with occasional modernisation releases (1.7.0 in 2024, 1.8.0 in January 2025) but little feature work.",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "content-management"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Samuel Williams (ioquatix)",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "1.8.0",
+    "date": "2025-01-11"
+  },
+  "writtenIn": [
+    "Ruby"
+  ],
+  "basedOn": "Git (via libgit2/Rugged)",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Designed for up to hundreds of thousands of documents; history grows without bound unless pruned."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Ruby API"
+  ],
+  "apis": [
+    "Embedded Ruby API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Every write is a Git commit, giving full history, diffs and authorship",
+    "Readers see consistent snapshots; multi-document writes are atomic",
+    "Store any byte format: JSON, MessagePack, images",
+    "Standard Git tooling can inspect, back up or replicate the data"
+  ],
+  "weaknesses": [
+    "Git storage limits size and write concurrency",
+    "Ruby-only, with no query language; indexes are paths your code maintains",
+    "Repository grows forever unless history is compacted"
+  ],
+  "useCases": [
+    "Small Ruby apps that need an audit trail of every change",
+    "Content and configuration stores edited by humans",
+    "Prototypes that benefit from Git branching of data"
+  ],
+  "notIdealFor": [
+    "High write throughput",
+    "Large datasets",
+    "Non-Ruby stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dolt",
+    "sqlite",
+    "pouchdb",
+    "terminusdb"
+  ],
+  "tags": [
+    "ruby",
+    "git",
+    "document",
+    "versioned",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://github.com/ioquatix/relaxo",
+    "repository": "https://github.com/ioquatix/relaxo"
+  },
+  "ids": {
+    "github": "ioquatix/relaxo",
+    "hackerNewsQuery": "Relaxo git database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/ioquatix/relaxo",
+    "https://rubygems.org/gems/relaxo",
+    "https://dbdb.io/db/relaxo"
+  ],
+  "lastVerified": "2026-10-27"
+}

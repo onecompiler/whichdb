@@ -1,0 +1,145 @@
+{
+  "slug": "total",
+  "name": "TOTAL (Cincom)",
+  "aliases": [
+    "TOTAL",
+    "Cincom TOTAL",
+    "TOTAL DBMS"
+  ],
+  "tagline": "Cincom's 1968 network-model DBMS, the first sold independently of a hardware vendor; long retired.",
+  "description": "TOTAL was the first product of Cincom Systems, founded in 1968, and is widely cited as the first commercial database management system sold separately from a computer manufacturer's hardware and software. It used a network (CODASYL-style) model of master and variable record files linked by chains, accessed through a call interface from COBOL and assembler programs on IBM mainframes and other platforms, and became one of the most widely installed DBMSs of the 1970s. Cincom no longer markets TOTAL; its current mainframe database line is sold under the SUPRA name, and Cincom itself was acquired by PartnerOne in 2024.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No longer marketed by Cincom, whose mainframe database products are now sold as SUPRA (PDM and SQL); Cincom was acquired by PartnerOne in 2024.",
+  "maturity": "legacy",
+  "primaryModel": "navigational",
+  "models": [
+    "navigational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Cincom Systems",
+  "vendorType": "company",
+  "initialRelease": 1968,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Call-level DML (COBOL, Assembler)"
+  ],
+  "apis": [
+    "CALL interface"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "COBOL",
+    "Assembler"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pioneered the independent DBMS software market in the late 1960s",
+    "Simple master/variable file network model was efficient on small mainframes"
+  ],
+  "weaknesses": [
+    "Navigational access only: programs walk record chains instead of declaring queries",
+    "Long out of the market; skills and documentation are scarce"
+  ],
+  "useCases": [
+    "History of database management systems",
+    "Understanding legacy mainframe network-model data"
+  ],
+  "notIdealFor": [
+    "Any new application"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "supra-server-sql",
+    "idms",
+    "ibm-ims",
+    "adabas"
+  ],
+  "tags": [
+    "mainframe",
+    "network-model",
+    "codasyl",
+    "historical",
+    "cincom"
+  ],
+  "links": {
+    "website": "https://www.cincom.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cincom_Systems"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Cincom_Systems",
+    "https://www.cincom.com/supra/",
+    "https://dbdb.io/db/total"
+  ],
+  "lastVerified": "2026-10-27"
+}

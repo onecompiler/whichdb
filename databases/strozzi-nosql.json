@@ -1,0 +1,159 @@
+{
+  "slug": "strozzi-nosql",
+  "name": "Strozzi NoSQL",
+  "aliases": [
+    "NoSQL (RDBMS)",
+    "NoSQL"
+  ],
+  "tagline": "Carlo Strozzi's 1998 shell-based relational database of plain-text tables and Unix pipe operators.",
+  "description": "Strozzi NoSQL is a relational database management system made of small Unix operators that read and write tab-separated ASCII tables, so a query is a shell pipeline: select rows, join tables, sort and report by chaining commands, and edit or version data with ordinary tools like vi, diff or RCS. It descends from the RDB system written at RAND and follows the operator-stream paradigm described in Unix Review in 1991. Carlo Strozzi has distributed it under the GPL since 1998, and its name, which simply means it does not use SQL, predates the 2009 NoSQL movement it has nothing to do with. The last release, 4.1.11, came out in 2014.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Still downloadable from strozzi.it, but the last release was 4.1.11 (June 2014) and the project is dormant.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Carlo Strozzi",
+  "vendorType": "community",
+  "initialRelease": 1998,
+  "latestVersion": {
+    "version": "4.1.11",
+    "date": "2014-06-06"
+  },
+  "writtenIn": [
+    "Shell",
+    "AWK",
+    "Perl"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU General Public License"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Unix shell operators"
+  ],
+  "apis": [
+    "Command line"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tables are plain text, so grep, diff, editors and version control work on the data directly",
+    "Queries compose like any Unix pipeline, easy to script",
+    "Tiny, transparent and dependency-light on Linux"
+  ],
+  "weaknesses": [
+    "No transactions, concurrency control or SQL",
+    "Performance limited by text parsing and process pipelines",
+    "Dormant since 2014 with a very small user base",
+    "Name collides with the unrelated NoSQL movement, confusing searches"
+  ],
+  "useCases": [
+    "Small scripted data jobs on Unix",
+    "Version-controlled tabular data",
+    "Teaching the relational model with pipes"
+  ],
+  "notIdealFor": [
+    "Multi-user applications",
+    "Large datasets",
+    "Anything needing SQL"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "duckdb",
+    "rdb"
+  ],
+  "tags": [
+    "unix",
+    "shell",
+    "plain-text",
+    "relational",
+    "historical"
+  ],
+  "links": {
+    "website": "http://www.strozzi.it/cgi-bin/CSA/tw7/I/en_US/nosql/Home%20Page",
+    "repository": "http://www.strozzi.it/shared/nosql/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Strozzi_NoSQL"
+  },
+  "ids": {
+    "wikipedia": "Strozzi NoSQL",
+    "hackerNewsQuery": "Strozzi NoSQL"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.strozzi.it/cgi-bin/CSA/tw7/I/en_US/nosql/Home%20Page",
+    "http://www.strozzi.it/shared/nosql/",
+    "https://en.wikipedia.org/wiki/Strozzi_NoSQL"
+  ],
+  "lastVerified": "2026-10-27"
+}

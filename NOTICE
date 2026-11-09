@@ -1,0 +1,14 @@
+WhichDB data
+https://github.com/onecompiler/whichdb
+
+The database profiles (databases/), the JSON Schema (schema/) and the documentation in this
+repository are licensed under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0). See LICENSE.
+
+Logos (logos/) are NOT licensed under CC BY 4.0 or any other license by WhichDB. Each logo
+and brand mark is a trademark or registered trademark of its respective owner, is included
+only to identify the product it belongs to, and does not imply endorsement. logos/sources.json
+records where each one was obtained. If you own a mark and want it changed or removed, open an
+issue.
+
+Product and company names in the profiles are trademarks of their respective owners.

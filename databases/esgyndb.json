@@ -1,0 +1,108 @@
+{
+  "slug": "esgyndb",
+  "name": "EsgynDB",
+  "aliases": ["Esgyn", "QianBase"],
+  "tagline": "Commercial distribution of Apache Trafodion: transactional MPP SQL on HBase and Hive; Esgyn has gone dark.",
+  "description": "EsgynDB was the enterprise distribution of Apache Trafodion, sold by Esgyn Corporation, which was founded in 2015 by members of HP's Trafodion team whose engine descends from Tandem/HP NonStop SQL and Neoview. It put an MPP SQL engine with ACID distributed transactions on top of HBase storage and could join HBase tables with Hive ORC and Parquet data in the same query, aiming at HTAP workloads on Hadoop clusters; JDBC, ODBC and ADO.NET drivers, Java stored procedures and cross-datacenter replication were included. Its Chinese affiliate (易鲸捷) sold it to telecom, banking and energy customers and by 2022 was marketing a successor family under the QianBase name. Apache Trafodion was retired to the Attic in 2021, and both esgyn.com and esgyn.cn are now offline.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "esgyn.com went offline around 2021 and esgyn.cn by 2025; upstream Apache Trafodion was retired in April 2021. The Chinese arm rebranded its line as QianBase (c. 2022).",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["htap", "oltp", "olap"],
+  "architecture": ["distributed"],
+  "developer": "Esgyn Corporation (易鲸捷)",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "writtenIn": ["C++", "Java"],
+  "basedOn": "Apache Trafodion",
+  "license": { "type": "proprietary", "name": "Proprietary (built on Apache-licensed Trafodion)" },
+  "pricing": {
+    "models": ["enterprise-contract"],
+    "freeTier": false,
+    "notes": "Sold as software, a Supermicro appliance and the Esgyn Strato cloud service; none are offered now."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Scaled out with the underlying HBase/Hadoop cluster; cross-datacenter replication was offered."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["JDBC", "ODBC", "ADO.NET"],
+  "compatibleWith": ["hbase"],
+  "drivers": ["Java", "C", "C#"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full ACID distributed transactions on HBase, rare among SQL-on-Hadoop engines",
+    "Optimizer and executor lineage from NonStop SQL and Neoview",
+    "One query could span HBase tables and Hive ORC/Parquet files",
+    "Standard JDBC/ODBC/ADO.NET access and Java stored procedures"
+  ],
+  "weaknesses": [
+    "Vendor and upstream project are both gone; no support channel remains",
+    "Heavy dependency on an HBase/Hadoop stack that few teams still run",
+    "Small ecosystem outside the vendor's own customers"
+  ],
+  "useCases": [
+    "Understanding the Trafodion/NonStop SQL lineage",
+    "Planning migrations off existing EsgynDB clusters"
+  ],
+  "notIdealFor": ["New deployments", "Cloud-native analytics or HTAP (use TiDB, SingleStore or similar)"],
+  "notableUsers": [],
+  "alternatives": ["trafodion", "tidb", "splice-machine", "apache-hive", "apache-impala", "singlestore"],
+  "tags": ["sql-on-hadoop", "hbase", "htap", "trafodion", "discontinued"],
+  "links": {
+    "website": "https://web.archive.org/web/2020/https://www.esgyn.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2020/https://www.esgyn.com/",
+    "https://web.archive.org/web/20240919221518/http://esgyn.cn/",
+    "https://attic.apache.org/projects/trafodion.html",
+    "https://db-engines.com/en/system/EsgynDB",
+    "https://dbdb.io/db/esgyndb"
+  ],
+  "lastVerified": "2026-10-27"
+}

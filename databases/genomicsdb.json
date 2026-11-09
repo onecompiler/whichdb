@@ -1,0 +1,173 @@
+{
+  "slug": "genomicsdb",
+  "name": "GenomicsDB",
+  "aliases": [],
+  "tagline": "Sparse-array store for genomic variant data, built on TileDB and shipped inside GATK4.",
+  "description": "GenomicsDB stores genomic variant calls (VCF/BCF/gVCF) as sparse multi-dimensional arrays, using a fork of TileDB for storage and a fork of htslib for parsing. Treating samples and genome positions as array dimensions lets it ingest many thousands of samples incrementally and answer region queries or merge gVCFs for joint genotyping far faster than flat files. It ships C++ tools, JVM and Spark bindings on Maven Central, Python bindings, and MPI or Spark parallel queries, and reads from POSIX, HDFS, S3, GCS or Azure Blob storage. Intel started it in 2016, Omics Data Automation continued it, and it now lives in the GenomicsDB GitHub organisation under MIT. Most users meet it through GATK4's GenomicsDBImport.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "array",
+  "models": [
+    "array",
+    "columnar"
+  ],
+  "workloads": [
+    "scientific",
+    "olap"
+  ],
+  "architecture": [
+    "embedded",
+    "distributed"
+  ],
+  "developer": "GenomicsDB project (originally Intel, then Omics Data Automation)",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "1.5.4",
+    "date": "2024-09-25"
+  },
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "basedOn": "TileDB",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Arrays are partitioned by genomic region; parallel import and query run over MPI or Spark against local or object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "GenomicsDB query API"
+  ],
+  "apis": [
+    "C++ API",
+    "Java/Spark API",
+    "Python bindings",
+    "CLI tools"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "Scala",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Sparse-array layout fits variant data, which is sparse across the genome",
+    "Incremental import of new samples without rewriting existing arrays",
+    "Integrated with GATK4 joint-genotyping workflows",
+    "Runs against HDFS, S3, GCS and Azure Blob as well as local disks",
+    "Spark and MPI bindings for parallel queries"
+  ],
+  "weaknesses": [
+    "Purpose-built for variant data; not a general database",
+    "Programmatic APIs only, no SQL",
+    "Small maintainer group; releases are infrequent"
+  ],
+  "useCases": [
+    "Joint genotyping across large cohorts with GATK",
+    "Storing and querying gVCFs for population genomics",
+    "Region-based variant queries for research pipelines"
+  ],
+  "notIdealFor": [
+    "General-purpose analytics",
+    "Transactional workloads",
+    "Non-genomic array data (use TileDB directly)"
+  ],
+  "notableUsers": [
+    "Broad Institute (GATK)"
+  ],
+  "alternatives": [
+    "tiledb",
+    "scidb",
+    "duckdb"
+  ],
+  "tags": [
+    "genomics",
+    "bioinformatics",
+    "array",
+    "vcf",
+    "gatk"
+  ],
+  "links": {
+    "website": "https://www.genomicsdb.org/",
+    "docs": "https://genomicsdb.readthedocs.io/",
+    "repository": "https://github.com/GenomicsDB/GenomicsDB",
+    "changelog": "https://github.com/GenomicsDB/GenomicsDB/releases"
+  },
+  "ids": {
+    "github": "GenomicsDB/GenomicsDB",
+    "pypi": "genomicsdb",
+    "hackerNewsQuery": "GenomicsDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/GenomicsDB/GenomicsDB",
+    "https://github.com/GenomicsDB/GenomicsDB/releases",
+    "https://genomicsdb.readthedocs.io/",
+    "https://pypi.org/project/genomicsdb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

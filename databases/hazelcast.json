@@ -1,0 +1,203 @@
+{
+  "slug": "hazelcast",
+  "name": "Hazelcast",
+  "aliases": [
+    "Hazelcast Platform",
+    "Hazelcast IMDG",
+    "Hazelcast Jet"
+  ],
+  "tagline": "A Java in-memory data grid and stream processor that embeds in your app or runs as a cluster.",
+  "description": "Hazelcast Platform combines a partitioned, replicated in-memory data grid (distributed maps, queues, locks, CP subsystem) with the former Jet stream-processing engine and a SQL layer. It can run embedded inside JVM applications or as a separate cluster accessed by Java, .NET, C++, Python, Node.js and Go clients. It is common in banking, payments and telco for low-latency shared state and event processing. Since 5.4 the Apache-licensed Community Edition only gets major/minor releases, with patch releases, security and many operational features reserved for the paid Enterprise Edition.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "stream-processing",
+    "real-time-analytics",
+    "pub-sub",
+    "queue"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Hazelcast, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "5.7.0",
+    "date": "2026-05-12"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache 2.0 (Community); Hazelcast Community License for some modules",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free; Enterprise Edition adds security, WAN replication, persistence, rolling upgrades and patch releases."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Data is partitioned (271 partitions by default) with backups across members; WAN replication for multi-site is Enterprise-only."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual",
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "Predicate API",
+    "Jet Pipeline API"
+  ],
+  "apis": [
+    "Hazelcast Open Binary Client Protocol",
+    "REST",
+    "Memcached text protocol",
+    "JCache (JSR-107)"
+  ],
+  "compatibleWith": [
+    "memcached"
+  ],
+  "drivers": [
+    "Java",
+    "C#",
+    "C++",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs embedded in a JVM process or as a client-server cluster with the same API",
+    "Data grid and stream processing (former Jet) in one runtime",
+    "CP subsystem gives Raft-backed locks, semaphores and atomic references",
+    "Near-cache support delivers local-memory reads for hot data",
+    "Mature in regulated industries with long-term enterprise support"
+  ],
+  "weaknesses": [
+    "Community Edition gets no patch releases; security, persistence and WAN are Enterprise-only",
+    "JVM heap and GC tuning matter for large members",
+    "SQL engine is limited compared with a real database",
+    "No longer markets a vendor-managed cloud; you operate the cluster"
+  ],
+  "useCases": [
+    "Shared low-latency state for microservices",
+    "Fraud detection and payment stream processing",
+    "Web session clustering for Java app servers",
+    "Distributed caching in front of RDBMS"
+  ],
+  "notIdealFor": [
+    "Non-JVM teams wanting a lightweight cache",
+    "Durable primary storage on Community Edition",
+    "Large-scale analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-ignite",
+    "oracle-coherence",
+    "infinispan",
+    "gridgain",
+    "redis",
+    "vmware-tanzu-gemfire"
+  ],
+  "tags": [
+    "data-grid",
+    "jvm",
+    "in-memory",
+    "stream-processing",
+    "open-core"
+  ],
+  "links": {
+    "website": "https://hazelcast.com/",
+    "docs": "https://docs.hazelcast.com/",
+    "repository": "https://github.com/hazelcast/hazelcast",
+    "changelog": "https://docs.hazelcast.com/hazelcast/5.7/release-notes/community",
+    "wikipedia": "https://en.wikipedia.org/wiki/Hazelcast"
+  },
+  "ids": {
+    "github": "hazelcast/hazelcast",
+    "stackoverflowTag": "hazelcast",
+    "wikipedia": "Hazelcast",
+    "dockerHub": "hazelcast/hazelcast",
+    "npm": "hazelcast-client",
+    "pypi": "hazelcast-python-client",
+    "hackerNewsQuery": "Hazelcast"
+  },
+  "brand": {},
+  "sources": [
+    "https://docs.hazelcast.com/hazelcast/5.7/release-notes/community",
+    "https://hazelcast.com/blog/changes-to-community-edition/",
+    "https://github.com/hazelcast/hazelcast/blob/master/LICENSE"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,177 @@
+{
+  "slug": "kyoto-tycoon",
+  "name": "Kyoto Tycoon",
+  "aliases": [
+    "KT",
+    "kyototycoon"
+  ],
+  "tagline": "FAL Labs' HTTP and memcached-speaking network server for Kyoto Cabinet, with expiry and replication.",
+  "description": "Kyoto Tycoon is the network front end to the Kyoto Cabinet DBM library, written in C++ by Mikio Hirabayashi's FAL Labs from 2010. A single server process hosts multiple hash or B+tree databases, in memory or on disk, and clients talk to it over a RESTful/RPC HTTP protocol, a compact binary protocol or a memcached-compatible plug-in. Records can carry expiration times, so it doubles as a persistent cache, and it supports master-slave and dual-master replication via update logs plus server-side Lua scripting. Development stopped with 0.9.56 in 2012; Cloudflare ran it for years for edge configuration before replacing it with Quicksilver, and Altice Labs kept a fork that is now archived. The author's successor is Tkrzw-RPC.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No upstream release since 0.9.56 (April 2012); community forks (Altice Labs, Cloudflare) are archived. The author's successor is Tkrzw with Tkrzw-RPC.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "configuration"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "multi-primary"
+  ],
+  "developer": "FAL Labs (Mikio Hirabayashi)",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "0.9.56",
+    "date": "2012-04-06"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Kyoto Cabinet",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "One server per node; replication is log shipping to slaves or a dual-master pair; sharding is client-side."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "HTTP RPC/REST protocol",
+    "Lua (server scripts)"
+  ],
+  "apis": [
+    "HTTP (REST and RPC)",
+    "Binary protocol",
+    "memcached protocol"
+  ],
+  "compatibleWith": [
+    "memcached"
+  ],
+  "drivers": [
+    "C++",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast hash and B+tree storage inherited from Kyoto Cabinet",
+    "Per-record expiration makes it a persistent cache",
+    "Speaks HTTP, a binary protocol and the memcached protocol",
+    "Master-slave and dual-master replication via update logs",
+    "Server-side Lua scripting"
+  ],
+  "weaknesses": [
+    "Abandoned upstream since 2012",
+    "Hard to operate at scale: one process per database file, awkward upgrades",
+    "No built-in sharding or consensus-based failover"
+  ],
+  "useCases": [
+    "Legacy caches and config stores still running it",
+    "Studying a compact C++ KV server design"
+  ],
+  "notIdealFor": [
+    "New deployments (use Redis/Valkey, or Tkrzw-RPC for the same lineage)",
+    "Systems that need automatic failover or sharding"
+  ],
+  "notableUsers": [
+    "Cloudflare"
+  ],
+  "alternatives": [
+    "kyoto-cabinet",
+    "redis",
+    "valkey",
+    "memcached",
+    "apache-kvrocks",
+    "tokyo-cabinet"
+  ],
+  "tags": [
+    "key-value",
+    "cache",
+    "memcached-compatible",
+    "c++",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://dbmx.net/kyototycoon/",
+    "docs": "https://dbmx.net/kyototycoon/spex.html",
+    "repository": "https://github.com/AlticeLabsPublic/kyoto"
+  },
+  "ids": {
+    "github": "AlticeLabsPublic/kyoto",
+    "hackerNewsQuery": "Kyoto Tycoon"
+  },
+  "brand": {},
+  "sources": [
+    "https://dbmx.net/kyototycoon/",
+    "https://github.com/AlticeLabsPublic/kyoto",
+    "https://blog.cloudflare.com/introducing-quicksilver-configuration-distribution-at-internet-scale/",
+    "https://dbmx.net/tkrzw-rpc/"
+  ],
+  "lastVerified": "2026-10-27"
+}

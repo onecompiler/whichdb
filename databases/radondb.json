@@ -1,0 +1,163 @@
+{
+  "slug": "radondb",
+  "name": "RadonDB",
+  "aliases": [
+    "Radon",
+    "RadonDB Radon",
+    "QingCloud RadonDB"
+  ],
+  "tagline": "MySQL-compatible sharding layer from QingCloud that spread tables over MySQL backends; inactive since 2021.",
+  "description": "RadonDB (the Radon project) is an open-source distributed SQL layer in Go that QingCloud (Yunify Technologies) built for its cloud MySQL service. A stateless SQL node speaks the MySQL protocol, parses and plans each statement, and pushes parallel sub-queries down to backend MySQL instances that hold automatically sharded tables, with snapshot-isolation distributed transactions, distributed joins and audit logging; the companion Xenon project managed MySQL high availability with Raft. It filled the same niche as Vitess and ShardingSphere for Chinese cloud users. The last release, v1.1.4, shipped in February 2021, radondb.io has gone offline and the RadonDB organisation's later Kubernetes operators have also gone quiet.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No Radon commits since February 2021 (v1.1.4) and radondb.io is offline. For MySQL sharding use Vitess, ShardingSphere, TiDB or PolarDB-X.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Yunify Technologies (QingCloud)",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "1.1.4",
+    "date": "2021-02-01"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "MySQL",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU General Public License v3.0",
+    "spdx": "GPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales out by adding MySQL backend groups behind stateless SQL nodes; tables are hash-sharded automatically."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "HTTP admin API"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Any MySQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Automatic table sharding behind a MySQL-compatible endpoint",
+    "Parallel query, DML and DDL fanned out across backends",
+    "Distributed transactions with snapshot isolation",
+    "Keeps MySQL/InnoDB as the proven storage layer"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2021, with no security fixes",
+    "Small community outside QingCloud; documentation is thin",
+    "Write path funnels through a single SQL node for snapshot isolation"
+  ],
+  "useCases": [
+    "Studying a compact MySQL sharding proxy design",
+    "Operating legacy QingCloud RadonDB deployments until migration"
+  ],
+  "notIdealFor": [
+    "New deployments",
+    "Teams needing an actively supported distributed MySQL"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vitess",
+    "apache-shardingsphere",
+    "tidb",
+    "polardb-x",
+    "singlestore"
+  ],
+  "tags": [
+    "mysql",
+    "sharding",
+    "distributed-sql",
+    "go",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/radondb/radon",
+    "repository": "https://github.com/radondb/radon"
+  },
+  "ids": {
+    "github": "radondb/radon",
+    "hackerNewsQuery": "RadonDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/radondb/radon",
+    "https://github.com/radondb/radon/releases",
+    "https://dbdb.io/db/radondb"
+  ],
+  "lastVerified": "2026-10-27"
+}

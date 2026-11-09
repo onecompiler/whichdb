@@ -1,0 +1,168 @@
+{
+  "slug": "buntdb",
+  "name": "BuntDB",
+  "aliases": [],
+  "tagline": "Embeddable in-memory key/value store for Go with ACID transactions, custom and spatial indexes, and TTLs.",
+  "description": "BuntDB is a pure-Go, in-process key/value store by Josh Baker (tidwall) that keeps the whole dataset in memory and persists it to a durable append-only file that it compacts in the background. What sets it apart from a map or bbolt is indexing: you can declare B-tree indexes over values with custom comparators, index fields inside JSON values, build multi-value indexes, and create R-tree spatial indexes over up to 20 dimensions, then iterate ranges or nearby items inside read-only or read/write transactions with rollback. Keys can carry TTLs for cache-style eviction. It is mature and essentially feature-complete: v1.3.2 shipped in September 2024 and later commits are documentation only. Use it when the data fits in RAM and you want indexes without running a server.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Feature-complete; last code release v1.3.2 (Sept 2024), with only documentation commits since.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "spatial"
+  ],
+  "workloads": [
+    "embedded",
+    "caching",
+    "geospatial"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Josh Baker (tidwall)",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "1.3.2",
+    "date": "2024-09-10"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Whole dataset must fit in RAM; persistence is a single append-only file rewritten in the background."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Go API"
+  ],
+  "apis": [
+    "Go API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Secondary B-tree indexes with custom comparators, including indexes on JSON fields",
+    "R-tree spatial indexes over up to 20 dimensions for intersects and nearby queries",
+    "Read/write transactions with rollback on a single-writer, multi-reader lock",
+    "Per-key TTL expiry and a durable append-only file with configurable fsync",
+    "Pure Go with no cgo, so it embeds trivially"
+  ],
+  "weaknesses": [
+    "Entire dataset lives in memory, so capacity is bounded by RAM",
+    "Only one writer at a time limits write concurrency",
+    "No replication or network server; you build that yourself",
+    "Little ongoing development beyond fixes"
+  ],
+  "useCases": [
+    "Embedded state or config store inside Go services",
+    "In-process geospatial lookups",
+    "Local cache with TTL-based eviction",
+    "Indexed data access in prototypes without a database server"
+  ],
+  "notIdealFor": [
+    "Datasets larger than available RAM",
+    "Write-heavy concurrent workloads",
+    "Multi-process or networked access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "bbolt",
+    "badger",
+    "pebble",
+    "tile38",
+    "redis",
+    "sqlite"
+  ],
+  "tags": [
+    "go",
+    "embedded",
+    "in-memory",
+    "key-value",
+    "geospatial"
+  ],
+  "links": {
+    "website": "https://github.com/tidwall/buntdb",
+    "docs": "https://pkg.go.dev/github.com/tidwall/buntdb",
+    "repository": "https://github.com/tidwall/buntdb"
+  },
+  "ids": {
+    "github": "tidwall/buntdb",
+    "hackerNewsQuery": "BuntDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/tidwall/buntdb",
+    "https://pkg.go.dev/github.com/tidwall/buntdb",
+    "https://dbdb.io/db/buntdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

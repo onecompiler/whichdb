@@ -1,0 +1,154 @@
+{
+  "slug": "iqrypt",
+  "name": "IQrypt",
+  "aliases": [
+    "CryptonorDB",
+    "IQrypt SDK"
+  ],
+  "tagline": "Client-side encryption layer that let document databases query encrypted JSON; abandoned around 2016.",
+  "description": "IQrypt, from Romania's Dotissi (and previously known as CryptonorDB), encrypted JSON documents on the device before they reached a cloud document store such as MongoDB or Couchbase, while still letting the server answer queries. Document bodies were encrypted with randomized AES or Camellia, and selected fields were copied into tags encrypted with schemes chosen per query need: HMAC or deterministic encryption for equality, order-preserving encryption for ranges, and encrypted bitmap indexes for low-cardinality fields. An Android SDK (GPL v3) was published, aimed at mobile and IoT apps. The project went quiet in 2016, and the iqrypt.com domain now hosts unrelated content.",
+  "productType": "extension",
+  "status": "discontinued",
+  "statusNote": "No releases or activity since 2016; the iqrypt.com domain now hosts unrelated content. Use database-native client-side field-level or queryable encryption instead.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "iot"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Dotissi SRL",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3 (Android SDK); commercial licensing also offered",
+    "spdx": "GPL-3.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "The Android SDK was published under GPL v3; commercial terms were offered by the vendor. Nothing is sold today."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scale was that of the underlying document database."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SDK query API over encrypted tags"
+  ],
+  "apis": [
+    "Android SDK"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Data stayed encrypted end to end, including inside the cloud database",
+    "Equality and range queries over encrypted fields via DET, OPE and bitmap schemes",
+    "Worked on top of existing document stores like MongoDB and Couchbase Lite"
+  ],
+  "weaknesses": [
+    "Abandoned around 2016; no maintained SDKs",
+    "Deterministic and order-preserving encryption leak equality and ordering patterns",
+    "Required duplicating searchable fields as encrypted tags"
+  ],
+  "useCases": [
+    "Studying practical searchable-encryption designs for document stores",
+    "Reference code for client-side encryption on Android"
+  ],
+  "notIdealFor": [
+    "Any production use today",
+    "Threat models where frequency or order leakage is unacceptable"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "couchbase-lite",
+    "sqlcipher",
+    "realm"
+  ],
+  "tags": [
+    "encryption",
+    "searchable-encryption",
+    "mobile",
+    "iot",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2018/http://www.iqrypt.com/",
+    "repository": "https://github.com/ale13jo/IQrypt-SDK-Android"
+  },
+  "ids": {
+    "hackerNewsQuery": "IQrypt"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2018/http://www.iqrypt.com/",
+    "https://github.com/ale13jo/IQrypt-SDK-Android",
+    "https://dbdb.io/db/iqrypt"
+  ],
+  "lastVerified": "2026-10-27"
+}

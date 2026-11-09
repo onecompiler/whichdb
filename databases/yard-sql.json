@@ -1,0 +1,152 @@
+{
+  "slug": "yard-sql",
+  "name": "YARD-SQL",
+  "aliases": [
+    "YARD",
+    "Yard RDBMS"
+  ],
+  "tagline": "Cologne-built SQL-92 RDBMS for UNIX and Linux from YARD Software (c. 1996-2012); discontinued.",
+  "description": "YARD-SQL was a commercial relational database server from YARD Software GmbH of Cologne, Germany, one of the few full RDBMSs available for Linux in the late 1990s. It implemented the SQL-2 standard, stored procedures and triggers based on the draft SQL-3 specification, BLOB and TEXT types and physical and logical logging, and managed raw-disk database spaces in a style familiar to Informix OnLine administrators. Clients connected via ODBC, JDBC, embedded SQL for C, Perl and PHP, and a free single-user Private Edition was offered for evaluation. dbdb.io dates the product from 1996 to 2012; the vendor's site no longer carries it.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No longer offered; dbdb.io lists 2012 as its end year and yard.de no longer hosts the product. Use PostgreSQL or another maintained RDBMS.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "YARD Software GmbH",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "startingPrice": "$490 for 5 users (1998 review)",
+    "notes": "Historic pricing; a free single-user Private Edition was limited to small databases."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "SQL/PSM (draft SQL-3)"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "ESQL/C"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Java",
+    "Perl",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full SQL-2 RDBMS on Linux when the big vendors had none",
+    "Stored procedures and triggers ahead of the SQL:1999 standard"
+  ],
+  "weaknesses": [
+    "Discontinued; no support or downloads",
+    "Raw-disk space management required careful sizing"
+  ],
+  "useCases": [
+    "History of commercial databases on early Linux",
+    "Maintaining legacy applications built on it"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "ibm-informix",
+    "mysql",
+    "firebird"
+  ],
+  "tags": [
+    "sql",
+    "linux",
+    "germany",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20121228114336/http://yard.de/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://www.linuxjournal.com/article/2644",
+    "https://dbdb.io/db/yard-sql",
+    "https://web.archive.org/web/20121228114336/http://yard.de/"
+  ],
+  "lastVerified": "2026-10-27"
+}

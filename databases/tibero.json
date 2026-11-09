@@ -1,0 +1,171 @@
+{
+  "slug": "tibero",
+  "name": "Tibero",
+  "aliases": [
+    "TmaxTibero",
+    "Tibero RDBMS",
+    "Tibero 7"
+  ],
+  "tagline": "Korean Oracle-compatible RDBMS with RAC-style Active Cluster, popular for Oracle exits in Asia.",
+  "description": "Tibero is a commercial relational database from TmaxTibero (spun out of TmaxSoft) whose selling point is high compatibility with Oracle Database: PL/SQL-style procedures, Oracle SQL syntax and data types, and Tibero Active Cluster (TAC), a shared-disk cluster modelled on Oracle RAC. That makes it a common target in Korean public sector and financial institutions that want to leave Oracle without rewriting applications. The Tibero 7.2 line is actively patched (PatchSet04 in October 2025 added columnar compression) and an AI-focused Tibero 8 is in development. Outside Korea and parts of Asia, support and talent are thin.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "client-server",
+    "shared-storage",
+    "primary-replica"
+  ],
+  "developer": "TmaxTibero",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "7.2.6",
+    "date": "2026"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Commercial licences typically priced well below Oracle Enterprise Edition; a demo licence is available for evaluation."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "TAC shared-disk clustering for scale-out and HA; standby databases for DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "tbPSM (PL/SQL-compatible)"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "OCI-compatible CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C",
+    "C#",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "High Oracle SQL and PL/SQL compatibility reduces application rewrites on migration",
+    "Tibero Active Cluster offers RAC-like shared-disk HA at lower cost",
+    "Strong presence and local support in Korean government and finance",
+    "Columnar compression (TCC) added in the 7.2 line for storage savings"
+  ],
+  "weaknesses": [
+    "Small ecosystem and documentation outside Korea",
+    "Compatibility with Oracle is high but not complete; testing is still required",
+    "No vector search or modern multi-model features yet"
+  ],
+  "useCases": [
+    "Replacing Oracle Database in public-sector systems",
+    "Banking and insurance core systems in Korea",
+    "Lowering licence cost for Oracle-style applications"
+  ],
+  "notIdealFor": [
+    "Teams outside Asia without local vendor support",
+    "Cloud-native, managed-service-first architectures",
+    "AI/vector workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-database",
+    "edb-postgres-advanced-server",
+    "altibase",
+    "kingbase",
+    "dameng",
+    "postgresql"
+  ],
+  "tags": [
+    "sql",
+    "oracle-compatible",
+    "korea",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://www.tibero.com/",
+    "docs": "https://docs.tibero.com/"
+  },
+  "ids": {
+    "stackoverflowTag": "tibero",
+    "hackerNewsQuery": "Tibero database"
+  },
+  "brand": {},
+  "sources": [
+    "https://blog.tibero.com/tibero-patchset-04-en/",
+    "https://docs.tibero.com/tibero-manuals_en/llms.txt",
+    "https://support.tibero.com/hc/en-us"
+  ],
+  "lastVerified": "2026-10-27"
+}

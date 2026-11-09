@@ -1,0 +1,160 @@
+{
+  "slug": "hibari",
+  "name": "Hibari",
+  "aliases": [],
+  "tagline": "Erlang distributed ordered key-value store using chain replication for strong consistency.",
+  "description": "Hibari is a distributed, ordered key-value store written in Erlang, open-sourced in 2010 by Gemini Mobile Technologies after running a multi-million-user webmail service in Japan. Keys are split into chains by prefix and kept in lexicographic order within each chain, and every chain is replicated with chain replication, so reads and writes stay strongly consistent while a failed brick is repaired automatically. It adds compare-and-swap via key timestamps, micro-transactions over several keys in the same chain, per-key metadata and TTL, and performs particularly well for reads and values larger than 200 KB. The native Erlang client was the only production-grade one. The last release, 0.1.11, came out in April 2015, and the repository has been idle since 2017.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Unmaintained: last release 0.1.11 (April 2015) and no commits since 2017.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Gemini Mobile Technologies / Hibari developers",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "0.1.11",
+    "date": "2015-04-05"
+  },
+  "writtenIn": [
+    "Erlang"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Chains are distributed across bricks; the project cites production clusters spanning about 100 servers."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Erlang client API"
+  ],
+  "apis": [
+    "Erlang native client",
+    "Thrift (proof of concept)",
+    "UBF"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Erlang"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Strong consistency from chain replication",
+    "Ordered keys within chains enable prefix range scans",
+    "Automatic repair after a brick fails",
+    "Good performance for reads and large values"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2017; targets old Erlang/OTP releases",
+    "Only the Erlang client is production quality",
+    "Multi-key transactions limited to keys in one chain"
+  ],
+  "useCases": [
+    "Studying chain replication in practice",
+    "Legacy Erlang systems already running Hibari"
+  ],
+  "notIdealFor": [
+    "New deployments",
+    "Non-Erlang applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "riak-kv",
+    "foundationdb",
+    "tikv",
+    "etcd",
+    "apache-cassandra"
+  ],
+  "tags": [
+    "erlang",
+    "chain-replication",
+    "key-value",
+    "distributed",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://hibari.github.io/hibari-doc/",
+    "repository": "https://github.com/hibari/hibari",
+    "docs": "https://hibari.github.io/hibari-doc/"
+  },
+  "ids": {
+    "github": "hibari/hibari",
+    "hackerNewsQuery": "Hibari key-value"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/hibari/hibari",
+    "https://hibari.github.io/hibari-doc/",
+    "https://dbdb.io/db/hibari"
+  ],
+  "lastVerified": "2026-10-27"
+}

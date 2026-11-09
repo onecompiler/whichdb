@@ -1,0 +1,182 @@
+{
+  "slug": "percona-xtradb-cluster",
+  "name": "Percona XtraDB Cluster",
+  "aliases": [
+    "PXC"
+  ],
+  "tagline": "Percona Server plus Galera synchronous replication, packaged as an open-source HA MySQL cluster.",
+  "description": "Percona XtraDB Cluster (PXC) combines Percona Server for MySQL with the Galera write-set replication library to give a virtually synchronous, multi-primary MySQL cluster. Every node holds a full copy of the data and commits are certified cluster-wide, so a node can fail without losing committed transactions. PXC adds Percona-specific safety rails such as strict mode, encrypted cluster traffic by default and ProxySQL integration, and it has a mature Kubernetes operator. It is a high-availability solution, not a write-scaling one: all nodes still apply every write.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "multi-primary",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Percona",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "9.7.1-1",
+    "date": "2026-09-10"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "basedOn": "Percona Server for MySQL + Galera",
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-2.0",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free; Percona sells support and managed services."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "active-active",
+    "notes": "Typically 3-5 nodes; writes are replicated to all nodes so throughput does not grow with node count. WAN clusters work but add commit latency."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL client/server protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "PHP",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No committed-data loss on single node failure thanks to certification-based synchronous replication",
+    "Any node accepts writes, simplifying failover",
+    "Automatic node provisioning via SST/IST with XtraBackup",
+    "Strict mode blocks unsafe operations (non-InnoDB tables, LOCK TABLES)",
+    "Percona Operator for MySQL (PXC) is production-proven on Kubernetes"
+  ],
+  "weaknesses": [
+    "Write throughput limited by the slowest node and network round trips",
+    "Optimistic certification causes deadlock errors on hot rows written from multiple nodes",
+    "Large transactions and DDL (TOI) stall the whole cluster",
+    "Needs at least three nodes (or an arbitrator) to avoid split brain"
+  ],
+  "useCases": [
+    "Highly available MySQL for business-critical OLTP",
+    "Zero-data-loss failover within a data center",
+    "Self-hosted MySQL on Kubernetes with an operator",
+    "Read scaling with consistent reads on every node"
+  ],
+  "notIdealFor": [
+    "Write-heavy workloads that need horizontal write scaling",
+    "Very large single transactions or bulk loads",
+    "High-latency cross-continent clusters"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "galera-cluster",
+    "mysql",
+    "mariadb",
+    "mysql-ndb-cluster",
+    "tidb",
+    "vitess"
+  ],
+  "tags": [
+    "mysql-compatible",
+    "high-availability",
+    "galera",
+    "synchronous-replication"
+  ],
+  "links": {
+    "website": "https://www.percona.com/mysql/software/percona-xtradb-cluster",
+    "docs": "https://docs.percona.com/percona-xtradb-cluster/9.7/",
+    "repository": "https://github.com/percona/percona-xtradb-cluster",
+    "changelog": "https://docs.percona.com/percona-xtradb-cluster/9.7/release-notes/release-notes-index.html"
+  },
+  "ids": {
+    "github": "percona/percona-xtradb-cluster",
+    "stackoverflowTag": "percona-xtradb-cluster",
+    "dockerHub": "percona/percona-xtradb-cluster",
+    "hackerNewsQuery": "\"Percona XtraDB Cluster\""
+  },
+  "brand": {
+    "color": "#FF7E1A"
+  },
+  "sources": [
+    "https://docs.percona.com/percona-xtradb-cluster/9.7/release-notes/release-notes-index.html",
+    "https://github.com/percona/percona-xtradb-cluster/tags",
+    "https://www.percona.com/mysql/software/percona-xtradb-cluster"
+  ],
+  "lastVerified": "2026-10-27"
+}

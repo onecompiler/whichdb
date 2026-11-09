@@ -1,0 +1,149 @@
+{
+  "slug": "sqlflex",
+  "name": "SQLflex",
+  "aliases": [],
+  "tagline": "Low-cost Informix-SE and ESQL/C compatible SQL engine for Linux, UNIX, Windows and VMS from Infoflex.",
+  "description": "SQLflex is Infoflex's clone of the Informix Standard Engine and the Informix ESQL/C API: the pitch is that existing Informix-SE applications and databases run unchanged at a fraction of IBM's price. It is a client/server ANSI SQL engine with row-level locking, unlimited users per runtime licence, a C API and script interface, and ports for Linux, UNIX, Windows and OpenVMS, sold alongside the company's Informix-compatible 4GL and accounting software. The product page and price list have not changed since at least 2006, so treat it as a niche migration target for old Informix-SE code rather than a modern database.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Still listed on infoflex.com (site updated 2024), but the product page and pricing have been unchanged since at least 2006 with no visible releases.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Infoflex, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2006,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (runtime, developer and source licences)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "startingPrice": "US$1,495 per Linux runtime/developer licence",
+    "notes": "Per-CPU runtime licences, developer licences and a source-code licence; 15% annual maintenance."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Informix ESQL/C"
+  ],
+  "apis": [
+    "C API",
+    "ESQL/C preprocessor"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "PHP",
+    "Perl"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs Informix-SE databases and ESQL/C code without changes",
+    "Much cheaper than IBM Informix licences, with unlimited users per runtime",
+    "Source-code licence available, and ports to OpenVMS and Linux"
+  ],
+  "weaknesses": [
+    "No visible development or releases in many years",
+    "Compatibility target is the old Informix-SE engine, not modern Informix",
+    "Very small vendor and user base"
+  ],
+  "useCases": [
+    "Keeping legacy Informix-SE and ESQL/C applications running cheaply",
+    "Moving Informix-SE apps off end-of-life hardware"
+  ],
+  "notIdealFor": [
+    "New applications",
+    "High concurrency or large data volumes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-informix",
+    "postgresql",
+    "firebird"
+  ],
+  "tags": [
+    "informix-compatible",
+    "sql",
+    "legacy",
+    "openvms"
+  ],
+  "links": {
+    "website": "http://www.infoflex.com/sqlflex.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://www.infoflex.com/sqlflex.html",
+    "https://web.archive.org/web/20061016071101/http://www.infoflex.com/sqlflex.html",
+    "https://dbdb.io/db/sqlflex"
+  ],
+  "lastVerified": "2026-10-27"
+}

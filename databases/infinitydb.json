@@ -1,0 +1,162 @@
+{
+  "slug": "infinitydb",
+  "name": "InfinityDB",
+  "aliases": [],
+  "tagline": "Boiler Bay's all-Java embedded B-tree database with a ConcurrentNavigableMap API and a server edition.",
+  "description": "InfinityDB is a commercial all-Java database engine from Boiler Bay Software. Its core is the ItemSpace, a sorted set of variable-length items made of typed components stored in a single file through a lockless concurrent B-tree; on top of that it exposes an extended java.util.concurrent.ConcurrentNavigableMap, so nested, multi-valued maps can model tables, documents, graphs or text indexes in one database. It offers global durable commits or fine-grained optimistic ACID transactions, and the Encrypted edition adds AES-256 with HMAC-SHA256. InfinityDB Server adds shared remote access with REST, web administration and PatternQuery, and is sold on AWS Marketplace or for on-premises use. Licensing is commercial, with free time-limited trials.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "multivalue",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp",
+    "iot"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Boiler Bay Software",
+  "vendorType": "company",
+  "initialRelease": 2002,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Embedded and Encrypted editions licensed directly from Boiler Bay; Server via AWS Marketplace or on-prem; free time-limited trials."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-file embedded store with no fixed size limit; the server edition shares it over the network."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "ItemSpace API",
+    "ConcurrentNavigableMap API",
+    "PatternQuery (Server)"
+  ],
+  "apis": [
+    "Java API",
+    "REST (Server)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Standard ConcurrentNavigableMap interface over a persistent, concurrent B-tree",
+    "One file can hold relational, document, graph and text-index structures",
+    "Optimistic fine-grained ACID transactions with automatic conflict detection",
+    "Encrypted edition with AES-256 and HMAC-SHA256"
+  ],
+  "weaknesses": [
+    "Commercial license with no published pricing",
+    "Java-only embedding",
+    "Small vendor and community; little public news since the late 2010s"
+  ],
+  "useCases": [
+    "Embedded storage in Java applications and appliances",
+    "Text indexing and custom data structures inside one file",
+    "Industrial data collection on JVM devices"
+  ],
+  "notIdealFor": [
+    "Non-JVM stacks",
+    "Distributed or multi-region deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mapdb",
+    "xodus",
+    "h2",
+    "berkeley-db",
+    "chronicle-map"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "b-tree",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://boilerbay.com/infinitydb/",
+    "docs": "https://boilerbay.com/papers/",
+    "wikipedia": "https://en.wikipedia.org/wiki/InfinityDB"
+  },
+  "ids": {
+    "wikipedia": "InfinityDB",
+    "hackerNewsQuery": "InfinityDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://boilerbay.com/infinitydb/",
+    "https://en.wikipedia.org/wiki/InfinityDB",
+    "https://dbdb.io/db/infinitydb"
+  ],
+  "lastVerified": "2026-10-27"
+}

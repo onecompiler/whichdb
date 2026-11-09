@@ -1,0 +1,161 @@
+{
+  "slug": "axibase",
+  "name": "Axibase",
+  "aliases": [
+    "Axibase Time Series Database",
+    "ATSD"
+  ],
+  "tagline": "HBase-backed time-series database with built-in SQL, rule engine and charts; withdrawn by Axibase in 2025.",
+  "description": "Axibase Time Series Database (ATSD) was a Java time-series platform from Axibase Corporation aimed at IT infrastructure, industrial equipment and market data. It bundled a storage engine, SQL engine, rule engine for alerting, portal and charting library, REST and line-protocol network APIs, and a JDBC driver, and could ingest tcollector, Graphite, StatsD and OSIsoft PI formats or Kafka streams. A single node handled on the order of 200,000 metrics per second; scale-out mode ran on Apache HBase over HDFS, EMRFS or Azure Storage. The documentation stayed online until mid-2025, but the official Docker image was last updated in 2022 and axibase.com now says only that the company is 'operating in stealth mode', so ATSD should be treated as discontinued.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "ATSD docs and downloads removed in 2025; axibase.com now says the company operates in stealth mode. Last Docker image update was October 2022.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "time-series",
+    "observability",
+    "iot",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed"
+  ],
+  "developer": "Axibase Corporation",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache HBase (scale-out mode)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Commercial editions were sold by Axibase; no longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Single node handled ~200k metrics/s; horizontal scale required deploying on HBase/HDFS."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "Rule engine expressions"
+  ],
+  "apis": [
+    "REST API",
+    "Network line protocol (TCP/UDP)",
+    "JDBC"
+  ],
+  "compatibleWith": [
+    "graphite"
+  ],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "All-in-one stack: storage, SQL, alerting rules and dashboards in one product",
+    "Accepted tcollector, Graphite, StatsD and OSIsoft PI ingestion formats",
+    "Automatic registration of new entities and metrics with no schema work",
+    "Out-of-order writes and microsecond timestamps"
+  ],
+  "weaknesses": [
+    "Product withdrawn; no support, updates or downloads",
+    "Scale-out depended on running and tuning HBase/HDFS",
+    "Proprietary with a small user community"
+  ],
+  "useCases": [
+    "Existing ATSD installations planning a migration",
+    "Historical reference for integrated TSDB-plus-alerting products"
+  ],
+  "notIdealFor": [
+    "New monitoring or IoT deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "influxdb",
+    "timescaledb",
+    "victoriametrics",
+    "questdb",
+    "opentsdb",
+    "kdb-plus"
+  ],
+  "tags": [
+    "time-series",
+    "hbase",
+    "monitoring",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://axibase.com/"
+  },
+  "ids": {
+    "dockerHub": "axibase/atsd",
+    "hackerNewsQuery": "Axibase"
+  },
+  "brand": {},
+  "sources": [
+    "https://axibase.com/",
+    "http://web.archive.org/web/20250822163603/https://axibase.com/docs/atsd/",
+    "https://hub.docker.com/r/axibase/atsd"
+  ],
+  "lastVerified": "2026-10-27"
+}

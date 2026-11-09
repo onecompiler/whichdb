@@ -1,0 +1,147 @@
+{
+  "slug": "hadapt",
+  "name": "Hadapt",
+  "aliases": [
+    "HadoopDB"
+  ],
+  "tagline": "SQL-on-Hadoop startup built on Yale's HadoopDB (PostgreSQL per node); acquired by Teradata in 2014.",
+  "description": "Hadapt commercialised HadoopDB, a 2009 Yale research system by Daniel Abadi's group that placed a PostgreSQL instance on every Hadoop node and pushed as much of each SQL query as possible into those databases while Hadoop MapReduce handled coordination and fault tolerance. The Cambridge, Massachusetts company sold it as an 'adaptive analytical platform' for running SQL over structured relational data and unstructured HDFS data in one cluster, and later pivoted to a 'schema-on-need' pitch for semi-structured data. Competition from Cloudera Impala and other SQL-on-Hadoop engines squeezed it, and Teradata bought its assets and engineers in July 2014. The product was not continued; today the same jobs fall to Trino, Spark SQL or Hive.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Teradata acquired Hadapt's assets in July 2014 and did not continue the product. Use Trino, Spark SQL or Hive.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Hadapt, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "HadoopDB (Hadoop + PostgreSQL)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scaled with the Hadoop cluster, one PostgreSQL instance per node."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pushed SQL work into per-node PostgreSQL for indexed, relational speed",
+    "Hadoop handled scheduling and fault tolerance for long queries",
+    "Queried relational tables and raw HDFS data in one cluster"
+  ],
+  "weaknesses": [
+    "Product discontinued after the 2014 Teradata acquisition",
+    "Complex two-layer architecture to operate"
+  ],
+  "useCases": [
+    "History of SQL-on-Hadoop",
+    "Studying hybrid MapReduce/DBMS architectures"
+  ],
+  "notIdealFor": [
+    "Any current deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "apache-spark-sql",
+    "apache-hive",
+    "apache-impala",
+    "greenplum"
+  ],
+  "tags": [
+    "sql-on-hadoop",
+    "hadoop",
+    "postgresql",
+    "acquired",
+    "teradata"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20130103022434/http://hadapt.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Hadapt"
+  },
+  "brand": {},
+  "sources": [
+    "https://siliconangle.com/2014/07/22/teradata-swoops-on-hadapt-revelytix-eyes-fixed-on-hadoop/",
+    "https://www.dbms2.com/?p=9197",
+    "https://www.vldb.org/pvldb/vol2/vldb09-861.pdf",
+    "https://dbdb.io/db/hadapt"
+  ],
+  "lastVerified": "2026-10-27"
+}

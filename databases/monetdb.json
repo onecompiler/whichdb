@@ -1,0 +1,177 @@
+{
+  "slug": "monetdb",
+  "name": "MonetDB",
+  "aliases": [],
+  "tagline": "Pioneering open-source column-store from CWI, still a lean research-grade analytical SQL database.",
+  "description": "MonetDB, developed at CWI Amsterdam since the 1990s and now stewarded by the MonetDB Foundation, is one of the original column-store databases: it executes queries column-at-a-time over memory-mapped binary association tables, pioneering ideas such as database cracking and vectorized execution that later shaped DuckDB and others. It is a full SQL server with transactions, GIS, embedded Python and R UDFs and a lightweight footprint. It is a solid free analytics engine for single-server workloads and research, with a small community and limited managed or cloud options.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse",
+    "scientific"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "MonetDB Foundation (CWI spin-off)",
+  "vendorType": "foundation",
+  "initialRelease": 2004,
+  "latestVersion": {
+    "version": "11.55.3",
+    "date": "2026"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial support via MonetDB Solutions."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Single-server design; merge and remote tables allow manual partitioning across servers."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Python UDFs",
+    "R UDFs"
+  ],
+  "apis": [
+    "MAPI protocol",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "C",
+    "R",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pioneering columnar engine with a small footprint",
+    "Full SQL with ACID transactions, triggers and procedures",
+    "Embedded Python and R UDFs for in-database analytics",
+    "Free and open source under MPL 2.0"
+  ],
+  "weaknesses": [
+    "Single-node only; no built-in distributed execution",
+    "Small community and few integrations or managed offerings",
+    "Limited compression compared with modern columnar engines"
+  ],
+  "useCases": [
+    "Single-server analytical database",
+    "Scientific and research data analysis",
+    "Teaching and database research"
+  ],
+  "notIdealFor": [
+    "Distributed petabyte warehouses",
+    "OLTP",
+    "Teams needing commercial cloud services"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "clickhouse",
+    "postgresql",
+    "exasol"
+  ],
+  "tags": [
+    "columnar",
+    "research",
+    "open-source",
+    "cwi"
+  ],
+  "links": {
+    "website": "https://www.monetdb.org/",
+    "docs": "https://www.monetdb.org/documentation/",
+    "repository": "https://github.com/MonetDB/MonetDB",
+    "changelog": "https://www.monetdb.org/release-notes/dec2025/",
+    "wikipedia": "https://en.wikipedia.org/wiki/MonetDB"
+  },
+  "ids": {
+    "github": "MonetDB/MonetDB",
+    "stackoverflowTag": "monetdb",
+    "wikipedia": "MonetDB",
+    "dockerHub": "monetdb/monetdb",
+    "pypi": "pymonetdb",
+    "hackerNewsQuery": "MonetDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.monetdb.org/downloads/",
+    "https://www.monetdb.org/release-notes/dec2025/",
+    "https://en.wikipedia.org/wiki/MonetDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

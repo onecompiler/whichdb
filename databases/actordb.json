@@ -1,0 +1,167 @@
+{
+  "slug": "actordb",
+  "name": "ActorDB",
+  "aliases": [],
+  "tagline": "Erlang distributed SQL database that shards data into many small Raft-replicated SQLite 'actors'.",
+  "description": "ActorDB, built by Biokoda, splits a database into many independent 'actors', each a full SQLite database stored on LMDB and replicated across nodes with Raft. Most queries hit a single actor (one user's mailbox or file tree, say) with full SQL and no global locks, while explicit multi-actor transactions and a sharded KV table type cover cross-cutting data. Clients connect over the MySQL wire protocol or Thrift, so ordinary MySQL drivers work. The design fits per-user data in apps like mail or file sync, but the project went quiet after release 0.10.29 in October 2019 and has had no commits since.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits or releases since 0.10.29 (October 2019); effectively abandoned. Consider rqlite, dqlite or a distributed SQL database instead.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "Biokoda",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.10.29",
+    "date": "2019-10-01"
+  },
+  "writtenIn": [
+    "Erlang",
+    "C"
+  ],
+  "basedOn": "SQLite on LMDB",
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales by adding nodes and spreading many small actors across them; each actor is limited to what one SQLite database handles well."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (SQLite dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "Thrift"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "sqlite"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Per-actor SQLite databases give full SQL with no global locks",
+    "Raft replication per actor provides strong consistency and automatic failover",
+    "MySQL protocol means existing drivers work unchanged",
+    "Nodes and schema changes can be added while the cluster is running"
+  ],
+  "weaknesses": [
+    "Abandoned since 2019; no security or compatibility updates",
+    "Data model must partition cleanly into actors to benefit",
+    "Cross-actor transactions are far slower than single-actor ones",
+    "Small community and sparse client libraries beyond MySQL drivers"
+  ],
+  "useCases": [
+    "Studying actor-per-tenant database designs",
+    "Per-user data stores such as mail or file-sync backends (historically)"
+  ],
+  "notIdealFor": [
+    "New production systems",
+    "Analytical queries that span the whole dataset"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rqlite",
+    "dqlite",
+    "cockroachdb",
+    "turso",
+    "cloudflare-durable-objects",
+    "tidb"
+  ],
+  "tags": [
+    "distributed-sql",
+    "sqlite",
+    "raft",
+    "erlang",
+    "abandoned"
+  ],
+  "links": {
+    "website": "http://www.actordb.com/",
+    "docs": "http://www.actordb.com/docs-about.html",
+    "repository": "https://github.com/biokoda/actordb",
+    "changelog": "https://github.com/biokoda/actordb/blob/master/CHANGES.md"
+  },
+  "ids": {
+    "github": "biokoda/actordb",
+    "hackerNewsQuery": "ActorDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/biokoda/actordb",
+    "https://github.com/biokoda/actordb/blob/master/CHANGES.md",
+    "http://www.actordb.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

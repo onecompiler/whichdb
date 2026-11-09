@@ -1,0 +1,188 @@
+{
+  "slug": "sqlite-vec",
+  "name": "sqlite-vec",
+  "aliases": [
+    "sqlite-vss successor",
+    "vec0"
+  ],
+  "tagline": "Dependency-free SQLite extension for vector search that runs anywhere SQLite does, including WASM.",
+  "description": "sqlite-vec is a small C extension by Alex Garcia that adds vector storage and KNN queries to SQLite through vec0 virtual tables and scalar functions, supporting float, int8 and binary vectors with metadata, partition and auxiliary columns. It has no dependencies, so it runs on servers, phones, Raspberry Pis and in the browser via WebAssembly, and it was sponsored by Mozilla Builders. The stable 0.1.x line does brute-force search (fast enough for hundreds of thousands to low millions of vectors); ANN indexes are being developed in the 0.1.10 alphas. Perfect for local-first and on-device RAG.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "relational"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "embedded",
+    "edge",
+    "local-first",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Alex Garcia (sponsored by Mozilla Builders)",
+  "vendorType": "community",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "0.1.9",
+    "date": "2026-03-31"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "MIT or Apache-2.0 (dual)",
+    "spdx": "MIT OR Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios",
+      "browser",
+      "wasm"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Brute-force KNN in 0.1.x; comfortable up to roughly a few million vectors depending on dimensions and quantization."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "SQLite C API"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "Ruby",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Zero dependencies; runs anywhere SQLite runs, including the browser",
+    "Vectors share SQLite transactions, joins and backups",
+    "int8 and binary quantization shrink storage",
+    "Pairs with FTS5 for hybrid search in one file",
+    "Packages for Python, Node, Ruby, Go and Rust"
+  ],
+  "weaknesses": [
+    "No ANN index in stable releases, so large collections get slow",
+    "Pre-1.0 with slow release cadence",
+    "Single-writer SQLite concurrency limits",
+    "One maintainer"
+  ],
+  "useCases": [
+    "On-device RAG in desktop and mobile apps",
+    "Local-first semantic search",
+    "Browser-based vector search via WASM",
+    "Small server apps already on SQLite or libSQL"
+  ],
+  "notIdealFor": [
+    "Tens of millions of vectors",
+    "High write concurrency",
+    "Multi-node deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lancedb",
+    "chroma",
+    "pgvector",
+    "usearch",
+    "libsql",
+    "orama"
+  ],
+  "tags": [
+    "sqlite",
+    "vector",
+    "extension",
+    "embedded",
+    "local-first",
+    "wasm"
+  ],
+  "links": {
+    "website": "https://alexgarcia.xyz/sqlite-vec/",
+    "docs": "https://alexgarcia.xyz/sqlite-vec/",
+    "repository": "https://github.com/asg017/sqlite-vec",
+    "changelog": "https://github.com/asg017/sqlite-vec/releases"
+  },
+  "ids": {
+    "github": "asg017/sqlite-vec",
+    "npm": "sqlite-vec",
+    "pypi": "sqlite-vec",
+    "hackerNewsQuery": "sqlite-vec"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/asg017/sqlite-vec",
+    "https://github.com/asg017/sqlite-vec/releases",
+    "https://pypi.org/project/sqlite-vec/"
+  ],
+  "lastVerified": "2026-10-27"
+}

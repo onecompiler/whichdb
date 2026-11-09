@@ -1,0 +1,111 @@
+{
+  "slug": "evcache",
+  "name": "EVCache",
+  "aliases": ["Ephemeral Volatile Cache", "Netflix EVCache"],
+  "tagline": "Netflix's memcached-based distributed cache with zone-aware replication, built for AWS microservices.",
+  "description": "EVCache (Ephemeral Volatile Cache) is Netflix's distributed caching layer, open-sourced in 2013, made of memcached server clusters plus a Java client library that handles placement and replication. The client shards keys within a zone by Ketama consistent hashing, writes every item to a copy of the cache in each AWS availability zone and reads from the local zone first, so losing a zone costs latency rather than hits; large values are chunked, servers are found through service discovery, and a replication service copies data across regions. Consistency is explicitly best-effort, with failed writes sent to Kafka for a consistency checker to repair. It remains actively maintained, with v5.28 released in September 2026. Outside Netflix-style Java/AWS stacks, a managed Memcached or Redis/Valkey service is usually simpler to adopt.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["caching", "session-store"],
+  "architecture": ["distributed", "in-memory", "client-server"],
+  "developer": "Netflix",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": { "version": "5.28.1", "date": "2026-09-30" },
+  "writtenIn": ["Java"],
+  "basedOn": "Memcached",
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws"],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Client-side sharding across memcached nodes, full replica per availability zone, cross-region replication at Netflix."
+  },
+  "consistency": { "acid": "none", "models": ["eventual"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["Memcached commands via Java client"],
+  "apis": ["Java client API", "Memcached protocol"],
+  "compatibleWith": ["memcached"],
+  "drivers": ["Java"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zone-aware replication: each availability zone holds a full copy, so zone loss does not drop hit rates",
+    "Battle-tested at Netflix scale for years",
+    "Builds on plain memcached, so server behaviour is simple and well understood",
+    "Actively maintained Java client (5.x releases through 2026)"
+  ],
+  "weaknesses": [
+    "Best-effort consistency: zone copies can diverge until TTL expiry or repair",
+    "Client logic is Java-centric; other languages need a proxy or their own implementation",
+    "Assumes Netflix-style service discovery and AWS availability zones",
+    "Cache only: no persistence guarantees or rich data types like Redis"
+  ],
+  "useCases": [
+    "Multi-zone caching in front of databases for Java microservices on AWS",
+    "Session and personalisation data with short TTLs",
+    "Read-heavy caches with sub-millisecond in-zone latency targets"
+  ],
+  "notIdealFor": ["Durable primary storage", "Non-JVM stacks without extra tooling", "Workloads needing Redis data structures"],
+  "notableUsers": ["Netflix"],
+  "alternatives": ["memcached", "redis", "valkey", "amazon-elasticache", "momento", "hazelcast"],
+  "tags": ["cache", "memcached", "netflix", "aws", "java"],
+  "links": {
+    "website": "https://github.com/Netflix/EVCache",
+    "repository": "https://github.com/Netflix/EVCache",
+    "docs": "https://github.com/Netflix/EVCache/wiki",
+    "changelog": "https://github.com/Netflix/EVCache/releases"
+  },
+  "ids": {
+    "github": "Netflix/EVCache",
+    "hackerNewsQuery": "EVCache"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Netflix/EVCache",
+    "https://github.com/Netflix/EVCache/releases",
+    "https://github.com/Netflix/EVCache/wiki",
+    "https://dbdb.io/db/evcache"
+  ],
+  "lastVerified": "2026-10-27"
+}

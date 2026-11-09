@@ -1,0 +1,166 @@
+{
+  "slug": "pg-ivm",
+  "name": "pg_ivm",
+  "aliases": [
+    "pg-ivm",
+    "Incremental View Maintenance for PostgreSQL"
+  ],
+  "tagline": "A Postgres extension that keeps materialized views updated incrementally inside the same transaction.",
+  "description": "pg_ivm adds Incrementally Maintainable Materialized Views (IMMVs) to PostgreSQL. You create one with a function call, and triggers apply only the delta of each INSERT, UPDATE or DELETE to the view within the same transaction, instead of a full REFRESH MATERIALIZED VIEW. It comes from SRA OSS, whose developers have long proposed IVM for core Postgres, and supports PostgreSQL 13 through 19 with inner and outer joins, DISTINCT, and some aggregates. It is the simplest open-source option for always-fresh views in plain Postgres, though write overhead and query restrictions mean it is not a general streaming engine.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "SRA OSS (IVM Development Group)",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "1.17",
+    "date": "2026-10-18"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "PostgreSQL License",
+    "spdx": "PostgreSQL"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Runs inside a single Postgres instance; maintenance cost is paid on every write to base tables."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Any Postgres driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Views stay consistent with base tables in the same transaction",
+    "No external service: just a Postgres extension",
+    "Supports PostgreSQL 13 to 19",
+    "Permissive PostgreSQL license"
+  ],
+  "weaknesses": [
+    "Adds trigger overhead to every write on base tables",
+    "Limited SQL support (no window functions, limited aggregates and subqueries)",
+    "Not available on many managed Postgres services"
+  ],
+  "useCases": [
+    "Always-fresh summary tables for dashboards",
+    "Replacing periodic REFRESH MATERIALIZED VIEW jobs"
+  ],
+  "notIdealFor": [
+    "Write-heavy tables with complex views",
+    "Streaming from Kafka or multiple databases"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "epsio",
+    "materialize",
+    "feldera",
+    "readyset",
+    "postgresql"
+  ],
+  "tags": [
+    "postgres-extension",
+    "incremental-view-maintenance",
+    "materialized-views",
+    "postgres-ecosystem"
+  ],
+  "links": {
+    "website": "https://github.com/sraoss/pg_ivm",
+    "repository": "https://github.com/sraoss/pg_ivm",
+    "changelog": "https://github.com/sraoss/pg_ivm/releases"
+  },
+  "ids": {
+    "github": "sraoss/pg_ivm",
+    "hackerNewsQuery": "pg_ivm"
+  },
+  "brand": {
+    "simpleIcon": "postgresql"
+  },
+  "sources": [
+    "https://github.com/sraoss/pg_ivm",
+    "https://github.com/sraoss/pg_ivm/releases",
+    "https://www.postgresql.eu/events/pgconfeu2026/schedule/session/8219-pg_ivm-recent-improvements-and-future-directions-in-incremental-view-maintenance/"
+  ],
+  "lastVerified": "2026-10-27"
+}

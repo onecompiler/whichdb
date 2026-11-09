@@ -1,0 +1,164 @@
+{
+  "slug": "gt-m",
+  "name": "GT.M",
+  "aliases": [
+    "GTM",
+    "Greystone Technology MUMPS",
+    "FIS GT.M"
+  ],
+  "tagline": "FIS's high-throughput M (MUMPS) database and compiler, behind major core-banking systems.",
+  "description": "GT.M is a key-value database engine and compiler for the ISO-standard M language (MUMPS), now developed by FIS. Data is stored in hierarchical globals with ACID transactions, before- and after-image journaling, and logical multi-site replication built for continuous availability. It underpins FIS Profile core banking and many VistA healthcare deployments. FIS publishes the source and Linux x86_64 builds as free software on SourceForge, with releases continuing in the V7 series. YottaDB is a more openly developed fork with extra language APIs. GT.M remains the conservative, vendor-backed choice for M workloads.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "hierarchical",
+  "models": [
+    "hierarchical",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica"
+  ],
+  "developer": "FIS (Fidelity National Information Services)",
+  "vendorType": "company",
+  "initialRelease": 1986,
+  "latestVersion": {
+    "version": "V7.2-001",
+    "date": "2026-08"
+  },
+  "writtenIn": [
+    "C",
+    "M (MUMPS)",
+    "Assembly"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0 (Linux x86_64); commercial on other platforms",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free on GNU/Linux x86_64; support and other platforms through FIS."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Logical multi-site replication keeps a standby instance current for failover."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "M (MUMPS)"
+  ],
+  "apis": [
+    "M call-in/call-out C interface"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "M",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very high transaction throughput for M applications",
+    "Journaling and replication designed for banking-grade availability",
+    "Long-lived, vendor-maintained code base with free Linux builds"
+  ],
+  "weaknesses": [
+    "Tied to the M language and its small talent pool",
+    "Minimal modern language bindings compared with YottaDB",
+    "Development happens behind closed doors at FIS"
+  ],
+  "useCases": [
+    "FIS Profile and other M-based core-banking systems",
+    "VistA and M-based health record systems"
+  ],
+  "notIdealFor": [
+    "New applications without M heritage",
+    "Cloud-native, horizontally scaled services"
+  ],
+  "notableUsers": [
+    "FIS"
+  ],
+  "alternatives": [
+    "yottadb",
+    "intersystems-iris",
+    "intersystems-cache"
+  ],
+  "tags": [
+    "mumps",
+    "m-language",
+    "banking",
+    "hierarchical",
+    "fis"
+  ],
+  "links": {
+    "website": "https://sourceforge.net/projects/fis-gtm/",
+    "wikipedia": "https://en.wikipedia.org/wiki/GT.M"
+  },
+  "ids": {
+    "stackoverflowTag": "mumps",
+    "wikipedia": "GT.M",
+    "hackerNewsQuery": "GT.M"
+  },
+  "brand": {},
+  "sources": [
+    "https://sourceforge.net/projects/fis-gtm/files/",
+    "https://en.wikipedia.org/wiki/GT.M"
+  ],
+  "lastVerified": "2026-10-27"
+}

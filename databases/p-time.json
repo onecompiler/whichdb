@@ -1,0 +1,142 @@
+{
+  "slug": "p-time",
+  "name": "P*TIME",
+  "aliases": [
+    "PTIME",
+    "Transact In Memory P*TIME"
+  ],
+  "tagline": "Korean in-memory OLTP engine acquired by SAP in 2005; its technology fed into SAP HANA.",
+  "description": "P*TIME was a main-memory relational OLTP engine that grew out of Sang Kyun Cha's research group at Seoul National University and was commercialised by Transact In Memory, Inc.; a VLDB 2004 industrial paper presented it as a highly scalable DBMS for update-intensive stream workloads. Its design leaned on ideas from the same group, notably latch-free optimistic index traversal and differential logging, which allows logging and recovery to run in parallel, to scale on multiprocessors at a time when most engines were disk-bound. SAP acquired the company in 2005, and P*TIME became one of the building blocks of SAP HANA alongside the TREX column engine and MaxDB's liveCache. It was never sold standalone under SAP; use SAP HANA or another in-memory OLTP engine today.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Transact In Memory was acquired by SAP in 2005; P*TIME was absorbed into SAP HANA and is not sold separately.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "stream-processing"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node"
+  ],
+  "developer": "Transact In Memory, Inc. (acquired by SAP)",
+  "vendorType": "company",
+  "initialRelease": 2004,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (no longer offered)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Not sold since the 2005 SAP acquisition."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node main-memory engine optimised for multiprocessor scalability."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early demonstration of multicore-scalable in-memory OLTP",
+    "Parallel logging and recovery via differential logging",
+    "Direct ancestor of parts of SAP HANA"
+  ],
+  "weaknesses": [
+    "Never available outside its short commercial life before SAP",
+    "Little public documentation beyond research papers"
+  ],
+  "useCases": [
+    "Studying the origins of SAP HANA",
+    "Background reading on latch-free in-memory OLTP design"
+  ],
+  "notIdealFor": [
+    "Any deployment: the product no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sap-hana",
+    "oracle-timesten",
+    "altibase",
+    "volt-active-data",
+    "h-store"
+  ],
+  "tags": [
+    "in-memory",
+    "oltp",
+    "sap",
+    "korea",
+    "historical"
+  ],
+  "links": {
+    "website": "https://doi.org/10.1016/b978-012088469-8/50090-5"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1016/b978-012088469-8/50090-5",
+    "https://www.vldb.org/conf/2004/IND4P1.PDF",
+    "https://en.wikipedia.org/wiki/SAP_HANA"
+  ],
+  "lastVerified": "2026-10-27"
+}

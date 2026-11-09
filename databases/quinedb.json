@@ -1,0 +1,148 @@
+{
+  "slug": "quinedb",
+  "name": "QuineDB",
+  "aliases": [
+    "quinedb"
+  ],
+  "tagline": "A joke key-value store that is also a quine: every write prints a new copy of itself containing your data.",
+  "description": "QuineDB is Gary Fredericks' 2016 satire of database design: a single Bash 4 script that stores keys and values inside its own source code. Running it prints the (possibly modified) script to stdout and the command result to stderr, so a write only persists if you redirect stdout back over the file; get, set, delete and keys are the whole API, and 'transactions' are built by piping one invocation into the next. The README cheerfully reports that 1,000 inserts take over 11 minutes and dodges questions about concurrency and clustering. It is a fun teaching prop about quines, persistence and what a database fundamentally is, and should never hold real data.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Joke project with no commits since 2017; the script still runs on Bash 4 but nothing is maintained.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Gary Fredericks",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "Bash"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Eclipse Public License 1.0",
+    "spdx": "EPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Operations get slower roughly with n log n of the data size; a thousand keys is already painful."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Command-line get/set/delete/keys"
+  ],
+  "apis": [
+    "CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "The entire database, code and data, travels as one self-reproducing file",
+    "Forking or versioning the database is just copying a script",
+    "A memorable illustration of quines and of what 'persistence' really requires"
+  ],
+  "weaknesses": [
+    "Deliberately impractical: very slow beyond a few hundred keys",
+    "Writes are lost unless stdout is redirected back over the script",
+    "No concurrency control, networking or real durability guarantees"
+  ],
+  "useCases": [
+    "Teaching quines and self-modifying programs",
+    "Conference talks and jokes about database design"
+  ],
+  "notIdealFor": [
+    "Storing anything you care about",
+    "Any concurrent or multi-user use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "lmdb",
+    "bbolt"
+  ],
+  "tags": [
+    "joke",
+    "bash",
+    "quine",
+    "key-value"
+  ],
+  "links": {
+    "website": "https://github.com/gfredericks/quinedb",
+    "repository": "https://github.com/gfredericks/quinedb"
+  },
+  "ids": {
+    "github": "gfredericks/quinedb",
+    "hackerNewsQuery": "QuineDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/gfredericks/quinedb",
+    "https://dbdb.io/db/quinedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,178 @@
+{
+  "slug": "tinybird",
+  "name": "Tinybird",
+  "aliases": [],
+  "tagline": "Managed ClickHouse platform that turns SQL pipes into low-latency, versioned HTTP APIs.",
+  "description": "Tinybird is a developer platform on top of managed ClickHouse: you ingest events over an HTTP Events API, Kafka or S3, write SQL 'pipes', and publish them as parameterized, authenticated REST endpoints. Projects are defined as code, versioned in Git, deployed via CLI, and can be run locally with the Tinybird Local container. It removes most ClickHouse operations and API plumbing, which makes it popular for user-facing analytics in SaaS products. You trade some control and portability for that convenience, and costs scale with processed data and requests.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "time-series"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "observability"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Tinybird",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "Python",
+    "C++"
+  ],
+  "basedOn": "ClickHouse",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free plan for small projects; paid plans by compute size and usage; enterprise dedicated clusters."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Runs on managed ClickHouse clusters sized per plan; dedicated infrastructure available."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ClickHouse dialect)"
+  ],
+  "apis": [
+    "REST API endpoints",
+    "Events API (HTTP)",
+    "ClickHouse HTTP interface"
+  ],
+  "compatibleWith": [
+    "clickhouse"
+  ],
+  "drivers": [
+    "JavaScript",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Publish SQL queries as authenticated, parameterized REST APIs in minutes",
+    "High-throughput HTTP Events API and Kafka connectors for ingestion",
+    "Projects as code with CLI, Git workflows and local development container",
+    "ClickHouse performance without operating ClickHouse",
+    "Incremental materialized views for real-time rollups"
+  ],
+  "weaknesses": [
+    "Tied to Tinybird's platform; moving away means rebuilding APIs",
+    "Usage-based billing can climb with heavy query traffic",
+    "Less control over ClickHouse settings than self-managed",
+    "No self-hosted production deployment"
+  ],
+  "useCases": [
+    "User-facing analytics in SaaS apps",
+    "Web and product analytics",
+    "Usage-based billing metering",
+    "Real-time personalization APIs"
+  ],
+  "notIdealFor": [
+    "Traditional BI warehouse with complex modeling",
+    "OLTP",
+    "On-prem or air-gapped environments"
+  ],
+  "notableUsers": [
+    "Vercel"
+  ],
+  "alternatives": [
+    "clickhouse",
+    "apache-pinot",
+    "apache-druid",
+    "motherduck",
+    "rockset",
+    "firebolt"
+  ],
+  "tags": [
+    "clickhouse",
+    "api",
+    "real-time",
+    "developer-platform",
+    "serverless"
+  ],
+  "links": {
+    "website": "https://www.tinybird.co/",
+    "docs": "https://www.tinybird.co/docs",
+    "pricing": "https://www.tinybird.co/pricing"
+  },
+  "ids": {
+    "dockerHub": "tinybirdco/tinybird-local",
+    "npm": "@tinybirdco/sdk",
+    "pypi": "tinybird",
+    "hackerNewsQuery": "Tinybird"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.tinybird.co/",
+    "https://www.tinybird.co/pricing",
+    "https://hub.docker.com/r/tinybirdco/tinybird-local"
+  ],
+  "lastVerified": "2026-10-27"
+}

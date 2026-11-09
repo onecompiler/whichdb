@@ -1,0 +1,200 @@
+{
+  "slug": "dragonfly",
+  "name": "Dragonfly",
+  "aliases": [
+    "DragonflyDB"
+  ],
+  "tagline": "A multi-threaded, shared-nothing in-memory store that speaks Redis and Memcached on one big box.",
+  "description": "Dragonfly reimplements the Redis and Memcached APIs on a shared-nothing, thread-per-core architecture, so a single process can use dozens of cores instead of needing a Redis Cluster of many shards. Its dashtable layout and fork-free snapshotting also cut memory overhead and avoid the copy-on-write spikes that make Redis BGSAVE painful. It is a strong fit for teams that want to vertically scale a Redis workload on large instances. Version 2.0 shipped in September 2026, still under BSL 1.1, which forbids offering it as a competing managed service.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "vector",
+    "search"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "queue",
+    "pub-sub",
+    "vector-search"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "DragonflyDB Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "2.0.2",
+    "date": "2026-10-07"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host under BSL; Dragonfly Cloud and Dragonfly Enterprise are paid."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Dragonfly Cloud",
+      "provider": "DragonflyDB",
+      "url": "https://www.dragonflydb.io/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Designed to scale up to hundreds of GB and millions of ops/s per node; cluster mode and Dragonfly Swarm add horizontal scaling."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Memcached protocol",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2/RESP3",
+    "Memcached text protocol"
+  ],
+  "compatibleWith": [
+    "redis",
+    "memcached"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Thread-per-core design scales one instance across many cores without cluster sharding",
+    "Fork-free snapshots avoid Redis-style memory spikes during persistence",
+    "Lower per-key memory overhead than Redis for many workloads",
+    "Speaks both RESP and Memcached, easing consolidation of two cache tiers",
+    "Built-in search and JSON commands compatible with RediSearch/RedisJSON clients"
+  ],
+  "weaknesses": [
+    "BSL 1.1 license restricts offering it as a managed service",
+    "Some Redis commands and module behaviours differ or are missing",
+    "Smaller ecosystem and fewer managed options than Redis/Valkey",
+    "Still bounded by the RAM of the machines you run"
+  ],
+  "useCases": [
+    "Consolidating many Redis shards onto fewer large instances",
+    "High-throughput caching and session storage",
+    "BullMQ / Sidekiq style queue backends",
+    "Replacing Memcached and Redis with one engine"
+  ],
+  "notIdealFor": [
+    "Vendors building a hosted Redis-compatible service",
+    "Workloads depending on niche Redis modules",
+    "Datasets larger than RAM"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "garnet",
+    "keydb",
+    "memcached"
+  ],
+  "tags": [
+    "cache",
+    "in-memory",
+    "redis-compatible",
+    "multi-threaded",
+    "bsl"
+  ],
+  "links": {
+    "website": "https://www.dragonflydb.io/",
+    "docs": "https://www.dragonflydb.io/docs",
+    "repository": "https://github.com/dragonflydb/dragonfly",
+    "pricing": "https://www.dragonflydb.io/pricing",
+    "changelog": "https://github.com/dragonflydb/dragonfly/releases"
+  },
+  "ids": {
+    "github": "dragonflydb/dragonfly",
+    "hackerNewsQuery": "Dragonfly"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/dragonflydb/dragonfly/releases",
+    "https://www.dragonflydb.io/docs/about/license",
+    "https://phoronix.com/news/Dragonfly-2.0-Released"
+  ],
+  "lastVerified": "2026-10-27"
+}

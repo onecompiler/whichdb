@@ -1,0 +1,172 @@
+{
+  "slug": "bleve",
+  "name": "Bleve",
+  "aliases": [
+    "bleve search"
+  ],
+  "tagline": "Pure-Go full-text, geo and vector indexing library from Couchbase.",
+  "description": "Bleve is a full-text search and indexing library for Go, created and maintained largely by Couchbase, where it powers Couchbase Server's Search Service. It indexes Go structs or JSON with configurable analyzers, supports term, phrase, fuzzy, numeric range, date and geo queries, faceting and highlighting, and uses the segment-based 'scorch' index format. Vector search was added in v2.4 via FAISS bindings (built with a vectors build tag). It is the most complete native-Go option for embedding search into a Go service.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "embedded",
+    "geospatial"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Couchbase and Bleve contributors",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "2.6.1",
+    "date": "2026-08-24"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Single index per process; Couchbase builds distributed search on top."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Bleve query string syntax",
+    "Go API"
+  ],
+  "apis": [
+    "Go"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Go for text search, easy to embed with go get",
+    "Rich queries, facets and highlighting",
+    "Geo points and shapes",
+    "Vector search via FAISS integration",
+    "Battle-tested inside Couchbase Search"
+  ],
+  "weaknesses": [
+    "Vector support needs cgo and FAISS",
+    "Slower than Tantivy or Lucene on large corpora",
+    "Go-only",
+    "No built-in server or replication"
+  ],
+  "useCases": [
+    "Embedding search in Go services and CLIs",
+    "Desktop or self-hosted apps written in Go",
+    "Hybrid text plus vector search in Go"
+  ],
+  "notIdealFor": [
+    "Large distributed search clusters",
+    "Non-Go stacks",
+    "Teams wanting a ready search server"
+  ],
+  "notableUsers": [
+    "Couchbase"
+  ],
+  "alternatives": [
+    "tantivy",
+    "apache-lucene",
+    "zincsearch",
+    "sonic",
+    "couchbase"
+  ],
+  "tags": [
+    "search",
+    "library",
+    "go",
+    "open-source",
+    "couchbase"
+  ],
+  "links": {
+    "website": "https://blevesearch.com/",
+    "docs": "https://blevesearch.com/docs/",
+    "repository": "https://github.com/blevesearch/bleve",
+    "changelog": "https://github.com/blevesearch/bleve/releases"
+  },
+  "ids": {
+    "github": "blevesearch/bleve",
+    "stackoverflowTag": "bleve",
+    "hackerNewsQuery": "Bleve"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/blevesearch/bleve",
+    "https://github.com/blevesearch/bleve/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

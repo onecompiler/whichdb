@@ -1,0 +1,185 @@
+{
+  "slug": "objectbox",
+  "name": "ObjectBox",
+  "aliases": [
+    "ObjectBox Database"
+  ],
+  "tagline": "Fast on-device object database with built-in HNSW vector search and an optional commercial sync server.",
+  "description": "ObjectBox is an embedded object database for mobile, desktop and IoT devices, with bindings for Java/Kotlin, Dart/Flutter, Swift, C/C++, Go and Python. You annotate entity classes and get ACID transactions, relations and indexed queries without an ORM. Since version 4 it also ships an on-device HNSW vector index, which makes it one of the few practical options for local RAG or semantic search on phones. Data sync to other devices or a self-hosted server is a separate commercial product, ObjectBox Sync, which the company now markets as an Atlas Device Sync replacement.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "vector"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline",
+    "iot",
+    "vector-search",
+    "edge"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "ObjectBox Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "Java 5.4.2",
+    "date": "2026-05-06"
+  },
+  "writtenIn": [
+    "C++",
+    "Java",
+    "Kotlin",
+    "Dart",
+    "Swift"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Free closed-source core; Apache-2.0 language bindings"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "The database is free to use. ObjectBox Sync (device-to-server and peer sync) is licensed commercially."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process embedded store; scale-out only via ObjectBox Sync replicas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "ObjectBox Query Builder API"
+  ],
+  "apis": [
+    "Native SDKs"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Kotlin",
+    "Dart",
+    "Swift",
+    "C",
+    "C++",
+    "Go",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "On-device HNSW vector index for local semantic search and RAG",
+    "Very low per-operation overhead; benchmarks well against SQLite-based ORMs on mobile",
+    "Same object API on Android, iOS, Flutter, Linux, Windows and embedded C",
+    "Automatic schema handling for most model changes without hand-written migrations"
+  ],
+  "weaknesses": [
+    "Core engine is closed source; only the bindings are on GitHub",
+    "Sync is a paid add-on rather than part of the free product",
+    "No SQL; complex aggregation and reporting must be done in application code"
+  ],
+  "useCases": [
+    "Offline-first Android and Flutter apps",
+    "On-device AI features needing local vector search",
+    "IoT gateways and embedded Linux devices",
+    "Replacing Realm after the Device Sync shutdown"
+  ],
+  "notIdealFor": [
+    "Server-side multi-user databases",
+    "Teams that require a fully open-source stack",
+    "Ad-hoc SQL analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "realm",
+    "couchbase-lite",
+    "sqlite",
+    "isar",
+    "hive-dart",
+    "powersync"
+  ],
+  "tags": [
+    "mobile",
+    "embedded",
+    "vector",
+    "iot",
+    "edge",
+    "flutter"
+  ],
+  "links": {
+    "website": "https://objectbox.io/",
+    "docs": "https://docs.objectbox.io/",
+    "repository": "https://github.com/objectbox/objectbox-java",
+    "changelog": "https://github.com/objectbox/objectbox-java/releases"
+  },
+  "ids": {
+    "github": "objectbox/objectbox-java",
+    "stackoverflowTag": "objectbox",
+    "pypi": "objectbox",
+    "hackerNewsQuery": "ObjectBox"
+  },
+  "brand": {},
+  "sources": [
+    "https://objectbox.io/",
+    "https://github.com/objectbox/objectbox-java/releases",
+    "https://pub.dev/packages/objectbox"
+  ],
+  "lastVerified": "2026-10-27"
+}

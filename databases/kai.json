@@ -1,0 +1,163 @@
+{
+  "slug": "kai",
+  "name": "Kai",
+  "aliases": [
+    "Kai key-value store",
+    "kai.sf.net"
+  ],
+  "tagline": "Early open-source Erlang implementation of Amazon's Dynamo design, with a memcached-compatible API.",
+  "description": "Kai was one of the first open-source clones of Amazon's Dynamo paper, started in Japan in May 2008 and hosted on SourceForge. Written in Erlang as a set of cooperating actor processes, it spread keys over a consistent-hashing ring, replicated each value to a configurable number of nodes, used quorum reads and writes (which could be set for strong consistency), repaired membership through an epidemic protocol, and spoke the memcached protocol so existing clients could connect. It was deployed in production at goo home, a large Japanese social network. Four releases came out, the last (0.4.0) in May 2009, before activity stopped; Riak and Cassandra carried the Dynamo approach forward.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release 0.4.0 in May 2009; no development since. Dynamo-style successors include Riak KV, Apache Cassandra and ScyllaDB.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Kai project (SourceForge, Japan)",
+  "vendorType": "community",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "0.4.0",
+    "date": "2009-05-23"
+  },
+  "writtenIn": [
+    "Erlang"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Consistent hashing with replication; deployed on clusters serving a 10M-user service."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual",
+      "tunable"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "memcached protocol (get/set/delete)"
+  ],
+  "apis": [
+    "memcached protocol"
+  ],
+  "compatibleWith": [
+    "memcached"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Faithful, readable Erlang implementation of Dynamo's core ideas",
+    "Memcached protocol meant any memcached client could use it",
+    "Quorum parameters tunable per deployment, up to strong consistency",
+    "Proven in production at a large Japanese social network"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2009",
+    "Only basic get/set/delete; no range queries or secondary indexes",
+    "Small, largely Japanese-language community"
+  ],
+  "useCases": [
+    "Studying Dynamo-style replication in Erlang",
+    "Historical reference for early NoSQL key-value stores"
+  ],
+  "notIdealFor": [
+    "New production systems",
+    "Workloads needing queries beyond key lookup"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "riak-kv",
+    "apache-cassandra",
+    "scylladb",
+    "aerospike",
+    "memcached"
+  ],
+  "tags": [
+    "dynamo",
+    "erlang",
+    "key-value",
+    "nosql",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://sourceforge.net/projects/kai/",
+    "docs": "https://sourceforge.net/p/kai/wiki/Introduction/",
+    "repository": "https://sourceforge.net/projects/kai/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Kai Erlang Dynamo"
+  },
+  "brand": {},
+  "sources": [
+    "https://sourceforge.net/projects/kai/",
+    "https://sourceforge.net/p/kai/wiki/Introduction/",
+    "https://sourceforge.net/projects/kai/files/kai/",
+    "https://dbdb.io/db/kai"
+  ],
+  "lastVerified": "2026-10-27"
+}

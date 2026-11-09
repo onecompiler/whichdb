@@ -1,0 +1,143 @@
+{
+  "slug": "ocelot",
+  "name": "Ocelot",
+  "aliases": [
+    "OCELOT SQL DBMS"
+  ],
+  "tagline": "Standards-obsessed Canadian SQL DBMS for Windows, written largely in assembly and open-sourced in 2001.",
+  "description": "Ocelot was a SQL database management system from Ocelot Computer Services Inc., the Canadian company of SQL-standards author Peter Gulutzan, built to follow the ISO SQL standard closely: domains, constraints, stored procedures, collations, subqueries and an ODBC 3.0 interface, plus a front end. It ran on Windows and was written largely in x86 assembly with some C and Delphi. In 2001 it was published on SourceForge under a choose-one dual license, GPL or MPL, so users could pick either; the last file upload was in February 2003 and the DBMS has been dormant since. The company now makes ocelotgui, a GUI client for MySQL and MariaDB, so treat Ocelot itself as a historical curiosity.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last SourceForge release in February 2003; the company has since moved on to the ocelotgui MySQL/MariaDB client.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Ocelot Computer Services Inc.",
+  "vendorType": "company",
+  "initialRelease": 2001,
+  "writtenIn": [
+    "Assembly",
+    "C",
+    "Delphi"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Dual GPL v2 or MPL 1.0 (user's choice)"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC 3.0"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Unusually faithful implementation of ISO SQL features for its size",
+    "Free under either GPL or MPL"
+  ],
+  "weaknesses": [
+    "Dormant since 2003 and Windows-only",
+    "Assembly-language codebase is hard to port or maintain"
+  ],
+  "useCases": [
+    "SQL-standards history and comparison",
+    "Curiosity: a SQL engine written in assembly"
+  ],
+  "notIdealFor": [
+    "Any production use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "firebird",
+    "postgresql",
+    "mimer-sql",
+    "sqlite"
+  ],
+  "tags": [
+    "sql",
+    "historical",
+    "windows",
+    "open-source",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://ocelot.ca/source.htm",
+    "repository": "https://sourceforge.net/projects/ocelot/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://ocelot.ca/source.htm",
+    "https://sourceforge.net/projects/ocelot/",
+    "http://ocelot.ca/"
+  ],
+  "lastVerified": "2026-10-27"
+}

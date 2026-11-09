@@ -1,0 +1,190 @@
+{
+  "slug": "helixdb",
+  "name": "HelixDB",
+  "aliases": [
+    "Helix DB"
+  ],
+  "tagline": "Rust graph-vector database on object storage, queried through typed SDKs for AI apps.",
+  "description": "HelixDB is a young open-source database in Rust that keeps entities and relationships in one property graph with native vector and BM25 full-text search, aimed at RAG and agent memory. Version 3 moved storage onto S3-compatible object storage (with in-memory and on-disk modes) and archived its earlier HelixQL language in favor of typed query builders in Rust, TypeScript, Python and Go, or JSON sent to an HTTP endpoint. Helix Cloud offers a managed tier from a few dollars a month. It is promising for AI-centric apps that want graph plus vector in one place, but the API has changed quickly and it lacks a standard query language.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "rag",
+    "vector-search",
+    "graph-traversal",
+    "oltp",
+    "full-text-search"
+  ],
+  "architecture": [
+    "client-server",
+    "shared-storage",
+    "in-memory"
+  ],
+  "developer": "HelixDB",
+  "vendorType": "company",
+  "initialRelease": 2025,
+  "latestVersion": {
+    "version": "3.5.1",
+    "date": "2026-10-08"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "startingPrice": "$5/month (Helix Cloud)",
+    "notes": "Self-hosting is free; Helix Cloud starts at $5/month with dedicated clusters billed hourly on higher plans."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Helix Cloud",
+      "provider": "HelixDB",
+      "url": "https://www.helix-db.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Object-storage backend decouples data size from node disks; clustering is a managed-cloud feature."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SDK query builders",
+    "JSON query API"
+  ],
+  "apis": [
+    "HTTP (POST /v2/query)",
+    "MCP endpoint"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "TypeScript",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Graph, vector and BM25 search in one store with no sync pipeline",
+    "Object-storage backend keeps storage cheap and elastic",
+    "Typed SDK query builders catch query errors at compile time",
+    "MCP endpoint for direct use by AI agents"
+  ],
+  "weaknesses": [
+    "Very young; HelixQL was archived after about a year, signaling API churn",
+    "No standard query language (no Cypher, GQL or Gremlin)",
+    "Enterprise features such as SSO and audit logs are still on the roadmap"
+  ],
+  "useCases": [
+    "RAG with graph context",
+    "Agent memory stores",
+    "Semantic search over linked entities",
+    "AI app prototypes"
+  ],
+  "notIdealFor": [
+    "Teams needing Cypher/GQL compatibility",
+    "Regulated enterprise deployments today",
+    "Large graph analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "falkordb",
+    "neo4j",
+    "surrealdb",
+    "memgraph",
+    "ladybugdb",
+    "weaviate"
+  ],
+  "tags": [
+    "rust",
+    "graph-vector",
+    "rag",
+    "object-storage",
+    "ai"
+  ],
+  "links": {
+    "website": "https://www.helix-db.com/",
+    "docs": "https://docs.helix-db.com/",
+    "repository": "https://github.com/HelixDB/helix-db",
+    "changelog": "https://github.com/HelixDB/helix-db/releases"
+  },
+  "ids": {
+    "github": "HelixDB/helix-db",
+    "npm": "helix-ts",
+    "pypi": "helix-py",
+    "hackerNewsQuery": "HelixDB"
+  },
+  "brand": {
+    "color": "#111827"
+  },
+  "sources": [
+    "https://github.com/HelixDB/helix-db/releases",
+    "https://www.helix-db.com/",
+    "https://pypi.org/project/helix-py/"
+  ],
+  "lastVerified": "2026-10-27"
+}

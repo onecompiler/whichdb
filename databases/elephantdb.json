@@ -1,0 +1,104 @@
+{
+  "slug": "elephantdb",
+  "name": "ElephantDB",
+  "aliases": ["Elephant DB"],
+  "tagline": "Nathan Marz's read-only key/value server for Hadoop batch output: the Lambda Architecture's serving layer.",
+  "description": "ElephantDB was built by Nathan Marz (of Storm and the Lambda Architecture) to serve key/value data computed in Hadoop. A MapReduce job, usually written with Cascading or Cascalog, wrote a fixed number of indexed shards to the distributed file system; a ring of ElephantDB servers then downloaded their share of the shards and answered random reads over Thrift, hot-swapping to a new version without downtime when the next batch finished. Because servers never accept random writes there was almost nothing to go wrong, which made it very stable in production. Local storage was pluggable, with Berkeley DB Java Edition and LevelDB bundled. Development ended in 2014; Voldemort read-only stores and LinkedIn's Venice explored the same pattern.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since 2014 (last version 0.5.1). The batch-built, read-only serving pattern lives on in systems such as Voldemort read-only stores.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["olap", "metadata-store"],
+  "architecture": ["distributed"],
+  "developer": "Nathan Marz",
+  "vendorType": "community",
+  "initialRelease": 2011,
+  "writtenIn": ["Clojure", "Java"],
+  "license": { "type": "permissive", "name": "BSD 3-Clause License", "spdx": "BSD-3-Clause" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Datasets are pre-sharded by the Hadoop job; each server in a ring serves a subset of shards read-only."
+  },
+  "consistency": { "acid": "none", "models": ["eventual"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["Key lookups over Thrift"],
+  "apis": ["Thrift"],
+  "compatibleWith": [],
+  "drivers": ["Java", "Clojure", "Any Thrift-supported language"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Read-only design leaves very few failure modes in the serving tier",
+    "Shards are built offline in Hadoop, so serving nodes never pay indexing cost",
+    "Hot-swaps a new dataset version without downtime",
+    "Pluggable local storage (Berkeley DB JE or LevelDB)"
+  ],
+  "weaknesses": [
+    "No random writes: data is only as fresh as the last batch job",
+    "Tied to the Hadoop 1.x/Cascading 2-era toolchain; unmaintained since 2014",
+    "Thrift-only interface with sparse documentation"
+  ],
+  "useCases": [
+    "Studying the serving layer of the Lambda Architecture",
+    "Publishing precomputed batch views (recommendations, aggregates) for low-latency reads"
+  ],
+  "notIdealFor": ["Workloads needing writes or real-time updates", "New deployments"],
+  "notableUsers": [],
+  "alternatives": ["project-voldemort", "apache-hbase", "rocksdb", "apache-cassandra"],
+  "tags": ["hadoop", "key-value", "read-only", "lambda-architecture", "clojure"],
+  "links": {
+    "website": "https://github.com/nathanmarz/elephantdb",
+    "repository": "https://github.com/nathanmarz/elephantdb"
+  },
+  "ids": {
+    "github": "nathanmarz/elephantdb",
+    "hackerNewsQuery": "ElephantDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/nathanmarz/elephantdb",
+    "https://dbdb.io/db/elephantdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,183 @@
+{
+  "slug": "actian-zen",
+  "name": "Actian Zen",
+  "aliases": [
+    "Btrieve",
+    "Pervasive PSQL",
+    "Pervasive.SQL",
+    "Zen Edge"
+  ],
+  "tagline": "The Btrieve/Pervasive lineage: zero-admin embedded database with key-level and SQL access, now edge-focused.",
+  "description": "Actian Zen is the current name for the database that began as Btrieve in 1982 and later became Pervasive PSQL. Its trick is dual access to the same files: a fast record-level Btrieve 2 API for navigational reads and writes, and a relational SQL engine with ODBC/JDBC on top. That made it a favourite for accounting, practice-management and retail ISVs that ship a database inside their product and need it to run unattended. Actian, now part of HCLSoftware, released Zen 16.0 in June 2024 with larger key sizes, Kafka streaming, EasySync replication and container support. It is best for existing Btrieve applications and small embedded/edge deployments.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "edge",
+    "iot",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Actian (HCLSoftware)",
+  "vendorType": "company",
+  "initialRelease": 1982,
+  "latestVersion": {
+    "version": "16.0",
+    "date": "2024-06-17"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Per-user/core and OEM licensing; trial versions available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Btrieve 2 API"
+  ],
+  "apis": [
+    "Btrieve 2",
+    "ODBC",
+    "JDBC",
+    "ADO.NET",
+    "OLE DB"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "C#",
+    "Java",
+    "Python",
+    "Delphi"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Same data reachable through fast Btrieve record API and standard SQL",
+    "Runs for years inside ISV products with essentially no administration",
+    "Small footprint editions for Android, iOS and Raspberry Pi edge devices",
+    "Long backward compatibility for decades-old Btrieve applications"
+  ],
+  "weaknesses": [
+    "Shrinking ecosystem; most usage is legacy ISV software",
+    "SQL engine is less capable than mainstream RDBMSs",
+    "Commercial licensing for a niche product"
+  ],
+  "useCases": [
+    "Accounting and practice-management software back ends",
+    "Point-of-sale and retail store systems",
+    "Edge devices that sync data to a central server"
+  ],
+  "notIdealFor": [
+    "Large centralised OLTP",
+    "Analytics",
+    "Greenfield cloud-native apps"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "sap-sql-anywhere",
+    "raima-database-manager",
+    "couchbase-lite",
+    "sql-server",
+    "ittia-db"
+  ],
+  "tags": [
+    "embedded",
+    "btrieve",
+    "isv",
+    "edge",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.actian.com/databases/zen/",
+    "docs": "https://docs.actian.com/zen/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Actian_Zen"
+  },
+  "ids": {
+    "stackoverflowTag": "pervasive",
+    "wikipedia": "Actian Zen",
+    "hackerNewsQuery": "Actian Zen"
+  },
+  "brand": {},
+  "sources": [
+    "https://itbrief.com.au/story/actian-unveils-zen-16-0-to-boost-edge-computing-solutions",
+    "https://www2.goldstarsoftware.com/zen16.asp",
+    "https://en.wikipedia.org/wiki/Actian_Zen"
+  ],
+  "lastVerified": "2026-10-27"
+}

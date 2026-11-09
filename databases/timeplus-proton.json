@@ -1,0 +1,176 @@
+{
+  "slug": "timeplus-proton",
+  "name": "Timeplus Proton",
+  "aliases": [
+    "Proton",
+    "Timeplus"
+  ],
+  "tagline": "A single C++ binary for streaming SQL, built on ClickHouse's engine with streams and windows.",
+  "description": "Proton is Timeplus's open-source streaming SQL engine, derived from a single-node ClickHouse codebase and extended with a native stream storage, watermarks, tumble/hop/session windows, changelog streams and incremental materialized views. It reads and writes Kafka, Redpanda, Pulsar, ClickHouse, Postgres/MySQL and S3/Iceberg, and ships as one binary with no JVM or ZooKeeper. Proton 3.0 (late 2025) brought large performance gains, and patch releases continue. The commercial Timeplus Enterprise adds clustering, a UI and alerting.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "time-series"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics",
+    "observability",
+    "iot"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Timeplus Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "3.0.31",
+    "date": "2026-09-17"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "ClickHouse",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Proton is free; Timeplus Enterprise and Timeplus Cloud are commercial."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Open-source Proton is single-node; clustering requires Timeplus Enterprise."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ClickHouse dialect with streaming extensions)"
+  ],
+  "apis": [
+    "ClickHouse native protocol",
+    "HTTP"
+  ],
+  "compatibleWith": [
+    "clickhouse"
+  ],
+  "drivers": [
+    "Python",
+    "Go",
+    "Java",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One lightweight binary, no JVM or ZooKeeper",
+    "Combines streaming and historical columnar queries in one SQL",
+    "Rich windowing and watermark semantics",
+    "Python/JavaScript UDFs and native Kafka/ClickHouse connectors"
+  ],
+  "weaknesses": [
+    "Open-source edition is single-node only",
+    "Smaller community than Flink, RisingWave or Materialize",
+    "ClickHouse dialect differs from Postgres SQL"
+  ],
+  "useCases": [
+    "Streaming ETL from Kafka into ClickHouse",
+    "Real-time observability and security analytics",
+    "Edge or single-box streaming pipelines"
+  ],
+  "notIdealFor": [
+    "Horizontally scaled open-source streaming",
+    "Postgres-compatible tooling"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "risingwave",
+    "materialize",
+    "arroyo",
+    "ksqldb",
+    "clickhouse"
+  ],
+  "tags": [
+    "streaming-sql",
+    "clickhouse",
+    "single-binary",
+    "cpp"
+  ],
+  "links": {
+    "website": "https://www.timeplus.com/",
+    "docs": "https://docs.timeplus.com/proton",
+    "repository": "https://github.com/timeplus-io/proton",
+    "changelog": "https://github.com/timeplus-io/proton/releases"
+  },
+  "ids": {
+    "github": "timeplus-io/proton",
+    "dockerHub": "timeplus/proton",
+    "pypi": "proton-driver",
+    "hackerNewsQuery": "Timeplus"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/timeplus-io/proton/releases",
+    "https://www.timeplus.com/post/proton-3-0"
+  ],
+  "lastVerified": "2026-10-27"
+}

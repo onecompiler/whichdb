@@ -1,0 +1,163 @@
+{
+  "slug": "marcellodb",
+  "name": "MarcelloDB",
+  "aliases": [
+    "Marcello DB"
+  ],
+  "tagline": "Pure-C# embedded object database for Xamarin and UWP apps that stores whole object graphs.",
+  "description": "MarcelloDB is an in-process NoSQL object database by Belgian developer Mark Meeus, written entirely in C# as a portable class library for Xamarin.iOS, Xamarin.Android, Windows Phone 8.1 and Windows 10 UWP. You persist plain C# objects, including nested children, lists and dictionaries, into named collections inside collection files, define typed indexes for lookups, and group writes in transactions; an encryption add-on was offered with a paid support package. Betas circulated from October 2015 and the 1.0 line stabilised soon after, but the last release, 1.0.9, shipped in February 2020. With Xamarin itself retired in favour of .NET MAUI, it is best treated as legacy.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No commits or releases since 1.0.9 (Feb 2020), and its Xamarin/UWP targets are retired. LiteDB, Realm or SQLite are maintained options for .NET apps.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Mark Meeus",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "1.0.9",
+    "date": "2020-02-03"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "MIT-licensed core; a paid Pro/support package included the encryption add-on."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process, on-device storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C# API (index-based Find/Enumerate)"
+  ],
+  "apis": [
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stores complete C# object graphs without ORM mapping",
+    "Pure managed code: no native binaries to ship per platform",
+    "Typed indexes and transactions in a small library",
+    "MIT license"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2020; targets retired Xamarin and UWP platforms",
+    "Querying limited to index lookups and enumeration",
+    "Encryption was only in the paid add-on"
+  ],
+  "useCases": [
+    "Maintaining older Xamarin or UWP apps that use it",
+    "Reference for a pure-C# embedded object store"
+  ],
+  "notIdealFor": [
+    "New .NET MAUI or cross-platform apps",
+    "Apps needing rich queries or sync"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "litedb",
+    "realm",
+    "sqlite",
+    "objectbox",
+    "kitarodb"
+  ],
+  "tags": [
+    "dotnet",
+    "xamarin",
+    "embedded",
+    "object-database",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://www.marcellodb.org/",
+    "repository": "https://github.com/markmeeus/MarcelloDB"
+  },
+  "ids": {
+    "github": "markmeeus/MarcelloDB",
+    "hackerNewsQuery": "MarcelloDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/markmeeus/MarcelloDB",
+    "http://www.marcellodb.org/",
+    "https://www.nuget.org/packages/MarcelloDB",
+    "https://dbdb.io/db/marcellodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,173 @@
+{
+  "slug": "cortex",
+  "name": "Cortex",
+  "aliases": [
+    "Cortex Metrics",
+    "cortexproject"
+  ],
+  "tagline": "CNCF multi-tenant, horizontally scalable long-term storage for Prometheus metrics on object storage.",
+  "description": "Cortex is the original horizontally scalable, multi-tenant Prometheus backend, started at Weaveworks in 2016 and now a CNCF incubating project. Prometheus servers or agents remote-write into distributors, ingesters batch samples into TSDB blocks on object storage, and queriers and store-gateways answer PromQL across tenants with per-tenant limits, a ruler and an Alertmanager. Grafana Mimir forked from it in 2022, but Cortex continues under vendor-neutral Apache-2.0 governance, with recent releases adding a Parquet mode for store-gateways and Prometheus remote write 2.0. Choose it when you want Mimir-style architecture without AGPL.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Cortex community (CNCF)",
+  "vendorType": "foundation",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "1.21.1",
+    "date": "2026-06-05"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "Prometheus TSDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; Amazon Managed Service for Prometheus was built on Cortex."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Microservices scale independently; blocks live in S3, GCS, Azure Blob or Swift."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "PromQL"
+  ],
+  "apis": [
+    "Prometheus remote write (v1 and v2)",
+    "Prometheus HTTP query API",
+    "OTLP",
+    "Ruler and Alertmanager APIs"
+  ],
+  "compatibleWith": [
+    "prometheus",
+    "s3"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "True multi-tenancy with per-tenant limits, rules and Alertmanager",
+    "Apache-2.0 and vendor-neutral CNCF governance",
+    "Object storage keeps long retention cheap",
+    "Global PromQL view across many Prometheus sources",
+    "Mature design that underpins several managed Prometheus services"
+  ],
+  "weaknesses": [
+    "Many microservices to deploy and tune",
+    "Smaller contributor base since Grafana Labs moved to Mimir",
+    "Fewer performance features than Mimir's newer query engine",
+    "Overkill for a single small cluster"
+  ],
+  "useCases": [
+    "Internal metrics-as-a-service for many teams",
+    "Long-term Prometheus storage on object storage",
+    "Multi-tenant SaaS monitoring backends"
+  ],
+  "notIdealFor": [
+    "Small single-cluster setups",
+    "Logs and traces",
+    "SQL analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "grafana-mimir",
+    "thanos",
+    "victoriametrics",
+    "m3db",
+    "prometheus"
+  ],
+  "tags": [
+    "metrics",
+    "prometheus-compatible",
+    "cncf",
+    "multi-tenant",
+    "object-storage"
+  ],
+  "links": {
+    "website": "https://cortexmetrics.io/",
+    "docs": "https://cortexmetrics.io/docs/",
+    "repository": "https://github.com/cortexproject/cortex",
+    "changelog": "https://github.com/cortexproject/cortex/blob/master/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "cortexproject/cortex",
+    "dockerHub": "cortexproject/cortex",
+    "hackerNewsQuery": "Cortex Prometheus"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/cortexproject/cortex/releases",
+    "https://cortexmetrics.io/",
+    "https://www.cncf.io/projects/cortex/"
+  ],
+  "lastVerified": "2026-10-27"
+}

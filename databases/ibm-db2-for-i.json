@@ -1,0 +1,187 @@
+{
+  "slug": "ibm-db2-for-i",
+  "name": "Db2 for i",
+  "aliases": [
+    "DB2/400",
+    "DB2 UDB for iSeries",
+    "IBM i database",
+    "AS/400 database"
+  ],
+  "tagline": "The relational database built into IBM i (AS/400), integrated with the OS and object security.",
+  "description": "Db2 for i is the database integrated into the IBM i operating system on Power servers, descended from the AS/400's built-in database. There is no separate database install: tables are OS objects, security is IBM i object authority, journaling provides recovery, and both RPG record-level access and SQL work on the same files. IBM ships enhancements through twice-yearly Technology Refreshes; IBM i 7.6 TR2 (July 2026) added BYOK encryption and new SQL services. Db2 Mirror offers synchronous active-active pairs. It is low-touch and very reliable for the many mid-market manufacturers, distributors and banks on IBM i, but is tied to that platform.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "multi-primary",
+    "shared-storage"
+  ],
+  "developer": "IBM",
+  "vendorType": "company",
+  "initialRelease": 1988,
+  "latestVersion": {
+    "version": "IBM i 7.6 TR2",
+    "date": "2026-07"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Included with the IBM i licence; Db2 Mirror, Db2 Multisystem and some tooling are separately priced."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "ibm-cloud"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "IBM Power Virtual Server (IBM i)",
+      "provider": "IBM Cloud",
+      "url": "https://www.ibm.com/products/power-virtual-server"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Scales up on Power hardware; Db2 Mirror pairs two nodes active-active and PowerHA geographic mirroring covers DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "SQL PL",
+    "RPG record-level access"
+  ],
+  "apis": [
+    "DRDA",
+    "ODBC",
+    "JDBC",
+    "IBM i Access Client Solutions"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "RPG",
+    "COBOL",
+    "Java",
+    "Python",
+    "JavaScript",
+    "C#",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Integrated with the OS: no separate install, and very little DBA work",
+    "Object-level security and journaling built into the platform",
+    "Same data accessible via RPG record-level I/O and modern SQL",
+    "Db2 Mirror delivers synchronous active-active continuous availability",
+    "Regular Technology Refreshes add SQL services and security features"
+  ],
+  "weaknesses": [
+    "Only runs on IBM i on Power servers",
+    "Ageing RPG skills base and platform perception problems",
+    "Fewer third-party tools than mainstream databases"
+  ],
+  "useCases": [
+    "ERP and distribution systems on IBM i",
+    "Regional banking and insurance back ends",
+    "Manufacturing execution and warehouse systems",
+    "Exposing RPG business logic and data via SQL services and REST"
+  ],
+  "notIdealFor": [
+    "Non-IBM i environments",
+    "Cloud-native horizontally scaled apps",
+    "Large-scale analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-db2",
+    "sql-server",
+    "oracle-database",
+    "postgresql",
+    "progress-openedge"
+  ],
+  "tags": [
+    "ibm-i",
+    "as400",
+    "power",
+    "integrated",
+    "rpg"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/products/ibm-i",
+    "docs": "https://www.ibm.com/docs/en/i/7.6",
+    "changelog": "https://www.ibm.com/support/pages/node/7251904"
+  },
+  "ids": {
+    "stackoverflowTag": "db2-400",
+    "hackerNewsQuery": "Db2 for i"
+  },
+  "brand": {
+    "color": "#0F62FE"
+  },
+  "sources": [
+    "https://www.itjungle.com/2026/07/20/big-blue-finally-unveils-first-ibm-i-tech-refreshes-of-2026/",
+    "https://www.itjungle.com/2026/07/27/what-ibms-got-cooking-in-db2-for-i-in-the-summer-trs/",
+    "https://www.rpgpgm.com/2026/07/first-tr-of-2026.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

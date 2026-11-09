@@ -1,0 +1,104 @@
+{
+  "slug": "djondb",
+  "name": "Djondb",
+  "aliases": ["djondb"],
+  "tagline": "Abandoned C++ document database that paired schema-free JSON documents with multi-document transactions.",
+  "description": "Djondb was an open-source document database written in C++ by Juan Pablo Crossley and launched around 2012. It stored JSON/BSON documents in schema-free namespaces and set itself apart from early MongoDB by focusing on consistency and transactions that span several documents, with a command shell plus drivers for Java, C#, Node.js, PHP, Python and Go. The engine was GPL-licensed with a commercial licence offered to OEMs. Driver work continued into 2017 (the npm client reached 3.5.x), after which the project stopped and djondb.com became a parked domain. Anyone wanting transactional documents today has MongoDB, Couchbase or PostgreSQL JSONB.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Abandoned around 2017; djondb.com is now a parked domain and only mirrors of the source remain. Use MongoDB, Couchbase or PostgreSQL JSONB instead.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": ["document"],
+  "workloads": ["oltp"],
+  "architecture": ["client-server", "single-node"],
+  "developer": "Juan Pablo Crossley (djondb)",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "writtenIn": ["C++"],
+  "license": { "type": "copyleft", "name": "GNU GPL v2 (commercial licence also offered)", "spdx": "GPL-2.0-only" },
+  "pricing": {
+    "models": ["open-source"],
+    "freeTier": true,
+    "notes": "GPL for open-source use; the commercial OEM licence and enterprise subscription are no longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos", "windows"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["djondb shell and filter expressions"],
+  "apis": ["Native TCP protocol"],
+  "compatibleWith": [],
+  "drivers": ["Java", "C#", "JavaScript", "PHP", "Python", "Go"],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Aimed at multi-document transactions years before MongoDB offered them",
+    "Native C++ engine with drivers for six languages",
+    "Small codebase that is easy to read for students of document stores"
+  ],
+  "weaknesses": [
+    "Dead since 2017: no site, docs or maintained builds",
+    "Original repository is gone; only third-party mirrors exist",
+    "Never documented a replication or sharding story"
+  ],
+  "useCases": [
+    "Historical reference on early transactional document stores",
+    "Reading a compact C++ BSON storage implementation"
+  ],
+  "notIdealFor": ["Any production use", "New projects"],
+  "notableUsers": [],
+  "alternatives": ["mongodb", "couchbase", "ravendb", "postgresql"],
+  "tags": ["document", "nosql", "transactions", "cpp", "abandoned"],
+  "links": {
+    "website": "https://github.com/hecogo/djondb",
+    "repository": "https://github.com/hecogo/djondb"
+  },
+  "ids": {
+    "npm": "djondb",
+    "dockerHub": "djondb/djondb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/hecogo/djondb",
+    "https://github.com/djondb/djondb_nodejs",
+    "https://www.npmjs.com/package/djondb",
+    "https://dbdb.io/db/djondb"
+  ],
+  "lastVerified": "2026-10-27"
+}

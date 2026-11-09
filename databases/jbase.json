@@ -1,0 +1,167 @@
+{
+  "slug": "jbase",
+  "name": "jBASE",
+  "aliases": [
+    "Rocket jBASE",
+    "jBASE MultiValue"
+  ],
+  "tagline": "MultiValue database that compiles Pick BASIC to native code, now part of Rocket's MV portfolio.",
+  "description": "jBASE is a MultiValue (Pick-compatible) database and application environment whose distinguishing idea is compiling Pick BASIC to C/C++ and then native executables, and running on ordinary Linux, Unix and Windows rather than a Pick virtual machine. Its jEDI layer can also store MultiValue files in other back ends. It was long the platform under Temenos's T24 core-banking software and many smaller vertical packages. Zumasys bought it in 2015 and Rocket Software acquired the Zumasys portfolio in 2021; 6.2.1 (October 2024) added a D3 migration path and 6.2.2 brought Windows Server 2025 support, journaling v2 and Reality conversion tooling. It is maintained, but almost entirely for existing applications.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "multivalue",
+  "models": [
+    "multivalue"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Rocket Software (formerly Zumasys)",
+  "vendorType": "company",
+  "initialRelease": 1991,
+  "latestVersion": {
+    "version": "6.2.2",
+    "date": "2025-12"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Commercial per-user/server licensing through Rocket and resellers."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Pick BASIC (jBC)",
+    "jQL"
+  ],
+  "apis": [
+    "jEDI",
+    "ODBC",
+    "Object Bridge (.NET/Java)",
+    "REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Compiles Pick BASIC to native code for fast execution",
+    "Runs on standard Linux, Unix and Windows without a Pick VM",
+    "jEDI abstraction can map MultiValue files onto other storage back ends",
+    "Migration path for D3 and other Pick-family systems"
+  ],
+  "weaknesses": [
+    "Small, shrinking developer community",
+    "Few modern tooling integrations",
+    "Release cadence is slow and roadmap is opaque"
+  ],
+  "useCases": [
+    "Core banking and finance packages built on jBASE",
+    "Legacy Pick application hosting on modern servers",
+    "Consolidating D3 systems onto a supported platform"
+  ],
+  "notIdealFor": [
+    "New applications",
+    "Analytics",
+    "Cloud-native deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocket-unidata-universe",
+    "openqm",
+    "intersystems-iris",
+    "sql-server"
+  ],
+  "tags": [
+    "multivalue",
+    "pick",
+    "rocket",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.rocketsoftware.com/products/rocket-multivalue-application-development-platform/rocket-jbase"
+  },
+  "ids": {
+    "stackoverflowTag": "jbase",
+    "hackerNewsQuery": "jBASE"
+  },
+  "brand": {},
+  "sources": [
+    "https://community.rocketsoftware.com/rocket-d3-and-jbase-7",
+    "https://community.rocketsoftware.com/rocket-d3-and-jbase-7/jbase-6-2-1-is-out-the-door-9557",
+    "https://www.dbta.com/Editorial/MV-Community/Rocket-Software-Releases-Enhanced-Version-of-Rocket-jBASE-with-Upgraded-Security-Features-162267.aspx",
+    "https://www.dbta.com/Editorial/MV-Community/Zumasys-Celebrates-jBASEs-30th-Anniversary-130735.aspx"
+  ],
+  "lastVerified": "2026-10-27"
+}

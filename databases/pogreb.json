@@ -1,0 +1,159 @@
+{
+  "slug": "pogreb",
+  "name": "Pogreb",
+  "aliases": [],
+  "tagline": "Embedded Go key-value store tuned for read-heavy workloads, using linear hashing and an mmap'd index.",
+  "description": "Pogreb is an embedded key-value store written in pure Go by Artem Krylysov and aimed at read-heavy workloads such as large lookup tables that are bulk-loaded and then queried at high rates. Keys are found through an on-disk linear-hashing index with 32-bit MurmurHash, so a random lookup usually costs one or two disk reads and memory use stays low even for larger-than-memory datasets; values live in append-only segment files that are compacted in the background, and a recovery routine rebuilds state after crashes. All methods are safe for concurrent goroutines, with many readers and one writer. The last tagged release is v0.10.2 (December 2023), and the author still commits small portability fixes such as Plan 9 support in 2025–2026.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No tagged release since v0.10.2 (Dec 2023); only small portability fixes since.",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Artem Krylysov",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "0.10.2",
+    "date": "2023-12-10"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Handles larger-than-memory datasets on one machine; single writer."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "Go API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fast random point lookups with one or two disk reads",
+    "Low memory footprint even for larger-than-RAM datasets",
+    "Pure Go with no cgo, safe for concurrent goroutines"
+  ],
+  "weaknesses": [
+    "No range scans or ordered iteration by key",
+    "Single writer and no multi-key transactions",
+    "Small project with infrequent releases"
+  ],
+  "useCases": [
+    "Read-mostly lookup tables embedded in Go services",
+    "Bulk-loaded caches of precomputed data",
+    "Replacing BoltDB where range scans are not needed"
+  ],
+  "notIdealFor": [
+    "Write-heavy workloads",
+    "Range queries or sorted iteration"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "bbolt",
+    "badger",
+    "pebble",
+    "lmdb"
+  ],
+  "tags": [
+    "key-value",
+    "embedded",
+    "go",
+    "read-optimized",
+    "linear-hashing"
+  ],
+  "links": {
+    "website": "https://github.com/akrylysov/pogreb",
+    "repository": "https://github.com/akrylysov/pogreb",
+    "docs": "https://pkg.go.dev/github.com/akrylysov/pogreb"
+  },
+  "ids": {
+    "github": "akrylysov/pogreb",
+    "hackerNewsQuery": "Pogreb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/akrylysov/pogreb",
+    "https://artem.krylysov.com/blog/2018/03/24/pogreb-key-value-store",
+    "https://dbdb.io/db/pogreb"
+  ],
+  "lastVerified": "2026-10-27"
+}

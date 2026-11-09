@@ -1,0 +1,160 @@
+{
+  "slug": "kvdb-io",
+  "name": "kvdb.io",
+  "aliases": [
+    "KVdb",
+    "KVdb.io"
+  ],
+  "tagline": "Hosted key-value store driven by plain HTTP calls, with scoped access tokens, TTLs and Lua bucket scripts.",
+  "description": "kvdb.io, run by Pilvy LLC since 2018, gives you key-value 'buckets' over a REST API: create one with a curl call, then set, get, list by prefix, atomically increment counters and delete keys. Keys are kept in lexicographic order, buckets can have default TTLs, a transaction endpoint applies several sets and deletes together, and short-lived access tokens can be scoped to a key prefix with read or write rights so browser and serverless code never sees the master secret. Lua scripts attached to a bucket run server-side per HTTP request. It suits prototypes, counters, feature flags and small serverless apps; there is a 14-day free trial, a $19/month Pro plan and an Enterprise tier that can run on-premises.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "configuration",
+    "session-store",
+    "edge"
+  ],
+  "architecture": [
+    "serverless"
+  ],
+  "developer": "Pilvy LLC",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary service (JavaScript client MIT)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": false,
+    "startingPrice": "$19/month (Pro)",
+    "notes": "14-day free trial; Pro includes 1 GB and 1M ops (+$1/GB, +$5 per million ops); Enterprise $499/month with encryption at rest and on-prem via Docker/Kubernetes."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Sized for small apps and prototypes; storage billed per GB. Internal scaling is not documented."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "REST (key/prefix operations)",
+    "Lua (bucket scripts)"
+  ],
+  "apis": [
+    "REST",
+    "JavaScript client"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Working key-value store from a single curl call, no SDK required",
+    "Prefix-scoped, expiring access tokens for safe client-side use",
+    "Atomic counters, ordered prefix listing and multi-key transactions",
+    "Server-side Lua scripts per bucket"
+  ],
+  "weaknesses": [
+    "Small single-vendor service with no published SLA on lower tiers",
+    "No free tier after the 14-day trial",
+    "Limited querying beyond key and prefix access"
+  ],
+  "useCases": [
+    "Counters and metrics from serverless functions",
+    "Feature flags and small config values",
+    "Prototypes and hackathon backends"
+  ],
+  "notIdealFor": [
+    "Large datasets or high-throughput workloads",
+    "Relational queries or complex indexing"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "upstash",
+    "cloudflare-workers-kv",
+    "deno-kv",
+    "redis-cloud",
+    "amazon-dynamodb"
+  ],
+  "tags": [
+    "key-value",
+    "rest",
+    "serverless",
+    "hosted",
+    "lua"
+  ],
+  "links": {
+    "website": "https://kvdb.io/",
+    "docs": "https://kvdb.io/docs/api/",
+    "pricing": "https://kvdb.io/pricing"
+  },
+  "ids": {
+    "npm": "kvdb.io",
+    "hackerNewsQuery": "kvdb.io"
+  },
+  "brand": {},
+  "sources": [
+    "https://kvdb.io/",
+    "https://kvdb.io/pricing",
+    "https://kvdb.io/docs/api/",
+    "https://www.npmjs.com/package/kvdb.io",
+    "https://dbdb.io/db/kvdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

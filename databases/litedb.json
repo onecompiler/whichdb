@@ -1,0 +1,167 @@
+{
+  "slug": "litedb",
+  "name": "LiteDB",
+  "aliases": [
+    "LiteDB .NET"
+  ],
+  "tagline": "Serverless single-file NoSQL document database for .NET, in the spirit of SQLite.",
+  "description": "LiteDB is an embedded document database written in C# that stores BSON documents in a single file. It offers ACID transactions, a write-ahead log, indexes on any expression, LINQ and a SQL-like query syntax, and optional AES encryption. It is the usual pick when a .NET desktop, tool or small service wants document storage without a native SQLite dependency or a separate server. The stable 5.0 line has not had a release since mid-2024, while a 6.0 rewrite has been in public prerelease and active development through 2026.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "configuration",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Mauricio David and the LiteDB community",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "5.0.21",
+    "date": "2024-07-05"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-file database for one process; suited to GB-scale local data."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "LINQ",
+    "LiteDB SQL-like syntax (BsonExpression)"
+  ],
+  "apis": [
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure managed .NET, a single DLL with no native binaries",
+    "ACID transactions with a write-ahead log",
+    "Indexes on arbitrary expressions, including nested fields",
+    "Password-based AES encryption of the data file"
+  ],
+  "weaknesses": [
+    "Stable 5.x branch has had no release since 2024 while 6.0 is still prerelease",
+    "Not designed for heavy concurrent access from multiple processes",
+    "No joins; references are resolved with Include()"
+  ],
+  "useCases": [
+    "Desktop and WPF/WinForms app storage",
+    "Configuration and state for .NET tools and services",
+    "Unit-test databases and small prototypes"
+  ],
+  "notIdealFor": [
+    "Multi-process or networked access",
+    "Large analytic datasets",
+    "Non-.NET stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "realm",
+    "nedb",
+    "sqlcipher",
+    "objectbox"
+  ],
+  "tags": [
+    "dotnet",
+    "csharp",
+    "embedded",
+    "nosql",
+    "bson"
+  ],
+  "links": {
+    "website": "https://www.litedb.org/",
+    "docs": "https://www.litedb.org/docs/",
+    "repository": "https://github.com/litedb-org/LiteDB",
+    "changelog": "https://github.com/litedb-org/LiteDB/releases"
+  },
+  "ids": {
+    "github": "litedb-org/LiteDB",
+    "stackoverflowTag": "litedb",
+    "hackerNewsQuery": "LiteDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/litedb-org/LiteDB/releases",
+    "https://www.litedb.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

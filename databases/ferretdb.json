@@ -1,0 +1,176 @@
+{
+  "slug": "ferretdb",
+  "name": "FerretDB",
+  "aliases": [],
+  "tagline": "Apache-licensed MongoDB-protocol proxy that stores data in PostgreSQL with the DocumentDB extension.",
+  "description": "FerretDB is a stateless Go proxy that accepts MongoDB wire-protocol traffic and translates it to PostgreSQL. Since 2.0 (early 2025) it requires the DocumentDB extension as its storage engine, which gave a big jump in compatibility and speed. It was the first serious attempt at a truly open-source MongoDB alternative, and the company launched FerretDB Cloud in 2025. Since then, momentum has collapsed. The last release is v2.7.0 (November 2025), the official website lapsed in 2026, and the project was hit by a patent suit from MongoDB. Treat it as a stalled project and look at DocumentDB directly for new work.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No release since v2.7.0 (Nov 2025), commits stalled in early 2026 and ferretdb.com lapsed, after MongoDB's 2025 patent suit. Consider DocumentDB (Linux Foundation) instead.",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "metadata-store"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "FerretDB Inc.",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "2.7.0",
+    "date": "2025-11-10"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "PostgreSQL with the DocumentDB extension",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by the single PostgreSQL primary behind it; the proxy itself is stateless."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "MongoDB Query API (MQL)",
+    "Aggregation pipeline"
+  ],
+  "apis": [
+    "MongoDB wire protocol",
+    "Data API (HTTP)"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Apache 2.0 licensed and runs on infrastructure teams already operate (PostgreSQL)",
+    "Works with standard MongoDB drivers and mongosh",
+    "Stateless proxy design is easy to deploy alongside Postgres"
+  ],
+  "weaknesses": [
+    "Development has effectively stopped since late 2025",
+    "No oplog, so change streams and replica-set-dependent tooling don't work",
+    "Multi-document transactions are not supported",
+    "Adds a translation hop on top of DocumentDB, which can now speak the protocol itself"
+  ],
+  "useCases": [
+    "Existing deployments already running FerretDB 2.x",
+    "Small apps such as LibreChat needing a MongoDB-compatible store on Postgres"
+  ],
+  "notIdealFor": [
+    "New projects (choose DocumentDB or MongoDB)",
+    "Workloads needing change streams or transactions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "documentdb-postgres",
+    "mongodb",
+    "percona-server-mongodb",
+    "azure-documentdb",
+    "postgresql"
+  ],
+  "tags": [
+    "mongodb-compatible",
+    "postgres-ecosystem",
+    "open-source",
+    "proxy"
+  ],
+  "links": {
+    "website": "https://github.com/FerretDB/FerretDB",
+    "docs": "https://docs.ferretdb.io/",
+    "repository": "https://github.com/FerretDB/FerretDB",
+    "changelog": "https://github.com/FerretDB/FerretDB/releases"
+  },
+  "ids": {
+    "github": "FerretDB/FerretDB",
+    "hackerNewsQuery": "FerretDB"
+  },
+  "brand": {
+    "color": "#042133",
+    "simpleIcon": "ferretdb"
+  },
+  "sources": [
+    "https://github.com/FerretDB/FerretDB/releases/tag/v2.7.0",
+    "https://github.com/FerretDB/FerretDB/discussions",
+    "https://blog.ferretdb.io/",
+    "https://www.infoq.com/news/2025/02/ferretdb-documentdb",
+    "https://storage.courtlistener.com/recap/gov.uscourts.ded.89247/gov.uscourts.ded.89247.1.0.pdf"
+  ],
+  "lastVerified": "2026-10-27"
+}

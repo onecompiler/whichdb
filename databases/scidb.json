@@ -1,0 +1,152 @@
+{
+  "slug": "scidb",
+  "name": "SciDB",
+  "aliases": [
+    "Paradigm4 SciDB"
+  ],
+  "tagline": "Massively parallel array database co-designed by Michael Stonebraker; no longer actively offered.",
+  "description": "SciDB was a shared-nothing, massively parallel array database designed by Michael Stonebraker's group and commercialised by Paradigm4 for scientific, genomic and financial data that maps naturally to multidimensional arrays. It offered chunked, compressed storage, versioned arrays and in-database linear algebra through the AFL and AQL query languages, with R and Python clients. Paradigm4's site now centres on its REVEAL analytics platform and flexFS, and SciDB is no longer marketed or released as a standalone product. Teams wanting an array engine today usually choose TileDB, rasdaman, or Zarr on object storage.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Paradigm4 no longer markets or releases SciDB as a standalone product; its site now covers only REVEAL, flexFS and services.",
+  "maturity": "legacy",
+  "primaryModel": "array",
+  "models": [
+    "array"
+  ],
+  "workloads": [
+    "scientific",
+    "olap"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Paradigm4",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "AGPL-3.0 (former Community Edition); proprietary Enterprise Edition",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No current public download or price list."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "AFL (Array Functional Language)",
+    "AQL (Array Query Language)"
+  ],
+  "apis": [
+    "SciDB client API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "R"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Parallel, chunked array storage for very large multidimensional data",
+    "In-database linear algebra and statistics",
+    "Versioned arrays for reproducible analysis"
+  ],
+  "weaknesses": [
+    "No longer publicly developed or distributed",
+    "Niche query languages",
+    "Operationally complex cluster software"
+  ],
+  "useCases": [
+    "Maintaining legacy SciDB deployments",
+    "Historical reference for array database design"
+  ],
+  "notIdealFor": [
+    "Any new project"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tiledb",
+    "rasdaman",
+    "duckdb",
+    "clickhouse"
+  ],
+  "tags": [
+    "array-database",
+    "scientific",
+    "mpp",
+    "stonebraker",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://www.paradigm4.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/SciDB"
+  },
+  "ids": {
+    "wikipedia": "SciDB",
+    "stackoverflowTag": "scidb",
+    "hackerNewsQuery": "SciDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.paradigm4.com/",
+    "https://en.wikipedia.org/wiki/SciDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

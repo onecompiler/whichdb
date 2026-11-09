@@ -1,0 +1,164 @@
+{
+  "slug": "torodb",
+  "name": "ToroDB",
+  "aliases": [
+    "ToroDB Stampede",
+    "ToroDB Server"
+  ],
+  "tagline": "MongoDB-compatible layer that stored documents as relational tables in PostgreSQL; abandoned since 2018.",
+  "description": "ToroDB, from the Spanish company 8Kdata, mapped JSON documents onto normalised relational tables in PostgreSQL. ToroDB Server spoke the MongoDB wire protocol so applications could keep their drivers while data landed in an RDBMS, and the later ToroDB Stampede tailed a MongoDB replica set's oplog and replicated it into PostgreSQL tables so analysts could run SQL over it. The idea of 'MongoDB API, Postgres storage' was ahead of its time, but the project went quiet after Stampede 1.0.0 in October 2018 and its domain no longer belongs to the project. FerretDB and DocumentDB now fill this role.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since Stampede 1.0.0 (Oct 2018) and torodb.com no longer belongs to the project. Use FerretDB or DocumentDB on PostgreSQL.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "oltp"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "8Kdata",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "Stampede 1.0.0",
+    "date": "2018-10-25"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by the single PostgreSQL backend it wrote to."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "MongoDB Query Language",
+    "SQL"
+  ],
+  "apis": [
+    "MongoDB wire protocol",
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mongodb",
+    "postgresql"
+  ],
+  "drivers": [
+    "Any MongoDB driver",
+    "Any PostgreSQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Documents became real relational tables, so plain SQL and BI tools could query them",
+    "Stampede replicated live MongoDB data into PostgreSQL without changing the app",
+    "Durability and transactions came from PostgreSQL rather than an immature engine"
+  ],
+  "weaknesses": [
+    "Abandoned since 2018; tied to old MongoDB and PostgreSQL versions",
+    "Incomplete MongoDB command coverage in ToroDB Server",
+    "Shredding deeply nested documents produced many tables and joins"
+  ],
+  "useCases": [
+    "Historical reference for mapping JSON documents to relational schemas",
+    "Legacy MongoDB-to-SQL analytics pipelines"
+  ],
+  "notIdealFor": [
+    "New deployments",
+    "Current MongoDB versions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ferretdb",
+    "documentdb-postgres",
+    "postgresql",
+    "mongodb"
+  ],
+  "tags": [
+    "mongodb-compatible",
+    "postgresql",
+    "java",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/torodb/stampede",
+    "repository": "https://github.com/torodb/stampede"
+  },
+  "ids": {
+    "github": "torodb/stampede",
+    "hackerNewsQuery": "ToroDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/torodb/stampede",
+    "https://github.com/torodb/server",
+    "https://github.com/torodb/stampede/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,192 @@
+{
+  "slug": "algolia",
+  "name": "Algolia",
+  "aliases": [
+    "Algolia Search",
+    "Algolia NeuralSearch"
+  ],
+  "tagline": "Hosted search-as-a-service with fast typo-tolerant search, merchandising and AI ranking.",
+  "description": "Algolia is a proprietary, fully hosted search API used heavily for e-commerce and documentation search. Its strengths are sub-50ms global query latency, polished front-end libraries (InstantSearch, Autocomplete) and business-user tooling for rules, merchandising and A/B tests. NeuralSearch, which blends keyword and vector retrieval, plus AI ranking and personalization, are reserved for the higher plans. You trade control and cost predictability at high query volume for never having to run a search cluster.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Algolia",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary SaaS"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "Free (10K searches/month), then $0.50 per 1K searches",
+    "notes": "Free plan: 10K searches and 50K records per month. Grow/Grow Plus are pay-as-you-go; Elevate (annual contract) adds NeuralSearch and enterprise SLAs."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Algolia",
+      "provider": "Algolia",
+      "url": "https://www.algolia.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Clusters are replicated by Algolia; the Distributed Search Network adds read replicas in other regions for lower latency."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Algolia Search API"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "PHP",
+    "Ruby",
+    "Java",
+    "Go",
+    "Swift",
+    "Kotlin",
+    ".NET",
+    "Scala",
+    "Dart"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Consistently low global latency with no infrastructure to run",
+    "Best-in-class front-end widgets (InstantSearch, Autocomplete)",
+    "Merchandising rules, A/B testing and analytics for non-engineers",
+    "NeuralSearch hybrid ranking on enterprise plans",
+    "Mature connectors for Shopify, Salesforce Commerce and others"
+  ],
+  "weaknesses": [
+    "Costs grow quickly with search volume and record count",
+    "Proprietary and cloud-only, with no self-hosted option",
+    "Vector/NeuralSearch locked to top-tier contracts",
+    "Limited control over ranking internals compared with Elasticsearch or Vespa"
+  ],
+  "useCases": [
+    "E-commerce product search and merchandising",
+    "Documentation and help-center search",
+    "Mobile app search",
+    "Marketplace listings with geo filters"
+  ],
+  "notIdealFor": [
+    "Cost-sensitive high-volume search",
+    "Log analytics",
+    "Custom ML ranking pipelines",
+    "Air-gapped or on-prem deployments"
+  ],
+  "notableUsers": [
+    "Lacoste",
+    "Gymshark"
+  ],
+  "alternatives": [
+    "typesense",
+    "meilisearch",
+    "elasticsearch",
+    "azure-ai-search",
+    "vespa",
+    "orama"
+  ],
+  "tags": [
+    "search",
+    "saas",
+    "ecommerce",
+    "proprietary",
+    "hosted"
+  ],
+  "links": {
+    "website": "https://www.algolia.com/",
+    "docs": "https://www.algolia.com/doc/",
+    "pricing": "https://www.algolia.com/pricing",
+    "wikipedia": "https://en.wikipedia.org/wiki/Algolia"
+  },
+  "ids": {
+    "stackoverflowTag": "algolia",
+    "wikipedia": "Algolia",
+    "npm": "algoliasearch",
+    "pypi": "algoliasearch",
+    "hackerNewsQuery": "Algolia"
+  },
+  "brand": {
+    "color": "#003DFF",
+    "simpleIcon": "algolia"
+  },
+  "sources": [
+    "https://www.algolia.com/pricing",
+    "https://www.algolia.com/doc/",
+    "https://www.npmjs.com/package/algoliasearch"
+  ],
+  "lastVerified": "2026-10-27"
+}

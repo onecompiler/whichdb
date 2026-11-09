@@ -1,0 +1,159 @@
+{
+  "slug": "nutsdb",
+  "name": "NutsDB",
+  "aliases": [],
+  "tagline": "Pure-Go embedded key-value store with Bitcask storage and Redis-like lists, sets and sorted sets.",
+  "description": "NutsDB is an embeddable, persistent key-value store written in pure Go that uses a Bitcask-style append-only log with an in-memory index, giving fast writes and single-seek reads. Beyond plain buckets it offers Redis-like data structures (lists, sets and sorted sets), per-key TTLs and fully serializable transactions, which makes it convenient for Go services that want Redis-ish semantics without a server. Because the index is held in memory, the number of keys is bounded by RAM, and merges must be run to reclaim space.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching",
+    "queue"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "NutsDB contributors",
+  "vendorType": "community",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "1.1.0",
+    "date": "2025-12-17"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Key index kept in memory, so key count is bounded by RAM."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Go API"
+  ],
+  "apis": [
+    "Go API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Redis-like lists, sets and sorted sets in an embedded Go library",
+    "Fully serializable transactions",
+    "Fast writes from an append-only Bitcask design",
+    "Pure Go with no cgo"
+  ],
+  "weaknesses": [
+    "In-memory index limits how many keys you can store",
+    "Merge (compaction) must be managed to reclaim disk",
+    "Go-only and community-maintained"
+  ],
+  "useCases": [
+    "Embedded queues and leaderboards in Go services",
+    "Local caches with TTL",
+    "Replacing a sidecar Redis for single-process apps"
+  ],
+  "notIdealFor": [
+    "Very large key counts",
+    "Multi-process or networked access",
+    "Non-Go applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "badger",
+    "bbolt",
+    "pebble",
+    "redis"
+  ],
+  "tags": [
+    "go",
+    "bitcask",
+    "embedded",
+    "data-structures"
+  ],
+  "links": {
+    "website": "https://nutsdb.github.io/nutsdb/",
+    "docs": "https://github.com/nutsdb/nutsdb/tree/master/docs",
+    "repository": "https://github.com/nutsdb/nutsdb",
+    "changelog": "https://github.com/nutsdb/nutsdb/releases"
+  },
+  "ids": {
+    "github": "nutsdb/nutsdb",
+    "hackerNewsQuery": "NutsDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/nutsdb/nutsdb",
+    "https://github.com/nutsdb/nutsdb/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

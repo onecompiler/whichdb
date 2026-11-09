@@ -1,0 +1,197 @@
+{
+  "slug": "google-cloud-bigtable",
+  "name": "Google Cloud Bigtable",
+  "aliases": [
+    "Bigtable",
+    "Cloud Bigtable"
+  ],
+  "tagline": "Google's managed wide-column store, the original Bigtable, with HBase API and SQL access.",
+  "description": "Cloud Bigtable is the externally offered version of the system that has backed Google Search, Maps and Gmail since the mid-2000s. You get a sorted, sparse, petabyte-scale table keyed by a single row key, with throughput that scales linearly by adding nodes and replication across clusters in multiple regions. It speaks the HBase client API and, since 2025, GoogleSQL for reads, and change streams feed Dataflow and BigQuery. It is excellent for time-series, ad-tech and ML feature serving where row-key design is everything, and a poor fit for small or relational datasets because of its per-node minimum cost.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "time-series",
+    "iot",
+    "ml-feature-store",
+    "real-time-analytics",
+    "observability"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Google",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Google Cloud service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed per node-hour (or autoscaled compute), plus SSD/HDD storage and network; committed-use discounts available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Cloud Bigtable",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/bigtable"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Storage separated from compute on Colossus; multi-cluster routing accepts writes in any replicated cluster with eventual consistency between them."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Bigtable API",
+    "GoogleSQL"
+  ],
+  "apis": [
+    "gRPC Data API",
+    "HBase client API"
+  ],
+  "compatibleWith": [
+    "hbase"
+  ],
+  "drivers": [
+    "Java",
+    "Go",
+    "Python",
+    "JavaScript",
+    "C++",
+    "C#",
+    "Ruby",
+    "PHP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Linear throughput scaling by adding nodes, with consistent low-millisecond latency",
+    "HBase API compatibility eases Hadoop migrations",
+    "Multi-region replication with automatic failover routing",
+    "Change streams and native BigQuery, Dataflow and Spark integration",
+    "No storage limit per table; storage and compute scale independently"
+  ],
+  "weaknesses": [
+    "Single row key index; no secondary indexes",
+    "Single-row atomicity only, no multi-row transactions",
+    "Minimum node cost makes small workloads expensive",
+    "GCP-only; hot-spotting from poor row-key design hurts badly"
+  ],
+  "useCases": [
+    "Time-series and IoT telemetry",
+    "Ad-tech user profiles and bidding data",
+    "ML feature serving",
+    "Financial market data",
+    "HBase workloads moving to the cloud"
+  ],
+  "notIdealFor": [
+    "Relational data with joins",
+    "Small datasets under ~1 TB",
+    "Multi-row transactional consistency",
+    "Multi-cloud deployments"
+  ],
+  "notableUsers": [
+    "Google",
+    "Spotify"
+  ],
+  "alternatives": [
+    "apache-hbase",
+    "amazon-dynamodb",
+    "apache-cassandra",
+    "scylladb",
+    "google-cloud-spanner",
+    "azure-cosmos-db"
+  ],
+  "tags": [
+    "gcp",
+    "managed",
+    "bigtable",
+    "wide-column",
+    "hbase-compatible"
+  ],
+  "links": {
+    "website": "https://cloud.google.com/bigtable",
+    "docs": "https://cloud.google.com/bigtable/docs",
+    "pricing": "https://cloud.google.com/bigtable/pricing",
+    "changelog": "https://cloud.google.com/bigtable/docs/release-notes",
+    "wikipedia": "https://en.wikipedia.org/wiki/Bigtable"
+  },
+  "ids": {
+    "stackoverflowTag": "google-cloud-bigtable",
+    "wikipedia": "Bigtable",
+    "npm": "@google-cloud/bigtable",
+    "pypi": "google-cloud-bigtable",
+    "hackerNewsQuery": "Cloud Bigtable"
+  },
+  "brand": {
+    "color": "#669DF6",
+    "simpleIcon": "googlebigtable"
+  },
+  "sources": [
+    "https://cloud.google.com/bigtable",
+    "https://cloud.google.com/bigtable/docs/release-notes",
+    "https://cloud.google.com/bigtable/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

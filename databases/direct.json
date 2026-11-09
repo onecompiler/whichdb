@@ -1,0 +1,104 @@
+{
+  "slug": "direct",
+  "name": "DIRECT",
+  "aliases": ["DIRECT database machine"],
+  "tagline": "Wisconsin's late-1970s multiprocessor database machine, and the project that produced the Wisconsin Benchmark.",
+  "description": "DIRECT was a relational database machine built at the University of Wisconsin-Madison by David DeWitt's group and first described at ISCA in 1978 (with a fuller IEEE Transactions on Computers paper in 1979). A controller decomposed relational queries into operators on fixed-size pages and assigned them dynamically to a pool of query processors that shared a bank of page-sized memory modules, so intra-query and inter-query parallelism came from the same mechanism. Benchmarking it against commercial systems led to the Wisconsin Benchmark, which embarrassed several vendors and shaped database benchmarking for a decade. DIRECT itself was never a product; its lessons fed directly into DeWitt's shared-nothing Gamma machine and, through it, today's parallel SQL engines.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (c. 1978-1984) at UW-Madison; ideas carried into Gamma and later shared-nothing parallel databases.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["olap"],
+  "architecture": ["shared-storage"],
+  "developer": "University of Wisconsin-Madison (David DeWitt et al.)",
+  "vendorType": "academic",
+  "initialRelease": 1978,
+  "writtenIn": ["C"],
+  "license": { "type": "proprietary", "name": "Not released (research prototype)" },
+  "pricing": {
+    "models": ["free"],
+    "freeTier": false,
+    "notes": "Never sold or distributed; only the papers are available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Parallelism came from adding query processors that shared page-sized memory modules."
+  },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["Relational query trees issued by a host system"],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early demonstration of page-level, dynamically scheduled intra- and inter-query parallelism",
+    "Origin of the Wisconsin Benchmark, a template for later database benchmarks",
+    "Well-documented in ISCA 1978 and IEEE ToC 1979 papers, useful for teaching database-machine history"
+  ],
+  "weaknesses": [
+    "Hardware prototype that was never released as software",
+    "Shared-memory design hit bandwidth limits that pushed the field to shared-nothing (Gamma)"
+  ],
+  "useCases": [
+    "Studying the history of parallel query execution",
+    "Teaching the database-machine era and why it gave way to shared-nothing clusters",
+    "Background for understanding the Wisconsin Benchmark"
+  ],
+  "notIdealFor": ["Anything beyond study: there is no runnable system"],
+  "notableUsers": [],
+  "alternatives": ["gamma", "teradata-vantage", "ibm-netezza", "greenplum"],
+  "tags": ["research", "database-machine", "parallel-query", "wisconsin", "historical"],
+  "links": {
+    "website": "https://doi.org/10.1145/800094.803046"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1145/800094.803046",
+    "https://doi.org/10.1109/TC.1979.1675379",
+    "https://dbdb.io/db/direct"
+  ],
+  "lastVerified": "2026-10-27"
+}

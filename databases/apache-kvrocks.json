@@ -1,0 +1,178 @@
+{
+  "slug": "apache-kvrocks",
+  "name": "Apache Kvrocks",
+  "aliases": [
+    "Kvrocks"
+  ],
+  "tagline": "A Redis-protocol database on RocksDB that trades a little latency for disk-sized capacity.",
+  "description": "Kvrocks implements the Redis protocol on top of RocksDB, so data lives on SSD with RAM used for caching rather than holding the full dataset. Originally built at Meitu and now an Apache top-level project, it supports most Redis data types, Lua, transactions, namespaces and a cluster mode managed by a controller. Recent versions add a search engine over JSON and hashes. It fits workloads that outgrew Redis's memory budget but still want the Redis API, at the cost of disk-bound latency.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "queue",
+    "pub-sub"
+  ],
+  "architecture": [
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "2.17.0",
+    "date": "2026-09-19"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "RocksDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Datasets sized by disk rather than RAM; cluster mode uses Redis Cluster slots coordinated by kvrocks-controller."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2/RESP3"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stores far more data than RAM by keeping it in RocksDB on SSD",
+    "Redis protocol compatibility for most data types and Lua",
+    "Apache governance and permissive license",
+    "Namespaces give lightweight multi-tenancy"
+  ],
+  "weaknesses": [
+    "Higher and less predictable latency than in-memory Redis",
+    "RocksDB compaction tuning becomes your problem",
+    "Some Redis commands and modules unsupported",
+    "No vendor-backed managed service"
+  ],
+  "useCases": [
+    "Large Redis datasets that are too expensive to keep in RAM",
+    "Persistent key-value storage with a Redis API",
+    "Feature and profile stores accessed by key"
+  ],
+  "notIdealFor": [
+    "Strict sub-millisecond latency caches",
+    "Teams without RocksDB operational experience"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pika",
+    "redis",
+    "valkey",
+    "garnet",
+    "tarantool"
+  ],
+  "tags": [
+    "redis-compatible",
+    "rocksdb",
+    "disk-based",
+    "apache"
+  ],
+  "links": {
+    "website": "https://kvrocks.apache.org/",
+    "docs": "https://kvrocks.apache.org/docs/",
+    "repository": "https://github.com/apache/kvrocks",
+    "changelog": "https://github.com/apache/kvrocks/releases"
+  },
+  "ids": {
+    "github": "apache/kvrocks",
+    "dockerHub": "apache/kvrocks",
+    "hackerNewsQuery": "Kvrocks"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apache/kvrocks/releases",
+    "https://kvrocks.apache.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

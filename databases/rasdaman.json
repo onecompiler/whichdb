@@ -1,0 +1,166 @@
+{
+  "slug": "rasdaman",
+  "name": "rasdaman",
+  "aliases": [
+    "raster data manager",
+    "rasdaman community",
+    "rasdaman enterprise"
+  ],
+  "tagline": "Array database for massive multidimensional rasters, with SQL-style queries and OGC WCPS services.",
+  "description": "rasdaman (raster data manager) is one of the original array DBMSs. It stores huge multidimensional arrays such as satellite imagery, climate model output and sensor cubes as tiled, compressed objects and lets you slice, aggregate and combine them server-side with rasql, a SQL-style array language. It also serves OGC WCS, WMS, WMTS and WCPS, and its query model fed into the ISO SQL/MDA and OGC WCPS standards. It comes as an open-source community edition and a proprietary enterprise edition from rasdaman GmbH with federation and more. It is strongest for geospatial datacube services and remains a niche engine with a small community.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "array",
+  "models": [
+    "array",
+    "spatial"
+  ],
+  "workloads": [
+    "scientific",
+    "geospatial",
+    "olap"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed"
+  ],
+  "developer": "rasdaman GmbH (with Constructor University)",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-3.0 server / LGPL-3.0 clients (community); proprietary enterprise",
+    "spdx": "GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community edition is free; rasdaman enterprise adds federation, extensibility and support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Federation of multiple servers is an enterprise feature; single servers handle multi-TB datacubes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "rasql",
+    "OGC WCPS"
+  ],
+  "apis": [
+    "OGC WCS",
+    "OGC WMS",
+    "OGC WMTS",
+    "OGC WCPS"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Server-side slicing and aggregation of multi-TB raster datacubes",
+    "Standards-based OGC web services out of the box",
+    "Declarative array query language that shaped ISO SQL/MDA"
+  ],
+  "weaknesses": [
+    "Small community and limited documentation beyond geospatial use",
+    "Key scale-out features are enterprise-only",
+    "Operationally heavier than file-based array formats like Zarr or TileDB"
+  ],
+  "useCases": [
+    "Earth observation datacube services",
+    "Climate and weather model output analysis",
+    "Serving rasters via OGC WCS/WCPS"
+  ],
+  "notIdealFor": [
+    "Tabular or transactional workloads",
+    "Teams that prefer file formats in object storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tiledb",
+    "scidb",
+    "postgis",
+    "kinetica"
+  ],
+  "tags": [
+    "array-database",
+    "geospatial",
+    "raster",
+    "ogc",
+    "scientific"
+  ],
+  "links": {
+    "website": "https://rasdaman.org/",
+    "docs": "https://doc.rasdaman.org/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Rasdaman"
+  },
+  "ids": {
+    "wikipedia": "Rasdaman",
+    "pypi": "rasdapy3",
+    "hackerNewsQuery": "rasdaman"
+  },
+  "brand": {},
+  "sources": [
+    "https://rasdaman.org/",
+    "https://en.wikipedia.org/wiki/Rasdaman"
+  ],
+  "lastVerified": "2026-10-27"
+}

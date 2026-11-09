@@ -1,0 +1,174 @@
+{
+  "slug": "feldera",
+  "name": "Feldera",
+  "aliases": [
+    "DBSP"
+  ],
+  "tagline": "An incremental SQL engine grounded in DBSP theory that updates any SQL query from changes only.",
+  "description": "Feldera grew out of VMware Research's DBSP work, which gives a mathematical framework for incrementally maintaining arbitrary SQL, including recursive queries and complex joins. You write pipelines as SQL tables and views; Feldera compiles them to Rust and processes inserts, updates and deletes so outputs change in proportion to input changes, not data size. It integrates with Kafka, Delta Lake, Iceberg, Postgres and HTTP. The core is MIT-licensed, with an enterprise edition and managed cloud from Feldera Inc. Releases ship several times per week.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics",
+    "ml-feature-store",
+    "lakehouse"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Feldera, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "0.369.0",
+    "date": "2026-10-23"
+  },
+  "writtenIn": [
+    "Rust",
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT (open-source edition); Enterprise is commercial",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract",
+      "usage-based"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Pipelines use multiple workers and spill state to storage; enterprise supports larger multi-host deployments."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (Apache Calcite dialect)"
+  ],
+  "apis": [
+    "REST",
+    "HTTP ingress/egress",
+    "Python SDK"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Incrementally evaluates full SQL, including recursion and complex joins",
+    "Strong theoretical foundation (DBSP, VLDB best paper)",
+    "Same SQL for batch backfill and streaming",
+    "Delta Lake and Iceberg connectors for lakehouse pipelines",
+    "Permissive MIT license for the core"
+  ],
+  "weaknesses": [
+    "Pre-1.0 versioning with very frequent releases",
+    "SQL is compiled, so pipeline changes require recompilation",
+    "Not a query-serving database; results go to sinks",
+    "Young ecosystem and community"
+  ],
+  "useCases": [
+    "Incremental computation of complex analytics over changing data",
+    "Real-time feature engineering",
+    "Streaming ETL into Delta Lake or Iceberg"
+  ],
+  "notIdealFor": [
+    "Serving ad-hoc point queries",
+    "Teams wanting a stable 1.0 API"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "materialize",
+    "risingwave",
+    "arroyo",
+    "epsio",
+    "timeplus-proton"
+  ],
+  "tags": [
+    "incremental-view-maintenance",
+    "dbsp",
+    "streaming-sql",
+    "rust"
+  ],
+  "links": {
+    "website": "https://www.feldera.com/",
+    "docs": "https://docs.feldera.com/",
+    "repository": "https://github.com/feldera/feldera",
+    "changelog": "https://github.com/feldera/feldera/releases"
+  },
+  "ids": {
+    "github": "feldera/feldera",
+    "pypi": "feldera",
+    "hackerNewsQuery": "Feldera"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/feldera/feldera/releases",
+    "https://github.com/feldera/feldera/blob/main/LICENSE",
+    "https://www.feldera.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

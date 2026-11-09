@@ -1,0 +1,182 @@
+{
+  "slug": "azure-cache-for-redis",
+  "name": "Azure Managed Redis",
+  "aliases": [
+    "Azure Cache for Redis",
+    "Azure Redis"
+  ],
+  "tagline": "Microsoft's managed Redis built on Redis Enterprise, replacing the retiring Azure Cache for Redis.",
+  "description": "Azure Managed Redis is Microsoft's current managed Redis offering, generally available since May 2025 and built on Redis Enterprise software rather than community Redis. It comes in Memory Optimized, Balanced, Compute Optimized and Flash Optimized tiers, includes search with vectors, JSON, Bloom and time-series modules, and supports active geo-replication across regions. The older Azure Cache for Redis is being retired: Enterprise tiers on March 31, 2027 and Basic/Standard/Premium on September 30, 2028, with new instance creation already blocked. New Azure workloads should start here.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "vector",
+    "time-series",
+    "search"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub",
+    "queue",
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "primary-replica"
+  ],
+  "developer": "Microsoft (with Redis Ltd.)",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2025,
+  "latestVersion": {
+    "version": "Redis 7.4",
+    "date": "2026-05"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Redis Enterprise",
+  "license": {
+    "type": "proprietary",
+    "name": "Azure service terms"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Hourly per SKU; geo-replication bandwidth currently absorbed by Microsoft."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "In-memory tiers up to 1.9 TB (larger sizes in preview); Flash Optimized up to 4.5 TB; active geo-replication on in-memory tiers."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua",
+    "Redis Query Engine (FT.*)"
+  ],
+  "apis": [
+    "RESP2/RESP3"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Redis Enterprise features (modules, active-active) without running Redis Enterprise yourself",
+    "Zone redundancy by default and up to 99.999% SLA with geo-replication",
+    "Microsoft Entra ID authentication and Private Link",
+    "Flash tier for cheaper large caches"
+  ],
+  "weaknesses": [
+    "Migration required from the retiring Azure Cache for Redis tiers",
+    "Azure-only",
+    "Flash tier lacks search, Bloom and time-series modules",
+    "Redis version lags upstream (7.4.x)"
+  ],
+  "useCases": [
+    "Caching and session storage for Azure App Service and AKS apps",
+    "Vector search and semantic caching for Azure OpenAI apps",
+    "Globally shared leaderboards with active geo-replication"
+  ],
+  "notIdealFor": [
+    "Non-Azure deployments",
+    "Teams wanting the newest Redis 8 features immediately"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "amazon-elasticache",
+    "google-memorystore",
+    "ncache",
+    "garnet"
+  ],
+  "tags": [
+    "azure",
+    "managed",
+    "redis",
+    "redis-enterprise"
+  ],
+  "links": {
+    "website": "https://azure.microsoft.com/products/managed-redis",
+    "docs": "https://learn.microsoft.com/azure/redis/overview",
+    "pricing": "https://azure.microsoft.com/pricing/details/managed-redis/"
+  },
+  "ids": {
+    "stackoverflowTag": "azure-redis-cache",
+    "hackerNewsQuery": "Azure Managed Redis"
+  },
+  "brand": {},
+  "sources": [
+    "https://learn.microsoft.com/en-us/azure/redis/overview",
+    "https://techcommunity.microsoft.com/blog/azure-managed-redis/-/4458721",
+    "https://azure.microsoft.com/products/managed-redis"
+  ],
+  "lastVerified": "2026-10-27"
+}

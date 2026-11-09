@@ -1,0 +1,167 @@
+{
+  "slug": "polodb",
+  "name": "PoloDB",
+  "aliases": [],
+  "tagline": "Embedded BSON document database for Rust with a MongoDB-like API and optional wire-protocol server.",
+  "description": "PoloDB is an embedded document database for Rust that stores BSON documents and exposes collections, filters, update operators, indexes, aggregation and transactions through a typed, serde-friendly API modelled on the MongoDB driver. Since v5 it uses RocksDB for storage, and a standalone server mode speaks part of the MongoDB wire protocol so existing drivers can connect. There are also experimental Python bindings. Releases are steady (v5.3.0 in July 2026), but the maintainers note that indexes, aggregation and the server are still evolving. It suits Rust desktop, CLI and edge apps that want MongoDB-style documents without a server.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "edge",
+    "configuration"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "PoloDB project (Vincent Chan)",
+  "vendorType": "community",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "5.3.0",
+    "date": "2026-07-26"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "RocksDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "MongoDB-like query API (subset)"
+  ],
+  "apis": [
+    "Rust API",
+    "MongoDB wire protocol (partial, server mode)"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "Rust",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Idiomatic, typed Rust API with serde integration",
+    "MongoDB-style queries, updates and aggregation in-process",
+    "RocksDB storage gives solid durability and compression",
+    "Optional server mode works with standard MongoDB drivers for supported operations"
+  ],
+  "weaknesses": [
+    "Young project; APIs and features still evolving",
+    "Database is a RocksDB directory, not a single portable file",
+    "First build compiles RocksDB and is slow",
+    "Partial MongoDB compatibility only"
+  ],
+  "useCases": [
+    "Rust desktop and CLI apps needing local document storage",
+    "Edge services wanting MongoDB-like semantics without a server",
+    "Tests that stub MongoDB with an embedded store"
+  ],
+  "notIdealFor": [
+    "Production multi-user servers",
+    "Apps needing full MongoDB compatibility"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "redb",
+    "ejdb",
+    "unqlite",
+    "nedb",
+    "mongodb"
+  ],
+  "tags": [
+    "embedded",
+    "rust",
+    "bson",
+    "mongodb-like"
+  ],
+  "links": {
+    "website": "https://github.com/PoloDB/PoloDB",
+    "docs": "https://docs.rs/polodb_core",
+    "repository": "https://github.com/PoloDB/PoloDB",
+    "changelog": "https://github.com/PoloDB/PoloDB/blob/master/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "PoloDB/PoloDB",
+    "hackerNewsQuery": "PoloDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/PoloDB/PoloDB",
+    "https://github.com/PoloDB/PoloDB/releases/tag/v5.3.0",
+    "https://crates.io/crates/polodb_core"
+  ],
+  "lastVerified": "2026-10-27"
+}

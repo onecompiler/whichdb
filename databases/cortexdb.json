@@ -1,0 +1,168 @@
+{
+  "slug": "cortexdb",
+  "name": "CortexDB",
+  "aliases": [
+    "CortexEngine",
+    "Cortex Information Platform",
+    "Cortex-IP"
+  ],
+  "tagline": "Schema-less multi-model engine from Germany's Cortex AG, now sold as CortexEngine within Cortex-IP.",
+  "description": "CortexDB is the schema-less database from Cortex AG in Germany, today marketed as the CortexEngine at the core of the Cortex Information Platform (Cortex-IP), whose version 6.2 is current. Rather than tables or fixed documents, it normalises every field value into per-field dictionaries that hold the IDs of the records containing that value, so queries are answered by intersecting and uniting ID lists before any record is read, and the vendor describes queries as running against a redundancy-free sixth normal form. Records can hold multiple values per field and binary content, links between records model relationships, and data is managed bitemporally. Around the engine sit the Uniplex application layer, import tools, a Kafka interface and server-side JavaScript via V8. A free Starter Edition is available for on-premises use, with hosted options in German data centers.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Now marketed as CortexEngine inside the Cortex Information Platform (Cortex-IP 6.2) rather than as CortexDB.",
+  "maturity": "mature",
+  "primaryModel": "multivalue",
+  "models": [
+    "multivalue",
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "metadata-store"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Cortex AG",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free Starter Edition for registered users on-premises; commercial editions and hosted service via sales."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single logical instance per data inventory; commercial editions add synchronization servers and replication."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Cortex API",
+    "JavaScript"
+  ],
+  "apis": [
+    "REST/HTTP API",
+    "Kafka interface",
+    "Node.js integration"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Every field value is indexed in a field dictionary, so ad-hoc selections need no index design",
+    "Multiple values per field and schema-less records absorb messy source data",
+    "Bitemporal storage keeps history for audit and point-in-time analysis",
+    "Free on-premises Starter Edition for evaluation"
+  ],
+  "weaknesses": [
+    "Proprietary and niche, with a mostly German-speaking customer base",
+    "Few third-party drivers or integrations",
+    "Marketing has shifted from the database to the Cortex-IP platform, which can obscure engine details"
+  ],
+  "useCases": [
+    "Integrating heterogeneous enterprise data without upfront schema design",
+    "Master-data and process-dependency analysis",
+    "Low-code business applications on top of the Uniplex layer"
+  ],
+  "notIdealFor": [
+    "Teams wanting an open-source stack",
+    "Internet-scale distributed workloads",
+    "Standard SQL tooling"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "marklogic",
+    "mongodb",
+    "intersystems-iris",
+    "rocket-unidata-universe",
+    "arangodb"
+  ],
+  "tags": [
+    "multi-model",
+    "schemaless",
+    "bitemporal",
+    "germany",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.cortex-ag.com/en/",
+    "docs": "https://docs.cortex-ag.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "CortexDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.cortex-ag.com/en/",
+    "https://www.cortex-ag.com/en/platform",
+    "https://docs.cortex-ag.com/en/engine/overview/",
+    "https://docs.cortex-ag.com/en/engine/introduction/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,160 @@
+{
+  "slug": "sleekdb",
+  "name": "SleekDB",
+  "aliases": [],
+  "tagline": "Dependency-free PHP library that stores schemaless documents as plain JSON files on disk.",
+  "description": "SleekDB is a flat-file document store written in pure PHP: each store is a directory, each document a JSON file, and a fluent query builder handles conditions on nested fields, sorting, simple joins between stores, text search and a built-in query result cache. It needs nothing but PHP, which makes it handy on shared hosting, for small CMS-like sites and for prototypes where running MySQL is overkill. The authors themselves aim it at low-to-medium load and a few gigabytes of data; queries scan files and there is no real concurrency control. Version 2.50 (November 2025) moved the library to PHP 8.4.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "content-management"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "SleekDB contributors (RakibTG)",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "2.50",
+    "date": "2025-11-16"
+  },
+  "writtenIn": [
+    "PHP"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Designed for a few gigabytes of data and light concurrency."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "PHP query builder"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [
+    "PHP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Only needs PHP: no server, extension or binary to install",
+    "Data stays human-readable JSON files you can inspect, copy and version",
+    "Query builder handles nested fields, sorting, joins and text search",
+    "Built-in query cache speeds up repeated reads"
+  ],
+  "weaknesses": [
+    "Queries scan files, so performance falls off as stores grow",
+    "No transactions or robust multi-writer locking",
+    "PHP-only; other languages cannot share the data safely",
+    "Version 2.50 requires PHP 8.4, dropping older hosts"
+  ],
+  "useCases": [
+    "Small PHP websites on shared hosting",
+    "Prototypes and admin tools without a database server",
+    "Storing configuration or content as JSON documents"
+  ],
+  "notIdealFor": [
+    "High-traffic or write-heavy applications",
+    "Datasets beyond a few gigabytes",
+    "Multi-language access to the same data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "lowdb",
+    "nedb",
+    "lokijs",
+    "mongodb"
+  ],
+  "tags": [
+    "php",
+    "flat-file",
+    "json",
+    "embedded",
+    "nosql"
+  ],
+  "links": {
+    "website": "https://sleekdb.github.io/",
+    "docs": "https://sleekdb.github.io/",
+    "repository": "https://github.com/SleekDB/SleekDB",
+    "changelog": "https://github.com/SleekDB/SleekDB/releases"
+  },
+  "ids": {
+    "github": "SleekDB/SleekDB",
+    "hackerNewsQuery": "SleekDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/SleekDB/SleekDB",
+    "https://github.com/SleekDB/SleekDB/releases",
+    "https://sleekdb.github.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

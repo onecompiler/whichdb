@@ -1,0 +1,192 @@
+{
+  "slug": "opengauss",
+  "name": "openGauss",
+  "aliases": [
+    "open Gauss"
+  ],
+  "tagline": "Huawei-originated open-source RDBMS forked from PostgreSQL, with in-memory and column engines.",
+  "description": "openGauss is an enterprise relational database that Huawei open-sourced in 2020 from the kernel of its GaussDB, itself forked from PostgreSQL 9.2. It has diverged substantially: a thread-pool architecture instead of process-per-connection, the MOT in-memory engine, row (Astore/Ustore) and column storage, AI-assisted tuning and indexing, and in 7.0 a DataVec vector engine. It is widely deployed in China across banking, telecom and government as part of domestic-database programs, with many vendors shipping commercial distributions on top of it. Outside China, adoption, documentation quality in English and ecosystem support are limited.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "vector",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "htap",
+    "vector-search"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server",
+    "in-memory"
+  ],
+  "developer": "openGauss Community (Huawei-led)",
+  "vendorType": "community",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "7.0.0 LTS",
+    "date": "2026-09"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "basedOn": "PostgreSQL 9.2 (via GaussDB)",
+  "license": {
+    "type": "permissive",
+    "name": "Mulan Permissive Software License v2",
+    "spdx": "MulanPSL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial distributions and support from Huawei (GaussDB) and Chinese vendors such as Enmotech."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "huawei-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "GaussDB",
+      "provider": "Huawei Cloud",
+      "url": "https://www.huaweicloud.com/intl/en-us/product/gaussdb.html"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Primary-standby with quorum replication; distributed scale-out is offered through ShardingSphere-based or commercial GaussDB editions."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL-derived wire protocol",
+    "JDBC",
+    "ODBC",
+    "libpq"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "C",
+    "Python",
+    "Go",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Thread-pool model handles many connections without an external pooler",
+    "MOT in-memory engine for latency-sensitive OLTP tables",
+    "Row and column storage in one engine for mixed workloads",
+    "Strong security features: TDE, full-encrypted queries, row-level security",
+    "Large Chinese ecosystem of commercial distributions and ARM (Kunpeng) optimization"
+  ],
+  "weaknesses": [
+    "Forked from PostgreSQL 9.2, so modern Postgres extensions rarely work unmodified",
+    "English documentation and community support are limited",
+    "Linux-only, best tested on openEuler and Kunpeng hardware",
+    "Few managed offerings outside Huawei Cloud"
+  ],
+  "useCases": [
+    "Chinese banking and telecom core systems",
+    "Domestic-database replacements for Oracle in China",
+    "HTAP workloads mixing row and column tables",
+    "On-prem deployments on ARM servers"
+  ],
+  "notIdealFor": [
+    "Teams relying on the PostgreSQL extension ecosystem",
+    "Organizations outside China needing vendor support",
+    "Cloud-native deployments on Western hyperscalers"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "huawei-gaussdb",
+    "kingbase",
+    "dameng",
+    "oceanbase",
+    "postgres-pro"
+  ],
+  "tags": [
+    "china",
+    "huawei",
+    "postgres-fork",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://opengauss.org/en/",
+    "docs": "https://docs.opengauss.org/en/",
+    "repository": "https://gitee.com/opengauss/openGauss-server",
+    "changelog": "https://opengauss.org/en/download/"
+  },
+  "ids": {
+    "github": "opengauss-mirror/openGauss-server",
+    "dockerHub": "opengauss/opengauss",
+    "hackerNewsQuery": "openGauss"
+  },
+  "sources": [
+    "https://opengauss.org/en/download/",
+    "https://github.com/opengauss-mirror/openGauss-server/tags",
+    "https://gitee.com/opengauss/openGauss-server"
+  ],
+  "lastVerified": "2026-10-27"
+}

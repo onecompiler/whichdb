@@ -1,0 +1,104 @@
+{
+  "slug": "densodb",
+  "name": "DensoDB",
+  "aliases": ["DeNSo DB", "DeNSo"],
+  "tagline": "Small .NET document store from 2012 that ran in-process, as a Windows service, or as a P2P-synced mesh.",
+  "description": "DensoDB (styled DeNSo DB) was an open-source document database for .NET written in C# by Paolo Possanzini and hosted on CodePlex, later mirrored to GitHub. Entities were serialised into BSON-like documents in schema-free collections keyed by a unique id, and queried with LINQ. It could run in-process for speed, as a Windows service exposing REST and WCF endpoints, or as a peer-to-peer mesh in which nodes synchronised and propagated events, and its internals were organised around CQRS with a journal and event-dispatcher plugins. The last CodePlex release dates from December 2012 and the GitHub mirror from 2013; LiteDB is the obvious modern replacement for embedded .NET document storage.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release December 2012 and last commit October 2013; CodePlex has since shut down. LiteDB or RavenDB are the usual .NET successors.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": ["document"],
+  "workloads": ["embedded", "oltp"],
+  "architecture": ["embedded", "client-server", "distributed"],
+  "developer": "Paolo Possanzini",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "writtenIn": ["C#"],
+  "license": { "type": "copyleft", "name": "GNU GPL v2", "spdx": "GPL-2.0-only" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Mesh mode replicated data between peers rather than sharding it."
+  },
+  "consistency": { "acid": "limited", "models": ["eventual"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["LINQ"],
+  "apis": ["In-process .NET API", "REST", "WCF"],
+  "compatibleWith": [],
+  "drivers": ["C#"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Same API whether embedded in-process, run as a service or joined to a sync mesh",
+    "Stores plain .NET entities with built-in BSON serialisation and LINQ queries",
+    "CQRS-style event dispatcher made plugins such as P2P sync easy to bolt on"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2013 and targets old .NET Framework and Windows Phone",
+    "GPLv2 licence is awkward for embedding in closed-source applications",
+    "No secondary indexes or documented consistency model for mesh sync"
+  ],
+  "useCases": [
+    "Historical reference for early embedded .NET NoSQL stores",
+    "Reading the code for a compact CQRS-based storage design"
+  ],
+  "notIdealFor": ["New .NET applications", "Multi-user production systems"],
+  "notableUsers": [],
+  "alternatives": ["litedb", "ravendb", "realm", "couchbase-lite"],
+  "tags": ["dotnet", "csharp", "document", "embedded", "p2p"],
+  "links": {
+    "website": "https://github.com/teamdev/DensoDB",
+    "repository": "https://github.com/teamdev/DensoDB",
+    "docs": "https://github.com/teamdev/DensoDB/wiki/Documentation"
+  },
+  "ids": {
+    "github": "teamdev/DensoDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/teamdev/DensoDB",
+    "https://web.archive.org/web/2014/http://densodb.codeplex.com/",
+    "https://dbdb.io/db/densodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

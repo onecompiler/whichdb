@@ -1,0 +1,146 @@
+{
+  "slug": "geniedb",
+  "name": "GenieDB",
+  "aliases": [],
+  "tagline": "Defunct geo-distributed MySQL storage engine that later became a MySQL DBaaS (c. 2008–2015).",
+  "description": "GenieDB sold technology for running MySQL across multiple datacenters or cloud regions. It started as a MySQL storage engine that replicated tables between geographically distant sites with automatic conflict handling and self-healing after outages, pitched at WordPress, Drupal and other CMS sites that wanted to survive a region failure without moving to NoSQL. Around 2014 it repositioned as a hosted MySQL database-as-a-service with a web console and multi-cloud placement. The company stopped operating around 2015 and its domain is now parked. Today the same need is met by Galera-based clusters, Aurora Global Database, PlanetScale or TiDB.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Company ceased operations around 2015; geniedb.com is parked. Use Galera Cluster, Aurora or PlanetScale for multi-site MySQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "multi-primary",
+    "distributed"
+  ],
+  "developer": "GenieDB",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MySQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Historically sold as a storage engine and later as a hosted MySQL service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "active-active",
+    "notes": "Focused on replicating MySQL data between regions rather than sharding it."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Multi-region MySQL without changing the application",
+    "Installed like any other MySQL storage engine",
+    "Aimed squarely at CMS sites such as WordPress and Drupal"
+  ],
+  "weaknesses": [
+    "Company and product are gone",
+    "Cross-region replication traded away strict consistency"
+  ],
+  "useCases": [
+    "Historical example of geo-replicated MySQL storage engines",
+    "Background when evaluating multi-region MySQL options"
+  ],
+  "notIdealFor": [
+    "Any current deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "galera-cluster",
+    "percona-xtradb-cluster",
+    "amazon-aurora",
+    "planetscale",
+    "tidb"
+  ],
+  "tags": [
+    "mysql",
+    "geo-replication",
+    "dbaas",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20130119085745/http://www.geniedb.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "GenieDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20130119085745/http://www.geniedb.com/",
+    "https://web.archive.org/web/20140127045309/http://www.geniedb.com/",
+    "https://dbdb.io/db/geniedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

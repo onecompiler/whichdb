@@ -1,0 +1,166 @@
+{
+  "slug": "objectdb",
+  "name": "ObjectDB",
+  "aliases": [
+    "ObjectDB for Java"
+  ],
+  "tagline": "Commercial object database for Java that implements JPA and JDO natively, with no ORM layer.",
+  "description": "ObjectDB is an object database for Java that implements the JPA and JDO standards directly, so entity classes are stored as objects rather than mapped to tables. That removes ORM overhead and makes it fast for deep object graphs. It runs embedded in the application or as a client-server database and supports JPQL and JDOQL queries, indexes and ACID transactions. A free edition allows up to 10 entity classes and one million objects per file, and commercial server and site licences are inexpensive. It is a niche but steadily maintained choice for Java desktop and server apps that want JPA without Hibernate and SQL.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "ObjectDB Software",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "2.9.5",
+    "date": "2026-03-02"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "ObjectDB Licence (free edition with limits; commercial)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "startingPrice": "£500 per server",
+    "notes": "Free edition up to 10 entity classes and 1M objects per file; Site licence £2,500; OEM by quote."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "JPQL",
+    "JDOQL"
+  ],
+  "apis": [
+    "JPA",
+    "JDO"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native JPA/JDO with no object-relational mapping layer",
+    "Fast traversal of deep object graphs",
+    "Embedded or client-server from the same library",
+    "Low, simple licence pricing"
+  ],
+  "weaknesses": [
+    "Closed source with a single small vendor",
+    "Java-only; data is hard to reach from other languages or BI tools",
+    "Free edition caps entity classes and object counts"
+  ],
+  "useCases": [
+    "Java desktop applications with complex object models",
+    "JPA-based apps that want to avoid Hibernate tuning",
+    "Embedded storage in Java tools"
+  ],
+  "notIdealFor": [
+    "Polyglot teams",
+    "SQL reporting and analytics",
+    "Horizontally scaled services"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "perst",
+    "versant-object-database",
+    "db4o",
+    "h2",
+    "postgresql"
+  ],
+  "tags": [
+    "object-database",
+    "java",
+    "jpa",
+    "jdo",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://www.objectdb.com/",
+    "docs": "https://www.objectdb.com/java/jpa",
+    "pricing": "https://www.objectdb.com/database/purchase",
+    "changelog": "https://www.objectdb.com/database/download",
+    "wikipedia": "https://en.wikipedia.org/wiki/ObjectDB"
+  },
+  "ids": {
+    "stackoverflowTag": "objectdb",
+    "wikipedia": "ObjectDB",
+    "hackerNewsQuery": "ObjectDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.objectdb.com/database/download",
+    "https://www.objectdb.com/database/purchase"
+  ],
+  "lastVerified": "2026-10-27"
+}

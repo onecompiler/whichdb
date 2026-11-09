@@ -1,0 +1,164 @@
+{
+  "slug": "traildb",
+  "name": "TrailDB",
+  "aliases": [
+    "traildb"
+  ],
+  "tagline": "AdRoll's C library for compressed, immutable per-user event trails; dormant since 2019.",
+  "description": "TrailDB is a C library and command-line tool for storing and querying series of events grouped by a key such as a user ID. You build an immutable TrailDB file from raw logs; it sorts each trail by time and compresses it using the predictability of the data, and you can scan or filter the encoded trails without fully decompressing them. AdRoll built it in 2014 to process trillions of ad events, open-sourced it in 2016 and shipped bindings for Python, Go, R, D and Haskell. Version 0.6 was the last release and code commits stopped in 2019, so treat it as a finished tool rather than a maintained project.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Last release 0.6 and last code commit November 2019; repo unmaintained. Columnar engines such as DuckDB or ClickHouse cover the use case.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "event-store"
+  ],
+  "workloads": [
+    "olap",
+    "time-series",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "AdRoll",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Single files per partition; large deployments shard by time or key and process files in parallel."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C API with event filters"
+  ],
+  "apis": [
+    "C API",
+    "tdb CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Python",
+    "Go",
+    "R",
+    "D",
+    "Haskell",
+    "Rust",
+    "OCaml"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very high compression on event data while still allowing direct queries",
+    "Groups events per entity and time, which suits funnel, session and sequence analysis",
+    "Immutable files are simple to cache, copy and process in parallel",
+    "Small C core with bindings for several languages"
+  ],
+  "weaknesses": [
+    "Write-once: files must be rebuilt or merged to add data",
+    "No SQL or ad-hoc aggregation engine; analysis code is yours to write",
+    "Unmaintained since 2019"
+  ],
+  "useCases": [
+    "Offline analysis of clickstream or user event sequences",
+    "Compact archival of event logs per user"
+  ],
+  "notIdealFor": [
+    "Online updates or point writes",
+    "Ad-hoc SQL analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "clickhouse",
+    "apache-druid"
+  ],
+  "tags": [
+    "events",
+    "c",
+    "compression",
+    "adroll",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://traildb.io/",
+    "docs": "https://traildb.io/docs/",
+    "repository": "https://github.com/traildb/traildb"
+  },
+  "ids": {
+    "github": "traildb/traildb",
+    "hackerNewsQuery": "TrailDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://traildb.io/",
+    "https://github.com/traildb/traildb"
+  ],
+  "lastVerified": "2026-10-27"
+}

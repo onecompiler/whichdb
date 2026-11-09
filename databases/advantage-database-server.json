@@ -1,0 +1,171 @@
+{
+  "slug": "advantage-database-server",
+  "name": "Advantage Database Server",
+  "aliases": [
+    "SAP Advantage Database Server",
+    "Sybase ADS",
+    "ADS",
+    "Advantage"
+  ],
+  "tagline": "SAP's ISAM-plus-SQL server for DBF and ADT tables, long popular with Delphi and xBase apps; sales ended 2025.",
+  "description": "Advantage Database Server (ADS) is a client/server and embeddable database that Extended Systems introduced in 1993, later owned by Sybase and then SAP. Its draw was letting Clipper, FoxPro, Delphi and Visual Objects applications keep their DBF tables (or move to its own ADT format) while gaining a real server with transactions, referential integrity, triggers, stored procedures, replication and SQL, alongside fast navigational ISAM access. A free 'local server' build let the same code run embedded. SAP ended mainstream maintenance for version 12.0 at the end of 2022, closed the Advantage DevZone and stopped selling new licences after August 31, 2025, so existing users should plan a migration.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "SAP ended mainstream maintenance of v12.0 in Dec 2022 and stopped selling new licences after Aug 31, 2025. Migrate to SQL Server, SQL Anywhere, Firebird or PostgreSQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "single-node"
+  ],
+  "developer": "SAP (originally Extended Systems, then Sybase iAnywhere)",
+  "vendorType": "company",
+  "initialRelease": 1993,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (SAP)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Licensed per server/user via SAP and OEM partners; new licences have not been sold since August 31, 2025."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server workgroup and departmental deployments; replication is available for copies, not scale-out."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (Advantage SQL)",
+    "ISAM navigational API"
+  ],
+  "apis": [
+    "Advantage Client Engine (ACE)",
+    "ODBC",
+    "JDBC",
+    "OLE DB",
+    "ADO.NET"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Delphi",
+    "C#",
+    "PHP",
+    "Perl",
+    "Clipper/Harbour",
+    "Visual Objects"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Serves legacy DBF/xBase tables with real server-side transactions and locking",
+    "Mix of SQL and fast record-level ISAM navigation in one engine",
+    "Same API for the embedded local server and the networked server",
+    "Low administration footprint suited to small-business software vendors"
+  ],
+  "weaknesses": [
+    "End of sales in August 2025 and no mainstream maintenance since 2022",
+    "Developer resources (DevZone) shut down; shrinking expertise pool",
+    "Single-server design with no scale-out",
+    "Proprietary SQL dialect and ADT format complicate migrations"
+  ],
+  "useCases": [
+    "Maintaining existing Delphi, Clipper/Harbour or Visual Objects line-of-business apps",
+    "Planning migrations off DBF/ADT data"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Workloads needing cloud-managed or scale-out databases"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sql-server",
+    "sap-sql-anywhere",
+    "firebird",
+    "postgresql",
+    "actian-zen"
+  ],
+  "tags": [
+    "sap",
+    "xbase",
+    "dbf",
+    "delphi",
+    "end-of-life"
+  ],
+  "links": {
+    "website": "https://community.sap.com/t5/technology-q-a/advantage-database-server-downloads/qaq-p/12718781"
+  },
+  "ids": {
+    "hackerNewsQuery": "Advantage Database Server"
+  },
+  "brand": {
+    "simpleIcon": "sap"
+  },
+  "sources": [
+    "https://xsharp.eu/articles/advantage-database-server-end-of-life-august-2025",
+    "https://community.sap.com/t5/technology-q-a/advantage-devzone-down/qaq-p/12707803",
+    "https://community.sap.com/t5/technology-q-a/advantage-database-server-downloads/qaq-p/12718781",
+    "https://db-engines.com/en/system/SAP+Advantage+Database+Server"
+  ],
+  "lastVerified": "2026-10-27"
+}

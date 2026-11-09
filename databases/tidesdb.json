@@ -1,0 +1,162 @@
+{
+  "slug": "tidesdb",
+  "name": "TidesDB",
+  "aliases": [],
+  "tagline": "Young C storage-engine library: transactional LSM with MVCC, column families and TTL.",
+  "description": "TidesDB is a transactional key-value storage engine library written in C, built on a hybrid LSM-tree/B-tree design with MVCC, column families, key-value separation and a configurable compression pipeline (Snappy, LZ4, Zstd). It offers several isolation levels including two-phase-commit XA, TTLs, range deletes and bloom filters, and it runs on a wide range of operating systems and CPU architectures. The project launched in 2024, iterates fast (major version 10 by late 2026) and is licensed under MPL-2.0. It is promising for people building their own databases but lacks the production history of RocksDB.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "wide-column"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "TidesDB (Alex Gaetano Padula)",
+  "vendorType": "community",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "10.2.1",
+    "date": "2026-10-12"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Go",
+    "Rust",
+    "Python",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "ACID transactions with MVCC and multiple isolation levels, including 2PC/XA",
+    "Column families and key-value separation",
+    "Pluggable compression with Snappy, LZ4 or Zstd",
+    "Portable C with broad OS and CPU architecture support"
+  ],
+  "weaknesses": [
+    "Very young with frequent major-version churn",
+    "Small community and little public production usage",
+    "MPL-2.0 file-level copyleft may need legal review for some products"
+  ],
+  "useCases": [
+    "Building custom database engines",
+    "Embedded transactional storage in C/C++ systems",
+    "Experimenting with alternatives to RocksDB"
+  ],
+  "notIdealFor": [
+    "Risk-averse production systems",
+    "Teams needing long-term stable on-disk formats"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "fjall",
+    "lmdb",
+    "wiredtiger"
+  ],
+  "tags": [
+    "lsm-tree",
+    "embedded",
+    "c",
+    "mvcc"
+  ],
+  "links": {
+    "website": "https://tidesdb.com/",
+    "repository": "https://github.com/tidesdb/tidesdb",
+    "changelog": "https://github.com/tidesdb/tidesdb/releases"
+  },
+  "ids": {
+    "github": "tidesdb/tidesdb",
+    "hackerNewsQuery": "TidesDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/tidesdb/tidesdb",
+    "https://github.com/tidesdb/tidesdb/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

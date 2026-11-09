@@ -1,0 +1,148 @@
+{
+  "slug": "system-r",
+  "name": "System R",
+  "aliases": [
+    "IBM System R"
+  ],
+  "tagline": "IBM Research's 1970s relational prototype that produced SQL, cost-based optimization and modern transactions.",
+  "description": "System R was IBM Research's project, started in 1973-74 at the San Jose Research Laboratory, to prove that Edgar Codd's relational model could be built with practical performance. It gave the world SEQUEL, which became SQL (Don Chamberlin and Raymond Boyce); Patricia Selinger's cost-based optimizer, which picks join orders with dynamic programming; Raymond Lorie's compiled, stored query plans; and Jim Gray's foundational work on locking granularity and recovery. Pratt & Whitney ran it as the first customer site in 1977, its technology fed IBM's SQL/DS (1981) and DB2 (1983), and it received the ACM Software System Award in 1988. You cannot run it today, but its papers remain essential reading.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype at IBM San Jose (1974-1979), never sold as a product. Its ideas live on in SQL/DS, Db2 and nearly every SQL database.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "IBM Research (San Jose Research Laboratory)",
+  "vendorType": "company",
+  "initialRelease": 1974,
+  "writtenIn": [
+    "PL/S",
+    "Assembler"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Never released (IBM internal research)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never commercially sold; installed only at a few joint-study customer sites."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SEQUEL/SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "First implementation of SQL, the language nearly every relational database now speaks",
+    "Introduced cost-based query optimization with dynamic programming over join orders",
+    "Showed a relational system could deliver real transaction-processing performance",
+    "Its papers are still a clear, readable foundation for database courses"
+  ],
+  "weaknesses": [
+    "Never a product and no longer runnable or available",
+    "Ran only on IBM mainframes of the 1970s",
+    "Many design choices reflect that era's hardware limits"
+  ],
+  "useCases": [
+    "Studying the origins of SQL and query optimization",
+    "Teaching relational database internals",
+    "Reference for classic locking and recovery design"
+  ],
+  "notIdealFor": [
+    "Running anything: it no longer exists as software"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sql-ds",
+    "ibm-db2",
+    "ingres",
+    "postgresql"
+  ],
+  "tags": [
+    "ibm",
+    "research",
+    "sql",
+    "historical",
+    "query-optimization"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/history/relational-database",
+    "wikipedia": "https://en.wikipedia.org/wiki/IBM_System_R"
+  },
+  "ids": {
+    "wikipedia": "IBM System R",
+    "hackerNewsQuery": "IBM System R"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.ibm.com/history/relational-database",
+    "https://en.wikipedia.org/wiki/IBM_System_R",
+    "https://www.mcjones.org/System_R/",
+    "https://dbdb.io/db/system-r"
+  ],
+  "lastVerified": "2026-10-27"
+}

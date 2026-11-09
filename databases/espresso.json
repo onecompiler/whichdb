@@ -1,0 +1,111 @@
+{
+  "slug": "espresso",
+  "name": "Espresso",
+  "aliases": ["LinkedIn Espresso"],
+  "tagline": "LinkedIn's internal, MySQL-backed distributed document store that serves as source of truth for its core data.",
+  "description": "Espresso is LinkedIn's in-house distributed document database, designed in 2011 and in production since 2012 as the primary online store for data such as member profiles and InMail. Data is organised as database, table, collection and document, with Avro document schemas that can evolve without downtime; a stateless HTTP router hashes the partition key to MySQL/InnoDB storage nodes, Apache Helix and ZooKeeper manage partition placement and failover, and the change stream (first Databus, later Kafka) feeds downstream systems. Updates that share a partition key can be applied transactionally in one request, and secondary indexes, including Lucene-based text indexes, are updated synchronously. It has never been released or sold: outsiders know it through a SIGMOD 2013 paper and LinkedIn engineering posts, most recently about HTTP/2 and scaling work in 2023.",
+  "productType": "research",
+  "status": "active",
+  "statusNote": "LinkedIn-internal production system since 2012; never open-sourced or sold, so it cannot be deployed outside LinkedIn.",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": ["document"],
+  "workloads": ["oltp", "content-management"],
+  "architecture": ["distributed", "primary-replica"],
+  "developer": "LinkedIn",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": ["Java"],
+  "basedOn": "MySQL/InnoDB storage nodes",
+  "license": { "type": "proprietary", "name": "Proprietary (LinkedIn internal)" },
+  "pricing": {
+    "models": ["free"],
+    "freeTier": false,
+    "notes": "Not available outside LinkedIn; there is nothing to buy or download."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Hash-partitioned across many clusters; LinkedIn reports hundreds of terabytes and over a million QPS for single datastores."
+  },
+  "consistency": { "acid": "limited", "models": ["strong", "eventual"] },
+  "schemaMode": "flexible",
+  "queryLanguages": ["REST resource URIs (key and collection lookups)", "Secondary-index queries"],
+  "apis": ["HTTP/REST"],
+  "compatibleWith": [],
+  "drivers": ["Java"],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Timeline-consistent change stream built in, feeding search, caches and analytics downstream",
+    "Zero-downtime Avro schema evolution instead of ALTER TABLE",
+    "Transactional multi-document updates within one partition key",
+    "Synchronously maintained secondary and text indexes for read-after-write queries",
+    "Proven at LinkedIn scale for over a decade"
+  ],
+  "weaknesses": [
+    "Not available outside LinkedIn",
+    "Transactions limited to a single partition key; no cross-partition joins",
+    "Operational complexity: router, storage nodes, Helix/ZooKeeper and change-capture tier"
+  ],
+  "useCases": [
+    "Studying how a large social network built its primary document store",
+    "Reference design for MySQL-backed sharded document services with CDC",
+    "Background for systems such as Helix, Databus and Kafka-based CDC"
+  ],
+  "notIdealFor": ["Anyone outside LinkedIn: it cannot be installed or bought"],
+  "notableUsers": ["LinkedIn"],
+  "alternatives": ["mongodb", "couchbase", "vitess", "amazon-dynamodb", "apache-cassandra"],
+  "tags": ["linkedin", "document", "internal", "mysql", "change-data-capture"],
+  "links": {
+    "website": "https://engineering.linkedin.com/teams/data/data-infrastructure/storage-infra/espresso"
+  },
+  "ids": {
+    "hackerNewsQuery": "LinkedIn Espresso"
+  },
+  "brand": {},
+  "sources": [
+    "https://engineering.linkedin.com/espresso/introducing-espresso-linkedins-hot-new-distributed-document-store",
+    "https://doi.org/10.1145/2463676.2465298",
+    "https://engineering.linkedin.com/blog/2023/solving-espresso-s-scalability-and-performance-challenges-to-sup",
+    "https://dbdb.io/db/espresso"
+  ],
+  "lastVerified": "2026-10-27"
+}

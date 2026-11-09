@@ -1,0 +1,178 @@
+{
+  "slug": "4d",
+  "name": "4D",
+  "aliases": [
+    "4th Dimension",
+    "4D Server",
+    "4D v21"
+  ],
+  "tagline": "French integrated database and app-development platform for desktop, client/server and web apps.",
+  "description": "4D (originally 4th Dimension) is a long-running platform from 4D SAS that bundles a relational database engine, a programming language, a form designer and an application server, so a small team can ship a complete desktop, client/server or web business application. Modern versions add ORDA (an object-relational data API), a REST server, project-mode source files suitable for Git, encryption and an AI kit with semantic ranking and local AI writing aids. It follows a yearly LTS plus quarterly feature-release model: 21 LTS arrived in January 2026 and 21 R4 in October 2026. It has a loyal ISV following, especially in Europe, but a small global community.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "object"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded"
+  ],
+  "developer": "4D SAS",
+  "vendorType": "company",
+  "initialRelease": 1987,
+  "latestVersion": {
+    "version": "21 R4",
+    "date": "2026-10-12"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Developer subscriptions plus server/user deployment licences; trial available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single 4D Server with many clients; backup/mirroring for availability."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "4D language",
+    "ORDA queries",
+    "SQL"
+  ],
+  "apis": [
+    "REST",
+    "ORDA",
+    "SQL server (ODBC)",
+    "4D client/server protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "4D",
+    "PHP",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Database, language, UI builder and app server in one product for small teams",
+    "Native macOS and Windows clients from one codebase, plus a REST/web server",
+    "ORDA gives an object API over relational tables",
+    "Predictable LTS plus quarterly feature-release cadence",
+    "Project mode stores code as text files that work with Git"
+  ],
+  "weaknesses": [
+    "Small developer community and job market",
+    "Proprietary language and runtime create lock-in",
+    "Not designed for horizontally scaled or high-traffic web services"
+  ],
+  "useCases": [
+    "Vertical ISV business applications for SMBs",
+    "Desktop client/server apps on mixed Mac and Windows fleets",
+    "Internal line-of-business tools with REST integrations"
+  ],
+  "notIdealFor": [
+    "Large-scale web or mobile back ends",
+    "Analytics workloads",
+    "Teams wanting mainstream languages and frameworks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "filemaker",
+    "microsoft-access",
+    "progress-openedge",
+    "sql-server",
+    "supabase"
+  ],
+  "tags": [
+    "rad",
+    "low-code",
+    "desktop",
+    "isv",
+    "macos"
+  ],
+  "links": {
+    "website": "https://us.4d.com/",
+    "docs": "https://developer.4d.com/docs/",
+    "changelog": "https://blog.4d.com/category/release-infos/",
+    "wikipedia": "https://en.wikipedia.org/wiki/4th_Dimension_(software)"
+  },
+  "ids": {
+    "stackoverflowTag": "4d-database",
+    "wikipedia": "4th Dimension (software)",
+    "hackerNewsQuery": "4D database"
+  },
+  "brand": {
+    "color": "#004088",
+    "simpleIcon": "4d"
+  },
+  "sources": [
+    "https://blog.4d.com/category/release-infos/",
+    "https://blog.4d.com/4d-21-lts-is-here/",
+    "https://blog.4d.com/4d-versioning-feature-releases-lts-releases-explained/"
+  ],
+  "lastVerified": "2026-10-27"
+}

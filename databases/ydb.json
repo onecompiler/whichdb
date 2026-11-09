@@ -1,0 +1,207 @@
+{
+  "slug": "ydb",
+  "name": "YDB",
+  "aliases": [
+    "Yandex Database",
+    "YDB Platform"
+  ],
+  "tagline": "Open-source distributed SQL from Yandex combining row and column tables, topics and vector search.",
+  "description": "YDB is a distributed SQL database that Yandex built for its own services and open-sourced under Apache 2.0 in 2022. It provides serializable transactions over automatically split, synchronously replicated row tables, plus column-oriented tables for analytics, persistent topics with a Kafka-compatible API, and vector indexes. Clusters can span three availability zones and survive the loss of a zone, and the same binary scales from a single node to thousands of servers. Queries use YQL, a SQL dialect, with a PostgreSQL-compatibility layer in development. It is a strong but under-marketed alternative to CockroachDB or TiDB, best known in Russia and among Yandex Cloud users.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value",
+    "columnar",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "htap",
+    "queue",
+    "stream-processing",
+    "vector-search"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server",
+    "serverless"
+  ],
+  "developer": "YDB (Yandex)",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "26.2.1.14",
+    "date": "2026-09-17"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; Managed Service for YDB on Yandex Cloud offers serverless (per request unit) and dedicated modes."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Managed Service for YDB",
+      "provider": "Yandex Cloud",
+      "url": "https://yandex.cloud/en/services/ydb"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Automatic table splitting by load and size; three-AZ (mirror-3-dc) clusters tolerate zone failure; runs thousands of nodes inside Yandex."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "tunable"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "YQL (SQL dialect)"
+  ],
+  "apis": [
+    "gRPC",
+    "Kafka API (topics)",
+    "PostgreSQL wire protocol (experimental)"
+  ],
+  "compatibleWith": [
+    "kafka"
+  ],
+  "drivers": [
+    "Java",
+    "Go",
+    "Python",
+    "C++",
+    "JavaScript",
+    "C#",
+    "Rust",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Serializable distributed transactions with automatic sharding",
+    "Row tables, column tables and persistent topics in one system",
+    "Kafka-compatible topics with transactional writes alongside tables",
+    "Survives full availability-zone loss in three-AZ mode",
+    "Permissive Apache 2.0 license"
+  ],
+  "weaknesses": [
+    "YQL is not standard SQL; PostgreSQL compatibility is still experimental",
+    "Smaller international community; much content is Russian-first",
+    "No triggers or stored procedures",
+    "Operational tooling less mature outside Yandex Cloud"
+  ],
+  "useCases": [
+    "High-load OLTP services needing automatic sharding",
+    "Combined transactional and analytical workloads on one platform",
+    "Event streaming with transactional consistency to tables",
+    "Serverless backends on Yandex Cloud"
+  ],
+  "notIdealFor": [
+    "Teams needing a drop-in PostgreSQL or MySQL replacement",
+    "Small single-node applications",
+    "Stored-procedure-heavy legacy apps"
+  ],
+  "notableUsers": [
+    "Yandex"
+  ],
+  "alternatives": [
+    "cockroachdb",
+    "tidb",
+    "yugabytedb",
+    "google-cloud-spanner",
+    "foundationdb",
+    "clickhouse"
+  ],
+  "tags": [
+    "distributed-sql",
+    "open-source",
+    "htap",
+    "yandex",
+    "topics"
+  ],
+  "links": {
+    "website": "https://ydb.tech/",
+    "docs": "https://ydb.tech/docs/en/",
+    "repository": "https://github.com/ydb-platform/ydb",
+    "changelog": "https://ydb.tech/docs/en/changelog-server",
+    "wikipedia": "https://en.wikipedia.org/wiki/YDB_(database)"
+  },
+  "ids": {
+    "github": "ydb-platform/ydb",
+    "stackoverflowTag": "ydb",
+    "wikipedia": "YDB (database)",
+    "dockerHub": "ydbplatform/local-ydb",
+    "npm": "ydb-sdk",
+    "pypi": "ydb",
+    "hackerNewsQuery": "YDB database"
+  },
+  "brand": {
+    "color": "#2C3BD6"
+  },
+  "sources": [
+    "https://github.com/ydb-platform/ydb/releases",
+    "https://ydb.tech/docs/en/changelog-server",
+    "https://en.wikipedia.org/wiki/YDB_(database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

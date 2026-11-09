@@ -1,0 +1,162 @@
+{
+  "slug": "taffydb",
+  "name": "TaffyDB",
+  "aliases": [],
+  "tagline": "Tiny in-memory JavaScript collection library with SQL-like filtering for the browser and Node.js.",
+  "description": "TaffyDB wraps an array of JavaScript objects in a queryable collection: you filter with object-based conditions (equality, comparisons, regex, has/like), sort, join two collections, update or remove matching records, and fire events, all in memory with no dependencies. It was a popular way to add database-style queries to browser apps around 2010-2015 and is still pulled in by older tooling. The last npm release, 2.7.3, is from 2016, the repository saw its last commit in 2023, and GitHub carries an unfixed high-severity advisory (CVE-2019-10790) about its internal ID index allowing access to arbitrary records. Prefer a maintained library for new code.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Last npm release 2.7.3 (2016) and last commit 2023; an unfixed advisory (CVE-2019-10790) applies. LokiJS, Dexie or RxDB are maintained options.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Ian Smith (typicaljoe)",
+  "vendorType": "community",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "2.7.3",
+    "date": "2016-09-18"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Everything lives in the JavaScript heap of one page or process."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JavaScript filter objects"
+  ],
+  "apis": [
+    "JavaScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-dependency, drop-in querying over plain JavaScript objects",
+    "Expressive filter syntax with sorting, joins and bulk updates",
+    "Works in the browser and in Node.js"
+  ],
+  "weaknesses": [
+    "No releases since 2016 and an unfixed high-severity advisory",
+    "In-memory only; persistence is up to the application",
+    "Linear scans without real indexes on larger collections"
+  ],
+  "useCases": [
+    "Maintaining older front-end code that depends on it",
+    "Quick in-memory querying in small scripts"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Untrusted input or security-sensitive data",
+    "Large datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lokijs",
+    "dexie",
+    "rxdb",
+    "nedb",
+    "pouchdb"
+  ],
+  "tags": [
+    "javascript",
+    "in-memory",
+    "browser",
+    "nodejs",
+    "library"
+  ],
+  "links": {
+    "website": "https://taffydb.com/",
+    "repository": "https://github.com/typicaljoe/taffydb"
+  },
+  "ids": {
+    "github": "typicaljoe/taffydb",
+    "stackoverflowTag": "taffydb",
+    "npm": "taffydb",
+    "hackerNewsQuery": "TaffyDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/typicaljoe/taffydb",
+    "https://www.npmjs.com/package/taffydb",
+    "https://github.com/advisories/GHSA-mxhp-79qh-mcx6"
+  ],
+  "lastVerified": "2026-10-27"
+}

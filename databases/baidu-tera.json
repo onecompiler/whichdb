@@ -1,0 +1,167 @@
+{
+  "slug": "baidu-tera",
+  "name": "Baidu Tera",
+  "aliases": [
+    "Tera"
+  ],
+  "tagline": "Baidu's open-source Bigtable clone in C++, used for web indexing; no development since 2019.",
+  "description": "Tera is a Bigtable-style distributed wide-column store that Baidu built for its search infrastructure (web indexing, WebPage DB, LinkBase DB) and open-sourced in 2014. Tables are sparse, sorted maps of row key, column family plus qualifier and timestamp to bytes, split into tablets served by tablet servers that use an enhanced LevelDB engine, with a master for load balancing and a distributed lock service (ZooKeeper or Baidu's Nexus) for coordination; logs and data live on BFS, HDFS or a POSIX file system. It offers MVCC, strong consistency, online schema changes, snapshots, locality groups and tables pinned to RAM disk, SSD or disk, with C++, Java, Python and HTTP SDKs. The last release, v2.14, came out in January 2019 and the project has been dormant since.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No releases or commits on master since v2.14 (January 2019). Apache HBase or a managed Bigtable service are maintained equivalents.",
+  "maturity": "legacy",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Baidu",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "2.14",
+    "date": "2019-01-21"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "LevelDB (enhanced)",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Designed for petabytes across thousands of commodity servers inside Baidu; requires a distributed file system and lock service."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Key/range scan API"
+  ],
+  "apis": [
+    "C++ SDK",
+    "Java SDK",
+    "Python SDK",
+    "HTTP REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Bigtable data model with automatic tablet split, merge and load balancing",
+    "Strong consistency and MVCC with snapshot support",
+    "Per-table storage tiers (RAM disk, SSD, disk) for latency-sensitive tables",
+    "Proven on Baidu's web-scale indexing workloads"
+  ],
+  "weaknesses": [
+    "Dormant since 2019 with no community maintenance",
+    "Depends on Baidu-specific components (BFS, Nexus, sofa-pbrpc) or extra setup for HDFS/ZooKeeper",
+    "Documentation partly only in Chinese",
+    "No SQL layer or secondary indexes"
+  ],
+  "useCases": [
+    "Studying a production Bigtable implementation in C++",
+    "Legacy deployments built on Tera"
+  ],
+  "notIdealFor": [
+    "New wide-column deployments (prefer HBase, Bigtable or ScyllaDB)",
+    "Teams needing SQL or secondary indexes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-hbase",
+    "google-cloud-bigtable",
+    "scylladb",
+    "apache-cassandra",
+    "tikv"
+  ],
+  "tags": [
+    "bigtable",
+    "wide-column",
+    "baidu",
+    "c++",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/baidu/tera",
+    "repository": "https://github.com/baidu/tera",
+    "changelog": "https://github.com/baidu/tera/releases"
+  },
+  "ids": {
+    "github": "baidu/tera",
+    "hackerNewsQuery": "Baidu Tera"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/baidu/tera",
+    "https://github.com/baidu/tera/releases/tag/v2.14",
+    "https://github.com/baidu/tera/commits/master"
+  ],
+  "lastVerified": "2026-10-27"
+}

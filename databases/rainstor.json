@@ -1,0 +1,151 @@
+{
+  "slug": "rainstor",
+  "name": "RainStor",
+  "aliases": [
+    "Clearpace",
+    "NParchive",
+    "Teradata RainStor"
+  ],
+  "tagline": "Compressed, de-duplicated SQL archive database for machine and compliance data; dropped by Teradata in 2016.",
+  "description": "RainStor began as Clearpace in 2002 in the UK, built on Ministry of Defence technology for storing field-operations data, and sold an archive DBMS first as NParchive and, from 2009, as RainStor. It de-duplicated and compressed immutable records into a hybrid row/columnar store, used partition filtering to skip irrelevant data, and kept everything queryable through SQL, which made it popular for call-detail records, logs and regulatory retention; later versions ran natively on Hadoop and added encryption and access controls. Teradata acquired the company in 2014 and removed RainStor from its portfolio in December 2016, so it is neither developed nor sold.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Teradata in 2014 and withdrawn from its portfolio in December 2016. For cheap queryable archives use Parquet/Iceberg with Trino, or ClickHouse.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "RainStor Inc. (acquired by Teradata)",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Enterprise licensing; no longer sold."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Archived large volumes of machine-generated data, including on Hadoop clusters; heavy de-duplication shrank storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very high compression through value and pattern de-duplication",
+    "Archived data stayed queryable with ordinary SQL",
+    "Immutable storage suited to regulatory retention",
+    "Could run natively on Hadoop clusters"
+  ],
+  "weaknesses": [
+    "Withdrawn from the market in 2016; no support or updates",
+    "Built for immutable archives, not updates or transactional work"
+  ],
+  "useCases": [
+    "Historical reference for compressed archive databases",
+    "Migrating legacy telecom CDR and log archives off RainStor"
+  ],
+  "notIdealFor": [
+    "Any new deployment",
+    "Transactional workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "clickhouse",
+    "apache-hive",
+    "teradata-vantage",
+    "snowflake"
+  ],
+  "tags": [
+    "archive",
+    "compression",
+    "hadoop",
+    "acquired",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/RainStor",
+    "wikipedia": "https://en.wikipedia.org/wiki/RainStor"
+  },
+  "ids": {
+    "wikipedia": "RainStor",
+    "hackerNewsQuery": "RainStor"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/RainStor",
+    "https://dbdb.io/db/rainstor"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,174 @@
+{
+  "slug": "redict",
+  "name": "Redict",
+  "aliases": [],
+  "tagline": "A copyleft (LGPL) fork of Redis 7.2.4, now limited to security backports.",
+  "description": "Redict was forked from the last BSD-licensed Redis (7.2.4) in March 2024 by Drew DeVault and contributors, with new changes under LGPL-3.0-only and no contributor licence agreement so it can never be relicensed by one company. It aimed to be a stable, conservative Redis rather than a feature-driven one, hosted on Codeberg. In practice Valkey absorbed most of the community momentum, and Redict's recent releases (through 7.3.6 in October 2025) are mainly CVE fixes backported from Valkey. It works as a drop-in Redis 7.2, but there is little reason to choose it for new deployments.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Releases since 2025 only backport security fixes (latest 7.3.6, Oct 2025); Valkey is the more active Redis fork.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "pub-sub",
+    "queue"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Redict community",
+  "vendorType": "community",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "7.3.6",
+    "date": "2025-10-08"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Redis 7.2.4",
+  "license": {
+    "type": "copyleft",
+    "name": "LGPL-3.0-only (new code); BSD-3-Clause (inherited)",
+    "spdx": "LGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Same cluster model as Redis 7.2."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2/RESP3"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Copyleft license without a CLA protects against future relicensing",
+    "Drop-in compatible with Redis 7.2 clients and data files",
+    "Conservative, stability-focused scope"
+  ],
+  "weaknesses": [
+    "Little feature development since 2024",
+    "Small contributor base compared with Valkey",
+    "Few distro packages and no managed offerings"
+  ],
+  "useCases": [
+    "Organisations that require a copyleft-licensed Redis",
+    "Stable Redis 7.2-compatible deployments"
+  ],
+  "notIdealFor": [
+    "New projects wanting active development (use Valkey)",
+    "Teams that need managed cloud options"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "valkey",
+    "redis",
+    "keydb",
+    "dragonfly"
+  ],
+  "tags": [
+    "redis-fork",
+    "copyleft",
+    "lgpl",
+    "codeberg"
+  ],
+  "links": {
+    "website": "https://redict.io/",
+    "docs": "https://redict.io/docs/",
+    "repository": "https://codeberg.org/redict/redict",
+    "changelog": "https://codeberg.org/redict/redict/releases"
+  },
+  "ids": {
+    "hackerNewsQuery": "Redict"
+  },
+  "brand": {},
+  "sources": [
+    "https://codeberg.org/redict/redict/releases",
+    "https://redict.io/docs/license/",
+    "https://redict.io/posts/2024-03-22-redict-is-an-independent-fork/"
+  ],
+  "lastVerified": "2026-10-27"
+}

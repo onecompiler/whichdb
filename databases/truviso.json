@@ -1,0 +1,151 @@
+{
+  "slug": "truviso",
+  "name": "Truviso",
+  "aliases": [
+    "TruCQ",
+    "Truviso TruCQ"
+  ],
+  "tagline": "PostgreSQL-based continuous-query analytics engine from Berkeley's Telegraph project; bought by Cisco in 2012.",
+  "description": "Truviso was a Foster City startup founded in 2006 by UC Berkeley professor Michael Franklin and Sailesh Krishnamurthy to commercialise the TelegraphCQ stream-processing research. Its TruCQ engine extended PostgreSQL with always-on SQL queries over data streams, joined against stored tables, so results updated as events arrived instead of after batch loads; a web-analytics application followed in 2010. Cisco acquired the company on May 4, 2012 and absorbed the technology, ending Truviso as a product. Its ideas resurfaced in PipelineDB and in today's streaming SQL databases.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Cisco on May 4, 2012; no longer sold as a product. Streaming SQL systems such as RisingWave or Materialize fill the niche.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "time-series"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Truviso, Inc. (acquired by Cisco)",
+  "vendorType": "company",
+  "initialRelease": 2006,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (continuous queries)"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Standard SQL over live streams combined with historical tables in one engine",
+    "Thousands of concurrent continuous queries on a single server",
+    "Built on PostgreSQL, so existing tools and drivers could connect"
+  ],
+  "weaknesses": [
+    "Gone since the 2012 Cisco acquisition",
+    "Proprietary; no code available"
+  ],
+  "useCases": [
+    "History of continuous-query and streaming SQL systems",
+    "Background on TelegraphCQ-style streaming on PostgreSQL"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "risingwave",
+    "materialize",
+    "timeplus-proton",
+    "pipelinedb",
+    "ksqldb"
+  ],
+  "tags": [
+    "streaming",
+    "continuous-query",
+    "postgresql",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20120608070036/http://www.truviso.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Truviso"
+  },
+  "ids": {
+    "wikipedia": "Truviso",
+    "hackerNewsQuery": "Truviso"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Truviso",
+    "https://web.archive.org/web/20120608070036/http://www.truviso.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,190 @@
+{
+  "slug": "grafana-loki",
+  "name": "Grafana Loki",
+  "aliases": [
+    "Loki"
+  ],
+  "tagline": "Label-indexed log aggregation: Prometheus-style streams, chunks on object storage, LogQL queries.",
+  "description": "Grafana Loki stores logs as compressed chunks in object storage and indexes only a small set of labels per stream, the way Prometheus labels metrics. That makes ingestion and retention cheap compared with full-text indexes, at the price of brute-force scanning for content filters, which Loki parallelises across queriers. LogQL combines label selectors, line filters, parsers and metric aggregations, and Grafana, Alloy and OpenTelemetry are first-class clients. The 3.x releases added structured metadata, native OTLP ingestion and bloom-filter acceleration to ease high-cardinality fields, but label design is still the biggest operational decision.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Grafana Labs",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "3.7.9",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Grafana Cloud Logs has a free tier; Grafana Enterprise Logs is contract-priced."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Grafana Cloud Logs",
+      "provider": "Grafana Labs",
+      "url": "https://grafana.com/products/cloud/logs/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Monolithic, simple-scalable and microservices modes; chunks and TSDB index live in object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "LogQL"
+  ],
+  "apis": [
+    "Loki push API",
+    "OTLP",
+    "HTTP query API"
+  ],
+  "compatibleWith": [
+    "s3"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Cheap to run: small label index and compressed chunks on object storage",
+    "LogQL feels familiar to PromQL users and can turn logs into metrics",
+    "Tight integration with Grafana, Mimir and Tempo for metrics-logs-traces correlation",
+    "Native OTLP ingestion and structured metadata for OpenTelemetry pipelines",
+    "Official Kubernetes operator and Helm charts"
+  ],
+  "weaknesses": [
+    "Content searches scan data, so needle-in-haystack queries over long ranges are slow",
+    "High-cardinality labels break performance; label design needs discipline",
+    "AGPL-3.0 licence",
+    "Microservices mode has many components and tuning knobs"
+  ],
+  "useCases": [
+    "Kubernetes and application logs alongside Prometheus",
+    "Cost-efficient log retention on S3",
+    "Deriving metrics and alerts from log lines",
+    "Correlating logs with traces in Grafana"
+  ],
+  "notIdealFor": [
+    "Full-text search with relevance ranking",
+    "Security analytics needing fast arbitrary-field search",
+    "SQL analytics over logs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "victorialogs",
+    "elasticsearch",
+    "opensearch",
+    "openobserve",
+    "parseable",
+    "quickwit",
+    "clickhouse",
+    "signoz"
+  ],
+  "tags": [
+    "logs",
+    "observability",
+    "grafana",
+    "object-storage",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://grafana.com/oss/loki/",
+    "docs": "https://grafana.com/docs/loki/latest/",
+    "repository": "https://github.com/grafana/loki",
+    "changelog": "https://github.com/grafana/loki/blob/main/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "grafana/loki",
+    "stackoverflowTag": "grafana-loki",
+    "dockerHub": "grafana/loki",
+    "hackerNewsQuery": "Grafana Loki"
+  },
+  "brand": {
+    "color": "#F46800",
+    "simpleIcon": "grafana"
+  },
+  "sources": [
+    "https://github.com/grafana/loki/releases",
+    "https://grafana.com/oss/loki/",
+    "https://grafana.com/docs/loki/latest/"
+  ],
+  "lastVerified": "2026-10-27"
+}

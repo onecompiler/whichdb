@@ -1,0 +1,178 @@
+{
+  "slug": "marqo",
+  "name": "Marqo",
+  "aliases": [
+    "Marqo AI"
+  ],
+  "tagline": "End-to-end tensor search engine that embeds text and images for you, built on Vespa.",
+  "description": "Marqo is an open-source search engine that handles the full vector pipeline: you send raw text or image URLs, and Marqo chunks, embeds (with CLIP, E5, BGE and other models, on CPU or GPU) and indexes them in Vespa, then serves hybrid lexical plus tensor search. That removes a lot of glue code for multimodal search. Since 2025 the company has concentrated on a commercial AI e-commerce product discovery platform, while the open-source engine continues on a slower cadence (2.26 in April 2026). Good for multimodal prototypes and self-hosted image or product search.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "vector-search",
+    "full-text-search",
+    "rag"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Marqo",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "2.26.0",
+    "date": "2026-04-07"
+  },
+  "writtenIn": [
+    "Python"
+  ],
+  "basedOn": "Vespa",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Engine is free to self-host. Marqo's commercial offering is now an e-commerce search and merchandising platform sold via sales."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Marqo Ecommerce Search",
+      "provider": "Marqo",
+      "url": "https://marqo.ai/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Single container for most users; scaling relies on the underlying Vespa cluster configuration."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Marqo search API (JSON)"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Built-in embedding inference: index raw text and images directly",
+    "Multimodal search with CLIP-style models out of the box",
+    "Hybrid lexical plus tensor ranking via Vespa",
+    "Simple Docker deployment"
+  ],
+  "weaknesses": [
+    "Company focus has shifted to its e-commerce SaaS",
+    "Bundled inference makes containers heavy and GPU-hungry",
+    "Less control than running Vespa directly",
+    "Smaller community than Weaviate or Qdrant"
+  ],
+  "useCases": [
+    "Multimodal product and image search",
+    "Prototyping semantic search without an embedding pipeline",
+    "E-commerce discovery"
+  ],
+  "notIdealFor": [
+    "Teams that already have an embedding pipeline and want a lean vector store",
+    "Very large distributed deployments",
+    "Analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vespa",
+    "weaviate",
+    "qdrant",
+    "elasticsearch",
+    "algolia"
+  ],
+  "tags": [
+    "vector-search",
+    "multimodal",
+    "ecommerce",
+    "open-source",
+    "vespa"
+  ],
+  "links": {
+    "website": "https://marqo.ai/",
+    "docs": "https://docs.marqo.ai/",
+    "repository": "https://github.com/marqo-ai/marqo",
+    "changelog": "https://github.com/marqo-ai/marqo/releases"
+  },
+  "ids": {
+    "github": "marqo-ai/marqo",
+    "dockerHub": "marqoai/marqo",
+    "pypi": "marqo",
+    "hackerNewsQuery": "Marqo"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/marqo-ai/marqo/releases",
+    "https://marqo.ai/",
+    "https://pypi.org/project/marqo/"
+  ],
+  "lastVerified": "2026-10-27"
+}

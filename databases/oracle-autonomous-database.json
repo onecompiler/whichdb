@@ -1,0 +1,212 @@
+{
+  "slug": "oracle-autonomous-database",
+  "name": "Oracle Autonomous Database",
+  "aliases": [
+    "Oracle Autonomous AI Database",
+    "ADB",
+    "Autonomous Transaction Processing",
+    "ATP",
+    "Autonomous Data Warehouse",
+    "ADW",
+    "Autonomous AI Lakehouse"
+  ],
+  "tagline": "Self-driving Oracle Database on Exadata: auto-patching, auto-scaling, and Select AI, on OCI and other clouds.",
+  "description": "Oracle Autonomous Database is the fully managed, serverless form of Oracle Database running on Exadata infrastructure, where Oracle handles provisioning, patching, tuning, backups and scaling. It comes in transaction-processing, JSON and data-warehouse flavours; in October 2025 it was rebranded Autonomous AI Database, with Autonomous Data Warehouse becoming Autonomous AI Lakehouse with Iceberg support. Because it is real Oracle Database 26ai underneath, it includes vector search, Select AI (natural language to SQL), graph and JSON Duality. It is the lowest-effort way to run Oracle workloads in the cloud and is now offered inside Azure, AWS and Google Cloud too, but costs and lock-in remain Oracle-shaped.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "graph",
+    "vector",
+    "spatial",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "data-warehouse",
+    "lakehouse",
+    "htap",
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "serverless",
+    "shared-storage",
+    "primary-replica"
+  ],
+  "developer": "Oracle Corporation",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "26ai",
+    "date": "2025-10-14"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "Oracle Database",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Billed per ECPU-hour and storage, with auto-scaling; Always Free tier includes two small instances; BYOL discounts apply."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "oracle-cloud",
+      "azure",
+      "aws",
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Autonomous AI Database Serverless",
+      "provider": "Oracle Cloud",
+      "url": "https://www.oracle.com/autonomous-database/"
+    },
+    {
+      "name": "Oracle Database@Azure (Autonomous)",
+      "provider": "Microsoft Azure / Oracle",
+      "url": "https://www.oracle.com/cloud/azure/oracle-database-at-azure/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Compute auto-scales on RAC/Exadata transparently; cross-region Autonomous Data Guard standbys for DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/SQL",
+    "SQL/PGQ",
+    "Select AI (natural language)"
+  ],
+  "apis": [
+    "Oracle Net (TNS)",
+    "ORDS REST",
+    "Oracle Database API for MongoDB"
+  ],
+  "compatibleWith": [
+    "oracle",
+    "mongodb"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "C#",
+    "Go",
+    "C",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Oracle handles patching, tuning, indexing, backups and scaling automatically",
+    "Full Oracle Database feature set, including vectors, graph and JSON Duality, without licence options sprawl",
+    "Per-second auto-scaling of compute on Exadata hardware",
+    "Available inside Azure, AWS and Google Cloud regions as well as OCI",
+    "Always Free tier makes it easy to try"
+  ],
+  "weaknesses": [
+    "Less control over parameters, versions and maintenance windows than self-managed Oracle",
+    "Costs can climb quickly with auto-scaling and large storage",
+    "Deep Oracle lock-in"
+  ],
+  "useCases": [
+    "Moving existing Oracle applications to a managed cloud service",
+    "Departmental data warehouses and lakehouses with Iceberg",
+    "Natural-language querying and RAG over enterprise data",
+    "APEX low-code applications"
+  ],
+  "notIdealFor": [
+    "Teams avoiding Oracle licensing and lock-in",
+    "Workloads requiring custom database parameters or OS access",
+    "Small apps where serverless Postgres is cheaper"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-database",
+    "snowflake",
+    "amazon-aurora",
+    "azure-sql-database",
+    "google-bigquery",
+    "oracle-exadata"
+  ],
+  "tags": [
+    "managed",
+    "serverless",
+    "oracle",
+    "self-driving",
+    "lakehouse"
+  ],
+  "links": {
+    "website": "https://www.oracle.com/autonomous-database/",
+    "docs": "https://docs.oracle.com/en/cloud/paas/autonomous-database/",
+    "pricing": "https://www.oracle.com/autonomous-database/pricing/",
+    "changelog": "https://docs.oracle.com/en-us/iaas/releasenotes/autonomous-database-dedicated/adbd-service-rebranding.htm"
+  },
+  "ids": {
+    "hackerNewsQuery": "Oracle Autonomous Database"
+  },
+  "brand": {
+    "color": "#C74634"
+  },
+  "sources": [
+    "https://docs.oracle.com/en-us/iaas/releasenotes/autonomous-database-dedicated/adbd-service-rebranding.htm",
+    "https://www.oracle.com/a/ocom/docs/database/wintercorp-research-note-oracle-ai-world.pdf",
+    "https://www.oracle.com/autonomous-database/"
+  ],
+  "lastVerified": "2026-10-27"
+}

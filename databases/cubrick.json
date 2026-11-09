@@ -1,0 +1,140 @@
+{
+  "slug": "cubrick",
+  "name": "Cubrick",
+  "aliases": [],
+  "tagline": "Facebook's internal distributed in-memory OLAP engine that range-partitions cubes by every dimension.",
+  "description": "Cubrick is a distributed, multidimensional in-memory DBMS that Facebook built for interactive analytics over highly dynamic datasets, described by Pedro Pedreira, Chris Croswhite and Luis Bona in VLDB 2016. Its data model is strictly cubes, dimensions and metrics. Every table is range-partitioned along all of its dimensions at once into small containers called bricks, and rows are stored unordered and sparse inside each brick, so ingestion stays fast while any combination of dimension filters still prunes to a few bricks, giving sub-second slice, dice, roll-up and drill-down over terabytes. Strings are dictionary-encoded and in-memory data is flushed asynchronously to an external key-value store for durability. It was built only for internal use and never released outside Facebook.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Internal Facebook system described in VLDB 2016; never released publicly, and its current use at Meta is not documented.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Facebook (Meta Platforms)",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Internal, never released"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Internal system; not available outside Meta."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Paper reports sub-second OLAP over terabytes of in-memory data spread across a cluster."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Custom OLAP query API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Granular range partitioning on every dimension gives indexed access through any filter combination",
+    "Unordered, sparse bricks keep ingestion rates high on constantly changing data",
+    "Sub-second slice-and-dice over terabytes held in memory"
+  ],
+  "weaknesses": [
+    "Never released outside Facebook",
+    "Strict cube model: no general SQL, joins or transactions"
+  ],
+  "useCases": [
+    "Studying partitioning schemes for interactive OLAP",
+    "Reference design for in-memory multidimensional analytics"
+  ],
+  "notIdealFor": [
+    "Anyone outside Meta: there is no public implementation"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-druid",
+    "apache-pinot",
+    "clickhouse",
+    "apache-kylin"
+  ],
+  "tags": [
+    "research",
+    "olap",
+    "in-memory",
+    "facebook",
+    "vldb-2016"
+  ],
+  "links": {
+    "website": "https://research.facebook.com/publications/cubrick-indexing-millions-of-records-per-second-for-interactive-analytics/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Cubrick"
+  },
+  "brand": {},
+  "sources": [
+    "https://research.facebook.com/publications/cubrick-indexing-millions-of-records-per-second-for-interactive-analytics/",
+    "https://doi.org/10.14778/3007263.3007269",
+    "https://dbdb.io/db/cubrick"
+  ],
+  "lastVerified": "2026-10-27"
+}

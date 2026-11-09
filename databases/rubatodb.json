@@ -1,0 +1,156 @@
+{
+  "slug": "rubatodb",
+  "name": "RubatoDB",
+  "aliases": [
+    "Rubato DB"
+  ],
+  "tagline": "University of Alberta NewSQL research system: MySQL-compatible, staged grid architecture over Berkeley DB.",
+  "description": "RubatoDB is a NewSQL database developed by Li-Yan Yuan's group at the University of Alberta together with Shanghai Shifang Software. It presents itself to clients as a MySQL server but spreads table partitions over a grid of commodity machines, built as a staged architecture of modules connected by explicit queues, with Berkeley DB files as the storage layer and its own 'formula' multi-version timestamp protocol on top for distributed concurrency control. Unusually, it lets each transaction choose between full ACID, BASE-style eventual consistency, or an intermediate 'BASIC' level. The team reported TPC-C runs with 3,200 warehouses on 16 servers. The university-hosted source and docs have disappeared and there are no visible recent releases, so it is mainly of research interest.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "No visible releases in years and the University of Alberta source and documentation pages are gone; rubatodb.com still describes the system.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "University of Alberta and Shanghai Shifang Software",
+  "vendorType": "academic",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "basedOn": "Berkeley DB",
+  "license": {
+    "type": "proprietary",
+    "name": "Research distribution (terms not published)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Distributed as a research download; no current public release."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Tables are partitioned over many commodity servers; TPC-C was reported with 3,200 warehouses on 16 nodes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Per-transaction choice of ACID, BASE or intermediate 'BASIC' consistency",
+    "MySQL-compatible front end over a horizontally partitioned grid",
+    "Staged, queue-connected module design is a clear study of SEDA-style DBMS architecture",
+    "Full SQL features such as triggers and stored procedures on a distributed store"
+  ],
+  "weaknesses": [
+    "No current public release, source or documentation from the university",
+    "Joins are reported to work only across tables on the same node",
+    "Tiny community and little independent benchmarking"
+  ],
+  "useCases": [
+    "Research on tunable consistency in NewSQL systems",
+    "Studying staged-architecture database engines"
+  ],
+  "notIdealFor": [
+    "Production deployments",
+    "Teams needing vendor support"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tidb",
+    "cockroachdb",
+    "yugabytedb",
+    "vitess"
+  ],
+  "tags": [
+    "newsql",
+    "research",
+    "mysql-compatible",
+    "berkeley-db",
+    "ualberta"
+  ],
+  "links": {
+    "website": "https://www.rubatodb.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "RubatoDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.rubatodb.com/",
+    "https://web.archive.org/web/20240421040900/http://rubatodb.com/",
+    "https://dbdb.io/db/rubatodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

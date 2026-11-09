@@ -1,0 +1,195 @@
+{
+  "slug": "stardog",
+  "name": "Stardog",
+  "aliases": [
+    "Stardog Platform",
+    "Stardog Cloud"
+  ],
+  "tagline": "Enterprise knowledge-graph platform: RDF store, reasoning and virtual graphs over your sources.",
+  "description": "Stardog is a commercial knowledge-graph platform built around an RDF/SPARQL engine with OWL and rule-based reasoning, edge properties (RDF-star) and virtual graphs that query relational, NoSQL and CSV sources in place instead of copying them. It also exposes GraphQL and a SQL endpoint for BI tools, and its Voicebox layer adds LLM-driven natural-language querying. Stardog targets enterprise data integration, where a semantic layer over many silos is worth the license; it is less attractive for simple app graphs or teams that want open source.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "metadata-store",
+    "rag",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Stardog Union",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "12.2.1",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free 1-year renewable license available)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Stardog Free is a renewable one-year license without HA, backups or full connectors; Enterprise and Cloud are quoted."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Stardog Cloud",
+      "provider": "Stardog",
+      "url": "https://www.stardog.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "HA cluster replicates the full dataset; virtual graphs push queries to sources so not all data must be loaded."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SPARQL",
+    "GraphQL",
+    "SQL",
+    "Stardog Rules"
+  ],
+  "apis": [
+    "HTTP SPARQL protocol",
+    "BI/SQL server",
+    "GraphQL endpoint"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    ".NET"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Virtual graphs query relational and NoSQL sources in place, reducing ETL",
+    "Query-time OWL and rule reasoning without materializing inferred triples",
+    "Edge properties (RDF-star) bridge RDF and property-graph modeling",
+    "SQL endpoint lets BI tools read the knowledge graph directly"
+  ],
+  "weaknesses": [
+    "Proprietary with quote-based pricing; the free tier lacks HA and backups",
+    "Cluster mode replicates rather than shards, so dataset size is bounded per node",
+    "Reasoning-heavy queries can be hard to predict and tune",
+    "Smaller developer community than mainstream graph databases"
+  ],
+  "useCases": [
+    "Enterprise data fabric and semantic layer",
+    "Life-sciences and pharma knowledge graphs",
+    "Regulatory and compliance data integration",
+    "Natural-language question answering over enterprise data"
+  ],
+  "notIdealFor": [
+    "Simple application graphs",
+    "High-write transactional workloads",
+    "Budget-constrained open-source projects"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ontotext-graphdb",
+    "allegrograph",
+    "virtuoso",
+    "amazon-neptune",
+    "rdfox",
+    "marklogic"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "reasoning",
+    "knowledge-graph",
+    "data-virtualization"
+  ],
+  "links": {
+    "website": "https://www.stardog.com/",
+    "docs": "https://docs.stardog.com/",
+    "pricing": "https://www.stardog.com/pricing/",
+    "changelog": "https://docs.stardog.com/release-notes/stardog-platform"
+  },
+  "ids": {
+    "stackoverflowTag": "stardog",
+    "dockerHub": "stardog/stardog",
+    "npm": "stardog",
+    "pypi": "pystardog",
+    "hackerNewsQuery": "Stardog"
+  },
+  "brand": {
+    "color": "#0F7AC3"
+  },
+  "sources": [
+    "https://docs.stardog.com/release-notes/stardog-platform",
+    "https://www.stardog.com/pricing/",
+    "https://hub.docker.com/r/stardog/stardog"
+  ],
+  "lastVerified": "2026-10-27"
+}

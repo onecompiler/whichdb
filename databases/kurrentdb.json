@@ -1,0 +1,195 @@
+{
+  "slug": "kurrentdb",
+  "name": "KurrentDB (EventStoreDB)",
+  "aliases": [
+    "KurrentDB",
+    "EventStoreDB",
+    "Event Store"
+  ],
+  "tagline": "A purpose-built event store for event sourcing, with streams, subscriptions and projections.",
+  "description": "KurrentDB, called EventStoreDB until the company rebranded as Kurrent in late 2024, is a database built for event sourcing: data is appended as immutable events to millions of fine-grained streams, with optimistic concurrency per stream, catch-up and persistent subscriptions, and server-side projections. Recent versions add connectors to Kafka, MongoDB, Elasticsearch and relational sinks, plus SQL access over Arrow Flight. It is the reference store for CQRS/event-sourced systems in .NET and JVM shops. Licensing tightened with 26.2 (2026): single-node production use stays free, but clustering, read-only replicas, archiving and encryption at rest now require an Enterprise license.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "event-store",
+  "models": [
+    "event-store"
+  ],
+  "workloads": [
+    "event-sourcing",
+    "oltp",
+    "pub-sub",
+    "stream-processing"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Kurrent, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "26.2.3",
+    "date": "2026-10-19"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Kurrent License v1 (KLv1)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Single-node use free under KLv1; clustering and enterprise features need a license key; Kurrent Cloud is a managed option."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Kurrent Cloud",
+      "provider": "Kurrent",
+      "url": "https://www.kurrent.io/kurrent-cloud"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Clusters replicate the full log to every node for availability rather than sharding; 26.2 moves clustering to Raft."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Stream reads/subscriptions API",
+    "JavaScript projections",
+    "SQL (Arrow Flight)"
+  ],
+  "apis": [
+    "gRPC",
+    "HTTP/AtomPub",
+    "Arrow Flight SQL"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "Java",
+    "JavaScript",
+    "Go",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Built for event sourcing: per-stream optimistic concurrency and ordering",
+    "Catch-up and persistent subscriptions make building read models straightforward",
+    "Immutable log gives a natural audit trail and replay",
+    "First-party connectors to Kafka, MongoDB, Elasticsearch and SQL databases",
+    "Mature clients for .NET, JVM, Node.js, Go, Python and Rust"
+  ],
+  "weaknesses": [
+    "Clustering and encryption at rest now require a paid license (26.2+)",
+    "No sharding; one cluster's write throughput is bounded by a single leader",
+    "Not suited to ad-hoc querying of current state",
+    "Source-available license, not OSI open source"
+  ],
+  "useCases": [
+    "Event-sourced domain models with CQRS",
+    "Audit-heavy financial and logistics systems",
+    "Integrating microservices via durable event streams"
+  ],
+  "notIdealFor": [
+    "General CRUD apps without event-sourcing needs",
+    "High-volume telemetry better suited to Kafka or time-series DBs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "axon-server",
+    "postgresql",
+    "xtdb",
+    "datomic",
+    "pgmq"
+  ],
+  "tags": [
+    "event-sourcing",
+    "cqrs",
+    "event-store",
+    "dotnet",
+    "source-available"
+  ],
+  "links": {
+    "website": "https://www.kurrent.io/",
+    "docs": "https://docs.kurrent.io/",
+    "repository": "https://github.com/kurrent-io/KurrentDB",
+    "changelog": "https://github.com/kurrent-io/KurrentDB/releases"
+  },
+  "ids": {
+    "github": "kurrent-io/KurrentDB",
+    "stackoverflowTag": "eventstoredb",
+    "dockerHub": "kurrentplatform/kurrentdb",
+    "npm": "@kurrent/kurrentdb-client",
+    "pypi": "kurrentdbclient",
+    "hackerNewsQuery": "KurrentDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/kurrent-io/KurrentDB/releases",
+    "https://kurrentdb.kurrent.io/blog/licensing-in-kurrentdb-v26-2-and-beyond-what-s-free-and-what-s-licensed",
+    "https://www.kurrent.io/releases/kurrentdb/25-0/"
+  ],
+  "lastVerified": "2026-10-27"
+}

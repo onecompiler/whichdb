@@ -1,0 +1,159 @@
+{
+  "slug": "sednadb",
+  "name": "Sedna",
+  "aliases": [
+    "Sedna XML DBMS"
+  ],
+  "tagline": "Academic native XML DBMS from ISP RAS with full ACID transactions; long since abandoned.",
+  "description": "Sedna was a native XML database developed at the Institute for System Programming of the Russian Academy of Sciences. It was notable for full ACID transactions, an XQuery implementation with XUpdate-style updates, triggers, full-text indexing and a custom memory-mapped storage layer designed for large XML documents. It had a real following in the late 2000s as a free, transactional alternative to commercial XML stores. Development stopped around 2011, the public GitHub mirror has not changed since 2017 and the project site is offline, so new XML work should use BaseX or eXist-db.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No releases since about 2011; the GitHub mirror is untouched since 2017 and sedna.org is offline. Use BaseX or eXist-db instead.",
+  "maturity": "legacy",
+  "primaryModel": "xml",
+  "models": [
+    "xml"
+  ],
+  "workloads": [
+    "content-management",
+    "full-text-search"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Institute for System Programming, Russian Academy of Sciences (MODIS team)",
+  "vendorType": "academic",
+  "initialRelease": 2006,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "XQuery",
+    "XUpdate-style update language"
+  ],
+  "apis": [
+    "Native client protocol",
+    "XML:DB API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full ACID transactions for XML updates",
+    "XQuery triggers and full-text indexes",
+    "Designed to handle very large individual XML documents"
+  ],
+  "weaknesses": [
+    "Abandoned: no security fixes, packages or maintained drivers",
+    "Builds poorly on modern toolchains",
+    "No community left to answer questions"
+  ],
+  "useCases": [
+    "Maintaining legacy systems that still embed Sedna",
+    "Historical reference for XML DBMS design"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Internet-facing deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "basex",
+    "exist-db",
+    "marklogic"
+  ],
+  "tags": [
+    "xml",
+    "xquery",
+    "academic",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/sedna/sedna",
+    "repository": "https://github.com/sedna/sedna",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sedna_(database)"
+  },
+  "ids": {
+    "github": "sedna/sedna",
+    "wikipedia": "Sedna_(database)",
+    "hackerNewsQuery": "Sedna XML database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/sedna/sedna",
+    "https://en.wikipedia.org/wiki/Sedna_(database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

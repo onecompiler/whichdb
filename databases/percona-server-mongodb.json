@@ -1,0 +1,185 @@
+{
+  "slug": "percona-server-mongodb",
+  "name": "Percona Server for MongoDB",
+  "aliases": [
+    "PSMDB"
+  ],
+  "tagline": "Drop-in MongoDB Community build with enterprise features like encryption, LDAP and hot backup.",
+  "description": "Percona Server for MongoDB is a free, source-available rebuild of MongoDB Community Edition that adds features MongoDB reserves for Enterprise Advanced: data-at-rest encryption with KMIP/Vault, LDAP and Kerberos authentication, audit logging, an in-memory storage engine and hot backups. It tracks upstream closely (8.0.34-15 shipped in October 2026) and pairs with Percona Backup for MongoDB and the Percona Operator for Kubernetes. It is the usual choice for teams that want enterprise-grade self-hosted MongoDB without a MongoDB subscription.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "spatial",
+    "time-series"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "metadata-store",
+    "time-series"
+  ],
+  "architecture": [
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Percona",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "8.0.34-15",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MongoDB Community Edition",
+  "license": {
+    "type": "source-available",
+    "name": "Server Side Public License v1",
+    "spdx": "SSPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free to download and run; Percona sells support and managed services."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Same replica-set and sharding architecture as upstream MongoDB."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "tunable",
+      "causal"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "MongoDB Query API (MQL)",
+    "Aggregation pipeline"
+  ],
+  "apis": [
+    "MongoDB wire protocol"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "C",
+    "C#",
+    "Go",
+    "Java",
+    "JavaScript",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Free data-at-rest encryption with HashiCorp Vault or KMIP key management",
+    "LDAP, Kerberos and AWS IAM authentication without an Enterprise licence",
+    "Audit logging and an in-memory storage engine included",
+    "Binary-compatible drop-in for MongoDB Community; same drivers and tools",
+    "Kubernetes operator and physical backup tooling from the same vendor"
+  ],
+  "weaknesses": [
+    "Inherits SSPL licensing from upstream",
+    "Lags upstream releases by days to weeks",
+    "No equivalent of Atlas Search or vector search features that MongoDB keeps proprietary",
+    "Linux only"
+  ],
+  "useCases": [
+    "Self-hosted MongoDB in regulated environments needing encryption and audit",
+    "Replacing MongoDB Enterprise Advanced to cut licence costs",
+    "MongoDB on Kubernetes with an open operator"
+  ],
+  "notIdealFor": [
+    "Teams wanting a fully managed service",
+    "Workloads relying on Atlas-only search or vector features"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "mongodb-atlas",
+    "documentdb-postgres",
+    "ferretdb",
+    "amazon-documentdb"
+  ],
+  "tags": [
+    "mongodb-ecosystem",
+    "document",
+    "self-hosted",
+    "encryption",
+    "drop-in"
+  ],
+  "links": {
+    "website": "https://www.percona.com/mongodb/software/percona-server-for-mongodb",
+    "docs": "https://docs.percona.com/percona-server-for-mongodb/8.0/",
+    "repository": "https://github.com/percona/percona-server-mongodb",
+    "changelog": "https://docs.percona.com/percona-server-for-mongodb/8.0/release_notes/index.html"
+  },
+  "ids": {
+    "github": "percona/percona-server-mongodb",
+    "dockerHub": "percona/percona-server-mongodb",
+    "hackerNewsQuery": "Percona Server for MongoDB"
+  },
+  "brand": {
+    "color": "#FC3519"
+  },
+  "sources": [
+    "https://docs.percona.com/percona-server-for-mongodb/8.0/release_notes/index.html",
+    "https://github.com/percona/percona-server-mongodb",
+    "https://www.percona.com/mongodb/software/percona-server-for-mongodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

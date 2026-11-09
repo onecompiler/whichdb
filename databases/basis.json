@@ -1,0 +1,171 @@
+{
+  "slug": "basis",
+  "name": "BASIS",
+  "aliases": [
+    "BASIS DBMS",
+    "BBj DBMS",
+    "BASIS International",
+    "BBx"
+  ],
+  "tagline": "Keyed-file ISAM database plus SQL engine bundled with BASIS International's BBj Business BASIC platform.",
+  "description": "BASIS DBMS is the data layer of BASIS International's BBx/BBj Business BASIC platform, a lineage that dates to 1985 and whose current sixth generation, BBj, runs on Java. It combines fast navigational access to keyed record files (MKEYED, XKEYED, JKEYED and VKEYED) with ESQL tables that are SQL-only and support variable-length records, dynamic indexes and commit/rollback transactions, all described by a central data dictionary. A built-in SQL engine with views, query optimisation statistics and ODBC/JDBC drivers opens the data to reporting tools, and Lucene provides full-text search. It is used almost exclusively by vertical-market ISVs and ERP vendors (including BASIS's own AddonSoftware) who build on BBj, and is updated with each BBj release (26.02 in 2026).",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "BASIS International Ltd.",
+  "vendorType": "company",
+  "initialRelease": 1985,
+  "latestVersion": {
+    "version": "BBj 26.02",
+    "date": "2026"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (BASIS licence)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Licensed with BBj through BASIS and its reseller/ISV partner programme."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server line-of-business databases; scale comes from the host machine."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "BBj / Business BASIC file verbs"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "BBj file I/O",
+    "Admin API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "BBj",
+    "Java",
+    "ODBC clients"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Mixes record-level ISAM navigation and SQL over the same data",
+    "Central data dictionary exposes legacy keyed files to ODBC/JDBC tools",
+    "Lucene-based full-text search built into the DBMS",
+    "Long-lived, backward-compatible platform for Business BASIC applications",
+    "Regular releases in step with BBj"
+  ],
+  "weaknesses": [
+    "Practically tied to the BBj/Business BASIC ecosystem",
+    "Proprietary, with a small and ageing developer community",
+    "No clustering, sharding or managed cloud database service",
+    "Little independent documentation or benchmarking"
+  ],
+  "useCases": [
+    "Back end for BBj/Business BASIC ERP and vertical business applications",
+    "Exposing legacy keyed-file data to BI tools via ODBC/JDBC",
+    "Modernising older BBx applications without a data migration"
+  ],
+  "notIdealFor": [
+    "New applications not built on BBj",
+    "Large-scale analytics or horizontally scaled workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocket-unidata-universe",
+    "openqm",
+    "jbase",
+    "progress-openedge",
+    "postgresql"
+  ],
+  "tags": [
+    "business-basic",
+    "isam",
+    "erp",
+    "legacy-platform"
+  ],
+  "links": {
+    "website": "https://basis.cloud/",
+    "docs": "https://basis.cloud/dbms/",
+    "changelog": "https://basis.cloud/readme-bbj/"
+  },
+  "ids": {
+    "hackerNewsQuery": "BASIS BBj"
+  },
+  "brand": {},
+  "sources": [
+    "https://basis.cloud/dbms/",
+    "https://basis.cloud/readme-bbj/",
+    "https://basis.cloud/",
+    "https://en.wikipedia.org/wiki/Business_Basic"
+  ],
+  "lastVerified": "2026-10-27"
+}

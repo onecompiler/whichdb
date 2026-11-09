@@ -1,0 +1,98 @@
+{
+  "slug": "firstsql-j",
+  "name": "FirstSQL/J",
+  "aliases": ["FirstSQL", "FirstSQL/J ORDBMS"],
+  "tagline": "Pure-Java object-relational database that stored Java objects as column values; vendor gone since 2022.",
+  "description": "FirstSQL/J was a commercial object-relational database written entirely in Java by FirstSQL Software, with version 1.0 released in February 2002. Columns could hold Java objects as well as SQL types, Java methods could be called inside SQL expressions, and stored procedures were Java code invoked through JDBC, so data model and application logic could share one class hierarchy. It offered intermediate-level SQL-92 with cascading foreign keys, B+tree and bitmap indexes, row-level two-phase locking with deadlock detection and all four JDBC isolation levels, defaulting to repeatable read. It came as a client/server Enterprise edition and an embeddable Professional edition, followed by mobile (2005) and Android (2015) editions. 2015 was the last release, and since 2022 the firstsql.com domain has hosted unrelated content.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release 2015; the vendor site went offline in July 2022 and the domain now hosts unrelated content. H2, HSQLDB or Apache Derby cover pure-Java SQL today.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational", "object"],
+  "workloads": ["oltp", "embedded", "mobile-offline"],
+  "architecture": ["embedded", "client-server"],
+  "developer": "FirstSQL Software, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2002,
+  "writtenIn": ["Java"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["per-node-license"],
+    "freeTier": false,
+    "notes": "Was sold commercially in Enterprise, Professional, mobile and Android editions; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "windows", "macos", "android"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL (SQL-92 intermediate)"],
+  "apis": ["JDBC"],
+  "compatibleWith": [],
+  "drivers": ["Java"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Java objects as first-class column types, with methods callable from SQL",
+    "Runs anywhere a JVM runs, from servers to Android, in embedded or client/server mode",
+    "Solid SQL-92 transaction semantics: row-level 2PL and all four isolation levels"
+  ],
+  "weaknesses": [
+    "Vendor defunct; no downloads, licences or support since 2022",
+    "Proprietary storage format with no migration tooling",
+    "Never gained the community of free pure-Java databases like H2, HSQLDB or Derby"
+  ],
+  "useCases": [
+    "Historical reference for Java object-relational database design",
+    "Maintaining or migrating legacy applications that embedded it"
+  ],
+  "notIdealFor": ["New projects", "Anything needing vendor support"],
+  "notableUsers": [],
+  "alternatives": ["h2", "hsqldb", "apache-derby", "sqlite", "objectdb"],
+  "tags": ["java", "object-relational", "embedded", "jdbc", "discontinued"],
+  "links": {
+    "website": "https://web.archive.org/web/2021/http://www.firstsql.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2021/http://www.firstsql.com/",
+    "https://dbdb.io/db/firstsqlj"
+  ],
+  "lastVerified": "2026-10-27"
+}

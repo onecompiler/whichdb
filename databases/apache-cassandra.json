@@ -1,0 +1,234 @@
+{
+  "slug": "apache-cassandra",
+  "name": "Apache Cassandra",
+  "aliases": [
+    "Cassandra",
+    "C*"
+  ],
+  "tagline": "Masterless wide-column database built for always-on writes across data centers.",
+  "description": "Cassandra is the Dynamo-meets-Bigtable database: a ring of equal nodes, tunable consistency per query, and an LSM storage engine that soaks up enormous write volumes without a single point of failure. It is the default open-source choice when you need multi-datacenter replication and linear write scaling, and it powers some of the largest deployments on the planet. Version 5.0 added Storage-Attached Indexes, vector search and the Unified Compaction Strategy; the 6.0 line (in alpha) brings Accord general-purpose ACID transactions. Expect to model tables per query and to invest in operations (repair, compaction, JVM tuning).",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "key-value",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "time-series",
+    "iot",
+    "observability",
+    "vector-search",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "5.0.9",
+    "date": "2026-07"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; managed Cassandra from DataStax (IBM), AWS Keyspaces, Azure and Instaclustr."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "ibm-cloud"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Astra DB",
+      "provider": "IBM DataStax",
+      "url": "https://www.datastax.com/products/datastax-astra"
+    },
+    {
+      "name": "Amazon Keyspaces",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/keyspaces/"
+    },
+    {
+      "name": "Azure Managed Instance for Apache Cassandra",
+      "provider": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/azure/managed-instance-apache-cassandra/"
+    },
+    {
+      "name": "Instaclustr for Apache Cassandra",
+      "provider": "NetApp Instaclustr",
+      "url": "https://www.instaclustr.com/platform/managed-apache-cassandra/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Consistent hashing with vnodes; clusters of hundreds to thousands of nodes and multi-PB datasets are documented (Apple, Netflix)."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "CQL"
+  ],
+  "apis": [
+    "CQL native protocol"
+  ],
+  "compatibleWith": [
+    "cassandra"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#",
+    "C++",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "Scala"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No single point of failure: every node accepts reads and writes",
+    "Multi-datacenter replication with per-query consistency levels (LOCAL_QUORUM, EACH_QUORUM)",
+    "LSM write path absorbs very high sustained write throughput",
+    "Storage-Attached Indexes and native vector search since 5.0",
+    "Vendor-neutral Apache project with a large managed-service ecosystem"
+  ],
+  "weaknesses": [
+    "Query-first data modelling; no joins and limited ad-hoc filtering",
+    "Lightweight transactions (Paxos) are slow; full ACID transactions are still in the 6.0 alpha",
+    "Operational load: repairs, compaction tuning, tombstones and JVM GC",
+    "Read latency tails can suffer under heavy compaction or wide partitions"
+  ],
+  "useCases": [
+    "Write-heavy event and telemetry ingestion",
+    "Messaging and activity feeds",
+    "Multi-region user and device data",
+    "Time-series with TTL-based expiry",
+    "Fraud and personalisation features served at scale"
+  ],
+  "notIdealFor": [
+    "Relational workloads needing joins or multi-row ACID",
+    "Small datasets that fit one Postgres node",
+    "Ad-hoc analytics",
+    "Teams without operational capacity for repairs and tuning"
+  ],
+  "notableUsers": [
+    "Apple",
+    "Netflix",
+    "Uber",
+    "Instagram"
+  ],
+  "alternatives": [
+    "scylladb",
+    "amazon-dynamodb",
+    "amazon-keyspaces",
+    "datastax-astra-db",
+    "google-cloud-bigtable",
+    "apache-hbase",
+    "yugabytedb"
+  ],
+  "tags": [
+    "nosql",
+    "wide-column",
+    "apache",
+    "multi-datacenter",
+    "lsm"
+  ],
+  "links": {
+    "website": "https://cassandra.apache.org/",
+    "docs": "https://cassandra.apache.org/doc/latest/",
+    "repository": "https://github.com/apache/cassandra",
+    "changelog": "https://github.com/apache/cassandra/blob/trunk/CHANGES.txt",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Cassandra"
+  },
+  "ids": {
+    "github": "apache/cassandra",
+    "stackoverflowTag": "cassandra",
+    "wikipedia": "Apache Cassandra",
+    "dockerHub": "library/cassandra",
+    "npm": "cassandra-driver",
+    "pypi": [
+      "cassandra-driver",
+      "scylla-driver"
+    ],
+    "hackerNewsQuery": "Cassandra"
+  },
+  "brand": {
+    "color": "#1287B1",
+    "simpleIcon": "apachecassandra"
+  },
+  "sources": [
+    "https://cassandra.apache.org/_/download.html",
+    "https://github.com/apache/cassandra",
+    "https://dlcdn.apache.org/cassandra/"
+  ],
+  "lastVerified": "2026-10-27"
+}

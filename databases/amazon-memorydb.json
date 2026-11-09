@@ -1,0 +1,176 @@
+{
+  "slug": "amazon-memorydb",
+  "name": "Amazon MemoryDB",
+  "aliases": [
+    "MemoryDB",
+    "Amazon MemoryDB for Valkey",
+    "MemoryDB for Redis"
+  ],
+  "tagline": "A durable, Valkey/Redis-compatible in-memory database on AWS backed by a multi-AZ transaction log.",
+  "description": "MemoryDB looks like Redis or Valkey to clients but commits every write to a distributed, multi-AZ transaction log before acknowledging it, so it can serve as a primary database rather than a cache. Reads stay in-memory and fast, while writes pay a few milliseconds for durability. It adds vector search with HNSW indexes, data tiering to SSD on r6gd nodes, and MemoryDB Multi-Region for active-active replication with automatic conflict resolution. It fits microservice state, leaderboards or session data you cannot lose, on AWS.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "vector"
+  ],
+  "workloads": [
+    "session-store",
+    "caching",
+    "oltp",
+    "vector-search",
+    "pub-sub"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "primary-replica"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2021,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Valkey / Redis OSS",
+  "license": {
+    "type": "proprietary",
+    "name": "AWS service terms"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Node-hour plus per-GB write (data written to the transaction log) and snapshot storage charges; Valkey engine priced below Redis OSS."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Up to 500 shards per cluster; Multi-Region (Valkey 7.3+) replicates asynchronously across up to five regions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2/RESP3"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Acknowledged writes survive node and AZ failures thanks to the transaction log",
+    "Microsecond reads with the full Redis/Valkey data-structure API",
+    "Strongly consistent reads from the primary",
+    "Built-in vector search for RAG and similarity lookups",
+    "Active-active Multi-Region option"
+  ],
+  "weaknesses": [
+    "Write latency is single-digit milliseconds, higher than ElastiCache",
+    "More expensive than a cache for the same memory",
+    "AWS-only; feature exclusions with Multi-Region (no data tiering or vector search)"
+  ],
+  "useCases": [
+    "Durable session and shopping-cart state",
+    "Primary database for microservices using Redis data structures",
+    "Real-time leaderboards that must not lose updates",
+    "Vector search close to application data"
+  ],
+  "notIdealFor": [
+    "Pure caching where losing data is fine (use ElastiCache)",
+    "Large datasets that do not fit in memory economically"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-elasticache",
+    "redis",
+    "valkey",
+    "amazon-dynamodb",
+    "upstash"
+  ],
+  "tags": [
+    "aws",
+    "managed",
+    "durable",
+    "valkey",
+    "redis"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/memorydb/",
+    "docs": "https://docs.aws.amazon.com/memorydb/latest/devguide/what-is-memorydb.html",
+    "pricing": "https://aws.amazon.com/memorydb/pricing/"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-memory-db",
+    "hackerNewsQuery": "MemoryDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://aws.amazon.com/memorydb/features/",
+    "https://docs.aws.amazon.com/memorydb/latest/devguide/multi-region.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,175 @@
+{
+  "slug": "jazz",
+  "name": "Jazz",
+  "aliases": [
+    "Jazz Tools",
+    "jazz.tools",
+    "Classic Jazz"
+  ],
+  "tagline": "Local-first database with built-in sync, permissions and edit history, being rebuilt as a relational Jazz 2.",
+  "description": "Jazz, from Garden Computing, is a local-first framework where data lives in collaborative values synced between clients, servers and Jazz Cloud, with groups-based permissions, end-to-end encryption and full edit history built in. The production line (classic Jazz, jazz-tools 0.x) models data as CRDT-backed CoValues. Jazz 2, in alpha through 2026, redesigns it as a relational database with tables, row-level security, branches and migrations that run in the browser, React Native and backends. It is a good fit for collaborative apps that want sync and auth without a custom backend. Expect API churn during the transition.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational"
+  ],
+  "workloads": [
+    "local-first",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "distributed",
+    "embedded"
+  ],
+  "developer": "Garden Computing, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "jazz-tools 0.20.19",
+    "date": "2026-07-03"
+  },
+  "writtenIn": [
+    "TypeScript",
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Jazz Cloud has a free allowance then bills compute, storage and egress; the sync server can be self-hosted."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "ios",
+      "android",
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "active-active",
+    "notes": "Any peer can write; data converges through sync servers or Jazz Cloud."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual",
+      "causal"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Jazz TypeScript schema/query API"
+  ],
+  "apis": [
+    "Sync protocol",
+    "TypeScript SDK"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Sync, permissions and end-to-end encryption are part of the data model",
+    "Full edit history on every value",
+    "Works offline and across devices with CRDT-style merging",
+    "Self-hostable sync server plus a managed cloud"
+  ],
+  "weaknesses": [
+    "Jazz 2 rewrite means the stable API is about to change",
+    "Small ecosystem; TypeScript-only",
+    "CRDT semantics make strict invariants harder to enforce"
+  ],
+  "useCases": [
+    "Collaborative editors and whiteboards",
+    "Multi-device personal productivity apps",
+    "Apps needing end-to-end encrypted sync"
+  ],
+  "notIdealFor": [
+    "Systems needing strong global constraints (inventory, payments)",
+    "Teams wanting a stable long-term API today",
+    "Analytics and reporting"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "instantdb",
+    "triplit",
+    "evolu",
+    "tinybase",
+    "rocicorp-zero",
+    "convex"
+  ],
+  "tags": [
+    "local-first",
+    "crdt",
+    "sync",
+    "typescript",
+    "collaboration"
+  ],
+  "links": {
+    "website": "https://jazz.tools/",
+    "docs": "https://jazz.tools/docs",
+    "repository": "https://github.com/garden-co/classic-jazz"
+  },
+  "ids": {
+    "github": "garden-co/classic-jazz",
+    "npm": "jazz-tools",
+    "hackerNewsQuery": "jazz.tools"
+  },
+  "brand": {},
+  "sources": [
+    "https://jazz.tools/",
+    "https://github.com/garden-co/classic-jazz",
+    "https://github.com/garden-co/jazz",
+    "https://www.npmjs.com/package/jazz-tools"
+  ],
+  "lastVerified": "2026-10-27"
+}

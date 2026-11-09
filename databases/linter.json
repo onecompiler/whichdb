@@ -1,0 +1,168 @@
+{
+  "slug": "linter",
+  "name": "Linter",
+  "aliases": [
+    "ЛИНТЕР",
+    "LINTER SQL",
+    "Linter Bastion",
+    "ЛИНТЕР БАСТИОН",
+    "Linter Sokol"
+  ],
+  "tagline": "Russian certified relational DBMS from RELEX, used in secure government, defence and real-time systems.",
+  "description": "Linter is a proprietary relational DBMS developed by RELEX (АО НПП «РЕЛЭКС») in Voronezh and on the market since 1990, with roots in a 1980s state-sector DBMS project. Its niche is security certification: LINTER BASTION holds FSTEC certificates (protection classes 2 and 4) and Russian Ministry of Defence approval, so it can store classified data up to 'top secret' and personal data in state systems and critical infrastructure. It is listed in Russia's Unified Register of domestic software, runs on many operating systems including the QNX real-time OS, and is sold today as LINTER BASTION and LINTER SOKOL, largely for import substitution. Outside Russian public-sector and defence procurement it has little presence or English documentation.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "single-node"
+  ],
+  "developer": "RELEX (NPP RELEX JSC)",
+  "vendorType": "company",
+  "initialRelease": 1990,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (RELEX commercial license)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Commercial licenses via RELEX; a limited demo version is available for non-commercial evaluation."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server with hot backup and recovery tooling."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "Native C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "C#",
+    "Java",
+    "Delphi"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "FSTEC and Ministry of Defence certifications for classified and personal data",
+    "Listed in Russia's register of domestic software, easing public procurement",
+    "Runs on a wide range of OSs including the QNX real-time OS",
+    "Decades of use in government, defence, nuclear and aviation systems"
+  ],
+  "weaknesses": [
+    "Proprietary with documentation and support almost entirely in Russian",
+    "Small ecosystem compared with PostgreSQL-based Russian DBMSs",
+    "No horizontal scaling or cloud service"
+  ],
+  "useCases": [
+    "Russian state information systems needing certified data protection",
+    "Embedded and real-time measurement systems on QNX",
+    "Import substitution of foreign commercial DBMSs"
+  ],
+  "notIdealFor": [
+    "Projects outside the Russian regulatory context",
+    "Cloud-native or horizontally scaled workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgres-pro",
+    "postgresql",
+    "oracle-database",
+    "raima-database-manager",
+    "extremedb"
+  ],
+  "tags": [
+    "russia",
+    "certified",
+    "security",
+    "real-time",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://linter.ru/",
+    "docs": "https://linter.ru/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Linter DBMS RELEX"
+  },
+  "brand": {},
+  "sources": [
+    "https://linter.ru/",
+    "https://linter.ru/news/",
+    "https://linter.ru/news/subd-semeystva-linter-sovmestimy-s-os-rosa-khrom-13/",
+    "https://dbdb.io/db/linter"
+  ],
+  "lastVerified": "2026-10-27"
+}

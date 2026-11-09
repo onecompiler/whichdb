@@ -1,0 +1,168 @@
+{
+  "slug": "amazon-s3-vectors",
+  "name": "Amazon S3 Vectors",
+  "aliases": [
+    "S3 Vectors",
+    "S3 vector buckets"
+  ],
+  "tagline": "Vector storage and similarity queries built into S3, trading latency for very low cost at scale.",
+  "description": "Amazon S3 Vectors adds a new 'vector bucket' type to S3 with dedicated APIs to store embeddings and run similarity queries with metadata filters, without provisioning any cluster. It went GA in December 2025 with up to 2 billion vectors per index and 10,000 indexes per bucket, around 100 ms latency for frequent queries and sub-second for infrequent ones. AWS positions it as the cheap durable tier for RAG and agent memory, integrated with Bedrock Knowledge Bases and able to export into OpenSearch when a workload needs high QPS. It is not a low-latency serving engine and has no keyword search.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "object"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "serverless",
+    "shared-storage"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2025,
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Amazon S3",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (AWS service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Pay per GB of vectors stored, per GB uploaded via PUT, and per query (API calls plus data processed). AWS claims up to 90% lower total cost than conventional vector databases."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon S3 Vectors",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/s3/features/vectors/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Up to 2B vectors per index and 10,000 indexes per vector bucket (20 trillion vectors); available in 14 regions at GA."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "S3 Vectors API (QueryVectors with metadata filters)"
+  ],
+  "apis": [
+    "AWS API (REST)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "AWS SDKs (Python, Java, JavaScript, Go, .NET, Rust)"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Object-storage pricing for billions of vectors with nothing to provision",
+    "S3 durability, IAM and per-index KMS keys",
+    "Native backend for Bedrock Knowledge Bases",
+    "Can tier hot subsets into OpenSearch for low-latency serving"
+  ],
+  "weaknesses": [
+    "~100 ms warm and up to sub-second cold latency",
+    "Max 100 results per query and 50 metadata keys per vector",
+    "No full-text or hybrid keyword search",
+    "AWS-only, proprietary API"
+  ],
+  "useCases": [
+    "Cheap long-term store for RAG embeddings",
+    "Agent memory at very large scale",
+    "Archive tier behind a faster vector engine",
+    "Bedrock Knowledge Bases backend"
+  ],
+  "notIdealFor": [
+    "Low-latency interactive search",
+    "High-QPS recommendation serving",
+    "Hybrid keyword plus vector ranking"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "turbopuffer",
+    "opensearch",
+    "pinecone",
+    "lancedb",
+    "cloudflare-vectorize",
+    "vertex-ai-vector-search"
+  ],
+  "tags": [
+    "vector-search",
+    "aws",
+    "s3",
+    "serverless",
+    "object-storage"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/s3/features/vectors/",
+    "docs": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/s3-vectors.html",
+    "pricing": "https://aws.amazon.com/s3/pricing/"
+  },
+  "ids": {
+    "hackerNewsQuery": "S3 Vectors"
+  },
+  "brand": {
+    "color": "#FF9900"
+  },
+  "sources": [
+    "https://aws.amazon.com/about-aws/whats-new/2025/12/amazon-s3-vectors-generally-available/",
+    "https://aws.amazon.com/s3/features/vectors/"
+  ],
+  "lastVerified": "2026-10-27"
+}

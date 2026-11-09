@@ -1,0 +1,156 @@
+{
+  "slug": "turboimage",
+  "name": "TurboIMAGE",
+  "aliases": [
+    "TurboImage",
+    "IMAGE/3000",
+    "IMAGE/SQL",
+    "TurboIMAGE/XL"
+  ],
+  "tagline": "HP 3000's network-model DBMS (IMAGE/3000, later TurboIMAGE and IMAGE/SQL); ended with the HP 3000 in 2010.",
+  "description": "IMAGE was the database management system Hewlett-Packard shipped with the HP 3000 minicomputer from about 1972, and it was a large part of why that platform sold. It uses a network model of master and detail datasets accessed through intrinsics such as DBFIND, DBGET and DBPUT from COBOL, FORTRAN, Pascal, SPL and C, with DBSCHEMA, DBUTIL and QUERY utilities. Expanded limits produced TurboIMAGE, then TurboIMAGE/XL on PA-RISC, and an SQL front end gave IMAGE/SQL. HP ended the HP 3000 line, and with it TurboIMAGE, at the end of 2010. Remaining applications run on Stromasys emulation or Marxmeier's TurboIMAGE-compatible Eloquence.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Ended with HP's HP 3000/MPE end of life in 2010. Legacy apps run on Stromasys HP 3000 emulation or Marxmeier Eloquence.",
+  "maturity": "legacy",
+  "primaryModel": "navigational",
+  "models": [
+    "navigational",
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Hewlett-Packard",
+  "vendorType": "company",
+  "initialRelease": 1972,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (bundled with MPE)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Originally a paid option, later bundled with the MPE operating system."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "IMAGE intrinsics (DBFIND/DBGET/DBPUT)",
+    "QUERY",
+    "SQL (IMAGE/SQL)"
+  ],
+  "apis": [
+    "IMAGE intrinsics"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "COBOL",
+    "FORTRAN",
+    "Pascal",
+    "C",
+    "BASIC"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fast keyed access through master/detail chains for transaction processing",
+    "Simple, stable API that kept business applications running for decades",
+    "Rich third-party ecosystem (OMNIDEX and SUPERDEX indexing, 4GLs such as Powerhouse)"
+  ],
+  "weaknesses": [
+    "Platform discontinued; only emulators and compatible clones remain",
+    "Navigational model makes ad-hoc querying awkward"
+  ],
+  "useCases": [
+    "Maintaining or migrating legacy HP 3000 applications",
+    "History of minicomputer databases"
+  ],
+  "notIdealFor": [
+    "Any new application"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "supra-server-sql",
+    "idms",
+    "raima-database-manager",
+    "postgresql",
+    "oracle-database"
+  ],
+  "tags": [
+    "hp-3000",
+    "network-model",
+    "mpe",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/IMAGE_(database)",
+    "wikipedia": "https://en.wikipedia.org/wiki/IMAGE_(database)"
+  },
+  "ids": {
+    "wikipedia": "IMAGE (database)",
+    "hackerNewsQuery": "TurboIMAGE"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/IMAGE_(database)",
+    "https://en.wikipedia.org/wiki/HP_3000",
+    "https://eloquence.marxmeier.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

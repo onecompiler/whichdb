@@ -1,0 +1,123 @@
+{
+  "slug": "xata",
+  "name": "Xata",
+  "aliases": ["Xata Postgres", "Xata Cloud"],
+  "tagline": "Open-source Postgres platform with storage-level copy-on-write branching, scale-to-zero and anonymized clones.",
+  "description": "Xata began as a serverless spreadsheet-like database with built-in search, but has since rebuilt itself as a PostgreSQL platform focused on development workflows. Its stack runs vanilla Postgres on Kubernetes (CloudNativePG) with storage-level copy-on-write branching, so a production-sized database can be cloned in seconds, optionally with PII anonymized, for previews, testing or AI agents. In April 2026 the core platform was open-sourced under Apache 2.0; Xata Cloud and bring-your-own-cloud deployments are paid, with the old free SaaS tier retired. It also maintains pgroll for zero-downtime, reversible schema migrations. Consider it when realistic staging data and branch-per-PR workflows matter more than a free tier.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "vector"],
+  "workloads": ["oltp", "vector-search", "content-management"],
+  "architecture": ["primary-replica", "serverless"],
+  "developer": "Xata",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "writtenIn": ["Go"],
+  "basedOn": "PostgreSQL (CloudNativePG, OpenEBS)",
+  "license": { "type": "permissive", "name": "Apache License 2.0 (open-source platform)", "spdx": "Apache-2.0" },
+  "pricing": {
+    "models": ["usage-based", "open-source", "enterprise-contract"],
+    "freeTier": false,
+    "startingPrice": "$0.012/hour + $0.28/GB-month (about $9/month for micro)",
+    "notes": "14-day trial on Xata Cloud; self-hosted open-source edition is free; BYOC on AWS, Azure, GCP or Hetzner by quote."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": ["aws", "gcp", "azure", "hetzner"],
+    "platforms": ["linux"]
+  },
+  "managedServices": [
+    { "name": "Xata Cloud", "provider": "Xata", "url": "https://xata.io/" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Standard single-primary Postgres clusters; branches share storage blocks until modified."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["PostgreSQL wire protocol", "REST management API", "MCP server"],
+  "compatibleWith": ["postgresql"],
+  "drivers": ["JavaScript", "Python", "Go", "Java", "Ruby", "Rust"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": true,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Copy-on-write branches of large databases in seconds",
+    "Built-in PII anonymization for realistic staging copies",
+    "Runs unmodified Postgres, so extensions and tools work",
+    "Open-source core plus BYOC option for data-residency needs",
+    "pgroll enables reversible, zero-downtime schema migrations"
+  ],
+  "weaknesses": [
+    "No permanent free tier on the managed service",
+    "Young platform after a full product pivot; old SDKs are deprecated",
+    "Self-hosting requires running Kubernetes",
+    "No horizontal write scaling or multi-region in the open-source edition"
+  ],
+  "useCases": [
+    "Branch-per-pull-request preview databases with production-like data",
+    "Safe environments for AI coding agents",
+    "Testing migrations against anonymized production clones",
+    "Postgres in your own cloud account with branching"
+  ],
+  "notIdealFor": [
+    "Free hobby projects",
+    "Very high write throughput needing sharding",
+    "Teams without Kubernetes skills wanting to self-host"
+  ],
+  "notableUsers": [],
+  "alternatives": ["neon", "supabase", "planetscale", "lakebase", "nile", "postgresql"],
+  "tags": ["postgres", "branching", "open-source", "devex", "kubernetes"],
+  "links": {
+    "website": "https://xata.io/",
+    "docs": "https://xata.io/docs",
+    "repository": "https://github.com/xataio/xata",
+    "pricing": "https://xata.io/pricing"
+  },
+  "ids": {
+    "github": "xataio/xata",
+    "stackoverflowTag": "xata",
+    "hackerNewsQuery": "Xata Postgres"
+  },
+  "brand": {},
+  "sources": [
+    "https://xata.io/pricing",
+    "https://github.com/xataio/xata",
+    "https://dev.to/xata/introducing-xata-oss-postgres-platform-with-branching-now-apache-20-52do"
+  ],
+  "lastVerified": "2026-10-27"
+}

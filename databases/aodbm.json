@@ -1,0 +1,153 @@
+{
+  "slug": "aodbm",
+  "name": "AODBM",
+  "aliases": [
+    "Append Only Database Manager",
+    "aodbm"
+  ],
+  "tagline": "Deprecated 2011 dbm-style key-value library using immutable, append-only B+trees with versioned snapshots.",
+  "description": "AODBM (Append Only Database Manager) is a small embeddable key-value library in the tradition of dbm, written in C with a Python binding by Daniel Waterworth in 2011. Every change appends new nodes of an immutable B+tree to the file, so each committed version stays readable as a snapshot and a commit fails cleanly if it was not based on the current version, giving ACID semantics with optimistic concurrency. The design is the same copy-on-write idea used by LMDB and CouchDB's storage, in a much simpler form. The author marked the repository deprecated and it has not changed since July 2011.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Repository marked [DEPRECATED] by its author; no changes since July 2011. Use LMDB or another maintained embedded store.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Daniel Waterworth",
+  "vendorType": "community",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "C",
+    "Python"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL v3",
+    "spdx": "LGPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single file in a single process; the file only grows because old versions are never overwritten."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "C API",
+    "Python API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Immutable append-only B+tree keeps every committed version readable",
+    "Optimistic commits reject writes based on stale versions",
+    "Tiny C codebase that clearly illustrates copy-on-write storage"
+  ],
+  "weaknesses": [
+    "Deprecated and unmaintained since 2011",
+    "No compaction story, so files grow without bound",
+    "Single-process, single-file design with minimal tooling"
+  ],
+  "useCases": [
+    "Studying append-only B+tree storage",
+    "Teaching versioned key-value storage concepts"
+  ],
+  "notIdealFor": [
+    "Any production embedded storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "libmdbx",
+    "berkeley-db",
+    "sqlite",
+    "rocksdb"
+  ],
+  "tags": [
+    "key-value",
+    "embedded",
+    "append-only",
+    "deprecated"
+  ],
+  "links": {
+    "website": "https://github.com/danielwaterworth/AODBM",
+    "repository": "https://github.com/danielwaterworth/AODBM"
+  },
+  "ids": {
+    "github": "danielwaterworth/AODBM"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/danielwaterworth/AODBM",
+    "https://github.com/danielwaterworth/AODBM/commits/master"
+  ],
+  "lastVerified": "2026-10-27"
+}

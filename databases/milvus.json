@@ -1,0 +1,203 @@
+{
+  "slug": "milvus",
+  "name": "Milvus",
+  "aliases": [
+    "Milvus Lite"
+  ],
+  "tagline": "Cloud-native, distributed open-source vector database built for billions of vectors.",
+  "description": "Milvus is the most widely deployed open-source vector database for large scale, graduated at the LF AI & Data Foundation and developed mainly by Zilliz. Its disaggregated architecture separates streaming, query and data nodes over object storage, and it supports many index types (HNSW, IVF, DiskANN, GPU CAGRA, sparse) plus BM25 full-text and hybrid search. Milvus 3.0 (July 2026) added online schema changes, external collections over Lance/Vortex data, faceted search and new sparse index algorithms. Milvus Lite runs embedded in Python for prototyping; the distributed version is serious infrastructure that benefits from Kubernetes expertise.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "full-text-search"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "LF AI & Data Foundation (developed mainly by Zilliz)",
+  "vendorType": "foundation",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "3.0.4",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "Go",
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Zilliz Cloud is the managed version from the main maintainer."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Zilliz Cloud",
+      "provider": "Zilliz",
+      "url": "https://zilliz.com/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Compute nodes scale independently over object storage; deployments with tens of billions of vectors are documented."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "tunable",
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Milvus API (boolean filter expressions)"
+  ],
+  "apis": [
+    "gRPC",
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "Go",
+    "Node.js",
+    "C#",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Proven at billion-vector scale with independent scaling of query and ingest",
+    "Widest choice of index types including DiskANN and GPU (CAGRA)",
+    "BM25 full-text and sparse vectors for hybrid search",
+    "Tunable consistency levels per query",
+    "Milvus Lite gives the same API embedded in Python"
+  ],
+  "weaknesses": [
+    "Distributed mode has many moving parts (etcd, object storage, message log)",
+    "Heavy for small projects compared with Qdrant or Chroma",
+    "Strict collection schemas need planning despite new online changes",
+    "Major-version upgrades (2.x to 3.x) need care with storage formats"
+  ],
+  "useCases": [
+    "Billion-scale semantic and image search",
+    "RAG platforms serving many teams",
+    "Recommendation and deduplication",
+    "Multimodal retrieval over lakehouse data"
+  ],
+  "notIdealFor": [
+    "Transactional or relational workloads",
+    "Single-developer side projects (use Milvus Lite or Chroma)",
+    "Teams without Kubernetes experience self-hosting at scale"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "zilliz-cloud",
+    "qdrant",
+    "weaviate",
+    "pinecone",
+    "vespa",
+    "elasticsearch",
+    "lancedb"
+  ],
+  "tags": [
+    "vector-database",
+    "open-source",
+    "lf-ai",
+    "distributed",
+    "gpu"
+  ],
+  "links": {
+    "website": "https://milvus.io/",
+    "docs": "https://milvus.io/docs",
+    "repository": "https://github.com/milvus-io/milvus",
+    "changelog": "https://milvus.io/docs/release_notes.md",
+    "wikipedia": "https://en.wikipedia.org/wiki/Milvus_(vector_database)"
+  },
+  "ids": {
+    "github": "milvus-io/milvus",
+    "stackoverflowTag": "milvus",
+    "wikipedia": "Milvus (vector database)",
+    "dockerHub": "milvusdb/milvus",
+    "npm": "@zilliz/milvus2-sdk-node",
+    "pypi": "pymilvus",
+    "hackerNewsQuery": "Milvus"
+  },
+  "brand": {
+    "color": "#00A1EA",
+    "simpleIcon": "milvus"
+  },
+  "sources": [
+    "https://milvus.io/docs/release_notes.md",
+    "https://github.com/milvus-io/milvus/releases",
+    "https://lfaidata.foundation/projects/"
+  ],
+  "lastVerified": "2026-10-27"
+}

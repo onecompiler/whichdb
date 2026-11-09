@@ -1,0 +1,156 @@
+{
+  "slug": "justonedb",
+  "name": "JustOneDB",
+  "aliases": [
+    "JustOne Database",
+    "Edge Intelligence"
+  ],
+  "tagline": "UK 'NewSQL' relational database for mixed transactional and analytical load; became Edge Intelligence.",
+  "description": "JustOneDB, from JustOne Database Inc., was pitched around 2010-2012 as a relational database designed from scratch to run transactional updates and ad-hoc analytical queries concurrently in one instance, an early take on what is now called HTAP. It presented a PostgreSQL-compatible front end and was offered as hosted add-ons on Heroku, AppHarbor and Engine Yard as well as for enterprise deployment. By 2016 the company had renamed itself Edge Intelligence and redirected the product site, pivoting to geographically distributed analytics for edge and hybrid-cloud data; Adapdix acquired Edge Intelligence in August 2021. The original JustOneDB product is no longer available.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Company renamed Edge Intelligence (~2015-16) and pivoted to edge analytics; acquired by Adapdix in Aug 2021. JustOneDB itself is no longer offered.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "htap",
+    "oltp",
+    "olap"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "JustOne Database Inc.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Historically sold as hosted add-ons (Heroku, AppHarbor, Engine Yard) and enterprise licenses; nothing is sold today."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "heroku"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Ran transactional and analytical queries side by side in one instance",
+    "PostgreSQL-compatible interface eased adoption",
+    "Early availability as a PaaS add-on on Heroku and similar platforms"
+  ],
+  "weaknesses": [
+    "Product discontinued after the company's pivot and acquisition",
+    "Closed source with no surviving documentation or community"
+  ],
+  "useCases": [
+    "Historical reference for early HTAP/NewSQL products",
+    "Context for the PaaS database add-on market of the early 2010s"
+  ],
+  "notIdealFor": [
+    "Any new deployment: the product is unavailable"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "singlestore",
+    "tidb",
+    "cockroachdb",
+    "citus"
+  ],
+  "tags": [
+    "newsql",
+    "htap",
+    "postgres-compatible",
+    "heroku",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2012/http://www.justonedb.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "JustOneDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2012/http://www.justonedb.com/",
+    "https://web.archive.org/web/2017/http://www.justonedb.com/",
+    "https://www.adapdix.com/adapdix-acquires-edge-intelligence-to-bring-data-and-ai-closer-together",
+    "https://dbdb.io/db/justonedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

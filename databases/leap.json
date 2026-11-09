@@ -1,0 +1,154 @@
+{
+  "slug": "leap",
+  "name": "LEAP RDBMS",
+  "aliases": [
+    "LEAP"
+  ],
+  "tagline": "Educational DBMS by Richard Leyton that executes relational algebra directly instead of SQL.",
+  "description": "LEAP is a small relational database management system written in C by Richard Leyton, developed from the mid-1990s as a teaching tool. Rather than SQL, it implements the relational algebra itself: users create relations and combine them with relational-algebra operators (selection, projection, joins and set operations), so students can see exactly how algebraic expressions evaluate. It compiles on common Unix systems, had a precompiled Windows GUI, and was distributed under the GNU GPL via SourceForge, with a 1.2.6 release in 2001 and a final 1.2.6.1 source update in February 2004. It still occasionally appears in database courses but receives no development.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Educational project; last release 1.2.6.1 (Feb 2004) and site copyright ends in 2005. No ongoing development.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Richard Leyton",
+  "vendorType": "community",
+  "initialRelease": 1997,
+  "latestVersion": {
+    "version": "1.2.6.1",
+    "date": "2004-02-09"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2",
+    "spdx": "GPL-2.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix",
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Relational algebra"
+  ],
+  "apis": [
+    "Command-line interpreter",
+    "Windows GUI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Executes relational algebra directly, ideal for teaching theory",
+    "Small, readable C codebase under the GPL",
+    "Runs on Unix variants and had a Windows GUI build"
+  ],
+  "weaknesses": [
+    "No SQL support",
+    "Unmaintained since 2004",
+    "No transactions, concurrency control or performance features"
+  ],
+  "useCases": [
+    "Teaching relational algebra in database courses",
+    "Experimenting with query evaluation in a tiny codebase"
+  ],
+  "notIdealFor": [
+    "Any production or application data storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "postgresql",
+    "duckdb"
+  ],
+  "tags": [
+    "educational",
+    "relational-algebra",
+    "c",
+    "gpl",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://leap.sourceforge.net/",
+    "repository": "https://sourceforge.net/projects/leap/"
+  },
+  "ids": {
+    "hackerNewsQuery": "LEAP RDBMS"
+  },
+  "brand": {},
+  "sources": [
+    "https://leap.sourceforge.net/",
+    "https://sourceforge.net/projects/leap/",
+    "https://dbdb.io/db/leap"
+  ],
+  "lastVerified": "2026-10-27"
+}

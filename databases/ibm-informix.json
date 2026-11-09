@@ -1,0 +1,193 @@
+{
+  "slug": "ibm-informix",
+  "name": "IBM Informix",
+  "aliases": [
+    "Informix",
+    "Informix Dynamic Server",
+    "IDS"
+  ],
+  "tagline": "Low-maintenance embeddable RDBMS with built-in TimeSeries, still quietly running retail and telco systems.",
+  "description": "Informix is a relational database known for running for years with almost no DBA attention, which made it popular for embedding in retail point-of-sale, telecom and utility systems. Its distinctive pieces are a native TimeSeries storage type that is very compact for meter and sensor data, MACH 11 high-availability clusters, Enterprise Replication for multi-site active-active, and a wire listener that speaks the MongoDB protocol. IBM still owns it and co-develops it with HCLSoftware; version 15 lifted many old size limits and fix packs ship regularly (15.0.1.18 in September 2026). It is a solid choice for existing estates but has a small community for new projects.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "time-series",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "time-series",
+    "iot",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "multi-primary",
+    "shared-storage"
+  ],
+  "developer": "IBM (co-developed with HCLSoftware)",
+  "vendorType": "company",
+  "initialRelease": 1981,
+  "latestVersion": {
+    "version": "15.0.1.18",
+    "date": "2026-09-30"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Commercial editions licensed per core/PVU; free Developer Edition."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "active-active",
+    "notes": "Enterprise Replication supports multi-site update-anywhere topologies and sharded JSON collections."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "SPL"
+  ],
+  "apis": [
+    "SQLI",
+    "DRDA",
+    "ODBC",
+    "JDBC",
+    "MongoDB wire protocol",
+    "REST"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "C#",
+    "ESQL/C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs unattended for years in embedded deployments with minimal tuning",
+    "Native TimeSeries type stores regular sensor/meter readings very compactly",
+    "Enterprise Replication enables multi-site active-active topologies",
+    "MongoDB wire listener lets document apps use Informix as a back end"
+  ],
+  "weaknesses": [
+    "Small and ageing community; few new tools target it",
+    "Docker Hub developer image is no longer updated",
+    "Unclear long-term investment compared with Db2"
+  ],
+  "useCases": [
+    "Retail store and point-of-sale back ends",
+    "Smart-meter and utility time-series data",
+    "Telecom provisioning systems",
+    "Embedded databases inside OEM appliances"
+  ],
+  "notIdealFor": [
+    "Greenfield cloud-native projects",
+    "Analytics at warehouse scale",
+    "Teams needing a large hiring pool"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-db2",
+    "postgresql",
+    "timescaledb",
+    "oracle-database",
+    "sql-server"
+  ],
+  "tags": [
+    "sql",
+    "time-series",
+    "embedded",
+    "ibm",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/products/informix",
+    "docs": "https://www.ibm.com/docs/en/informix-servers/15.0.0",
+    "changelog": "https://www.ibm.com/support/pages/fix-list-informix-server-15001-release",
+    "wikipedia": "https://en.wikipedia.org/wiki/Informix"
+  },
+  "ids": {
+    "stackoverflowTag": "informix",
+    "wikipedia": "Informix",
+    "dockerHub": "ibmcom/informix-developer-database",
+    "pypi": "IfxPy",
+    "hackerNewsQuery": "Informix"
+  },
+  "brand": {
+    "color": "#0F62FE"
+  },
+  "sources": [
+    "https://www.ibm.com/support/pages/fix-list-informix-server-15001-release",
+    "https://www.ibm.com/products/informix",
+    "https://en.wikipedia.org/wiki/Informix"
+  ],
+  "lastVerified": "2026-10-27"
+}

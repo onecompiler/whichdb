@@ -1,0 +1,183 @@
+{
+  "slug": "apache-impala",
+  "name": "Apache Impala",
+  "aliases": [
+    "Impala",
+    "Cloudera Impala"
+  ],
+  "tagline": "Low-latency MPP SQL engine for Hadoop, Kudu and Iceberg tables, developed largely by Cloudera.",
+  "description": "Apache Impala is a C++ MPP query engine that Cloudera released in 2013 to give Hadoop users interactive SQL instead of batch MapReduce. Long-running daemons on each node read Parquet, ORC, Kudu and Iceberg tables and share the Hive Metastore, so Impala and Hive or Spark see the same tables. It is still fast for BI over HDFS-era data and powers Cloudera Data Warehouse. Outside the Cloudera ecosystem, most new lakehouse projects pick Trino, Spark or a cloud warehouse instead.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "4.5.3",
+    "date": "2026-10-06"
+  },
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercially supported as part of Cloudera Data Platform and Cloudera Data Warehouse."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Cloudera Data Warehouse",
+      "provider": "Cloudera",
+      "url": "https://www.cloudera.com/products/data-warehouse.html"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (Impala dialect, HiveQL-compatible)"
+  ],
+  "apis": [
+    "HiveServer2 protocol",
+    "Beeswax",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "C++",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "C++ engine with LLVM codegen gives low latency on Parquet",
+    "Shares Hive Metastore tables with Hive and Spark",
+    "Updatable analytics via Apache Kudu integration",
+    "Iceberg support including time travel and row-level deletes"
+  ],
+  "weaknesses": [
+    "Mostly tied to the Cloudera ecosystem",
+    "Smaller contributor base than Trino or Spark",
+    "Memory-bound joins can fail rather than spill gracefully on large inputs"
+  ],
+  "useCases": [
+    "Interactive BI on Hadoop and Cloudera clusters",
+    "Analytics over Kudu tables",
+    "Iceberg queries in Cloudera Data Warehouse"
+  ],
+  "notIdealFor": [
+    "New non-Cloudera cloud stacks",
+    "OLTP",
+    "Heavy ETL better done in Spark"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "apache-hive",
+    "apache-spark-sql",
+    "presto",
+    "apache-kudu"
+  ],
+  "tags": [
+    "hadoop",
+    "mpp",
+    "sql-on-hadoop",
+    "cloudera",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://impala.apache.org/",
+    "docs": "https://impala.apache.org/impala-docs.html",
+    "repository": "https://github.com/apache/impala",
+    "changelog": "https://impala.apache.org/downloads.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Impala"
+  },
+  "ids": {
+    "github": "apache/impala",
+    "stackoverflowTag": "impala",
+    "wikipedia": "Apache Impala",
+    "dockerHub": "apache/impala",
+    "pypi": "impyla",
+    "hackerNewsQuery": "Apache Impala"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apache/impala/releases",
+    "https://impala.apache.org/",
+    "https://en.wikipedia.org/wiki/Apache_Impala"
+  ],
+  "lastVerified": "2026-10-27"
+}

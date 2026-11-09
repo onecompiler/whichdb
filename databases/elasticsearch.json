@@ -1,0 +1,225 @@
+{
+  "slug": "elasticsearch",
+  "name": "Elasticsearch",
+  "aliases": [
+    "ES",
+    "Elastic"
+  ],
+  "tagline": "Lucene-based distributed search and analytics engine for text, vectors, logs and metrics.",
+  "description": "Elasticsearch is the distributed search engine that made Lucene easy to cluster, and it remains the default choice for application search, log analytics and security analytics at large scale. Recent releases lean hard into AI retrieval: dense and sparse vectors, BBQ quantization, semantic_text fields with built-in inference, and hybrid ranking via retrievers. Since late 2024 the source is available under AGPL-3.0 alongside SSPL and the Elastic License, which ended the 'not open source' debate that spawned OpenSearch. Expect to spend real effort on shard sizing, mappings and JVM tuning, or pay Elastic to do it in Elastic Cloud.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "vector",
+    "spatial",
+    "time-series"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "observability",
+    "real-time-analytics",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Elastic N.V.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "9.5.5",
+    "date": "2026-10-06"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Lucene",
+  "license": {
+    "type": "copyleft",
+    "name": "AGPL-3.0, SSPL 1.0 or Elastic License 2.0 (your choice)",
+    "spdx": "AGPL-3.0-only OR SSPL-1.0 OR Elastic-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Self-managed free tier covers core search, security and vectors; Platinum/Enterprise subscriptions add ML and advanced features. Elastic Cloud is resource-based (Hosted) or usage-based (Serverless) with a free trial."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Elastic Cloud Hosted",
+      "provider": "Elastic",
+      "url": "https://www.elastic.co/cloud"
+    },
+    {
+      "name": "Elastic Cloud Serverless",
+      "provider": "Elastic",
+      "url": "https://www.elastic.co/cloud/serverless"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Shards and replicas spread across nodes automatically; cross-cluster replication and cross-cluster search handle multi-region. Multi-PB logging clusters are common."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Query DSL",
+    "ES|QL",
+    "SQL",
+    "EQL"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [
+    "elasticsearch"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    ".NET",
+    "Ruby",
+    "PHP",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Best-in-class relevance tooling: BM25, analyzers, synonyms, learning-to-rank and hybrid retrievers",
+    "Native dense, sparse (ELSER) and quantized (BBQ) vector search in the same index as text",
+    "ES|QL gives a piped query language for logs, metrics and joins against lookup indices",
+    "Huge ecosystem: Kibana, Beats, Logstash, Elastic Agent and clients for every language",
+    "AGPL option makes it open source again for teams that care about OSI licensing"
+  ],
+  "weaknesses": [
+    "Shard count, heap and mapping design need ongoing expert tuning",
+    "Near-real-time refresh means writes are not instantly searchable and there are no multi-document transactions",
+    "Advanced features (ML, cross-cluster replication, some security) require paid tiers",
+    "Resource hungry compared with Meilisearch, Typesense or object-storage engines like Quickwit"
+  ],
+  "useCases": [
+    "E-commerce and site search with faceting",
+    "Log, metrics and SIEM analytics",
+    "Hybrid keyword plus semantic retrieval for RAG",
+    "Geospatial search and aggregations",
+    "Enterprise document search"
+  ],
+  "notIdealFor": [
+    "Primary transactional datastore",
+    "Small apps that just need typo-tolerant search box",
+    "Cheap long-term log archival at PB scale"
+  ],
+  "notableUsers": [
+    "Netflix",
+    "Uber"
+  ],
+  "alternatives": [
+    "opensearch",
+    "apache-solr",
+    "vespa",
+    "meilisearch",
+    "typesense",
+    "quickwit",
+    "manticore-search"
+  ],
+  "tags": [
+    "search",
+    "lucene",
+    "elk",
+    "observability",
+    "hybrid-search",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://www.elastic.co/elasticsearch",
+    "docs": "https://www.elastic.co/docs",
+    "repository": "https://github.com/elastic/elasticsearch",
+    "pricing": "https://www.elastic.co/pricing",
+    "changelog": "https://www.elastic.co/docs/release-notes/elasticsearch",
+    "wikipedia": "https://en.wikipedia.org/wiki/Elasticsearch"
+  },
+  "ids": {
+    "github": "elastic/elasticsearch",
+    "stackoverflowTag": "elasticsearch",
+    "wikipedia": "Elasticsearch",
+    "dockerHub": "library/elasticsearch",
+    "npm": "@elastic/elasticsearch",
+    "pypi": "elasticsearch",
+    "crates": "elasticsearch",
+    "hackerNewsQuery": "Elasticsearch"
+  },
+  "brand": {
+    "color": "#005571",
+    "simpleIcon": "elasticsearch"
+  },
+  "sources": [
+    "https://github.com/elastic/elasticsearch/releases",
+    "https://www.elastic.co/blog/elasticsearch-is-open-source-again",
+    "https://github.com/elastic/elasticsearch/blob/main/LICENSE.txt",
+    "https://www.elastic.co/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

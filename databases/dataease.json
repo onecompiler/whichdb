@@ -1,0 +1,155 @@
+{
+  "slug": "dataease",
+  "name": "DataEase",
+  "aliases": [
+    "Datamaster",
+    "LegEasy",
+    "DataEase for Windows",
+    "DataEase for DOS"
+  ],
+  "tagline": "1980s PC relational database and RAD tool, still sold today with builds for legacy DOS and Windows apps.",
+  "description": "DataEase is a relational database and rapid application development tool for PCs, first released in 1981 by Software Solutions Inc. (originally as Datamaster) and later sold to the UK's Sapphire International. Its appeal was letting non-programmers design screen forms and reports visually while the product quietly maintained the underlying tables and indexes, with DQL, a simple procedural query language, for reports and batch updates. The product split into DataEase for DOS and DataEase for Windows, and it is still sold: the current line includes LegEasy4DOS, which runs DataEase for DOS applications on modern Windows, DataEase 8.5 for Windows, and a LegEasy 9 developer edition in pre-release as of July 2026. It is mainly relevant to organisations keeping long-lived DataEase applications running.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "DataEase (Sapphire International)",
+  "vendorType": "company",
+  "initialRelease": 1981,
+  "latestVersion": {
+    "version": "LegEasy 9 LE9.7441 (pre-release)",
+    "date": "2026-07-17"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Sold online per developer and user; trial versions available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Desktop and small multi-user LAN applications."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "DQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Visual form and report design that non-programmers can use",
+    "Schema changes made through forms are applied to the data automatically",
+    "Still sold and updated, with a path to run old DOS applications on modern Windows"
+  ],
+  "weaknesses": [
+    "Windows-only desktop architecture",
+    "Small vendor and niche community",
+    "Proprietary DQL ties applications to the product"
+  ],
+  "useCases": [
+    "Keeping legacy DataEase for DOS or Windows applications running",
+    "Small departmental database applications built without coding"
+  ],
+  "notIdealFor": [
+    "Web or cloud applications",
+    "Large multi-user systems",
+    "New development on open stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "microsoft-access",
+    "filemaker",
+    "4d",
+    "dbase",
+    "sqlite"
+  ],
+  "tags": [
+    "desktop",
+    "rad",
+    "dos",
+    "windows",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.dataease.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/DataEase"
+  },
+  "ids": {
+    "wikipedia": "DataEase",
+    "hackerNewsQuery": "DataEase"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.dataease.com/dg3_FrontPage/",
+    "https://en.wikipedia.org/wiki/DataEase",
+    "https://dbdb.io/db/dataease"
+  ],
+  "lastVerified": "2026-10-27"
+}

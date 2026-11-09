@@ -1,0 +1,188 @@
+{
+  "slug": "interbase",
+  "name": "InterBase",
+  "aliases": [
+    "Embarcadero InterBase",
+    "InterBase ToGo",
+    "IBLite",
+    "Borland InterBase"
+  ],
+  "tagline": "Embarcadero's small-footprint SQL database for servers and embedded apps, with built-in AES encryption.",
+  "description": "InterBase is one of the oldest relational databases still sold: Jim Starkey's multi-generational (MVCC) engine from 1984, later owned by Ashton-Tate and Borland and, since 2008, Embarcadero (now part of Idera). Borland's 2000 release of the 6.0 source spawned Firebird, while InterBase itself stayed proprietary. Today it comes as InterBase Server for Windows and Linux and as InterBase ToGo/IBLite, an embeddable engine for Windows, macOS, Linux, iOS and Android, and it fits best inside Delphi and C++Builder applications. Selling points are near-zero administration, database-, column- and backup-level AES-256 encryption and Change Views for tracking deltas when syncing devices. InterBase 15 is current; Update 1 (15.1) shipped in May 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Embarcadero Technologies (Idera)",
+  "vendorType": "company",
+  "initialRelease": 1984,
+  "latestVersion": {
+    "version": "15.1",
+    "date": "2026-05-20"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Embarcadero commercial license)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Server and ToGo editions are licensed per server or per device; a free Developer edition and the free IBLite/ToGo Lite embedded tier exist, with OEM/VAR discounts."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "ios",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server or in-process engine; journaling and change views help with replication and device sync."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Native client API",
+    "ODBC",
+    "JDBC",
+    "ADO.NET",
+    "FireDAC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Delphi",
+    "C++",
+    "C#",
+    "Java",
+    "Python",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Same engine runs as a server or embedded in desktop and iOS/Android apps",
+    "MVCC readers never block writers, with very little DBA tuning",
+    "AES-256 encryption for database, columns, backups and network traffic",
+    "Change Views give subscription-based delta tracking for sync scenarios",
+    "Deep integration with Delphi and C++Builder (FireDAC, IBX)"
+  ],
+  "weaknesses": [
+    "Proprietary and tied to the Embarcadero ecosystem; small community outside it",
+    "No horizontal scaling or managed cloud service",
+    "Feature pace and tooling lag open-source peers like Firebird and PostgreSQL"
+  ],
+  "useCases": [
+    "Embedded database for Delphi/C++Builder desktop and mobile apps",
+    "Encrypted local storage on devices that sync with a central server",
+    "Long-lived line-of-business systems already built on InterBase"
+  ],
+  "notIdealFor": [
+    "Cloud-native or horizontally scaled services",
+    "Teams outside the Embarcadero toolchain",
+    "Analytics at warehouse scale"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "firebird",
+    "sqlite",
+    "postgresql",
+    "sap-sql-anywhere",
+    "raima-database-manager",
+    "ittia-db"
+  ],
+  "tags": [
+    "sql",
+    "embedded",
+    "mobile",
+    "encryption",
+    "delphi"
+  ],
+  "links": {
+    "website": "https://www.embarcadero.com/products/interbase",
+    "docs": "https://docwiki.embarcadero.com/InterBase/",
+    "changelog": "https://www.embarcadero.com/products/interbase/whats-new-in-interbase-15",
+    "wikipedia": "https://en.wikipedia.org/wiki/InterBase"
+  },
+  "ids": {
+    "stackoverflowTag": "interbase",
+    "wikipedia": "InterBase",
+    "hackerNewsQuery": "InterBase"
+  },
+  "brand": {
+    "color": "#E62431",
+    "simpleIcon": "interbase"
+  },
+  "sources": [
+    "https://www.embarcadero.com/products/interbase",
+    "https://blogs.embarcadero.com/embarcadero-interbase-15-1-released/",
+    "https://www.embarcadero.com/products/interbase/whats-new-in-interbase-15",
+    "https://en.wikipedia.org/wiki/InterBase",
+    "https://dbdb.io/db/interbase"
+  ],
+  "lastVerified": "2026-10-27"
+}

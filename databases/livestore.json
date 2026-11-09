@@ -1,0 +1,172 @@
+{
+  "slug": "livestore",
+  "name": "LiveStore",
+  "aliases": [
+    "livestore.dev"
+  ],
+  "tagline": "Event-sourced local-first data layer: reactive SQLite on the client, rebuilt from a synced event log.",
+  "description": "LiveStore is a TypeScript state-management and sync framework that keeps app state in a reactive SQLite database on the client (WASM in browsers, native in React Native and Expo) and derives it from an append-only log of events. Events sync through pluggable backends such as Cloudflare Durable Objects, ElectricSQL or S2, and every client replays them through materializers to rebuild its SQLite tables, so conflicts are resolved by rebasing events rather than merging rows. It suits apps that want instant local queries, offline support and an audit-friendly event history. It is pre-1.0 and its APIs still change between releases.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "event-store"
+  ],
+  "workloads": [
+    "local-first",
+    "event-sourcing",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Johannes Schickling and LiveStore contributors",
+  "vendorType": "community",
+  "initialRelease": 2025,
+  "latestVersion": {
+    "version": "0.5.0",
+    "date": "2026-10-15"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "ios",
+      "android",
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Each client holds its own SQLite state; the event log size bounds practical scale."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "causal",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (SQLite)",
+    "LiveStore query builder"
+  ],
+  "apis": [
+    "TypeScript API",
+    "Sync provider protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": true
+  },
+  "strengths": [
+    "Real SQLite queries on the client with fine-grained reactivity",
+    "Event-sourced design gives a full history and simple rebase-style conflict handling",
+    "Pluggable sync backends including Cloudflare and ElectricSQL",
+    "Works across web, React Native/Expo and Node"
+  ],
+  "weaknesses": [
+    "Pre-1.0 with breaking API changes",
+    "Event-sourcing discipline adds modelling overhead",
+    "Long event logs make cold starts slower without snapshots"
+  ],
+  "useCases": [
+    "Local-first productivity and note-taking apps",
+    "Apps that benefit from an auditable event history",
+    "Offline-capable Expo apps"
+  ],
+  "notIdealFor": [
+    "Large shared datasets queried server-side",
+    "Teams wanting a stable, managed sync service"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tinybase",
+    "evolu",
+    "jazz",
+    "rocicorp-zero",
+    "electricsql",
+    "powersync"
+  ],
+  "tags": [
+    "local-first",
+    "event-sourcing",
+    "sqlite",
+    "typescript",
+    "reactive"
+  ],
+  "links": {
+    "website": "https://livestore.dev/",
+    "docs": "https://docs.livestore.dev/",
+    "repository": "https://github.com/livestorejs/livestore",
+    "changelog": "https://github.com/livestorejs/livestore/releases"
+  },
+  "ids": {
+    "github": "livestorejs/livestore",
+    "npm": "@livestore/livestore",
+    "hackerNewsQuery": "LiveStore"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/livestorejs/livestore/releases",
+    "https://www.npmjs.com/package/@livestore/livestore",
+    "https://livestore.dev/"
+  ],
+  "lastVerified": "2026-10-27"
+}

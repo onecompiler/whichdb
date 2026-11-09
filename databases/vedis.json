@@ -1,0 +1,160 @@
+{
+  "slug": "vedis",
+  "name": "Vedis",
+  "aliases": [
+    "Vedis datastore",
+    "symisc vedis"
+  ],
+  "tagline": "Embeddable C datastore with 70+ Redis-like commands and a single-file ACID key-value store.",
+  "description": "Vedis is a self-contained C library from Symisc Systems that implements more than 70 commands modelled on Redis, but runs inside your process with no network layer. Data lives in one cross-platform disk file (or in memory) managed by a transactional key-value engine shared with its sibling UnQLite, and the command interface can be extended with your own C functions. That makes it handy for embedded devices and desktop apps that want Redis-style hashes, sets and lists without running a server. The current public release is 1.2.6; repository activity has been limited to occasional fixes, the latest in 2021.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Still distributed by Symisc (release 1.2.6), but the last code change was a bug fix in Nov 2021; UnQLite gets more attention.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Symisc Systems",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Sleepycat License",
+    "spdx": "Sleepycat"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single database file; the vendor claims terabyte-sized databases are supported."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis-like commands"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Redis-style data structures without a server process",
+    "Whole database in one portable file across 32/64-bit and endianness",
+    "Zero dependencies; amalgamated C source drops into any project",
+    "ACID transactions on the underlying key-value store"
+  ],
+  "weaknesses": [
+    "Sleepycat licence requires releasing source of software that redistributes it",
+    "Not wire-compatible with Redis; clients must link the library",
+    "Little development since 2021"
+  ],
+  "useCases": [
+    "Embedded devices needing structured key-value storage",
+    "Desktop apps wanting Redis-like semantics locally"
+  ],
+  "notIdealFor": [
+    "Shared, networked caches",
+    "Closed-source products unwilling to meet Sleepycat terms"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "unqlite",
+    "redis",
+    "lmdb",
+    "leveldb",
+    "rocksdb"
+  ],
+  "tags": [
+    "embedded",
+    "c",
+    "redis-like",
+    "key-value"
+  ],
+  "links": {
+    "website": "https://vedis.symisc.net/",
+    "docs": "https://vedis.symisc.net/api_intro.html",
+    "repository": "https://github.com/symisc/vedis"
+  },
+  "ids": {
+    "github": "symisc/vedis",
+    "hackerNewsQuery": "Vedis"
+  },
+  "brand": {},
+  "sources": [
+    "https://vedis.symisc.net/",
+    "https://vedis.symisc.net/licensing.html",
+    "https://vedis.symisc.net/downloads.html",
+    "https://github.com/symisc/vedis"
+  ],
+  "lastVerified": "2026-10-27"
+}

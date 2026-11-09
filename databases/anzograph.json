@@ -1,0 +1,167 @@
+{
+  "slug": "anzograph",
+  "name": "AnzoGraph",
+  "aliases": [
+    "AnzoGraph DB",
+    "Altair Graph Lakehouse",
+    "Graph Lakehouse"
+  ],
+  "tagline": "MPP in-memory RDF graph database for OLAP-style SPARQL analytics, now Altair Graph Lakehouse under Siemens.",
+  "description": "AnzoGraph is a massively parallel, in-memory graph database built for analytical rather than transactional graph work: bulk-loading billions of RDF triples in parallel and running BI-style aggregations, graph algorithms and data-science functions in SPARQL (with Cypher support added later). It grew out of SPARQL City, which Cambridge Semantics bought in 2016, shipped standalone from 2018 and also powers the Anzo knowledge-graph platform. Altair acquired Cambridge Semantics in April 2024 and Siemens completed its acquisition of Altair in March 2025; the engine is now sold as Altair Graph Lakehouse (release 2026.0, database version 3.3), alongside Graph Studio, the renamed Anzo. It runs on AWS, Azure, Google Cloud, IBM Cloud Pak, Kubernetes, Docker or bare-metal Linux.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Renamed Altair Graph Lakehouse after Altair bought Cambridge Semantics (2024); Altair itself is now part of Siemens (2025).",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "graph-analytics",
+    "knowledge-graph",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Altair (Siemens), formerly Cambridge Semantics",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "Graph Lakehouse 2026.0 (DB 3.3)",
+    "date": "2026"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Altair)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensed standalone as Graph Lakehouse or bundled with Altair Graph Studio."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "MPP cluster that holds data in memory across nodes; marketed for trillions of triples with parallel loading from NFS, HDFS or object storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL",
+    "Cypher"
+  ],
+  "apis": [
+    "SPARQL HTTP endpoint"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Parallel bulk loading and MPP query execution across a cluster",
+    "OLAP-style aggregates, reporting functions and graph algorithms directly in SPARQL",
+    "Standards-based RDF/SPARQL with added Cypher support",
+    "Runs on all major clouds, Kubernetes, Docker or on-premises Linux"
+  ],
+  "weaknesses": [
+    "In-memory design makes very large graphs expensive in RAM",
+    "Analytics-oriented; not built for high-rate transactional updates",
+    "Proprietary licensing and repeated rebranding (AnzoGraph DB, Graph Lakehouse)",
+    "Ecosystem and community are small compared with Neo4j or Neptune"
+  ],
+  "useCases": [
+    "Enterprise knowledge-graph analytics over integrated data",
+    "BI-style reporting and aggregation on RDF data",
+    "Graph algorithms (PageRank, paths) over billions of triples",
+    "Analytical engine behind the Altair Graph Studio data fabric"
+  ],
+  "notIdealFor": [
+    "OLTP graph workloads with frequent small updates",
+    "Small projects that need a free or open-source triple store"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-neptune-analytics",
+    "stardog",
+    "ontotext-graphdb",
+    "virtuoso",
+    "tigergraph",
+    "qlever"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "mpp",
+    "graph-analytics",
+    "knowledge-graph"
+  ],
+  "links": {
+    "website": "https://help.altair.com/graphlakehouse/userdoc/Home.htm",
+    "docs": "https://help.altair.com/graphlakehouse/userdoc/intro.htm"
+  },
+  "ids": {
+    "dockerHub": "cambridgesemantics/anzograph",
+    "hackerNewsQuery": "AnzoGraph"
+  },
+  "brand": {},
+  "sources": [
+    "https://help.altair.com/graphlakehouse/userdoc/Home.htm",
+    "https://help.altair.com/graphlakehouse/userdoc/intro.htm",
+    "https://help.altair.com/graphlakehouse/userdoc/doc-versions.htm",
+    "https://en.wikipedia.org/wiki/Cambridge_Semantics",
+    "https://hub.docker.com/r/cambridgesemantics/anzograph"
+  ],
+  "lastVerified": "2026-10-27"
+}

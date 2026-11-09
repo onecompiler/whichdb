@@ -1,0 +1,157 @@
+{
+  "slug": "brytlyt",
+  "name": "Brytlyt",
+  "aliases": [
+    "BrytlytDB"
+  ],
+  "tagline": "GPU-accelerated analytics database built on PostgreSQL; technology acquired by Opensignal in 2024.",
+  "description": "Brytlyt was a GPU database from a UK startup that grafted GPU-parallel filtering, sorting, aggregation and joins onto a PostgreSQL 9.x code base, so analysts kept standard Postgres SQL, drivers and tools while heavy queries ran across NVIDIA GPUs in a scale-out MPP layout. It was pitched for interactive analytics and visualization over billion-row tables, and its patented GPU join method was the core of the product. In June 2024 Opensignal acquired the platform and its engineering team and built it into its own network-analytics suite, so Brytlyt is no longer sold as a standalone database and its old domains no longer serve product pages. For GPU SQL analytics today look at HEAVY.AI or Kinetica, or use a CPU columnar engine such as ClickHouse or DuckDB.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Opensignal in June 2024 and folded into its ONX analytics suite; no longer sold as a standalone database.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Brytlyt Ltd. (now part of Opensignal)",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold after the 2024 acquisition."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "MPP design spread data blocks across many GPUs and nodes; no longer offered."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "GPU-parallel joins, filters and aggregations over billion-row tables",
+    "Kept PostgreSQL's SQL dialect, MVCC, drivers and tooling",
+    "Scale-out MPP design distributed work across many GPUs"
+  ],
+  "weaknesses": [
+    "No longer available as a product after the 2024 Opensignal acquisition",
+    "Built on an old PostgreSQL 9.x fork",
+    "Needed NVIDIA GPUs and hot data in host or GPU memory to pay off"
+  ],
+  "useCases": [
+    "Historical reference for GPU-accelerated PostgreSQL forks",
+    "Studying GPU join and partitioning strategies"
+  ],
+  "notIdealFor": [
+    "Any new deployment: the product is no longer sold",
+    "OLTP workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "heavydb",
+    "kinetica",
+    "clickhouse",
+    "duckdb",
+    "singlestore"
+  ],
+  "tags": [
+    "gpu",
+    "postgresql-fork",
+    "analytics",
+    "acquired"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2022/https://www.brytlyt.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Brytlyt"
+  },
+  "brand": {},
+  "sources": [
+    "https://insights.opensignal.com/2024/06/05/opensignal-announces-acquisition-of-brytlyt-gpu-based-data-analytics-visualization-technology",
+    "https://pitchbook.com/profiles/company/173319-22",
+    "https://dbdb.io/db/brytlyt"
+  ],
+  "lastVerified": "2026-10-27"
+}

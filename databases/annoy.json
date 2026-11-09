@@ -1,0 +1,165 @@
+{
+  "slug": "annoy",
+  "name": "Annoy",
+  "aliases": [
+    "Approximate Nearest Neighbors Oh Yeah"
+  ],
+  "tagline": "Spotify's memory-mapped random-projection-tree ANN library; stable but no longer evolving.",
+  "description": "Annoy is a C++ library with Python bindings that Spotify built for music recommendations. It builds forests of random projection trees into static, read-only files that are memory-mapped, so many processes can share one index with almost no load time. It supports Euclidean, Manhattan, cosine, Hamming and dot-product distances and can build on disk for data larger than RAM. The last release was 1.17.3 in June 2023 and Spotify's newer Voyager (HNSW) library is its practical successor, so Annoy is best treated as stable legacy.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No release since 1.17.3 (June 2023) and only sporadic commits; Spotify's HNSW-based Voyager library is the modern successor.",
+  "maturity": "legacy",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Spotify",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "1.17.3",
+    "date": "2023-06-14"
+  },
+  "writtenIn": [
+    "C++",
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Static index files memory-mapped per process; rebuild to add data."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Library API"
+  ],
+  "apis": [
+    "C++",
+    "Python"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Python",
+    "Go",
+    "Lua"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Memory-mapped index files share across processes with instant load",
+    "Very simple API with two tuning knobs",
+    "Can build indexes larger than RAM on disk"
+  ],
+  "weaknesses": [
+    "Indexes are immutable; any change needs a rebuild",
+    "Lower recall/speed than HNSW-based libraries",
+    "No active feature development"
+  ],
+  "useCases": [
+    "Read-only similarity indexes shipped to many workers",
+    "Legacy recommendation pipelines"
+  ],
+  "notIdealFor": [
+    "Frequently updated data",
+    "New projects (prefer HNSW libraries)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "hnswlib",
+    "faiss",
+    "usearch",
+    "scann"
+  ],
+  "tags": [
+    "vector",
+    "library",
+    "ann",
+    "spotify",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://github.com/spotify/annoy",
+    "repository": "https://github.com/spotify/annoy",
+    "changelog": "https://github.com/spotify/annoy/releases"
+  },
+  "ids": {
+    "github": "spotify/annoy",
+    "pypi": "annoy",
+    "hackerNewsQuery": "Spotify Annoy"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/spotify/annoy",
+    "https://pypi.org/project/annoy/",
+    "https://github.com/spotify/voyager"
+  ],
+  "lastVerified": "2026-10-27"
+}

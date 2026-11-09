@@ -1,0 +1,166 @@
+{
+  "slug": "locustdb",
+  "name": "LocustDB",
+  "aliases": [
+    "Locust DB"
+  ],
+  "tagline": "Experimental Rust columnar analytics engine built to scan billions of rows per second on one machine.",
+  "description": "LocustDB is Clemens Winter's experimental analytics database, begun at Dropbox in 2017 and continued as a personal open-source project. It ingests CSV or its own storage format into compressed, partitioned columns and runs a SQL subset (filters, aggregations, group by, order by, LIKE; no joins) through a vectorized, massively parallel query engine; the author's write-ups showed billions of records per second scanned on a single desktop. Data is append-only and can only be deleted or expired in bulk; recent 0.5 versions add durable on-disk storage with a write-ahead log, faster compaction and pcodec float compression. It is a single-developer research system: fast and instructive, but not production infrastructure.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Experimental single-developer project; last release 0.5.6 (Apr 2025) and last main-branch commit July 2025.",
+  "maturity": "emerging",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics",
+    "observability"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Clemens Winter",
+  "vendorType": "community",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "0.5.6",
+    "date": "2025-04-03"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single machine; all cores are used per query. Data must fit the partition and memory limits configured."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (subset, no joins)"
+  ],
+  "apis": [
+    "CLI REPL",
+    "Rust crate API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Vectorized, parallel execution that saturates all cores of one machine",
+    "Aggressive per-column compression (dictionary, delta, lz4, pcodec)",
+    "Fast ingestion of CSV and append-only data",
+    "Clean Rust codebase worth reading for query-engine design"
+  ],
+  "weaknesses": [
+    "Experimental and maintained by one person",
+    "No joins, updates or transactions; append-only data",
+    "Sparse documentation and few users"
+  ],
+  "useCases": [
+    "Ad-hoc analytics over large CSV or log datasets on one box",
+    "Exploring large append-only event or metric tables",
+    "Learning columnar query-engine techniques"
+  ],
+  "notIdealFor": [
+    "Production analytics needing joins or SLAs",
+    "Transactional workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "clickhouse",
+    "apache-datafusion",
+    "monetdb",
+    "chdb"
+  ],
+  "tags": [
+    "rust",
+    "columnar",
+    "analytics",
+    "experimental",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://github.com/cswinter/LocustDB",
+    "repository": "https://github.com/cswinter/LocustDB",
+    "changelog": "https://github.com/cswinter/LocustDB/blob/master/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "cswinter/LocustDB",
+    "hackerNewsQuery": "LocustDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/cswinter/LocustDB",
+    "https://crates.io/crates/locustdb",
+    "https://github.com/cswinter/LocustDB/blob/master/LICENSE",
+    "https://dbdb.io/db/locustdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

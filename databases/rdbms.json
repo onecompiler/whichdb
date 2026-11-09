@@ -1,0 +1,137 @@
+{
+  "slug": "rdbms",
+  "name": "RDBMS",
+  "aliases": [
+    "MIT RDBMS",
+    "Relational Data Management System (MIT)",
+    "RDMS"
+  ],
+  "tagline": "Early-1970s MIT relational data management system, presented at the 1974 SIGFIDET workshop.",
+  "description": "RDBMS, the Relational Data Management System, was one of the first implemented relational systems, built at MIT in the early 1970s and described by James Steuert and Jay Goldman in 'The Relational Data Management System: A Perspective' at the 1974 ACM SIGFIDET workshop, the same proceedings that introduced IBM's SEQUEL. It belongs to the first wave of prototypes that turned Codd's relational model into working software, alongside System R, Ingres and Honeywell's later MRDS. Little technical detail survives outside the paper, and the system was never distributed. It is listed here for the history of the relational model, not for any practical use.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Early-1970s MIT research system documented in a 1974 workshop paper; never distributed. Its ideas fed the relational systems that followed.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Massachusetts Institute of Technology",
+  "vendorType": "academic",
+  "initialRelease": 1974,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Not publicly released (research system)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never distributed; only the paper remains."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Relational query language (pre-SQL)"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One of the earliest working implementations of Codd's relational model",
+    "Primary source for how relational ideas were first put into practice"
+  ],
+  "weaknesses": [
+    "No surviving code or documentation beyond the workshop paper",
+    "Predates SQL, transactions theory and cost-based optimisation"
+  ],
+  "useCases": [
+    "History of databases and the relational model",
+    "Reading lists for database systems courses"
+  ],
+  "notIdealFor": [
+    "Any practical workload: nothing is available to run"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "ingres",
+    "ibm-db2"
+  ],
+  "tags": [
+    "research",
+    "historical",
+    "relational",
+    "mit",
+    "1970s"
+  ],
+  "links": {
+    "website": "https://doi.org/10.1145/800296.811518"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1145/800296.811518",
+    "https://vldb.org/dblp/db/conf/sigmod/sigmod74-1.html",
+    "https://dbdb.io/db/rdbms"
+  ],
+  "lastVerified": "2026-10-27"
+}

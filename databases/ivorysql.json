@@ -1,0 +1,181 @@
+{
+  "slug": "ivorysql",
+  "name": "IvorySQL",
+  "aliases": [
+    "Ivory SQL"
+  ],
+  "tagline": "Apache-licensed PostgreSQL distribution with an Oracle-compatible mode, PL/iSQL and Oracle packages.",
+  "description": "IvorySQL is an open-source distribution of PostgreSQL, sponsored by China's HighGo Software, that adds an Oracle compatibility layer you can switch on per instance. In Oracle mode it accepts Oracle-style syntax and data types, a PL/SQL-like procedural language (PL/iSQL), packages, built-in Oracle functions and a separate Oracle-compatible listener port, while the PostgreSQL mode stays stock. It tracks upstream closely (5.6 is based on PostgreSQL 18.6) and keeps extension compatibility, making it an open alternative to commercial Oracle-compatible Postgres builds. Compatibility coverage is still narrower than EDB's, and most of the community is in China.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "geospatial"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "IvorySQL community (sponsored by HighGo Software)",
+  "vendorType": "community",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "5.6",
+    "date": "2026-09-18"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial support through HighGo."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Same scaling model as PostgreSQL: vertical plus streaming replicas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL",
+    "PL/iSQL (Oracle-compatible)"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "libpq"
+  ],
+  "compatibleWith": [
+    "postgresql",
+    "oracle"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Oracle-compatible syntax, packages and PL/iSQL under a permissive license",
+    "Switchable compatibility mode keeps a normal PostgreSQL mode available",
+    "Tracks upstream PostgreSQL minor releases quickly",
+    "Works with the standard PostgreSQL extension ecosystem",
+    "Kubernetes operator and containers available"
+  ],
+  "weaknesses": [
+    "Oracle compatibility is less complete than commercial alternatives",
+    "Community and documentation are concentrated in China",
+    "Few managed cloud offerings",
+    "Smaller production track record than EDB or Postgres Pro"
+  ],
+  "useCases": [
+    "Open-source Oracle-to-PostgreSQL migrations",
+    "Running Oracle-style PL/SQL code on Postgres",
+    "Teams wanting Oracle syntax without commercial licensing"
+  ],
+  "notIdealFor": [
+    "Apps needing near-complete Oracle behavior parity",
+    "Organizations needing global 24x7 vendor support",
+    "Teams with no Oracle legacy (use stock PostgreSQL)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "edb-postgres-advanced-server",
+    "postgres-pro",
+    "oracle-database",
+    "opengauss"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "oracle-compatible",
+    "open-source",
+    "china"
+  ],
+  "links": {
+    "website": "https://www.ivorysql.org/",
+    "docs": "https://docs.ivorysql.org/",
+    "repository": "https://github.com/IvorySQL/IvorySQL",
+    "changelog": "https://github.com/IvorySQL/IvorySQL/releases"
+  },
+  "ids": {
+    "github": "IvorySQL/IvorySQL",
+    "dockerHub": "ivorysql/ivorysql",
+    "hackerNewsQuery": "IvorySQL"
+  },
+  "sources": [
+    "https://github.com/IvorySQL/IvorySQL/releases",
+    "https://github.com/IvorySQL/IvorySQL",
+    "https://docs.ivorysql.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

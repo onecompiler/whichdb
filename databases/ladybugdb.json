@@ -1,0 +1,180 @@
+{
+  "slug": "ladybugdb",
+  "name": "LadybugDB",
+  "aliases": [
+    "Ladybug",
+    "lbug"
+  ],
+  "tagline": "Community-maintained continuation of Kùzu: embedded columnar graph database with Cypher.",
+  "description": "LadybugDB is the actively maintained fork of Kùzu, created when Kùzu's repository was archived after Apple agreed to acquire its company in October 2025. It keeps the same design: an embedded, in-process property-graph database with columnar disk storage, CSR adjacency indexes, vectorized and factorized execution, serializable ACID transactions, Cypher, and native full-text and vector indexes, plus WebAssembly bindings. It remains MIT licensed and ships frequent releases (0.22.0 in October 2026), sponsored by Ladybug Memory. It is the natural choice for Kùzu users and anyone wanting a DuckDB-style graph database inside their app.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "graph-analytics",
+    "embedded",
+    "knowledge-graph",
+    "rag",
+    "vector-search"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "LadybugDB developers (sponsored by Ladybug Memory)",
+  "vendorType": "community",
+  "initialRelease": 2025,
+  "latestVersion": {
+    "version": "0.22.0",
+    "date": "2026-10-25"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Kùzu",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; enterprise support contracts available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "wasm",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process; disk-based columnar storage handles graphs larger than memory."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Cypher"
+  ],
+  "apis": [
+    "In-process C/C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Rust",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Maintained continuation of Kùzu with a compatible Cypher dialect",
+    "Columnar storage and factorized execution make multi-hop analytics fast in-process",
+    "Native full-text and vector indexes for local GraphRAG",
+    "MIT license and zero-ops embedding, including WebAssembly"
+  ],
+  "weaknesses": [
+    "Young project with a small maintainer base",
+    "Embedded only: no built-in client-server mode or replication",
+    "Strict schema (node and rel tables) must be declared up front"
+  ],
+  "useCases": [
+    "Embedded graph analytics in Python notebooks",
+    "Local GraphRAG and agent memory",
+    "Migrating from archived Kùzu",
+    "In-browser graph exploration via WebAssembly"
+  ],
+  "notIdealFor": [
+    "Multi-user OLTP servers",
+    "Distributed graphs",
+    "RDF/SPARQL workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kuzu",
+    "duckdb",
+    "memgraph",
+    "falkordb",
+    "neo4j",
+    "cozodb"
+  ],
+  "tags": [
+    "embedded",
+    "cypher",
+    "columnar",
+    "kuzu-fork",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://ladybugdb.com/",
+    "repository": "https://github.com/LadybugDB/ladybug",
+    "changelog": "https://github.com/LadybugDB/ladybug/releases"
+  },
+  "ids": {
+    "github": "LadybugDB/ladybug",
+    "npm": "@ladybugdb/core",
+    "pypi": "ladybug",
+    "hackerNewsQuery": "LadybugDB"
+  },
+  "brand": {
+    "color": "#D7263D"
+  },
+  "sources": [
+    "https://github.com/LadybugDB/ladybug",
+    "https://ladybugdb.com/",
+    "https://pypi.org/project/ladybug/"
+  ],
+  "lastVerified": "2026-10-27"
+}

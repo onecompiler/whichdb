@@ -1,0 +1,175 @@
+{
+  "slug": "sdb",
+  "name": "SDB",
+  "aliases": [
+    "sdb (string database)",
+    "radare sdb"
+  ],
+  "tagline": "Tiny embeddable C string key-value database from the radare2 project, built on djb's cdb format.",
+  "description": "SDB is a small string key-value database written in C by pancake (Sergi Alvarez) and maintained by the radare2 organisation, where it stores the metadata radare2 accumulates while analysing binaries. Data lives in memory and is synced atomically to a compact variant of D. J. Bernstein's cdb on-disk hash format, so a database file is never left half-written. On top of plain keys it adds namespaces, array syntax, JSON path get/set, numeric increment and decrement, glob-based deletes and a command-line shell; a companion mcsdbd daemon serves the data over the memcached protocol, and it compiles with Emscripten for JavaScript. It is MIT-licensed and actively maintained, with 2.5.x releases in 2026.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "configuration",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "pancake and the radare2 project",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "2.5.8",
+    "date": "2026-10-04"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "cdb",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix",
+      "wasm"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process library; whole databases are rewritten on sync, so it suits small to medium datasets."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "sdb command syntax"
+  ],
+  "apis": [
+    "C library API",
+    "CLI",
+    "memcached protocol (mcsdbd)"
+  ],
+  "compatibleWith": [
+    "memcached"
+  ],
+  "drivers": [
+    "C",
+    "Vala",
+    "Node.js"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very small, dependency-free C library that is easy to vendor",
+    "Atomic sync to cdb files means the on-disk database is never corrupted",
+    "Namespaces, arrays and JSON-path access on plain string keys",
+    "Battle-tested as radare2's internal metadata store",
+    "Permissive MIT license and active maintenance"
+  ],
+  "weaknesses": [
+    "Values are strings; no typed data, secondary indexes or queries",
+    "Sync rewrites the cdb file, which gets slow for large databases",
+    "Single-process: no concurrent writers or networking beyond the memcached shim"
+  ],
+  "useCases": [
+    "Embedded configuration and metadata storage in C programs",
+    "Storing analysis state in reverse-engineering tools",
+    "Lightweight persistent caches with a memcached front end"
+  ],
+  "notIdealFor": [
+    "Multi-user or networked databases",
+    "Large datasets",
+    "Relational queries"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lmdb",
+    "leveldb",
+    "kyoto-cabinet",
+    "unqlite",
+    "sqlite"
+  ],
+  "tags": [
+    "embedded",
+    "c",
+    "key-value",
+    "radare2",
+    "cdb"
+  ],
+  "links": {
+    "website": "https://github.com/radareorg/sdb",
+    "repository": "https://github.com/radareorg/sdb",
+    "changelog": "https://github.com/radareorg/sdb/releases"
+  },
+  "ids": {
+    "github": "radareorg/sdb",
+    "hackerNewsQuery": "radare sdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/radareorg/sdb",
+    "https://github.com/radareorg/sdb/releases",
+    "https://dbdb.io/db/sdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

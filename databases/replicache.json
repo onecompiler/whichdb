@@ -1,0 +1,157 @@
+{
+  "slug": "replicache",
+  "name": "Replicache",
+  "aliases": [
+    "Rocicorp Replicache"
+  ],
+  "tagline": "Client-side sync framework for instant web UIs; now free, open source and in maintenance mode.",
+  "description": "Replicache is a JavaScript framework that keeps a transactional key-value cache in the browser (persisted in IndexedDB) in sync with your own backend. Mutators run optimistically on the client and are replayed authoritatively on the server through push and pull endpoints you implement, which gives Linear-style instant UIs on any backend stack. Rocicorp has put it in maintenance mode: the code is open source, licence fees are gone, and the team's effort has moved to Zero. Existing users get fixes, but new projects should start with Zero.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Rocicorp put Replicache in maintenance mode, open-sourced it and dropped licence fees; new projects are directed to Zero.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "local-first",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Rocicorp",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "15.3.0",
+    "date": "2025-07-02"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Client cache sized for per-user data; server scale depends on your backend."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "causal"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-range scans (JavaScript API)"
+  ],
+  "apis": [
+    "Push/pull HTTP protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Backend-agnostic: implement push and pull on any server and database",
+    "Optimistic mutators with server-authoritative rebase",
+    "Proven in production apps with millions of end users"
+  ],
+  "weaknesses": [
+    "Maintenance mode; no new features",
+    "Key-value API means you build indexing and queries yourself",
+    "Server endpoints and conflict logic are entirely your job"
+  ],
+  "useCases": [
+    "Existing Replicache-based apps",
+    "Instant-feeling web UIs over a custom backend"
+  ],
+  "notIdealFor": [
+    "New projects (use Zero)",
+    "Native mobile apps"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocicorp-zero",
+    "electricsql",
+    "powersync",
+    "instantdb",
+    "rxdb"
+  ],
+  "tags": [
+    "sync",
+    "local-first",
+    "typescript",
+    "maintenance-mode"
+  ],
+  "links": {
+    "website": "https://replicache.dev/",
+    "docs": "https://doc.replicache.dev/",
+    "repository": "https://github.com/rocicorp/mono"
+  },
+  "ids": {
+    "npm": "replicache",
+    "hackerNewsQuery": "Replicache"
+  },
+  "brand": {},
+  "sources": [
+    "https://replicache.dev/",
+    "https://www.npmjs.com/package/replicache"
+  ],
+  "lastVerified": "2026-10-27"
+}

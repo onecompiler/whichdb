@@ -1,0 +1,180 @@
+{
+  "slug": "apache-datafusion",
+  "name": "Apache DataFusion",
+  "aliases": [
+    "DataFusion",
+    "Arrow DataFusion"
+  ],
+  "tagline": "Extensible Rust query engine library on Apache Arrow for building databases and data systems.",
+  "description": "Apache DataFusion is an embeddable SQL and DataFrame query engine written in Rust on Apache Arrow's columnar memory format. Rather than a finished database, it is a toolkit: a parser, cost-aware optimizer and multi-threaded vectorized executor with extension points for custom tables, functions, optimizer rules and execution plans. Systems such as InfluxDB 3 are built on it, and the Comet subproject accelerates Spark. DataFusion is the right choice when you are building a data product; end users looking for a ready-made database are better served by DuckDB or ClickHouse.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "embedded",
+    "lakehouse"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "55.2.0",
+    "date": "2026-10-07"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "wasm"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Single-process multi-threaded; distributed execution via the Ballista subproject or the host system."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "DataFrame API (Rust/Python)",
+    "Substrait"
+  ],
+  "apis": [
+    "Rust crate API",
+    "Python bindings",
+    "Arrow Flight SQL (examples)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Highly extensible: custom sources, UDFs, optimizer rules and plans",
+    "Fast vectorized execution on Arrow with good ClickBench results",
+    "Safe, embeddable Rust with no runtime dependencies",
+    "Reads Parquet, CSV, JSON, Avro and integrates with Iceberg/Delta crates",
+    "Large ecosystem of systems built on it (InfluxDB 3, Comet, many startups)"
+  ],
+  "weaknesses": [
+    "A library, not a database: no storage, server or users out of the box",
+    "Requires Rust expertise to build on",
+    "Frequent major versions with breaking API changes"
+  ],
+  "useCases": [
+    "Building custom databases and query engines",
+    "Embedded SQL in Rust services",
+    "Accelerating Spark via Comet",
+    "Query layer for time-series or log stores"
+  ],
+  "notIdealFor": [
+    "End users wanting a ready-made database",
+    "OLTP",
+    "Non-Rust teams without engineering capacity"
+  ],
+  "notableUsers": [
+    "InfluxData"
+  ],
+  "alternatives": [
+    "duckdb",
+    "apache-spark-sql",
+    "chdb",
+    "clickhouse",
+    "trino"
+  ],
+  "tags": [
+    "rust",
+    "arrow",
+    "query-engine",
+    "library",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://datafusion.apache.org/",
+    "docs": "https://datafusion.apache.org/user-guide/introduction.html",
+    "repository": "https://github.com/apache/datafusion",
+    "changelog": "https://github.com/apache/datafusion/tree/main/dev/changelog",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_DataFusion"
+  },
+  "ids": {
+    "github": "apache/datafusion",
+    "wikipedia": "Apache DataFusion",
+    "pypi": "datafusion",
+    "hackerNewsQuery": "DataFusion"
+  },
+  "brand": {},
+  "sources": [
+    "https://crates.io/crates/datafusion",
+    "https://datafusion.apache.org/",
+    "https://en.wikipedia.org/wiki/Apache_DataFusion"
+  ],
+  "lastVerified": "2026-10-27"
+}

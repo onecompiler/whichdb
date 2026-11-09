@@ -1,0 +1,147 @@
+{
+  "slug": "wonderdb",
+  "name": "WonderDB",
+  "aliases": [
+    "wonderdb"
+  ],
+  "tagline": "Small Java NoSQL caching store built on relational internals (B+trees, block cache, JDBC); abandoned 2015.",
+  "description": "WonderDB was a one-developer Java project by Vilas Athavale that applied relational database machinery (block caching, record-level locking, B+tree indexes, variable-size blocks, SQL and JDBC) to a disk-backed key-value cache. The published version exposed only get, put and remove against a local cache, with values in a disk-backed concurrent list, and the author reported around 33,000 operations per second for 1 KB payloads on an EC2 m3.xlarge. Development stopped in 2015 and the wonderdb.org domain is now parked. It is only of interest as a small code example.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since May 2015; wonderdb.org is a parked domain. Use MapDB, Ehcache or Chronicle Map for Java caching.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "relational"
+  ],
+  "workloads": [
+    "caching"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded"
+  ],
+  "developer": "Vilas Athavale",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "No licence specified (source published on GitHub)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java API (get/put/remove)",
+    "SQL"
+  ],
+  "apis": [
+    "Java API",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Shows how B+trees, block caching and record locking can back a cache",
+    "Small, readable Java code"
+  ],
+  "weaknesses": [
+    "Abandoned single-developer project",
+    "No licence, so reuse is legally unclear",
+    "Only local caching APIs were finished"
+  ],
+  "useCases": [
+    "Code reading on cache and B+tree internals",
+    "Historical catalogue entry"
+  ],
+  "notIdealFor": [
+    "Any production use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mapdb",
+    "ehcache",
+    "chronicle-map",
+    "h2"
+  ],
+  "tags": [
+    "java",
+    "cache",
+    "key-value",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/dreamdbvilas/wonderdb",
+    "repository": "https://github.com/dreamdbvilas/wonderdb"
+  },
+  "ids": {
+    "github": "dreamdbvilas/wonderdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/dreamdbvilas/wonderdb",
+    "https://web.archive.org/web/20130707133200/http://wonderdb.org"
+  ],
+  "lastVerified": "2026-10-27"
+}

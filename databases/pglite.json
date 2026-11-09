@@ -1,0 +1,183 @@
+{
+  "slug": "pglite",
+  "name": "PGlite",
+  "aliases": [
+    "PGlite by Electric"
+  ],
+  "tagline": "Real PostgreSQL compiled to WebAssembly: an embeddable Postgres for browsers, Node, Bun and Deno.",
+  "description": "PGlite is a WASM build of PostgreSQL packaged as a TypeScript library by ElectricSQL. Rather than emulating Postgres or running a Linux VM, it compiles Postgres' single-user mode to WebAssembly and wraps it with a JS API, so you get genuine Postgres SQL, types and many extensions (pgvector, PostGIS, pg_trgm and more) in about 3 MB gzipped. Data can live in memory, IndexedDB, OPFS or the filesystem, and it integrates with Electric's sync engine for local-first apps. It has become a popular choice for in-browser demos, tests and dev databases, but it is single-connection and not a replacement for a Postgres server.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "embedded",
+    "local-first",
+    "mobile-offline",
+    "edge",
+    "vector-search"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "ElectricSQL",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "0.5.12",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "C",
+    "TypeScript"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 / PostgreSQL License",
+    "spdx": "Apache-2.0 OR PostgreSQL"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "wasm",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single connection, single process; best for local datasets up to a few GB."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "JavaScript/TypeScript API",
+    "PostgreSQL wire protocol (via pglite-socket)"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": true
+  },
+  "strengths": [
+    "Genuine PostgreSQL semantics in the browser and JS runtimes",
+    "Small download (about 3 MB gzipped) with no native dependencies",
+    "Loads Postgres extensions such as pgvector and PostGIS",
+    "Persists to IndexedDB, OPFS or the filesystem",
+    "Fast, disposable Postgres instances for tests and CI"
+  ],
+  "weaknesses": [
+    "Single-user mode: one connection at a time",
+    "Pre-1.0 API that still changes between releases",
+    "Performance below native Postgres, especially for large data",
+    "Extension support limited to those ported to WASM"
+  ],
+  "useCases": [
+    "Local-first web apps with Electric sync",
+    "In-browser SQL playgrounds and tutorials",
+    "Ephemeral Postgres for unit tests in Node/Bun",
+    "Client-side vector search with pgvector"
+  ],
+  "notIdealFor": [
+    "Multi-user production servers",
+    "Large datasets or heavy concurrency",
+    "Non-JavaScript environments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "duckdb",
+    "postgresql",
+    "electricsql",
+    "libsql",
+    "turso-database"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "wasm",
+    "browser",
+    "local-first",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://pglite.dev/",
+    "docs": "https://pglite.dev/docs/",
+    "repository": "https://github.com/electric-sql/pglite",
+    "changelog": "https://github.com/electric-sql/pglite/releases"
+  },
+  "ids": {
+    "github": "electric-sql/pglite",
+    "npm": "@electric-sql/pglite",
+    "hackerNewsQuery": "PGlite"
+  },
+  "sources": [
+    "https://github.com/electric-sql/pglite",
+    "https://www.npmjs.com/package/@electric-sql/pglite",
+    "https://pglite.dev/docs/"
+  ],
+  "lastVerified": "2026-10-27"
+}

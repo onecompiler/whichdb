@@ -1,0 +1,144 @@
+{
+  "slug": "unisql",
+  "name": "UniSQL",
+  "aliases": [
+    "UniSQL/X",
+    "UniSQL/M"
+  ],
+  "tagline": "Won Kim's early-1990s object-relational DBMS (UniSQL/X) and multidatabase server (UniSQL/M).",
+  "description": "UniSQL was an Austin, Texas company founded in 1990 by Won Kim, previously chief architect of MCC's ORION object-oriented database. Its UniSQL/X server, shipped in March 1992, unified SQL with an object model (classes, inheritance, methods, collection-valued attributes), making it one of the first commercial object-relational databases, ahead of Illustra. UniSQL/M (1993) added a multidatabase layer over relational and legacy sources, which Versant licensed; Cincom also resold the server. The independent company did not last; dbdb.io records it as acquired by Korea Computer Communications in 1997, and the products have not been sold for many years.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Late-1990s products no longer sold; dbdb.io records UniSQL as acquired by Korea Computer Communications in 1997. Object-relational ideas live on in PostgreSQL.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "UniSQL, Inc.",
+  "vendorType": "company",
+  "initialRelease": 1992,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL/X"
+  ],
+  "apis": [
+    "C API",
+    "C++ API",
+    "Embedded SQL/X"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One of the first commercial object-relational servers, combining SQL with classes and inheritance",
+    "UniSQL/M federated queries across relational and pre-relational sources"
+  ],
+  "weaknesses": [
+    "Products discontinued for decades",
+    "Small vendor that could not compete with Oracle, Informix and IBM"
+  ],
+  "useCases": [
+    "History of object-relational databases",
+    "Reading the UniSQL/X papers on unifying SQL and objects"
+  ],
+  "notIdealFor": [
+    "Any current workload"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "ibm-informix",
+    "versant-object-database",
+    "objectstore"
+  ],
+  "tags": [
+    "object-relational",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/19980127021416/http://www.unisql.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "UniSQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.techmonitor.ai/?p=158679",
+    "https://dbdb.io/db/unisql",
+    "https://rmarcus.info/dbscholar/papers/2757"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,160 @@
+{
+  "slug": "starcounter",
+  "name": "Starcounter",
+  "aliases": [],
+  "tagline": "In-memory .NET application platform where C# classes are database tables, with no ORM in between.",
+  "description": "Starcounter, built in Stockholm since 2006, combines an ACID in-memory database with a .NET application runtime in what it calls a VMDBMS: database objects live in the same memory as application objects, so C# classes are tables, you query them with SQL, and there is no ORM or network hop. Durability comes from transaction logs written to disk. Version 2.0 (2013) bundled a web framework with server-side view models synced to the browser by JSON patches; 3.0 (release candidate December 2019, launched 2020) moved to .NET Core with a cross-platform CLI and Windows failover clustering. The company now markets an AI-oriented enterprise software platform built on the same engine, and public documentation still centres on 3.0.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "in-memory",
+    "embedded"
+  ],
+  "developer": "Starcounter AB",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "3.0",
+    "date": "2020"
+  },
+  "writtenIn": [
+    "C++",
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Starcounter End User License Agreement"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensing is arranged with the vendor."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single in-memory node sized to RAM; 3.0 supports Windows Failover Cluster for HA."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No ORM: C# classes are persisted directly as database tables",
+    "Application code and data share memory, removing network round-trips",
+    "ACID transactions with disk logging for durability",
+    "Runs on .NET Core on Windows and Linux in 3.0"
+  ],
+  "weaknesses": [
+    "Tied to .NET; other languages cannot use it directly",
+    "Proprietary, with limited public information on current releases",
+    "Dataset must fit in RAM on a single node",
+    "Small ecosystem outside its Swedish customer base"
+  ],
+  "useCases": [
+    "Line-of-business .NET applications needing very fast transactions",
+    "Retail and supply-chain systems with heavy in-memory workloads"
+  ],
+  "notIdealFor": [
+    "Polyglot microservices",
+    "Datasets larger than server memory",
+    "Teams wanting open source"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-timesten",
+    "sap-hana",
+    "soliddb",
+    "ravendb",
+    "objectbox"
+  ],
+  "tags": [
+    "in-memory",
+    "dotnet",
+    "csharp",
+    "application-platform",
+    "sweden"
+  ],
+  "links": {
+    "website": "https://www.starcounter.com/",
+    "docs": "https://docs.starcounter.io/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Starcounter"
+  },
+  "ids": {
+    "wikipedia": "Starcounter",
+    "hackerNewsQuery": "Starcounter"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.starcounter.com/",
+    "https://docs.starcounter.io/",
+    "https://en.wikipedia.org/wiki/Starcounter"
+  ],
+  "lastVerified": "2026-10-27"
+}

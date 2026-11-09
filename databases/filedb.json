@@ -1,0 +1,97 @@
+{
+  "slug": "filedb",
+  "name": "FileDB",
+  "aliases": ["Numeria FileDB"],
+  "tagline": "Tiny C# library that stores many files inside a single archive file, keyed by GUID; LiteDB's predecessor.",
+  "description": "FileDB is a small MIT-licensed .NET 3.5 library by Mauricio David that stores, retrieves and deletes files of any size inside one container file on disk, so an application can keep uploads or attachments organised without a database server or thousands of loose files. Each stored file gets a GUID plus metadata (name, length, MIME type), and the API offers Store, Read, Delete, ListFiles, Shrink to reclaim space and Export, either as static helpers or through an instance, with ASP.NET MVC examples. It began on CodePlex and moved to GitHub in 2015 with no further development; the author went on to build LiteDB, whose FileStorage feature covers the same need inside a full embedded document database.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No development since the 2015 move from CodePlex; the author's LiteDB (with FileStorage) is the successor.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["embedded", "content-management"],
+  "architecture": ["embedded"],
+  "developer": "Mauricio David",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "writtenIn": ["C#"],
+  "license": { "type": "permissive", "name": "MIT License", "spdx": "MIT" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "none", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": [".NET API (store/read/delete by GUID)"],
+  "apis": [".NET API"],
+  "compatibleWith": [],
+  "drivers": ["C#"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Keeps many files in one container file: easy to back up, copy or ship",
+    "Dead-simple API with no server or configuration",
+    "MIT licence and a codebase small enough to read in an afternoon"
+  ],
+  "weaknesses": [
+    "Unmaintained and targets .NET Framework 3.5",
+    "No transactions, locking for concurrent writers or search by anything but GUID",
+    "Superseded by the same author's LiteDB"
+  ],
+  "useCases": [
+    "Bundling attachments or uploads for small desktop or intranet apps",
+    "Reading a minimal single-file blob store implementation"
+  ],
+  "notIdealFor": ["Concurrent multi-user writes", "Large-scale file serving", "New projects (use LiteDB or SQLite)"],
+  "notableUsers": [],
+  "alternatives": ["litedb", "sqlite", "lmdb"],
+  "tags": ["dotnet", "csharp", "file-storage", "embedded", "single-file"],
+  "links": {
+    "website": "https://github.com/mbdavid/FileDB",
+    "repository": "https://github.com/mbdavid/FileDB"
+  },
+  "ids": {
+    "github": "mbdavid/FileDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/mbdavid/FileDB",
+    "https://dbdb.io/db/filedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,100 @@
+{
+  "slug": "ennodb",
+  "name": "EnnoDB",
+  "aliases": ["ennodb"],
+  "tagline": "Deliberately naive C key-value store served over FastCGI, built on a crit-bit tree and an append-only log.",
+  "description": "EnnoDB is a tiny hobby key-value database written in C by Enno Rehling and published in June 2015; its own README warns against using it for anything serious. It runs as a FastCGI application behind a web server such as nginx, exposing keys under a /k/ endpoint for get and set and a /l/ endpoint for listing keys by prefix. Data lives in memory in a crit-bit tree, and every write is appended to a binary log that is replayed on start-up, with an optional read-only mode set from an .ini file. Versions 1.0 through 1.4 all shipped within ten days in June 2015, and the repository has been idle since 2016. It is a compact example of a log-structured in-memory store, not a production system.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Hobby project; versions 1.0-1.4 released in June 2015, no commits since 2016.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["caching"],
+  "architecture": ["single-node", "in-memory", "client-server"],
+  "developer": "Enno Rehling",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": { "version": "1.4", "date": "2015-06-22" },
+  "writtenIn": ["C"],
+  "license": { "type": "permissive", "name": "ISC License", "spdx": "ISC" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "none", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["HTTP key and prefix lookups"],
+  "apis": ["HTTP via FastCGI"],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very small, readable C codebase: crit-bit index plus append-only log",
+    "Prefix listing comes for free from the crit-bit tree",
+    "ISC licence allows any reuse"
+  ],
+  "weaknesses": [
+    "Author explicitly says not to use it for serious projects",
+    "Whole dataset must fit in RAM and the log is never compacted",
+    "No authentication, replication or concurrency guarantees"
+  ],
+  "useCases": [
+    "Learning how log-replay key-value stores work",
+    "Toy HTTP key-value service behind nginx"
+  ],
+  "notIdealFor": ["Any production data", "Datasets larger than memory"],
+  "notableUsers": [],
+  "alternatives": ["redis", "memcached", "leveldb", "sqlite"],
+  "tags": ["key-value", "fastcgi", "hobby", "c"],
+  "links": {
+    "website": "https://github.com/ennorehling/ennodb",
+    "repository": "https://github.com/ennorehling/ennodb",
+    "changelog": "https://github.com/ennorehling/ennodb/blob/master/CHANGES.md"
+  },
+  "ids": {
+    "github": "ennorehling/ennodb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/ennorehling/ennodb",
+    "https://github.com/ennorehling/ennodb/blob/master/CHANGES.md",
+    "https://dbdb.io/db/ennodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

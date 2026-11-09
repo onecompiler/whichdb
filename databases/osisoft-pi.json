@@ -1,0 +1,179 @@
+{
+  "slug": "osisoft-pi",
+  "name": "OSIsoft PI",
+  "aliases": [
+    "AVEVA PI System",
+    "PI System",
+    "PI Server",
+    "PI Data Archive"
+  ],
+  "tagline": "The dominant industrial data historian: time-series storage plus asset context for plants and grids.",
+  "description": "The PI System is an industrial data platform built around the PI Data Archive, a time-series historian that collects readings from control systems, PLCs and sensors through hundreds of interfaces, filters them with exception and swinging-door compression, and keeps decades of operational history online. PI Asset Framework adds an asset hierarchy, templates and calculations on top, and tools such as PI Vision and the PI DataLink Excel add-in put the data in front of engineers. OSIsoft, which built it from 1980, was acquired by AVEVA in March 2021 (AVEVA is itself owned by Schneider Electric), and it is now sold as AVEVA PI System, with PI Server 2024 R2 the current documented release and cloud services through AVEVA CONNECT. It is the default historian in process industries and utilities, but it is proprietary, Windows-based and priced for enterprises.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "OSIsoft was acquired by AVEVA in March 2021; the product is now marketed as AVEVA PI System.",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "hierarchical"
+  ],
+  "workloads": [
+    "time-series",
+    "iot",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "AVEVA (formerly OSIsoft)",
+  "vendorType": "company",
+  "initialRelease": 1980,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (AVEVA)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold through AVEVA subscription and enterprise agreements; pricing is not published."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "AVEVA CONNECT data services",
+      "provider": "AVEVA",
+      "url": "https://www.aveva.com/en/products/aveva-pi-system/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Scales up per server; PI collectives provide high availability, and multi-site data is aggregated via PI-to-PI or AVEVA CONNECT."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (PI SQL Data Access)",
+    "PI Performance Equations"
+  ],
+  "apis": [
+    "PI Web API (REST)",
+    "AF SDK (.NET)",
+    "OPC UA/DA interfaces"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    ".NET",
+    "REST"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "De facto standard historian in oil and gas, power, chemicals and mining",
+    "Hundreds of connectors to PLC, DCS, SCADA and OPC sources",
+    "Exception and swinging-door compression keep decades of high-frequency data online",
+    "Asset Framework adds hierarchy, templates and calculations around raw tags",
+    "Familiar engineer tooling: PI Vision dashboards and the PI DataLink Excel add-in"
+  ],
+  "weaknesses": [
+    "Proprietary, Windows-based server stack with enterprise pricing",
+    "Lossy compression settings must be tuned up front or detail is gone for good",
+    "Tag-centric model and APIs feel dated next to SQL time-series databases",
+    "Bulk analytics usually means exporting to a data lake or warehouse"
+  ],
+  "useCases": [
+    "Plant and process historian for OT data",
+    "Grid, pipeline and utility network monitoring",
+    "Equipment condition monitoring and predictive maintenance feeds",
+    "Regulatory records of operational data"
+  ],
+  "notIdealFor": [
+    "IT observability metrics and logs",
+    "Developer-first apps wanting SQL and open formats",
+    "Small budgets or Linux-only shops"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "influxdb",
+    "timescaledb",
+    "questdb",
+    "apache-iotdb",
+    "tdengine",
+    "kdb-plus"
+  ],
+  "tags": [
+    "historian",
+    "industrial",
+    "ot",
+    "time-series",
+    "aveva",
+    "iiot"
+  ],
+  "links": {
+    "website": "https://www.aveva.com/en/products/aveva-pi-system/",
+    "docs": "https://docs.aveva.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/OSIsoft"
+  },
+  "ids": {
+    "wikipedia": "OSIsoft",
+    "hackerNewsQuery": "OSIsoft PI"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.aveva.com/en/products/aveva-pi-system/",
+    "https://www.aveva.com/en/products/aveva-pi-server/",
+    "https://en.wikipedia.org/wiki/OSIsoft",
+    "https://docs.aveva.com/bundle/pi-server-install/page/1022419.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

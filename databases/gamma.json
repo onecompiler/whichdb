@@ -1,0 +1,147 @@
+{
+  "slug": "gamma",
+  "name": "GAMMA",
+  "aliases": [
+    "Gamma database machine"
+  ],
+  "tagline": "Wisconsin's 1980s shared-nothing parallel database machine that proved hash-partitioned query plans.",
+  "description": "Gamma was a parallel relational database machine built by David DeWitt's group at the University of Wisconsin-Madison. The first prototype ran on 20 VAX 11/750s in 1985 and was ported to a 32-node Intel iPSC/2 hypercube in 1989. It combined three ideas that now underpin every MPP warehouse: shared-nothing nodes with their own disks, horizontal partitioning (declustering) of every relation across those disks, and hash-based parallel joins and aggregates scheduled as dataflow with almost no central coordination. Its published speedup and scaleup measurements became a reference point for the field. Teradata, Greenplum, Redshift and similar systems follow the same blueprint.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (1984–early 1990s); its shared-nothing, hash-partitioned design lives on in Teradata, Greenplum and other MPP warehouses.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "University of Wisconsin-Madison",
+  "vendorType": "academic",
+  "initialRelease": 1985,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Not publicly released (research code)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never sold or distributed; known through papers."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Ran on up to 32 processors and disks; experiments showed linear speedup for selections and joins."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "gdl (QUEL variant)"
+  ],
+  "apis": [
+    "Embedded queries in C"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pioneered shared-nothing parallel query execution on commodity processors",
+    "Declustered every relation across all disks for parallel scans",
+    "Hash-based parallel join and aggregation algorithms without central control",
+    "Published speedup and scaleup methodology still used to evaluate MPP systems"
+  ],
+  "weaknesses": [
+    "Never released as usable software",
+    "Hardware-specific to VAX and iPSC/2 multicomputers"
+  ],
+  "useCases": [
+    "Teaching parallel database architecture",
+    "Background reading before designing an MPP engine",
+    "Understanding where partitioned hash joins came from"
+  ],
+  "notIdealFor": [
+    "Any practical deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "teradata-vantage",
+    "greenplum",
+    "apache-cloudberry",
+    "grace",
+    "bubba"
+  ],
+  "tags": [
+    "parallel-database",
+    "shared-nothing",
+    "database-machine",
+    "research",
+    "historical"
+  ],
+  "links": {
+    "website": "https://pages.cs.wisc.edu/~dewitt/includes/paralleldb/ieee90.pdf"
+  },
+  "ids": {
+    "hackerNewsQuery": "Gamma database machine"
+  },
+  "brand": {},
+  "sources": [
+    "https://pages.cs.wisc.edu/~dewitt/includes/paralleldb/ieee90.pdf",
+    "https://dbdb.io/db/gamma"
+  ],
+  "lastVerified": "2026-10-27"
+}

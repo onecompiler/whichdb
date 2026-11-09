@@ -1,0 +1,140 @@
+{
+  "slug": "mdbms",
+  "name": "MDBMS",
+  "aliases": [],
+  "tagline": "Small late-1990s relational DBMS for Linux and BSD distributed via the Dutch firm HintTech; abandoned.",
+  "description": "MDBMS was a compact relational database server written in C by Marty Bochane and distributed around 1998–2000 through the website of the Dutch software company HintTech, in source and binary form for Linux and BSD (it was also reported to run on Alpha Linux and Solaris). It offered SQL access and, late in its life, an alpha-quality JDBC driver; the last version listed was 0.99 Beta 9, followed by a source-only security fix. The project page has since disappeared and no maintained source tree is known. It is listed as a historical footnote of the early free-SQL-on-Linux era; use SQLite, PostgreSQL or MySQL for anything real.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Abandoned around 2000 at version 0.99 Beta 9; the hinttech.com project page is gone. Use PostgreSQL or SQLite instead.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Marty Bochane (HintTech)",
+  "vendorType": "community",
+  "initialRelease": 1998,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Unclear (distributed free in source and binary form)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Was a free download; no longer distributed anywhere."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC (alpha)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very small footprint for a SQL server of its era",
+    "Shipped with source for Linux and BSD systems"
+  ],
+  "weaknesses": [
+    "Abandoned around 2000 and no longer downloadable",
+    "Never left beta; SQL coverage and durability guarantees are undocumented"
+  ],
+  "useCases": [
+    "Historical reference on late-1990s free SQL servers",
+    "Context for the mSQL/MySQL era of Linux databases"
+  ],
+  "notIdealFor": [
+    "Any new or production system"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "sqlite",
+    "mysql"
+  ],
+  "tags": [
+    "sql",
+    "historical",
+    "discontinued",
+    "linux"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/19991010185033/http://www.hinttech.com:80/mdbms/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/19991010185033/http://www.hinttech.com:80/mdbms/",
+    "http://web.archive.org/web/20001217200900/http://www.hinttech.com:80/mdbms/download.html",
+    "https://dbdb.io/db/mdbms"
+  ],
+  "lastVerified": "2026-10-27"
+}

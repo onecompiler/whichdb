@@ -1,0 +1,153 @@
+{
+  "slug": "tdbengine",
+  "name": "Tdbengine",
+  "aliases": [
+    "tdbengine",
+    "TDB",
+    "Turbo-DataBase"
+  ],
+  "tagline": "Small German relational database with a built-in EASY language for CGI web apps; descended from DOS TDB.",
+  "description": "tdbengine came from tdb Software Service GmbH as the successor to its DOS-era TDB database: a roughly 400 KB relational engine with an integrated programming language, EASY, that ran behind a web server through the CGI interface. It handled tables, indexes, full-text indexing, memos and BLOBs and a semaphore scheme for concurrent access, on Linux, FreeBSD and Windows, and had a German-speaking community building CMS, wiki and bug-tracking applications on it in the early 2000s. Version 6.4.03 was the last listed, the community site stopped changing around 2005-2010, and tdbengine.org now redirects elsewhere. tdb Software itself now sells unrelated business software.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No releases after 6.4.03; the tdbengine.org community site is gone and the vendor now sells unrelated software. Use SQLite, PostgreSQL or MariaDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "full-text-search"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "tdb Software Service GmbH",
+  "vendorType": "company",
+  "initialRelease": 1997,
+  "latestVersion": {
+    "version": "6.4.03",
+    "date": "2005"
+  },
+  "writtenIn": [
+    "Pascal"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Was sold commercially rather than as freeware; no longer offered."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "EASY"
+  ],
+  "apis": [
+    "CGI"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tiny footprint with the database and application language in one binary",
+    "Built-in full-text indexing and BLOB support",
+    "Simple CGI deployment behind any web server"
+  ],
+  "weaknesses": [
+    "Discontinued; no downloads or support remain",
+    "Proprietary EASY language instead of SQL",
+    "CGI process model scales poorly"
+  ],
+  "useCases": [
+    "Maintaining legacy tdbengine web applications",
+    "History of small web-era databases"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "postgresql",
+    "mariadb",
+    "firebird"
+  ],
+  "tags": [
+    "germany",
+    "cgi",
+    "web",
+    "relational",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20141223033133/http://www.tdbengine.org/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20141223033133/http://www.tdbengine.org/",
+    "https://web.archive.org/web/2014/http://www.tdbengine.org/text/spezial/uebersicht_en.html",
+    "https://dbdb.io/db/tdbengine"
+  ],
+  "lastVerified": "2026-10-27"
+}

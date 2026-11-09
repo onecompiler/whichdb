@@ -1,0 +1,173 @@
+{
+  "slug": "infinity",
+  "name": "Infinity (InfiniFlow)",
+  "aliases": [
+    "Infinity",
+    "InfiniFlow Infinity"
+  ],
+  "tagline": "AI-native C++ database for hybrid search over dense, sparse, multi-vector (tensor) and full text.",
+  "description": "Infinity is an open-source database from InfiniFlow, the team behind the RAGFlow RAG engine, built specifically for retrieval in LLM applications. It stores tables with dense vectors, sparse vectors, tensors for late-interaction (ColBERT-style) ranking and full-text fields, and fuses them in one query with reciprocal-rank or weighted fusion and re-ranking. It runs as a server or embedded in Python and is written in modern C++20. A capable engine for advanced hybrid RAG, though its ecosystem and track record outside RAGFlow are still small.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "search",
+    "relational"
+  ],
+  "workloads": [
+    "vector-search",
+    "full-text-search",
+    "rag"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "InfiniFlow",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "0.7.4",
+    "date": "2026-10-09"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node server or embedded; cluster mode is still maturing."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Infinity Python API",
+    "HTTP API"
+  ],
+  "apis": [
+    "REST/JSON",
+    "Thrift",
+    "Python embedded"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Dense, sparse, tensor and full-text search fused in one query",
+    "Native late-interaction (ColBERT) tensor reranking",
+    "Embedded Python mode",
+    "Proven as the retrieval layer behind RAGFlow"
+  ],
+  "weaknesses": [
+    "Pre-1.0 with breaking changes",
+    "Python is the only first-class SDK",
+    "Limited distributed/HA story",
+    "Small community outside the RAGFlow user base"
+  ],
+  "useCases": [
+    "Advanced hybrid RAG retrieval",
+    "RAGFlow deployments",
+    "Experimenting with ColBERT-style multi-vector ranking"
+  ],
+  "notIdealFor": [
+    "Large multi-node production clusters",
+    "Non-Python stacks",
+    "Transactional workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vespa",
+    "milvus",
+    "qdrant",
+    "elasticsearch",
+    "weaviate"
+  ],
+  "tags": [
+    "vector-database",
+    "hybrid-search",
+    "rag",
+    "c++",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://infiniflow.org/",
+    "docs": "https://infiniflow.org/docs/",
+    "repository": "https://github.com/infiniflow/infinity",
+    "changelog": "https://github.com/infiniflow/infinity/releases"
+  },
+  "ids": {
+    "github": "infiniflow/infinity",
+    "dockerHub": "infiniflow/infinity",
+    "pypi": "infinity-sdk",
+    "hackerNewsQuery": "InfiniFlow Infinity"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/infiniflow/infinity",
+    "https://github.com/infiniflow/infinity/releases",
+    "https://pypi.org/project/infinity-sdk/"
+  ],
+  "lastVerified": "2026-10-27"
+}

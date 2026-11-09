@@ -1,0 +1,208 @@
+{
+  "slug": "sap-hana",
+  "name": "SAP HANA",
+  "aliases": [
+    "HANA",
+    "SAP HANA Cloud",
+    "HANA 2.0"
+  ],
+  "tagline": "SAP's in-memory columnar HTAP database, the mandatory engine under S/4HANA.",
+  "description": "SAP HANA is an in-memory, column-oriented database that runs transactions and analytics on the same tables, and it is the only database supported by S/4HANA, which is why most of its installed base is SAP customers. Beyond SQL it bundles graph, spatial, JSON document store, a vector engine and a knowledge-graph engine, and HANA Cloud adds a data lake tier and native storage extension for warm data. On-premises customers run HANA 2.0 SPS08; HANA Cloud ships quarterly releases. Outside SAP landscapes it is rarely chosen, because RAM-sized licensing and hardware make it costly and the ecosystem is SAP-centric.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "document",
+    "graph",
+    "spatial",
+    "vector"
+  ],
+  "workloads": [
+    "htap",
+    "oltp",
+    "olap",
+    "real-time-analytics",
+    "vector-search",
+    "geospatial",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "SAP SE",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "HANA Cloud QRC 2/2026",
+    "date": "2026-06"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "On-prem licensed largely by memory; HANA Cloud billed in capacity units. HANA Cloud free tier and HANA express edition for development."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp",
+      "alibaba-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "SAP HANA Cloud",
+      "provider": "SAP (on AWS, Azure, GCP, Alibaba Cloud)",
+      "url": "https://www.sap.com/products/data-cloud/hana.html"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Scale-out across multiple hosts and system replication for HA/DR; capacity is bounded by expensive RAM."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "SQLScript",
+    "openCypher"
+  ],
+  "apis": [
+    "SQLDBC",
+    "ODBC",
+    "JDBC",
+    "OData (via XS/CAP)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "C#",
+    "Go",
+    "C++",
+    "ABAP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Columnar in-memory storage runs analytical queries directly on live transactional data",
+    "Required and fully optimised for S/4HANA and SAP BW/4HANA",
+    "Multi-model in one engine: graph, spatial, JSON documents, vectors and knowledge graphs",
+    "Dictionary compression keeps column data several times smaller than row stores",
+    "System replication gives near-zero-RPO failover for SAP landscapes"
+  ],
+  "weaknesses": [
+    "Memory-based licensing and certified hardware make it expensive",
+    "Ecosystem and skills are concentrated in SAP projects",
+    "Large instances have long restart/load times despite persistence",
+    "Rarely a sensible choice for non-SAP greenfield applications"
+  ],
+  "useCases": [
+    "Running SAP S/4HANA and BW/4HANA",
+    "Real-time operational reporting on ERP data",
+    "Embedding analytics and ML (PAL/APL) in SAP business processes",
+    "Grounding SAP Joule/AI scenarios with the vector and knowledge-graph engines"
+  ],
+  "notIdealFor": [
+    "Non-SAP applications on a budget",
+    "Datasets far larger than affordable RAM",
+    "Teams wanting open-source tooling and portability"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-database",
+    "sql-server",
+    "ibm-db2",
+    "singlestore",
+    "snowflake",
+    "oracle-exadata"
+  ],
+  "tags": [
+    "sap",
+    "in-memory",
+    "columnar",
+    "htap",
+    "erp"
+  ],
+  "links": {
+    "website": "https://www.sap.com/products/data-cloud/hana.html",
+    "docs": "https://help.sap.com/docs/SAP_HANA_PLATFORM",
+    "wikipedia": "https://en.wikipedia.org/wiki/SAP_HANA"
+  },
+  "ids": {
+    "stackoverflowTag": "hana",
+    "wikipedia": "SAP HANA",
+    "npm": "@sap/hana-client",
+    "pypi": "hdbcli",
+    "hackerNewsQuery": "SAP HANA"
+  },
+  "brand": {
+    "color": "#0FAAFF",
+    "simpleIcon": "sap"
+  },
+  "sources": [
+    "https://community.sap.com/t5/developer-news/sap-developer-new-july-3rd-2026/ba-p/14432288",
+    "https://www.sap.com/products/data-cloud/hana/technical/whats-new-2-0.html",
+    "https://en.wikipedia.org/wiki/SAP_HANA"
+  ],
+  "lastVerified": "2026-10-27"
+}

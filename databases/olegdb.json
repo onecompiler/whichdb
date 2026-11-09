@@ -1,0 +1,161 @@
+{
+  "slug": "olegdb",
+  "name": "OlegDB",
+  "aliases": [],
+  "tagline": "Tongue-in-cheek but working C/Go key-value store: mmap hash table, LZ4, splay-tree cursors and a REST API.",
+  "description": "OlegDB is a small key-value datastore that began in 2014 as a joke about NoSQL marketing (its consistency model is 'MAYO') but is real, working software. The core is a C library, liboleg, implementing a concurrent hash table keyed with MurmurHash3, an optional splay tree for ordered cursor iteration and prefix matching, LZ4 value compression, key expiry, a memory-mapped values file and an append-only log for persistence that can be compacted; a Go server puts an HTTP interface in front of it, and the library can be embedded directly. The last tagged release is 0.1.7 (April 2020), with a single compile fix pushed in October 2025. Fun to read and hack on; not something to bet a product on.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No feature work since the 0.1.7 tag (April 2020); only an occasional build fix (October 2025).",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Quinlan Pfiffer and Kyle Terry",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.1.7",
+    "date": "2020-04-26"
+  },
+  "writtenIn": [
+    "C",
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "HTTP REST",
+    "C API (liboleg)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Small, well-documented C codebase that is pleasant to read",
+    "Ordered iteration and prefix matching via splay trees",
+    "Embeddable library or HTTP server"
+  ],
+  "weaknesses": [
+    "Hobby project with no active development",
+    "No transactions, replication or authentication",
+    "250-character key limit"
+  ],
+  "useCases": [
+    "Learning how hash-table key-value stores work",
+    "Toy or hobby services needing a REST KV store"
+  ],
+  "notIdealFor": [
+    "Production data",
+    "Anything needing security or high availability"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "lmdb",
+    "bbolt"
+  ],
+  "tags": [
+    "key-value",
+    "c",
+    "go",
+    "rest",
+    "hobby"
+  ],
+  "links": {
+    "website": "https://olegdb.org/",
+    "docs": "https://olegdb.org/docs/0.1.6/en/documentation.html",
+    "repository": "https://github.com/infoforcefeed/OlegDB"
+  },
+  "ids": {
+    "github": "infoforcefeed/OlegDB",
+    "hackerNewsQuery": "OlegDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://olegdb.org/",
+    "https://github.com/infoforcefeed/OlegDB",
+    "https://olegdb.org/docs/0.1.6/en/documentation.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

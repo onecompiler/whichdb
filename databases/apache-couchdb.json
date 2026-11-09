@@ -1,0 +1,202 @@
+{
+  "slug": "apache-couchdb",
+  "name": "Apache CouchDB",
+  "aliases": [
+    "CouchDB"
+  ],
+  "tagline": "HTTP/JSON document database built around multi-master replication and offline-first sync.",
+  "description": "Apache CouchDB stores JSON documents and exposes everything, including queries, replication and admin, over a plain HTTP REST API. Its defining feature is a robust replication protocol that lets any two CouchDB-compatible nodes sync bidirectionally, with MVCC revision trees for conflict detection. That makes it the backbone of offline-first stacks built with PouchDB and of IBM Cloudant. Queries use Mango (JSON selectors) or incremental MapReduce views, and Nouveau adds Lucene full-text search. Version 3.5.3 shipped in October 2026. It is steady, well-understood technology, best when sync and availability matter more than ad-hoc query power.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "search"
+  ],
+  "workloads": [
+    "oltp",
+    "mobile-offline",
+    "local-first",
+    "edge",
+    "content-management"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "3.5.3",
+    "date": "2026-10-12"
+  },
+  "writtenIn": [
+    "Erlang",
+    "C++",
+    "JavaScript",
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; IBM Cloudant is the main managed CouchDB-compatible service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "IBM Cloudant",
+      "provider": "IBM Cloud",
+      "url": "https://www.ibm.com/products/cloudant"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Clustered mode shards each database (q shards, n replicas); cross-region topologies are built with continuous replication."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Mango (JSON query)",
+    "JavaScript MapReduce views",
+    "Lucene query syntax (Nouveau)"
+  ],
+  "apis": [
+    "HTTP/JSON REST",
+    "CouchDB replication protocol"
+  ],
+  "compatibleWith": [
+    "couchdb"
+  ],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "Java",
+    "C#",
+    "Go",
+    "PHP",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Bidirectional, resumable replication between any CouchDB-protocol peers, including PouchDB in browsers",
+    "Everything is HTTP + JSON, so curl is a complete client",
+    "Append-only storage is crash-safe; no repair step after power loss",
+    "_changes feed makes building sync and event pipelines straightforward",
+    "Permissive Apache license under neutral ASF governance"
+  ],
+  "weaknesses": [
+    "No multi-document transactions; conflicts must be resolved by the application",
+    "MapReduce views are slow to build on large databases",
+    "Compaction is needed to reclaim disk from the append-only files",
+    "Mango queries are far less expressive than SQL or the MongoDB aggregation pipeline"
+  ],
+  "useCases": [
+    "Offline-first web and mobile apps with PouchDB",
+    "Field data collection in low-connectivity environments",
+    "Multi-site replication between edge locations and a central hub",
+    "Document stores where HTTP-native access is valuable"
+  ],
+  "notIdealFor": [
+    "Transactional workloads that span multiple documents",
+    "Ad-hoc analytics and complex joins",
+    "Very high write rates on a single database"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pouchdb",
+    "ibm-cloudant",
+    "couchbase",
+    "mongodb",
+    "rxdb",
+    "google-cloud-firestore"
+  ],
+  "tags": [
+    "open-source",
+    "apache",
+    "replication",
+    "offline-first",
+    "http-api"
+  ],
+  "links": {
+    "website": "https://couchdb.apache.org/",
+    "docs": "https://docs.couchdb.org/",
+    "repository": "https://github.com/apache/couchdb",
+    "changelog": "https://docs.couchdb.org/en/stable/whatsnew/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_CouchDB"
+  },
+  "ids": {
+    "github": "apache/couchdb",
+    "stackoverflowTag": "couchdb",
+    "wikipedia": "Apache_CouchDB",
+    "dockerHub": "library/couchdb",
+    "npm": "nano",
+    "hackerNewsQuery": "CouchDB"
+  },
+  "brand": {
+    "color": "#E42528",
+    "simpleIcon": "apachecouchdb"
+  },
+  "sources": [
+    "https://couchdb.apache.org/",
+    "https://github.com/apache/couchdb",
+    "https://docs.couchdb.org/en/stable/whatsnew/index.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

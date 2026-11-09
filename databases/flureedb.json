@@ -1,0 +1,188 @@
+{
+  "slug": "flureedb",
+  "name": "FlureeDB",
+  "aliases": [
+    "Fluree",
+    "Fluree DB"
+  ],
+  "tagline": "Immutable RDF graph database with time travel, git-style branching, SPARQL, JSON-LD and Cypher.",
+  "description": "Fluree DB is a ledger-style graph database: every transaction becomes an immutable, content-addressed commit, so any query can run against any past state, and a dataset can be branched, rebased and merged much like a Git repository. Data is RDF and can be queried with SPARQL, Fluree's JSON-LD query syntax or openCypher, with BM25 full-text, HNSW vector and geo search plus triple-level access policies built into the engine. Version 4.0 (April 2026) is a Rust rewrite of the original Clojure system and ships under BSL 1.1, with each release converting to Apache 2.0 four years after it ships; v5 is in alpha. Reach for it when provenance and history matter: auditable knowledge graphs, regulated data sharing, and persistent memory for AI agents.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph",
+    "ledger"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "graph-traversal",
+    "rag",
+    "vector-search",
+    "ledger"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "serverless"
+  ],
+  "developer": "Fluree, PBC",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "4.2.4",
+    "date": "2026-10-14"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1 (converts to Apache 2.0 after 4 years)",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosting is free except for offering it as a competing hosted database service; Fluree's cloud has a usage-limited free tier."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Vendor benchmarks load the full 21.5-billion-triple Wikidata dump on a single commodity server; no built-in sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SPARQL",
+    "JSON-LD Query",
+    "openCypher"
+  ],
+  "apis": [
+    "HTTP API",
+    "CLI",
+    "Rust library"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Every commit is immutable and queryable by transaction number, timestamp or commit ID",
+    "Git-style branch, rebase and merge workflows for datasets",
+    "One engine answers SPARQL, JSON-LD and openCypher with the same features",
+    "BM25, HNSW vector and geo search participate in joins and filters like any graph pattern",
+    "Triple-level access policies enforced inside the query engine",
+    "Reproducible vendor benchmarks against QLever, Virtuoso, Neo4j and others are published"
+  ],
+  "weaknesses": [
+    "BSL license forbids offering it as a hosted database service to third parties",
+    "v4 is a 2026 rewrite, so client libraries, tooling and community answers are still thin",
+    "No horizontal sharding; scale-out means running separate ledgers",
+    "RDF modelling has a learning curve for teams used to property graphs or SQL"
+  ],
+  "useCases": [
+    "Auditable knowledge graphs with full history",
+    "Data provenance and compliance records",
+    "Long-term memory for AI coding agents and assistants",
+    "Semantic data integration with RDF and JSON-LD",
+    "Shared datasets that need branching and review before merge"
+  ],
+  "notIdealFor": [
+    "High-volume relational OLTP",
+    "Teams that require an OSI-approved license today",
+    "Petabyte-scale analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "terminusdb",
+    "datomic",
+    "xtdb",
+    "stardog",
+    "ontotext-graphdb",
+    "oxigraph"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "json-ld",
+    "immutable",
+    "time-travel",
+    "branching",
+    "knowledge-graph"
+  ],
+  "links": {
+    "website": "https://flur.ee/",
+    "docs": "https://fluree.github.io/db/",
+    "repository": "https://github.com/fluree/db",
+    "changelog": "https://github.com/fluree/db/releases"
+  },
+  "ids": {
+    "github": "fluree/db",
+    "dockerHub": "fluree/server",
+    "hackerNewsQuery": "Fluree"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/fluree/db",
+    "https://github.com/fluree/db/blob/main/LICENSE",
+    "https://github.com/fluree/db/releases",
+    "https://flur.ee/",
+    "https://dbdb.io/db/fluree"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,189 @@
+{
+  "slug": "risingwave",
+  "name": "RisingWave",
+  "aliases": [
+    "RisingWave Cloud"
+  ],
+  "tagline": "An Apache-licensed, Postgres-compatible streaming database that stores state on S3 and writes Iceberg.",
+  "description": "RisingWave is a distributed SQL streaming database: you define sources (Kafka, Pulsar, Kinesis, Postgres/MySQL CDC), materialized views and sinks in Postgres-flavoured SQL, and it maintains results incrementally. State lives in its Hummock LSM store on object storage, which makes recovery fast and compute elastic, and it can serve queries directly or sink to Iceberg, ClickHouse and other systems. Licensed Apache 2.0 with a managed cloud from RisingWave Labs, it is a common open-source alternative to Flink SQL for teams who want streaming without writing JVM jobs.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics",
+    "lakehouse",
+    "iot",
+    "ml-feature-store"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "RisingWave Labs",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "3.1.0",
+    "date": "2026-09-21"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open source self-hosted; RisingWave Cloud billed per resource unit; premium features via license."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "RisingWave Cloud",
+      "provider": "RisingWave Labs",
+      "url": "https://risingwave.com/cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Compute nodes scale independently; state on S3-compatible storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "C#",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Streaming SQL with Postgres compatibility instead of Java/Scala jobs",
+    "State on object storage enables quick recovery and elastic compute",
+    "Can both process streams and serve query results",
+    "Native Iceberg sink and table engine for streaming lakehouse",
+    "Apache 2.0 license"
+  ],
+  "weaknesses": [
+    "Not a replacement for an OLTP or general OLAP database",
+    "Object-storage state can add latency for very large joins",
+    "Postgres compatibility is partial (no full PL/pgSQL, limited DDL)"
+  ],
+  "useCases": [
+    "Streaming ETL from Kafka or CDC into Iceberg",
+    "Real-time monitoring and alerting dashboards",
+    "Fresh ML feature computation",
+    "IoT telemetry aggregation"
+  ],
+  "notIdealFor": [
+    "Transactional application backends",
+    "Batch-only historical analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "materialize",
+    "feldera",
+    "arroyo",
+    "timeplus-proton",
+    "ksqldb",
+    "apache-spark-sql"
+  ],
+  "tags": [
+    "streaming-sql",
+    "postgres-compatible",
+    "iceberg",
+    "rust",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://risingwave.com/",
+    "docs": "https://docs.risingwave.com/",
+    "repository": "https://github.com/risingwavelabs/risingwave",
+    "changelog": "https://github.com/risingwavelabs/risingwave/releases"
+  },
+  "ids": {
+    "github": "risingwavelabs/risingwave",
+    "dockerHub": "risingwavelabs/risingwave",
+    "hackerNewsQuery": "RisingWave"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/risingwavelabs/risingwave/releases",
+    "https://github.com/risingwavelabs/risingwave"
+  ],
+  "lastVerified": "2026-10-27"
+}

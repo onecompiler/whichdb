@@ -1,0 +1,189 @@
+{
+  "slug": "powersync",
+  "name": "PowerSync",
+  "aliases": [
+    "PowerSync Service"
+  ],
+  "tagline": "Sync engine that keeps on-device SQLite in sync with Postgres, MongoDB, MySQL or SQL Server.",
+  "description": "PowerSync replicates data from a backend database (Postgres, MongoDB, MySQL and SQL Server) into a local SQLite database on each client, using sync rules or sync streams to decide which rows each user gets. Writes are applied locally first, queued, and uploaded through your own backend API, which keeps authorization server-side. SDKs cover Flutter, React Native, web (SQLite in WASM), Kotlin, Swift and .NET, and it can encrypt the local database. The service is source-available under FSL and can be self-hosted as the Open Edition, or used as PowerSync Cloud. It is one of the most production-ready answers to offline-first apps on an existing backend, and many former Realm users moved to it.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "local-first",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded"
+  ],
+  "developer": "JourneyApps (Journey Mobile, Inc.)",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "service 1.27.2",
+    "date": "2026-10-24"
+  },
+  "writtenIn": [
+    "TypeScript",
+    "Rust",
+    "Dart",
+    "Kotlin",
+    "Swift"
+  ],
+  "basedOn": "SQLite (client side)",
+  "license": {
+    "type": "source-available",
+    "name": "FSL-1.1-ALv2 (service); Apache-2.0 client SDKs"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "open-source"
+    ],
+    "freeTier": true,
+    "startingPrice": "$49/month (Pro)",
+    "notes": "Free cloud tier with soft limits; Team from $599/month; self-hosted Open Edition is free."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "ios",
+      "android",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Service instances scale horizontally; per-client data is bounded by on-device SQLite."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "causal",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (SQLite on device)",
+    "Sync Rules / Sync Streams (SQL-like)"
+  ],
+  "apis": [
+    "Client SDKs",
+    "HTTP/WebSocket sync protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Dart",
+    "JavaScript",
+    "Kotlin",
+    "Swift",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": true
+  },
+  "strengths": [
+    "Works with existing Postgres, MongoDB, MySQL and SQL Server backends",
+    "Full SQLite on the device, so local queries can use joins and indexes",
+    "Writes go through your backend API, which keeps authorization in one place",
+    "Mature SDKs for Flutter, React Native, web, Kotlin Multiplatform and Swift",
+    "Self-hostable Open Edition alongside a managed cloud"
+  ],
+  "weaknesses": [
+    "Service license is FSL (source-available), not OSI open source",
+    "You still write the upload handler and conflict policy on your backend",
+    "Sync rules add a second place where data access must be modelled"
+  ],
+  "useCases": [
+    "Offline-first field-service and inspection apps",
+    "Migrating off Realm/Atlas Device Sync",
+    "Flutter and React Native apps on a Postgres or MongoDB backend",
+    "Local-first web apps with SQLite in the browser"
+  ],
+  "notIdealFor": [
+    "Peer-to-peer sync without a server",
+    "Teams needing a fully OSI-licensed sync server",
+    "Apps that are always online and simple CRUD"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "electricsql",
+    "realm",
+    "couchbase-lite",
+    "rocicorp-zero",
+    "watermelondb",
+    "objectbox"
+  ],
+  "tags": [
+    "sync",
+    "sqlite",
+    "offline-first",
+    "postgres-ecosystem",
+    "flutter",
+    "react-native"
+  ],
+  "links": {
+    "website": "https://www.powersync.com/",
+    "docs": "https://docs.powersync.com/",
+    "repository": "https://github.com/powersync-ja/powersync-service",
+    "pricing": "https://www.powersync.com/pricing",
+    "changelog": "https://github.com/powersync-ja/powersync-service/releases"
+  },
+  "ids": {
+    "github": "powersync-ja/powersync-service",
+    "npm": "@powersync/web",
+    "dockerHub": "journeyapps/powersync-service",
+    "hackerNewsQuery": "PowerSync"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.powersync.com/pricing",
+    "https://github.com/powersync-ja/powersync-service/releases",
+    "https://www.npmjs.com/package/@powersync/web"
+  ],
+  "lastVerified": "2026-10-27"
+}

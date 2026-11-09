@@ -1,0 +1,150 @@
+{
+  "slug": "slicingdice",
+  "name": "SlicingDice",
+  "aliases": [],
+  "tagline": "Brazilian serverless analytics database-as-a-service with SQL and an HTTP insert API; no longer operating.",
+  "description": "SlicingDice was a hosted analytical database from the Sao Paulo startup holding Simbiose Ventures, sold as a serverless data warehouse: you pushed events through a REST insert API, queried with SQL or a JSON query API, and paid per gigabyte stored with queries included. It targeted product analytics and dashboards for teams that did not want to run their own warehouse, and shipped official client SDKs for several languages. The company was still promoting it at SXSW in 2019, but its SDKs stopped being updated in December 2018, the API and console hosts no longer resolve, and slicingdice.com now serves a generic WordPress blog. Treat it as discontinued.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Service appears defunct: SDKs last updated Dec 2018, API/console hosts no longer resolve, and the domain now hosts a generic blog. Use ClickHouse Cloud, BigQuery or Tinybird.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed"
+  ],
+  "developer": "SlicingDice (Simbiose Ventures)",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (hosted service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Was priced per GB stored with queries included; the service is no longer available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Historically a multi-tenant hosted cluster; no longer operated."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "SlicingDice JSON query API"
+  ],
+  "apis": [
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "C#",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Per-GB pricing with queries included made dashboard-heavy workloads predictable (historically)",
+    "SQL plus a simple HTTP insert API with no servers to manage"
+  ],
+  "weaknesses": [
+    "Service no longer operates",
+    "Hosted-only and proprietary, so there was no self-hosted fallback",
+    "Little public documentation survives"
+  ],
+  "useCases": [
+    "Historical reference only",
+    "Example of per-GB serverless warehouse pricing"
+  ],
+  "notIdealFor": [
+    "Any production workload: the service is gone"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "google-bigquery",
+    "tinybird",
+    "apache-pinot",
+    "firebolt"
+  ],
+  "tags": [
+    "serverless",
+    "analytics",
+    "dbaas",
+    "discontinued",
+    "brazil"
+  ],
+  "links": {
+    "website": "https://github.com/SlicingDice",
+    "repository": "https://github.com/SlicingDice"
+  },
+  "ids": {
+    "hackerNewsQuery": "SlicingDice"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/SlicingDice",
+    "https://www.baguete.com.br/noticias/slicingdice-o-banco-de-dados-brasileiro",
+    "https://dbdb.io/db/slicingdice"
+  ],
+  "lastVerified": "2026-10-27"
+}

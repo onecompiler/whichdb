@@ -1,0 +1,155 @@
+{
+  "slug": "logicblox",
+  "name": "LogicBlox",
+  "aliases": [
+    "LogiQL",
+    "LogicBlox 4",
+    "Predictix"
+  ],
+  "tagline": "Datalog-based 'smart database' (LogiQL) for planning and analytics; absorbed into Predictix, then Infor.",
+  "description": "LogicBlox was an Atlanta company and platform that let teams build planning, forecasting and decision-automation applications in LogiQL, an extended Datalog with stratified negation, aggregation, static typing, modules and incremental maintenance of derived predicates. Its engine pioneered the Leapfrog Triejoin worst-case-optimal join algorithm and a lock-free 'transaction repair' approach to serializability, described in SIGMOD and ICDT papers, and it was also used in research such as the Doop pointer-analysis framework for Java. Predictix, its retail-planning sister company, acquired LogicBlox in December 2014, and Infor acquired Predictix in 2016, after which the platform disappeared into Infor's retail products. Its CEO, Molham Aref, went on to found RelationalAI.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Predictix (Dec 2014); Infor bought Predictix in 2016 and LogicBlox stopped being offered as a standalone platform.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "graph"
+  ],
+  "workloads": [
+    "htap",
+    "olap",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "LogicBlox, Inc. (later Predictix, then Infor)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Sold as a platform for enterprise applications; no longer available standalone."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "LogiQL (Datalog)"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Declarative LogiQL unified data, rules, analytics and constraints",
+    "Worst-case-optimal Leapfrog Triejoin made complex multiway joins fast",
+    "Incremental maintenance of derived data as inputs changed",
+    "Influential research lineage (SIGMOD/ICDT papers, Doop, RelationalAI)"
+  ],
+  "weaknesses": [
+    "No longer available outside Infor products",
+    "Proprietary language with a steep learning curve for most engineers",
+    "Small community; few public deployments outside retail planning"
+  ],
+  "useCases": [
+    "Studying industrial Datalog engines and worst-case-optimal joins",
+    "Background for RelationalAI and similar knowledge-graph systems"
+  ],
+  "notIdealFor": [
+    "Any new deployment: the platform is not sold standalone"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "typedb",
+    "datomic",
+    "xtdb",
+    "cozodb",
+    "rdfox",
+    "datahike"
+  ],
+  "tags": [
+    "datalog",
+    "logiql",
+    "deductive-database",
+    "acquired",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://www.logicblox.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/LogicBlox"
+  },
+  "ids": {
+    "wikipedia": "LogicBlox",
+    "hackerNewsQuery": "LogicBlox"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/LogicBlox",
+    "https://dl.acm.org/doi/10.1145/2723372.2742796",
+    "https://arxiv.org/abs/1403.5645",
+    "https://www.marlinequity.com/news/marlin-completes-growth-equity-investment-in-logicbloxpredictix",
+    "https://dbdb.io/db/logicblox"
+  ],
+  "lastVerified": "2026-10-27"
+}

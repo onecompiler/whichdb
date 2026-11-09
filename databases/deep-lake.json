@@ -1,0 +1,192 @@
+{
+  "slug": "deep-lake",
+  "name": "Deep Lake",
+  "aliases": [
+    "Deeplake",
+    "Activeloop Deep Lake",
+    "Hub"
+  ],
+  "tagline": "Activeloop's tensor-native data engine for AI: vectors, multimodal data and versioning on object storage.",
+  "description": "Deep Lake started as Activeloop's 'Hub' format for streaming ML datasets to PyTorch and grew into a database for AI that stores tensors, embeddings, images, video and text on object storage with git-like version control. Version 4 rewrote the core in C++ with vector and BM25 indexes and a Tensor Query Language, and Activeloop now positions it as a data runtime for agents with a serverless Postgres interface. It is most compelling when the same multimodal data is used for both model training and retrieval; as a pure vector store it is less common than Qdrant or Chroma.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "array",
+    "columnar"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "lakehouse",
+    "ml-feature-store"
+  ],
+  "architecture": [
+    "embedded",
+    "serverless",
+    "shared-storage"
+  ],
+  "developer": "Activeloop",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "4.7.4",
+    "date": "2026-08-25"
+  },
+  "writtenIn": [
+    "C++",
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Library is free with your own storage; Activeloop's managed Deeplake service and enterprise plans are priced via the Activeloop app/sales."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Activeloop Deeplake",
+      "provider": "Activeloop",
+      "url": "https://www.activeloop.ai/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Data lives in S3/GCS/Azure Blob; compute streams chunks on demand, so dataset size is bounded by object storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "TQL (Tensor Query Language)",
+    "SQL (Postgres interface)"
+  ],
+  "apis": [
+    "Python",
+    "REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stores raw multimodal data and embeddings together on object storage",
+    "Git-like branching and version history for datasets",
+    "Streams data directly into PyTorch/TensorFlow training loops",
+    "Vector and BM25 indexes in the same tables"
+  ],
+  "weaknesses": [
+    "Shifting product positioning makes long-term roadmap harder to judge",
+    "Smaller vector-DB community and fewer framework integrations than rivals",
+    "Object-storage latency without managed caching",
+    "Major-version format changes (v3 to v4) required migrations"
+  ],
+  "useCases": [
+    "Multimodal datasets shared by training and RAG",
+    "Versioned computer-vision datasets",
+    "Agent memory over documents and images"
+  ],
+  "notIdealFor": [
+    "Low-latency transactional apps",
+    "Simple text-only vector search where Chroma or pgvector suffice",
+    "Relational workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lancedb",
+    "chroma",
+    "milvus",
+    "qdrant",
+    "weaviate"
+  ],
+  "tags": [
+    "vector-database",
+    "multimodal",
+    "tensors",
+    "versioning",
+    "ml-data"
+  ],
+  "links": {
+    "website": "https://www.activeloop.ai/",
+    "docs": "https://docs.deeplake.ai/",
+    "repository": "https://github.com/activeloopai/deeplake",
+    "changelog": "https://github.com/activeloopai/deeplake/releases"
+  },
+  "ids": {
+    "github": "activeloopai/deeplake",
+    "pypi": "deeplake",
+    "hackerNewsQuery": "Deep Lake"
+  },
+  "brand": {
+    "color": "#FFB746",
+    "simpleIcon": "activeloop"
+  },
+  "sources": [
+    "https://github.com/activeloopai/deeplake",
+    "https://pypi.org/project/deeplake/",
+    "https://www.activeloop.ai/"
+  ],
+  "lastVerified": "2026-10-27"
+}

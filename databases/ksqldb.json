@@ -1,0 +1,182 @@
+{
+  "slug": "ksqldb",
+  "name": "ksqlDB",
+  "aliases": [
+    "KSQL"
+  ],
+  "tagline": "Confluent's SQL layer over Kafka Streams, still supported but superseded by Flink SQL for new work.",
+  "description": "ksqlDB lets you declare streams and tables over Kafka topics in SQL, running persistent queries on Kafka Streams with state in RocksDB and changelog topics, plus pull queries against materialized tables. It made stream processing approachable for Kafka users from 2017 onward. Confluent now recommends Confluent Platform for Apache Flink for new stream-processing workloads and keeps ksqlDB fully supported for existing applications, shipping it with each Confluent Platform release (8.4 in October 2026). Choose it only if you already run it; otherwise evaluate Flink SQL, RisingWave or Materialize.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Confluent recommends Flink for new stream-processing workloads; ksqlDB remains supported for existing apps and ships with Confluent Platform 8.x.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "stream-processing",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Confluent",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "8.4.0 (Confluent Platform)",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Kafka Streams",
+  "license": {
+    "type": "source-available",
+    "name": "Confluent Community License"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Free under the Confluent Community License; supported in Confluent Platform subscriptions and Confluent Cloud."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Confluent Cloud ksqlDB",
+      "provider": "Confluent",
+      "url": "https://www.confluent.io/product/ksqldb/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales with Kafka partitions; state in RocksDB backed by changelog topics."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "ksqlDB SQL"
+  ],
+  "apis": [
+    "REST",
+    "Java client"
+  ],
+  "compatibleWith": [
+    "kafka"
+  ],
+  "drivers": [
+    "Java",
+    "Go",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "SQL over Kafka topics with no separate cluster for state storage",
+    "Push and pull queries over materialized tables",
+    "Kafka Connect integration for sources and sinks",
+    "Mature, well-documented, and supported by Confluent"
+  ],
+  "weaknesses": [
+    "Strategic focus has moved to Flink; little new feature work",
+    "Tightly coupled to Kafka; join and windowing semantics are limited",
+    "Confluent Community License forbids offering it as a SaaS",
+    "Query rebalancing and schema evolution can be painful"
+  ],
+  "useCases": [
+    "Existing Kafka stream-transformation pipelines",
+    "Simple filtering, enrichment and aggregation of topics"
+  ],
+  "notIdealFor": [
+    "New stream-processing projects (consider Flink SQL or RisingWave)",
+    "Complex multi-way joins and ad-hoc queries"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "risingwave",
+    "materialize",
+    "timeplus-proton",
+    "arroyo",
+    "feldera"
+  ],
+  "tags": [
+    "kafka",
+    "streaming-sql",
+    "confluent",
+    "kafka-streams"
+  ],
+  "links": {
+    "website": "https://ksqldb.io/",
+    "docs": "https://docs.confluent.io/platform/current/ksqldb/overview.html",
+    "repository": "https://github.com/confluentinc/ksql"
+  },
+  "ids": {
+    "github": "confluentinc/ksql",
+    "stackoverflowTag": "ksqldb",
+    "dockerHub": "confluentinc/cp-ksqldb-server",
+    "hackerNewsQuery": "ksqlDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://docs.confluent.io/platform/current/ksqldb/overview.html",
+    "https://packages.confluent.io/maven/io/confluent/ksql/ksqldb-engine/maven-metadata.xml",
+    "https://github.com/confluentinc/ksql"
+  ],
+  "lastVerified": "2026-10-27"
+}

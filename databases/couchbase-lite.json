@@ -1,0 +1,196 @@
+{
+  "slug": "couchbase-lite",
+  "name": "Couchbase Lite",
+  "aliases": [
+    "CBL",
+    "Couchbase Mobile"
+  ],
+  "tagline": "Embedded JSON document database with SQL++ queries, vector search and sync to Couchbase.",
+  "description": "Couchbase Lite is the on-device half of Couchbase Mobile: an embedded JSON document store for iOS, Android, .NET, Java and C that queries with SQL++ (Couchbase's SQL for JSON), supports full-text and vector indexes, and replicates through Sync Gateway or Capella App Services to a Couchbase Server cluster, as well as peer-to-peer between devices. It is the most enterprise-ready option for offline-first apps that need conflict handling, per-channel access control and a supported vendor. The trade-off is lock-in to the Couchbase backend and an Enterprise Edition that holds several important features.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "embedded",
+    "edge",
+    "local-first",
+    "vector-search"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Couchbase, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "4.1.2",
+    "date": "2026-09-16"
+  },
+  "writtenIn": [
+    "C++",
+    "Swift",
+    "Objective-C",
+    "Kotlin",
+    "Java",
+    "C#"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Apache-2.0 / BSL 1.1 Community Edition; commercial Enterprise Edition"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free; Enterprise Edition (encryption, vector search, P2P sync, support) is sold with Couchbase subscriptions."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Capella App Services",
+      "provider": "Couchbase",
+      "url": "https://www.couchbase.com/products/capella/app-services/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Per-device database; the server side scales through Couchbase Server or Capella."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SQL++ (N1QL)",
+    "QueryBuilder API"
+  ],
+  "apis": [
+    "Native SDKs",
+    "Couchbase replication protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Swift",
+    "Objective-C",
+    "Kotlin",
+    "Java",
+    "C#",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "SQL++ queries with joins and full-text search on the device",
+    "Production-grade sync with channels, conflict resolvers and access control via Sync Gateway",
+    "Peer-to-peer replication between devices without a server (Enterprise)",
+    "On-device vector search for local AI features",
+    "Backed by a vendor with enterprise support and long-lived releases"
+  ],
+  "weaknesses": [
+    "Sync only targets Couchbase Server or Capella, so the backend is fixed",
+    "Encryption, vector search and P2P sync require the paid Enterprise Edition",
+    "Heavier binary and API surface than lightweight mobile stores"
+  ],
+  "useCases": [
+    "Field-service and retail apps that must work offline for hours",
+    "Airline, logistics and healthcare apps with intermittent connectivity",
+    "Edge deployments syncing to a central Couchbase cluster"
+  ],
+  "notIdealFor": [
+    "Apps whose backend is Postgres or another non-Couchbase store",
+    "Hobby projects needing a tiny dependency",
+    "Server-side analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "realm",
+    "objectbox",
+    "pouchdb",
+    "powersync",
+    "couchbase",
+    "sqlite"
+  ],
+  "tags": [
+    "mobile",
+    "offline-first",
+    "sync",
+    "json",
+    "edge",
+    "couchbase-ecosystem"
+  ],
+  "links": {
+    "website": "https://www.couchbase.com/products/lite/",
+    "docs": "https://docs.couchbase.com/couchbase-lite/current/",
+    "repository": "https://github.com/couchbase/couchbase-lite-ios",
+    "changelog": "https://github.com/couchbase/couchbase-lite-ios/releases"
+  },
+  "ids": {
+    "github": "couchbase/couchbase-lite-ios",
+    "stackoverflowTag": "couchbase-lite",
+    "hackerNewsQuery": "Couchbase Lite"
+  },
+  "brand": {
+    "color": "#EA2328",
+    "simpleIcon": "couchbase"
+  },
+  "sources": [
+    "https://github.com/couchbase/couchbase-lite-ios/releases",
+    "https://github.com/couchbase/couchbase-lite-core",
+    "https://docs.couchbase.com/couchbase-lite/current/"
+  ],
+  "lastVerified": "2026-10-27"
+}

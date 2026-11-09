@@ -1,0 +1,155 @@
+{
+  "slug": "rockset",
+  "name": "Rockset",
+  "aliases": [],
+  "tagline": "Former real-time search and analytics cloud on RocksDB, shut down after OpenAI acquired it in 2024.",
+  "description": "Rockset was a serverless real-time analytics database built on RocksDB-Cloud. Its 'converged index' stored every field in row, columnar and inverted form, so SQL over semi-structured JSON from Kafka, DynamoDB or MongoDB returned in milliseconds without schema design, and it later added vector search. OpenAI acquired the company in June 2024 to power its retrieval infrastructure, and the public service was wound down for existing customers by the end of September 2024. It remains a reference design, but there is nothing to adopt today; former users moved to ClickHouse, Pinot, Druid, Elasticsearch or SingleStore.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Acquired by OpenAI in June 2024; the public service shut down for customers on 30 Sept 2024. Consider ClickHouse, Apache Pinot or Elasticsearch.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "columnar",
+    "search",
+    "vector"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "full-text-search",
+    "vector-search"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Rockset (acquired by OpenAI)",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "RocksDB-Cloud",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Converged indexing gave fast SQL over raw JSON without schema design",
+    "Second-level freshness from Kafka, DynamoDB and MongoDB streams",
+    "Compute-compute separation isolated ingest from queries"
+  ],
+  "weaknesses": [
+    "Service discontinued; no migration path except to other products",
+    "Was AWS-only and proprietary"
+  ],
+  "useCases": [
+    "Historical reference only",
+    "Understanding converged-index architectures"
+  ],
+  "notIdealFor": [
+    "Any new project (service no longer available)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "apache-pinot",
+    "apache-druid",
+    "elasticsearch",
+    "singlestore",
+    "tinybird"
+  ],
+  "tags": [
+    "discontinued",
+    "acquired",
+    "real-time",
+    "rocksdb"
+  ],
+  "links": {
+    "website": "https://openai.com/index/openai-acquires-rockset/",
+    "repository": "https://github.com/rockset/rocksdb-cloud"
+  },
+  "ids": {
+    "hackerNewsQuery": "Rockset"
+  },
+  "brand": {},
+  "sources": [
+    "https://openai.com/index/openai-acquires-rockset/",
+    "https://github.com/rockset/rocksdb-cloud"
+  ],
+  "lastVerified": "2026-10-27"
+}

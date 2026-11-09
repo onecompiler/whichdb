@@ -1,0 +1,113 @@
+{
+  "slug": "eliasdb",
+  "name": "EliasDB",
+  "aliases": ["Elias DB"],
+  "tagline": "Lightweight Go graph database with GraphQL, an SQL-like query language, full-text search and scripting.",
+  "description": "EliasDB is a self-contained graph database written from scratch in Go by Matthias Ladkau, with gorilla/websocket as its only dependency. It stores key-value nodes connected by typed edges, separated into partitions, on top of its own transactional key-value store, and every stored value is indexed for full-text phrase search. You query it with EQL, an SQL-like traversal language, or through a GraphQL API that also supports subscriptions; the standalone server adds HTTPS, user management, a REST API with Swagger docs and a web terminal, and it can also be embedded as a Go library. The ECAL scripting language hooks database events to write backend logic. Feature work stopped at 1.4.0 (August 2022); since then only dependency updates have landed.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Last feature release 1.4.0 (August 2022); only dependency bumps since. Clustering is documented as experimental.",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": ["graph", "key-value"],
+  "workloads": ["graph-traversal", "embedded", "knowledge-graph"],
+  "architecture": ["single-node", "embedded", "client-server"],
+  "developer": "Matthias Ladkau",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": { "version": "1.4.0", "date": "2022-08-14" },
+  "writtenIn": ["Go"],
+  "license": { "type": "copyleft", "name": "Mozilla Public License 2.0", "spdx": "MPL-2.0" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "windows", "macos"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single node in practice; an experimental peer-to-peer cluster mode replicates data with eventual, last-writer-wins consistency."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["EQL", "GraphQL", "ECAL"],
+  "apis": ["REST", "GraphQL (HTTP and WebSocket)", "Go embedded API"],
+  "compatibleWith": [],
+  "drivers": ["Go"],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Single static Go binary or embeddable library with almost no third-party dependencies",
+    "Full-text phrase search over every stored value with no extra setup",
+    "GraphQL queries, mutations and subscriptions out of the box",
+    "ECAL event scripting lets you write backend logic inside the database",
+    "Cascading deletes and partitions keep graph hygiene simple"
+  ],
+  "weaknesses": [
+    "Single maintainer and no feature releases since 2022",
+    "Clustering is experimental and only eventually consistent",
+    "EQL is proprietary; no Cypher, Gremlin or SPARQL support",
+    "Small community and few production references"
+  ],
+  "useCases": [
+    "Embedded graph storage inside Go applications",
+    "Prototyping GraphQL backends over a graph model",
+    "Small knowledge graphs or personal data hubs with search"
+  ],
+  "notIdealFor": ["Large-scale or highly available graph workloads", "Teams that need Cypher or Gremlin compatibility"],
+  "notableUsers": [],
+  "alternatives": ["neo4j", "dgraph", "cayley", "memgraph", "arcadedb", "kuzu"],
+  "tags": ["graph", "go", "graphql", "embedded", "full-text"],
+  "links": {
+    "website": "https://github.com/krotik/eliasdb",
+    "repository": "https://github.com/krotik/eliasdb",
+    "docs": "https://github.com/krotik/eliasdb/blob/master/README.md",
+    "changelog": "https://github.com/krotik/eliasdb/releases"
+  },
+  "ids": {
+    "github": "krotik/eliasdb",
+    "dockerHub": "krotik/eliasdb",
+    "hackerNewsQuery": "EliasDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/krotik/eliasdb",
+    "https://github.com/krotik/eliasdb/blob/master/cluster.md",
+    "https://github.com/krotik/eliasdb/releases",
+    "https://dbdb.io/db/eliasdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

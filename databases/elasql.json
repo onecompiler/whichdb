@@ -1,0 +1,109 @@
+{
+  "slug": "elasql",
+  "name": "ElaSQL",
+  "aliases": ["ElaSQL deterministic database"],
+  "tagline": "NTHU research prototype of a Calvin-style deterministic distributed SQL database built on VanillaDB.",
+  "description": "ElaSQL is a distributed relational database prototype from National Tsing Hua University's DataLab (Shan-Hung Wu's group), written in Java on top of the lab's VanillaDB teaching engine. It trades ad-hoc transactions for scalability: every transaction is a pre-registered stored procedure, requests are totally ordered up front, and each replica and partition executes them deterministically, so geo-replicas stay strongly consistent without two-phase commit, following ideas from Calvin. The system is the testbed behind the lab's papers on transaction partitioning (T-Part, SIGMOD 2016), live migration (MgCrab, VLDB 2019) and predictive data partitioning (Hermes, SIGMOD 2021). The last Maven release, 0.3.2, came out in February 2022 and the repository has been quiet since 2023.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Academic prototype from NTHU (2016-2022); no commits since February 2023. Ideas trace to Calvin and appear in deterministic systems such as Fauna.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp"],
+  "architecture": ["distributed", "multi-primary"],
+  "developer": "National Tsing Hua University DataLab",
+  "vendorType": "academic",
+  "initialRelease": 2016,
+  "latestVersion": { "version": "0.3.2", "date": "2022-02-15" },
+  "writtenIn": ["Java"],
+  "basedOn": "VanillaDB",
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Partitions data within a datacenter and keeps full replicas per datacenter; evaluated on research clusters, not production."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL (inside Java stored procedures)"],
+  "apis": ["Java stored-procedure API", "JDBC-style client"],
+  "compatibleWith": [],
+  "drivers": ["Java"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Open, readable Java implementation of Calvin-style deterministic transaction execution",
+    "Strongly consistent replicas across datacenters without two-phase commit",
+    "Doubles as the reference code for several SIGMOD/VLDB papers on partitioning and migration",
+    "Built on VanillaDB, so students can trace it down to the storage layer"
+  ],
+  "weaknesses": [
+    "No ad-hoc transactions: every transaction must be a pre-defined stored procedure",
+    "Research code with little documentation and no recent maintenance",
+    "No operational tooling, security or client ecosystem"
+  ],
+  "useCases": [
+    "Teaching and studying deterministic distributed databases",
+    "Reproducing or extending the T-Part, MgCrab and Hermes experiments",
+    "Benchmarking partitioning and live-migration strategies"
+  ],
+  "notIdealFor": ["Production OLTP", "Interactive or ad-hoc SQL workloads"],
+  "notableUsers": [],
+  "alternatives": ["calvin", "vanilladb", "h-store", "volt-active-data", "cockroachdb"],
+  "tags": ["research", "deterministic", "distributed-sql", "calvin", "java"],
+  "links": {
+    "website": "http://www.elasql.org/",
+    "repository": "https://github.com/elasql/elasql"
+  },
+  "ids": {
+    "github": "elasql/elasql"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.elasql.org/",
+    "https://github.com/elasql/elasql",
+    "https://doi.org/10.1145/2882903.2915227",
+    "https://doi.org/10.1145/3448016.3452827",
+    "https://search.maven.org/artifact/org.elasql/elasql"
+  ],
+  "lastVerified": "2026-10-27"
+}

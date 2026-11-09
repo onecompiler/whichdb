@@ -1,0 +1,173 @@
+{
+  "slug": "vercel-edge-config",
+  "name": "Vercel Edge Config",
+  "aliases": [
+    "Vercel Global Config",
+    "Global Config",
+    "Edge Config"
+  ],
+  "tagline": "Vercel's globally replicated read-optimized config store (renamed Global Config in 2026).",
+  "description": "Edge Config is a small, globally replicated key-value store on Vercel designed for data that is read on almost every request and written rarely: feature flags, A/B test buckets, redirects, IP blocklists. Reads typically finish in about a millisecond from any region because the data is pushed to Vercel's compute locations. In July 2026 Vercel renamed it Global Config, shipped @vercel/global-config as a drop-in SDK and raised store size to 1 MB on every plan; existing EDGE_CONFIG projects keep working. Write limits (about 100 per hour on paid plans) make it unsuitable for anything transactional.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "configuration",
+    "edge"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Vercel",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Vercel service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "startingPrice": "$3 per million reads; $1 per 100 writes",
+    "notes": "Hobby: 1 store, 250 writes/month. Pro/Enterprise: unlimited stores, 100 writes/hour, 1 MB per store."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "vercel"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Global Config (Edge Config)",
+      "provider": "Vercel",
+      "url": "https://vercel.com/docs/edge-config"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Each store holds up to 1 MB, replicated to all Vercel regions for local reads."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Edge Config SDK"
+  ],
+  "apis": [
+    "@vercel/global-config SDK",
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Around 1 ms reads from every Vercel region",
+    "No connection setup; reads are served from Vercel's compute locations",
+    "Integrates with Vercel's flags SDK and third-party flag providers",
+    "Simple JSON values managed via dashboard, API or CLI"
+  ],
+  "weaknesses": [
+    "Tiny stores (1 MB) and strict write limits",
+    "Eventually consistent propagation after writes",
+    "Only usable from Vercel deployments in practice",
+    "Rename to Global Config means two SDK names in the wild"
+  ],
+  "useCases": [
+    "Feature flags and A/B experiment assignments",
+    "Redirect and rewrite tables",
+    "IP and bot blocklists",
+    "Maintenance-mode and kill switches"
+  ],
+  "notIdealFor": [
+    "User data or frequently written values",
+    "Anything above 1 MB",
+    "Workloads outside Vercel"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cloudflare-workers-kv",
+    "hashicorp-consul-kv",
+    "upstash",
+    "deno-kv"
+  ],
+  "tags": [
+    "vercel",
+    "edge",
+    "feature-flags",
+    "configuration"
+  ],
+  "links": {
+    "website": "https://vercel.com/edge-config",
+    "docs": "https://vercel.com/docs/edge-config",
+    "pricing": "https://vercel.com/docs/edge-config/edge-config-limits",
+    "changelog": "https://vercel.com/changelog/edge-config-is-now-global-config"
+  },
+  "ids": {
+    "stackoverflowTag": "vercel",
+    "npm": "@vercel/edge-config",
+    "hackerNewsQuery": "Vercel Edge Config"
+  },
+  "brand": {
+    "color": "#000000",
+    "simpleIcon": "vercel"
+  },
+  "sources": [
+    "https://vercel.com/changelog/edge-config-is-now-global-config",
+    "https://vercel.com/edge-config",
+    "https://vercel.com/blog/vercel-edge-config-is-now-generally-available"
+  ],
+  "lastVerified": "2026-10-27"
+}

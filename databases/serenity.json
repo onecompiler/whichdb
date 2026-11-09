@@ -1,0 +1,155 @@
+{
+  "slug": "serenity",
+  "name": "Serenity",
+  "aliases": [
+    "SerenityDB",
+    "Serenity (Sophia/Redis)"
+  ],
+  "tagline": "Proof-of-concept Redis-compatible server with ACID transactions on the Sophia disk engine; abandoned in 2016.",
+  "description": "Serenity was a 2015-2016 experiment by Dmitry Simonenko, author of the Sophia storage engine, to put a Redis-compatible front end on disk-based storage. It implemented the basic Redis commands and configuration format so redis-cli, redis-benchmark, memtier and existing Redis drivers worked unchanged, but stored data in Sophia's append-only MVCC engine so datasets could be much larger than RAM, and added consistent cursors, real ACID transactions and stored procedures. The README always called it a proof of concept, and development stopped in July 2016. Disk-backed Redis-protocol servers such as Kvrocks and Pika now fill this role.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Proof of concept with no commits since July 2016. For a disk-backed Redis-compatible store use Apache Kvrocks or Pika.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Dmitry Simonenko",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Sophia",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 2-Clause License",
+    "spdx": "BSD-2-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server; data could exceed RAM thanks to the Sophia disk engine."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands"
+  ],
+  "apis": [
+    "Redis protocol (RESP)"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Any Redis client"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in Redis protocol and config compatibility with existing tools",
+    "Datasets larger than memory via the Sophia MVCC engine",
+    "Real ACID transactions and consistent cursors beyond what Redis offered"
+  ],
+  "weaknesses": [
+    "Explicitly a proof of concept; only basic Redis commands",
+    "Abandoned since 2016 with no releases",
+    "The underlying Sophia engine has had no code changes since 2019"
+  ],
+  "useCases": [
+    "Studying how to layer the Redis protocol over a disk engine",
+    "Historical comparison with Kvrocks, Pika and other disk-backed Redis servers"
+  ],
+  "notIdealFor": [
+    "Production caching or storage",
+    "Workloads needing the full Redis command set"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-kvrocks",
+    "pika",
+    "redis",
+    "valkey",
+    "dragonfly"
+  ],
+  "tags": [
+    "redis-compatible",
+    "sophia",
+    "proof-of-concept",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/pmwkaa/serenity",
+    "repository": "https://github.com/pmwkaa/serenity"
+  },
+  "ids": {
+    "github": "pmwkaa/serenity",
+    "hackerNewsQuery": "Serenity Sophia Redis"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/pmwkaa/serenity",
+    "https://dbdb.io/db/serenity"
+  ],
+  "lastVerified": "2026-10-27"
+}

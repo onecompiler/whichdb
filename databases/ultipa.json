@@ -1,0 +1,178 @@
+{
+  "slug": "ultipa",
+  "name": "Ultipa",
+  "aliases": [
+    "Ultipa GQLDB",
+    "Ultipa Graph"
+  ],
+  "tagline": "Commercial distributed graph database marketed as built natively for ISO GQL.",
+  "description": "Ultipa is a commercial property-graph database whose current generation, GQLDB (Ultipa Graph v6), is positioned as a native implementation of ISO/IEC 39075 GQL, alongside its older UQL language. It pairs disk-based native storage with an in-memory graph computing engine for real-time deep traversals and built-in algorithms, and adds vector embeddings and natural-language-to-GQL for RAG. It runs as a single binary, a server or a sharded cluster, and also as Ultipa Cloud. Its full-GQL claim is vendor-stated (earlier v5 conformance docs listed gaps), so test the features you need.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "real-time-analytics",
+    "rag",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Ultipa, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free Community Edition)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free downloadable Community Edition and browser playground; Cloud and Enterprise priced by quote."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Ultipa Cloud",
+      "provider": "Ultipa",
+      "url": "https://www.ultipa.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Cluster mode supports sharding, replication and HA."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "GQL",
+    "UQL"
+  ],
+  "apis": [
+    "gRPC",
+    "REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Designed around ISO GQL as its primary query language",
+    "In-memory computing engine for real-time deep traversals and path queries",
+    "Large built-in algorithm library and natural-language-to-GQL tooling",
+    "Flexible deployment from embedded binary to sharded cluster or cloud"
+  ],
+  "weaknesses": [
+    "Proprietary with no public pricing",
+    "Full GQL conformance is a vendor claim without independent verification",
+    "Small international community and few public case studies"
+  ],
+  "useCases": [
+    "Real-time risk and fraud graphs in finance",
+    "Supply-chain and network path analysis",
+    "Teams standardizing on ISO GQL",
+    "Graph-augmented RAG"
+  ],
+  "notIdealFor": [
+    "Open-source-only stacks",
+    "RDF/SPARQL workloads",
+    "Tiny hobby projects"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tigergraph",
+    "nebulagraph",
+    "neo4j",
+    "galaxybase",
+    "memgraph"
+  ],
+  "tags": [
+    "gql",
+    "iso-gql",
+    "distributed",
+    "real-time",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.ultipa.com/",
+    "docs": "https://www.ultipa.com/docs"
+  },
+  "ids": {
+    "hackerNewsQuery": "Ultipa graph"
+  },
+  "brand": {
+    "color": "#0047FF"
+  },
+  "sources": [
+    "https://www.ultipa.com/products/gqldb",
+    "https://www.ultipa.com/docs/v5/gql/gql-conformance",
+    "https://www.ultipa.com/docs"
+  ],
+  "lastVerified": "2026-10-27"
+}

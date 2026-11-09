@@ -1,0 +1,174 @@
+{
+  "slug": "apache-hugegraph",
+  "name": "Apache HugeGraph",
+  "aliases": [
+    "HugeGraph"
+  ],
+  "tagline": "Apache graph database from Baidu with Gremlin and Cypher, pluggable backends and a distributed store.",
+  "description": "Apache HugeGraph is a property-graph database originally built at Baidu and donated to the Apache Software Foundation. It speaks Gremlin and openCypher, stores data in RocksDB for standalone setups or in its own distributed HStore (with a PD placement service) for scale-out, and ships a toolchain for loading, visualization and OLAP computing (Vermeer/Computer). The companion hugegraph-ai project adds GraphRAG and LLM integrations. It is popular in China for large knowledge and risk-control graphs; outside that community documentation is thinner and releases are infrequent (1.7.0 in November 2025).",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "knowledge-graph",
+    "rag"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "1.7.0",
+    "date": "2025-11-16"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Distributed mode uses PD + HStore with Raft replication; standalone mode uses RocksDB."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Gremlin",
+    "openCypher"
+  ],
+  "apis": [
+    "REST API",
+    "Gremlin Server"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Apache-governed, fully open source with both Gremlin and openCypher",
+    "Distributed HStore backend scales to very large graphs",
+    "Complete toolchain: loader, Hubble UI, OLAP computing and GraphRAG via hugegraph-ai"
+  ],
+  "weaknesses": [
+    "Infrequent releases and a smaller international community",
+    "Documentation is partially Chinese-first",
+    "Transactional guarantees are weaker than single-node ACID graph databases"
+  ],
+  "useCases": [
+    "Large knowledge graphs",
+    "Risk control and anti-fraud",
+    "Social relationship analysis",
+    "GraphRAG pipelines"
+  ],
+  "notIdealFor": [
+    "Small embedded graphs",
+    "RDF/SPARQL workloads",
+    "Teams needing commercial support from the vendor"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "janusgraph",
+    "nebulagraph",
+    "neo4j",
+    "tigergraph",
+    "galaxybase"
+  ],
+  "tags": [
+    "apache",
+    "gremlin",
+    "cypher",
+    "distributed",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://hugegraph.apache.org/",
+    "docs": "https://hugegraph.apache.org/docs/",
+    "repository": "https://github.com/apache/hugegraph",
+    "changelog": "https://github.com/apache/hugegraph/releases"
+  },
+  "ids": {
+    "github": "apache/hugegraph",
+    "dockerHub": "hugegraph/hugegraph",
+    "pypi": "hugegraph-python",
+    "hackerNewsQuery": "HugeGraph"
+  },
+  "brand": {
+    "color": "#3F7FE5"
+  },
+  "sources": [
+    "https://github.com/apache/hugegraph/releases",
+    "https://hugegraph.apache.org/",
+    "https://hub.docker.com/r/hugegraph/hugegraph"
+  ],
+  "lastVerified": "2026-10-27"
+}

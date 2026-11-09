@@ -1,0 +1,177 @@
+{
+  "slug": "aerospike-graph",
+  "name": "Aerospike Graph",
+  "aliases": [
+    "Aerospike Graph Service",
+    "AGS"
+  ],
+  "tagline": "Gremlin graph layer on the Aerospike database for billion-edge graphs with predictable latency.",
+  "description": "Aerospike Graph is a property-graph service from Aerospike that implements Apache TinkerPop/Gremlin as a stateless query tier on top of the Aerospike key-value database, which handles storage, sharding and replication. Because compute and storage scale separately and Aerospike is built for SSD-backed low-latency access, it targets identity graphs, ad-tech and fraud workloads with billions of vertices and strict latency budgets. It suits teams already running Aerospike or committed to Gremlin, but it brings a commercial license and no Cypher or GQL support.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "oltp",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Aerospike, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "3.3.3",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache TinkerPop",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Aerospike Enterprise)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Requires an Aerospike Database Enterprise license; trials available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Stateless graph service nodes scale independently; Aerospike shards and replicates data, with XDR for cross-region."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Gremlin"
+  ],
+  "apis": [
+    "Gremlin Server (WebSocket)",
+    "REST health/admin"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    ".NET",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Storage inherits Aerospike's SSD-optimized, low-latency sharding and replication",
+    "Stateless query tier scales independently of storage",
+    "Standard Gremlin, so TinkerPop drivers and tooling work",
+    "Bulk loader designed for billions of vertices and edges"
+  ],
+  "weaknesses": [
+    "Gremlin only: no Cypher, GQL or SPARQL",
+    "Commercial license tied to Aerospike Enterprise",
+    "Multi-hop analytics are less efficient than native graph engines"
+  ],
+  "useCases": [
+    "Identity resolution graphs in ad tech",
+    "Real-time fraud detection",
+    "Customer 360 at large scale",
+    "Device graphs"
+  ],
+  "notIdealFor": [
+    "Small graphs or hobby projects",
+    "Cypher/GQL users",
+    "Whole-graph algorithms"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "aerospike",
+    "janusgraph",
+    "amazon-neptune",
+    "tigergraph",
+    "nebulagraph"
+  ],
+  "tags": [
+    "gremlin",
+    "tinkerpop",
+    "distributed",
+    "low-latency",
+    "identity-graph"
+  ],
+  "links": {
+    "website": "https://aerospike.com/products/graph-database/",
+    "docs": "https://aerospike.com/docs/graph/",
+    "changelog": "https://aerospike.com/docs/graph/release/"
+  },
+  "ids": {
+    "dockerHub": "aerospike/aerospike-graph-service",
+    "hackerNewsQuery": "Aerospike Graph"
+  },
+  "brand": {
+    "color": "#C22127"
+  },
+  "sources": [
+    "https://hub.docker.com/r/aerospike/aerospike-graph-service",
+    "https://aerospike.com/docs/graph/release/3-3-1",
+    "https://discuss.aerospike.com/t/aerospike-graph-service-3-2-3-june-30-2026/12995"
+  ],
+  "lastVerified": "2026-10-27"
+}

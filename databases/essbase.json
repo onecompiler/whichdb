@@ -1,0 +1,117 @@
+{
+  "slug": "essbase",
+  "name": "Essbase",
+  "aliases": ["Oracle Essbase", "Hyperion Essbase", "Essbase 26ai"],
+  "tagline": "Oracle's multidimensional OLAP cube server, the long-time engine behind financial planning and reporting.",
+  "description": "Essbase is a multidimensional database for OLAP cubes, first released by Arbor Software in 1992, merged into Hyperion in 1998 and owned by Oracle since 2007. Data lives in cubes of dimensions and hierarchies such as accounts, time, entity and scenario, stored either as block storage (BSO), suited to write-back and complex calculation scripts used in budgeting, or aggregate storage (ASO), suited to very large, sparse read-mostly cubes, with a hybrid mode combining both. Users query it with MDX and MaxL, through Excel via Smart View, or through Oracle Analytics. It also sits underneath Oracle's EPM planning products. Oracle remains invested: Essbase 26.1, branded 26ai, shipped in August 2026 as the long-term release after 21c, with independent and OCI Marketplace deployments and a built-in MCP server.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "array",
+  "models": ["array"],
+  "workloads": ["olap", "data-warehouse"],
+  "architecture": ["client-server", "single-node"],
+  "developer": "Oracle (originally Arbor Software, then Hyperion)",
+  "vendorType": "company",
+  "initialRelease": 1992,
+  "latestVersion": { "version": "26.1", "date": "2026-08" },
+  "writtenIn": ["C++", "Java"],
+  "license": { "type": "proprietary", "name": "Proprietary (Oracle)" },
+  "pricing": {
+    "models": ["enterprise-contract", "per-node-license"],
+    "freeTier": false,
+    "notes": "Licensed through Oracle (processor or named-user metrics); OCI Marketplace stacks run on customer-paid OCI compute."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["oracle-cloud"],
+    "platforms": ["linux", "windows"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales up on large servers; ASO cubes handle very high dimensionality, but there is no shared-nothing scale-out."
+  },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["MDX", "MaxL", "Essbase calculation scripts"],
+  "apis": ["REST API", "Java API", "XMLA", "Smart View (Excel)", "MCP"],
+  "compatibleWith": [],
+  "drivers": ["Java", "Excel (Smart View)"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Purpose-built for hierarchical financial models: allocations, consolidations, currency conversion and what-if scenarios",
+    "Write-back cubes let planners enter data directly from Excel via Smart View",
+    "Two storage engines (BSO for calculation, ASO for huge sparse cubes) plus hybrid mode",
+    "Three decades of finance-team adoption and Oracle EPM integration",
+    "Actively developed: 26.1 (Aug 2026) adds MCP access and new platform support"
+  ],
+  "weaknesses": [
+    "Specialised cube modelling and calc-script skills are scarce and costly",
+    "No horizontal scale-out; large BSO calculations can take hours",
+    "Expensive Oracle licensing and lock-in to Oracle tooling",
+    "Poor fit for ad-hoc SQL analytics compared with modern columnar warehouses"
+  ],
+  "useCases": [
+    "Corporate budgeting, forecasting and financial consolidation",
+    "Management and profitability reporting from Excel",
+    "Back end for Oracle EPM / Hyperion Planning applications",
+    "What-if scenario modelling over hierarchical dimensions"
+  ],
+  "notIdealFor": ["Transactional workloads", "Petabyte-scale event analytics", "Teams standardising on SQL-only tooling"],
+  "notableUsers": [],
+  "alternatives": ["apache-kylin", "sap-hana", "clickhouse", "apache-druid", "snowflake"],
+  "tags": ["olap", "multidimensional", "oracle", "financial-planning", "mdx"],
+  "links": {
+    "website": "https://www.oracle.com/analytics/essbase/",
+    "docs": "https://docs.oracle.com/en/database/other-databases/essbase/index.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Essbase"
+  },
+  "ids": {
+    "stackoverflowTag": "essbase",
+    "wikipedia": "Essbase",
+    "hackerNewsQuery": "Essbase"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Essbase",
+    "https://www.wikidata.org/wiki/Q1368563",
+    "https://docs.oracle.com/en/database/other-databases/essbase/index.html",
+    "https://blogs.oracle.com/autonomous-ai-database/essbase-26ai-is-here",
+    "https://dbdb.io/db/essbase"
+  ],
+  "lastVerified": "2026-10-27"
+}

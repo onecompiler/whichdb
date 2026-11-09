@@ -1,0 +1,190 @@
+{
+  "slug": "manticore-search",
+  "name": "Manticore Search",
+  "aliases": [
+    "Manticore"
+  ],
+  "tagline": "Fast SQL-first search database, forked from Sphinx, with columnar storage and vector KNN.",
+  "description": "Manticore Search forked from Sphinx 2.3 in 2017 and has since become a full search database: real-time tables, a MySQL-protocol SQL interface, an Elasticsearch-like JSON API, columnar storage, joins and HNSW vector search. It is noticeably lighter on resources than Elasticsearch and often faster for full-text and log-style queries on a single box. Replication is Galera-based and distribution across nodes is done with distributed tables. A good fit if you like SQL, want an open-source (GPL-3.0) engine, and do not need the Elastic ecosystem.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "vector",
+    "columnar"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "observability",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "Manticore Software",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "29.9.0",
+    "date": "2026-09-11"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Sphinx 2.3",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; Manticore Software sells support and consulting."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Distributed tables fan queries out to shards you define; Galera-based synchronous replication for HA."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (SphinxQL dialect)",
+    "JSON query API"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "HTTP/JSON"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Python",
+    "PHP",
+    "JavaScript",
+    "Java",
+    "Go",
+    "TypeScript",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Low memory footprint and fast full-text queries on modest hardware",
+    "Talk to it with any MySQL client using SQL",
+    "Columnar library for analytics-style filters and aggregations",
+    "HNSW KNN vector search plus auto-embeddings",
+    "Fully open source under GPL with no enterprise-only core"
+  ],
+  "weaknesses": [
+    "Sharding is manual via distributed tables",
+    "Smaller community and integrations than Elasticsearch",
+    "Elasticsearch API compatibility is partial",
+    "Documentation can lag the rapid release cadence"
+  ],
+  "useCases": [
+    "Site and product search with SQL",
+    "Log search on a budget",
+    "Replacing legacy Sphinx installs",
+    "Hybrid keyword plus vector search"
+  ],
+  "notIdealFor": [
+    "Teams needing automatic elastic sharding",
+    "Heavy reliance on Kibana-style tooling",
+    "Transactional OLTP"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sphinx",
+    "elasticsearch",
+    "opensearch",
+    "typesense",
+    "meilisearch",
+    "quickwit"
+  ],
+  "tags": [
+    "search",
+    "sql",
+    "mysql-protocol",
+    "open-source",
+    "sphinx-fork"
+  ],
+  "links": {
+    "website": "https://manticoresearch.com/",
+    "docs": "https://manual.manticoresearch.com/",
+    "repository": "https://github.com/manticoresoftware/manticoresearch",
+    "changelog": "https://manual.manticoresearch.com/Changelog"
+  },
+  "ids": {
+    "github": "manticoresoftware/manticoresearch",
+    "stackoverflowTag": "manticore-search",
+    "dockerHub": "manticoresearch/manticore",
+    "npm": "manticoresearch",
+    "pypi": "manticoresearch",
+    "hackerNewsQuery": "Manticore Search"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/manticoresoftware/manticoresearch/releases",
+    "https://github.com/manticoresoftware/manticoresearch/blob/master/LICENSE",
+    "https://manticoresearch.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,170 @@
+{
+  "slug": "amazon-cloudsearch",
+  "name": "Amazon CloudSearch",
+  "aliases": [
+    "AWS CloudSearch"
+  ],
+  "tagline": "AWS's original managed search service, closed to new customers since July 2024.",
+  "description": "Amazon CloudSearch is a managed search service launched by AWS in 2012 and rebuilt on Apache Solr in 2014. It handles indexing, scaling and patching automatically and offers text, faceted, geo and structured queries over uploaded JSON or XML batches. AWS closed it to new customers on July 25, 2024; existing accounts can keep using it and still get security and availability fixes, but no new features. AWS points migrations to Amazon OpenSearch Service, which also brings vector search that CloudSearch never got.",
+  "productType": "managed-service",
+  "status": "maintenance",
+  "statusNote": "Closed to new customers on July 25, 2024; existing accounts keep running with fixes only and no new features. AWS recommends migrating to Amazon OpenSearch Service.",
+  "maturity": "legacy",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "full-text-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Solr",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (AWS service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed per search-instance hour by instance type, plus document batch uploads, IndexDocuments requests and data transfer. Only available to accounts already allowlisted."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon CloudSearch",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/cloudsearch/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Automatically adds partitions and replicas as data and traffic grow; optional Multi-AZ."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Simple",
+    "Structured",
+    "Lucene",
+    "DisMax"
+  ],
+  "apis": [
+    "REST/JSON",
+    "AWS API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "AWS SDKs (Java, Python, JavaScript, .NET, Go, Ruby, PHP)"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-ops: AWS manages scaling, patching and replicas",
+    "Simple batch-upload indexing model",
+    "Faceting, highlighting, autocomplete and geo search",
+    "IAM-integrated access control"
+  ],
+  "weaknesses": [
+    "No longer accepting new customers; feature-frozen",
+    "No vector or semantic search",
+    "Coarse relevance tuning compared with OpenSearch",
+    "Instance-hour pricing is expensive for small workloads"
+  ],
+  "useCases": [
+    "Maintaining existing CloudSearch-backed site search",
+    "Simple faceted catalog search for legacy apps"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Vector, hybrid or RAG workloads",
+    "Log analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "opensearch",
+    "elasticsearch",
+    "algolia",
+    "typesense",
+    "azure-ai-search"
+  ],
+  "tags": [
+    "search",
+    "aws",
+    "managed",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/cloudsearch/",
+    "docs": "https://docs.aws.amazon.com/cloudsearch/latest/developerguide/what-is-cloudsearch.html",
+    "pricing": "https://aws.amazon.com/cloudsearch/pricing/"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-cloudsearch",
+    "hackerNewsQuery": "Amazon CloudSearch"
+  },
+  "brand": {
+    "color": "#FF9900"
+  },
+  "sources": [
+    "https://aws.amazon.com/blogs/big-data/transition-from-amazon-cloudsearch-to-amazon-opensearch-service/",
+    "https://docs.aws.amazon.com/cloudsearch/latest/developerguide/what-is-cloudsearch.html",
+    "https://awsinsider.net/Articles/2024/08/01/AWS-Closes-Door-to-Some-Services.aspx"
+  ],
+  "lastVerified": "2026-10-27"
+}

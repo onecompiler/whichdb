@@ -1,0 +1,178 @@
+{
+  "slug": "apache-cloudberry",
+  "name": "Apache Cloudberry",
+  "aliases": [
+    "Cloudberry Database",
+    "CloudberryDB"
+  ],
+  "tagline": "Open-source MPP warehouse forked from Greenplum and rebased on a newer PostgreSQL kernel.",
+  "description": "Apache Cloudberry is an Apache Incubator project that continues the open-source Greenplum lineage after Broadcom closed Greenplum's code. Started by HashData in 2023 and donated to the ASF in 2024, it rebases the MPP architecture (coordinator plus segments, GPORCA optimizer, append-optimized columnar tables) on PostgreSQL 14 and adds features such as incremental materialized views, directory tables and PAX storage. It is the natural migration target for Greenplum 6/7 users wanting to stay open source; it is still incubating, with a young release history and community.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "spatial",
+    "document"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation (Incubator)",
+  "vendorType": "foundation",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "2.1.0-incubating",
+    "date": "2026-04-15"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Greenplum / PostgreSQL 14",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial support from HashData and other vendors."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shared-nothing MPP segments with mirrors, like Greenplum."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL",
+    "PL/Python"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Open-source continuation of Greenplum with a migration path",
+    "Newer PostgreSQL 14 kernel than Greenplum 7",
+    "GPORCA optimizer and append-optimized columnar storage",
+    "Apache governance instead of single-vendor control"
+  ],
+  "weaknesses": [
+    "Still incubating with a small contributor base",
+    "Few managed offerings and limited cloud integration",
+    "Inherits Greenplum's operational complexity"
+  ],
+  "useCases": [
+    "Migrating off closed-source Greenplum",
+    "On-prem Postgres-compatible MPP warehouse",
+    "Open-source alternative to commercial MPP appliances"
+  ],
+  "notIdealFor": [
+    "Serverless cloud analytics",
+    "OLTP",
+    "Teams needing a large ecosystem today"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "greenplum",
+    "citus",
+    "amazon-redshift",
+    "apache-doris",
+    "starrocks"
+  ],
+  "tags": [
+    "mpp",
+    "postgres-based",
+    "greenplum-fork",
+    "open-source",
+    "apache-incubator"
+  ],
+  "links": {
+    "website": "https://cloudberry.apache.org/",
+    "docs": "https://cloudberry.apache.org/docs/",
+    "repository": "https://github.com/apache/cloudberry",
+    "changelog": "https://github.com/apache/cloudberry/releases"
+  },
+  "ids": {
+    "github": "apache/cloudberry",
+    "hackerNewsQuery": "Apache Cloudberry"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/apache/cloudberry/releases",
+    "https://cloudberry.apache.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

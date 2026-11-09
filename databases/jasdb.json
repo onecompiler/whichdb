@@ -1,0 +1,165 @@
+{
+  "slug": "jasdb",
+  "name": "JasDB",
+  "aliases": [
+    "JasDB Open",
+    "Obera JasDB"
+  ],
+  "tagline": "Lightweight Java document database usable embedded (including Android) or as a REST server.",
+  "description": "JasDB is a small document store from the Dutch developer Renze de Vries (Obera Software). It stores schemaless JSON-like entities with B+tree indexes and a query API, and can run inside a Java process, on Android, or as a standalone server with a REST interface and a web console on port 7050. The last published release is 1.2.1 from 2017; the master branch carries an incompatible 2.0 API that needs Java 17 and has no published artifacts, and the only recent activity (2024) was build and Docker housekeeping. Treat it as a hobby-grade embedded store or a codebase to learn from, not a production dependency.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Last release 1.2.1 (Sept 2017); unreleased 2.0 on master; only build/Docker commits since, the latest in July 2024.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Obera Software (Renze de Vries)",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "1.2.1",
+    "date": "2017-09-07"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java query API"
+  ],
+  "apis": [
+    "REST",
+    "Java client API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs embedded in a JVM or Android app, or as a REST server",
+    "B+tree secondary indexes over schemaless documents",
+    "Small footprint and permissive MIT license",
+    "Simple to read codebase for learning document-store internals"
+  ],
+  "weaknesses": [
+    "No release since 2017 and an unreleased, incompatible 2.0 branch",
+    "Single-developer project with sparse documentation",
+    "No replication, sharding or managed offering"
+  ],
+  "useCases": [
+    "Embedded document storage in small Java or Android tools",
+    "Learning how a document database is built"
+  ],
+  "notIdealFor": [
+    "Production systems needing support or security fixes",
+    "Multi-node or high-availability deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "nitrite",
+    "mongodb",
+    "couchbase-lite",
+    "h2",
+    "litedb"
+  ],
+  "tags": [
+    "document",
+    "java",
+    "embedded",
+    "android",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://github.com/oberasoftware/jasdb",
+    "repository": "https://github.com/oberasoftware/jasdb",
+    "docs": "https://github.com/oberasoftware/jasdb-open/wiki"
+  },
+  "ids": {
+    "github": "oberasoftware/jasdb",
+    "hackerNewsQuery": "JasDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/oberasoftware/jasdb",
+    "https://github.com/oberasoftware/jasdb/releases",
+    "https://dbdb.io/db/jasdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

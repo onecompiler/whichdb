@@ -1,0 +1,179 @@
+{
+  "slug": "azure-documentdb",
+  "name": "Azure DocumentDB",
+  "aliases": [
+    "Azure Cosmos DB for MongoDB (vCore)",
+    "vCore-based Azure Cosmos DB for MongoDB"
+  ],
+  "tagline": "Microsoft's managed MongoDB-compatible service, built on the open-source DocumentDB engine.",
+  "description": "Azure DocumentDB is Microsoft's managed, vCore-priced, MongoDB-compatible document database. It was previously sold as vCore-based Azure Cosmos DB for MongoDB and was renamed at general availability on 18 November 2025. It runs the MIT-licensed DocumentDB engine (PostgreSQL plus BSON extensions), not MongoDB code, and claims about 99% MongoDB API compatibility. It includes integrated vector search, a free tier and automatic sharding once data grows large. Microsoft positions it for scale-up workloads with rich aggregation, and keeps Cosmos DB for globally distributed scale-out work, so the choice between the two matters.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "vector-search",
+    "rag",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "primary-replica"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "C",
+    "Rust"
+  ],
+  "basedOn": "DocumentDB (PostgreSQL)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary Azure service (engine is MIT-licensed DocumentDB)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Compute (vCores) and storage billed independently; backups included. A free tier includes vector search."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Azure DocumentDB",
+      "provider": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/azure/documentdb/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Vertical scaling first; shards automatically (no shard key needed until multi-TB). Cross-region geo-replicas for DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "MongoDB Query API (MQL)",
+    "Aggregation pipeline"
+  ],
+  "apis": [
+    "MongoDB wire protocol"
+  ],
+  "compatibleWith": [
+    "mongodb"
+  ],
+  "drivers": [
+    "C#",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Predictable vCore pricing instead of request units",
+    "Engine is open source, so you can run the same thing locally or on another cloud",
+    "Integrated vector search, including on the free tier",
+    "Strong aggregation-pipeline and multi-document transaction fidelity",
+    "Entra ID, Azure Monitor and Private Link integration"
+  ],
+  "weaknesses": [
+    "99.995% SLA and regional deployment, below Cosmos DB's multi-region 99.999%",
+    "Compatibility is high but not complete; test edge-case operators",
+    "Naming history (Cosmos DB for MongoDB vCore vs RU) causes confusion in docs and tooling",
+    "Azure-only as a managed service"
+  ],
+  "useCases": [
+    "MongoDB migrations to Azure without SSPL",
+    "Content management and catalog backends with complex aggregations",
+    "RAG applications storing embeddings next to documents"
+  ],
+  "notIdealFor": [
+    "Globally distributed multi-region writes (use Cosmos DB)",
+    "Apps that need features exclusive to MongoDB Atlas"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "azure-cosmos-db",
+    "mongodb-atlas",
+    "amazon-documentdb",
+    "documentdb-postgres",
+    "mongodb"
+  ],
+  "tags": [
+    "azure",
+    "mongodb-compatible",
+    "dbaas",
+    "document",
+    "vector-search"
+  ],
+  "links": {
+    "website": "https://learn.microsoft.com/azure/documentdb/",
+    "docs": "https://learn.microsoft.com/azure/documentdb/overview",
+    "pricing": "https://azure.microsoft.com/pricing/details/documentdb/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Azure DocumentDB"
+  },
+  "brand": {
+    "color": "#0078D4"
+  },
+  "sources": [
+    "https://devblogs.microsoft.com/cosmosdb/azure-documentdb-is-now-generally-available/",
+    "https://learn.microsoft.com/en-us/azure/documentdb/overview",
+    "https://learn.microsoft.com/en-us/azure/cosmos-db/introduction"
+  ],
+  "lastVerified": "2026-10-27"
+}

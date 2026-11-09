@@ -1,0 +1,170 @@
+{
+  "slug": "chronicle-map",
+  "name": "Chronicle Map",
+  "aliases": [
+    "OpenHFT Chronicle Map"
+  ],
+  "tagline": "Off-heap, memory-mapped key-value store for Java with microsecond latency and cross-process sharing.",
+  "description": "Chronicle Map is an open-source Java key-value store from Chronicle Software (the OpenHFT project) that implements ConcurrentMap but keeps entries off the JVM heap in memory-mapped files. Maps can therefore hold far more data than the heap, survive restarts when backed by a file, and be shared by several JVM processes on the same host, with microsecond-level reads and writes and almost no garbage-collection pressure. You size a map up front (expected entries and average key/value size), and lookups are by key only. It is used mainly in trading and other latency-sensitive financial systems. Cross-host multi-master replication is part of Chronicle's commercial offering, and the company's product pages now lead with a Chronicle Queue-backed map, but the Apache 2.0 library keeps shipping releases (2026.1 in January 2026).",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "financial-tick-data",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Chronicle Software",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "2026.1",
+    "date": "2026-01-29"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Core library is Apache 2.0; replication, enterprise features and support are commercial."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Capacity is bounded by disk rather than heap; the open-source edition is single-host (multi-process). Cross-host replication needs the commercial edition."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Java Map API"
+  ],
+  "apis": [
+    "java.util.concurrent.ConcurrentMap"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Microsecond-level reads and writes with near-zero GC because data lives off-heap",
+    "Memory-mapped files let several JVMs on one host share the same map",
+    "Capacity bounded by disk rather than heap size",
+    "Drop-in ConcurrentMap API",
+    "Apache 2.0 core with a commercial support path"
+  ],
+  "weaknesses": [
+    "Key lookups only: no query language or secondary indexes",
+    "Maps must be sized up front (entry count, average key and value size)",
+    "Cross-machine replication is commercial-only",
+    "JVM only"
+  ],
+  "useCases": [
+    "Low-latency reference data and order-book state in trading systems",
+    "Sharing state between JVM processes on one host",
+    "Large off-heap caches that survive restarts"
+  ],
+  "notIdealFor": [
+    "Ad-hoc querying or analytics",
+    "Non-JVM applications",
+    "Multi-node storage without a commercial license"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mapdb",
+    "hazelcast",
+    "ehcache",
+    "lmdb",
+    "apache-ignite",
+    "redis"
+  ],
+  "tags": [
+    "java",
+    "off-heap",
+    "low-latency",
+    "key-value",
+    "fintech"
+  ],
+  "links": {
+    "website": "https://github.com/OpenHFT/Chronicle-Map",
+    "docs": "https://github.com/OpenHFT/Chronicle-Map/blob/ea/docs/CM_Features.adoc",
+    "repository": "https://github.com/OpenHFT/Chronicle-Map",
+    "changelog": "https://github.com/OpenHFT/Chronicle-Map/releases"
+  },
+  "ids": {
+    "github": "OpenHFT/Chronicle-Map",
+    "stackoverflowTag": "chronicle-map",
+    "hackerNewsQuery": "Chronicle Map"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/OpenHFT/Chronicle-Map",
+    "https://github.com/OpenHFT/Chronicle-Map/releases",
+    "https://chronicle.software/products/chronicle-qbm"
+  ],
+  "lastVerified": "2026-10-27"
+}

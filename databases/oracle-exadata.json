@@ -1,0 +1,205 @@
+{
+  "slug": "oracle-exadata",
+  "name": "Oracle Exadata",
+  "aliases": [
+    "Exadata",
+    "Exadata Database Service",
+    "Exadata Cloud@Customer"
+  ],
+  "tagline": "Oracle's engineered system for Oracle Database, with smart storage offload for OLTP and analytics.",
+  "description": "Exadata is Oracle's co-engineered hardware and software platform for Oracle Database. Its storage servers run Exadata System Software that pushes SQL filtering, Hybrid Columnar Compression, storage indexes and AI vector search offload down to storage, connected over RDMA, so one platform handles demanding OLTP and data warehousing together. It is sold on-premises, as Cloud@Customer, as Exadata Database Service and Autonomous Database in OCI, and inside AWS, Azure and Google Cloud via Oracle Database@. It is the high-end choice for Oracle shops; cost and lock-in are the trade-offs.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "document",
+    "vector",
+    "spatial",
+    "graph"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "oltp",
+    "htap",
+    "olap"
+  ],
+  "architecture": [
+    "shared-storage",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Oracle",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "X11M",
+    "date": "2025-01-07"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "Oracle Database",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Hardware plus Oracle Database licences on-prem; Exadata Database Service billed per ECPU and infrastructure in OCI and partner clouds."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "oracle-cloud",
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Exadata Database Service",
+      "provider": "Oracle Cloud",
+      "url": "https://www.oracle.com/engineered-systems/exadata/database-service/"
+    },
+    {
+      "name": "Oracle Database@AWS",
+      "provider": "Oracle / AWS",
+      "url": "https://www.oracle.com/cloud/aws/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Scales out with RAC across database servers and added storage cells; Data Guard for cross-region DR; Globally Distributed Database for sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/SQL"
+  ],
+  "apis": [
+    "Oracle Net (SQL*Net)",
+    "JDBC",
+    "ODBC",
+    "OCI",
+    "ORDS REST"
+  ],
+  "compatibleWith": [
+    "oracle"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "C",
+    ".NET",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Smart Scan offloads filtering and vector search to storage servers",
+    "Runs mixed OLTP and analytics on one consolidated platform",
+    "Hybrid Columnar Compression for large warehouse tables",
+    "Same platform on-prem, Cloud@Customer, OCI and inside AWS, Azure and GCP",
+    "Full Oracle Database feature set including RAC and Data Guard"
+  ],
+  "weaknesses": [
+    "Very high cost of hardware and Oracle licensing",
+    "Deep lock-in to Oracle Database and Oracle contracts",
+    "Overkill for workloads that fit commodity databases"
+  ],
+  "useCases": [
+    "Consolidating many Oracle databases",
+    "Mission-critical OLTP plus reporting",
+    "Large Oracle data warehouses",
+    "Oracle workloads moving to OCI or multicloud"
+  ],
+  "notIdealFor": [
+    "Non-Oracle stacks",
+    "Startups and cost-sensitive projects",
+    "Open-source requirements"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-database",
+    "oracle-autonomous-database",
+    "teradata-vantage",
+    "snowflake",
+    "ibm-db2-warehouse",
+    "sap-hana"
+  ],
+  "tags": [
+    "engineered-system",
+    "oracle",
+    "htap",
+    "enterprise",
+    "hardware"
+  ],
+  "links": {
+    "website": "https://www.oracle.com/engineered-systems/exadata/",
+    "docs": "https://docs.oracle.com/en/engineered-systems/exadata-database-machine/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Oracle_Exadata"
+  },
+  "ids": {
+    "stackoverflowTag": "exadata",
+    "wikipedia": "Oracle Exadata",
+    "hackerNewsQuery": "Oracle Exadata"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.oracle.com/engineered-systems/exadata/",
+    "https://en.wikipedia.org/wiki/Oracle_Exadata"
+  ],
+  "lastVerified": "2026-10-27"
+}

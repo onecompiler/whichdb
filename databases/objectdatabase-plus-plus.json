@@ -1,0 +1,156 @@
+{
+  "slug": "objectdatabase-plus-plus",
+  "name": "ObjectDatabase++",
+  "aliases": [
+    "ODBPP"
+  ],
+  "tagline": "Ekky Software's embedded C++ object database with B+tree, spatial, full-text and pattern indexes.",
+  "description": "ObjectDatabase++ (ODBPP) is an embedded object-oriented database library from Ekky Software for C++ developers, with an ATL/COM interface for VB.NET and C#, aimed at people who want direct control over storage instead of a SQL server. It supports multi-process and multi-threaded servers with full transaction control, real-time recovery and online compaction, 64-bit object IDs, and a set of built-in index types: B+tree, spatial, token (full-text), variable and biometric pattern-matching indexes. A free GUI editor and the TScript scripting language round out the toolkit, and developers can use each monthly build free under a renewable three-month key. The product is small and obscure but alive: SDK 4.8.0 for 64-bit Windows was published on August 1, 2026.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "spatial"
+  ],
+  "workloads": [
+    "embedded",
+    "geospatial"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Ekky Software Pty Ltd",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "4.8.0",
+    "date": "2026-08-01"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial; free renewable developer license"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "Monthly builds carry a free three-month developer key; deployment licensing through Ekky Software."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C++ API",
+    "TScript"
+  ],
+  "apis": [
+    "C++ API",
+    "ATL COM interface"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "C#",
+    "VB.NET"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Unusual built-in index types: spatial, full-text and biometric pattern matching",
+    "Multi-process access with real-time recovery and online compaction",
+    "Still receiving monthly-style builds in 2026"
+  ],
+  "weaknesses": [
+    "Very small vendor and user community",
+    "Windows-first tooling; COM interface feels dated",
+    "Proprietary with licensing that is not clearly documented"
+  ],
+  "useCases": [
+    "C++ applications that need embedded object storage with spatial indexes",
+    "Windows server components wanting custom index types"
+  ],
+  "notIdealFor": [
+    "Teams wanting SQL",
+    "Open-source-only stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "objectdb",
+    "versant-object-database",
+    "perst",
+    "sqlite"
+  ],
+  "tags": [
+    "object-database",
+    "c++",
+    "embedded",
+    "spatial",
+    "windows"
+  ],
+  "links": {
+    "website": "http://tdbe.ekkysoftware.com/ODBPP"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://tdbe.ekkysoftware.com/ODBPP",
+    "http://tdbe.ekkysoftware.com/Downloads",
+    "http://tdbe.ekkysoftware.com/ODBPP/Features/License"
+  ],
+  "lastVerified": "2026-10-27"
+}

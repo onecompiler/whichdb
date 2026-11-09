@@ -1,0 +1,158 @@
+{
+  "slug": "paper",
+  "name": "Paper",
+  "aliases": [
+    "PaperDB",
+    "paperdb"
+  ],
+  "tagline": "Simple Android key-value store that persists plain Java/Kotlin objects with Kryo; no SQL, no schemas.",
+  "description": "Paper is a small Android persistence library that stores plain Java and Kotlin objects under string keys in named 'books', serializing them with Kryo so classes need no annotations, base classes or mappers, and coping with added or removed fields without explicit migrations. Each key is written to its own file with a backup copy for crash safety, and per-key locking makes concurrent reads and writes safe. It is a pragmatic step up from SharedPreferences when you need to cache object graphs, not a queryable database: there are no indexes, queries or multi-key transactions. The last release was 2.7.2 in January 2022 and the repository has been quiet since early 2023.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No release since 2.7.2 (Jan 2022) and no commits since Jan 2023; still works but is effectively unmaintained.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "object"
+  ],
+  "workloads": [
+    "mobile-offline",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Aleksey Masny (pilgr)",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "2.7.2",
+    "date": "2022-01-02"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "One file per key on device storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    "Java/Kotlin API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Kotlin"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stores arbitrary object graphs with one call and no mapping code",
+    "Tolerates class changes without migrations",
+    "Crash-safe writes via per-key backup files"
+  ],
+  "weaknesses": [
+    "No queries, indexes or multi-key transactions",
+    "One file per key scales poorly to many thousands of entries",
+    "Kryo serialization ties stored data to class structure and needs ProGuard rules"
+  ],
+  "useCases": [
+    "Caching API responses or settings objects on Android",
+    "Simple offline persistence in small apps"
+  ],
+  "notIdealFor": [
+    "Relational or queryable data",
+    "Large datasets on device"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mmkv",
+    "objectbox",
+    "realm",
+    "sqlite"
+  ],
+  "tags": [
+    "android",
+    "key-value",
+    "embedded",
+    "kotlin",
+    "java"
+  ],
+  "links": {
+    "website": "https://github.com/pilgr/Paper",
+    "repository": "https://github.com/pilgr/Paper"
+  },
+  "ids": {
+    "github": "pilgr/Paper"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/pilgr/Paper",
+    "https://github.com/pilgr/Paper/releases",
+    "https://dbdb.io/db/paper"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,176 @@
+{
+  "slug": "sqlcipher",
+  "name": "SQLCipher",
+  "aliases": [
+    "SQLCipher for SQLite"
+  ],
+  "tagline": "SQLite with transparent 256-bit AES encryption of the whole database file.",
+  "description": "SQLCipher is a fork of SQLite from Zetetic that encrypts every page of the database file with AES-256 and authenticates pages with HMAC, so a stolen device or backup yields nothing readable without the key. Apart from the key pragmas it behaves like SQLite, with the same SQL, file format semantics and tooling. It is the standard answer when mobile or desktop apps must encrypt local data at rest, and libraries such as Room, PowerSync and many Flutter plugins can use it. The Community Edition is BSD-licensed. Commercial editions add prebuilt packages, performance work and FIPS-validated crypto.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Zetetic LLC",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "4.19.0",
+    "date": "2026-09-08"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause (Community Edition); commercial editions",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free; Commercial and Enterprise editions add packaged builds, speedups, FIPS and support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Same single-file limits as SQLite, with a modest encryption overhead."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "SQLite C API"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Kotlin",
+    "Swift",
+    "Objective-C",
+    "C#",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Whole-file AES-256 encryption with per-page HMAC tamper detection",
+    "Full SQLite feature set and SQL compatibility",
+    "Widely integrated in mobile frameworks and sync SDKs",
+    "Long track record in password managers and regulated apps"
+  ],
+  "weaknesses": [
+    "Key management is your problem; a weak or hard-coded key defeats the purpose",
+    "Encryption adds CPU overhead, most noticeable on large scans",
+    "Prebuilt binaries for some platforms require a commercial license"
+  ],
+  "useCases": [
+    "Encrypting local data in healthcare, finance and enterprise mobile apps",
+    "Password managers and secure note apps",
+    "Desktop apps storing sensitive data offline"
+  ],
+  "notIdealFor": [
+    "Server-side multi-user databases",
+    "Cases where OS-level disk encryption is already sufficient"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "realm",
+    "objectbox",
+    "couchbase-lite",
+    "litedb"
+  ],
+  "tags": [
+    "sqlite-ecosystem",
+    "encryption",
+    "mobile",
+    "embedded",
+    "security"
+  ],
+  "links": {
+    "website": "https://www.zetetic.net/sqlcipher/",
+    "docs": "https://www.zetetic.net/sqlcipher/sqlcipher-api/",
+    "repository": "https://github.com/sqlcipher/sqlcipher",
+    "changelog": "https://github.com/sqlcipher/sqlcipher/releases"
+  },
+  "ids": {
+    "github": "sqlcipher/sqlcipher",
+    "stackoverflowTag": "sqlcipher",
+    "hackerNewsQuery": "SQLCipher"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.zetetic.net/sqlcipher/",
+    "https://github.com/sqlcipher/sqlcipher/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

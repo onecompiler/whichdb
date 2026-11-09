@@ -1,0 +1,200 @@
+{
+  "slug": "qdrant",
+  "name": "Qdrant",
+  "aliases": [],
+  "tagline": "Rust vector search engine with rich payload filtering, quantization and a managed cloud.",
+  "description": "Qdrant is an open-source vector database written in Rust, known for fast filtered search: payload indexes are integrated into its HNSW graph so restrictive filters do not wreck recall. It supports dense, sparse and multi-vector points, scalar/binary/product quantization, a universal Query API for hybrid fusion and re-ranking, and distributed sharding with replication. It runs comfortably from a single Docker container to large clusters, and Qdrant Cloud adds managed, hybrid (your Kubernetes) and private deployments. A strong default for self-hosted vector search.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "document"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Qdrant Solutions GmbH",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "1.20.0",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "Free 1 GB cluster; Standard usage-based",
+    "notes": "Free tier: single node, 1 GB RAM, 4 GB disk. Standard is billed by resources; Premium adds SSO, private links and a 99.9% SLA. Hybrid and Private Cloud for self-managed infra."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Qdrant Cloud",
+      "provider": "Qdrant",
+      "url": "https://cloud.qdrant.io/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Collections shard across nodes with configurable replication factor; on-disk vectors and quantization support billion-scale collections."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Qdrant Query API (JSON filters)"
+  ],
+  "apis": [
+    "REST/JSON",
+    "gRPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Rust",
+    "Go",
+    "Java",
+    ".NET"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Filter-aware HNSW keeps recall high under restrictive payload filters",
+    "Dense, sparse and multi-vector (ColBERT) support with server-side fusion",
+    "Scalar, binary and product quantization with on-disk storage",
+    "Small, efficient Rust binary that is easy to self-host",
+    "Managed, hybrid and private cloud options"
+  ],
+  "weaknesses": [
+    "Full-text support is a filter index, not a BM25 search engine",
+    "No joins or relational queries",
+    "Distributed mode requires planning shard counts up front",
+    "Enterprise features such as SSO are cloud-tier only"
+  ],
+  "useCases": [
+    "RAG retrieval with metadata filtering",
+    "Recommendation and similarity search",
+    "Image and multimodal search",
+    "Multi-tenant semantic search"
+  ],
+  "notIdealFor": [
+    "Keyword-relevance-heavy search (use Elasticsearch/Vespa)",
+    "Transactional workloads",
+    "Analytics"
+  ],
+  "notableUsers": [
+    "Tripadvisor",
+    "HubSpot"
+  ],
+  "alternatives": [
+    "weaviate",
+    "milvus",
+    "pinecone",
+    "chroma",
+    "pgvector",
+    "lancedb",
+    "elasticsearch"
+  ],
+  "tags": [
+    "vector-database",
+    "rust",
+    "open-source",
+    "filtering",
+    "rag"
+  ],
+  "links": {
+    "website": "https://qdrant.tech/",
+    "docs": "https://qdrant.tech/documentation/",
+    "repository": "https://github.com/qdrant/qdrant",
+    "pricing": "https://qdrant.tech/pricing/",
+    "changelog": "https://github.com/qdrant/qdrant/releases"
+  },
+  "ids": {
+    "github": "qdrant/qdrant",
+    "stackoverflowTag": "qdrant",
+    "dockerHub": "qdrant/qdrant",
+    "npm": "@qdrant/js-client-rest",
+    "pypi": "qdrant-client",
+    "crates": "qdrant-client",
+    "hackerNewsQuery": "Qdrant"
+  },
+  "brand": {
+    "color": "#DC244C",
+    "simpleIcon": "qdrant"
+  },
+  "sources": [
+    "https://github.com/qdrant/qdrant/releases",
+    "https://qdrant.tech/pricing/",
+    "https://qdrant.tech/documentation/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,126 @@
+{
+  "slug": "google-cloud-spanner",
+  "name": "Google Cloud Spanner",
+  "aliases": ["Spanner", "Cloud Spanner"],
+  "tagline": "Google's globally consistent, horizontally scaling SQL service with graph, vector and full-text built in.",
+  "description": "Spanner is Google Cloud's fully managed distributed SQL database, the external version of the system that backs Google's own ads and payments infrastructure. It shards data automatically, replicates it with Paxos, and uses TrueTime-synchronized clocks to give externally consistent transactions across regions with a 99.999% SLA on multi-region configurations. Beyond relational tables it now offers Spanner Graph (ISO GQL), vector search, full-text search and a PostgreSQL-dialect interface. Choose it when you need effectively unlimited write scale with strong consistency and are comfortable committing to Google Cloud; for small apps its minimum footprint and pricing are hard to justify.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "graph", "key-value", "vector", "search"],
+  "workloads": ["oltp", "graph-traversal", "vector-search", "full-text-search", "financial-tick-data", "metadata-store"],
+  "architecture": ["distributed", "multi-primary"],
+  "developer": "Google",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2017,
+  "writtenIn": ["C++"],
+  "license": { "type": "proprietary", "name": "Proprietary (Google Cloud service)" },
+  "pricing": {
+    "models": ["usage-based", "subscription"],
+    "freeTier": false,
+    "notes": "Billed per processing unit/node-hour by edition (Standard, Enterprise, Enterprise Plus) plus storage; a 90-day free trial instance is available but not a permanent free tier."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["gcp"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Spanner", "provider": "Google Cloud", "url": "https://cloud.google.com/spanner" }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Automatic split-based sharding; granular instances start at 100 processing units; multi-region configs offer 99.999% availability."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["GoogleSQL", "PostgreSQL dialect", "GQL"],
+  "apis": ["gRPC", "REST", "PGAdapter (PostgreSQL wire)", "JDBC"],
+  "compatibleWith": ["postgresql"],
+  "drivers": ["Java", "Go", "Python", "JavaScript", "C#", "C++", "PHP", "Ruby"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "External consistency across regions backed by TrueTime and Paxos",
+    "No manual sharding: splits and rebalancing happen automatically",
+    "99.999% availability SLA on multi-region configurations",
+    "Graph (GQL), vector and full-text search in the same database",
+    "Stale reads and point-in-time recovery up to the version retention window",
+    "Online schema changes with no maintenance windows"
+  ],
+  "weaknesses": [
+    "Google Cloud only for the managed service (Spanner Omni is the self-run option)",
+    "Expensive at small scale compared with Cloud SQL or Postgres",
+    "No triggers or stored procedures; PostgreSQL dialect is a subset",
+    "Schema and key design (interleaving, avoiding hotspots) matters a lot for performance"
+  ],
+  "useCases": [
+    "Global financial ledgers and payment systems",
+    "Gaming backends with worldwide player state",
+    "Inventory and supply-chain systems of record",
+    "Identity and metadata services at very high write rates",
+    "Graph-plus-relational fraud detection"
+  ],
+  "notIdealFor": [
+    "Small or hobby applications on a tight budget",
+    "Multi-cloud or on-premises requirements (consider Spanner Omni)",
+    "Heavy procedural logic in the database"
+  ],
+  "notableUsers": ["Uber"],
+  "alternatives": ["cockroachdb", "yugabytedb", "amazon-aurora-dsql", "spanner-omni", "tidb", "azure-cosmos-db"],
+  "tags": ["distributed-sql", "newsql", "google-cloud", "multi-region", "graph"],
+  "links": {
+    "website": "https://cloud.google.com/spanner",
+    "docs": "https://cloud.google.com/spanner/docs",
+    "pricing": "https://cloud.google.com/spanner/pricing",
+    "changelog": "https://cloud.google.com/spanner/docs/release-notes",
+    "wikipedia": "https://en.wikipedia.org/wiki/Spanner_(database)"
+  },
+  "ids": {
+    "stackoverflowTag": "google-cloud-spanner",
+    "wikipedia": "Spanner (database)",
+    "npm": "@google-cloud/spanner",
+    "pypi": "google-cloud-spanner",
+    "hackerNewsQuery": "Cloud Spanner"
+  },
+  "brand": { "color": "#4285F4", "simpleIcon": "googlecloudspanner" },
+  "sources": [
+    "https://cloud.google.com/spanner",
+    "https://cloud.google.com/spanner/pricing",
+    "https://en.wikipedia.org/wiki/Spanner_(database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

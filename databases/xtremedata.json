@@ -1,0 +1,157 @@
+{
+  "slug": "xtremedata",
+  "name": "XtremeData dbX",
+  "aliases": [
+    "XtremeData",
+    "dbX"
+  ],
+  "tagline": "Parallel, vectorized SQL analytics engine on PostgreSQL roots, once an FPGA appliance, now cloud software.",
+  "description": "dbX from XtremeData, Inc. of Schaumburg, Illinois, is a massively parallel SQL engine for analytics. The company started from an open-source database package and re-engineered the executor into a parallel, vectorized engine that runs as a single logical database across nodes, so it does not depend on distribution keys or star schemas for performance; it keeps PostgreSQL-compatible SQL and UDFs. Around 2009-2010 dbX shipped as appliances with Altera FPGA accelerators and Cray-based systems; today it is sold as software for AWS, Azure, Google Cloud and on-premises clusters handling up to hundreds of terabytes. The website is maintained, but public release news is scarce.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Website still offers dbX for AWS, Azure, GCP and on-prem in 2026, but no public release notes or news have appeared for years.",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "XtremeData, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "PostgreSQL (re-engineered parallel executor)",
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Vendor positions it for 1 to hundreds of TB, scaling compute and storage independently."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Any PostgreSQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Complex multi-way joins and aggregates without careful data partitioning",
+    "Vectorized, fully parallel executor rather than federated Postgres instances",
+    "PostgreSQL-compatible SQL keeps existing tools usable"
+  ],
+  "weaknesses": [
+    "Small vendor with little public documentation or community",
+    "Opaque release history",
+    "Proprietary licensing"
+  ],
+  "useCases": [
+    "Cloud or on-prem data warehouses up to hundreds of TB",
+    "Complex ad-hoc SQL over large schemas"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Teams wanting an open ecosystem or managed SaaS"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "greenplum",
+    "amazon-redshift",
+    "snowflake",
+    "vertica",
+    "exasol"
+  ],
+  "tags": [
+    "mpp",
+    "analytics",
+    "postgresql-compatible",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.xtremedata.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "XtremeData"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20261004013631/https://www.xtremedata.com/",
+    "https://web.archive.org/web/20260716064652/https://www.xtremedata.com/product",
+    "https://web.archive.org/web/20100418112502/http://www.xtremedata.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

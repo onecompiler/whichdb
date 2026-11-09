@@ -1,0 +1,186 @@
+{
+  "slug": "dgraph",
+  "name": "Dgraph",
+  "aliases": [
+    "Dgraph Labs"
+  ],
+  "tagline": "Distributed, horizontally scalable graph database in Go with native GraphQL and DQL.",
+  "description": "Dgraph is an open-source distributed graph database written in Go that shards data by predicate across Raft groups and serves both a native GraphQL API (generated from your schema) and its own DQL query language. It provides distributed ACID transactions, full-text, geo and HNSW vector indexes, all now under Apache 2.0 after former enterprise features were opened up. Ownership changed twice: Hypermode acquired Dgraph Labs in 2024 and sold Dgraph to Istari Digital in October 2025, which committed to keep the open-source project going; v25 releases continue. It suits app backends that want GraphQL-native data with graph traversal, less so heavy analytics.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "graph-traversal",
+    "knowledge-graph",
+    "vector-search"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Istari Digital",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "25.5.1",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; commercial support available from the owner."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Predicates are sharded across Alpha groups with Raft replication; Zero nodes rebalance tablets automatically."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "DQL",
+    "GraphQL"
+  ],
+  "apis": [
+    "gRPC",
+    "HTTP",
+    "GraphQL endpoint"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Java",
+    "JavaScript",
+    "Python",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native GraphQL: define a schema and get a working CRUD API without a resolver layer",
+    "Distributed ACID transactions with linearizable reads across shards",
+    "Predicate-based sharding with automatic tablet rebalancing",
+    "Fully Apache 2.0, including ACLs, encryption at rest and CDC",
+    "Built-in full-text, geo, regex and HNSW vector indexes"
+  ],
+  "weaknesses": [
+    "Two ownership changes since 2024 add uncertainty about long-term direction",
+    "DQL is unique to Dgraph, so skills and queries do not transfer",
+    "Predicate sharding makes very high-degree predicates hot spots",
+    "Weaker for whole-graph analytics compared with dedicated analytics engines"
+  ],
+  "useCases": [
+    "GraphQL application backends",
+    "Knowledge graphs and content relationships",
+    "Real-time recommendations",
+    "Metadata and lineage graphs",
+    "Semantic search with vectors"
+  ],
+  "notIdealFor": [
+    "Cypher, Gremlin or SPARQL users",
+    "Heavy whole-graph algorithms",
+    "Tiny embedded use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "nebulagraph",
+    "surrealdb",
+    "arangodb",
+    "janusgraph",
+    "typedb"
+  ],
+  "tags": [
+    "graphql",
+    "dql",
+    "distributed",
+    "go",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://dgraph.io/",
+    "docs": "https://docs.dgraph.io/",
+    "repository": "https://github.com/dgraph-io/dgraph",
+    "changelog": "https://github.com/dgraph-io/dgraph/releases"
+  },
+  "ids": {
+    "github": "dgraph-io/dgraph",
+    "stackoverflowTag": "dgraph",
+    "dockerHub": "dgraph/dgraph",
+    "npm": "dgraph-js",
+    "pypi": "pydgraph",
+    "hackerNewsQuery": "Dgraph"
+  },
+  "brand": {
+    "color": "#E50695",
+    "simpleIcon": "dgraph"
+  },
+  "sources": [
+    "https://github.com/dgraph-io/dgraph/releases",
+    "https://www.istaridigital.com/resources/istari-acquires-dgraph",
+    "https://www.fenwick.com/insights/experience/fenwick-represents-hypermode-in-sale-of-dgraph-to-istari-digital"
+  ],
+  "lastVerified": "2026-10-27"
+}

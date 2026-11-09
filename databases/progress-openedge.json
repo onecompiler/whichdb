@@ -1,0 +1,180 @@
+{
+  "slug": "progress-openedge",
+  "name": "Progress OpenEdge",
+  "aliases": [
+    "OpenEdge",
+    "Progress 4GL",
+    "OpenEdge RDBMS",
+    "Progress ABL"
+  ],
+  "tagline": "Integrated RDBMS plus ABL 4GL application platform behind thousands of ERP and vertical business apps.",
+  "description": "OpenEdge is Progress Software's application platform: a transactional relational database tightly coupled to ABL (formerly Progress 4GL), a business language where queries, locking and transactions are part of the syntax. That pairing is why so many mid-market ERP, distribution and vertical ISV products were built on it, and why they still run on it decades later. The database offers replication, table partitioning, transparent data encryption, CDC and a SQL-92 engine for ODBC/JDBC reporting, while PASOE serves ABL logic over REST. 12.8 is the long-term-support line; 13.0 (February 2026) is a shorter-lived innovation release with ABL generics, a built-in AI coding assistant and FIPS 140-3 work.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "Progress Software",
+  "vendorType": "company",
+  "initialRelease": 1984,
+  "latestVersion": {
+    "version": "13.0",
+    "date": "2026-02-10"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Licensed per user or core, often embedded in ISV application pricing; free time-limited trial."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Vertical scale with table partitioning; OpenEdge Replication for hot standby and DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "ABL (Advanced Business Language)",
+    "SQL-92"
+  ],
+  "apis": [
+    "ABL client/server protocol",
+    "ODBC",
+    "JDBC",
+    "PASOE REST/SOAP"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "ABL",
+    "Java",
+    "C#",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "ABL makes transactions, record locking and queries first-class language constructs",
+    "Very stable, long-lived databases that run with modest DBA effort",
+    "Built-in replication, partitioning, TDE and CDC options",
+    "Large catalogue of ERP and vertical ISV applications already built on it"
+  ],
+  "weaknesses": [
+    "ABL skills are scarce and the talent pool is ageing",
+    "SQL engine is secondary; complex reporting via ODBC can be slow",
+    "Proprietary stack ties applications to Progress licensing",
+    "No horizontal scaling"
+  ],
+  "useCases": [
+    "Running ERP, distribution and manufacturing packages built on OpenEdge",
+    "Modernising ABL apps behind REST APIs with PASOE",
+    "ISV vertical applications sold to SMBs"
+  ],
+  "notIdealFor": [
+    "New applications outside the ABL ecosystem",
+    "Analytics and data warehousing",
+    "Teams that need a large hiring pool"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sql-server",
+    "oracle-database",
+    "postgresql",
+    "intersystems-iris",
+    "4d",
+    "actian-zen"
+  ],
+  "tags": [
+    "4gl",
+    "abl",
+    "erp",
+    "isv",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.progress.com/openedge",
+    "docs": "https://docs.progress.com/category/openedge",
+    "changelog": "https://www.progress.com/products/openedge/whats-new",
+    "wikipedia": "https://en.wikipedia.org/wiki/OpenEdge_Advanced_Business_Language"
+  },
+  "ids": {
+    "stackoverflowTag": "openedge",
+    "wikipedia": "OpenEdge Advanced Business Language",
+    "hackerNewsQuery": "Progress OpenEdge"
+  },
+  "brand": {
+    "color": "#5CE500",
+    "simpleIcon": "progress"
+  },
+  "sources": [
+    "https://www.progress.com/products/openedge/whats-new",
+    "https://www.progress.com/free-trial-openedge",
+    "https://www.galeos.eu/o-nas/progress-uvolnil-openedge?lang=2"
+  ],
+  "lastVerified": "2026-10-27"
+}

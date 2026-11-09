@@ -1,0 +1,113 @@
+{
+  "slug": "dydra",
+  "name": "Dydra",
+  "aliases": ["Dydra.com"],
+  "tagline": "Hosted RDF triple store with SPARQL 1.1, valid-time indexing and an MCP endpoint on every repository.",
+  "description": "Dydra is a cloud-hosted RDF graph database run by Datagraph GmbH since about 2010. Each account holds repositories that you load with RDF and query over HTTP with SPARQL 1.1, the SPARQL Graph Store Protocol or the Sesame/RDF4J HTTP protocol, and the operator handles scaling, backups and versioning. It is still actively developed: the 2026 user guide (v1.2) covers valid-time indexing for time-windowed 'collated' queries over sample-style data, an RDF replication client, and an MCP endpoint on every repository that lets language models query in SPARQL, GraphQL or a compact notation called score. It suits small teams that want a standards-based triple store without running GraphDB or Virtuoso themselves.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "rdf",
+  "models": ["rdf", "graph"],
+  "workloads": ["knowledge-graph", "graph-traversal", "time-series"],
+  "architecture": ["serverless", "distributed"],
+  "developer": "Datagraph GmbH",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": ["Unknown"],
+  "license": { "type": "proprietary", "name": "Proprietary (hosted service)" },
+  "pricing": {
+    "models": ["free", "enterprise-contract"],
+    "freeTier": true,
+    "notes": "Basic use is free; production use is licensed and priced per customer."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Dydra", "provider": "Datagraph GmbH", "url": "https://dydra.com/" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Multi-tenant service; capacity is managed by the operator rather than configured by users."
+  },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["SPARQL 1.1", "GraphQL", "score"],
+  "apis": ["SPARQL Protocol", "SPARQL Graph Store HTTP Protocol", "Sesame/RDF4J HTTP protocol", "REST", "MCP"],
+  "compatibleWith": [],
+  "drivers": ["Ruby", "Python", "JavaScript", "Java", "Clojure", "Common Lisp"],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Standards-first: SPARQL 1.1, Graph Store Protocol and the Sesame HTTP API work with existing RDF tooling",
+    "Nothing to operate: repositories are created and queried over HTTP",
+    "Valid-time indexing returns whole entities per time window in one query",
+    "Per-repository MCP endpoint lets LLM agents explore an unfamiliar graph"
+  ],
+  "weaknesses": [
+    "Small vendor with opaque, quote-based production pricing",
+    "Cloud-only: no self-hosted edition for regulated or air-gapped environments",
+    "Little public information on performance limits or SLAs"
+  ],
+  "useCases": [
+    "Hosted linked-data and knowledge-graph backends",
+    "Publishing RDF datasets with a public SPARQL endpoint",
+    "Time-windowed queries over sensor or tick data modelled as RDF",
+    "Giving LLM agents structured access to a knowledge graph"
+  ],
+  "notIdealFor": ["Property-graph (Cypher/Gremlin) workloads", "On-premises deployments", "High-volume OLTP"],
+  "notableUsers": [],
+  "alternatives": ["ontotext-graphdb", "stardog", "virtuoso", "apache-jena-tdb", "amazon-neptune", "oxigraph"],
+  "tags": ["rdf", "sparql", "triple-store", "cloud", "mcp"],
+  "links": {
+    "website": "https://dydra.com/",
+    "docs": "https://docs.dydra.com/",
+    "repository": "https://github.com/dydra"
+  },
+  "ids": {
+    "hackerNewsQuery": "Dydra"
+  },
+  "brand": {},
+  "sources": [
+    "https://dydra.com/home",
+    "https://docs.dydra.com/dydra",
+    "https://github.com/dydra/documentation",
+    "https://dbdb.io/db/dydra"
+  ],
+  "lastVerified": "2026-10-27"
+}

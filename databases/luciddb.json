@@ -1,0 +1,169 @@
+{
+  "slug": "luciddb",
+  "name": "LucidDB",
+  "aliases": [
+    "Eigenbase LucidDB",
+    "Farrago",
+    "Fennel"
+  ],
+  "tagline": "Early open-source column-store for BI with bitmap indexes and SQL/MED; shut down in 2014, lives on in Calcite.",
+  "description": "LucidDB was an open-source analytical database built by LucidEra and the Eigenbase project, with a Java SQL layer (Farrago) over a C++ execution and storage engine (Fennel). It stored tables column-wise, indexed them with compressed bitmap indexes, used hash joins and aggregation with page-level multiversioning, and leaned heavily on SQL:2003 features such as SQL/MED foreign-data wrappers and user-defined transforms so ETL could happen inside the database. Releases ran from 0.6.0 in January 2007 to 0.9.4 in early 2012, and the code moved from GPL to Apache 2.0 near the end. In 2014 the maintainers formally closed the project for lack of sponsors; its query planner work became Optiq, now Apache Calcite.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Officially shut down in 2014 for lack of sponsors; last release 0.9.4 (2012). Parts of the codebase became Optiq, now Apache Calcite.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "LucidEra / Eigenbase Project",
+  "vendorType": "community",
+  "initialRelease": 2007,
+  "latestVersion": {
+    "version": "0.9.4",
+    "date": "2012-01"
+  },
+  "writtenIn": [
+    "Java",
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (earlier releases GPL v2)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-server column store aimed at departmental data marts."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ADO.NET"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One of the first open-source column stores, with compressed bitmap indexes",
+    "SQL/MED wrappers let it query and load from external sources inside SQL",
+    "Automatic index creation and an in-database bulk loader with merge",
+    "Its planner lineage directly seeded Apache Calcite"
+  ],
+  "weaknesses": [
+    "Dead since 2014: no fixes, builds or community",
+    "Single-node only; no MPP or cloud story",
+    "Foreign keys and many OLTP features were never supported"
+  ],
+  "useCases": [
+    "Understanding early open-source column-store design",
+    "Tracing the history of Apache Calcite"
+  ],
+  "notIdealFor": [
+    "Any current analytics deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "monetdb",
+    "clickhouse",
+    "greenplum",
+    "infobright"
+  ],
+  "tags": [
+    "column-store",
+    "bi",
+    "open-source",
+    "calcite",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://luciddb.sourceforge.net/",
+    "repository": "https://github.com/LucidDB/luciddb",
+    "wikipedia": "https://en.wikipedia.org/wiki/LucidDB"
+  },
+  "ids": {
+    "github": "LucidDB/luciddb",
+    "wikipedia": "LucidDB",
+    "hackerNewsQuery": "LucidDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/LucidDB/luciddb",
+    "https://sourceforge.net/projects/luciddb/",
+    "https://en.wikipedia.org/wiki/LucidDB",
+    "https://dbdb.io/db/luciddb"
+  ],
+  "lastVerified": "2026-10-27"
+}

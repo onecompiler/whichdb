@@ -1,0 +1,168 @@
+{
+  "slug": "roma",
+  "name": "ROMA",
+  "aliases": [
+    "ROMA KVS",
+    "Rakuten On-Memory Architecture"
+  ],
+  "tagline": "Rakuten's decentralised, memcached-compatible distributed key-value store written in Ruby; dormant since 2019.",
+  "description": "ROMA is a distributed key-value store that Rakuten built and open-sourced for its own services. It is a pure peer-to-peer system shaped like a distributed hash table: every node is equal, routing tables map key ranges to nodes, and data is replicated so the cluster survives node loss and can add capacity without a coordinator. It is written in Ruby, speaks the memcached text protocol so any memcached client works, and ships Ruby and Java clients plus plugins and pluggable storage back-ends. The last release, 1.3.0, came out in January 2016, the final commit landed in 2019 and the roma-kvs.org site has gone offline.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No release since 1.3.0 (January 2016) and no commits since 2019; project site offline. Use Redis/Valkey clusters, Apache Cassandra or Aerospike.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Rakuten",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "1.3.0",
+    "date": "2016-01-20"
+  },
+  "writtenIn": [
+    "Ruby"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU General Public License v3.0",
+    "spdx": "GPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "P2P ring with replicated key ranges; nodes join and leave without a master."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "memcached protocol commands"
+  ],
+  "apis": [
+    "memcached text protocol",
+    "ROMA protocol extensions"
+  ],
+  "compatibleWith": [
+    "memcached"
+  ],
+  "drivers": [
+    "Ruby",
+    "Java",
+    "Any memcached client"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Masterless P2P design with no single point of failure",
+    "memcached protocol compatibility means existing clients just work",
+    "Replication and online node addition built in",
+    "Plugin system for extra commands"
+  ],
+  "weaknesses": [
+    "Ruby implementation limits per-node throughput",
+    "Unmaintained since 2019; documentation site gone",
+    "Small community, much of it in Japanese"
+  ],
+  "useCases": [
+    "Studying a P2P DHT-style key-value store",
+    "Maintaining legacy ROMA clusters until migration"
+  ],
+  "notIdealFor": [
+    "New deployments",
+    "High-throughput caching",
+    "Transactional workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "memcached",
+    "apache-cassandra",
+    "aerospike",
+    "riak-kv"
+  ],
+  "tags": [
+    "ruby",
+    "key-value",
+    "p2p",
+    "memcached-compatible",
+    "rakuten",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/roma/roma",
+    "repository": "https://github.com/roma/roma"
+  },
+  "ids": {
+    "github": "roma/roma",
+    "hackerNewsQuery": "ROMA Rakuten key-value"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/roma/roma",
+    "https://github.com/roma/roma/releases",
+    "https://dbdb.io/db/roma"
+  ],
+  "lastVerified": "2026-10-27"
+}

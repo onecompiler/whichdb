@@ -1,0 +1,171 @@
+{
+  "slug": "atlas",
+  "name": "Atlas",
+  "aliases": [
+    "Netflix Atlas"
+  ],
+  "tagline": "Netflix's in-memory dimensional time-series database for operational metrics, queried with a stack language.",
+  "description": "Atlas is the metrics backend Netflix built from 2011 to replace Epic, its RRDTool-and-MySQL monitoring system that was buckling under a few million time series, and open-sourced in 2014. It stores dimensional time series (a name plus arbitrary tag key-value pairs) almost entirely in memory, on or off the JVM heap, because the design deliberately favours fast queries over recent data and quick recovery over never losing old points. Queries and graphs are expressed in the Atlas Stack Language, a postfix language with rich aggregation, math, alerting (including double exponential smoothing) and presentation operators, and services publish metrics through the companion Spectator client libraries. It remains under active development in Scala at Netflix, with 1.8.x stable and 1.9 release candidates shipping through 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed"
+  ],
+  "developer": "Netflix",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "1.8.2",
+    "date": "2026-02-27"
+  },
+  "writtenIn": [
+    "Scala"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Data and indexes are held in memory, sharded across instances in time-windowed clusters (e.g. the last 6 hours) and mirrored across availability zones; older data is kept at lower resolution."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Atlas Stack Language (ASL)"
+  ],
+  "apis": [
+    "HTTP graph and fetch API",
+    "Publish API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Go",
+    "C++",
+    "Python",
+    "Node.js"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast slice-and-dice aggregation over high-cardinality dimensional metrics",
+    "Expressive stack language with built-in alerting and graphing operators",
+    "Designed for graceful degradation: recent data first, quick restore over durability",
+    "Proven at Netflix scale and still actively developed",
+    "Spectator client libraries for Java, Go, C++, Python and Node.js"
+  ],
+  "weaknesses": [
+    "Memory-heavy by design; long retention needs a separate store",
+    "Stack language is unfamiliar compared with PromQL or SQL",
+    "Sparse operational documentation for running it outside Netflix",
+    "Smaller third-party ecosystem than Prometheus-compatible systems"
+  ],
+  "useCases": [
+    "Operational metrics and dashboards for large microservice fleets",
+    "Near-real-time alerting on dimensional service metrics",
+    "Drill-down on high-cardinality request metrics during incidents"
+  ],
+  "notIdealFor": [
+    "Long-term, full-resolution metrics archives",
+    "Teams standardised on PromQL and the Prometheus ecosystem",
+    "General-purpose time-series storage with SQL access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "prometheus",
+    "victoriametrics",
+    "m3db",
+    "grafana-mimir",
+    "influxdb",
+    "thanos"
+  ],
+  "tags": [
+    "metrics",
+    "observability",
+    "netflix",
+    "in-memory",
+    "scala"
+  ],
+  "links": {
+    "website": "https://netflix.github.io/atlas-docs/",
+    "docs": "https://netflix.github.io/atlas-docs/overview/",
+    "repository": "https://github.com/Netflix/atlas",
+    "changelog": "https://github.com/Netflix/atlas/releases"
+  },
+  "ids": {
+    "github": "Netflix/atlas",
+    "hackerNewsQuery": "Netflix Atlas"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Netflix/atlas",
+    "https://netflix.github.io/atlas-docs/overview/",
+    "https://github.com/Netflix/atlas/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

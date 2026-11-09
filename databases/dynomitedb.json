@@ -1,0 +1,114 @@
+{
+  "slug": "dynomitedb",
+  "name": "DynomiteDB",
+  "aliases": ["Dynomite", "Netflix Dynomite"],
+  "tagline": "Netflix's Dynamo-style proxy layer that adds sharding and multi-datacenter replication to Redis and Memcached.",
+  "description": "Dynomite is Netflix's open-source proxy layer, written in C and partly derived from Twitter's twemproxy, that turns single-node stores such as Redis and Memcached into a Dynamo-style cluster. Nodes form a token ring with gossip membership, each datacenter holds a full replica split across racks, and clients speak the ordinary Redis or Memcached protocol, choosing per-request consistency such as DC_ONE or DC_QUORUM; the Dyno Java client adds pooling and failover. DynomiteDB was a separate 2016 community effort to package Dynomite with Redis and persistent back ends, and its site now tells users to go back to the Netflix repository. That upstream has had no release since v0.6.22 in January 2021 and no commit since October 2022, so new deployments are better served by Redis Cluster, Valkey or a natively distributed store.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Netflix/dynomite's last release was v0.6.22 (Jan 2021) and last commit Oct 2022; the DynomiteDB packaging project is explicitly unmaintained.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["caching", "session-store", "oltp"],
+  "architecture": ["distributed", "multi-primary", "in-memory"],
+  "developer": "Netflix (DynomiteDB packaging by community)",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": { "version": "0.6.22", "date": "2021-01-20" },
+  "writtenIn": ["C"],
+  "basedOn": "twemproxy",
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Token-ring sharding within a datacenter, full replicas per datacenter; Netflix ran it across AWS regions."
+  },
+  "consistency": { "acid": "none", "models": ["tunable", "eventual"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["Redis commands", "Memcached protocol"],
+  "apis": ["RESP (Redis protocol)", "Memcached text protocol"],
+  "compatibleWith": ["redis", "memcached"],
+  "drivers": ["Java (Dyno)", "Any Redis client"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Adds sharding and cross-datacenter active-active replication to plain Redis without changing clients",
+    "Per-request consistency (DC_ONE, DC_QUORUM) lets reads and writes trade latency for safety",
+    "Shared-nothing ring with gossip; no single point of failure",
+    "Proven at Netflix scale across AWS regions"
+  ],
+  "weaknesses": [
+    "Upstream effectively frozen since 2022, with a large backlog of open issues",
+    "Only a subset of Redis commands is supported, and multi-key operations are limited",
+    "Cross-datacenter replication is asynchronous, so regions can briefly disagree after concurrent writes",
+    "Operating it needs extra tooling (Netflix used a sidecar for bootstrap and backups)"
+  ],
+  "useCases": [
+    "Existing multi-region Redis caches already built on Dynomite",
+    "Studying Dynamo-style replication layered over single-node stores"
+  ],
+  "notIdealFor": [
+    "New deployments (prefer Redis Cluster, Valkey or a native distributed KV store)",
+    "Workloads needing transactions or strict consistency"
+  ],
+  "notableUsers": ["Netflix"],
+  "alternatives": ["valkey", "redis", "dragonfly", "keydb", "aerospike", "apache-cassandra"],
+  "tags": ["redis", "memcached", "dynamo", "netflix", "multi-datacenter"],
+  "links": {
+    "website": "https://github.com/Netflix/dynomite",
+    "repository": "https://github.com/Netflix/dynomite",
+    "docs": "https://github.com/Netflix/dynomite/wiki",
+    "changelog": "https://github.com/Netflix/dynomite/releases"
+  },
+  "ids": {
+    "github": "Netflix/dynomite",
+    "hackerNewsQuery": "Netflix Dynomite"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Netflix/dynomite",
+    "https://github.com/Netflix/dynomite/releases",
+    "http://www.dynomitedb.com/",
+    "https://dbdb.io/db/dynomitedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

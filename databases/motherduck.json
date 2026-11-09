@@ -1,0 +1,173 @@
+{
+  "slug": "motherduck",
+  "name": "MotherDuck",
+  "aliases": [],
+  "tagline": "Serverless cloud data warehouse built on DuckDB, with hybrid local-plus-cloud execution.",
+  "description": "MotherDuck runs DuckDB as a managed, serverless service: each user gets an isolated 'duckling' compute instance over cloud storage, and the same DuckDB client on a laptop or in the browser (WASM) can join local data with cloud tables in one query. It is aimed at the large majority of analytics workloads that fit comfortably on one big machine, trading distributed-warehouse complexity for simplicity and low cost. Database sharing, DuckLake support and SQL AI functions round it out. It is still a young service, AWS-only, and inherits DuckDB's single-node ceiling per query.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "serverless",
+    "shared-storage",
+    "client-server"
+  ],
+  "developer": "MotherDuck",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "DuckDB",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free plan with limited compute and storage; paid plans bill compute time per duckling size plus storage."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "browser",
+      "wasm"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales up per user/duckling and out by giving each user or tenant separate compute; a single query runs on one node."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (DuckDB dialect)"
+  ],
+  "apis": [
+    "DuckDB client protocol",
+    "Postgres endpoint",
+    "WASM SDK",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Java",
+    "Go",
+    "R"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Same DuckDB SQL locally and in the cloud; hybrid queries join laptop and cloud data",
+    "Per-user isolated compute avoids noisy-neighbour contention",
+    "Very low cost and fast start for small-to-medium analytics",
+    "WASM SDK enables in-browser analytics apps backed by cloud data",
+    "Simple sharing of databases across users and organizations"
+  ],
+  "weaknesses": [
+    "Single-node execution per query limits very large joins",
+    "Runs only on AWS in a few regions",
+    "Younger ecosystem with fewer enterprise governance features",
+    "Proprietary service on top of open-source DuckDB"
+  ],
+  "useCases": [
+    "Startup and team data warehouse",
+    "Embedded analytics in SaaS apps",
+    "Hybrid local/cloud data exploration",
+    "Serving DuckDB-based dashboards"
+  ],
+  "notIdealFor": [
+    "Multi-petabyte warehouses",
+    "High-concurrency OLTP",
+    "Strict multi-cloud or on-prem requirements"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "snowflake",
+    "google-bigquery",
+    "clickhouse",
+    "tinybird"
+  ],
+  "tags": [
+    "duckdb",
+    "serverless",
+    "cloud-data-warehouse",
+    "hybrid-execution"
+  ],
+  "links": {
+    "website": "https://motherduck.com/",
+    "docs": "https://motherduck.com/docs/",
+    "pricing": "https://motherduck.com/pricing/"
+  },
+  "ids": {
+    "wikipedia": "MotherDuck",
+    "npm": "@motherduck/wasm-client",
+    "hackerNewsQuery": "MotherDuck"
+  },
+  "brand": {},
+  "sources": [
+    "https://motherduck.com/",
+    "https://motherduck.com/pricing/",
+    "https://en.wikipedia.org/wiki/MotherDuck"
+  ],
+  "lastVerified": "2026-10-27"
+}

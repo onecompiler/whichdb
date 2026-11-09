@@ -1,0 +1,214 @@
+{
+  "slug": "cockroachdb",
+  "name": "CockroachDB",
+  "aliases": [
+    "CRDB",
+    "Cockroach"
+  ],
+  "tagline": "Postgres-wire distributed SQL built to survive node, zone and region failures with serializable transactions.",
+  "description": "CockroachDB is a distributed SQL database that shards data into Raft-replicated ranges and runs serializable ACID transactions across them, so a cluster keeps accepting reads and writes through node, zone or region loss. It speaks the PostgreSQL wire protocol and much of its dialect, and adds multi-region table locality controls that pin rows to geographies for latency or data residency. It is a strong fit for globally distributed OLTP systems of record such as payments, identity and inventory. Since late 2024 every self-hosted binary ships under the proprietary CockroachDB Software License, free only for individuals and smaller companies, so budget for an enterprise contract at scale.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "geospatial",
+    "metadata-store",
+    "ledger"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server",
+    "serverless"
+  ],
+  "developer": "Cockroach Labs",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "26.3",
+    "date": "2026-08-19"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "CockroachDB Software License"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosted Enterprise Free license for individuals and small businesses (annual renewal, telemetry required); CockroachDB Cloud Basic is usage-based with a free monthly allowance; Standard/Advanced are provisioned."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "CockroachDB Cloud",
+      "provider": "Cockroach Labs",
+      "url": "https://www.cockroachlabs.com/product/cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Automatic range splitting and rebalancing; REGIONAL BY ROW and GLOBAL tables control write latency vs. read locality across regions."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "HTTP SQL API (Cloud)"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "Go",
+    "Python",
+    "JavaScript",
+    "C#",
+    "Ruby",
+    "Rust",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Serializable isolation by default across shards, with no application-level sharding",
+    "Survives zone or region loss without manual failover thanks to Raft replication",
+    "Row-level geo-partitioning (REGIONAL BY ROW) for data residency and local-latency writes",
+    "PostgreSQL wire compatibility lets most Postgres drivers and ORMs connect unchanged",
+    "Online schema changes and rolling upgrades without downtime",
+    "Changefeeds stream row changes to Kafka, cloud storage or webhooks"
+  ],
+  "weaknesses": [
+    "Self-hosted use now requires a proprietary license; larger companies must pay",
+    "Single-row write latency is higher than a single-node Postgres because of consensus",
+    "Not a drop-in Postgres: many extensions (PostGIS internals, pg_cron, etc.) are unavailable",
+    "Serializable retries (40001 errors) must be handled in application code",
+    "Analytical queries over large scans are slow compared with columnar engines"
+  ],
+  "useCases": [
+    "Global payments and ledger systems of record",
+    "Identity, account and session metadata across regions",
+    "Inventory and order management with strict consistency",
+    "Data-residency workloads that must pin rows to a country",
+    "Replacing hand-sharded Postgres or MySQL fleets"
+  ],
+  "notIdealFor": [
+    "Heavy analytics or data warehousing",
+    "Workloads relying on niche Postgres extensions",
+    "Tiny apps where a single Postgres instance suffices",
+    "Teams that need a permissive open-source license"
+  ],
+  "notableUsers": [
+    "Netflix",
+    "DoorDash"
+  ],
+  "alternatives": [
+    "yugabytedb",
+    "google-cloud-spanner",
+    "tidb",
+    "amazon-aurora-dsql",
+    "postgresql",
+    "pgedge"
+  ],
+  "tags": [
+    "distributed-sql",
+    "newsql",
+    "postgres-compatible",
+    "multi-region",
+    "raft"
+  ],
+  "links": {
+    "website": "https://www.cockroachlabs.com/",
+    "docs": "https://www.cockroachlabs.com/docs/",
+    "repository": "https://github.com/cockroachdb/cockroach",
+    "pricing": "https://www.cockroachlabs.com/pricing/",
+    "changelog": "https://www.cockroachlabs.com/docs/releases/",
+    "wikipedia": "https://en.wikipedia.org/wiki/CockroachDB"
+  },
+  "ids": {
+    "github": "cockroachdb/cockroach",
+    "stackoverflowTag": "cockroachdb",
+    "wikipedia": "CockroachDB",
+    "dockerHub": "cockroachdb/cockroach",
+    "hackerNewsQuery": "CockroachDB"
+  },
+  "brand": {
+    "color": "#6933FF",
+    "simpleIcon": "cockroachlabs"
+  },
+  "sources": [
+    "https://docs.cockroachlabs.com/docs/releases/",
+    "https://www.cockroachlabs.com/docs/dev/licensing-faqs",
+    "https://github.com/cockroachdb/cockroach",
+    "https://techcrunch.com/2024/08/15/cockroach-labs-shakes-up-its-licensing-to-force-bigger-companies-to-pay/"
+  ],
+  "lastVerified": "2026-10-27"
+}

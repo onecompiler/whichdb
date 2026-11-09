@@ -1,0 +1,153 @@
+{
+  "slug": "alenka",
+  "name": "Alenka",
+  "aliases": [
+    "Alenka GPU database"
+  ],
+  "tagline": "Early open-source CUDA columnar query engine that ran TPC-H-style queries on NVIDIA GPUs; inactive since 2017.",
+  "description": "Alenka is a one-developer experiment, started in 2012, in running analytical queries on NVIDIA GPUs with CUDA. It stores tables column by column with zone maps for data skipping, compresses data so it can be processed on the GPU without full decompression, parses CSV on the GPU for fast loads, and executes scripts in its own Pig-like dataflow language (FILTER ... BY, SELECT ... JOIN, GROUP BY) rather than standard SQL, with a third-party JDBC driver. It was an early proof that TPC-H-style scans and joins benefit from GPU bandwidth, a few years before MapD/HeavyDB, Kinetica and BlazingSQL. The repository has had no commits since January 2017.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since January 2017; unmaintained and tied to old CUDA toolchains. HeavyDB or Kinetica are maintained GPU databases.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Anton (antonmks)",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "CUDA C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single machine with one NVIDIA GPU; data is streamed from disk in column segments."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Alenka dataflow script language"
+  ],
+  "apis": [
+    "Command line",
+    "JDBC (third-party, Technica Corporation)"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early working example of GPU-accelerated columnar scans, joins and aggregation",
+    "Operates on compressed data on the GPU and skips blocks with zone maps",
+    "Small, readable CUDA codebase for studying GPU query processing"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2017; builds against old CUDA versions",
+    "Custom script language instead of SQL",
+    "Single GPU, single node, no concurrency control or updates",
+    "Requires NVIDIA hardware"
+  ],
+  "useCases": [
+    "Studying GPU database techniques",
+    "Benchmark archaeology on early GPU TPC-H results"
+  ],
+  "notIdealFor": [
+    "Production analytics",
+    "Machines without NVIDIA GPUs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "heavydb",
+    "kinetica",
+    "duckdb",
+    "clickhouse"
+  ],
+  "tags": [
+    "gpu",
+    "cuda",
+    "columnar",
+    "analytics",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/antonmks/Alenka",
+    "repository": "https://github.com/antonmks/Alenka"
+  },
+  "ids": {
+    "github": "antonmks/Alenka",
+    "hackerNewsQuery": "Alenka GPU database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/antonmks/Alenka",
+    "https://github.com/antonmks/Alenka/commits/master",
+    "https://github.com/Technica-Corporation/Alenka-JDBC"
+  ],
+  "lastVerified": "2026-10-27"
+}

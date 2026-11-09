@@ -1,0 +1,155 @@
+{
+  "slug": "cloudkit",
+  "name": "CloudKit",
+  "aliases": [
+    "CloudKit (Ruby)",
+    "Open Web JSON Appliance"
+  ],
+  "tagline": "Jon Crosby's Ruby Rack middleware for schema-free, auto-versioned JSON storage over REST (2008–2011).",
+  "description": "This CloudKit is Jon Crosby's open-source Ruby project, not Apple's iCloud framework of the same name. Billed as an Open Web JSON Appliance, it was Rack middleware: a line such as expose :notes, :todos in config.ru turned named collections into a RESTful HTTP API that stored arbitrary JSON documents and kept every version of each one, so occasionally connected clients could diff and merge, with optional OpenID login and OAuth authorization filters in front. Storage was pluggable, with in-memory, MongoDB and Tokyo Cabinet adapters, and it could sit alongside Rails, Merb or Sinatra apps. It was an early take on the REST-first document backends that CouchDB and Firebase later popularised, but development stopped in 2011 and its own site now calls itself an archive.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Unmaintained since 2011; the project site describes itself as an archive. Unrelated to Apple CloudKit.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Jon Crosby",
+  "vendorType": "community",
+  "initialRelease": 2008,
+  "writtenIn": [
+    "Ruby"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "REST API"
+  ],
+  "apis": [
+    "HTTP/REST JSON API",
+    "Rack middleware"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Ruby"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "A couple of lines in config.ru turned any Rack app into a versioned JSON REST store",
+    "Every document revision retained, supporting diff/merge with occasionally connected clients",
+    "Built-in OpenID and OAuth filters",
+    "Pluggable storage adapters (memory, MongoDB, Tokyo Cabinet)"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2011 and built on obsolete OpenID and OAuth 1.0 stacks",
+    "No query language, indexes or transactions",
+    "Throughput limited to a single Ruby process"
+  ],
+  "useCases": [
+    "Historical reference for REST-first document stores",
+    "Studying versioned JSON storage designs"
+  ],
+  "notIdealFor": [
+    "New applications",
+    "Anything that needs modern authentication"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-couchdb",
+    "pouchdb",
+    "firebase",
+    "mongodb",
+    "supabase"
+  ],
+  "tags": [
+    "ruby",
+    "rack",
+    "rest",
+    "json",
+    "versioned",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://getcloudkit.com/",
+    "repository": "https://github.com/jcrosby/cloudkit"
+  },
+  "ids": {
+    "github": "jcrosby/cloudkit"
+  },
+  "brand": {},
+  "sources": [
+    "http://getcloudkit.com/",
+    "https://github.com/jcrosby/cloudkit",
+    "https://dbdb.io/db/cloudkit"
+  ],
+  "lastVerified": "2026-10-27"
+}

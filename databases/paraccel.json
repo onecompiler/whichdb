@@ -1,0 +1,154 @@
+{
+  "slug": "paraccel",
+  "name": "ParAccel",
+  "aliases": [
+    "ParAccel Analytic Database",
+    "PADB",
+    "Actian Matrix"
+  ],
+  "tagline": "MPP columnar analytic database (2006–2013) whose engine became the basis of Amazon Redshift.",
+  "description": "ParAccel built the ParAccel Analytic Database (PADB), a shared-nothing, columnar MPP data warehouse that started from PostgreSQL code and added compiled queries, adaptive compression, a memory-centric execution design, a new optimizer called Omne and a proprietary interconnect between nodes. It set TPC-H records around 2010 and competed with Netezza, Greenplum and Vertica; Amazon invested in 2011 and used ParAccel technology as the basis of Amazon Redshift, announced in late 2012. Actian acquired ParAccel in April 2013 and sold the engine as Actian Matrix, then phased it out by about 2016 along with its other big-data products. The product is gone, but its design lives on in Redshift.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Actian in April 2013, sold as Actian Matrix and phased out around 2016. The engine survives as the basis of Amazon Redshift.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "ParAccel, Inc. (acquired by Actian)",
+  "vendorType": "company",
+  "initialRelease": 2006,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (no longer offered)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Withdrawn; Amazon Redshift is the living descendant."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Columnar MPP design with compiled queries, years ahead of many rivals",
+    "Engine proven at scale as the foundation of Amazon Redshift"
+  ],
+  "weaknesses": [
+    "Discontinued after the Actian acquisition",
+    "Never built a large standalone customer base"
+  ],
+  "useCases": [
+    "Understanding Amazon Redshift's architecture and lineage",
+    "History of MPP analytic databases"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-redshift",
+    "vertica",
+    "greenplum",
+    "snowflake",
+    "clickhouse"
+  ],
+  "tags": [
+    "mpp",
+    "columnar",
+    "data-warehouse",
+    "postgres-derived",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20120603073459/http://www.paraccel.com:80/",
+    "wikipedia": "https://en.wikipedia.org/wiki/ParAccel"
+  },
+  "ids": {
+    "wikipedia": "ParAccel",
+    "hackerNewsQuery": "ParAccel"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/ParAccel",
+    "https://techcrunch.com/2013/04/25/actian-buys-amazon-funded-paraccel-as-april-buying-spree-continues/",
+    "https://en.wikipedia.org/wiki/Actian",
+    "https://dbdb.io/db/paraccel"
+  ],
+  "lastVerified": "2026-10-27"
+}

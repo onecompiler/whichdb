@@ -1,0 +1,178 @@
+{
+  "slug": "cubrid",
+  "name": "CUBRID",
+  "aliases": [],
+  "tagline": "Korean open-source RDBMS with built-in HA and Oracle-like SQL, common in Korean public sector.",
+  "description": "CUBRID is an open-source relational database developed in South Korea, originally at NHN and now by CUBRID Corporation. It offers a three-tier architecture (broker, server, client), built-in high availability with automatic failover, and SQL that borrows heavily from Oracle conventions such as hierarchical queries, synonyms and MERGE, which eases migrations from Oracle in Korean government and enterprise projects. The engine is Apache 2.0 and connectors are BSD, and the 11.x line receives frequent patch releases. Outside Korea its community, tooling and documentation are thin.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "single-node"
+  ],
+  "developer": "CUBRID Corporation",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "11.4.6",
+    "date": "2026-09-10"
+  },
+  "writtenIn": [
+    "C",
+    "C++",
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (engine), BSD (APIs/connectors)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free; CUBRID Corporation sells technical support and migration services."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "HA via master/slave replication with broker failover; sharding via CUBRID SHARD is application-assisted."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/CSQL"
+  ],
+  "apis": [
+    "CUBRID broker protocol",
+    "JDBC",
+    "ODBC",
+    "CCI"
+  ],
+  "drivers": [
+    "Java",
+    "C",
+    "PHP",
+    "Python",
+    "C#",
+    "Node.js"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Built-in HA with heartbeat-based automatic failover",
+    "Oracle-style SQL features ease Oracle migrations",
+    "Broker layer provides connection pooling and load balancing",
+    "Permissive Apache 2.0 license for the engine",
+    "Proven in large Korean web and public-sector deployments"
+  ],
+  "weaknesses": [
+    "Small international community; much documentation is Korean-first",
+    "Few third-party tools, ORMs and managed services",
+    "No native full-text or vector search",
+    "Limited cloud presence outside Korean providers"
+  ],
+  "useCases": [
+    "Korean public-sector and enterprise systems",
+    "Oracle-to-open-source migrations",
+    "Web services needing built-in HA without extra tooling"
+  ],
+  "notIdealFor": [
+    "Teams relying on mainstream ecosystem tooling",
+    "Cloud-managed deployments on global hyperscalers",
+    "Analytical workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "mysql",
+    "mariadb",
+    "tibero",
+    "oracle-database",
+    "altibase"
+  ],
+  "tags": [
+    "open-source",
+    "korea",
+    "high-availability",
+    "oracle-compatible"
+  ],
+  "links": {
+    "website": "https://www.cubrid.org/",
+    "docs": "https://www.cubrid.org/manual/en/11.4/",
+    "repository": "https://github.com/CUBRID/cubrid",
+    "changelog": "https://github.com/CUBRID/cubrid/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/CUBRID"
+  },
+  "ids": {
+    "github": "CUBRID/cubrid",
+    "stackoverflowTag": "cubrid",
+    "wikipedia": "CUBRID",
+    "dockerHub": "cubrid/cubrid",
+    "hackerNewsQuery": "CUBRID"
+  },
+  "sources": [
+    "https://github.com/CUBRID/cubrid/releases",
+    "https://github.com/CUBRID/cubrid",
+    "https://www.cubrid.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

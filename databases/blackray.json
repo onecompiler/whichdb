@@ -1,0 +1,161 @@
+{
+  "slug": "blackray",
+  "name": "BlackRay",
+  "aliases": [
+    "BlackRay Data Engine"
+  ],
+  "tagline": "GPL in-memory relational engine from SoftMethod that aimed for search-engine speed with SQL; abandoned ~2010.",
+  "description": "BlackRay was a relational data engine that SoftMethod GmbH developed with Deutsche Telekom from around 2005 and released as open source in 2008-2009 under the banner 'the open source data engine'. It kept data in memory with search-engine-style indexing so that wildcard and text lookups over large tables stayed fast, while still offering SQL, JDBC and ODBC drivers, transactions and version-controlled persisted snapshots. It was licensed under GPLv2, written mainly in C++, and shipped builds for Linux, Solaris and macOS. The last release, 0.10.0, dates from 2010, the project domain was parked by late 2011, and only the SourceForge archive remains.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No release since 0.10.0 (2010) and the project site was parked by 2011; only the SourceForge archive remains.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "search"
+  ],
+  "workloads": [
+    "full-text-search",
+    "oltp"
+  ],
+  "architecture": [
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "SoftMethod GmbH and Deutsche Telekom",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "0.10.0",
+    "date": "2010"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2",
+    "spdx": "GPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "In-memory single server; size bounded by RAM."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Combined SQL access with search-engine-style wildcard and text lookups",
+    "In-memory indexes for fast reads over large lookup tables",
+    "Versioned snapshots persisted to disk"
+  ],
+  "weaknesses": [
+    "Abandoned since 2010; builds target long-obsolete platforms",
+    "RAM-bound single-server design",
+    "Very small community even at its peak"
+  ],
+  "useCases": [
+    "Historical reference for hybrid SQL/search engines",
+    "Studying in-memory index design"
+  ],
+  "notIdealFor": [
+    "Any production use today"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "manticore-search",
+    "elasticsearch",
+    "paradedb",
+    "postgresql",
+    "sphinx"
+  ],
+  "tags": [
+    "in-memory",
+    "search",
+    "sql",
+    "gpl",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://sourceforge.net/projects/blackray/",
+    "repository": "https://sourceforge.net/projects/blackray/files/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://sourceforge.net/projects/blackray/",
+    "https://sourceforge.net/projects/blackray/files/blackray/0.10.0/",
+    "http://web.archive.org/web/20100820054454/http://www.blackray.org:80/",
+    "https://dbdb.io/db/blackray"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,164 @@
+{
+  "slug": "aresdb",
+  "name": "AresDB",
+  "aliases": [
+    "Uber AresDB"
+  ],
+  "tagline": "Uber's GPU-accelerated real-time analytics store; open-sourced in 2018 and inactive since 2020.",
+  "description": "AresDB is a real-time analytics engine Uber built to power internal dashboards such as its Summary Dashboard, and open-sourced in November 2018. It keeps columnar data mostly in host memory (an uncompressed live store for fresh upserts and a sorted, run-length-compressed archive store partitioned by day, backed by redo logs on disk) and ships filtered batches to NVIDIA GPUs for aggregation, fact-to-dimension hash joins, HyperLogLog counts and geo intersection. Ingestion is via HTTP upsert batches, typically fed from Kafka, Flink or Spark, with primary-key deduplication and late-arriving backfill. Queries use AQL, a structured JSON/YAML format rather than SQL. Uber stopped developing it in public after April 2020, so it is a reference design rather than a deployable product.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since April 2020 and no release beyond v0.0.2; Uber has not maintained the open-source project. Apache Pinot, Druid or ClickHouse cover the use case.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory"
+  ],
+  "developer": "Uber",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "writtenIn": [
+    "Go",
+    "C++",
+    "CUDA"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Requires NVIDIA GPUs and the CUDA toolkit (under NVIDIA's own EULA)."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Data must fit a host memory budget, with archive batches loaded on demand; the open-source release was effectively single-instance."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "AQL (Ares Query Language, JSON/YAML)"
+  ],
+  "apis": [
+    "HTTP upsert and query API",
+    "Go client library"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "GPU execution gives sub-second aggregations over large fact tables",
+    "Upserts with primary-key deduplication and late-data backfill",
+    "Built-in fact/dimension joins, HyperLogLog distinct counts and geo intersection",
+    "Battle-tested design notes published by Uber engineering"
+  ],
+  "weaknesses": [
+    "Abandoned since 2020; early versioning (v0.0.x) and no community",
+    "Needs NVIDIA GPUs with a specific CUDA toolchain",
+    "Custom AQL query format instead of SQL",
+    "Strings limited to enum encodings with equality-only filtering"
+  ],
+  "useCases": [
+    "Studying GPU-accelerated real-time OLAP design",
+    "Reference architecture for dashboard backends with upserts"
+  ],
+  "notIdealFor": [
+    "New production analytics stacks",
+    "Teams without GPU infrastructure or Go/CUDA expertise"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-pinot",
+    "apache-druid",
+    "clickhouse",
+    "heavydb",
+    "kinetica",
+    "starrocks"
+  ],
+  "tags": [
+    "gpu",
+    "real-time-analytics",
+    "uber",
+    "columnar",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://www.uber.com/blog/aresdb/",
+    "repository": "https://github.com/uber/aresdb",
+    "docs": "https://github.com/uber/aresdb/wiki"
+  },
+  "ids": {
+    "github": "uber/aresdb",
+    "hackerNewsQuery": "AresDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.uber.com/blog/aresdb/",
+    "https://github.com/uber/aresdb",
+    "https://github.com/uber/aresdb/commits/master"
+  ],
+  "lastVerified": "2026-10-27"
+}

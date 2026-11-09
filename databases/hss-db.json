@@ -1,0 +1,150 @@
+{
+  "slug": "hss-db",
+  "name": "hss.db",
+  "aliases": [],
+  "tagline": "Commercial embedded object database for .NET and Xamarin with a LINQ query engine (c. 2009–2017).",
+  "description": "hss.db was an embedded object-relational database for .NET from HighSpeed-Solutions LLC. Written entirely in C#, mostly as a portable class library with thin per-platform adapters, it stored .NET objects with optional predefined schemas, binary serialization and encryption, and queried them through an IQueryable LINQ provider, with ACID transactions and zero configuration. Version 4.0, published on NuGet in March 2016, targeted .NET 4.6, Xamarin Android and iOS, Windows Phone 8.1 and Windows 10 UWP, and a LINQPad driver was available. It was sold commercially. The vendor's site went dark around 2017 and no newer packages exist; LiteDB, Realm or SQLite with an ORM cover the same ground today.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No packages since 4.0.0 (March 2016) and the vendor site has been offline since about 2017. Consider LiteDB or SQLite.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "HighSpeed-Solutions LLC",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "4.0.0",
+    "date": "2016-03-12"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Sold through a Buy Now page on the vendor site; terms and prices are no longer available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "LINQ"
+  ],
+  "apis": [
+    ".NET API",
+    "LINQPad driver"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full IQueryable LINQ provider over embedded objects",
+    "Single C# codebase across desktop, UWP and Xamarin mobile",
+    "Encryption and ACID transactions with zero configuration"
+  ],
+  "weaknesses": [
+    "Vendor gone; no updates or support",
+    "Closed source and tied to 2016-era .NET targets"
+  ],
+  "useCases": [
+    "Maintaining legacy Xamarin or UWP apps built on it",
+    "Planning a migration of such apps to LiteDB or SQLite"
+  ],
+  "notIdealFor": [
+    "New .NET or MAUI projects"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "litedb",
+    "sqlite",
+    "realm",
+    "objectbox"
+  ],
+  "tags": [
+    "dotnet",
+    "xamarin",
+    "linq",
+    "embedded",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20160130222017/http://hssdb.io/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://www.nuget.org/packages/hss.db",
+    "https://web.archive.org/web/20160130222017/http://hssdb.io/",
+    "https://dbdb.io/db/hss-db"
+  ],
+  "lastVerified": "2026-10-27"
+}

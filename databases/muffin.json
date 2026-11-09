@@ -1,0 +1,142 @@
+{
+  "slug": "muffin",
+  "name": "MUFFIN",
+  "aliases": [
+    "Multiple Fast or Faster INGRES"
+  ],
+  "tagline": "Stonebraker's 1979 Berkeley design for a distributed database machine built from many INGRES nodes.",
+  "description": "MUFFIN (Multiple Fast or Faster INGRES) was a 1979 UC Berkeley design by Michael Stonebraker for a distributed database machine assembled from many cooperating INGRES processes. Its goals were higher transaction rates than conventional means could deliver, resilience to failures and support for databases of widely varying size, achieved through parallelism across large units of work, variable-size RAM caches, specialisation of modules by function and deliberately no central controller. The memorandum contrasts this with conventional distributed databases and with the special-purpose database-machine hardware fashionable at the time. It never became a product, but its case for building parallel databases out of ordinary machines foreshadowed the shared-nothing systems that followed, from Gamma to today's distributed SQL.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Berkeley research design (1979); never released. Its commodity-node, no-central-controller ideas live on in shared-nothing parallel databases.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "University of California, Berkeley (Michael Stonebraker)",
+  "vendorType": "academic",
+  "initialRelease": 1979,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "INGRES",
+  "license": {
+    "type": "proprietary",
+    "name": "Never released (research design)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never distributed; only the 1979 memorandum is available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Design target was many INGRES nodes sharing transaction load; no published production scale."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "QUEL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early argument for parallel databases built from commodity nodes",
+    "Explicitly avoided a central controller for resilience",
+    "Short, readable design memo that is ideal for teaching database history"
+  ],
+  "weaknesses": [
+    "Never released; only the design memorandum survives",
+    "Assumes 1979 hardware and the QUEL-based INGRES stack"
+  ],
+  "useCases": [
+    "Database history and systems-design courses",
+    "Tracing the origins of shared-nothing parallel databases"
+  ],
+  "notIdealFor": [
+    "Any practical deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ingres",
+    "gamma",
+    "mariposa",
+    "cockroachdb"
+  ],
+  "tags": [
+    "research",
+    "berkeley",
+    "stonebraker",
+    "ingres",
+    "parallel-database",
+    "historical"
+  ],
+  "links": {
+    "website": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/1979/29366.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://www2.eecs.berkeley.edu/Pubs/TechRpts/1979/29366.html",
+    "http://www2.eecs.berkeley.edu/Pubs/TechRpts/1979/Archive/ERL-m-79-28.pdf",
+    "https://dbdb.io/db/muffin"
+  ],
+  "lastVerified": "2026-10-27"
+}

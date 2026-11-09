@@ -1,0 +1,192 @@
+{
+  "slug": "amazon-neptune",
+  "name": "Amazon Neptune",
+  "aliases": [
+    "Neptune Database",
+    "AWS Neptune"
+  ],
+  "tagline": "AWS's managed graph database speaking Gremlin, openCypher and SPARQL on shared storage.",
+  "description": "Amazon Neptune (Neptune Database) is AWS's fully managed graph database that serves both property graphs (Gremlin and openCypher) and RDF (SPARQL 1.1) from the same Aurora-style storage layer, which replicates six ways across three availability zones. A single writer handles mutations while up to 15 read replicas and Global Database cover read scale and disaster recovery; Neptune Serverless adds capacity that scales with load. It fits teams already on AWS who want a graph without running one, but you trade away control over indexing, engine versions (Gremlin is pinned to 3.7.1 in current engines) and portability.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "rdf"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "knowledge-graph",
+    "oltp",
+    "rag"
+  ],
+  "architecture": [
+    "primary-replica",
+    "shared-storage",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "1.4.8.1",
+    "date": "2026-10-06"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (AWS service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Billed per instance-hour or Neptune Capacity Unit (serverless), plus storage and I/O. New accounts get a limited free trial."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon Neptune",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/neptune/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Storage grows automatically to 128 TiB per cluster; writes go to a single primary, reads scale with up to 15 replicas and Global Database."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Gremlin",
+    "openCypher",
+    "SPARQL"
+  ],
+  "apis": [
+    "HTTPS REST endpoints",
+    "WebSocket (Gremlin)",
+    "Bolt (openCypher)",
+    "Neptune Streams",
+    "AWS SDK"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    ".NET",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One service covers both property graph (Gremlin/openCypher) and RDF/SPARQL workloads",
+    "Six-way replicated storage across three AZs with automatic failover and point-in-time restore",
+    "Serverless option scales capacity up and down for spiky or dev workloads",
+    "Tight AWS integration: IAM auth, VPC, CloudWatch, Bedrock GraphRAG and S3 bulk loader"
+  ],
+  "weaknesses": [
+    "Single-writer design caps write throughput regardless of cluster size",
+    "No user-defined indexes; query tuning is limited to hints and data modeling",
+    "Gremlin and openCypher versions lag upstream, and Neptune-specific behavior hurts portability",
+    "AWS-only, with instance-hour pricing that gets expensive for always-on small graphs"
+  ],
+  "useCases": [
+    "Identity graphs and customer 360 on AWS",
+    "Fraud detection",
+    "Knowledge graphs with SPARQL",
+    "Security and network graphs",
+    "GraphRAG via Bedrock Knowledge Bases"
+  ],
+  "notIdealFor": [
+    "Multi-cloud or on-prem deployments",
+    "Write-heavy graphs needing horizontal write scale",
+    "Whole-graph algorithms (use Neptune Analytics)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-neptune-analytics",
+    "neo4j",
+    "tigergraph",
+    "stardog",
+    "janusgraph",
+    "aerospike-graph"
+  ],
+  "tags": [
+    "aws",
+    "managed",
+    "gremlin",
+    "opencypher",
+    "sparql",
+    "serverless"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/neptune/",
+    "docs": "https://docs.aws.amazon.com/neptune/latest/userguide/intro.html",
+    "pricing": "https://aws.amazon.com/neptune/pricing/",
+    "changelog": "https://docs.aws.amazon.com/neptune/latest/userguide/engine-releases.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_Neptune"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-neptune",
+    "wikipedia": "Amazon_Neptune",
+    "hackerNewsQuery": "Amazon Neptune"
+  },
+  "brand": {
+    "color": "#2E73B8"
+  },
+  "sources": [
+    "https://docs.aws.amazon.com/neptune/latest/userguide/engine-releases-1.4.8.1.html",
+    "https://docs.aws.amazon.com/neptune/latest/userguide/engine-releases-1.4.7.0.html",
+    "https://aws.amazon.com/neptune/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,190 @@
+{
+  "slug": "appwrite",
+  "name": "Appwrite",
+  "aliases": [
+    "Appwrite Cloud"
+  ],
+  "tagline": "Open-source backend platform with databases, auth, storage, functions and realtime, self-hosted or cloud.",
+  "description": "Appwrite is a BSD-licensed backend-as-a-service you can run with Docker or use as Appwrite Cloud. It bundles databases with permissions and realtime events, authentication, file storage, serverless functions, messaging and static site hosting behind one set of SDKs. Appwrite 2.0, released September 2026, made PostgreSQL the default engine (MariaDB and MongoDB remain supported) and added schemaless DocumentsDB and HNSW-indexed VectorsDB collections plus an embeddings API. It is a strong Firebase alternative when you want to self-host, but its database API is narrower than writing SQL directly against Postgres.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "vector-search"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Appwrite",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "2.6.2",
+    "date": "2026-10-24"
+  },
+  "writtenIn": [
+    "PHP",
+    "TypeScript"
+  ],
+  "basedOn": "PostgreSQL (default), MariaDB or MongoDB",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosting is free; Appwrite Cloud has a Free plan and paid plans with usage overages and dedicated database compute from $10/month."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Self-hosted scale depends on the underlying database; Cloud offers several regions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Appwrite Query API",
+    "GraphQL"
+  ],
+  "apis": [
+    "REST",
+    "GraphQL",
+    "Realtime WebSocket"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Dart",
+    "Swift",
+    "Kotlin",
+    "Python",
+    "PHP",
+    "Ruby",
+    "Go",
+    ".NET",
+    "Deno"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fully self-hostable Firebase-style stack under a permissive licence",
+    "Document-level permissions and realtime events out of the box",
+    "SDKs for web, Flutter, Apple, Android and many server languages",
+    "Appwrite 2.0 adds Postgres by default, vectors and schemaless collections"
+  ],
+  "weaknesses": [
+    "Database access is through Appwrite's API, not raw SQL",
+    "No offline sync in the client SDKs",
+    "Self-hosting runs many containers to operate and upgrade"
+  ],
+  "useCases": [
+    "Self-hosted backend for mobile and web apps",
+    "Firebase replacement with data sovereignty requirements",
+    "Internal tools needing auth, storage and functions quickly"
+  ],
+  "notIdealFor": [
+    "Complex SQL analytics",
+    "Offline-first apps",
+    "Very high write-throughput systems"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "firebase",
+    "supabase",
+    "pocketbase",
+    "convex",
+    "instantdb"
+  ],
+  "tags": [
+    "baas",
+    "open-source",
+    "self-hosted",
+    "firebase-alternative",
+    "realtime"
+  ],
+  "links": {
+    "website": "https://appwrite.io/",
+    "docs": "https://appwrite.io/docs",
+    "repository": "https://github.com/appwrite/appwrite",
+    "pricing": "https://appwrite.io/pricing",
+    "changelog": "https://github.com/appwrite/appwrite/releases"
+  },
+  "ids": {
+    "github": "appwrite/appwrite",
+    "stackoverflowTag": "appwrite",
+    "dockerHub": "appwrite/appwrite",
+    "npm": "appwrite",
+    "pypi": "appwrite",
+    "hackerNewsQuery": "Appwrite"
+  },
+  "brand": {
+    "color": "#FD366E",
+    "simpleIcon": "appwrite"
+  },
+  "sources": [
+    "https://github.com/appwrite/appwrite/releases/tag/2.0.0",
+    "https://github.com/appwrite/appwrite/releases",
+    "https://appwrite.io/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

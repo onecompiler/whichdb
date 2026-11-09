@@ -1,0 +1,165 @@
+{
+  "slug": "opentsdb",
+  "name": "OpenTSDB",
+  "aliases": [],
+  "tagline": "HBase-backed time-series database from the Hadoop era; still in service, rarely chosen for new work.",
+  "description": "OpenTSDB stores metrics as rows in HBase (or Bigtable) behind stateless TSD daemons, which let early large-scale shops keep years of raw, undownsampled data on their Hadoop clusters. Its metric-plus-tags data model and simple telnet/HTTP put API influenced many later systems, and several modern TSDBs still accept the OpenTSDB protocol for compatibility. Development has largely stopped: the last stable release dates from 2021 and only a 2.5.0 release candidate followed in December 2024. Today it mostly matters for legacy installations and as an ingest format other databases import.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Dormant: last stable release 2.4.1 (Sept 2021), 2.5.0-RC1 tagged Dec 2024 with no activity since. Prefer VictoriaMetrics, Mimir or TimescaleDB for new work.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "OpenTSDB community (originally StumbleUpon)",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "2.4.1",
+    "date": "2021-09-02"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache HBase",
+  "license": {
+    "type": "copyleft",
+    "name": "LGPL-2.1+ (with GPL-3.0+ components)",
+    "spdx": "LGPL-2.1-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales with the underlying HBase or Bigtable cluster; TSDs are stateless and added freely."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "OpenTSDB HTTP query API"
+  ],
+  "apis": [
+    "HTTP API",
+    "Telnet put protocol"
+  ],
+  "compatibleWith": [
+    "hbase"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Keeps raw data indefinitely on HBase without downsampling",
+    "Stateless TSDs scale horizontally behind a load balancer",
+    "Simple, widely copied put protocol",
+    "Fits shops that already run Hadoop/HBase"
+  ],
+  "weaknesses": [
+    "Effectively unmaintained since 2021",
+    "Requires operating HBase and ZooKeeper, which is heavy for a metrics store",
+    "No PromQL or SQL; query API is limited and slow on high-cardinality tags",
+    "No native retention or downsampling policies"
+  ],
+  "useCases": [
+    "Maintaining legacy Hadoop-era metrics pipelines",
+    "Archival metrics on an existing HBase cluster"
+  ],
+  "notIdealFor": [
+    "New monitoring stacks",
+    "Kubernetes-native metrics",
+    "Teams without HBase expertise"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "victoriametrics",
+    "kairosdb",
+    "influxdb",
+    "grafana-mimir",
+    "prometheus",
+    "apache-hbase"
+  ],
+  "tags": [
+    "time-series",
+    "hbase",
+    "hadoop",
+    "legacy",
+    "metrics"
+  ],
+  "links": {
+    "website": "http://opentsdb.net/",
+    "docs": "http://opentsdb.net/docs/build/html/index.html",
+    "repository": "https://github.com/OpenTSDB/opentsdb",
+    "changelog": "https://github.com/OpenTSDB/opentsdb/releases"
+  },
+  "ids": {
+    "github": "OpenTSDB/opentsdb",
+    "stackoverflowTag": "opentsdb",
+    "hackerNewsQuery": "OpenTSDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/OpenTSDB/opentsdb/releases",
+    "https://github.com/OpenTSDB/opentsdb/commits/master",
+    "http://opentsdb.net/"
+  ],
+  "lastVerified": "2026-10-27"
+}

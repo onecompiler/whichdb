@@ -1,0 +1,162 @@
+{
+  "slug": "hyrise",
+  "name": "Hyrise",
+  "aliases": [],
+  "tagline": "HPI's open-source in-memory columnar research database, rewritten in 2017 for teaching and experiments.",
+  "description": "Hyrise is a research relational database from the Hasso Plattner Institute in Potsdam. The original 2010 version explored hybrid row/column layouts for main memory; the current codebase, rewritten in 2017, is a clean C++ columnar engine with chunked, encoded storage, MVCC transactions, a rule-based optimizer and a plug-in system, designed so students and researchers can swap in new indexes, encodings or optimizer rules. It runs TPC-H, TPC-DS, the Join Order Benchmark and SSB out of the box and speaks a subset of the PostgreSQL wire protocol, so psql can connect. HPI uses it for its 'Develop your own Database' course and ongoing research, and commits land regularly. Use it to learn or experiment, not to store production data.",
+  "productType": "research",
+  "status": "active",
+  "statusNote": "Actively developed research system at HPI; not intended for production use.",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "htap"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Hasso Plattner Institute",
+  "vendorType": "academic",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node, in-memory; sized for benchmark data sets."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol (subset)",
+    "Hyrise console",
+    "C++ API"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": false,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Readable, modern C++ codebase built for experimentation",
+    "Plug-in architecture for new operators, encodings and optimizer rules",
+    "TPC-H, TPC-DS, JOB and SSB runnable with one command",
+    "Active research output and teaching use at HPI",
+    "Permissive MIT license"
+  ],
+  "weaknesses": [
+    "Not hardened for production: limited durability and operations tooling",
+    "Single-node only",
+    "Linux-focused build with heavy dependencies"
+  ],
+  "useCases": [
+    "Teaching database internals",
+    "Prototyping optimizer, encoding or index research",
+    "Reproducing in-memory database papers"
+  ],
+  "notIdealFor": [
+    "Production data storage",
+    "Distributed workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "monetdb",
+    "hyper",
+    "quickstep",
+    "sap-hana"
+  ],
+  "tags": [
+    "research",
+    "in-memory",
+    "columnar",
+    "hpi",
+    "teaching"
+  ],
+  "links": {
+    "website": "https://hpi.de/en/database-group/projects/hyrise/",
+    "repository": "https://github.com/hyrise/hyrise"
+  },
+  "ids": {
+    "github": "hyrise/hyrise",
+    "hackerNewsQuery": "Hyrise"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/hyrise/hyrise",
+    "https://www.vldb.org/pvldb/vol4/p105-grund.pdf",
+    "https://openproceedings.org/2019/conf/edbt/EDBT19_paper_152.pdf"
+  ],
+  "lastVerified": "2026-10-27"
+}

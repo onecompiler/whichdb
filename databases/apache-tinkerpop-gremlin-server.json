@@ -1,0 +1,182 @@
+{
+  "slug": "apache-tinkerpop-gremlin-server",
+  "name": "Apache TinkerPop Gremlin Server",
+  "aliases": [
+    "Gremlin Server",
+    "TinkerGraph",
+    "Apache TinkerPop"
+  ],
+  "tagline": "Apache TinkerPop's reference server for running Gremlin traversals over any compatible graph.",
+  "description": "Apache TinkerPop is the vendor-neutral graph computing framework behind the Gremlin traversal language, and Gremlin Server is its reference server that exposes any TinkerPop-enabled graph over WebSocket or HTTP. Out of the box it hosts TinkerGraph, an in-memory reference graph that is handy for tests, prototyping and small analytical jobs; providers such as JanusGraph and HugeGraph embed Gremlin Server, and Neptune and Aerospike Graph implement its protocol. The 3.8 line is current (3.8.2 in September 2026), with 4.0 in beta. It is infrastructure more than a database: there is no durable storage engine by default.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "3.8.2",
+    "date": "2026-09-01"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "TinkerGraph is in-memory on one JVM; scale depends on the graph provider plugged in."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Gremlin"
+  ],
+  "apis": [
+    "WebSocket",
+    "HTTP",
+    "GraphBinary/GraphSON serialization"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    ".NET",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Vendor-neutral Gremlin standard implemented by many graph databases",
+    "TinkerGraph gives a zero-setup in-memory graph for tests and prototypes",
+    "Official drivers in five languages (gremlin-python, gremlin-javascript, Gremlin.Net, gremlin-go, Java)",
+    "Apache-governed and fully open source"
+  ],
+  "weaknesses": [
+    "Not a production database on its own: TinkerGraph has no durable transactions",
+    "Gremlin's imperative style is harder to read than declarative Cypher or GQL",
+    "Provider implementations differ in supported steps and performance"
+  ],
+  "useCases": [
+    "Local testing for Neptune or JanusGraph apps",
+    "Prototyping Gremlin traversals",
+    "Hosting a custom TinkerPop graph provider",
+    "Teaching graph traversal concepts"
+  ],
+  "notIdealFor": [
+    "Durable production storage",
+    "Large graphs beyond one JVM's heap",
+    "Cypher or SPARQL users"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "janusgraph",
+    "amazon-neptune",
+    "apache-hugegraph",
+    "aerospike-graph",
+    "arcadedb"
+  ],
+  "tags": [
+    "gremlin",
+    "tinkerpop",
+    "apache",
+    "reference-implementation",
+    "in-memory"
+  ],
+  "links": {
+    "website": "https://tinkerpop.apache.org/",
+    "docs": "https://tinkerpop.apache.org/docs/current/reference/",
+    "repository": "https://github.com/apache/tinkerpop",
+    "changelog": "https://tinkerpop.apache.org/download.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Gremlin_(query_language)"
+  },
+  "ids": {
+    "github": "apache/tinkerpop",
+    "stackoverflowTag": "gremlin-server",
+    "wikipedia": "Gremlin_(query_language)",
+    "dockerHub": "tinkerpop/gremlin-server",
+    "npm": "gremlin",
+    "pypi": "gremlinpython",
+    "hackerNewsQuery": "Apache TinkerPop"
+  },
+  "brand": {
+    "color": "#3C5A99"
+  },
+  "sources": [
+    "https://tinkerpop.apache.org/download.html",
+    "https://repo1.maven.org/maven2/org/apache/tinkerpop/gremlin-server/maven-metadata.xml",
+    "https://github.com/apache/tinkerpop"
+  ],
+  "lastVerified": "2026-10-27"
+}

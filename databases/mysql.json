@@ -1,0 +1,257 @@
+{
+  "slug": "mysql",
+  "name": "MySQL",
+  "aliases": [
+    "MySQL Community Server",
+    "Oracle MySQL"
+  ],
+  "tagline": "The web's default open-source SQL database, now on calendar versioning with 9.7 as the LTS line.",
+  "description": "MySQL is the relational database that powered the LAMP era and still sits behind a huge share of web applications, CMSs and SaaS backends. Its InnoDB engine gives solid ACID OLTP with simple primary-replica and Group Replication topologies, and the operational knowledge around it (Vitess, ProxySQL, Orchestrator, gh-ost) is unmatched. Oracle owns it and develops it in-house, which keeps the GPL community edition alive but steers advanced features toward Enterprise Edition and HeatWave. In 2026 Oracle moved Innovation releases to calendar versioning (26.7, 26.10), while 8.4 and 9.7 are the LTS lines most teams should run.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "metadata-store",
+    "geospatial"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "Oracle Corporation",
+  "vendorType": "company",
+  "initialRelease": 1995,
+  "latestVersion": {
+    "version": "26.10.0",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-2.0 (Community) / commercial (Enterprise)",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free under GPLv2; Enterprise Edition (thread pool, audit, TDE, backup) is sold per server by Oracle."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "oracle-cloud",
+      "alibaba-cloud",
+      "digitalocean",
+      "aiven",
+      "akamai-linode",
+      "ovhcloud",
+      "scaleway",
+      "railway",
+      "render"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon RDS for MySQL",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/rds/mysql/"
+    },
+    {
+      "name": "Cloud SQL for MySQL",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/sql/mysql"
+    },
+    {
+      "name": "Azure Database for MySQL",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/mysql/"
+    },
+    {
+      "name": "MySQL HeatWave",
+      "provider": "Oracle",
+      "url": "https://www.oracle.com/mysql/"
+    },
+    {
+      "name": "PlanetScale",
+      "provider": "PlanetScale",
+      "url": "https://planetscale.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Single-primary by default; comfortable into multi-TB on one primary. Group Replication/InnoDB Cluster for HA; Vitess or NDB for sharded write scale-out to much larger sizes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL client/server protocol",
+    "X Protocol",
+    "X DevAPI"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "PHP",
+    "C#",
+    "Ruby",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Huge operational ecosystem: Vitess, ProxySQL, Orchestrator, gh-ost, pt-online-schema-change",
+    "Binlog-based replication and CDC that every ETL and streaming tool understands",
+    "Simple to run, with predictable InnoDB performance on read-heavy OLTP",
+    "Managed by every cloud provider and by MySQL-compatible distributed systems (TiDB, PlanetScale)",
+    "InnoDB tablespace encryption and instant ADD COLUMN in the community edition"
+  ],
+  "weaknesses": [
+    "Single-vendor control by Oracle; roadmap and commit history are not developed in the open",
+    "Weaker SQL feature set than PostgreSQL (no partial indexes, limited CHECK/domain types, no transactional DDL)",
+    "Thread pool, audit log and hot backup are Enterprise-only",
+    "Horizontal write scaling requires Vitess, NDB or a third-party distributed engine"
+  ],
+  "useCases": [
+    "Web applications and CMS backends (WordPress, Drupal, Magento)",
+    "Read-heavy SaaS OLTP with replicas",
+    "Sharded high-traffic systems via Vitess",
+    "E-commerce catalogs and order systems",
+    "Source database for binlog-driven CDC pipelines"
+  ],
+  "notIdealFor": [
+    "Complex analytical queries over large tables",
+    "Workloads needing rich extensibility like custom types or index methods",
+    "Multi-region active-active writes without extra tooling"
+  ],
+  "notableUsers": [
+    "Meta",
+    "Uber",
+    "GitHub",
+    "Booking.com",
+    "Shopify",
+    "Airbnb"
+  ],
+  "alternatives": [
+    "postgresql",
+    "mariadb",
+    "percona-server-mysql",
+    "tidb",
+    "planetscale",
+    "vitess",
+    "amazon-aurora"
+  ],
+  "tags": [
+    "sql",
+    "open-source",
+    "oracle",
+    "lamp",
+    "innodb"
+  ],
+  "links": {
+    "website": "https://www.mysql.com/",
+    "docs": "https://dev.mysql.com/doc/",
+    "repository": "https://github.com/mysql/mysql-server",
+    "changelog": "https://dev.mysql.com/doc/relnotes/mysql/26.10/en/",
+    "wikipedia": "https://en.wikipedia.org/wiki/MySQL"
+  },
+  "ids": {
+    "github": "mysql/mysql-server",
+    "stackoverflowTag": "mysql",
+    "wikipedia": "MySQL",
+    "dockerHub": "library/mysql",
+    "npm": [
+      "mysql2",
+      "mysql"
+    ],
+    "pypi": [
+      "pymysql",
+      "mysql-connector-python",
+      "mysqlclient"
+    ],
+    "crates": "mysql",
+    "hackerNewsQuery": "MySQL"
+  },
+  "brand": {
+    "color": "#4479A1",
+    "simpleIcon": "mysql"
+  },
+  "sources": [
+    "https://dev.mysql.com/doc/relnotes/mysql/26.10/en/",
+    "https://www.percona.com/blog/meet-mysql-26-7-a-new-versioning-era-begins/",
+    "https://github.com/mysql/mysql-server/tags"
+  ],
+  "lastVerified": "2026-10-27"
+}

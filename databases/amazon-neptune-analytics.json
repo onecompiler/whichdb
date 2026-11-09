@@ -1,0 +1,173 @@
+{
+  "slug": "amazon-neptune-analytics",
+  "name": "Amazon Neptune Analytics",
+  "aliases": [
+    "Neptune Analytics"
+  ],
+  "tagline": "Memory-optimized AWS graph engine for fast algorithms, openCypher and vector search over large graphs.",
+  "description": "Neptune Analytics is a separate AWS service from Neptune Database: a memory-optimized graph engine that loads a graph from S3 or a Neptune cluster snapshot into RAM and runs built-in algorithms (PageRank, community detection, path finding, similarity) and low-latency openCypher queries over it. Each graph can hold a vector index, so similarity search and traversal combine in one query, and it backs the managed GraphRAG option in Amazon Bedrock Knowledge Bases. Capacity is provisioned in memory-optimized Neptune Capacity Units. Use it for exploratory analytics, data science and GraphRAG on AWS, alongside Neptune Database for transactional work.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "graph-analytics",
+    "vector-search",
+    "rag",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "in-memory",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (AWS service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed per memory-optimized Neptune Capacity Unit (m-NCU) hour plus snapshot storage."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon Neptune Analytics",
+      "provider": "AWS",
+      "url": "https://docs.aws.amazon.com/neptune-analytics/latest/userguide/what-is-neptune-analytics.html"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Graph size is bounded by the provisioned memory capacity of a single graph."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "openCypher"
+  ],
+  "apis": [
+    "HTTPS query API",
+    "AWS SDK",
+    "Bedrock Knowledge Bases integration"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Built-in graph algorithms callable from openCypher with no separate compute cluster",
+    "In-memory engine loads billions of edges from S3 or Neptune snapshots quickly",
+    "Vector index inside the graph combines similarity search with traversal",
+    "Managed GraphRAG via Amazon Bedrock Knowledge Bases"
+  ],
+  "weaknesses": [
+    "AWS-only and billed for provisioned memory even when idle",
+    "openCypher only; no Gremlin or SPARQL",
+    "One vector index per graph and limited transactional semantics"
+  ],
+  "useCases": [
+    "Graph data science and community detection",
+    "GraphRAG on AWS",
+    "Fraud ring discovery",
+    "Ad-hoc analysis of Neptune Database snapshots"
+  ],
+  "notIdealFor": [
+    "Primary OLTP system of record",
+    "Multi-cloud deployments",
+    "RDF/SPARQL workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-neptune",
+    "neo4j",
+    "tigergraph",
+    "memgraph",
+    "puppygraph"
+  ],
+  "tags": [
+    "aws",
+    "managed",
+    "graph-algorithms",
+    "opencypher",
+    "vector",
+    "graphrag"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/neptune/",
+    "docs": "https://docs.aws.amazon.com/neptune-analytics/latest/userguide/what-is-neptune-analytics.html",
+    "pricing": "https://aws.amazon.com/neptune/pricing/"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-neptune",
+    "hackerNewsQuery": "Neptune Analytics"
+  },
+  "brand": {
+    "color": "#2E73B8"
+  },
+  "sources": [
+    "https://docs.aws.amazon.com/neptune-analytics/latest/userguide/what-is-neptune-analytics.html",
+    "https://aws.amazon.com/about-aws/whats-new/2026/02/amazon-neptune-analytics-in-seven-additional-regions"
+  ],
+  "lastVerified": "2026-10-27"
+}

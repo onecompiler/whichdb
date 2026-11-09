@@ -1,0 +1,173 @@
+{
+  "slug": "qlever",
+  "name": "QLever",
+  "aliases": [],
+  "tagline": "Fast open-source SPARQL engine that serves all of Wikidata or OpenStreetMap from one machine.",
+  "description": "QLever is an open-source SPARQL engine from the University of Freiburg's algorithms group, written in C++ and designed to load and query very large RDF datasets (full Wikidata, UniProt, OpenStreetMap, PubChem) on a single commodity server. It builds compressed, sorted index permutations ahead of time and adds text search over literals and GeoSPARQL-style spatial queries, often answering complex queries in well under a second where older triplestores time out. SPARQL Update support has landed recently. It is the leading candidate for heavy read-mostly public endpoints, but it is still pre-1.0 and has no clustering.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "olap",
+    "scientific",
+    "geospatial"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "University of Freiburg (Chair of Algorithms and Data Structures)",
+  "vendorType": "academic",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "0.6.0",
+    "date": "2026-08-13"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Tens of billions of triples (full Wikidata and larger) on one machine with fast SSDs."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL"
+  ],
+  "apis": [
+    "SPARQL HTTP protocol",
+    "qlever CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Any SPARQL client"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Loads and queries full Wikidata-scale datasets on a single commodity machine",
+    "Complex SPARQL queries often finish in sub-second time where other engines time out",
+    "Built-in text search and spatial predicates over OpenStreetMap-style data",
+    "Simple qlever CLI automates download, indexing and serving"
+  ],
+  "weaknesses": [
+    "Pre-1.0: SPARQL Update and some features are still maturing",
+    "Index builds are offline and take hours for the largest datasets",
+    "No clustering, replication or access control built in"
+  ],
+  "useCases": [
+    "Public SPARQL endpoints for Wikidata, OSM, UniProt",
+    "Large read-mostly knowledge graphs",
+    "Research on big RDF datasets",
+    "Replacing aging Blazegraph deployments"
+  ],
+  "notIdealFor": [
+    "Write-heavy transactional workloads",
+    "Property-graph apps",
+    "Managed-service users"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "virtuoso",
+    "blazegraph",
+    "apache-jena-tdb",
+    "oxigraph",
+    "ontotext-graphdb"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "wikidata",
+    "open-source",
+    "c++",
+    "academic"
+  ],
+  "links": {
+    "website": "https://qlever.dev/",
+    "docs": "https://docs.qlever.dev/",
+    "repository": "https://github.com/ad-freiburg/qlever",
+    "changelog": "https://github.com/ad-freiburg/qlever/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/QLever"
+  },
+  "ids": {
+    "github": "ad-freiburg/qlever",
+    "stackoverflowTag": "qlever",
+    "wikipedia": "QLever",
+    "dockerHub": "adfreiburg/qlever",
+    "pypi": "qlever",
+    "hackerNewsQuery": "QLever"
+  },
+  "brand": {
+    "color": "#344A9A"
+  },
+  "sources": [
+    "https://github.com/ad-freiburg/qlever/releases",
+    "https://pypi.org/project/qlever/",
+    "https://en.wikipedia.org/wiki/QLever"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,180 @@
+{
+  "slug": "doltgres",
+  "name": "Doltgres",
+  "aliases": [
+    "DoltgreSQL"
+  ],
+  "tagline": "Version-controlled SQL database with PostgreSQL compatibility: branch, diff and merge your tables.",
+  "description": "Doltgres (DoltgreSQL) is DoltHub's PostgreSQL-flavored sibling of Dolt. It reuses Dolt's prolly-tree storage engine and Git-style commit graph, but speaks the PostgreSQL wire protocol and dialect, so psql, Postgres drivers and ORMs can connect while you branch, diff, merge and time-travel over tables with SQL functions. It reached 1.0 in August 2026 and DoltHub now calls it production-ready, though its Postgres coverage (extensions, some types and catalog behavior) is still narrower than real PostgreSQL. It suits teams in the Postgres ecosystem that need data versioning and review workflows more than raw throughput.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "metadata-store",
+    "configuration",
+    "ml-feature-store"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "DoltHub",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.4.0",
+    "date": "2026-10-01"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "Dolt storage engine",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Engine is free; hosted options from DoltHub."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single primary with replicas via remotes; history grows with commits."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "Dolt SQL functions (dolt_commit, dolt_merge)"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Go",
+    "Python",
+    "Java",
+    "JavaScript",
+    "C#",
+    "Ruby"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Git-style branch, diff and merge of tables from SQL",
+    "Point-in-time queries against any commit",
+    "Works with psql and standard Postgres drivers",
+    "Shares Dolt's mature versioned storage engine",
+    "Clone and push databases between remotes"
+  ],
+  "weaknesses": [
+    "Only a subset of PostgreSQL extensions, types and catalog features",
+    "Slower than PostgreSQL for high-volume OLTP",
+    "Young 1.x product with a short production record",
+    "No horizontal scaling"
+  ],
+  "useCases": [
+    "Versioned reference data for Postgres-based apps",
+    "Reproducible ML datasets",
+    "Safe data migrations tested on branches",
+    "Agent or CI sandboxes that branch data"
+  ],
+  "notIdealFor": [
+    "Apps relying on Postgres extensions such as PostGIS or pgvector",
+    "High-throughput transactional systems",
+    "Large analytical workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dolt",
+    "postgresql",
+    "neon",
+    "xata",
+    "supabase"
+  ],
+  "tags": [
+    "version-control",
+    "git-for-data",
+    "postgres-compatible",
+    "branching"
+  ],
+  "links": {
+    "website": "https://www.doltgres.com/",
+    "docs": "https://docs.doltgres.com/",
+    "repository": "https://github.com/dolthub/doltgresql",
+    "changelog": "https://github.com/dolthub/doltgresql/releases"
+  },
+  "ids": {
+    "github": "dolthub/doltgresql",
+    "dockerHub": "dolthub/doltgresql",
+    "hackerNewsQuery": "Doltgres"
+  },
+  "sources": [
+    "https://github.com/dolthub/doltgresql/releases",
+    "https://www.dolthub.com/blog/2026-08-06-doltgres-1-0/",
+    "https://github.com/dolthub/doltgresql"
+  ],
+  "lastVerified": "2026-10-27"
+}

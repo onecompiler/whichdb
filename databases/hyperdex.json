@@ -1,0 +1,161 @@
+{
+  "slug": "hyperdex",
+  "name": "HyperDex",
+  "aliases": [],
+  "tagline": "Cornell's searchable distributed key-value store built on hyperspace hashing; dormant since 2016.",
+  "description": "HyperDex was a distributed key-value and document store from Robert Escriva, Bernard Wong and Emin Gün Sirer at Cornell, presented at SIGCOMM 2012. Its central idea, hyperspace hashing, maps each object to a point in a multi-dimensional space defined by its attributes, so searches on secondary attributes contact only the servers covering that region instead of every node. Replicas are kept consistent with value-dependent chaining, giving linearizable operations and configurable fault tolerance, and a commercial extension, HyperDex Warp, added multi-key ACID transactions. Bindings covered C, C++, Python, Ruby, Java, Go, Node.js and Rust. Development stopped in 2016, and the hyperdex.org domain has since lapsed to an unrelated site.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since late 2016; hyperdex.org now hosts unrelated content. The authors' later work moved to Consus.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Cornell University (Robert Escriva, Emin Gün Sirer)",
+  "vendorType": "academic",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "HyperDex Warp transactions were a separate commercial extension."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Objects are partitioned across a hyperspace of attribute subspaces with configurable replication."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "HyperDex search API"
+  ],
+  "apis": [
+    "Native client API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Python",
+    "Ruby",
+    "Java",
+    "Go",
+    "JavaScript",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Searches on secondary attributes touch only the relevant servers",
+    "Linearizable operations via value-dependent chaining",
+    "Rich datatypes and atomic operations on documents",
+    "Peer-reviewed design with a permissive license"
+  ],
+  "weaknesses": [
+    "Abandoned since 2016; packages target old Linux distributions",
+    "Multi-key ACID transactions required the commercial Warp add-on",
+    "Original website and documentation domain lost"
+  ],
+  "useCases": [
+    "Studying multi-dimensional hashing for secondary search",
+    "Distributed-systems coursework"
+  ],
+  "notIdealFor": [
+    "Production deployments",
+    "Projects needing support or security updates"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "consus",
+    "foundationdb",
+    "aerospike",
+    "mongodb",
+    "apache-cassandra"
+  ],
+  "tags": [
+    "key-value",
+    "distributed",
+    "cornell",
+    "hyperspace-hashing",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/rescrv/HyperDex",
+    "repository": "https://github.com/rescrv/HyperDex"
+  },
+  "ids": {
+    "github": "rescrv/HyperDex",
+    "hackerNewsQuery": "HyperDex"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/rescrv/HyperDex",
+    "https://www.cs.cornell.edu/people/egs/papers/hyperdex-sigcomm.pdf",
+    "https://dbdb.io/db/hyperdex"
+  ],
+  "lastVerified": "2026-10-27"
+}

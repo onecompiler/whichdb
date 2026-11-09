@@ -1,0 +1,181 @@
+{
+  "slug": "jackrabbit",
+  "name": "Apache Jackrabbit",
+  "aliases": [
+    "Jackrabbit",
+    "Jackrabbit Oak",
+    "Apache Jackrabbit Oak",
+    "JCR reference implementation"
+  ],
+  "tagline": "Apache's Java Content Repository: a hierarchical, versioned node store with search, behind many Java CMSs.",
+  "description": "Apache Jackrabbit implements the Java Content Repository (JCR) API: content lives in a tree of typed nodes and properties, with versioning, locking, access control, observation events and full-text plus JCR-SQL2/XPath queries. Day Software started it in 2004 as the JSR-170 reference implementation and it graduated at Apache in 2006. Jackrabbit 2.x persists through pluggable persistence managers, while the newer Jackrabbit Oak rewrite (2.8.0, Java 17+) stores trees in its Segment Tar format or in MongoDB/relational backends for clustering and scales much further. It is the storage layer of Apache Sling-based content platforms and DAM/CMS products; reach for it when you need a content repository with JCR semantics, not a general application database.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "hierarchical",
+  "models": [
+    "hierarchical",
+    "document"
+  ],
+  "workloads": [
+    "content-management",
+    "full-text-search",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "shared-storage"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2006,
+  "latestVersion": {
+    "version": "Jackrabbit 2.22.5 / Oak 2.8.0",
+    "date": "2026-10-14"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Jackrabbit 2 clusters over a shared database; Oak's DocumentNodeStore clusters on MongoDB or an RDBMS, Segment Tar is single-instance."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "JCR-SQL2",
+    "XPath (JCR)",
+    "JCR-JQOM"
+  ],
+  "apis": [
+    "JCR 2.0 (JSR-283) Java API",
+    "WebDAV"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Standard JCR API with hierarchical nodes, node types and mixins",
+    "Built-in versioning, locking, observation events and fine-grained ACLs",
+    "Lucene-backed full-text and JCR-SQL2/XPath queries over content",
+    "Oak scales repositories to hundreds of millions of nodes with MongoDB or RDB backends",
+    "Long-running, actively released Apache project with permissive license"
+  ],
+  "weaknesses": [
+    "JCR is Java-centric and niche; few developers know it",
+    "Query performance depends on hand-defined Oak indexes",
+    "Operational tuning (compaction, index rebuilds, cluster sync) is non-trivial",
+    "Two code lines (Jackrabbit 2 and Oak) with different storage and behaviour"
+  ],
+  "useCases": [
+    "Storage layer for Java CMS, DAM and portal products",
+    "Versioned document and asset repositories with access control",
+    "Apache Sling applications"
+  ],
+  "notIdealFor": [
+    "Relational or transactional business data",
+    "Non-JVM stacks",
+    "High-throughput key-value or analytics workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "modeshape",
+    "mongodb",
+    "postgresql",
+    "exist-db",
+    "marklogic"
+  ],
+  "tags": [
+    "jcr",
+    "content-repository",
+    "java",
+    "apache",
+    "cms"
+  ],
+  "links": {
+    "website": "https://jackrabbit.apache.org/",
+    "docs": "https://jackrabbit.apache.org/oak/docs/",
+    "repository": "https://github.com/apache/jackrabbit-oak",
+    "changelog": "https://jackrabbit.apache.org/jcr/downloads.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Jackrabbit"
+  },
+  "ids": {
+    "github": "apache/jackrabbit-oak",
+    "stackoverflowTag": "jackrabbit",
+    "wikipedia": "Apache Jackrabbit",
+    "hackerNewsQuery": "Apache Jackrabbit"
+  },
+  "brand": {},
+  "sources": [
+    "https://jackrabbit.apache.org/jcr/downloads.html",
+    "https://repo1.maven.org/maven2/org/apache/jackrabbit/oak-core/maven-metadata.xml",
+    "https://repo1.maven.org/maven2/org/apache/jackrabbit/jackrabbit-core/maven-metadata.xml",
+    "https://github.com/apache/jackrabbit-oak",
+    "https://en.wikipedia.org/wiki/Apache_Jackrabbit"
+  ],
+  "lastVerified": "2026-10-27"
+}

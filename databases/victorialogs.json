@@ -1,0 +1,180 @@
+{
+  "slug": "victorialogs",
+  "name": "VictoriaLogs",
+  "aliases": [
+    "VLogs"
+  ],
+  "tagline": "Log database from the VictoriaMetrics team: schemaless ingestion, LogsQL and low RAM and disk use.",
+  "description": "VictoriaLogs stores and queries structured and plain-text logs with an emphasis on operational simplicity: one binary, no schema, no index tuning, and every field searchable without declaring it. It ingests the Elasticsearch bulk API, Loki push, OpenTelemetry, syslog and JSON lines, and is queried with LogsQL, a pipe-based language with word and phrase filters, field extraction and stats. A cluster mode (vlinsert, vlstorage, vlselect) adds horizontal scale. It works well as a replacement for Elasticsearch- or Loki-based log stacks when you want fast search over high-cardinality fields like trace or user IDs without running a heavyweight inverted index.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "time-series",
+    "columnar"
+  ],
+  "workloads": [
+    "observability",
+    "full-text-search",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed"
+  ],
+  "developer": "VictoriaMetrics Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "1.53.0",
+    "date": "2026-10-01"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; enterprise support and features are sold by VictoriaMetrics."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Single node handles terabytes per day on one machine; cluster mode spreads storage across vlstorage nodes."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "LogsQL"
+  ],
+  "apis": [
+    "Elasticsearch bulk API",
+    "Loki push API",
+    "OTLP",
+    "Syslog",
+    "JSON lines",
+    "HTTP query API"
+  ],
+  "compatibleWith": [
+    "elasticsearch"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Every field is queryable without schema or mapping changes",
+    "Fast searches on high-cardinality fields such as trace_id or user_id",
+    "Much lower RAM and disk than Elasticsearch for the same log volume",
+    "Accepts Elasticsearch, Loki and OTLP ingestion, so existing shippers need only a URL change",
+    "Single binary with built-in web UI and live tailing"
+  ],
+  "weaknesses": [
+    "LogsQL is another query language to learn; no SQL",
+    "Stores data on local disk rather than object storage",
+    "Younger ecosystem than Elasticsearch or Loki for dashboards and alerting integrations",
+    "No relevance-ranked search; it filters rather than scores"
+  ],
+  "useCases": [
+    "Centralised application and Kubernetes logs",
+    "Replacing an ELK stack to cut cost",
+    "Debugging by trace or request ID across services",
+    "Audit and security event retention"
+  ],
+  "notIdealFor": [
+    "Relevance-ranked document search",
+    "Metrics (use VictoriaMetrics)",
+    "Transactional data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "grafana-loki",
+    "elasticsearch",
+    "opensearch",
+    "openobserve",
+    "parseable",
+    "quickwit",
+    "clickhouse"
+  ],
+  "tags": [
+    "logs",
+    "observability",
+    "open-source",
+    "go"
+  ],
+  "links": {
+    "website": "https://victoriametrics.com/products/victorialogs/",
+    "docs": "https://docs.victoriametrics.com/victorialogs/",
+    "repository": "https://github.com/VictoriaMetrics/VictoriaLogs",
+    "changelog": "https://docs.victoriametrics.com/victorialogs/changelog/"
+  },
+  "ids": {
+    "github": "VictoriaMetrics/VictoriaLogs",
+    "dockerHub": "victoriametrics/victoria-logs",
+    "hackerNewsQuery": "VictoriaLogs"
+  },
+  "brand": {
+    "color": "#621773",
+    "simpleIcon": "victoriametrics"
+  },
+  "sources": [
+    "https://github.com/VictoriaMetrics/VictoriaLogs/releases",
+    "https://docs.victoriametrics.com/victorialogs/"
+  ],
+  "lastVerified": "2026-10-27"
+}

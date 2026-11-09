@@ -1,0 +1,165 @@
+{
+  "slug": "indexeddb",
+  "name": "IndexedDB",
+  "aliases": [
+    "Indexed Database API",
+    "IDB"
+  ],
+  "tagline": "The browser's built-in transactional object store, and the storage layer under most web local-first libraries.",
+  "description": "IndexedDB is the W3C standard API for storing structured data inside web browsers. It provides object stores keyed by primary key, secondary indexes, cursors and transactions, with values saved via the structured clone algorithm, so you can persist objects, blobs and typed arrays. Every major browser implements it, usually on top of SQLite or LevelDB internally. The raw API is verbose and event-based, so most teams use a wrapper (Dexie, idb) or a higher-level library such as RxDB or PouchDB. Storage quotas and eviction rules differ by browser, which is the main operational surprise.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "local-first",
+    "mobile-offline",
+    "caching"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "W3C Web Applications Working Group (implemented by browser vendors)",
+  "vendorType": "foundation",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "C++",
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "W3C Royalty-Free standard (browser implementations vary)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Built into every modern browser."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Capacity is a per-origin browser quota; data can be evicted unless persistent storage is granted."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "IndexedDB API (key ranges and cursors)"
+  ],
+  "apis": [
+    "JavaScript Web API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Available in every modern browser with no dependency to ship",
+    "Transactional writes and indexed range queries on the client",
+    "Stores binary data (Blobs, ArrayBuffers) as well as objects",
+    "Works in Web Workers and Service Workers for offline apps"
+  ],
+  "weaknesses": [
+    "Verbose, callback-style API that almost everyone wraps",
+    "Quotas and eviction behaviour differ by browser, especially Safari",
+    "No query language beyond key ranges; no joins or full-text search",
+    "Schema changes require version bumps handled in upgrade callbacks"
+  ],
+  "useCases": [
+    "Offline caches for progressive web apps",
+    "Storage backend for local-first JavaScript libraries",
+    "Persisting large client-side datasets and files"
+  ],
+  "notIdealFor": [
+    "Complex queries or reporting",
+    "Data that must never be evicted without user consent",
+    "Server-side storage"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dexie",
+    "rxdb",
+    "pouchdb",
+    "pglite",
+    "sqlite",
+    "tinybase"
+  ],
+  "tags": [
+    "browser",
+    "web-standard",
+    "javascript",
+    "offline",
+    "w3c"
+  ],
+  "links": {
+    "website": "https://www.w3.org/TR/IndexedDB/",
+    "docs": "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API",
+    "repository": "https://github.com/w3c/IndexedDB",
+    "wikipedia": "https://en.wikipedia.org/wiki/IndexedDB"
+  },
+  "ids": {
+    "github": "w3c/IndexedDB",
+    "stackoverflowTag": "indexeddb",
+    "wikipedia": "IndexedDB",
+    "hackerNewsQuery": "IndexedDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.w3.org/TR/IndexedDB/",
+    "https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API",
+    "https://github.com/w3c/IndexedDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

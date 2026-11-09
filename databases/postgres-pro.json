@@ -1,0 +1,180 @@
+{
+  "slug": "postgres-pro",
+  "name": "Postgres Pro",
+  "aliases": [
+    "Postgres Pro Standard",
+    "Postgres Pro Enterprise",
+    "PostgresPro"
+  ],
+  "tagline": "Russian commercial PostgreSQL distribution with multimaster, 64-bit XIDs and compressed storage.",
+  "description": "Postgres Pro is a family of PostgreSQL-based distributions from Postgres Professional, the Moscow company founded in 2015 by long-time PostgreSQL core contributors. Standard tracks upstream with extra extensions, while Enterprise adds substantial engine changes: 64-bit transaction IDs (no wraparound), the CFS compressed file system, multimaster replication, autonomous transactions, built-in connection pooling and improved partitioning and locking. It is certified for Russian regulatory requirements and widely used in Russian government, banking and import-substitution projects, which also limits its availability and support in many Western markets.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "geospatial",
+    "full-text-search"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "Postgres Professional",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "Enterprise 18.6.0",
+    "date": "2026-08-20"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Postgres Pro commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Free for evaluation and development; production use requires a commercial license."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "active-active",
+    "notes": "Enterprise multimaster provides synchronous multi-node writes; Shardman (separate product) adds sharding."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "libpq"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "64-bit XIDs in Enterprise remove transaction-wraparound emergencies",
+    "CFS page compression shrinks storage for large databases",
+    "Multimaster cluster for synchronous HA writes",
+    "Built by core PostgreSQL contributors who upstream many features",
+    "Certified for Russian security and import-substitution requirements"
+  ],
+  "weaknesses": [
+    "Proprietary license and vendor lock-in for Enterprise-only features",
+    "Sanctions and geography limit procurement and support outside Russia/CIS",
+    "Few managed cloud offerings on global hyperscalers",
+    "Enterprise on-disk format diverges from community PostgreSQL"
+  ],
+  "useCases": [
+    "Russian government and banking systems",
+    "Oracle replacement under import-substitution programs",
+    "Very large OLTP databases hitting XID wraparound limits",
+    "HA clusters with synchronous multimaster"
+  ],
+  "notIdealFor": [
+    "Organizations outside Russia/CIS needing vendor support",
+    "Teams wanting pure open-source PostgreSQL",
+    "Global multi-cloud managed deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "edb-postgres-advanced-server",
+    "opengauss",
+    "pgedge",
+    "oracle-database"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "commercial",
+    "russia",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://postgrespro.com/",
+    "docs": "https://postgrespro.com/docs/enterprise",
+    "changelog": "https://postgrespro.com/docs/enterprise/18/release-proee-18-6-0"
+  },
+  "ids": {
+    "hackerNewsQuery": "\"Postgres Pro\""
+  },
+  "sources": [
+    "https://postgrespro.com/docs/enterprise/18/release-proee-18-6-0",
+    "https://postgrespro.com/products/download",
+    "https://postgrespro.com/docs/postgrespro"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,210 @@
+{
+  "slug": "greptimedb",
+  "name": "GreptimeDB",
+  "aliases": [
+    "Greptime",
+    "GreptimeCloud"
+  ],
+  "tagline": "Rust observability database that keeps metrics, logs and traces in one columnar engine on object storage.",
+  "description": "GreptimeDB is an open-source database from Greptime that stores metrics, logs, events and traces in a single columnar engine built on Apache Arrow, DataFusion and Parquet, with compute separated from object storage. It speaks many dialects at once: SQL and PromQL for queries, and Prometheus remote write, InfluxDB line protocol, OpenTelemetry, Elasticsearch bulk, Loki push and the MySQL and PostgreSQL wire protocols for access. That lets one cluster replace several observability backends. It reached 1.0 in April 2026, runs from a single binary at the edge up to Kubernetes clusters, and is sold commercially as GreptimeDB Enterprise and the hosted GreptimeCloud.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar",
+    "search"
+  ],
+  "workloads": [
+    "observability",
+    "time-series",
+    "iot",
+    "real-time-analytics",
+    "edge"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Greptime",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "1.2.1",
+    "date": "2026-09-16"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Apache Arrow DataFusion",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open source is free; GreptimeCloud is usage-based with a free tier; Enterprise is contract-priced."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "GreptimeCloud",
+      "provider": "Greptime",
+      "url": "https://greptime.com/product/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Frontend, datanode and metasrv roles scale independently; data lives in object storage with local caches."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "PromQL"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "PostgreSQL wire protocol",
+    "Prometheus remote write/read",
+    "InfluxDB line protocol",
+    "OTLP",
+    "Elasticsearch bulk API",
+    "Loki push API",
+    "gRPC",
+    "HTTP"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "postgresql",
+    "prometheus",
+    "influxdb",
+    "elasticsearch"
+  ],
+  "drivers": [
+    "Go",
+    "Java",
+    "Rust",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One engine for metrics, logs and traces instead of three backends",
+    "Object storage keeps long retention cheap",
+    "SQL and PromQL over the same data",
+    "Wide protocol compatibility eases migration from Prometheus, InfluxDB, Elasticsearch and Loki",
+    "Runs as a single binary on edge devices or as a Kubernetes cluster"
+  ],
+  "weaknesses": [
+    "Young compared with Prometheus-ecosystem or Elasticsearch stacks",
+    "Breadth of protocols means some compatibility edges are thinner than the originals",
+    "Smaller community and fewer public large-scale references",
+    "Object-storage reads add latency for cold queries"
+  ],
+  "useCases": [
+    "Unified observability backend for metrics, logs and traces",
+    "Prometheus long-term storage on S3",
+    "IoT and connected-vehicle telemetry",
+    "Edge data collection synced to the cloud"
+  ],
+  "notIdealFor": [
+    "Transactional workloads",
+    "Relevance-ranked document search",
+    "Teams that need a decade-proven stack"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "influxdb",
+    "victoriametrics",
+    "grafana-mimir",
+    "openobserve",
+    "clickhouse",
+    "timescaledb",
+    "grafana-loki"
+  ],
+  "tags": [
+    "observability",
+    "time-series",
+    "rust",
+    "object-storage",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://greptime.com/",
+    "docs": "https://docs.greptime.com/",
+    "repository": "https://github.com/GreptimeTeam/greptimedb",
+    "pricing": "https://greptime.com/pricing",
+    "changelog": "https://github.com/GreptimeTeam/greptimedb/releases"
+  },
+  "ids": {
+    "github": "GreptimeTeam/greptimedb",
+    "dockerHub": "greptime/greptimedb",
+    "hackerNewsQuery": "GreptimeDB"
+  },
+  "brand": {
+    "color": "#8322FF",
+    "simpleIcon": "greptimedb"
+  },
+  "sources": [
+    "https://github.com/GreptimeTeam/greptimedb/releases",
+    "https://github.com/GreptimeTeam/greptimedb",
+    "https://docs.greptime.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

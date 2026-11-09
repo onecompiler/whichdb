@@ -1,0 +1,150 @@
+{
+  "slug": "google-f1",
+  "name": "Google F1",
+  "aliases": [
+    "F1",
+    "F1 Query"
+  ],
+  "tagline": "Google's internal distributed SQL database on Spanner that replaced sharded MySQL for AdWords.",
+  "description": "F1 is a Google-internal distributed relational database built on Spanner. It replaced a manually sharded MySQL deployment for the AdWords business, which has run on it since early 2012 (over 100 TB and hundreds of thousands of requests per second at the time of the 2013 VLDB paper). It added SQL, hierarchically clustered tables, Protocol Buffer columns, change-history capture, optimistic and pessimistic transactions, and fully online asynchronous schema changes on top of Spanner's synchronous cross-datacenter replication. Its query layer grew into F1 Query, a federated SQL engine over many Google storage systems, and F1 Lightning added HTAP. F1 is not available outside Google; Cloud Spanner, which shares its SQL lineage, is the public option.",
+  "productType": "research",
+  "status": "active",
+  "statusNote": "Google-internal production system, documented only through papers (2012–2020); not available outside Google. Use Cloud Spanner.",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "htap"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "Google",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Spanner",
+  "license": {
+    "type": "proprietary",
+    "name": "Internal Google software (not distributed)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Not offered to the public."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Inherits Spanner's automatic sharding and synchronous replication across datacenters."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Showed that a globally replicated, strongly consistent SQL database can run a major revenue system",
+    "Fully online schema changes across thousands of servers",
+    "Hierarchical table interleaving keeps related rows co-located",
+    "Built-in change history for downstream consumers",
+    "F1 Query federates SQL across many storage systems"
+  ],
+  "weaknesses": [
+    "Not available outside Google",
+    "Higher commit latency from synchronous cross-datacenter replication"
+  ],
+  "useCases": [
+    "Reference design for distributed SQL on a strongly consistent store",
+    "Studying online schema-change protocols",
+    "Background for choosing Spanner, CockroachDB or YugabyteDB"
+  ],
+  "notIdealFor": [
+    "Anyone outside Google (it cannot be obtained)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "google-cloud-spanner",
+    "spanner-omni",
+    "cockroachdb",
+    "yugabytedb",
+    "tidb"
+  ],
+  "tags": [
+    "google",
+    "distributed-sql",
+    "spanner",
+    "newsql",
+    "internal"
+  ],
+  "links": {
+    "website": "https://research.google/pubs/f1-a-distributed-sql-database-that-scales/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Google F1 database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.vldb.org/pvldb/vol6/p1068-shute.pdf",
+    "https://www.vldb.org/pvldb/vol11/p1835-samwel.pdf",
+    "https://research.google/pubs/online-asynchronous-schema-change-in-f1/",
+    "https://research.google/pubs/f1-lightning-htap-as-a-service/"
+  ],
+  "lastVerified": "2026-10-27"
+}

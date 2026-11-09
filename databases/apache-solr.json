@@ -1,0 +1,198 @@
+{
+  "slug": "apache-solr",
+  "name": "Apache Solr",
+  "aliases": [
+    "Solr",
+    "SolrCloud"
+  ],
+  "tagline": "The original Lucene search server: battle-tested, Apache-governed, now with GPU-accelerated vectors.",
+  "description": "Solr is the Apache Software Foundation's search server built on Lucene, and it predates Elasticsearch by years. It is configuration-heavy but extremely capable: faceting, grouping, joins, streaming expressions, learning-to-rank and, since 9.x, dense vector search. Solr 10.0 (March 2026) moved to Java 21 and Lucene 10, added quantized vectors and cuVS GPU indexing, and trimmed legacy modules. It fits teams that want fully Apache-licensed, community-run enterprise search and are comfortable running ZooKeeper-backed SolrCloud clusters.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "geospatial",
+    "content-management"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2006,
+  "latestVersion": {
+    "version": "10.0.0",
+    "date": "2026-03-03"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Lucene",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial hosting and support from SearchStax, Lucidworks partners and consultancies. The 9.x line still gets maintenance releases (9.11.0 in Oct 2026)."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "SearchStax Managed Search",
+      "provider": "SearchStax",
+      "url": "https://www.searchstax.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "SolrCloud shards and replicates collections with ZooKeeper coordination; cross-DC setups use replica types or the cross-DC manager."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Lucene query syntax",
+    "JSON Request API",
+    "Streaming Expressions",
+    "SQL"
+  ],
+  "apis": [
+    "REST/JSON",
+    "SolrJ"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "PHP",
+    "Ruby",
+    ".NET"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Mature faceting, grouping, highlighting and spell-checking",
+    "Apache governance with no commercial license strings",
+    "Streaming expressions and parallel SQL for analytics over indexes",
+    "Dense vector search with quantization and GPU (cuVS) index builds in 10.x",
+    "Official Kubernetes operator"
+  ],
+  "weaknesses": [
+    "XML-era configuration and schema management feel dated",
+    "Running ZooKeeper adds operational overhead",
+    "Smaller and slower-moving ecosystem than Elasticsearch/OpenSearch",
+    "Fewer managed-service choices"
+  ],
+  "useCases": [
+    "Enterprise and intranet search",
+    "Digital library and publishing search",
+    "E-commerce catalog faceting",
+    "Hybrid keyword and vector retrieval on existing Solr estates"
+  ],
+  "notIdealFor": [
+    "Log analytics at scale",
+    "Teams wanting a zero-config search API",
+    "Serverless or embedded deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "elasticsearch",
+    "opensearch",
+    "vespa",
+    "manticore-search",
+    "apache-lucene"
+  ],
+  "tags": [
+    "search",
+    "lucene",
+    "apache",
+    "open-source",
+    "enterprise-search"
+  ],
+  "links": {
+    "website": "https://solr.apache.org/",
+    "docs": "https://solr.apache.org/guide/",
+    "repository": "https://github.com/apache/solr",
+    "changelog": "https://solr.apache.org/news.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Solr"
+  },
+  "ids": {
+    "github": "apache/solr",
+    "stackoverflowTag": "solr",
+    "wikipedia": "Apache Solr",
+    "dockerHub": "library/solr",
+    "hackerNewsQuery": "Solr"
+  },
+  "brand": {
+    "color": "#D9411E",
+    "simpleIcon": "apachesolr"
+  },
+  "sources": [
+    "https://solr.apache.org/news.html",
+    "https://github.com/apache/solr",
+    "https://hub.docker.com/_/solr"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,212 @@
+{
+  "slug": "duckdb",
+  "name": "DuckDB",
+  "aliases": [],
+  "tagline": "In-process columnar SQL database: the SQLite of analytics, running inside your app or notebook.",
+  "description": "DuckDB is an embedded analytical database that runs inside the host process (Python, R, Node, Java, the CLI or the browser via WASM) with no server to manage. Its vectorized, parallel engine queries Parquet, CSV, JSON, Iceberg and Delta files directly, plus its own single-file database format, and it routinely handles hundreds of gigabytes on a laptop. Official extensions add spatial, full-text, vector search and lakehouse formats including DuckLake. It has become the default local analytics and data-engineering tool; it is not a multi-user server and scales up, not out.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "spatial",
+    "vector"
+  ],
+  "workloads": [
+    "olap",
+    "embedded",
+    "lakehouse",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node",
+    "in-memory"
+  ],
+  "developer": "DuckDB Foundation / DuckDB Labs",
+  "vendorType": "foundation",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "2.0.0",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; MotherDuck offers a commercial serverless cloud built on DuckDB."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "browser",
+      "wasm"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "MotherDuck",
+      "provider": "MotherDuck",
+      "url": "https://motherduck.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process, multi-threaded; larger-than-memory queries spill to disk. Comfortable into the low-TB range on one machine."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (PostgreSQL-like dialect)"
+  ],
+  "apis": [
+    "C/C++ API",
+    "ADBC",
+    "Arrow",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "R",
+    "Java",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "C",
+    "Swift",
+    "Julia"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Zero-setup: pip install and query Parquet/CSV/JSON files in seconds",
+    "Vectorized, parallel engine that is very fast on a single machine",
+    "Reads and writes Parquet, Iceberg, Delta and DuckLake natively",
+    "Deep Python/pandas/Polars/Arrow integration with zero-copy exchange",
+    "Runs in the browser via WebAssembly",
+    "Permissive MIT license and stable storage format since 1.0"
+  ],
+  "weaknesses": [
+    "Single-writer, in-process design: not a shared multi-user server",
+    "No horizontal scale-out; bound by one machine's CPU and disk",
+    "No built-in users, roles or network access control"
+  ],
+  "useCases": [
+    "Local data analysis in notebooks",
+    "ETL and data-engineering pipelines on files",
+    "Embedded analytics inside applications",
+    "Querying data lakes on S3 without a cluster",
+    "Testing and CI for warehouse SQL",
+    "In-browser analytics apps"
+  ],
+  "notIdealFor": [
+    "Concurrent multi-user writes",
+    "OLTP application backends",
+    "Multi-petabyte distributed analytics"
+  ],
+  "notableUsers": [
+    "Hugging Face"
+  ],
+  "alternatives": [
+    "motherduck",
+    "chdb",
+    "clickhouse",
+    "apache-datafusion",
+    "sqlite",
+    "pg-duckdb"
+  ],
+  "tags": [
+    "embedded",
+    "olap",
+    "open-source",
+    "in-process",
+    "parquet",
+    "wasm"
+  ],
+  "links": {
+    "website": "https://duckdb.org/",
+    "docs": "https://duckdb.org/docs/",
+    "repository": "https://github.com/duckdb/duckdb",
+    "changelog": "https://github.com/duckdb/duckdb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/DuckDB"
+  },
+  "ids": {
+    "github": "duckdb/duckdb",
+    "stackoverflowTag": "duckdb",
+    "wikipedia": "DuckDB",
+    "dockerHub": "duckdb/duckdb",
+    "npm": [
+      "@duckdb/node-api",
+      "duckdb"
+    ],
+    "pypi": "duckdb",
+    "crates": "duckdb",
+    "hackerNewsQuery": "DuckDB"
+  },
+  "brand": {
+    "color": "#FFF000",
+    "simpleIcon": "duckdb"
+  },
+  "sources": [
+    "https://duckdb.org/news/",
+    "https://github.com/duckdb/duckdb/releases",
+    "https://en.wikipedia.org/wiki/DuckDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

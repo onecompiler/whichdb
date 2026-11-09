@@ -1,0 +1,155 @@
+{
+  "slug": "smallsql",
+  "name": "SmallSQL",
+  "aliases": [
+    "SmallSQL Database"
+  ],
+  "tagline": "Pure-Java embedded SQL database with a JDBC 3.0 interface for desktop apps; last release in 2011.",
+  "description": "SmallSQL is a 100% Java relational engine meant to be shipped inside desktop applications: there is no server or network listener, the application opens the database in-process through SmallSQL's JDBC 3.0 driver, and it implements a good share of SQL-92 and SQL-99. Volker Berlin started it in 2005 and published it under the LGPL on SourceForge, where the final 0.21 release appeared in June 2011. It still works as a curiosity or in legacy apps, but H2, HSQLDB and Apache Derby fill the same niche with far broader SQL support and ongoing maintenance.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Still downloadable, but the last release was 0.21 (June 2011) and nothing has changed since. H2, HSQLDB or Apache Derby are maintained alternatives.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Volker Berlin",
+  "vendorType": "community",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "0.21",
+    "date": "2011-06-22"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU Lesser General Public License"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC 3.0"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Single JAR with no server process or open port",
+    "Standard JDBC, so ordinary Java SQL code works against it",
+    "LGPL allows bundling inside closed-source desktop applications"
+  ],
+  "weaknesses": [
+    "No releases since 2011 and no fixes for modern JVMs",
+    "No network mode: one application owns a database at a time",
+    "Narrower SQL coverage and optimizer than H2 or HSQLDB"
+  ],
+  "useCases": [
+    "Maintaining legacy Java desktop apps that bundle it",
+    "Studying a compact SQL engine implementation"
+  ],
+  "notIdealFor": [
+    "New Java projects (pick H2 or SQLite)",
+    "Multi-user or networked access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "sqlite"
+  ],
+  "tags": [
+    "java",
+    "jdbc",
+    "embedded",
+    "sql",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://www.smallsql.de/",
+    "repository": "https://sourceforge.net/projects/smallsql/"
+  },
+  "ids": {
+    "hackerNewsQuery": "SmallSQL"
+  },
+  "brand": {},
+  "sources": [
+    "http://www.smallsql.de/",
+    "https://sourceforge.net/projects/smallsql/",
+    "https://dbdb.io/db/smallsql"
+  ],
+  "lastVerified": "2026-10-27"
+}

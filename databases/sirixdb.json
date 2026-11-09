@@ -1,0 +1,178 @@
+{
+  "slug": "sirixdb",
+  "name": "SirixDB",
+  "aliases": [
+    "Sirix"
+  ],
+  "tagline": "Embeddable bitemporal database that keeps every revision of JSON and XML resources queryable.",
+  "description": "SirixDB is a log-structured, copy-on-write store that grew out of the University of Konstanz Treetank research project. Every commit produces a cheap immutable snapshot through page-level versioning and structural sharing, so you can query any past revision, diff two revisions, or ask how a document looked at a given valid time. Queries use JSONiq/XQuery through the Brackit engine with temporal extensions, and it runs either in-process as a single JAR or as a Vert.x REST server with Docker images. It is actively developed but still labelled 1.0 beta, which makes it a good fit for audit-heavy and time-travel use cases or research into versioned storage rather than general-purpose OLTP.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "xml"
+  ],
+  "workloads": [
+    "event-sourcing",
+    "content-management",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "SirixDB open-source project (University of Konstanz origins)",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "1.0.0-beta7",
+    "date": "2026-07-15"
+  },
+  "writtenIn": [
+    "Java",
+    "Kotlin"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node store; history grows with every revision, so plan disk for retained versions."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JSONiq",
+    "XQuery"
+  ],
+  "apis": [
+    "REST (Vert.x)",
+    "Java API",
+    "MCP server"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Kotlin"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Every commit is an immutable, queryable snapshot; revision diffs and point-in-time queries are built in",
+    "Page-level copy-on-write versioning keeps the cost of history far below full copies",
+    "Bitemporal: tracks both transaction time and valid time",
+    "Embeds as a single JAR or runs as a REST server with Docker images",
+    "Permissive BSD-3 license and an actively maintained codebase"
+  ],
+  "weaknesses": [
+    "Still a 1.0 beta after more than a decade, so APIs and on-disk format can change",
+    "Small community and few public production references",
+    "One writer per resource limits write concurrency",
+    "JSONiq/XQuery is unfamiliar to most application teams"
+  ],
+  "useCases": [
+    "Audit trails that must reconstruct any past state",
+    "Versioned JSON or XML document storage",
+    "Time-travel analytics over changing data",
+    "Research and teaching on versioned storage engines"
+  ],
+  "notIdealFor": [
+    "Write-heavy OLTP with many concurrent writers",
+    "Teams that need SQL and mainstream BI tooling",
+    "Distributed, horizontally scaled deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "xtdb",
+    "datomic",
+    "terminusdb",
+    "basex",
+    "dolt",
+    "immudb"
+  ],
+  "tags": [
+    "versioned",
+    "temporal",
+    "json",
+    "xml",
+    "embedded",
+    "java"
+  ],
+  "links": {
+    "website": "https://sirix.io/",
+    "repository": "https://github.com/sirixdb/sirix",
+    "changelog": "https://github.com/sirixdb/sirix/releases"
+  },
+  "ids": {
+    "github": "sirixdb/sirix",
+    "dockerHub": "sirixdb/sirix",
+    "hackerNewsQuery": "SirixDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/sirixdb/sirix",
+    "https://github.com/sirixdb/sirix/releases",
+    "https://sirix.io/",
+    "https://dbdb.io/db/sirixdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

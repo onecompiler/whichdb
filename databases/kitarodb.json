@@ -1,0 +1,157 @@
+{
+  "slug": "kitarodb",
+  "name": "KitaroDB",
+  "aliases": [
+    "Kitaro DB"
+  ],
+  "tagline": "Synergex's free embedded key-value store for WinRT, Windows Phone and Win32 apps (2012-2015).",
+  "description": "KitaroDB was an embedded NoSQL store from Synergex, the company behind the Synergy DBL language and its ISAM engine. It ran in-process on Windows Store (WinRT), Windows Phone 8 and Win32 apps and exposed both a key-value API and 'intrusive key' records whose keys are segments of the stored data, callable from C#, VB, C++, C and HTML5/JavaScript Windows apps. It was a free download and claimed tens of thousands of operations per second on devices. Version 2.0 (May 2013) added Windows Phone 8, and the last NuGet release, 2.3.1, appeared in August 2015. With Microsoft's mobile platforms gone the product disappeared, and kitarodb.com is now a domain for sale.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Last release 2.3.1 (Aug 2015); product site gone and domain for sale. Use SQLite, LiteDB or Realm for embedded .NET storage.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Synergex International Corporation",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "2.3.1",
+    "date": "2015-08-08"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free to use)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Was a free download; no longer distributed except old NuGet packages."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [
+    ".NET API",
+    "C/C++ API",
+    "WinRT/JavaScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "C++",
+    "C",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native support for WinRT, Windows Phone 8 and Win32 from one engine",
+    "Intrusive-key records allowed multiple keys over stored data",
+    "Callable from .NET, C++ and HTML5/JavaScript Windows apps"
+  ],
+  "weaknesses": [
+    "Discontinued; tied to dead Windows Phone/WinRT platforms",
+    "Closed source with no remaining documentation site"
+  ],
+  "useCases": [
+    "Maintaining old Windows Store or Windows Phone apps that used it",
+    "Historical reference for mobile embedded stores"
+  ],
+  "notIdealFor": [
+    "Any new application",
+    "Cross-platform mobile (iOS/Android)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "litedb",
+    "realm",
+    "objectbox",
+    "marcellodb"
+  ],
+  "tags": [
+    "embedded",
+    "windows-phone",
+    "winrt",
+    "key-value",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2014/http://www.kitarodb.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "KitaroDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2014/http://www.kitarodb.com/",
+    "https://www.nuget.org/packages/KitaroDB",
+    "https://dbdb.io/db/kitarodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

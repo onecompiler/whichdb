@@ -1,0 +1,200 @@
+{
+  "slug": "citus",
+  "name": "Citus",
+  "aliases": [
+    "Citus Data",
+    "Citus extension"
+  ],
+  "tagline": "Postgres extension that shards tables across nodes for multi-tenant SaaS and real-time analytics.",
+  "description": "Citus is an open-source PostgreSQL extension, owned by Microsoft since 2019, that turns a group of Postgres servers into one distributed database. You mark tables as distributed (sharded by a column such as tenant_id) or reference (replicated everywhere), and the coordinator rewrites and parallelizes queries across worker nodes, with co-located joins and foreign keys within a shard group. Because it is an extension rather than a fork, it tracks new Postgres majors quickly and keeps the rest of the ecosystem usable. It also ships a columnar table access method. It works best for multi-tenant SaaS and high-ingest analytics; arbitrary cross-shard OLTP is not where it shines.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "columnar",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "real-time-analytics",
+    "htap",
+    "time-series",
+    "iot"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Microsoft (Citus Data)",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "14.3.0",
+    "date": "2026-10-23"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; managed via Elastic Clusters in Azure Database for PostgreSQL."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Elastic clusters in Azure Database for PostgreSQL",
+      "provider": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/azure/postgresql/elastic-clusters/concepts-elastic-clusters"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Hash- or schema-based sharding across workers with online shard rebalancing; HA relies on Postgres streaming replication per node."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "Ruby",
+    "C#",
+    "PHP",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Extension, not a fork: supports new Postgres majors quickly and keeps extensions like PostGIS and pgvector",
+    "Tenant-based sharding with co-located joins and foreign keys",
+    "Schema-based sharding for schema-per-tenant apps",
+    "Parallel distributed queries speed up real-time analytics",
+    "Columnar access method for compressed analytical tables"
+  ],
+  "weaknesses": [
+    "AGPL license deters some commercial embedding",
+    "Cross-shard joins on non-distribution columns can be slow or unsupported",
+    "Coordinator node can become a bottleneck without careful setup",
+    "Managed Azure Cosmos DB for PostgreSQL is being retired, leaving fewer hosted options"
+  ],
+  "useCases": [
+    "Multi-tenant B2B SaaS sharded by customer",
+    "Real-time analytics dashboards over event data",
+    "Time-series and IoT ingestion with rollups",
+    "Scaling an existing Postgres app without changing databases"
+  ],
+  "notIdealFor": [
+    "Workloads with frequent arbitrary cross-shard transactions",
+    "Small databases that fit on one Postgres server",
+    "Multi-region active-active writes"
+  ],
+  "notableUsers": [
+    "Heap"
+  ],
+  "alternatives": [
+    "postgresql",
+    "yugabytedb",
+    "cockroachdb",
+    "multigres",
+    "pgedge",
+    "timescaledb"
+  ],
+  "tags": [
+    "postgres-extension",
+    "sharding",
+    "open-source",
+    "multi-tenant",
+    "microsoft"
+  ],
+  "links": {
+    "website": "https://www.citusdata.com/",
+    "docs": "https://docs.citusdata.com/",
+    "repository": "https://github.com/citusdata/citus",
+    "changelog": "https://github.com/citusdata/citus/releases"
+  },
+  "ids": {
+    "github": "citusdata/citus",
+    "stackoverflowTag": "citus",
+    "dockerHub": "citusdata/citus",
+    "hackerNewsQuery": "Citus"
+  },
+  "brand": {
+    "color": "#4F2683"
+  },
+  "sources": [
+    "https://github.com/citusdata/citus/releases",
+    "https://www.citusdata.com/",
+    "https://learn.microsoft.com/azure/postgresql/elastic-clusters/concepts-elastic-clusters"
+  ],
+  "lastVerified": "2026-10-27"
+}

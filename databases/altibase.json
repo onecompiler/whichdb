@@ -1,0 +1,180 @@
+{
+  "slug": "altibase",
+  "name": "Altibase",
+  "aliases": [
+    "ALTIBASE HDB"
+  ],
+  "tagline": "Korean hybrid in-memory/on-disk RDBMS for telecom and finance, closed-source again since 2023.",
+  "description": "Altibase is a relational database that lets each table live either in memory or on disk inside one engine, so hot data gets in-memory latency while cold data stays cheap, all under one SQL dialect and transaction manager. It has a long track record in Korean telecom, securities trading and manufacturing, and a sharding edition for scale-out. The company briefly open-sourced it (2018 to 2023) before closing the source again, and it has since announced Altibase 8 with Windows Server support, Sharding 3 and CDC on the roadmap. It is a reasonable choice for low-latency OLTP where a vendor with regional support is acceptable.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "real-time-analytics",
+    "iot",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "in-memory",
+    "client-server",
+    "primary-replica",
+    "distributed"
+  ],
+  "developer": "Altibase Corp.",
+  "vendorType": "company",
+  "initialRelease": 1999,
+  "latestVersion": {
+    "version": "8",
+    "date": "2026-01"
+  },
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (open-source edition discontinued in 2023)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Commercial licences; the former open-source edition is no longer maintained."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Altibase Sharding edition for scale-out; replication for HA and DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PSM"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "C#",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Per-table choice of in-memory or disk storage inside a single SQL engine",
+    "Microsecond-class latency for in-memory tables in trading and telecom workloads",
+    "Mature replication and a sharding edition for scale-out",
+    "Established vendor support in Korea and Southeast Asia"
+  ],
+  "weaknesses": [
+    "Source closed again in 2023, so the community edition is a dead end",
+    "Limited documentation and community in English",
+    "Memory tables require sizing RAM for the hot dataset"
+  ],
+  "useCases": [
+    "Telecom charging and subscriber data",
+    "Securities trading and market-data stores",
+    "Manufacturing execution systems",
+    "Highway toll and transport transaction systems"
+  ],
+  "notIdealFor": [
+    "Teams that need an open-source licence",
+    "Cloud managed-service deployments",
+    "Large-scale analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-timesten",
+    "tibero",
+    "sap-hana",
+    "oracle-database",
+    "extremedb",
+    "volt-active-data"
+  ],
+  "tags": [
+    "sql",
+    "in-memory",
+    "hybrid",
+    "korea",
+    "telecom"
+  ],
+  "links": {
+    "website": "https://altibase.com/",
+    "docs": "https://github.com/ALTIBASE/Documents",
+    "repository": "https://github.com/ALTIBASE/altibase",
+    "wikipedia": "https://en.wikipedia.org/wiki/Altibase"
+  },
+  "ids": {
+    "wikipedia": "Altibase",
+    "dockerHub": "altibase/altibase",
+    "hackerNewsQuery": "Altibase"
+  },
+  "brand": {},
+  "sources": [
+    "https://altibase.com/",
+    "https://en.wikipedia.org/wiki/Altibase",
+    "https://hub.docker.com/r/altibase/altibase"
+  ],
+  "lastVerified": "2026-10-27"
+}

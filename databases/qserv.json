@@ -1,0 +1,174 @@
+{
+  "slug": "qserv",
+  "name": "Qserv",
+  "aliases": [
+    "LSST Qserv",
+    "Rubin Qserv",
+    "LSST Query Services"
+  ],
+  "tagline": "Distributed shared-nothing SQL database built to serve the Rubin Observatory's petascale sky catalogs.",
+  "description": "Qserv is the catalog database of the Vera C. Rubin Observatory (LSST), developed at SLAC for more than a decade. A front-end 'czar' accepts MySQL-protocol queries, rewrites them into many per-chunk sub-queries and fans them out over XRootD to worker nodes that each run MariaDB on their slice of the data; results are merged and returned. Tables are partitioned spatially into sky chunks with a director table (such as Object) that keeps related rows co-located, so near-neighbour and object-to-source joins run without moving data. The SQL dialect is restricted (no subqueries, writes go through a separate ingest service) but adds spherical-geometry predicates via scisql. It is actively developed, but it is a purpose-built science system rather than a general database.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "olap",
+    "scientific",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "SLAC National Accelerator Laboratory / Vera C. Rubin Observatory",
+  "vendorType": "academic",
+  "initialRelease": 2011,
+  "latestVersion": {
+    "version": "2026.10.2-rc2",
+    "date": "2026-10-12"
+  },
+  "writtenIn": [
+    "C++",
+    "Python"
+  ],
+  "basedOn": "MariaDB",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU General Public License v3.0",
+    "spdx": "GPL-3.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Built to hold the multi-billion-object Rubin catalogs across many worker nodes; spatial chunks with overlap let near-neighbour joins run without data movement."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (Qserv dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "HTTP query and ingest API",
+    "Asynchronous query API"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Python",
+    "C++",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Spatial chunking keeps related rows together so astronomy joins stay local to a worker",
+    "Fans one SQL query out to thousands of chunk queries in parallel",
+    "Speaks the MySQL protocol, so standard clients and TAP services connect directly",
+    "Director index gives fast lookups by object ID across the whole catalog",
+    "Open source and actively developed for a flagship survey"
+  ],
+  "weaknesses": [
+    "Restricted SQL: no subqueries, strict rules on spatial predicates and ORDER BY",
+    "Data is loaded through a dedicated ingest workflow, not ordinary INSERT/UPDATE",
+    "Small, domain-specific community; documentation assumes astronomy catalogs"
+  ],
+  "useCases": [
+    "Serving petascale astronomical object and source catalogs",
+    "Spatial cone and box searches over sky surveys",
+    "Large read-mostly scientific tables partitioned by position"
+  ],
+  "notIdealFor": [
+    "Transactional applications",
+    "General-purpose analytics outside spatially partitioned data",
+    "Small teams wanting a turnkey warehouse"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "greenplum",
+    "citus",
+    "postgis",
+    "scidb"
+  ],
+  "tags": [
+    "astronomy",
+    "scientific",
+    "distributed-sql",
+    "mariadb",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://qserv.lsst.io/",
+    "docs": "https://qserv.lsst.io/user/index.html",
+    "repository": "https://github.com/lsst/qserv"
+  },
+  "ids": {
+    "github": "lsst/qserv",
+    "hackerNewsQuery": "Qserv"
+  },
+  "brand": {},
+  "sources": [
+    "https://qserv.lsst.io/",
+    "https://qserv.lsst.io/user/sql.html",
+    "https://github.com/lsst/qserv",
+    "https://dbdb.io/db/qserv"
+  ],
+  "lastVerified": "2026-10-27"
+}

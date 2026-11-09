@@ -1,0 +1,182 @@
+{
+  "slug": "opengemini",
+  "name": "openGemini",
+  "aliases": [
+    "GeminiDB for Influx"
+  ],
+  "tagline": "CNCF sandbox distributed time-series database from Huawei Cloud, compatible with InfluxQL.",
+  "description": "openGemini is a distributed time-series database open-sourced by Huawei Cloud in 2022 and now a CNCF sandbox project. It speaks the InfluxDB 1.x line protocol and InfluxQL, so Telegraf, Grafana and Influx clients work unchanged, while adding a shared-nothing cluster, columnar storage for high-cardinality data and Prometheus remote write. It targets operators who need InfluxDB 1.x compatibility at scale without InfluxDB Enterprise. Releases slowed in 2026, with release candidates but no stable release since January, so check activity before committing.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar"
+  ],
+  "workloads": [
+    "time-series",
+    "observability",
+    "iot"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "openGemini community (Huawei Cloud)",
+  "vendorType": "foundation",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "1.5.2",
+    "date": "2026-01-12"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Huawei Cloud offers a commercial managed service built on the same technology."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "GeminiDB Influx API",
+      "provider": "Huawei Cloud"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "ts-sql, ts-meta and ts-store roles scale horizontally in a shared-nothing cluster."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "InfluxQL",
+    "PromQL"
+  ],
+  "apis": [
+    "InfluxDB 1.x HTTP API",
+    "Line protocol",
+    "Prometheus remote write/read"
+  ],
+  "compatibleWith": [
+    "influxdb",
+    "prometheus"
+  ],
+  "drivers": [
+    "Go",
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in InfluxDB 1.x API and InfluxQL compatibility",
+    "Open-source clustering, which InfluxDB 1.x reserved for Enterprise",
+    "Columnar engine handles high series cardinality",
+    "Apache-2.0 under CNCF governance"
+  ],
+  "weaknesses": [
+    "Stable releases have slowed; 2026 has seen only release candidates since January",
+    "Small community outside China",
+    "No SQL; InfluxQL is a limited language",
+    "Few managed options outside Huawei Cloud"
+  ],
+  "useCases": [
+    "Scaling out InfluxDB 1.x workloads",
+    "Operations and infrastructure metrics",
+    "IoT telemetry with high cardinality"
+  ],
+  "notIdealFor": [
+    "Teams wanting SQL",
+    "Transactional workloads",
+    "Organisations requiring strong vendor support outside Asia"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "influxdb",
+    "victoriametrics",
+    "cnosdb",
+    "tdengine",
+    "apache-iotdb",
+    "greptimedb"
+  ],
+  "tags": [
+    "time-series",
+    "cncf",
+    "influxdb-compatible",
+    "open-source",
+    "go"
+  ],
+  "links": {
+    "website": "https://opengemini.org/",
+    "docs": "https://docs.opengemini.org/",
+    "repository": "https://github.com/openGemini/openGemini",
+    "changelog": "https://github.com/openGemini/openGemini/releases"
+  },
+  "ids": {
+    "github": "openGemini/openGemini",
+    "dockerHub": "opengeminidb/opengemini-server",
+    "hackerNewsQuery": "openGemini"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/openGemini/openGemini/releases",
+    "https://github.com/openGemini/openGemini",
+    "https://www.cncf.io/projects/opengemini/"
+  ],
+  "lastVerified": "2026-10-27"
+}

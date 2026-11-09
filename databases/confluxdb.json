@@ -1,0 +1,142 @@
+{
+  "slug": "confluxdb",
+  "name": "ConfluxDB",
+  "aliases": [],
+  "tagline": "Waterloo research prototype giving global snapshot isolation to partitioned, multi-master PostgreSQL.",
+  "description": "ConfluxDB is a research prototype by Prima Chairunnanda, Khuzaima Daudjee and M. Tamer Özsu at the University of Waterloo, published in PVLDB in 2014. It targets a specific gap: providing snapshot isolation across a database that is partitioned over several primary sites that all accept updates, without restricting a transaction to one site or partitioning the workload in advance, while also letting read replicas see globally consistent snapshots. Distributed update transactions commit with two-phase commit while ConfluxDB determines a global order for them, and a log-merging replication scheme combines the primaries' update streams into a single stream consistent with that order, which every replica applies. The prototype was built on PostgreSQL; no public code release is known.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Academic prototype described in PVLDB vol. 7 (2014); no public release.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "University of Waterloo",
+  "vendorType": "academic",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Unreleased research code"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Research prototype; no public release."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Partitioned primaries plus replicas fed by a merged, SI-ordered update log."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Global snapshot isolation across several update-accepting partitions",
+    "Log-merging replication gives replicas SI-consistent snapshots without a single-master bottleneck",
+    "Builds on stock PostgreSQL concurrency control"
+  ],
+  "weaknesses": [
+    "Research prototype with no public code",
+    "Distributed updates still pay for two-phase commit"
+  ],
+  "useCases": [
+    "Studying replication protocols for snapshot isolation",
+    "Background for multi-master partitioned database research"
+  ],
+  "notIdealFor": [
+    "Any production use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "cockroachdb",
+    "yugabytedb",
+    "citus"
+  ],
+  "tags": [
+    "research",
+    "snapshot-isolation",
+    "replication",
+    "postgresql",
+    "vldb-2014"
+  ],
+  "links": {
+    "website": "http://www.vldb.org/pvldb/vol7/p947-chairunnanda.pdf"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://www.vldb.org/pvldb/vol7/p947-chairunnanda.pdf",
+    "https://doi.org/10.14778/2732967.2732970",
+    "https://dbdb.io/db/confluxdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

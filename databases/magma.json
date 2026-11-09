@@ -1,0 +1,161 @@
+{
+  "slug": "magma",
+  "name": "Magma",
+  "aliases": [
+    "Magma OODB",
+    "Magma for Squeak"
+  ],
+  "tagline": "Multi-user object database for Squeak and Pharo Smalltalk, written entirely in Smalltalk.",
+  "description": "Magma, by Chris Muller, persists Squeak (and later Pharo) object graphs transparently: you commit changes to plain Smalltalk objects and other users see them, with optimistic locking, nested transactions and large indexed collections that can be queried. It is written entirely in Smalltalk, runs client-server across images, supports high-availability replicas and federated clusters, and can even serve as a Monticello code repository; later versions store BlockClosures and use a WriteBarrier for change tracking. Development started around 2002, the last formal release (1.4) came in December 2012, and the Squeak wiki still describes it as stable and maintained. It is a niche tool for Smalltalk developers who want GemStone-like persistence without a commercial server.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Last formal release Magma 1.4 (Dec 2012); described as stable and still maintained on the Squeak wiki, with no recent releases.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "Chris Muller",
+  "vendorType": "community",
+  "initialRelease": 2002,
+  "latestVersion": {
+    "version": "1.4",
+    "date": "2012-12-28"
+  },
+  "writtenIn": [
+    "Smalltalk"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server image with optional replicas for availability."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Smalltalk"
+  ],
+  "apis": [
+    "Smalltalk API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Smalltalk"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Transparent persistence of ordinary Smalltalk objects, no mapping layer",
+    "Multi-user access with optimistic locking and nested transactions",
+    "Large indexed collections with queries",
+    "Pure Smalltalk, MIT-licensed, with live class evolution"
+  ],
+  "weaknesses": [
+    "No release since 2012; tiny user base",
+    "Only usable from Squeak/Pharo",
+    "Performance and tooling far behind GemStone/S"
+  ],
+  "useCases": [
+    "Persistent object models for Squeak or Pharo applications",
+    "Seaside web apps needing a pure-Smalltalk store"
+  ],
+  "notIdealFor": [
+    "Non-Smalltalk stacks",
+    "Large-scale or high-throughput production systems"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "gemstone-s",
+    "zodb",
+    "db4o",
+    "versant-object-database"
+  ],
+  "tags": [
+    "smalltalk",
+    "squeak",
+    "pharo",
+    "object-database",
+    "open-source"
+  ],
+  "links": {
+    "website": "http://wiki.squeak.org/squeak/2665",
+    "repository": "http://www.squeaksource.com/Magma.html",
+    "changelog": "http://wiki.squeak.org/squeak/6163"
+  },
+  "ids": {
+    "hackerNewsQuery": "Magma Squeak database"
+  },
+  "brand": {},
+  "sources": [
+    "http://wiki.squeak.org/squeak/2665",
+    "http://wiki.squeak.org/squeak/6163",
+    "http://www.squeaksource.com/Magma.html",
+    "https://dbdb.io/db/magma"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,160 @@
+{
+  "slug": "h-store",
+  "name": "H-Store",
+  "aliases": [],
+  "tagline": "Brown/MIT/CMU/Yale main-memory, partitioned OLTP research system that became VoltDB.",
+  "description": "H-Store was an experimental distributed main-memory OLTP database built by Brown, MIT, Carnegie Mellon and Yale, following Stonebraker et al.'s 2007 argument that classic disk-based architectures waste most of their time on buffering, latching, locking and logging. Data is split into partitions, each owned by a single-threaded execution engine that runs pre-declared stored procedures serially, so single-partition transactions need no locks; durability comes from replication plus command logging. Later research added anti-caching to disk, automatic partitioning design and transaction prediction. A Java front end drives a C++ execution engine. The ideas were commercialised as VoltDB (now Volt Active Data); the H-Store code is archived.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (2007–2016); repository archived. Commercialised as VoltDB, now Volt Active Data.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Brown University, MIT, Carnegie Mellon University, Yale University",
+  "vendorType": "academic",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "release-2016-06",
+    "date": "2016-06"
+  },
+  "writtenIn": [
+    "Java",
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shared-nothing partitions across a cluster; data must fit in aggregate memory unless anti-caching is enabled."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (in Java stored procedures)"
+  ],
+  "apis": [
+    "Java client"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Lock-free serial execution per partition for single-partition transactions",
+    "Command logging plus replication instead of heavyweight ARIES logging",
+    "Anti-caching research for data larger than memory",
+    "Widely cited codebase with benchmarks (TPC-C, SEATS, AuctionMark)"
+  ],
+  "weaknesses": [
+    "Archived research code with no support",
+    "Multi-partition transactions are expensive",
+    "Requires all transactions as pre-declared stored procedures"
+  ],
+  "useCases": [
+    "Teaching main-memory OLTP design",
+    "Reproducing published OLTP research results",
+    "Understanding the origins of VoltDB"
+  ],
+  "notIdealFor": [
+    "Production use (use Volt Active Data)",
+    "Ad-hoc interactive SQL workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "volt-active-data",
+    "hyper",
+    "calvin",
+    "silo",
+    "singlestore"
+  ],
+  "tags": [
+    "main-memory",
+    "oltp",
+    "newsql",
+    "research",
+    "stonebraker"
+  ],
+  "links": {
+    "website": "https://hstore.cs.brown.edu/",
+    "repository": "https://github.com/apavlo/h-store",
+    "docs": "https://hstore.cs.brown.edu/documentation/",
+    "wikipedia": "https://en.wikipedia.org/wiki/VoltDB#H-Store"
+  },
+  "ids": {
+    "github": "apavlo/h-store",
+    "hackerNewsQuery": "H-Store"
+  },
+  "brand": {},
+  "sources": [
+    "https://hstore.cs.brown.edu/",
+    "https://github.com/apavlo/h-store",
+    "https://www.vldb.org/pvldb/vol1/1454211.pdf"
+  ],
+  "lastVerified": "2026-10-27"
+}

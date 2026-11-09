@@ -1,0 +1,192 @@
+{
+  "slug": "azure-data-explorer",
+  "name": "Azure Data Explorer",
+  "aliases": [
+    "ADX",
+    "Kusto",
+    "Fabric Eventhouse"
+  ],
+  "tagline": "Microsoft's Kusto engine: fast KQL analytics over logs, telemetry and time series at petabyte scale.",
+  "description": "Azure Data Explorer is the managed form of Kusto, the append-optimised columnar engine that also underpins Azure Monitor Log Analytics, Microsoft Sentinel and Fabric Real-Time Intelligence (Eventhouse). It ingests streaming and batch data from Event Hubs, IoT Hub, Kafka and storage, indexes every column including free text and dynamic JSON, and answers Kusto Query Language queries with built-in time-series functions such as make-series, anomaly detection and forecasting. Microsoft's newer investment is Fabric Eventhouse, which runs the same engine, but standalone ADX clusters remain fully supported; only the Synapse-integrated variant was retired, in October 2025.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "time-series",
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "observability",
+    "real-time-analytics",
+    "time-series",
+    "iot",
+    "full-text-search",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Azure service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Billed per cluster compute and storage; a free personal cluster is available for trials."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Microsoft Fabric Eventhouse",
+      "provider": "Microsoft",
+      "url": "https://learn.microsoft.com/fabric/real-time-intelligence/eventhouse"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Compute nodes cache hot extents on SSD over blob storage; follower databases expose data to clusters in other regions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "KQL",
+    "T-SQL (subset)"
+  ],
+  "apis": [
+    "REST",
+    "TDS (SQL Server protocol)",
+    "Kafka connector",
+    "Event Hubs / IoT Hub ingestion"
+  ],
+  "compatibleWith": [
+    "sql-server"
+  ],
+  "drivers": [
+    "C#",
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "KQL is expressive for log and telemetry exploration, with built-in series, anomaly and forecasting functions",
+    "Indexes every column, including free text and dynamic JSON, by default",
+    "Same engine and query language as Azure Monitor, Sentinel and Fabric Eventhouse",
+    "Ingests directly from Event Hubs, IoT Hub and Kafka with low latency",
+    "Materialized views and update policies for ingestion-time transforms"
+  ],
+  "weaknesses": [
+    "Azure-only; no self-hosted production edition",
+    "Cluster-based pricing can be costly at low utilisation",
+    "Product direction is shifting toward Fabric, which complicates long-term planning",
+    "Not designed for row-level updates or transactional workloads"
+  ],
+  "useCases": [
+    "Application and security log analytics",
+    "IoT telemetry exploration",
+    "Time-series anomaly detection",
+    "Interactive dashboards over billions of events",
+    "Ad-hoc investigation for SRE teams"
+  ],
+  "notIdealFor": [
+    "OLTP and frequent updates",
+    "Multi-cloud or on-prem requirements",
+    "Small datasets that fit a single Postgres"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "clickhouse",
+    "elasticsearch",
+    "apache-druid",
+    "google-bigquery",
+    "amazon-timestream",
+    "apache-pinot"
+  ],
+  "tags": [
+    "azure",
+    "kusto",
+    "kql",
+    "log-analytics",
+    "managed"
+  ],
+  "links": {
+    "website": "https://azure.microsoft.com/products/data-explorer/",
+    "docs": "https://learn.microsoft.com/azure/data-explorer/",
+    "pricing": "https://azure.microsoft.com/pricing/details/data-explorer/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Azure_Data_Explorer"
+  },
+  "ids": {
+    "stackoverflowTag": "azure-data-explorer",
+    "wikipedia": "Azure Data Explorer",
+    "npm": "azure-kusto-data",
+    "pypi": "azure-kusto-data",
+    "hackerNewsQuery": "Azure Data Explorer"
+  },
+  "brand": {
+    "color": "#0078D4"
+  },
+  "sources": [
+    "https://learn.microsoft.com/azure/data-explorer/data-explorer-overview",
+    "https://learn.microsoft.com/fabric/real-time-intelligence/migrate-synapse-data-explorer",
+    "https://azure.microsoft.com/products/data-explorer/"
+  ],
+  "lastVerified": "2026-10-27"
+}

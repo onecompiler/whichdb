@@ -1,0 +1,200 @@
+{
+  "slug": "apache-doris",
+  "name": "Apache Doris",
+  "aliases": [
+    "Doris",
+    "Palo"
+  ],
+  "tagline": "Real-time MPP analytical database with MySQL compatibility, search indexes and lakehouse access.",
+  "description": "Apache Doris began as Baidu's Palo and is now an Apache top-level project: an MPP columnar database with a vectorized C++ engine, MySQL protocol compatibility and a simple two-component architecture (frontend and backend). It handles real-time ingestion with unique-key upserts, inverted indexes for log search, the VARIANT type for semi-structured data, vector indexes, and federated queries over Iceberg, Hudi, Paimon and Hive. A compute-storage separated mode runs on object storage. Doris overlaps heavily with StarRocks and ClickHouse; it is a good fit for real-time reporting and log analytics, with documentation and community still skewed toward China.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "search",
+    "vector"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "lakehouse",
+    "observability",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "4.1.5",
+    "date": "2026-10-15"
+  },
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; VeloDB sells a managed cloud and enterprise edition; Alibaba Cloud offers SelectDB/Doris services."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "VeloDB Cloud",
+      "provider": "VeloDB",
+      "url": "https://www.velodb.io/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "FE and BE nodes scale out; storage-compute separation mode stores data on object storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "HTTP Stream Load",
+    "Arrow Flight SQL"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Simple architecture: just frontend and backend processes, no external coordinator",
+    "Inverted indexes and VARIANT type make it a credible log-analytics engine",
+    "Real-time upserts with unique-key model and partial column updates",
+    "Federated queries across Iceberg, Hudi, Paimon, Hive and JDBC sources",
+    "MySQL compatibility for tools and drivers"
+  ],
+  "weaknesses": [
+    "Feature overlap and divergence with StarRocks confuses evaluations",
+    "English docs and community are thinner than Chinese ones",
+    "MySQL-dialect SQL rather than ANSI/Postgres",
+    "Tuning bucketing and partitioning is still manual"
+  ],
+  "useCases": [
+    "Real-time reporting and dashboards",
+    "Log and observability analytics",
+    "Lakehouse query acceleration",
+    "User behavior and ad analytics"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Very small embedded analytics",
+    "Teams needing a fully managed hyperscaler-native service"
+  ],
+  "notableUsers": [
+    "Baidu",
+    "Xiaomi"
+  ],
+  "alternatives": [
+    "starrocks",
+    "clickhouse",
+    "velodb",
+    "apache-druid",
+    "apache-pinot",
+    "elasticsearch"
+  ],
+  "tags": [
+    "mpp",
+    "olap",
+    "real-time",
+    "log-analytics",
+    "open-source",
+    "mysql-protocol"
+  ],
+  "links": {
+    "website": "https://doris.apache.org/",
+    "docs": "https://doris.apache.org/docs/",
+    "repository": "https://github.com/apache/doris",
+    "changelog": "https://github.com/apache/doris/releases"
+  },
+  "ids": {
+    "github": "apache/doris",
+    "stackoverflowTag": "apache-doris",
+    "dockerHub": "apache/doris",
+    "hackerNewsQuery": "Apache Doris"
+  },
+  "brand": {
+    "color": "#444FD9",
+    "simpleIcon": "apachedoris"
+  },
+  "sources": [
+    "https://github.com/apache/doris/releases",
+    "https://doris.apache.org/",
+    "https://www.velodb.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

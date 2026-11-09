@@ -1,0 +1,154 @@
+{
+  "slug": "graphbase",
+  "name": "GraphBase",
+  "aliases": [],
+  "tagline": "FactNexus's commercial graph DBMS that treats whole graphs as transactional units for knowledge graphs.",
+  "description": "GraphBase is a proprietary graph database from the Australian company FactNexus. Instead of a fixed property-graph or triple model it offers configurable lightweight primitives, so a single store can mix triple-store, property-graph and hypergraph structures; vertices hold objects with their arcs stored inside them, and an entire graph can be treated as a transactional unit that is cut, combined or copied. Queries 'bound' a sub-graph and return it, built either with visual drag-and-drop tools or through APIs, and Java handlers can run logic inside the database. FactNexus currently markets it as GraphBase Enterprise Cloud for knowledge graphs and retrieval-augmented generation. Public documentation, pricing and independent benchmarks are scarce, so evaluate it directly with the vendor.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "rdf"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "graph-traversal",
+    "rag"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "FactNexus Pty Ltd",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No public pricing; sold through FactNexus."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Vendor claims a single 1U server handles a graph of two billion vertices and 200 billion arcs; not independently verified."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "GraphBase bounding queries",
+    "Visual query builder"
+  ],
+  "apis": [
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Whole graphs can be copied, merged or cut as single transactional units",
+    "Mixes triple, property-graph and hypergraph structures in one store",
+    "Visual tools for building and running sub-graph queries",
+    "Java handlers run application logic inside the database"
+  ],
+  "weaknesses": [
+    "Very little public documentation, pricing or community",
+    "No standard query language such as Cypher, GQL or SPARQL",
+    "Performance claims come only from the vendor"
+  ],
+  "useCases": [
+    "Enterprise knowledge graphs",
+    "Graph-backed retrieval for LLM applications",
+    "Modelling complex interconnected reference data"
+  ],
+  "notIdealFor": [
+    "Teams that want open standards or open source",
+    "Projects needing a large hiring pool or community support"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "typedb",
+    "stardog",
+    "tigergraph",
+    "memgraph"
+  ],
+  "tags": [
+    "graph",
+    "knowledge-graph",
+    "proprietary",
+    "australia"
+  ],
+  "links": {
+    "website": "https://factnexus.com/graphbase/"
+  },
+  "ids": {
+    "hackerNewsQuery": "GraphBase FactNexus"
+  },
+  "brand": {},
+  "sources": [
+    "https://factnexus.com/graphbase/",
+    "https://dbdb.io/db/graphbase",
+    "https://web.archive.org/web/20170821211616/http://graphbase.ai/"
+  ],
+  "lastVerified": "2026-10-27"
+}

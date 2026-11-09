@@ -1,0 +1,149 @@
+{
+  "slug": "xdb-enterprise-server",
+  "name": "XDB Enterprise Server",
+  "aliases": [
+    "XDB Server",
+    "XDB",
+    "SQL Option for DB2"
+  ],
+  "tagline": "1988 DOS-era SQL server built for IBM DB2 compatibility; lives on inside Micro Focus mainframe tools.",
+  "description": "XDB Enterprise Server was a relational DBMS from XDB Systems, Inc. designed to be compatible with IBM's DB2, so developers could build and test mainframe DB2 applications on PCs. The DOS version shipped in 1988 as one of the earliest DOS-based SQL database servers, followed by Windows NT and OS/2 versions and links to real mainframe DB2 data. Micro Focus bought XDB Systems in 1998 and folded the engine into its COBOL and mainframe development products, where it appears as the XDB Server behind the SQL Option for DB2 in Enterprise Developer documentation. It is not sold on its own and sees no independent development; Micro Focus is now part of OpenText.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Not sold standalone since Micro Focus bought XDB Systems (1998); survives as the XDB Server in Micro Focus (now OpenText) DB2 emulation tooling.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "XDB Systems, Inc. (acquired by Micro Focus, now OpenText)",
+  "vendorType": "company",
+  "initialRelease": 1988,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Bundled with Micro Focus/OpenText COBOL and mainframe development products."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (DB2 dialect)"
+  ],
+  "apis": [
+    "Embedded SQL"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "COBOL",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "DB2-compatible SQL for developing mainframe applications off the mainframe",
+    "Long-lived engine still bundled with COBOL tooling"
+  ],
+  "weaknesses": [
+    "Not available as a standalone product",
+    "32-bit legacy engine with little documentation outside Micro Focus manuals"
+  ],
+  "useCases": [
+    "Local development and testing of DB2 COBOL programs",
+    "Mainframe application rehosting projects"
+  ],
+  "notIdealFor": [
+    "General-purpose application databases",
+    "Production OLTP outside mainframe toolchains"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-db2",
+    "sql-server",
+    "postgresql"
+  ],
+  "tags": [
+    "db2-compatible",
+    "micro-focus",
+    "cobol",
+    "historical"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/XDB_Enterprise_Server",
+    "docs": "https://dl.microfocus.com/documentation/enterprise-developer/ed40/ETS-help/BKSVSVCONFS001.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/XDB_Enterprise_Server"
+  },
+  "ids": {
+    "wikipedia": "XDB Enterprise Server"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/XDB_Enterprise_Server",
+    "https://dbdb.io/db/xdb-enterprise-server",
+    "https://dl.microfocus.com/documentation/enterprise-developer/ed40/ETS-help/BKSVSVCONFS001.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

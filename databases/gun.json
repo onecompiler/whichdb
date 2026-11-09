@@ -1,0 +1,172 @@
+{
+  "slug": "gun",
+  "name": "GUN",
+  "aliases": [
+    "GUN.js",
+    "gun.eco"
+  ],
+  "tagline": "Decentralised, offline-first graph database that syncs peer-to-peer in JavaScript.",
+  "description": "GUN is a small JavaScript graph database where every browser or Node process is a peer: data is a graph of nodes merged with a CRDT-like conflict algorithm (HAM), replicated over WebSockets, WebRTC or relay peers, and persisted locally (RAD storage on disk or IndexedDB). The SEA module adds user accounts, signing and encryption in user space. It is popular for hobby decentralised apps, chat and experiments because it needs no central server. It has no transactions, a quirky API, thin documentation, and eventual consistency that makes it unsuitable for data needing invariants.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "key-value"
+  ],
+  "workloads": [
+    "local-first",
+    "pub-sub"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "embedded"
+  ],
+  "developer": "Mark Nadal and contributors",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.2020.1241",
+    "date": "2025-07-01"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Zlib, MIT or Apache-2.0 (choice)",
+    "spdx": "Zlib OR MIT OR Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "active-active",
+    "notes": "Peers replicate the subgraphs they subscribe to; there is no sharding or global coordination."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "GUN chain API"
+  ],
+  "apis": [
+    "JavaScript API",
+    "WebSocket/WebRTC peer protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Serverless peer-to-peer sync with offline writes",
+    "Realtime subscriptions on any node in the graph",
+    "User-space crypto (SEA) for signed and encrypted data",
+    "Tiny footprint; runs in browsers and Node"
+  ],
+  "weaknesses": [
+    "No transactions or constraints; last-writer semantics per field",
+    "Sparse documentation and an unusual API",
+    "Hard to reason about data availability across peers"
+  ],
+  "useCases": [
+    "Decentralised chat and social experiments",
+    "Hackathon and prototype realtime apps",
+    "Offline-capable apps without a central server"
+  ],
+  "notIdealFor": [
+    "Financial or inventory data needing invariants",
+    "Large datasets or complex queries",
+    "Regulated workloads needing auditability"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "orbitdb",
+    "pouchdb",
+    "jazz",
+    "tinybase",
+    "rxdb"
+  ],
+  "tags": [
+    "p2p",
+    "decentralized",
+    "graph",
+    "javascript",
+    "crdt"
+  ],
+  "links": {
+    "website": "https://gun.eco/",
+    "docs": "https://gun.eco/docs/",
+    "repository": "https://github.com/amark/gun",
+    "wikipedia": "https://en.wikipedia.org/wiki/GUN_(graph_database)"
+  },
+  "ids": {
+    "github": "amark/gun",
+    "stackoverflowTag": "gun",
+    "wikipedia": "GUN (graph database)",
+    "npm": "gun",
+    "hackerNewsQuery": "gun.js"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/amark/gun",
+    "https://www.npmjs.com/package/gun",
+    "https://en.wikipedia.org/wiki/GUN_(graph_database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

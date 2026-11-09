@@ -1,0 +1,183 @@
+{
+  "slug": "apache-shardingsphere",
+  "name": "Apache ShardingSphere",
+  "aliases": [
+    "ShardingSphere",
+    "Sharding-JDBC",
+    "ShardingSphere-Proxy"
+  ],
+  "tagline": "Apache sharding middleware that adds sharding, read/write splitting and encryption over MySQL or Postgres.",
+  "description": "Apache ShardingSphere is a database middleware ecosystem that layers distributed capabilities on top of existing MySQL, PostgreSQL, openGauss and other databases instead of replacing them. It comes as ShardingSphere-JDBC, an embedded Java driver, and ShardingSphere-Proxy, a standalone server that speaks MySQL or PostgreSQL protocol. Pluggable features cover data sharding, read/write splitting, XA or BASE distributed transactions, data encryption and masking, and shadow databases for load testing. It is popular in Chinese Java shops that need to scale MySQL without migrating engines; outside the JVM, and for teams wanting a single managed system, a distributed SQL database is usually simpler.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "5.5.3",
+    "date": "2026-02-28"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source under the ASF."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Sharding across many backend MySQL/PostgreSQL instances; capacity depends on the underlying databases."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "DistSQL"
+  ],
+  "apis": [
+    "JDBC",
+    "MySQL wire protocol (Proxy)",
+    "PostgreSQL wire protocol (Proxy)"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "postgresql"
+  ],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Adds sharding to existing MySQL/PostgreSQL without changing engines",
+    "Embedded JDBC mode has no extra network hop",
+    "Pluggable features: read/write splitting, encryption, masking, shadow DB",
+    "DistSQL lets you manage sharding rules with SQL",
+    "Apache governance and permissive license"
+  ],
+  "weaknesses": [
+    "JDBC mode is Java-only; other languages need the proxy",
+    "Cross-shard transactions and complex SQL are limited or slow",
+    "You still operate every backend database yourself",
+    "Release cadence has slowed (5.5.2 in 2025, 5.5.3 in 2026)"
+  ],
+  "useCases": [
+    "Scaling Java/Spring applications on sharded MySQL",
+    "Transparent column encryption and data masking",
+    "Read/write splitting across replicas",
+    "Shadow databases for production load testing"
+  ],
+  "notIdealFor": [
+    "Non-JVM stacks without a proxy tier",
+    "Teams wanting a managed distributed database",
+    "Workloads needing strong cross-shard ACID"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vitess",
+    "citus",
+    "tidb",
+    "polardb-x",
+    "multigres",
+    "mysql"
+  ],
+  "tags": [
+    "sharding",
+    "middleware",
+    "apache",
+    "java",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://shardingsphere.apache.org/",
+    "docs": "https://shardingsphere.apache.org/document/current/en/overview/",
+    "repository": "https://github.com/apache/shardingsphere",
+    "changelog": "https://github.com/apache/shardingsphere/releases"
+  },
+  "ids": {
+    "github": "apache/shardingsphere",
+    "stackoverflowTag": "shardingsphere",
+    "dockerHub": "apache/shardingsphere-proxy",
+    "hackerNewsQuery": "ShardingSphere"
+  },
+  "brand": {
+    "color": "#D22128",
+    "simpleIcon": "apache"
+  },
+  "sources": [
+    "https://github.com/apache/shardingsphere/releases",
+    "https://shardingsphere.apache.org/",
+    "https://hub.docker.com/r/apache/shardingsphere-proxy"
+  ],
+  "lastVerified": "2026-10-27"
+}

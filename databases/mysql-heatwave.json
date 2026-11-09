@@ -1,0 +1,204 @@
+{
+  "slug": "mysql-heatwave",
+  "name": "MySQL HeatWave",
+  "aliases": [
+    "HeatWave",
+    "HeatWave MySQL",
+    "Oracle HeatWave",
+    "MySQL Database Service"
+  ],
+  "tagline": "Oracle's managed MySQL with an in-memory columnar engine for analytics, lakehouse, ML and vector search.",
+  "description": "MySQL HeatWave is Oracle's fully managed MySQL service with an attached HeatWave cluster: an in-memory, massively parallel columnar engine that transparently accelerates analytical queries on InnoDB data without ETL. The same service adds HeatWave Lakehouse for querying files in object storage, AutoML, a GenAI/vector store for RAG, and JavaScript stored programs. It runs on OCI and is also offered on AWS and Azure. Oracle ships new MySQL versions here first, including the 9.7 LTS line that became the default in September 2026 and a new calendar-versioned innovation release (26.10.0) in October 2026. The catch is that HeatWave's analytics and AI features are proprietary and only exist in Oracle's cloud service.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "htap",
+    "oltp",
+    "olap",
+    "real-time-analytics",
+    "lakehouse",
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "distributed",
+    "primary-replica",
+    "in-memory"
+  ],
+  "developer": "Oracle Corporation",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "26.10.0 (innovation)",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MySQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary managed service (MySQL core is GPLv2)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Hourly per-node and storage pricing; an Always Free single-node HeatWave instance exists on OCI."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "oracle-cloud",
+      "aws",
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "HeatWave on OCI",
+      "provider": "Oracle Cloud",
+      "url": "https://www.oracle.com/heatwave/"
+    },
+    {
+      "name": "HeatWave on AWS",
+      "provider": "Oracle (on AWS)"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "HeatWave analytics cluster scales out across nodes; OLTP writes stay on a single MySQL primary."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "JavaScript (stored programs)"
+  ],
+  "apis": [
+    "MySQL protocol",
+    "X Protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "PHP",
+    "C#",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Analytics on live MySQL data in an in-memory columnar cluster, with no ETL",
+    "Fully MySQL-compatible, so existing apps and drivers work unchanged",
+    "Lakehouse queries over object-storage files alongside InnoDB tables",
+    "Built-in AutoML, vector store and LLM functions inside SQL",
+    "Available on OCI, AWS and Azure"
+  ],
+  "weaknesses": [
+    "HeatWave acceleration and AI features are proprietary and cloud-only",
+    "Write throughput is still bounded by a single MySQL primary",
+    "Locks analytics workloads into Oracle's service and pricing"
+  ],
+  "useCases": [
+    "Real-time dashboards on MySQL application data",
+    "Consolidating a MySQL OLTP database and a separate warehouse",
+    "RAG and semantic search over MySQL-resident content",
+    "Querying data-lake files with MySQL SQL"
+  ],
+  "notIdealFor": [
+    "Self-hosted or on-prem deployments",
+    "Write-heavy globally distributed workloads",
+    "Teams that want portable open-source analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mysql",
+    "singlestore",
+    "amazon-aurora",
+    "tidb",
+    "snowflake",
+    "clickhouse",
+    "google-cloud-sql"
+  ],
+  "tags": [
+    "mysql",
+    "htap",
+    "managed",
+    "oracle-cloud",
+    "lakehouse",
+    "vector-search"
+  ],
+  "links": {
+    "website": "https://www.oracle.com/heatwave/",
+    "docs": "https://dev.mysql.com/doc/heatwave/en/",
+    "changelog": "https://docs.oracle.com/iaas/releasenotes/services/mysql-database/",
+    "pricing": "https://www.oracle.com/heatwave/pricing/"
+  },
+  "ids": {
+    "hackerNewsQuery": "MySQL HeatWave"
+  },
+  "brand": {
+    "color": "#C74634",
+    "simpleIcon": "mysql"
+  },
+  "sources": [
+    "https://docs.oracle.com/iaas/releasenotes/services/mysql-database/",
+    "https://docs.oracle.com/iaas/releasenotes/mysql-database/heatwave-940-846-8043.htm",
+    "https://blogs.oracle.com/mysql/heatwave-mysql-exciting-new-features-and-updates-for-fy-202526-q4q1"
+  ],
+  "lastVerified": "2026-10-27"
+}

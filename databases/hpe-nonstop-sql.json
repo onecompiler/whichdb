@@ -1,0 +1,167 @@
+{
+  "slug": "hpe-nonstop-sql",
+  "name": "HPE NonStop SQL",
+  "aliases": [
+    "NonStop SQL/MX",
+    "NonStop SQL/MP",
+    "Tandem NonStop SQL",
+    "SQL/MX"
+  ],
+  "tagline": "Fault-tolerant, shared-nothing SQL on HPE NonStop, built for payment switches that can never go down.",
+  "description": "NonStop SQL is the relational database of HPE's NonStop platform (originally Tandem Computers), where every component is redundant and processes run in checkpointed pairs so hardware failures do not interrupt transactions. It was one of the first shared-nothing parallel SQL databases and still runs ATM and card-payment switches, stock exchanges and telecom systems that demand continuous availability. SQL/MX is the current ANSI-oriented engine on NonStop X and Virtualized NonStop, alongside the older SQL/MP. It is extraordinary at what it does, but it only runs on NonStop, skills are scarce, and new projects rarely start there.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Hewlett Packard Enterprise",
+  "vendorType": "company",
+  "initialRelease": 1987,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Sold with HPE NonStop systems and subscriptions; no standalone free edition."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Tables partition across CPUs and nodes in a shared-nothing cluster; RDF provides remote standby databases."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "Embedded SQL (C/COBOL)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "COBOL",
+    "Java",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Process pairs and redundant hardware deliver continuous availability through component failures",
+    "Shared-nothing parallelism with linear scale-out across CPUs",
+    "Online reorganisation and maintenance without downtime",
+    "Decades of use in payment switches and exchanges"
+  ],
+  "weaknesses": [
+    "Runs only on HPE NonStop systems",
+    "Very small and ageing skills pool",
+    "High platform cost compared with commodity clusters",
+    "Limited modern features (JSON, vectors, cloud services)"
+  ],
+  "useCases": [
+    "ATM and card-payment authorisation switches",
+    "Stock exchange order matching and settlement",
+    "Telecom home-location and subscriber registers"
+  ],
+  "notIdealFor": [
+    "Commodity cloud deployments",
+    "Analytics or data science",
+    "Teams without NonStop expertise"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-db2",
+    "oracle-database",
+    "volt-active-data",
+    "cockroachdb",
+    "ibm-ims"
+  ],
+  "tags": [
+    "fault-tolerant",
+    "payments",
+    "tandem",
+    "shared-nothing",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.hpe.com/us/en/compute/nonstop-servers.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/NonStop_SQL"
+  },
+  "ids": {
+    "wikipedia": "NonStop SQL",
+    "hackerNewsQuery": "NonStop SQL"
+  },
+  "brand": {
+    "color": "#01A982"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/NonStop_SQL",
+    "https://connect2nonstop.com/?p=12872",
+    "https://connect2nonstop.com/2025/11"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,194 @@
+{
+  "slug": "typesense",
+  "name": "Typesense",
+  "aliases": [],
+  "tagline": "In-memory, typo-tolerant search engine in C++ with vector, hybrid and conversational search.",
+  "description": "Typesense is an open-source search engine that keeps its index in RAM for consistently low-latency, typo-tolerant queries and pitches itself as a self-hostable Algolia alternative. Beyond keyword search it supports vector and hybrid search with built-in embedding models, joins between collections, geo search and a conversational (RAG) endpoint. Clustering uses Raft for high availability, but every node holds the full dataset, so capacity is bounded by the RAM of one machine. It is GPL-3.0 licensed, with Typesense Cloud as the managed option.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "geospatial"
+  ],
+  "architecture": [
+    "primary-replica",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Typesense, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "30.2",
+    "date": "2026-04-19"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v3",
+    "spdx": "GPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host. Typesense Cloud bills hourly for dedicated clusters sized by RAM/vCPU, plus bandwidth; no per-record or per-search fees."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Typesense Cloud",
+      "provider": "Typesense",
+      "url": "https://cloud.typesense.org/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Raft-replicated clusters for HA; each node stores the whole index in RAM. Typesense Cloud's Search Delivery Network places replicas in multiple regions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Typesense search API (JSON)"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "PHP",
+    "Ruby",
+    "Go",
+    "Java",
+    "Dart",
+    "Swift",
+    ".NET",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Predictable millisecond latency because the index lives in RAM",
+    "Typo tolerance, synonyms, curation and faceting with little tuning",
+    "Built-in embedding models for semantic and hybrid search",
+    "Simple Raft clustering for high availability",
+    "No per-search pricing on the managed cloud"
+  ],
+  "weaknesses": [
+    "Dataset must fit in RAM on every node",
+    "GPL-3.0 can be a hurdle for embedding in proprietary distributions",
+    "No sharding, so very large catalogs need app-level splitting",
+    "Smaller ecosystem than Elasticsearch"
+  ],
+  "useCases": [
+    "E-commerce and marketplace search",
+    "Docs and website search",
+    "Geo search for listings",
+    "Replacing Algolia to cut per-request costs"
+  ],
+  "notIdealFor": [
+    "Datasets far larger than RAM",
+    "Log analytics",
+    "Analytical aggregations"
+  ],
+  "notableUsers": [
+    "Codecademy",
+    "Kick"
+  ],
+  "alternatives": [
+    "meilisearch",
+    "algolia",
+    "elasticsearch",
+    "orama",
+    "manticore-search",
+    "vespa"
+  ],
+  "tags": [
+    "search",
+    "in-memory",
+    "typo-tolerance",
+    "algolia-alternative",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://typesense.org/",
+    "docs": "https://typesense.org/docs/",
+    "repository": "https://github.com/typesense/typesense",
+    "pricing": "https://cloud.typesense.org/pricing/calculator",
+    "changelog": "https://github.com/typesense/typesense/releases"
+  },
+  "ids": {
+    "github": "typesense/typesense",
+    "stackoverflowTag": "typesense",
+    "dockerHub": "typesense/typesense",
+    "npm": "typesense",
+    "pypi": "typesense",
+    "hackerNewsQuery": "Typesense"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/typesense/typesense/releases",
+    "https://typesense.org/",
+    "https://github.com/typesense/typesense/blob/main/LICENSE.txt"
+  ],
+  "lastVerified": "2026-10-27"
+}

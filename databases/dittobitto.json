@@ -1,0 +1,101 @@
+{
+  "slug": "dittobitto",
+  "name": "DittoBitto",
+  "aliases": ["Ditto Bitto"],
+  "tagline": "Low-cost Windows desktop database in the Access mould: tables, forms, reports and LAN multi-user access.",
+  "description": "DittoBitto is a small Windows desktop relational database application, originally from a Korean developer (Hankook Database) around 2001 and now sold from dittobitto.com. It follows the Microsoft Access pattern on an Access-format file: you design tables and parent-child relationships, then build forms, reports, queries, procedures and macros on top, without writing Visual Basic. It imports and exports dBASE, CSV and delimited text and can be shared by several users over a local network. A free build covers Windows 95 to XP and a $30 installer covers Vista to Windows 10, but the site gives no dated release history, so treat it as a niche tool for very small offices.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Still downloadable and sold in 2026, but there is no public release history and the reference manual is unfinished.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp"],
+  "architecture": ["single-node", "embedded"],
+  "developer": "DittoBitto.com (originally Hankook Database, Korea)",
+  "vendorType": "company",
+  "initialRelease": 2001,
+  "writtenIn": ["Unknown"],
+  "license": { "type": "proprietary", "name": "Proprietary (freeware build for older Windows)" },
+  "pricing": {
+    "models": ["free", "per-node-license"],
+    "freeTier": true,
+    "startingPrice": "$30 one-time (Windows Vista to 10 installer)",
+    "notes": "The Windows 95-XP build is a free download; the installer for newer Windows costs $30 per business."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["Visual query designer"],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very cheap: free for old Windows versions, $30 for newer ones",
+    "Forms, reports, queries and macros without writing code",
+    "Imports and exports dBASE and CSV files for moving data in and out"
+  ],
+  "weaknesses": [
+    "Windows-only desktop tool with no documented support beyond Windows 10",
+    "No published API, SQL interface or release history",
+    "Tiny user community and a single-vendor support channel"
+  ],
+  "useCases": [
+    "Simple inventory, contact or invoice databases for a small office",
+    "Replacing spreadsheets with related tables and forms on a budget"
+  ],
+  "notIdealFor": ["Web or mobile applications", "Data that must be shared beyond a LAN", "Developers who need SQL or an API"],
+  "notableUsers": [],
+  "alternatives": ["microsoft-access", "filemaker", "dbase", "sqlite"],
+  "tags": ["desktop", "windows", "access-like", "small-business"],
+  "links": {
+    "website": "https://www.dittobitto.com/",
+    "docs": "https://www.dittobitto.com/manuals/operation-manual/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://www.dittobitto.com/",
+    "https://www.dittobitto.com/manuals/operation-manual/",
+    "https://dbdb.io/db/dittobitto"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,156 @@
+{
+  "slug": "speedb",
+  "name": "Speedb",
+  "aliases": [],
+  "tagline": "RocksDB-compatible storage engine fork; open-source development stopped after Redis bought it in 2024.",
+  "description": "Speedb was an Israeli startup's drop-in replacement for RocksDB that rewrote parts of the engine (a new memtable, a sorted hash index, smarter flow control and write delays) to cut write stalls and improve performance on large datasets. It was open-sourced in 2022 under Apache-2.0 and became the storage engine behind Redis Enterprise's auto-tiering. Redis acquired Speedb in March 2024; the public repository has had no commits since June 2024 and the project website no longer responds. Existing users should plan to move back to upstream RocksDB.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Acquired by Redis in March 2024; the open-source repo has been inactive since June 2024 (last release 2.8.0, Jan 2024). Move to upstream RocksDB.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Speedb (Redis)",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "2.8.0",
+    "date": "2024-01-31"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "RocksDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C++ API"
+  ],
+  "apis": [
+    "RocksDB-compatible C++ API",
+    "Java bindings"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "API- and file-compatible with RocksDB for drop-in testing",
+    "Reduced write stalls via improved flow control",
+    "Sorted hash memtable improved write-heavy performance"
+  ],
+  "weaknesses": [
+    "No maintenance or security fixes since mid-2024",
+    "Falls further behind upstream RocksDB with each release",
+    "Vendor website and community channels are gone"
+  ],
+  "useCases": [
+    "Existing deployments pending migration to RocksDB",
+    "Benchmarking write-stall behaviour against upstream RocksDB"
+  ],
+  "notIdealFor": [
+    "Any new project"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "pebble",
+    "tidesdb",
+    "fjall"
+  ],
+  "tags": [
+    "discontinued",
+    "rocksdb-fork",
+    "lsm-tree",
+    "redis"
+  ],
+  "links": {
+    "website": "https://github.com/speedb-io/speedb",
+    "repository": "https://github.com/speedb-io/speedb",
+    "changelog": "https://github.com/speedb-io/speedb/releases"
+  },
+  "ids": {
+    "github": "speedb-io/speedb",
+    "hackerNewsQuery": "Speedb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/speedb-io/speedb",
+    "https://redis.io/press/redis-acquires-speedb-to-supercharge-end-to-end-application-performance-at-lower-cost/",
+    "https://blocksandfiles.com/2024/03/22/redis-buys-speedb-and-its-fast-storage-engine/"
+  ],
+  "lastVerified": "2026-10-27"
+}

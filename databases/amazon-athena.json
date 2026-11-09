@@ -1,0 +1,171 @@
+{
+  "slug": "amazon-athena",
+  "name": "Amazon Athena",
+  "aliases": [
+    "Athena"
+  ],
+  "tagline": "Serverless AWS query service running Trino-based SQL directly over data in S3.",
+  "description": "Amazon Athena lets you run SQL over files in S3 with nothing to provision: tables live in the AWS Glue Data Catalog and queries run on a managed Trino-based engine (engine version 3), billed per terabyte scanned or via provisioned capacity. It supports Iceberg tables with inserts, updates, merges and time travel, federated connectors via Lambda, and Spark notebooks. Athena is ideal for ad-hoc and infrequent queries over logs and lake data in AWS; for steady, high-concurrency BI, Redshift or a dedicated engine is usually cheaper and faster.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "lakehouse",
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Trino (engine v3)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "startingPrice": "$5 per TB scanned",
+    "notes": "Billed per data scanned (10 MB minimum per query) or via provisioned capacity DPUs; Spark sessions billed per DPU-hour."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Fully managed; concurrency limited by account quotas unless provisioned capacity is used."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (Trino dialect)",
+    "PySpark"
+  ],
+  "apis": [
+    "AWS SDK / Athena API",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    ".NET"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No infrastructure: query S3 data immediately via the Glue Catalog",
+    "Pay only for data scanned; cheap for infrequent queries",
+    "Iceberg DML, MERGE and time travel on S3",
+    "Federated queries to DynamoDB, RDS and others via Lambda connectors",
+    "Integrates with Lake Formation for fine-grained permissions"
+  ],
+  "weaknesses": [
+    "Per-TB pricing punishes unpartitioned or row-format data",
+    "Query queuing and concurrency quotas under load",
+    "Trails upstream Trino features and versions",
+    "AWS-only"
+  ],
+  "useCases": [
+    "Ad-hoc SQL over S3 logs (CloudTrail, ALB, VPC flow)",
+    "Serverless lakehouse queries on Iceberg",
+    "Lightweight BI on curated S3 data"
+  ],
+  "notIdealFor": [
+    "High-concurrency dashboards",
+    "Low-latency APIs",
+    "Non-AWS environments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "amazon-redshift",
+    "google-bigquery",
+    "starburst",
+    "presto",
+    "dremio"
+  ],
+  "tags": [
+    "serverless",
+    "aws",
+    "s3",
+    "trino",
+    "pay-per-query"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/athena/",
+    "docs": "https://docs.aws.amazon.com/athena/",
+    "pricing": "https://aws.amazon.com/athena/pricing/",
+    "changelog": "https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-athena",
+    "npm": "@aws-sdk/client-athena",
+    "hackerNewsQuery": "Amazon Athena"
+  },
+  "brand": {},
+  "sources": [
+    "https://aws.amazon.com/athena/",
+    "https://docs.aws.amazon.com/athena/latest/ug/engine-versions.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

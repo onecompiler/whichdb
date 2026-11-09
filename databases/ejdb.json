@@ -1,0 +1,173 @@
+{
+  "slug": "ejdb",
+  "name": "EJDB",
+  "aliases": [
+    "EJDB2"
+  ],
+  "tagline": "Embeddable JSON document database in C, with a JQL query language and optional HTTP/WebSocket server.",
+  "description": "EJDB2 is a small C library that gives applications an embedded JSON document store, roughly what SQLite is to SQL. Documents live in collections in a single file on the iowow key-value engine, are queried with JQL (an XPath-like filter and projection language) and can use secondary indexes. An optional built-in HTTP/WebSocket endpoint can expose a database to other processes. Bindings cover Node.js, Java, Android, Swift, Flutter and React Native. The maintainer ships frequent point releases (v2.95 in October 2026). It suits desktop, mobile and IoT apps that want JSON documents without running a server.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline",
+    "iot",
+    "configuration"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Softmotions (Anton Adamansky)",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "2.95",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JQL"
+  ],
+  "apis": [
+    "C API",
+    "HTTP REST / WebSocket (optional)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "JavaScript",
+    "Java",
+    "Swift",
+    "Dart",
+    "Kotlin"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Single-file, serverless JSON store with a tiny footprint",
+    "JQL supports filtering, projections and JSON Patch updates",
+    "Optional network endpoint without changing storage",
+    "Bindings for mobile and cross-platform frameworks",
+    "MIT license"
+  ],
+  "weaknesses": [
+    "Essentially a one-maintainer project",
+    "No replication or sync",
+    "Smaller community and fewer examples than SQLite with JSON1"
+  ],
+  "useCases": [
+    "Embedded JSON storage in desktop or IoT apps",
+    "Mobile apps needing a local document store",
+    "Lightweight local services with an HTTP API"
+  ],
+  "notIdealFor": [
+    "Multi-user server workloads",
+    "Apps needing sync to a backend"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "unqlite",
+    "nitrite",
+    "litedb",
+    "couchbase-lite",
+    "polodb"
+  ],
+  "tags": [
+    "embedded",
+    "json",
+    "c",
+    "lightweight"
+  ],
+  "links": {
+    "website": "https://ejdb.org/",
+    "docs": "https://github.com/Softmotions/ejdb/blob/master/README.md",
+    "repository": "https://github.com/Softmotions/ejdb",
+    "changelog": "https://github.com/Softmotions/ejdb/releases"
+  },
+  "ids": {
+    "github": "Softmotions/ejdb",
+    "npm": "ejdb2_node",
+    "hackerNewsQuery": "EJDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Softmotions/ejdb",
+    "https://github.com/Softmotions/ejdb/releases/tag/v2.95"
+  ],
+  "lastVerified": "2026-10-27"
+}

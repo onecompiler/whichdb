@@ -1,0 +1,100 @@
+{
+  "slug": "fleetdb",
+  "name": "FleetDB",
+  "aliases": ["Fleet DB"],
+  "tagline": "Schema-free in-memory document database in Clojure with a JSON query protocol and append-only log durability.",
+  "description": "FleetDB is a schema-free document database written in Clojure by Mark McGranaghan, which grew out of his senior thesis at Bowdoin College in 2009-2010. All data is held in memory as Clojure persistent data structures, every write is appended to a log that is replayed on start-up and can be compacted or snapshotted, and clients send queries as JSON arrays over a plain TCP socket, or call it in-process via an embedded API. The query set covers select with where, order, limit, offset and distinct, plus insert, update, delete, count, explain, index creation and atomic multi-read, multi-write and checked-write operations, with optional password authentication. The last release, 0.3.1, came out in September 2010, and the README now says the project is no longer active.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "The author marks it as no longer active; last release 0.3.1 (September 2010).",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": ["document"],
+  "workloads": ["oltp", "embedded"],
+  "architecture": ["in-memory", "client-server", "embedded"],
+  "developer": "Mark McGranaghan",
+  "vendorType": "community",
+  "initialRelease": 2009,
+  "latestVersion": { "version": "0.3.1", "date": "2010-09-19" },
+  "writtenIn": ["Clojure", "Java"],
+  "license": { "type": "permissive", "name": "MIT License", "spdx": "MIT" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos", "windows"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["FleetDB JSON query language"],
+  "apis": ["JSON over TCP", "Clojure embedded API"],
+  "compatibleWith": [],
+  "drivers": ["Clojure", "Ruby", "Python", "JavaScript", "Perl"],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Clean, small Clojure codebase showing an immutable in-memory database with log replay",
+    "Readable JSON query protocol with explain, indexes and atomic multi-query operations",
+    "Embeddable in-process or usable as a TCP server"
+  ],
+  "weaknesses": [
+    "Inactive since 2010 and tied to Clojure 1.2-era dependencies",
+    "Whole dataset must fit in memory",
+    "No replication or clustering"
+  ],
+  "useCases": [
+    "Studying how persistent data structures can back a database",
+    "Teaching examples of log-structured durability and query planning"
+  ],
+  "notIdealFor": ["Production use", "Datasets larger than RAM"],
+  "notableUsers": [],
+  "alternatives": ["mongodb", "datomic", "xtdb", "redis"],
+  "tags": ["clojure", "document", "in-memory", "json", "abandoned"],
+  "links": {
+    "website": "https://github.com/mmcgrana/fleetdb",
+    "repository": "https://github.com/mmcgrana/fleetdb",
+    "changelog": "https://github.com/mmcgrana/fleetdb/blob/master/HISTORY.md"
+  },
+  "ids": {
+    "github": "mmcgrana/fleetdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/mmcgrana/fleetdb",
+    "https://github.com/mmcgrana/fleetdb/blob/master/HISTORY.md",
+    "https://dbdb.io/db/fleetdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,206 @@
+{
+  "slug": "memcached",
+  "name": "Memcached",
+  "aliases": [
+    "memcache"
+  ],
+  "tagline": "The original multi-threaded, dead-simple distributed memory cache for key-value blobs.",
+  "description": "Memcached is a multi-threaded, in-memory cache that does one thing: store opaque values under keys with an expiry, evicting by LRU when memory runs out. There is no persistence, replication or server-side clustering; clients hash keys across a pool of independent nodes. That simplicity is its strength, and it still runs some of the largest cache fleets in the world. Modern releases add an extstore flash tier, TLS, a meta-command protocol and a built-in proxy for routing and replication. Pick it when you need a pure cache with predictable latency and nothing else.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Memcached community (originally Danga Interactive)",
+  "vendorType": "community",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "1.6.45",
+    "date": "2026-07-09"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; managed by ElastiCache and Google Memorystore for Memcached."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "alibaba-cloud",
+      "tencent-cloud"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon ElastiCache for Memcached",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/elasticache/memcached/"
+    },
+    {
+      "name": "Memorystore for Memcached",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/memorystore/docs/memcached"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Scales by adding nodes and client-side consistent hashing; the built-in proxy can route and replicate. Meta and Netflix run fleets of thousands of nodes."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Memcached text/meta protocol"
+  ],
+  "apis": [
+    "Memcached text protocol",
+    "Meta protocol",
+    "Binary protocol (deprecated)"
+  ],
+  "compatibleWith": [
+    "memcached"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "PHP",
+    "Go",
+    "JavaScript",
+    "Ruby",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Multi-threaded design uses every core on a box with very little tuning",
+    "Extremely predictable latency and memory behaviour with slab allocation",
+    "Extstore spills cold items to NVMe to cut RAM cost",
+    "Protocol supported by nearly every web framework and language",
+    "Tiny operational surface: no persistence, no replication state to manage"
+  ],
+  "weaknesses": [
+    "No persistence: a restart empties the cache",
+    "Only opaque blobs; no data structures, queries or server-side scripting",
+    "No built-in replication or failover outside the proxy",
+    "Item size limit (1 MB default) and no secondary access paths"
+  ],
+  "useCases": [
+    "Read-through caching of database query results",
+    "Rendered page and fragment caching",
+    "Session storage when losing sessions is acceptable",
+    "Very large, horizontally sharded look-aside cache tiers"
+  ],
+  "notIdealFor": [
+    "Any data you cannot afford to lose",
+    "Queues, pub/sub or counters with complex semantics",
+    "Rich data structures (use Redis or Valkey)"
+  ],
+  "notableUsers": [
+    "Meta",
+    "Netflix",
+    "Wikipedia"
+  ],
+  "alternatives": [
+    "redis",
+    "valkey",
+    "dragonfly",
+    "amazon-elasticache",
+    "ehcache"
+  ],
+  "tags": [
+    "cache",
+    "in-memory",
+    "lru",
+    "open-source",
+    "classic"
+  ],
+  "links": {
+    "website": "https://memcached.org/",
+    "docs": "https://docs.memcached.org/",
+    "repository": "https://github.com/memcached/memcached",
+    "changelog": "https://github.com/memcached/memcached/wiki/ReleaseNotes",
+    "wikipedia": "https://en.wikipedia.org/wiki/Memcached"
+  },
+  "ids": {
+    "github": "memcached/memcached",
+    "stackoverflowTag": "memcached",
+    "wikipedia": "Memcached",
+    "dockerHub": "library/memcached",
+    "npm": "memjs",
+    "pypi": "pymemcache",
+    "hackerNewsQuery": "Memcached"
+  },
+  "brand": {},
+  "sources": [
+    "https://memcached.org/",
+    "https://github.com/memcached/memcached/wiki/ReleaseNotes1645",
+    "https://github.com/memcached/memcached"
+  ],
+  "lastVerified": "2026-10-27"
+}

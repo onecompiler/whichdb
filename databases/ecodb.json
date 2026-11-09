@@ -1,0 +1,96 @@
+{
+  "slug": "ecodb",
+  "name": "EcoDB",
+  "aliases": ["ecodb.ca"],
+  "tagline": "Short-lived Canadian commercial document database with a REST API (c. 2018-2019); the company has folded.",
+  "description": "EcoDB was a proprietary document database from a small Canadian company, available for Linux and Windows around 2018-2019. It stored schema-free documents and exposed them through a REST/HTTP API, with documentation published at docs.ecodb.ca. The venture did not last: both ecodb.ca and its documentation site went dark by about 2019, and the CMU Database of Databases records it as a failed company. Almost no technical detail survives beyond that, so this entry exists for completeness and to stop the name being confused with unrelated ecology data repositories called EcoDB. Use any maintained document store instead.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Vendor and website disappeared around 2019. Use a maintained document database such as MongoDB, Couchbase or PostgreSQL JSONB.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": ["document"],
+  "workloads": ["oltp"],
+  "architecture": ["client-server"],
+  "developer": "EcoDB",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "writtenIn": ["Unknown"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["per-node-license"],
+    "freeTier": false,
+    "notes": "Commercial product; pricing was never documented in surviving sources."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "windows"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "none", "models": ["eventual"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["REST API"],
+  "apis": ["REST/HTTP"],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Plain REST/HTTP interface, usable from any language without a driver",
+    "Offered native builds for both Linux and Windows"
+  ],
+  "weaknesses": [
+    "Company folded around 2019; no binaries, documentation or support remain",
+    "No surviving information on consistency, scaling or durability guarantees"
+  ],
+  "useCases": [
+    "Historical record of a failed commercial document-database startup",
+    "Disambiguating the name from unrelated 'EcoDB' ecology data repositories"
+  ],
+  "notIdealFor": ["Any current workload"],
+  "notableUsers": [],
+  "alternatives": ["mongodb", "couchbase", "apache-couchdb", "postgresql"],
+  "tags": ["document", "rest", "canada", "discontinued"],
+  "links": {
+    "website": "https://web.archive.org/web/2019/http://ecodb.ca/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/ecodb",
+    "https://web.archive.org/web/2019/http://ecodb.ca/"
+  ],
+  "lastVerified": "2026-10-27"
+}

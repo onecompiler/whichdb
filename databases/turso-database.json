@@ -1,0 +1,197 @@
+{
+  "slug": "turso-database",
+  "name": "Turso Database (Limbo)",
+  "aliases": [
+    "Limbo",
+    "tursodb"
+  ],
+  "tagline": "Ground-up Rust rewrite of SQLite with concurrent writes, async I/O, CDC and vector search.",
+  "description": "Turso Database, which began in late 2024 as the Limbo project, is an in-process SQL database written in Rust that aims for full SQLite compatibility (file format, SQL dialect and C API) while adding what SQLite lacks: MVCC with BEGIN CONCURRENT for parallel writers, io_uring-based asynchronous I/O, change data capture, encryption at rest, vector functions and Tantivy-powered full-text search. Its bytecode VM is designed to host multiple frontends, and a PostgreSQL dialect and wire-protocol frontend is now in development. Turso recommends it for new projects and is building its cloud around it, but it is still pre-1.0, so treat production use as early-adopter territory.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "vector"
+  ],
+  "workloads": [
+    "embedded",
+    "edge",
+    "local-first",
+    "mobile-offline",
+    "vector-search",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Turso",
+  "vendorType": "company",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "0.8.3",
+    "date": "2026-10-12"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "SQLite (reimplementation)",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Engine is MIT; Turso Cloud offers hosted sync with a free tier."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "browser",
+      "wasm"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Turso Cloud",
+      "provider": "Turso",
+      "url": "https://turso.tech/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "In-process engine; sync to Turso Cloud for replication."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "SQLite C API",
+    "Rust API"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "Rust",
+    "JavaScript",
+    "Python",
+    "Go",
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": true
+  },
+  "strengths": [
+    "BEGIN CONCURRENT MVCC allows multiple concurrent writers, unlike SQLite",
+    "Memory-safe Rust codebase with deterministic simulation testing",
+    "Asynchronous I/O (io_uring) suited to modern servers and the browser",
+    "Built-in CDC, encryption and full-text search without extensions",
+    "Reads existing SQLite database files"
+  ],
+  "weaknesses": [
+    "Pre-1.0: compatibility gaps and on-disk format changes are still possible",
+    "Smaller extension ecosystem than SQLite",
+    "Limited production track record",
+    "Postgres frontend is experimental"
+  ],
+  "useCases": [
+    "New embedded/edge apps that want SQLite plus concurrent writes",
+    "Local-first apps syncing to Turso Cloud",
+    "On-device vector search for AI features",
+    "Browser apps via WebAssembly"
+  ],
+  "notIdealFor": [
+    "Mission-critical production systems needing proven stability today",
+    "Distributed multi-node deployments",
+    "Apps depending on niche SQLite extensions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "libsql",
+    "turso",
+    "pglite",
+    "duckdb",
+    "cloudflare-d1"
+  ],
+  "tags": [
+    "sqlite-compatible",
+    "rust",
+    "embedded",
+    "rewrite",
+    "mvcc"
+  ],
+  "links": {
+    "website": "https://turso.tech/",
+    "docs": "https://docs.turso.tech/",
+    "repository": "https://github.com/tursodatabase/turso",
+    "changelog": "https://github.com/tursodatabase/turso/releases"
+  },
+  "ids": {
+    "github": "tursodatabase/turso",
+    "npm": "@tursodatabase/database",
+    "pypi": "pyturso",
+    "crates": "turso",
+    "hackerNewsQuery": "\"Turso Database\""
+  },
+  "brand": {
+    "color": "#4FF8D2",
+    "simpleIcon": "turso"
+  },
+  "sources": [
+    "https://github.com/tursodatabase/turso",
+    "https://github.com/tursodatabase/turso/releases",
+    "https://turso.tech/blog/we-will-rewrite-sqlite-and-we-are-going-all-in"
+  ],
+  "lastVerified": "2026-10-27"
+}

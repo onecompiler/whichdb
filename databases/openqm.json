@@ -1,0 +1,159 @@
+{
+  "slug": "openqm",
+  "name": "OpenQM",
+  "aliases": [
+    "QM",
+    "Rocket Open QM",
+    "Rocket OpenQM"
+  ],
+  "tagline": "Compact MultiValue (Pick) database from Ladybridge, once GPL-licensed, now Rocket's entry-level MV product.",
+  "description": "OpenQM is a MultiValue database written by Martin Phillips at Ladybridge Systems in the UK, designed as a lean, modern implementation of the Pick model with QMBasic, a query language and good compatibility with other Pick dialects. For a period an open-source GPL edition was published, which later seeded the community fork ScarletDME; the main product remained commercial. Zumasys acquired OpenQM in 2019 and it passed to Rocket Software with the Zumasys portfolio in 2021, where it now sits as Rocket Open QM alongside UniVerse, UniData and jBASE. It is a reasonable low-cost home for small Pick applications, with a very small community.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "multivalue",
+  "models": [
+    "multivalue"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Rocket Software (originally Ladybridge Systems)",
+  "vendorType": "company",
+  "initialRelease": 1993,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (historic GPLv2 community edition)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "Commercial per-user licences; a free personal/evaluation licence has been offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "QMBasic",
+    "QM query language"
+  ],
+  "apis": [
+    "QMClient API",
+    "Python QMClient",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Python",
+    "C#",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Small, efficient implementation of the Pick MultiValue model",
+    "Good compatibility with other Pick dialects eases migration",
+    "QMClient API reachable from Python and other languages",
+    "Low entry cost compared with larger MV platforms"
+  ],
+  "weaknesses": [
+    "Tiny community and sparse public release information",
+    "Overlaps with Rocket's other MV products, so long-term focus is uncertain",
+    "No replication or scaling features of note"
+  ],
+  "useCases": [
+    "Hosting small Pick-based business applications",
+    "Migrating off ageing Pick systems to commodity servers",
+    "Learning the MultiValue model"
+  ],
+  "notIdealFor": [
+    "New mainstream applications",
+    "High-availability or scale-out requirements",
+    "Analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocket-unidata-universe",
+    "jbase",
+    "intersystems-iris",
+    "sqlite"
+  ],
+  "tags": [
+    "multivalue",
+    "pick",
+    "rocket",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.rocketsoftware.com/products/rocket-multivalue-application-development-platform/rocket-open-qm"
+  },
+  "ids": {
+    "hackerNewsQuery": "OpenQM"
+  },
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/openqm",
+    "https://www.dbta.com/Editorial/MV-Community/OpenQM-Introduces-Python-Support-in-New-Release-111249.aspx",
+    "https://www.rocketsoftware.com/products/rocket-multivalue-application-development-platform/rocket-open-qm"
+  ],
+  "lastVerified": "2026-10-27"
+}

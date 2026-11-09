@@ -1,0 +1,161 @@
+{
+  "slug": "fjall",
+  "name": "Fjall",
+  "aliases": [],
+  "tagline": "Log-structured, embeddable key-value engine in pure Rust with keyspaces and transactions.",
+  "description": "Fjall is an LSM-tree based embedded key-value store written in safe Rust, positioned as a RocksDB-style engine for the Rust ecosystem without C++ dependencies. It organises data into keyspaces (similar to column families) that share a journal for atomic cross-keyspace writes, offers optional single-writer or optimistic serializable transactions, key-value separation for large blobs, and LZ4 compression. Version 3 shipped in 2026 and releases are frequent. It suits write-heavy Rust applications; for read-mostly workloads a B-tree like redb may be simpler.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "time-series",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Marvin Jäger and contributors",
+  "vendorType": "community",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "3.1.13",
+    "date": "2026-10-25"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT or Apache License 2.0",
+    "spdx": "MIT OR Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Rust API"
+  ],
+  "apis": [
+    "Rust API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure, safe Rust LSM engine with no C/C++ toolchain needed",
+    "Keyspaces with atomic cross-keyspace write batches",
+    "Optional serializable transactions (single-writer or optimistic)",
+    "Key-value separation for large values reduces write amplification",
+    "Very active development and frequent releases"
+  ],
+  "weaknesses": [
+    "Young project with a small maintainer team",
+    "Rust-only API",
+    "Fewer tuning options and less production history than RocksDB"
+  ],
+  "useCases": [
+    "Write-heavy storage inside Rust services",
+    "Embedded time-series or log storage",
+    "Replacing RocksDB bindings in Rust code"
+  ],
+  "notIdealFor": [
+    "Non-Rust applications",
+    "Distributed storage needs",
+    "Teams that need decade-long production track records"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redb",
+    "sled",
+    "rocksdb",
+    "tidesdb",
+    "slatedb"
+  ],
+  "tags": [
+    "rust",
+    "lsm-tree",
+    "embedded"
+  ],
+  "links": {
+    "website": "https://fjall-rs.github.io/",
+    "docs": "https://docs.rs/fjall",
+    "repository": "https://github.com/fjall-rs/fjall",
+    "changelog": "https://github.com/fjall-rs/fjall/releases"
+  },
+  "ids": {
+    "github": "fjall-rs/fjall",
+    "crates": "fjall",
+    "hackerNewsQuery": "Fjall Rust"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/fjall-rs/fjall",
+    "https://github.com/fjall-rs/fjall/releases",
+    "https://crates.io/crates/fjall"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,152 @@
+{
+  "slug": "openbase-sql",
+  "name": "OpenBase SQL",
+  "aliases": [
+    "OpenBase"
+  ],
+  "tagline": "NeXTSTEP-born relational server popular with WebObjects and Mac developers; the company is gone.",
+  "description": "OpenBase SQL was a commercial relational database server from OpenBase International, started around 1991 on NeXTSTEP/OpenStep and later sold mainly to Mac OS X developers, with Linux support and admin tools for Mac, Windows and Linux. It combined a SQL engine with stored procedures, triggers, journaling for fault tolerance, synchronization between servers, incremental backups, a REST XML/JSON server and the OpenBase Manager GUI. Apple used it in its WebObjects tutorial demos, which won it a loyal following among WebObjects shops. The last major release, OpenBase 12 in July 2012, added 64-bit support for Mac OS X 10.6–10.8; the company's site went dark around 2020 and the product is no longer sold, so PostgreSQL is the usual migration target.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "OpenBase International's site closed around 2020 and the product is no longer sold; last major release OpenBase 12 (2012). Migrate to PostgreSQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "OpenBase International",
+  "vendorType": "company",
+  "initialRelease": 1991,
+  "latestVersion": {
+    "version": "12",
+    "date": "2012-07"
+  },
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (OpenBase International)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "macos",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "Objective-C API",
+    "REST (XML/JSON)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Objective-C",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tight integration with Apple's WebObjects and Mac development tools",
+    "Easy administration through the OpenBase Manager GUI"
+  ],
+  "weaknesses": [
+    "Vendor gone; no updates since the early 2010s",
+    "Small, Mac-centric ecosystem"
+  ],
+  "useCases": [
+    "Migrating legacy WebObjects or Mac business apps",
+    "Historical reference for NeXT-era databases"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "mysql",
+    "filemaker",
+    "sqlite"
+  ],
+  "tags": [
+    "sql",
+    "macos",
+    "webobjects",
+    "nextstep",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20160110011417/http://www.openbase.com:80/",
+    "docs": "https://openbase.wikidot.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/20160110011417/http://www.openbase.com:80/",
+    "https://openbase.wikidot.com/",
+    "https://dbdb.io/db/openbase-sql"
+  ],
+  "lastVerified": "2026-10-27"
+}

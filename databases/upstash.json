@@ -1,0 +1,178 @@
+{
+  "slug": "upstash",
+  "name": "Upstash",
+  "aliases": [
+    "Upstash Redis"
+  ],
+  "tagline": "Serverless, per-request-priced Redis with an HTTP API built for edge and serverless functions.",
+  "description": "Upstash runs a Redis-compatible database as a serverless service: you pay per command (or a flat plan), idle databases cost nothing, and an HTTP/REST API lets Cloudflare Workers, Vercel Edge and AWS Lambda use it without persistent TCP connections. Data is persisted to disk and can be replicated globally with reads served from the nearest region. The same company offers QStash (HTTP message queue), Vector, Search and Workflow products. It suits low-to-moderate traffic apps and edge functions; at sustained high throughput a fixed-price plan or self-managed cache usually wins.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "queue",
+    "pub-sub",
+    "edge"
+  ],
+  "architecture": [
+    "serverless",
+    "distributed",
+    "primary-replica"
+  ],
+  "developer": "Upstash, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": true,
+    "startingPrice": "$0.20 per 100K commands",
+    "notes": "Free tier with 256 MB and 500K commands/month; fixed plans from $10/month with unlimited commands."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Global databases replicate to multiple read regions; fixed plans go up to hundreds of GB."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2/RESP3",
+    "REST/HTTP"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "Go",
+    "Java",
+    "Rust",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Scale-to-zero pricing: idle databases are free",
+    "HTTP API works from edge runtimes that cannot open TCP sockets",
+    "Global read replicas close to edge functions",
+    "Generous free tier and Vercel/Cloudflare integrations"
+  ],
+  "weaknesses": [
+    "Per-command pricing gets expensive at sustained high throughput",
+    "HTTP round trips add latency versus a co-located cache",
+    "Not every Redis command or module is supported",
+    "Proprietary service with no self-hosted option"
+  ],
+  "useCases": [
+    "Rate limiting and caching in edge and serverless functions",
+    "Session storage for Next.js and Vercel apps",
+    "Side projects and low-traffic production apps"
+  ],
+  "notIdealFor": [
+    "Very high, steady request rates",
+    "Workloads needing self-hosting or VPC-only access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "amazon-elasticache",
+    "momento",
+    "cloudflare-workers-kv",
+    "valkey"
+  ],
+  "tags": [
+    "serverless",
+    "redis-compatible",
+    "edge",
+    "http-api"
+  ],
+  "links": {
+    "website": "https://upstash.com/",
+    "docs": "https://upstash.com/docs/redis/overall/getstarted",
+    "pricing": "https://upstash.com/pricing/redis",
+    "repository": "https://github.com/upstash/redis-js"
+  },
+  "ids": {
+    "github": "upstash/redis-js",
+    "stackoverflowTag": "upstash",
+    "npm": "@upstash/redis",
+    "pypi": "upstash-redis",
+    "hackerNewsQuery": "Upstash"
+  },
+  "brand": {
+    "color": "#00E9A3",
+    "simpleIcon": "upstash"
+  },
+  "sources": [
+    "https://upstash.com/pricing/redis",
+    "https://upstash.com/blog/redis-pricing-comparison-every-major-provider-in-2026-with-numbers"
+  ],
+  "lastVerified": "2026-10-27"
+}

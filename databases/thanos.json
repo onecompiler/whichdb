@@ -1,0 +1,174 @@
+{
+  "slug": "thanos",
+  "name": "Thanos",
+  "aliases": [],
+  "tagline": "Sidecar-plus-object-storage layer giving Prometheus global queries, HA dedup and long retention.",
+  "description": "Thanos extends existing Prometheus servers rather than replacing them. A sidecar uploads two-hour TSDB blocks to object storage, Store Gateways serve that history, the Querier fans PromQL out across every source and deduplicates HA pairs, and the Compactor downsamples old data. A Receive component also accepts remote write for push-based setups. A CNCF incubating project created at Improbable, it is a common choice for teams that want cheap long retention on S3 or GCS without moving to a fully centralised write path. The cost is many moving parts and query latency that depends on object-store reads.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Thanos community (CNCF)",
+  "vendorType": "foundation",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "0.42.4",
+    "date": "2026-07-30"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "Prometheus TSDB",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Each Prometheus stays local; global queries fan out across clusters and regions, history lives in object storage."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "PromQL"
+  ],
+  "apis": [
+    "Prometheus HTTP API",
+    "Prometheus remote write (Receive)",
+    "StoreAPI (gRPC)"
+  ],
+  "compatibleWith": [
+    "prometheus",
+    "s3"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Adds long retention to Prometheus without changing how scraping works",
+    "Global PromQL view across clusters with HA-pair deduplication",
+    "Object storage makes multi-year retention inexpensive",
+    "Downsampling speeds up long-range queries",
+    "Apache-2.0 and vendor-neutral under the CNCF"
+  ],
+  "weaknesses": [
+    "Many components (sidecar, store, querier, compactor, ruler, receive) to operate",
+    "Recent data depends on reaching every sidecar, so a slow cluster slows global queries",
+    "Compactor must run as a singleton per bucket and can fall behind",
+    "Still pre-1.0 versioning after years of production use"
+  ],
+  "useCases": [
+    "Long-term storage for multi-cluster Prometheus",
+    "Global dashboards across regions",
+    "Cost-efficient metrics retention on S3/GCS"
+  ],
+  "notIdealFor": [
+    "Single small Prometheus setups",
+    "Logs and traces",
+    "Teams wanting a single-binary backend"
+  ],
+  "notableUsers": [
+    "Improbable"
+  ],
+  "alternatives": [
+    "grafana-mimir",
+    "victoriametrics",
+    "m3db",
+    "prometheus",
+    "cortex"
+  ],
+  "tags": [
+    "metrics",
+    "prometheus-compatible",
+    "cncf",
+    "object-storage",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://thanos.io/",
+    "docs": "https://thanos.io/tip/thanos/getting-started.md/",
+    "repository": "https://github.com/thanos-io/thanos",
+    "changelog": "https://github.com/thanos-io/thanos/blob/main/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "thanos-io/thanos",
+    "stackoverflowTag": "thanos",
+    "dockerHub": "thanosio/thanos",
+    "hackerNewsQuery": "Thanos Prometheus"
+  },
+  "brand": {
+    "color": "#6D41FF",
+    "simpleIcon": "thanos"
+  },
+  "sources": [
+    "https://github.com/thanos-io/thanos/releases",
+    "https://thanos.io/",
+    "https://www.cncf.io/projects/thanos/"
+  ],
+  "lastVerified": "2026-10-27"
+}

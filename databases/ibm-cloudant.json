@@ -1,0 +1,182 @@
+{
+  "slug": "ibm-cloudant",
+  "name": "IBM Cloudant",
+  "aliases": [
+    "Cloudant"
+  ],
+  "tagline": "IBM's managed, CouchDB-compatible JSON database with built-in search and geospatial queries.",
+  "description": "IBM Cloudant is a fully managed JSON document database on IBM Cloud, built on Apache CouchDB and API-compatible with it, including the replication protocol. Cloudant contributed much of CouchDB's clustering code before IBM acquired the company in 2014. On top of CouchDB it offers provisioned throughput capacity, Lucene-based full-text search, geospatial indexing, IAM integration and BYOK encryption via Key Protect, with replication across availability zones. It makes most sense for IBM Cloud shops and for apps that want CouchDB-style sync to PouchDB or on-prem CouchDB without running the cluster.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "search",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "mobile-offline",
+    "full-text-search",
+    "geospatial",
+    "iot"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "IBM",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "Erlang",
+    "Java"
+  ],
+  "basedOn": "Apache CouchDB",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary IBM Cloud service"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Lite plan for small free usage; Standard plan billed by provisioned read/write/query throughput plus storage."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "ibm-cloud"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "IBM Cloudant",
+      "provider": "IBM Cloud",
+      "url": "https://www.ibm.com/products/cloudant"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Data is spread across availability zones; cross-region setups use CouchDB replication between instances."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Cloudant Query (Mango)",
+    "JavaScript MapReduce views",
+    "Lucene search"
+  ],
+  "apis": [
+    "HTTP/JSON REST",
+    "CouchDB replication protocol"
+  ],
+  "compatibleWith": [
+    "couchdb"
+  ],
+  "drivers": [
+    "Java",
+    "JavaScript",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "CouchDB replication means you can sync to PouchDB, CouchDB or another Cloudant",
+    "Full-text and geospatial search built in, no separate search cluster",
+    "Provisioned throughput gives predictable performance and cost",
+    "IAM and Key Protect (BYOK) integration for regulated workloads"
+  ],
+  "weaknesses": [
+    "Tied to IBM Cloud, which has a smaller ecosystem than AWS, Azure or GCP",
+    "Inherits CouchDB's lack of multi-document transactions",
+    "Throughput limits return 429s that apps must back off from",
+    "Fewer SDKs than in the past; older community libraries are deprecated"
+  ],
+  "useCases": [
+    "Mobile apps syncing via PouchDB",
+    "IoT data ingestion on IBM Cloud",
+    "Hybrid setups replicating between on-prem CouchDB and the cloud"
+  ],
+  "notIdealFor": [
+    "Workloads needing ACID transactions across documents",
+    "Teams standardised on another hyperscaler"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-couchdb",
+    "pouchdb",
+    "google-cloud-firestore",
+    "azure-cosmos-db",
+    "mongodb-atlas"
+  ],
+  "tags": [
+    "ibm",
+    "couchdb",
+    "dbaas",
+    "document"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/products/cloudant",
+    "docs": "https://cloud.ibm.com/docs/Cloudant",
+    "pricing": "https://www.ibm.com/products/cloudant/pricing",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cloudant"
+  },
+  "ids": {
+    "stackoverflowTag": "cloudant",
+    "wikipedia": "Cloudant",
+    "npm": "@ibm-cloud/cloudant",
+    "pypi": "ibmcloudant",
+    "hackerNewsQuery": "Cloudant"
+  },
+  "brand": {
+    "color": "#0F62FE"
+  },
+  "sources": [
+    "https://www.ibm.com/products/cloudant",
+    "https://cloud.ibm.com/docs/Cloudant",
+    "https://en.wikipedia.org/wiki/Cloudant"
+  ],
+  "lastVerified": "2026-10-27"
+}

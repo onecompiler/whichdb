@@ -1,0 +1,157 @@
+{
+  "slug": "srch-2",
+  "name": "SRCH²",
+  "aliases": [
+    "SRCH2"
+  ],
+  "tagline": "In-memory instant search engine with typo tolerance, geo search and an Android SDK; abandoned since 2016.",
+  "description": "SRCH2 was a commercial search engine built around the research of UC Irvine professor Chen Li on fast fuzzy and search-as-you-type queries. Written in C++ and held in memory, it served instant, typo-tolerant results through a JSON/REST API, added geo-search and record-level access control lists in 2014, and offered a thin Android SDK so search could run on the handset. The company pitched it as a faster, smaller alternative to Lucene-based engines. The source was published on GitHub under a BSD 3-clause licence in 2016, the last commit landed that May, and the company website disappeared around 2017. Typesense and Meilisearch now fill the instant-search niche.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Company website gone since about 2017; the BSD-licensed GitHub source has had no commits since May 2016. Use Typesense or Meilisearch.",
+  "maturity": "legacy",
+  "primaryModel": "search",
+  "models": [
+    "search"
+  ],
+  "workloads": [
+    "full-text-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "SRCH2, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License (2016 source release)",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Was sold as enterprise and mobile editions; only the unmaintained open-source code remains."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Index held in memory on one server."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "REST JSON query API"
+  ],
+  "apis": [
+    "REST (HTTP/JSON)",
+    "Android SDK"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Instant, typo-tolerant search-as-you-type tuned for low latency",
+    "Small enough to run inside Android apps",
+    "Built-in geo search and record-level access control"
+  ],
+  "weaknesses": [
+    "Abandoned: no commits since 2016 and no vendor",
+    "Index must fit in memory on one node",
+    "Little surviving documentation"
+  ],
+  "useCases": [
+    "Studying fuzzy instant-search engine design",
+    "Historical reference for mobile on-device search"
+  ],
+  "notIdealFor": [
+    "Any new search deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "typesense",
+    "meilisearch",
+    "elasticsearch",
+    "manticore-search",
+    "algolia"
+  ],
+  "tags": [
+    "search",
+    "instant-search",
+    "fuzzy",
+    "in-memory",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20150103170329/http://srch2.com:80/",
+    "repository": "https://github.com/SRCH2/srch2-ngn"
+  },
+  "ids": {
+    "github": "SRCH2/srch2-ngn",
+    "hackerNewsQuery": "SRCH2"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20150103170329/http://srch2.com:80/",
+    "https://github.com/SRCH2/srch2-ngn",
+    "https://dbdb.io/db/srch2"
+  ],
+  "lastVerified": "2026-10-27"
+}

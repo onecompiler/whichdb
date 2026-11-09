@@ -1,0 +1,182 @@
+{
+  "slug": "ingres",
+  "name": "Actian Ingres",
+  "aliases": [
+    "Ingres",
+    "Actian X",
+    "Ingres Database"
+  ],
+  "tagline": "One of the original relational databases, still sold by Actian for long-lived enterprise systems.",
+  "description": "Ingres grew out of the 1970s Berkeley research project that also spawned Postgres, Sybase and SQL Server lineages, and it remains a commercial RDBMS maintained by Actian, part of HCLSoftware. Today's Actian Ingres (which absorbed the former Actian X, combining Ingres OLTP with the Vector columnar engine for analytics) targets organizations with decades-old Ingres and OpenROAD applications, adding modern pieces such as at-rest encryption, TLS 1.3, CDC via a Log Reader API, containers and Kubernetes deployment, and cloud hosting through the Ingres NeXt program. It is a sensible platform for keeping legacy estates supported, rarely a choice for new projects.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "htap"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node",
+    "primary-replica"
+  ],
+  "developer": "Actian (HCLSoftware)",
+  "vendorType": "company",
+  "initialRelease": 1974,
+  "latestVersion": {
+    "version": "12.1.0 (patch 34124)",
+    "date": "2026-10-23"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Actian commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Commercial licensing and support through Actian; evaluation edition available on request."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Scale-up architecture with replication (Ingres Replicator) and clustering options."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "QUEL"
+  ],
+  "apis": [
+    "Ingres/Net",
+    "JDBC",
+    "ODBC",
+    ".NET Data Provider",
+    "OpenAPI"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "C#",
+    "Python",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Decades of backward compatibility for legacy Ingres and OpenROAD apps",
+    "Combined OLTP and Vector columnar analytics in one product",
+    "Long-term vendor support and patches",
+    "Container and Kubernetes deployment options for modernization"
+  ],
+  "weaknesses": [
+    "Proprietary with a small, shrinking talent pool",
+    "Little community, tooling or ORM support compared with mainstream databases",
+    "Few managed-service options",
+    "New features arrive slowly"
+  ],
+  "useCases": [
+    "Maintaining legacy Ingres/OpenROAD business applications",
+    "Government and public-sector systems built on Ingres",
+    "Lift-and-shift of on-prem Ingres to containers or cloud VMs"
+  ],
+  "notIdealFor": [
+    "Greenfield application development",
+    "Cloud-native or serverless architectures",
+    "Teams relying on open-source ecosystems"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "oracle-database",
+    "ibm-db2",
+    "ibm-informix",
+    "sql-server",
+    "actian-zen"
+  ],
+  "tags": [
+    "legacy",
+    "commercial",
+    "actian",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://www.actian.com/databases/ingres/",
+    "docs": "https://docs.actian.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ingres_(database)"
+  },
+  "ids": {
+    "stackoverflowTag": "ingres",
+    "wikipedia": "Ingres (database)",
+    "dockerHub": "actian/ingres",
+    "hackerNewsQuery": "\"Ingres database\""
+  },
+  "sources": [
+    "https://www.actian.com/databases/ingres/",
+    "https://hub.docker.com/r/actian/ingres",
+    "https://docs.actian.com/actianx/"
+  ],
+  "lastVerified": "2026-10-27"
+}

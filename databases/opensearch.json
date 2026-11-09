@@ -1,0 +1,224 @@
+{
+  "slug": "opensearch",
+  "name": "OpenSearch",
+  "aliases": [
+    "Amazon OpenSearch",
+    "OpenSearch Project"
+  ],
+  "tagline": "Apache-licensed, foundation-governed fork of Elasticsearch for search, vectors and observability.",
+  "description": "OpenSearch began in 2021 as AWS's Apache-2.0 fork of Elasticsearch 7.10 and has been governed by the Linux Foundation's OpenSearch Software Foundation since 2024. The 3.x line moved to Lucene 10 and invested heavily in vector workloads: Faiss and Lucene k-NN engines, disk-optimized and GPU-accelerated index builds, neural and hybrid search pipelines, plus PPL and SQL for log analytics. It is the natural pick if you want Elasticsearch-style search with a permissive license and no single-vendor control, or if you already run Amazon OpenSearch Service. API compatibility with modern Elasticsearch has drifted, so treat them as cousins rather than drop-in twins.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "vector",
+    "spatial",
+    "time-series"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "observability",
+    "real-time-analytics",
+    "geospatial"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "OpenSearch Software Foundation (Linux Foundation)",
+  "vendorType": "foundation",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "3.9.0",
+    "date": "2026-09-29"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Elasticsearch 7.10.2 fork (Apache Lucene)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host. Managed options include Amazon OpenSearch Service (provisioned and Serverless), Aiven, Oracle OCI and DigitalOcean."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "oracle-cloud",
+      "aiven",
+      "digitalocean"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon OpenSearch Service",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/opensearch-service/"
+    },
+    {
+      "name": "Aiven for OpenSearch",
+      "provider": "Aiven",
+      "url": "https://aiven.io/opensearch"
+    },
+    {
+      "name": "OCI Search with OpenSearch",
+      "provider": "Oracle Cloud",
+      "url": "https://www.oracle.com/cloud/search/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Automatic shard allocation and replicas; cross-cluster replication for DR. Remote-backed storage and searchable snapshots push cold data to object storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Query DSL",
+    "PPL",
+    "SQL"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [
+    "elasticsearch"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    ".NET",
+    "Ruby",
+    "PHP",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Apache-2.0 with neutral Linux Foundation governance",
+    "k-NN plugin with Faiss and Lucene engines, quantization and disk-based vector mode",
+    "Security, alerting, anomaly detection and index management included at no cost",
+    "First-class managed option on AWS including a serverless flavour",
+    "Pull-based ingestion from Kafka/Kinesis and remote-backed storage in 3.x"
+  ],
+  "weaknesses": [
+    "Same shard/heap operational burden as Elasticsearch",
+    "API and feature drift from Elasticsearch 8/9 complicates migrations both ways",
+    "Dashboards and plugin quality is uneven compared with Kibana",
+    "Many features ship as plugins with their own versioning quirks"
+  ],
+  "useCases": [
+    "Log analytics and observability",
+    "Application and e-commerce search",
+    "Vector and hybrid search for RAG on AWS",
+    "Security event analytics",
+    "Migrating off Elasticsearch 7.x"
+  ],
+  "notIdealFor": [
+    "Transactional workloads",
+    "Tiny single-box search needs",
+    "Teams needing the newest Elasticsearch APIs"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "elasticsearch",
+    "apache-solr",
+    "vespa",
+    "quickwit",
+    "typesense",
+    "meilisearch"
+  ],
+  "tags": [
+    "search",
+    "lucene",
+    "open-source",
+    "linux-foundation",
+    "aws",
+    "observability"
+  ],
+  "links": {
+    "website": "https://opensearch.org/",
+    "docs": "https://docs.opensearch.org/",
+    "repository": "https://github.com/opensearch-project/OpenSearch",
+    "changelog": "https://github.com/opensearch-project/OpenSearch/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/OpenSearch_(software)"
+  },
+  "ids": {
+    "github": "opensearch-project/OpenSearch",
+    "stackoverflowTag": "opensearch",
+    "wikipedia": "OpenSearch (software)",
+    "dockerHub": "opensearchproject/opensearch",
+    "npm": "@opensearch-project/opensearch",
+    "pypi": "opensearch-py",
+    "crates": "opensearch",
+    "hackerNewsQuery": "OpenSearch"
+  },
+  "brand": {
+    "color": "#005EB8",
+    "simpleIcon": "opensearch"
+  },
+  "sources": [
+    "https://github.com/opensearch-project/OpenSearch/releases",
+    "https://opensearch.org/foundation/",
+    "https://aws.amazon.com/opensearch-service/"
+  ],
+  "lastVerified": "2026-10-27"
+}

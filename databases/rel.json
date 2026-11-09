@@ -1,0 +1,166 @@
+{
+  "slug": "rel",
+  "name": "Rel",
+  "aliases": [
+    "Rel DBMS",
+    "RelDB",
+    "Rel Tutorial D"
+  ],
+  "tagline": "Desktop 'true relational' DBMS implementing Date and Darwen's Tutorial D, for teaching and prototyping.",
+  "description": "Rel is Dave Voorhis' open-source implementation of Tutorial D, the language C. J. Date and Hugh Darwen defined in The Third Manifesto to show what a truly relational database looks like: no NULLs, no duplicate tuples, relation-valued attributes, user-defined types and relvars instead of SQL tables. It is a zero-install Java desktop application with the DBrowser GUI, a visual query editor and a Berkeley DB Java Edition storage engine, and can also link CSV, Excel, Access and JDBC sources as relvars. It runs on Windows, macOS and Linux and is mostly used in courses on relational theory. The current release is 3.016 from 2022; the repository has only seen dependency updates since.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Last release 3.016 (October 2022); since then only dependency bumps and minor commits.",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Dave Voorhis",
+  "vendorType": "community",
+  "initialRelease": 2004,
+  "latestVersion": {
+    "version": "3.016",
+    "date": "2022-10"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Berkeley DB Java Edition",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "macos",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "A desktop and teaching DBMS; not designed for large or concurrent workloads."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Tutorial D"
+  ],
+  "apis": [
+    "DBrowser GUI",
+    "Client/server protocol",
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Most complete runnable implementation of Tutorial D and The Third Manifesto",
+    "Strict relational semantics: no NULLs, no duplicates, relation-valued attributes",
+    "Zero-install desktop app with GUI and visual query editor",
+    "Can treat CSV, spreadsheets, Access and JDBC databases as relvars"
+  ],
+  "weaknesses": [
+    "Single maintainer; development has slowed to maintenance",
+    "Not built for production concurrency or large datasets",
+    "Tutorial D skills do not transfer directly to SQL jobs"
+  ],
+  "useCases": [
+    "Teaching relational theory and The Third Manifesto",
+    "Prototyping relational designs without SQL quirks",
+    "Personal desktop databases for relational purists"
+  ],
+  "notIdealFor": [
+    "Production web backends",
+    "Teams needing SQL compatibility"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "postgresql",
+    "duckdb"
+  ],
+  "tags": [
+    "tutorial-d",
+    "third-manifesto",
+    "education",
+    "java",
+    "desktop"
+  ],
+  "links": {
+    "website": "https://reldb.org/",
+    "repository": "https://github.com/DaveVoorhis/Rel"
+  },
+  "ids": {
+    "github": "DaveVoorhis/Rel",
+    "hackerNewsQuery": "Tutorial D Rel"
+  },
+  "brand": {},
+  "sources": [
+    "https://reldb.org/c/index.php",
+    "https://github.com/DaveVoorhis/Rel",
+    "https://dbdb.io/db/rel"
+  ],
+  "lastVerified": "2026-10-27"
+}

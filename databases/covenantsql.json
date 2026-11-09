@@ -1,0 +1,171 @@
+{
+  "slug": "covenantsql",
+  "name": "CovenantSQL",
+  "aliases": [
+    "CQL"
+  ],
+  "tagline": "Byzantine-fault-tolerant, blockchain-backed SQL database built on SQLite; dormant since 2021.",
+  "description": "CovenantSQL (CQL) is a decentralized SQL database from Covenant Labs that runs SQLite-based storage engines on a network of miners coordinated by a blockchain. A global main chain matches clients with miners and settles payments, each database gets its own shard chain that signs and records every query so history is immutable and auditable, and the datastore layer supports most of SQL-92 with column-level ACLs and encryption. Databases can be created in a strong-consistency mode using Kayak, a BFT-Raft implementation with two-phase commit, or an eventually consistent mode using DPoS block production. It was promoted around 2018–2019 as an open-source QLDB alternative and backend for dApps, but there has been no release since v0.8.1 in February 2021 and no commits since August 2021.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Dormant: no release since v0.8.1 (Feb 2021) and no commits since Aug 2021.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "ledger"
+  ],
+  "workloads": [
+    "ledger",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Covenant Labs",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "0.8.1",
+    "date": "2021-02-26"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Open source; the public network model relied on paying miners in tokens."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Each database is replicated across a chosen number of miner nodes; the vendor's benchmark claimed ~1.9k tx/s in strong mode."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Go client",
+    "HTTP proxy"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Java",
+    "JavaScript",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "SQL (most of SQL-92) on a decentralized, Byzantine-fault-tolerant network",
+    "Every query is signed and chained, giving an immutable, auditable history",
+    "Per-database choice between strong (BFT-Raft) and eventual (DPoS) consistency",
+    "Column-level ACLs and storage encryption"
+  ],
+  "weaknesses": [
+    "Dormant since 2021; the public network and token economics are not maintained",
+    "Low throughput compared with conventional databases",
+    "Small community and little production evidence"
+  ],
+  "useCases": [
+    "Studying blockchain-backed SQL database designs",
+    "Prototypes needing tamper-evident query history"
+  ],
+  "notIdealFor": [
+    "Production systems that need support",
+    "High-throughput OLTP",
+    "Regulated ledgers needing a maintained product"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "immudb",
+    "bigchaindb",
+    "rqlite",
+    "dqlite",
+    "sqlite"
+  ],
+  "tags": [
+    "blockchain",
+    "decentralized",
+    "sqlite",
+    "bft",
+    "dormant"
+  ],
+  "links": {
+    "website": "https://covenantsql.io/",
+    "docs": "https://developers.covenantsql.io/",
+    "repository": "https://github.com/CovenantSQL/CovenantSQL",
+    "changelog": "https://github.com/CovenantSQL/CovenantSQL/releases"
+  },
+  "ids": {
+    "github": "CovenantSQL/CovenantSQL",
+    "dockerHub": "covenantsql/covenantsql",
+    "hackerNewsQuery": "CovenantSQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://covenantsql.io/",
+    "https://github.com/CovenantSQL/CovenantSQL",
+    "https://github.com/CovenantSQL/CovenantSQL/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

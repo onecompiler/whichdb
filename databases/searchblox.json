@@ -1,0 +1,166 @@
+{
+  "slug": "searchblox",
+  "name": "SearchBlox",
+  "aliases": [
+    "SearchBlox SearchAI",
+    "SearchAI"
+  ],
+  "tagline": "Packaged enterprise search and RAG platform built on OpenSearch, with crawlers, connectors and hybrid search.",
+  "description": "SearchBlox is a commercial enterprise search product, around since 2003, that packages an OpenSearch-based index with web crawlers, hundreds of content connectors (SharePoint, Confluence, S3, databases and more), relevance tuning, facets and a search UI, so teams get site or intranet search without assembling an Elasticsearch stack themselves. Its current release, SearchAI 12, layers hybrid keyword-plus-vector search, retrieval-augmented chat, assistants, private LLM hosting and auto-generated FAQs and synonyms on the same index, exposed through REST APIs. It installs on Windows or Linux, in Docker or on major clouds, with a fixed annual price rather than per-query fees. Choose it for turnkey enterprise or e-commerce search; it is not a general-purpose datastore.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed"
+  ],
+  "developer": "SearchBlox Software, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "OpenSearch",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Fixed annual pricing with no per-query or token fees; a free download is offered for evaluation."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales with the underlying OpenSearch cluster, including Amazon OpenSearch Service."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SearchBlox query syntax",
+    "REST search API"
+  ],
+  "apis": [
+    "REST API",
+    "Hybrid Search API",
+    "RAG Search API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Turnkey crawlers and 300+ connectors for intranet, site and e-commerce search",
+    "Hybrid keyword and vector search plus RAG chat on one index",
+    "Runs on-premises, in your cloud or fully managed",
+    "Predictable fixed annual pricing"
+  ],
+  "weaknesses": [
+    "Proprietary layer over OpenSearch, with a smaller community than either OpenSearch or Elasticsearch",
+    "Not a general-purpose database for application data",
+    "Advanced tuning ultimately requires understanding OpenSearch internals"
+  ],
+  "useCases": [
+    "Enterprise intranet and document search",
+    "Website and e-commerce product search",
+    "Retrieval-augmented chatbots over company content",
+    "Search over SharePoint, Confluence and cloud storage"
+  ],
+  "notIdealFor": [
+    "Transactional application data",
+    "Teams wanting an open-source search engine to build on directly"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "opensearch",
+    "elasticsearch",
+    "apache-solr",
+    "algolia",
+    "vespa",
+    "vectara"
+  ],
+  "tags": [
+    "enterprise-search",
+    "rag",
+    "opensearch",
+    "commercial",
+    "hybrid-search"
+  ],
+  "links": {
+    "website": "https://www.searchblox.com/",
+    "docs": "https://developer.searchblox.com/docs"
+  },
+  "ids": {
+    "hackerNewsQuery": "SearchBlox"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.searchblox.com/",
+    "https://developer.searchblox.com/docs",
+    "https://dbdb.io/db/searchblox"
+  ],
+  "lastVerified": "2026-10-27"
+}

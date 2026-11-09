@@ -1,0 +1,160 @@
+{
+  "slug": "codernitydb",
+  "name": "CodernityDB",
+  "aliases": [
+    "Codernity DB"
+  ],
+  "tagline": "Pure-Python embedded NoSQL database with pluggable hash and B+tree indexes; abandoned since 2015.",
+  "description": "CodernityDB was an open-source, schema-less database written entirely in Python by the Polish company Codernity. It stored Python dictionaries as documents and let you define indexes as Python classes, choosing a hash or B+tree structure and writing the key-making function yourself, which made it unusually flexible for an embedded store with no native dependencies. An optional HTTP server mode exposed the same operations over the network. The last release, 0.5.0, came out in July 2015 and supports only Python 2; the original Bitbucket repository no longer exists and the project domain now hosts unrelated content. A community fork, CodernityDB3, made a single Python 3 release in 2020. New Python projects should use SQLite, TinyDB or LMDB instead.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Abandoned: last release 0.5.0 (July 2015, Python 2 only); the original repository and website are gone.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Codernity",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "0.5.0",
+    "date": "2015-07-22"
+  },
+  "writtenIn": [
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Python API"
+  ],
+  "apis": [
+    "Python API",
+    "HTTP server mode"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No native dependencies: pure Python, installable anywhere CPython 2 runs",
+    "Indexes are Python classes, so keys can be computed by arbitrary code",
+    "Choice of hash or B+tree structure per index"
+  ],
+  "weaknesses": [
+    "Last official release supports Python 2 only",
+    "Unmaintained since 2015; the source host and website are gone",
+    "No transactions or replication",
+    "Pure-Python storage is slow next to C-backed stores"
+  ],
+  "useCases": [
+    "Maintaining legacy Python 2 applications that embed it",
+    "Studying index design in a small pure-Python database"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Python 3 environments (without the community fork)",
+    "Concurrent multi-process writes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tinydb",
+    "sqlite",
+    "zodb",
+    "unqlite",
+    "lmdb"
+  ],
+  "tags": [
+    "python",
+    "embedded",
+    "nosql",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://pypi.org/project/CodernityDB/"
+  },
+  "ids": {
+    "pypi": "CodernityDB",
+    "hackerNewsQuery": "CodernityDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://pypi.org/project/CodernityDB/",
+    "https://pypi.org/project/CodernityDB3/",
+    "https://dbdb.io/db/codernitydb"
+  ],
+  "lastVerified": "2026-10-27"
+}

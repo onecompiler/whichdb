@@ -1,0 +1,164 @@
+{
+  "slug": "tokudb",
+  "name": "TokuDB",
+  "aliases": [
+    "Percona TokuDB",
+    "Tokutek TokuDB"
+  ],
+  "tagline": "Fractal-tree storage engine for MySQL/MariaDB; dropped from Percona Server in 2022.",
+  "description": "TokuDB is a transactional MySQL and MariaDB storage engine built by Tokutek on fractal tree indexes, a write-optimised alternative to B-trees that buffers changes inside the tree. That gave it very high insert rates on large indexed tables, aggressive compression and online column and index changes, which made it popular for logging, clickstream and other write-heavy MySQL workloads in the early 2010s. Percona bought Tokutek in 2015 and shipped TokuDB in Percona Server, but stopped supporting it from Percona Server 8.0.28-19 (May 2022) and steered users to MyRocks; MariaDB deprecated it in 10.5. The PerconaFT library underneath is still on GitHub but sees no feature work.",
+  "productType": "extension",
+  "status": "discontinued",
+  "statusNote": "Percona ended TokuDB support from Percona Server 8.0.28-19 (May 2022) and MariaDB deprecated it in 10.5. Migrate to InnoDB or MyRocks.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica"
+  ],
+  "developer": "Tokutek, later Percona",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "MySQL storage engine API",
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-2.0 (engine) / AGPL-3.0 (PerconaFT)",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Was free in Percona Server and MariaDB; Tokutek previously sold an enterprise edition."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single-server engine; scaled with standard MySQL replication."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Any MySQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fractal tree indexes sustained high insert rates on tables far larger than RAM",
+    "Strong compression, often several times smaller on disk than uncompressed InnoDB",
+    "Hot column add/drop and online index builds without long table locks",
+    "Clustering secondary indexes could cover range queries without extra lookups"
+  ],
+  "weaknesses": [
+    "No longer shipped or supported by Percona Server 8.0.28+ or current MariaDB",
+    "Read latency and tuning behaviour less predictable than InnoDB",
+    "Small expert community; known bugs will not be fixed"
+  ],
+  "useCases": [
+    "Maintaining legacy MySQL 5.7-era systems that still use it",
+    "Studying write-optimised index structures in a real engine"
+  ],
+  "notIdealFor": [
+    "New MySQL deployments",
+    "Any system that needs current security patches"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "percona-server-mysql",
+    "mariadb",
+    "rocksdb",
+    "mysql"
+  ],
+  "tags": [
+    "mysql",
+    "storage-engine",
+    "fractal-tree",
+    "percona",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://docs.percona.com/percona-server/8.0/tokudb-intro.html",
+    "docs": "https://docs.percona.com/percona-server/8.0/tokudb-intro.html",
+    "repository": "https://github.com/percona/PerconaFT",
+    "wikipedia": "https://en.wikipedia.org/wiki/TokuDB"
+  },
+  "ids": {
+    "github": "percona/PerconaFT",
+    "wikipedia": "TokuDB",
+    "stackoverflowTag": "tokudb",
+    "hackerNewsQuery": "TokuDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://docs.percona.com/percona-server/8.0/tokudb-intro.html",
+    "https://en.wikipedia.org/wiki/TokuDB",
+    "https://github.com/percona/tokudb-engine",
+    "https://github.com/percona/PerconaFT"
+  ],
+  "lastVerified": "2026-10-27"
+}

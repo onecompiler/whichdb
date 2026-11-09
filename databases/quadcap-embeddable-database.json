@@ -1,0 +1,153 @@
+{
+  "slug": "quadcap-embeddable-database",
+  "name": "Quadcap Embeddable Database",
+  "aliases": [
+    "QED",
+    "Quadcap QED"
+  ],
+  "tagline": "Small pure-Java SQL92 database and JDBC driver with source included; unmaintained since about 2003.",
+  "description": "QED was a single-file embedded relational database for Java from Quadcap Software, first released publicly in September 1999. Applications added qed.jar to the classpath and created a database simply by opening a JDBC connection; it offered SQL92 coverage, crash-safe transactions, online backups and optional AES encryption. Quadcap sold it with a flat-price unlimited redistribution license that included full source code. The last release, 3.1, dates from around 2003 and the quadcap.com site no longer serves the product, so QED survives only as a curiosity alongside HSQLDB, Derby and H2.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "No releases since QED 3.1 (around 2003) and the vendor site is gone; use H2, HSQLDB, Apache Derby or SQLite.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Quadcap Software",
+  "vendorType": "company",
+  "initialRelease": 1999,
+  "latestVersion": {
+    "version": "3.1",
+    "date": "2003"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary with source (unlimited redistribution license)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Sold for a single price covering unlimited redistribution; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-administration: a database is created by connecting to it",
+    "Whole database lives in one portable file",
+    "Built-in AES encryption and online backups",
+    "Source code shipped with the commercial license"
+  ],
+  "weaknesses": [
+    "Unmaintained for two decades; targets very old JDK and JDBC versions",
+    "Vendor is gone, so licensing and support cannot be obtained"
+  ],
+  "useCases": [
+    "Maintaining or migrating early-2000s Java desktop apps that embedded QED",
+    "Historical comparison of embedded Java SQL engines"
+  ],
+  "notIdealFor": [
+    "New Java applications",
+    "Multi-user or server workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "sqlite"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "jdbc",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2005/http://www.quadcap.com/products/qed/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2005/http://www.quadcap.com/products/qed/",
+    "https://web.archive.org/web/2005/http://quadcap.com/about.html",
+    "https://dbdb.io/db/quadcap-embeddable-database"
+  ],
+  "lastVerified": "2026-10-27"
+}

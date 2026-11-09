@@ -1,0 +1,155 @@
+{
+  "slug": "tinysql",
+  "name": "tinySQL",
+  "aliases": [
+    "tinySQL JDBC"
+  ],
+  "tagline": "Tiny 1990s pure-Java SQL engine and JDBC driver over dBase (DBF) and text files; unmaintained since 2007.",
+  "description": "tinySQL is a lightweight SQL engine written entirely in Java, first shipped with Brian Jepson's 1996 book Java Database Programming. It parses a subset of SQL (SELECT with simple joins, INSERT, UPDATE, DELETE, CREATE/ALTER/DROP TABLE) and executes it against xBase DBF files or flat text files, exposing everything through its own JDBC driver and a small command-line client. It was never meant to be fast; its value was showing how a SQL layer and a JDBC driver can sit on top of non-SQL data. The project moved to SourceForge in 2003 under Davis Swan; the last release, 2.26, dates from March 2007.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Last release 2.26 (March 2007) on SourceForge; no maintenance since. Use H2, HSQLDB or SQLite for embedded SQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Brian Jepson, later maintained by Davis Swan",
+  "vendorType": "community",
+  "initialRelease": 1996,
+  "latestVersion": {
+    "version": "2.26",
+    "date": "2007-03-16"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL",
+    "spdx": "LGPL-2.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Toy-scale; no query optimisation and limited WHERE support (AND only)."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset)"
+  ],
+  "apis": [
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very small, readable Java codebase showing how a SQL parser and JDBC driver fit together",
+    "Reads and writes dBase DBF files that spreadsheets of its era could open",
+    "Architecture lets you put a SQL front end over non-SQL sources such as text files"
+  ],
+  "weaknesses": [
+    "Abandoned since 2007; targets very old Java versions",
+    "Partial SQL: WHERE supports only AND, joins were documented as buggy on dBase files",
+    "No locking, transactions or indexes worth relying on"
+  ],
+  "useCases": [
+    "Studying a minimal SQL engine and JDBC driver implementation",
+    "Reading legacy DBF files from old Java code"
+  ],
+  "notIdealFor": [
+    "Any production or multi-user workload",
+    "Modern Java applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "sqlite"
+  ],
+  "tags": [
+    "java",
+    "jdbc",
+    "dbase",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://sourceforge.net/projects/tinysql/",
+    "repository": "https://sourceforge.net/projects/tinysql/files/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20111026182331/http://sourceforge.net/projects/tinysql/files/",
+    "https://web.archive.org/web/20220125021007/http://priede.bf.lu.lv/ftp/pub/DatuBazes/tinySQL/tinySQL.htm",
+    "https://web.archive.org/web/20111127223748/http://tinysql.sourceforge.net/"
+  ],
+  "lastVerified": "2026-10-27"
+}

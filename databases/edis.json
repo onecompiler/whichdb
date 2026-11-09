@@ -1,0 +1,102 @@
+{
+  "slug": "edis",
+  "name": "Edis",
+  "aliases": ["edis"],
+  "tagline": "Inaka's Erlang reimplementation of Redis on LevelDB, aimed at larger-than-RAM data and multiple masters.",
+  "description": "Edis was an Erlang implementation of the Redis protocol and command set built by Inaka (Electronic Inaka) and presented at Erlang Factory 2012. Instead of holding everything in RAM it stored data in LevelDB through Basho's eleveldb binding, with HanoiDB as an experimental alternative, so datasets could exceed memory while ordinary Redis clients kept working. Erlang/OTP supervision gave it fault tolerance, and the stated goal was eventually supporting multiple master nodes. It differed from Redis in places: SAVE works per database, MULTI rejects cross-database and pub/sub commands, and SYNC, SLAVEOF and SLOWLOG were never implemented. The repository has been idle since 2015; Kvrocks, Pika or Redis on Flash fill this niche today.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since 2015. Disk-backed Redis-compatible alternatives today include Apache Kvrocks and Pika.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["caching", "session-store"],
+  "architecture": ["single-node", "client-server"],
+  "developer": "Inaka (Electronic Inaka, LLC)",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": ["Erlang"],
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single node; replication (SLAVEOF/SYNC) was never implemented."
+  },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["Redis commands"],
+  "apis": ["RESP (Redis protocol)"],
+  "compatibleWith": ["redis"],
+  "drivers": ["Any Redis client"],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Speaks the Redis protocol, so existing clients connect unchanged",
+    "LevelDB storage lets datasets grow beyond RAM",
+    "Erlang/OTP supervision restarts failed components automatically"
+  ],
+  "weaknesses": [
+    "Abandoned since 2015 and built against old Erlang/OTP and eleveldb versions",
+    "Several Redis commands and behaviours differ or are missing (no SYNC, SLAVEOF, SLOWLOG)",
+    "Much slower than in-memory Redis for hot data"
+  ],
+  "useCases": [
+    "Studying how to map Redis data types onto an ordered key-value store",
+    "Erlang shops reading an OTP-based network server design"
+  ],
+  "notIdealFor": ["Production caching", "Replicated or clustered Redis deployments"],
+  "notableUsers": [],
+  "alternatives": ["apache-kvrocks", "pika", "ssdb", "ardb", "redis"],
+  "tags": ["redis-compatible", "erlang", "leveldb", "abandoned"],
+  "links": {
+    "website": "https://github.com/cbd/edis",
+    "repository": "https://github.com/cbd/edis"
+  },
+  "ids": {
+    "github": "cbd/edis"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/cbd/edis",
+    "https://dbdb.io/db/edis"
+  ],
+  "lastVerified": "2026-10-27"
+}

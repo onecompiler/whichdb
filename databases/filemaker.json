@@ -1,0 +1,189 @@
+{
+  "slug": "filemaker",
+  "name": "Claris FileMaker",
+  "aliases": [
+    "FileMaker",
+    "FileMaker Pro",
+    "FileMaker Server",
+    "FileMaker 2026"
+  ],
+  "tagline": "Low-code database app builder for Mac, Windows, iPad and web, owned by Apple's Claris.",
+  "description": "FileMaker is a low-code platform where the database, forms, scripts and permissions live in one file that FileMaker Pro designs, FileMaker Server hosts, and FileMaker Go (iPad/iPhone) or WebDirect (browser) run. It is how many small businesses, schools and departments built their own CRM, inventory and job-tracking apps without a development team. Claris, an Apple subsidiary, jumped the version number to 26 with FileMaker 2026 (June 2026), adding a Standby Server, remote backups and more AI script steps on top of earlier semantic-search features. It is great for fast internal apps; it is not a general-purpose database for large or public-facing systems.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Claris International (Apple)",
+  "vendorType": "company",
+  "initialRelease": 1985,
+  "latestVersion": {
+    "version": "2026 (26.0)",
+    "date": "2026-06-09"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Annual per-user licensing for Pro, Server and Cloud; free 45-day trial."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "macos",
+      "windows",
+      "ios",
+      "linux",
+      "browser"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Claris FileMaker Cloud",
+      "provider": "Claris",
+      "url": "https://www.claris.com/filemaker/cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Comfortable for departmental data and tens to low hundreds of concurrent users; Standby Server adds failover."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "FileMaker calculation and script language",
+    "SQL (ExecuteSQL, read-oriented)"
+  ],
+  "apis": [
+    "FileMaker Data API (REST)",
+    "OData",
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "PHP",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Non-developers can build working database apps with forms, scripts and permissions in days",
+    "Same solution runs on macOS, Windows, iPad/iPhone and in the browser",
+    "Granular privilege sets and encryption at rest built in",
+    "Data API and OData let other systems read and write FileMaker data",
+    "Built-in AI script steps and semantic find for embeddings-based search"
+  ],
+  "weaknesses": [
+    "Scales poorly beyond departmental data volumes and concurrency",
+    "Proprietary file format and scripting create lock-in",
+    "Per-user subscription costs add up for large user bases",
+    "Weak fit for public internet-facing applications"
+  ],
+  "useCases": [
+    "Small-business CRM, inventory and job tracking",
+    "Departmental apps in schools, labs and nonprofits",
+    "iPad field data collection",
+    "Replacing spreadsheets with a shared, permissioned app"
+  ],
+  "notIdealFor": [
+    "High-traffic web applications",
+    "Large datasets or analytics",
+    "Teams that want code-first, Git-based development"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "microsoft-access",
+    "4d",
+    "supabase",
+    "pocketbase",
+    "sqlite",
+    "postgresql"
+  ],
+  "tags": [
+    "low-code",
+    "desktop",
+    "ipad",
+    "apple",
+    "rad"
+  ],
+  "links": {
+    "website": "https://www.claris.com/filemaker/",
+    "docs": "https://help.claris.com/",
+    "pricing": "https://www.claris.com/pricing/",
+    "wikipedia": "https://en.wikipedia.org/wiki/FileMaker"
+  },
+  "ids": {
+    "stackoverflowTag": "filemaker",
+    "wikipedia": "FileMaker",
+    "hackerNewsQuery": "FileMaker"
+  },
+  "brand": {
+    "simpleIcon": "claris"
+  },
+  "sources": [
+    "https://www.soliantconsulting.com/tab/filemaker-2026/",
+    "https://winsoft-international.com/claris-filemaker-2026-is-now-available/",
+    "https://www.claris.com/filemaker/"
+  ],
+  "lastVerified": "2026-10-27"
+}

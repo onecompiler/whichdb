@@ -1,0 +1,125 @@
+{
+  "slug": "amazon-aurora-dsql",
+  "name": "Amazon Aurora DSQL",
+  "aliases": ["Aurora DSQL", "DSQL"],
+  "tagline": "Serverless, active-active distributed SQL on AWS with PostgreSQL compatibility and no instances to size.",
+  "description": "Aurora DSQL is AWS's serverless distributed SQL database, generally available since May 2025. It splits query processing, transaction adjudication, journaling and storage into independently scaling services, uses optimistic concurrency with snapshot isolation, and can run as a multi-Region cluster where both Regions accept strongly consistent writes. It exposes a PostgreSQL-compatible interface with IAM-token authentication, though it supports a deliberately reduced feature set: no extensions, triggers or PL/pgSQL, and foreign keys and expression indexes only arrived in 2026. Pick it for new AWS-native OLTP services that want zero capacity planning and multi-Region writes; avoid it for lifted-and-shifted Postgres apps.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp", "metadata-store", "ledger"],
+  "architecture": ["distributed", "serverless", "multi-primary"],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2025,
+  "writtenIn": ["Rust"],
+  "basedOn": "PostgreSQL (query processor)",
+  "license": { "type": "proprietary", "name": "Proprietary (AWS service)" },
+  "pricing": {
+    "models": ["usage-based"],
+    "freeTier": true,
+    "startingPrice": "$8 per 1M DPUs + $0.33/GB-month (us-east-2)",
+    "notes": "First 100,000 DPUs and 1 GB of storage each month are free; no instance or capacity charges."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Amazon Aurora DSQL", "provider": "AWS", "url": "https://aws.amazon.com/rds/aurora/dsql/" }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Reads, writes, compute and storage scale independently; clusters default to 10 TiB and can be raised to 256 TiB; multi-Region clusters pair two Regions with a witness Region."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["PostgreSQL wire protocol", "AWS SDK (cluster management)"],
+  "compatibleWith": ["postgresql"],
+  "drivers": ["Java", "Python", "JavaScript", "Go", "Rust", "C#", "Ruby"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No instances, ACUs or shards to manage; pay per DPU consumed",
+    "Multi-Region clusters with strongly consistent writes in both Regions",
+    "Optimistic concurrency avoids lock contention and scales reads and writes independently",
+    "IAM-based authentication and native connectors that refresh tokens automatically",
+    "Generous monthly free allowance for small workloads"
+  ],
+  "weaknesses": [
+    "Large Postgres feature gaps: no extensions, triggers, PL/pgSQL, sequences-heavy patterns or LISTEN/NOTIFY",
+    "Transaction limits on rows modified and duration require batching large writes",
+    "OCC conflicts surface as retries the application must handle",
+    "AWS-only and young, with a fast-changing compatibility matrix"
+  ],
+  "useCases": [
+    "New AWS-native microservices needing zero-ops relational storage",
+    "Multi-Region active-active user, order and entitlement data",
+    "Serverless apps on Lambda with spiky traffic",
+    "Ledgers and counters that must never lose a committed write"
+  ],
+  "notIdealFor": [
+    "Existing Postgres apps relying on extensions or stored procedures",
+    "Bulk ETL loads or long-running transactions",
+    "Analytics and reporting queries",
+    "Multi-cloud deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": ["cockroachdb", "google-cloud-spanner", "yugabytedb", "amazon-aurora", "amazon-dynamodb", "neon"],
+  "tags": ["aws", "serverless", "distributed-sql", "postgres-compatible", "multi-region"],
+  "links": {
+    "website": "https://aws.amazon.com/rds/aurora/dsql/",
+    "docs": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/",
+    "pricing": "https://aws.amazon.com/rds/aurora/dsql/pricing/",
+    "changelog": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/release-notes.html"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-aurora-dsql",
+    "npm": "@aws-sdk/dsql-signer",
+    "pypi": "aurora-dsql-python-connector",
+    "hackerNewsQuery": "Aurora DSQL"
+  },
+  "brand": { "color": "#527FFF" },
+  "sources": [
+    "https://aws.amazon.com/rds/aurora/dsql/pricing/",
+    "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/release-notes.html",
+    "https://aws.amazon.com/about-aws/whats-new/2026/08/aurora-dsql-cloudwatch-database-insights/"
+  ],
+  "lastVerified": "2026-10-27"
+}

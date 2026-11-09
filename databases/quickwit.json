@@ -1,0 +1,180 @@
+{
+  "slug": "quickwit",
+  "name": "Quickwit",
+  "aliases": [],
+  "tagline": "Cloud-native search engine on object storage for logs and traces, built on Tantivy.",
+  "description": "Quickwit is a Rust search engine designed for append-only observability data: logs, traces and events. It separates compute from storage, keeping indexes on S3-compatible object storage, so stateless searchers can scale out and retention costs a fraction of an Elasticsearch hot tier. It offers an Elasticsearch-compatible query API, native Jaeger and OpenTelemetry endpoints, and Kafka/Kinesis/Pulsar ingestion. Datadog acquired Quickwit in early 2025 and relicensed it from AGPL to Apache-2.0; development continues in the open with the 0.9 line.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document",
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "full-text-search",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Quickwit (Datadog)",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "0.9.3",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Tantivy",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free and open source; there is no vendor-managed Quickwit service."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Stateless indexers and searchers over object storage; Binance runs a 100 PB log service ingesting about 1.6 PB per day."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Quickwit query language",
+    "Elasticsearch Query DSL (subset)"
+  ],
+  "apis": [
+    "REST/JSON",
+    "OpenTelemetry (OTLP)",
+    "Jaeger gRPC"
+  ],
+  "compatibleWith": [
+    "elasticsearch",
+    "s3"
+  ],
+  "drivers": [
+    "Any HTTP client"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Indexes live on object storage, so long retention is cheap",
+    "Stateless searchers scale independently of ingest",
+    "Native OpenTelemetry and Jaeger endpoints for traces and logs",
+    "Elasticsearch-compatible search API works with Grafana and existing tools",
+    "Apache-2.0 after the Datadog acquisition"
+  ],
+  "weaknesses": [
+    "Optimised for append-only data; updates and deletes are limited",
+    "No vector search",
+    "Object-storage latency makes it slower than RAM-heavy engines for interactive app search",
+    "Future roadmap depends on Datadog's priorities"
+  ],
+  "useCases": [
+    "Log search and retention at large scale",
+    "Distributed tracing backend",
+    "Security and audit event search",
+    "Cheap replacement for Elasticsearch hot-warm logging clusters"
+  ],
+  "notIdealFor": [
+    "E-commerce or app search with frequent updates",
+    "Vector/RAG retrieval",
+    "Transactional data"
+  ],
+  "notableUsers": [
+    "Binance"
+  ],
+  "alternatives": [
+    "elasticsearch",
+    "opensearch",
+    "grafana-loki",
+    "openobserve",
+    "victorialogs",
+    "clickhouse"
+  ],
+  "tags": [
+    "search",
+    "observability",
+    "logs",
+    "object-storage",
+    "rust",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://quickwit.io/",
+    "docs": "https://quickwit.io/docs",
+    "repository": "https://github.com/quickwit-oss/quickwit",
+    "changelog": "https://github.com/quickwit-oss/quickwit/releases"
+  },
+  "ids": {
+    "github": "quickwit-oss/quickwit",
+    "dockerHub": "quickwit/quickwit",
+    "hackerNewsQuery": "Quickwit"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/quickwit-oss/quickwit/releases",
+    "https://github.com/quickwit-oss/quickwit",
+    "https://quickwit.io/blog/quickwit-joins-datadog"
+  ],
+  "lastVerified": "2026-10-27"
+}

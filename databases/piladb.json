@@ -1,0 +1,153 @@
+{
+  "slug": "piladb",
+  "name": "piladb",
+  "aliases": [],
+  "tagline": "Go REST database whose only data structure is the stack: PUSH, POP and PEEK JSON values in named stacks.",
+  "description": "piladb is a lightweight in-memory database engine in Go whose only data structure is the stack ('pila' is Spanish for stack). You create databases and named stacks through a REST API, then push, pop, peek, size or flush JSON values of any type, with the top element always available in constant time; stacks grow until they hit host or configured limits. It ships as a single self-contained binary configured over the API or CLI flags, and was written by Fernando Álvarez in Madrid. The last tagged release is v0.2.0-alpha from April 2018 and the main branch has not moved since; it is a neat teaching project in API-first database design rather than a production store.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits on the main branch since March 2018 (v0.2.0-alpha); unmaintained.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "queue"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node"
+  ],
+  "developer": "Fernando Álvarez",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "0.2.0-alpha.20180407",
+    "date": "2018-04-07"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "In-memory only; capacity bounded by host RAM or configured limits."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "HTTP REST"
+  ],
+  "apis": [
+    "HTTP REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "HTTP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Dead-simple stack semantics with constant-time access to the top element",
+    "Clean REST API and single static binary"
+  ],
+  "weaknesses": [
+    "In-memory only: data is lost on restart",
+    "Alpha quality and unmaintained since 2018"
+  ],
+  "useCases": [
+    "Teaching REST API and database design",
+    "Throwaway LIFO work stacks in prototypes"
+  ],
+  "notIdealFor": [
+    "Durable data",
+    "Production queues"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "valkey"
+  ],
+  "tags": [
+    "stack",
+    "rest",
+    "go",
+    "in-memory",
+    "hobby"
+  ],
+  "links": {
+    "website": "https://www.piladb.org/",
+    "repository": "https://github.com/fern4lvarez/piladb"
+  },
+  "ids": {
+    "github": "fern4lvarez/piladb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/fern4lvarez/piladb",
+    "https://www.piladb.org/",
+    "https://dbdb.io/db/piladb"
+  ],
+  "lastVerified": "2026-10-27"
+}

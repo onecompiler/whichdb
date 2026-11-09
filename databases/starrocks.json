@@ -1,0 +1,193 @@
+{
+  "slug": "starrocks",
+  "name": "StarRocks",
+  "aliases": [],
+  "tagline": "MPP OLAP database with a fast vectorized engine, real-time upserts and native lakehouse queries.",
+  "description": "StarRocks is an open-source MPP analytical database (a 2020 fork of Apache Doris, now a Linux Foundation project) with a C++ vectorized engine and a cost-based optimizer that handles multi-table joins well. It serves both its own primary-key tables, which support real-time upserts from Kafka or Flink, and external Iceberg, Hudi, Delta and Hive tables directly, with async materialized views that transparently rewrite queries. Shared-data mode stores data on object storage with local caching. It is a strong pick for joins-heavy, high-concurrency analytics; the frontend/backend architecture and MySQL-flavoured SQL take some getting used to.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "vector"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "lakehouse",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "StarRocks (Linux Foundation; CelerData)",
+  "vendorType": "foundation",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "4.1.3",
+    "date": "2026-09-17"
+  },
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "basedOn": "Apache Doris (fork)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; CelerData sells CelerData Cloud (BYOC) and enterprise support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "CelerData Cloud",
+      "provider": "CelerData",
+      "url": "https://celerdata.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Frontend (FE) and backend/compute nodes scale out; shared-data mode puts storage on S3 with elastic compute."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "HTTP Stream Load",
+    "Arrow Flight SQL"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Cost-based optimizer handles star and snowflake joins at interactive speed",
+    "Primary-key tables support real-time upserts and deletes",
+    "Queries Iceberg, Hudi, Delta and Hive tables in place with caching",
+    "Async materialized views with automatic query rewrite",
+    "MySQL protocol works with existing BI tools and clients"
+  ],
+  "weaknesses": [
+    "FE/BE/CN architecture adds operational components",
+    "MySQL-flavoured SQL differs from ANSI/Postgres in places",
+    "Smaller global community than ClickHouse; much activity is China-based",
+    "Frequent major releases require upgrade planning"
+  ],
+  "useCases": [
+    "Real-time dashboards with joins",
+    "Lakehouse query acceleration over Iceberg",
+    "Customer-facing analytics",
+    "Replacing pre-aggregated cubes"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Tiny single-node workloads",
+    "Document or key-value access patterns"
+  ],
+  "notableUsers": [
+    "Airbnb",
+    "Pinterest",
+    "Tencent"
+  ],
+  "alternatives": [
+    "apache-doris",
+    "clickhouse",
+    "apache-pinot",
+    "apache-druid",
+    "trino",
+    "velodb"
+  ],
+  "tags": [
+    "mpp",
+    "olap",
+    "real-time",
+    "lakehouse",
+    "open-source",
+    "mysql-protocol"
+  ],
+  "links": {
+    "website": "https://www.starrocks.io/",
+    "docs": "https://docs.starrocks.io/",
+    "repository": "https://github.com/StarRocks/starrocks",
+    "changelog": "https://docs.starrocks.io/releasenotes/release-4.1/"
+  },
+  "ids": {
+    "github": "StarRocks/starrocks",
+    "stackoverflowTag": "starrocks",
+    "dockerHub": "starrocks/allin1-ubuntu",
+    "hackerNewsQuery": "StarRocks"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/StarRocks/starrocks/releases",
+    "https://www.starrocks.io/",
+    "https://docs.starrocks.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

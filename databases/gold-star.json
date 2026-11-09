@@ -1,0 +1,138 @@
+{
+  "slug": "gold-star",
+  "name": "GOLD STAR",
+  "aliases": [],
+  "tagline": "1970 MIT Project MAC thesis system that managed data as set-theoretic relations on Multics.",
+  "description": "GOLD STAR was a data management system described in Andrew Fillat and Leslie Kraning's June 1970 MIT thesis, published as Project MAC technical report TR-70, \"Generalized Organization of Large Data-Bases; A Set-Theoretic Approach to Relations\". It modelled a database as sets and relations between data elements and offered union, intersection, difference, composition, projection, Cartesian product and sorting as primitive operations, implemented in PL/I on Multics with separate managers for data sets and relations. It appeared the same year as Codd's relational model paper and reached similar set-based conclusions independently. It never left the lab, but it is an early example of treating data management as algebra over relations rather than navigation through records.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype from a 1970 MIT thesis (Project MAC TR-70); never released as a product.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "MIT Project MAC (Andrew Fillat, Leslie Kraning)",
+  "vendorType": "academic",
+  "initialRelease": 1970,
+  "writtenIn": [
+    "PL/I"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Not released (thesis research code)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Never distributed; the source listing is printed in the technical report."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "GOLD STAR procedural set operations"
+  ],
+  "apis": [
+    "PL/I subroutine interface"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early, independent set-theoretic treatment of relations (1970)",
+    "Relational operators such as project, compose and Cartesian product as primitives",
+    "Full PL/I source and design rationale printed in the report"
+  ],
+  "weaknesses": [
+    "Thesis prototype never used in production",
+    "Tied to Multics"
+  ],
+  "useCases": [
+    "Database history and teaching",
+    "Comparing pre-SQL approaches to relational data"
+  ],
+  "notIdealFor": [
+    "Any practical deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "system-r",
+    "ingres",
+    "peterlee-relational-test-vehicle",
+    "postgresql"
+  ],
+  "tags": [
+    "mit",
+    "multics",
+    "set-theory",
+    "research",
+    "historical"
+  ],
+  "links": {
+    "website": "https://publications.csail.mit.edu/lcs/pubs/pdf/MIT-LCS-TR-070.pdf"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://publications.csail.mit.edu/lcs/pubs/pdf/MIT-LCS-TR-070.pdf",
+    "https://dbdb.io/db/gold-star"
+  ],
+  "lastVerified": "2026-10-27"
+}

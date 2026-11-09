@@ -1,0 +1,159 @@
+{
+  "slug": "swaydb",
+  "name": "SwayDB",
+  "aliases": [],
+  "tagline": "Embeddable persistent and in-memory key-value engine for the JVM with typed Scala and Java APIs.",
+  "description": "SwayDB is Simer Plaha's non-blocking storage engine for Scala and Java: you open typed Map, Set, MultiMap or Queue structures that are either persistent or purely in-memory, with key expiry and range iteration. Data is log-structured with background compaction, and it can spread segments across several local SSDs and dedicate thread pools to reads, caching and compaction, all in a jar of about 7 MB with no external core dependency. The README still describes it as under testing and performance optimisation, the last release was 0.16.2 in October 2020 and commits stopped in 2024, so it is better studied than relied on in production.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "README still says 'under testing'; last release 0.16.2 (October 2020) and last commit June 2024. RocksDB or MapDB are safer JVM choices.",
+  "maturity": "emerging",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "caching",
+    "queue"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Simer Plaha",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "0.16.2",
+    "date": "2020-10-09"
+  },
+  "writtenIn": [
+    "Scala"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single machine, but can spread data over several local disks."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Scala/Java API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [
+    "Scala",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Same API for persistent and in-memory stores",
+    "Typed Map, Set, MultiMap and Queue structures out of the box",
+    "Non-blocking API that fits Scala effect libraries",
+    "Can spread data across multiple local SSDs with tunable threads"
+  ],
+  "weaknesses": [
+    "Never declared production-ready; no release since 2020",
+    "Single maintainer and a small user base",
+    "JVM only"
+  ],
+  "useCases": [
+    "Experimenting with embedded storage in Scala",
+    "Studying LSM-style engine design on the JVM"
+  ],
+  "notIdealFor": [
+    "Production systems that need a maintained engine",
+    "Non-JVM applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "mapdb",
+    "xodus",
+    "chronicle-map",
+    "lmdb"
+  ],
+  "tags": [
+    "scala",
+    "jvm",
+    "embedded",
+    "key-value"
+  ],
+  "links": {
+    "website": "https://swaydb.simer.au/",
+    "docs": "https://swaydb.simer.au/",
+    "repository": "https://github.com/simerplaha/SwayDB"
+  },
+  "ids": {
+    "github": "simerplaha/SwayDB",
+    "hackerNewsQuery": "SwayDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/simerplaha/SwayDB",
+    "https://github.com/simerplaha/SwayDB/releases",
+    "https://repo1.maven.org/maven2/io/swaydb/swaydb_2.13/maven-metadata.xml"
+  ],
+  "lastVerified": "2026-10-27"
+}

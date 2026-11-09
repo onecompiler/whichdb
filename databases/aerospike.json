@@ -1,0 +1,209 @@
+{
+  "slug": "aerospike",
+  "name": "Aerospike",
+  "aliases": [
+    "Aerospike Database",
+    "Citrusleaf"
+  ],
+  "tagline": "Flash-optimized distributed key-value and document database for predictable sub-millisecond latency at scale.",
+  "description": "Aerospike is a distributed NoSQL database built for real-time workloads that must keep sub-millisecond latency at millions of operations per second. Its hybrid memory architecture keeps indexes in RAM and data on NVMe SSDs, accessed directly rather than through a filesystem, which keeps clusters small and cheap relative to throughput. Records hold typed bins, including maps and lists usable as JSON documents. Version 8.0 added distributed multi-record ACID transactions, and 8.2 is the current release (September 2026). It is a staple of ad tech, fraud detection and payments, and is overkill for small apps.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "session-store",
+    "ml-feature-store",
+    "real-time-analytics",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Aerospike, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "8.2.0",
+    "date": "2026-09-29"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "AGPL-3.0 (Community Edition); commercial Enterprise Edition",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Community Edition is free (AGPL, size and feature limits); Enterprise adds strong consistency, XDR, compression, encryption and support. Aerospike Cloud is the managed option."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Aerospike Cloud",
+      "provider": "Aerospike, Inc.",
+      "url": "https://aerospike.com/products/aerospike-cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Automatic partitioning into 4096 partitions with smart clients; cross-datacenter replication (XDR) supports active-active topologies."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "tunable",
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Aerospike Expressions",
+    "AQL (CLI)"
+  ],
+  "apis": [
+    "Aerospike binary protocol (smart clients)",
+    "REST Gateway"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C#",
+    "Go",
+    "Java",
+    "JavaScript",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Predictable sub-millisecond latency at very high throughput",
+    "Hybrid memory architecture puts data on NVMe and indexes in RAM, cutting node counts",
+    "Strong-consistency mode with distributed ACID transactions since 8.0",
+    "Cross-datacenter replication for active-active deployments",
+    "Smart clients route requests directly to the owning node"
+  ],
+  "weaknesses": [
+    "Many production-critical features (strong consistency, XDR, compression) are Enterprise-only",
+    "Limited query flexibility; no joins and modest secondary-index querying",
+    "Primary index memory sizing needs careful capacity planning",
+    "Linux-only server and a niche skill set"
+  ],
+  "useCases": [
+    "Real-time bidding and ad-tech user profiles",
+    "Fraud detection and payment authorization",
+    "Online ML feature stores",
+    "Telecom subscriber and session data",
+    "Gaming and personalization at high scale"
+  ],
+  "notIdealFor": [
+    "Small apps with modest traffic",
+    "Ad-hoc or analytical querying",
+    "Highly relational data"
+  ],
+  "notableUsers": [
+    "PayPal",
+    "Adobe"
+  ],
+  "alternatives": [
+    "redis",
+    "scylladb",
+    "apache-cassandra",
+    "couchbase",
+    "amazon-dynamodb",
+    "aerospike-graph"
+  ],
+  "tags": [
+    "key-value",
+    "low-latency",
+    "ssd",
+    "real-time",
+    "agpl"
+  ],
+  "links": {
+    "website": "https://aerospike.com/",
+    "docs": "https://aerospike.com/docs/",
+    "repository": "https://github.com/aerospike/aerospike-server",
+    "changelog": "https://aerospike.com/docs/database/release/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Aerospike_(database)"
+  },
+  "ids": {
+    "github": "aerospike/aerospike-server",
+    "stackoverflowTag": "aerospike",
+    "wikipedia": "Aerospike_(database)",
+    "dockerHub": "library/aerospike",
+    "npm": "aerospike",
+    "pypi": "aerospike",
+    "hackerNewsQuery": "Aerospike"
+  },
+  "brand": {
+    "color": "#C22127"
+  },
+  "sources": [
+    "https://aerospike.com/docs/database/release/",
+    "https://github.com/aerospike/aerospike-server/blob/master/LICENSE",
+    "https://en.wikipedia.org/wiki/Aerospike_(database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

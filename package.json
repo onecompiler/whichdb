@@ -1,0 +1,17 @@
+{
+  "name": "whichdb-data",
+  "private": true,
+  "description": "Open database profiles behind whichdb.com",
+  "license": "CC-BY-4.0",
+  "type": "module",
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "ajv": "8.20.0",
+    "ajv-formats": "3.0.1"
+  }
+}

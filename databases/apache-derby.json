@@ -1,0 +1,171 @@
+{
+  "slug": "apache-derby",
+  "name": "Apache Derby",
+  "aliases": [
+    "Derby",
+    "Java DB",
+    "JavaDB",
+    "IBM Cloudscape"
+  ],
+  "tagline": "Pure-Java embedded SQL database from the Cloudscape lineage, retired by Apache in 2025.",
+  "description": "Apache Derby is a standards-oriented relational database written entirely in Java, descended from Cloudscape and donated by IBM to Apache in 2004. It runs embedded in a JVM or as a network server, and for years shipped with the JDK as Java DB, making it a common choice for tests, tooling and small embedded apps. On 2025-10-10 the Derby developers voted to retire the project into a read-only state: development and bug fixing ended and no further releases will be published, so 10.17.1.0 from 2023 is the final version. Existing users should plan a move to H2, HSQLDB or SQLite for embedding, or PostgreSQL for server use.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Retired by its PMC on 2025-10-10; read-only, no further releases or fixes. Final release 10.17.1.0. Migrate to H2, HSQLDB or PostgreSQL.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 1997,
+  "latestVersion": {
+    "version": "10.17.1.0",
+    "date": "2023-11-10"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "IBM Cloudscape",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single JVM or single network server; asynchronous replication for one standby."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "DRDA network protocol"
+  ],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pure Java with a small footprint; embeds with a single JAR",
+    "Strict SQL standard conformance and JDBC compliance",
+    "Same database usable embedded or via the network server",
+    "Built-in disk encryption and Java stored procedures"
+  ],
+  "weaknesses": [
+    "Project retired: no security fixes or new releases",
+    "Slower than H2 or HSQLDB for most embedded workloads",
+    "No JSON, full-text search or modern SQL features",
+    "Limited tooling and community left"
+  ],
+  "useCases": [
+    "Maintaining legacy Java applications that already embed Derby",
+    "Read-only reference for existing test suites"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Internet-facing services needing security patches",
+    "Large or concurrent workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "sqlite",
+    "postgresql",
+    "firebird"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "apache",
+    "retired"
+  ],
+  "links": {
+    "website": "https://db.apache.org/derby/",
+    "docs": "https://db.apache.org/derby/manuals/",
+    "repository": "https://github.com/apache/derby",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Derby"
+  },
+  "ids": {
+    "github": "apache/derby",
+    "stackoverflowTag": "derby",
+    "wikipedia": "Apache Derby",
+    "hackerNewsQuery": "\"Apache Derby\""
+  },
+  "sources": [
+    "https://db.apache.org/derby/derby_downloads.html",
+    "https://db.apache.org/derby/",
+    "https://github.com/apache/derby"
+  ],
+  "lastVerified": "2026-10-27"
+}

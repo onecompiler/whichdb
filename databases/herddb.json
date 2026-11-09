@@ -1,0 +1,169 @@
+{
+  "slug": "herddb",
+  "name": "HerdDB",
+  "aliases": [],
+  "tagline": "JVM-embeddable distributed SQL database replicated with Apache BookKeeper and ZooKeeper.",
+  "description": "HerdDB is a distributed SQL database written in Java by the Italian company Diennea. Each JVM can embed a node and read local data without a network hop, or run as a standalone server reached over JDBC. Internally it is a key-value store with a SQL layer planned by Apache Calcite; tables are grouped into tablespaces, and each tablespace has one leader and a set of replicas whose write-ahead log is replicated through Apache BookKeeper, with ZooKeeper handling metadata and leader election, so no shared storage is needed. Transactions use read-committed isolation and may span tables only within one tablespace. It is tuned for fast writes and primary-key access. Releases have slowed to occasional maintenance; 0.29.0 shipped in March 2024.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Last release 0.29.0 (March 2024); recent commits are build and dependency upkeep only.",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "metadata-store"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "primary-replica",
+    "distributed"
+  ],
+  "developer": "Diennea",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "0.29.0",
+    "date": "2024-03-18"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Data is partitioned by tablespace, each led by one node with replicas; transactions cannot span tablespaces."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "Java low-level API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs embedded in the application JVM or as a cluster of servers",
+    "Replication on BookKeeper and ZooKeeper without shared storage",
+    "Standard JDBC and Calcite-planned SQL",
+    "Fast writes and primary-key lookups"
+  ],
+  "weaknesses": [
+    "Read-committed isolation only; no serializable transactions",
+    "Transactions and subqueries limited to a single tablespace",
+    "Small community and slow release cadence",
+    "Requires operating ZooKeeper and BookKeeper for replication"
+  ],
+  "useCases": [
+    "Embedded replicated SQL store inside Java services",
+    "Metadata and configuration storage for JVM platforms",
+    "Write-heavy primary-key workloads"
+  ],
+  "notIdealFor": [
+    "Analytical queries",
+    "Non-JVM applications",
+    "Workloads needing serializable isolation"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "hsqldb",
+    "apache-derby",
+    "cockroachdb",
+    "apache-ignite"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "sql",
+    "bookkeeper",
+    "zookeeper",
+    "calcite"
+  ],
+  "links": {
+    "website": "https://herddb.org/",
+    "repository": "https://github.com/diennea/herddb",
+    "changelog": "https://github.com/diennea/herddb/releases"
+  },
+  "ids": {
+    "github": "diennea/herddb",
+    "hackerNewsQuery": "HerdDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/diennea/herddb",
+    "https://github.com/diennea/herddb/releases",
+    "https://herddb.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

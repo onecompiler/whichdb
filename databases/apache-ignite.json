@@ -1,0 +1,189 @@
+{
+  "slug": "apache-ignite",
+  "name": "Apache Ignite",
+  "aliases": [
+    "Ignite"
+  ],
+  "tagline": "A distributed, memory-first SQL database and compute grid; Ignite 3 rebuilt it around Raft and Calcite.",
+  "description": "Apache Ignite started as an in-memory data grid and grew into a distributed database with durable native persistence, ANSI SQL, ACID transactions and collocated compute. Ignite 3 (3.0 in 2025, 3.1 in late 2025) is a ground-up rewrite with Raft-based replication, an Apache Calcite SQL engine, schema-first tables and zone-based replication, while the 2.x line (2.18 in April 2026) remains the long-term-support branch most production clusters still run. It suits workloads that need SQL plus key-value access over a sharded, memory-speed dataset, and teams willing to invest in tuning a distributed JVM system.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "relational"
+  ],
+  "workloads": [
+    "caching",
+    "oltp",
+    "htap",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "3.1.0",
+    "date": "2025-10-29"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial support and enterprise features via GridGain."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Partitioned tables across many nodes with optional native persistence; datasets can exceed RAM when persistence is on."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Key-value API"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "Thin client protocol",
+    "REST",
+    "JCache (JSR-107)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#",
+    "C++",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Distributed ACID transactions and SQL over memory-speed partitions",
+    "Collocated compute sends code to the data instead of moving data",
+    "Native persistence lets the cluster restart without warming from another store",
+    "Ignite 3 brings Raft replication and a Calcite-based SQL planner",
+    "Apache-licensed with a commercial backer (GridGain)"
+  ],
+  "weaknesses": [
+    "Ignite 2 to 3 is a breaking migration with different APIs and storage",
+    "Operationally heavy: JVM tuning, rebalancing and baseline topology",
+    "Smaller and slower-moving community than it had in the late 2010s",
+    "Documentation is split between 2.x and 3.x"
+  ],
+  "useCases": [
+    "Accelerating legacy RDBMS with an in-memory SQL cache layer",
+    "Real-time risk and pricing calculations",
+    "Distributed caching with SQL queries over cached data",
+    "HTAP workloads on a sharded JVM cluster"
+  ],
+  "notIdealFor": [
+    "Simple key-value caching (Redis/Valkey is lighter)",
+    "Small teams without JVM operations expertise",
+    "Analytical scans over petabytes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "gridgain",
+    "hazelcast",
+    "oracle-coherence",
+    "infinispan",
+    "apache-geode",
+    "volt-active-data"
+  ],
+  "tags": [
+    "data-grid",
+    "distributed-sql",
+    "jvm",
+    "in-memory",
+    "apache"
+  ],
+  "links": {
+    "website": "https://ignite.apache.org/",
+    "docs": "https://ignite.apache.org/docs/",
+    "repository": "https://github.com/apache/ignite-3",
+    "changelog": "https://ignite.apache.org/download.cgi",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Ignite"
+  },
+  "ids": {
+    "github": "apache/ignite",
+    "stackoverflowTag": "ignite",
+    "wikipedia": "Apache_Ignite",
+    "dockerHub": "apacheignite/ignite",
+    "npm": "apache-ignite-client",
+    "pypi": "pyignite",
+    "hackerNewsQuery": "Apache Ignite"
+  },
+  "brand": {},
+  "sources": [
+    "https://ignite.apache.org/blog/2025/11/03/apache-ignite-3-1/",
+    "https://repo1.maven.org/maven2/org/apache/ignite/ignite-core/",
+    "https://ignite.apache.org/community/"
+  ],
+  "lastVerified": "2026-10-27"
+}

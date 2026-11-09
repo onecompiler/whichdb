@@ -1,0 +1,181 @@
+{
+  "slug": "databend",
+  "name": "Databend",
+  "aliases": [],
+  "tagline": "Rust-built cloud data warehouse on object storage, open source with a managed Databend Cloud.",
+  "description": "Databend is an open-source, Snowflake-style warehouse written in Rust: stateless compute clusters over data stored in S3-compatible object storage, with elastic scaling and a vectorized engine. It supports a VARIANT type for semi-structured data, time travel, streams for change capture, inverted, vector and spatial indexes, and recently table branching. Databend Cloud is the managed version, and the self-hosted edition is attractive for teams that want a warehouse on their own object storage. Its community is smaller, and stable releases follow a fast-moving nightly train.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "serverless"
+  ],
+  "developer": "Databend Labs",
+  "vendorType": "company",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "1.2.925-patch-15",
+    "date": "2026-10-15"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (enterprise features under ELv2)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Databend Cloud bills compute and storage with a trial."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Stateless query nodes scale elastically over object storage; metadata in a Raft-based meta service."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "HTTP REST API",
+    "Flight SQL"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Python",
+    "Go",
+    "Java",
+    "JavaScript",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Warehouse on your own S3 with stateless, elastic compute",
+    "Rust implementation with a vectorized engine and low resource overhead",
+    "Time travel, streams and table branching built in",
+    "VARIANT type plus inverted and vector indexes in one engine",
+    "Open source with a matching managed cloud"
+  ],
+  "weaknesses": [
+    "Smaller community and ecosystem than Snowflake or ClickHouse",
+    "Rapid release train with nightly builds; stable patch line is less visible",
+    "Some enterprise features are under a non-OSS license"
+  ],
+  "useCases": [
+    "Self-hosted cloud data warehouse",
+    "Lakehouse analytics on object storage",
+    "Log and event analytics",
+    "Cost-sensitive Snowflake alternative"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Workloads needing a large third-party ecosystem",
+    "Embedded single-process use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "snowflake",
+    "clickhouse",
+    "starrocks",
+    "apache-doris",
+    "duckdb"
+  ],
+  "tags": [
+    "rust",
+    "cloud-data-warehouse",
+    "object-storage",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://www.databend.com/",
+    "docs": "https://docs.databend.com/",
+    "repository": "https://github.com/databendlabs/databend",
+    "changelog": "https://github.com/databendlabs/databend/releases"
+  },
+  "ids": {
+    "github": "databendlabs/databend",
+    "dockerHub": "datafuselabs/databend",
+    "pypi": "databend-driver",
+    "npm": "databend-driver",
+    "hackerNewsQuery": "Databend"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/databendlabs/databend/releases",
+    "https://www.databend.com/blog/category-product/monthly-jan2026"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,143 @@
+{
+  "slug": "algebraix",
+  "name": "Algebraix",
+  "aliases": [
+    "Algebraix Data",
+    "Algebraix SPARQL Server"
+  ],
+  "tagline": "Patented 'data algebra' SPARQL server from Algebraix Data; the company pivoted to blockchain in 2018.",
+  "description": "Algebraix Data Corp. was a US company, active from about 2009, that built data-management software on its own mathematical 'data algebra', patenting ways to store and optimise data as algebraic relations across multiple storage formats. By 2013-2014 it marketed a cloud-hosted, high-performance graph database under the SPARQL Server name for semantic web and RDF analytics, and published a book and white papers on data algebra. In 2017-2018 the company recast itself around an ad-permission blockchain token (Permission.io) and the database disappeared from its site; the old algebraix.io domain now serves unrelated spam. It is listed here only for completeness.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Database product dropped when Algebraix pivoted to a blockchain advertising venture (Permission.io) around 2018; no longer available.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "graph-analytics"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Algebraix Data Corp.",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer offered."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "No verifiable public information on production scale."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL"
+  ],
+  "apis": [
+    "SPARQL endpoint"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Distinctive mathematical (data algebra) approach to query optimisation, documented in patents",
+    "Positioned for SPARQL analytics in the cloud before managed RDF services were common"
+  ],
+  "weaknesses": [
+    "Product discontinued; no downloads, documentation or support",
+    "Little independent evidence of production deployments",
+    "Original domain now hosts unrelated content"
+  ],
+  "useCases": [
+    "Historical reference on algebraic approaches to data management",
+    "Patent and prior-art research"
+  ],
+  "notIdealFor": [
+    "Any current workload: the product is gone"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-neptune",
+    "virtuoso",
+    "stardog",
+    "ontotext-graphdb",
+    "apache-jena-tdb"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "semantic-web",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://dbdb.io/db/algebraix"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/algebraix",
+    "http://web.archive.org/web/20140106130735/http://www.algebraixdata.com/",
+    "http://web.archive.org/web/20181231100459/https://algebraix.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

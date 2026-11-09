@@ -1,0 +1,169 @@
+{
+  "slug": "leveldb",
+  "name": "LevelDB",
+  "aliases": [],
+  "tagline": "Google's original small, fast LSM key-value library, now in limited-maintenance mode.",
+  "description": "LevelDB is the compact C++ library Jeff Dean and Sanjay Ghemawat released in 2011, bringing Bigtable's SSTable and LSM ideas to a single-process embeddable store. It provides an ordered map of byte-string keys to values with snapshots, atomic batches and Snappy compression, and it still sits inside Chrome's IndexedDB implementation and Bitcoin Core's chainstate. The repository is explicitly in very limited maintenance and the last tagged release was 1.23 in 2021. For new work, RocksDB, Pebble or a Rust engine offer more features and active development; LevelDB remains a readable reference implementation.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Google states the repo receives very limited maintenance (critical fixes only); last release 1.23 in Feb 2021. RocksDB is the usual successor.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Google",
+  "vendorType": "company",
+  "initialRelease": 2011,
+  "latestVersion": {
+    "version": "1.23",
+    "date": "2021-02-23"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C++ API"
+  ],
+  "apis": [
+    "C++ API",
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Small, readable codebase that is easy to embed and audit",
+    "Ordered keys with forward and backward iteration and snapshots",
+    "Atomic write batches and Snappy compression",
+    "Proven inside Chrome and Bitcoin Core"
+  ],
+  "weaknesses": [
+    "Very limited maintenance; no new features",
+    "Single-threaded compaction limits write throughput",
+    "No transactions beyond atomic batches, no column families",
+    "Single process only; no concurrent multi-process access"
+  ],
+  "useCases": [
+    "Simple local persistence in desktop or browser runtimes",
+    "Learning LSM-tree internals",
+    "Maintaining existing LevelDB-based software"
+  ],
+  "notIdealFor": [
+    "New high-throughput storage engines",
+    "Multi-process access to one database",
+    "Workloads needing transactions"
+  ],
+  "notableUsers": [
+    "Google"
+  ],
+  "alternatives": [
+    "rocksdb",
+    "pebble",
+    "lmdb",
+    "badger",
+    "fjall"
+  ],
+  "tags": [
+    "lsm-tree",
+    "embedded",
+    "c++",
+    "google",
+    "maintenance"
+  ],
+  "links": {
+    "website": "https://github.com/google/leveldb",
+    "docs": "https://github.com/google/leveldb/blob/main/doc/index.md",
+    "repository": "https://github.com/google/leveldb",
+    "wikipedia": "https://en.wikipedia.org/wiki/LevelDB"
+  },
+  "ids": {
+    "github": "google/leveldb",
+    "stackoverflowTag": "leveldb",
+    "wikipedia": "LevelDB",
+    "hackerNewsQuery": "LevelDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/google/leveldb",
+    "https://github.com/google/leveldb/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

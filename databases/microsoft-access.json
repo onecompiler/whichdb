@@ -1,0 +1,178 @@
+{
+  "slug": "microsoft-access",
+  "name": "Microsoft Access",
+  "aliases": [
+    "Access",
+    "MS Access",
+    "Access Database Engine",
+    "ACE",
+    "Jet"
+  ],
+  "tagline": "Desktop database and forms builder bundled with Microsoft 365; still everywhere in back offices.",
+  "description": "Microsoft Access pairs a file-based database engine (ACE, the successor to Jet) with a visual designer for tables, queries, forms, reports and VBA macros. It remains the tool countless analysts and small teams used to build internal apps, and many of those .accdb files are business-critical today. Microsoft has not announced an end of life: Access ships in Microsoft 365 and Office LTSC 2024 (supported to October 2029), but investment is in maintenance mode while new low-code work goes to Power Apps and Dataverse, and the Database Compare tool was retired in 2026. Use it for small, single-site tools, often with tables moved to SQL Server; avoid it for anything multi-user at scale.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "No EOL announced. Access LTSC 2021 support ended Oct 13, 2026; Access 2024 is supported to Oct 2029; Microsoft's new low-code investment goes to Power Apps.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "Microsoft",
+  "vendorType": "company",
+  "initialRelease": 1992,
+  "latestVersion": {
+    "version": "2024 (LTSC) / Microsoft 365",
+    "date": "2024-10-01"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "Included in many Microsoft 365 plans or bought as Office/Access LTSC 2024; the free Access Runtime runs existing apps."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "2 GB per .accdb file and file-share locking limit concurrency; larger apps link to SQL Server tables."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Access SQL (ACE/Jet SQL)",
+    "VBA"
+  ],
+  "apis": [
+    "DAO",
+    "ADO",
+    "ODBC",
+    "OLE DB"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "VBA",
+    "Python",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Forms, reports, queries and storage in one tool that business users already have",
+    "Very fast to prototype internal CRUD apps",
+    "Can link to SQL Server, SharePoint lists and ODBC sources as a front end",
+    "Free Runtime lets you distribute apps to users without full licences"
+  ],
+  "weaknesses": [
+    "2 GB file limit and file-share locking make corruption and contention common under load",
+    "Windows-only; no web or mobile client",
+    "Microsoft's low-code focus has moved to Power Platform",
+    "VBA-heavy apps are hard to version-control and test"
+  ],
+  "useCases": [
+    "Small departmental tracking apps",
+    "Front ends over SQL Server tables",
+    "Ad hoc data cleanup and reporting by analysts",
+    "Maintaining existing business-critical .accdb apps"
+  ],
+  "notIdealFor": [
+    "Multi-user apps beyond a handful of concurrent users",
+    "Web or mobile access",
+    "Data larger than a couple of gigabytes"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "filemaker",
+    "sqlite",
+    "sql-server",
+    "4d",
+    "supabase"
+  ],
+  "tags": [
+    "desktop",
+    "low-code",
+    "microsoft-365",
+    "vba",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.microsoft.com/en-us/microsoft-365/access",
+    "docs": "https://support.microsoft.com/en-us/access",
+    "wikipedia": "https://en.wikipedia.org/wiki/Microsoft_Access"
+  },
+  "ids": {
+    "stackoverflowTag": "ms-access",
+    "wikipedia": "Microsoft Access",
+    "hackerNewsQuery": "Microsoft Access"
+  },
+  "brand": {
+    "color": "#A4373A"
+  },
+  "sources": [
+    "https://learn.microsoft.com/en-us/lifecycle/products/access-2024",
+    "https://its.wsu.edu/?p=12105",
+    "https://office-watch.com/2026/microsoft-access-database-compare-end/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,164 @@
+{
+  "slug": "titan",
+  "name": "Titan (Redis on TiKV)",
+  "aliases": [
+    "Titan",
+    "distributedio/titan",
+    "meitu/titan"
+  ],
+  "tagline": "Redis-protocol NoSQL layer on TiKV from Meitu; dormant since 2021.",
+  "description": "Titan is a stateless Go service that speaks the Redis protocol and stores data in a TiKV cluster, giving Redis-style strings, hashes, lists, sets and sorted sets distributed transactions, multi-tenancy and horizontal scale beyond one machine's RAM. It was built and open-sourced by Meitu's infrastructure team in 2018 and later moved to the DistributedIO GitHub organisation. You run TiKV and PD yourself and point redis-cli or any Redis client at Titan. Development stopped in 2021 (last tag v0.6.0, January 2020), so today it is mainly a reference design; Apache Kvrocks and Pika cover the same 'disk-backed Redis' niche with active communities.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since October 2021 (last tag v0.6.0, Jan 2020); effectively abandoned. Apache Kvrocks or Pika are maintained alternatives.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Meitu, later the DistributedIO community",
+  "vendorType": "community",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "v0.6.0",
+    "date": "2020-01-09"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "TiKV",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Stateless Titan nodes scale out in front of TiKV, which shards and replicates data with Raft."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands"
+  ],
+  "apis": [
+    "RESP (Redis protocol)"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Any Redis client"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Redis wire compatibility, so existing Redis clients and redis-cli work unchanged",
+    "Data lives in TiKV, so capacity is not bounded by RAM and survives node loss via Raft replication",
+    "Distributed transactions with strong consistency across keys",
+    "Stateless proxy tier is easy to scale horizontally"
+  ],
+  "weaknesses": [
+    "Abandoned since 2021; no security fixes or new Redis command coverage",
+    "Requires operating a full TiKV + PD cluster underneath",
+    "Higher latency than in-memory Redis because every operation is a TiKV transaction",
+    "Incomplete Redis command set (no Lua scripting, limited cluster semantics)"
+  ],
+  "useCases": [
+    "Reference design for a Redis protocol layer over a distributed KV store",
+    "Legacy deployments already running it on TiKV"
+  ],
+  "notIdealFor": [
+    "New production deployments",
+    "Sub-millisecond caching workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-kvrocks",
+    "pika",
+    "tikv",
+    "valkey",
+    "redis"
+  ],
+  "tags": [
+    "redis-compatible",
+    "tikv",
+    "go",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/distributedio/titan",
+    "repository": "https://github.com/distributedio/titan"
+  },
+  "ids": {
+    "github": "distributedio/titan"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/distributedio/titan",
+    "https://medium.com/@shafreeck/titan-a-distributed-redis-protocol-compatible-nosql-database-4379a1307661",
+    "https://github.com/distributedio/titan/tags"
+  ],
+  "lastVerified": "2026-10-27"
+}

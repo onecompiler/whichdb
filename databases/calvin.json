@@ -1,0 +1,148 @@
+{
+  "slug": "calvin",
+  "name": "Calvin",
+  "aliases": [
+    "CalvinDB"
+  ],
+  "tagline": "Yale research system for deterministic distributed transactions that commits without two-phase commit.",
+  "description": "Calvin is a transaction scheduling and replication layer from Daniel Abadi's group at Yale, presented at SIGMOD 2012 by Alexander Thomson, Thaddeus Diamond, Shu-Chun Weng, Kun Ren, Philip Shao and Abadi. Instead of letting partitions and replicas negotiate each commit, a sequencing layer batches incoming transactions into short epochs, agrees on a global order, and replicates that input log; every node then executes transactions deterministically under a lock scheduler that follows the agreed order. Because the outcome is fixed before execution, distributed transactions need no two-phase commit and replicas stay consistent by replaying the same input. The C++ prototype on GitHub mostly backs the VLDB 2014 evaluation of deterministic databases. Calvin's protocol was adopted most visibly by FaunaDB and remains a staple of distributed-transaction research.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Academic prototype (2012–2015, Yale, later UMD); code unmaintained. Its protocol influenced FaunaDB and later deterministic databases.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Yale University (Abadi group)",
+  "vendorType": "academic",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "No license (copyright Yale University)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Source is public on GitHub but carries no open-source license."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Partitions data across nodes and replicates the ordered input log to full replicas, synchronously via Paxos or asynchronously."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C++ transaction API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Distributed ACID transactions without two-phase commit by fixing the order before execution",
+    "Replication by input log: replicas stay identical by deterministically replaying the same transactions",
+    "Showed near-linear throughput scaling for TPC-C-style workloads in the SIGMOD paper",
+    "Clear, widely cited design that later systems, notably FaunaDB, built on"
+  ],
+  "weaknesses": [
+    "Transactions must declare read/write sets up front or run a reconnaissance step first",
+    "Epoch batching adds latency to every transaction",
+    "Prototype code is unmaintained and not production-ready"
+  ],
+  "useCases": [
+    "Studying deterministic transaction processing",
+    "Research baseline for 2PC-free distributed commit",
+    "Teaching distributed concurrency control"
+  ],
+  "notIdealFor": [
+    "Production deployments",
+    "Interactive transactions with unknown read/write sets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "foundationdb",
+    "cockroachdb",
+    "google-cloud-spanner",
+    "yugabytedb",
+    "volt-active-data"
+  ],
+  "tags": [
+    "research",
+    "deterministic",
+    "distributed-transactions",
+    "sigmod-2012"
+  ],
+  "links": {
+    "website": "https://dslam.cs.umd.edu/calvin/",
+    "repository": "https://github.com/yaledb/calvin"
+  },
+  "ids": {
+    "github": "yaledb/calvin"
+  },
+  "brand": {},
+  "sources": [
+    "https://dslam.cs.umd.edu/calvin/",
+    "https://github.com/yaledb/calvin",
+    "https://doi.org/10.1145/2213836.2213838"
+  ],
+  "lastVerified": "2026-10-27"
+}

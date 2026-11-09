@@ -1,0 +1,148 @@
+{
+  "slug": "gnu-sql-server",
+  "name": "GNU SQL Server",
+  "aliases": [
+    "GNU SQL",
+    "gss"
+  ],
+  "tagline": "Late-1990s free multiuser SQL89 RDBMS from the Russian Academy of Sciences' ISP RAS.",
+  "description": "GNU SQL Server was a free, portable multiuser relational database developed at the Institute for System Programming of the Russian Academy of Sciences (ISP RAS), with support from the Free Software Foundation. It implemented the full SQL89 dialect plus parts of SQL92, isolated concurrent transactions with predicate locks rather than row locks, and was built in C on UNIX using RPC, shared memory and message queues between its components. The first public beta, 0.7b3, appeared in February 1997, and the last, 0.7b6, in September 1998; it never reached a stable 1.0. PostgreSQL and MySQL filled the role it aimed for. It is of interest mainly as a piece of free-software and Russian database history.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Development stopped after beta 0.7b6 (September 1998); the project page at ISP RAS is offline. PostgreSQL is the practical successor.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Institute for System Programming, Russian Academy of Sciences",
+  "vendorType": "academic",
+  "initialRelease": 1997,
+  "latestVersion": {
+    "version": "0.7b6",
+    "date": "1998-09-28"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full SQL89 support with some SQL92 extensions",
+    "Predicate locking for transaction isolation",
+    "GPL source from an early free-software RDBMS effort"
+  ],
+  "weaknesses": [
+    "Never left beta; last code is from 1998",
+    "Documentation partly only in Russian",
+    "No ecosystem, drivers or maintained builds"
+  ],
+  "useCases": [
+    "Studying predicate-locking implementations",
+    "Free-software database history"
+  ],
+  "notIdealFor": [
+    "Any production use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "mysql",
+    "firebird",
+    "ingres"
+  ],
+  "tags": [
+    "gnu",
+    "sql",
+    "russia",
+    "historical"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20090317052426/http://panda.ispras.ru:80/~gsql/"
+  },
+  "ids": {
+    "hackerNewsQuery": "GNU SQL Server"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20090317052426/http://panda.ispras.ru:80/~gsql/",
+    "https://dbdb.io/db/gnu-sql-server"
+  ],
+  "lastVerified": "2026-10-27"
+}

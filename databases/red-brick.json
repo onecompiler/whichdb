@@ -1,0 +1,151 @@
+{
+  "slug": "red-brick",
+  "name": "Red Brick",
+  "aliases": [
+    "Red Brick Warehouse",
+    "IBM Red Brick Warehouse",
+    "Informix Red Brick"
+  ],
+  "tagline": "Pioneering star-schema data warehouse DBMS from Ralph Kimball's company; Informix, then IBM, let it fade.",
+  "description": "Red Brick Warehouse was one of the first relational databases designed specifically for data warehousing, built by Red Brick Systems, which Ralph Kimball founded in 1986 and ran until 1992. It optimised dimensional star schemas with bitmap and star-join indexing, fast parallel bulk loading and SQL extensions for analytic calculations, and it helped popularise the dimensional modelling style Kimball later codified in his books. Informix acquired Red Brick in 1998, IBM bought Informix's database business in 2001 and kept shipping 6.x releases for a while, but the product has long since been withdrawn and its IBM pages are gone. Its techniques survive in the star-join and bitmap optimisations of modern warehouses.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Informix (1998) and IBM (2001); IBM no longer markets or develops Red Brick Warehouse. Use a modern warehouse such as Snowflake, Redshift or Teradata.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Red Brick Systems (later Informix, then IBM)",
+  "vendorType": "company",
+  "initialRelease": 1990,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Historically licensed per server; no longer sold."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scaled up on large SMP servers with parallel query and load; no shared-nothing clustering."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL with analytic extensions"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Bitmap and star-join indexing purpose-built for dimensional schemas",
+    "Fast parallel bulk loading for nightly warehouse refreshes",
+    "Analytic SQL extensions years before SQL:1999 OLAP functions",
+    "Historically important influence on dimensional data warehousing"
+  ],
+  "weaknesses": [
+    "Withdrawn product with no current releases or support",
+    "Scale-up architecture limited by single-server hardware"
+  ],
+  "useCases": [
+    "History of data warehousing and star-schema optimisation",
+    "Migrating legacy Red Brick warehouses to modern platforms"
+  ],
+  "notIdealFor": [
+    "Any new warehouse",
+    "Cloud or elastic analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "snowflake",
+    "amazon-redshift",
+    "teradata-vantage",
+    "ibm-db2-warehouse",
+    "clickhouse"
+  ],
+  "tags": [
+    "data-warehouse",
+    "star-schema",
+    "kimball",
+    "informix",
+    "ibm",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://dbdb.io/db/red-brick"
+  },
+  "ids": {
+    "hackerNewsQuery": "Red Brick Warehouse"
+  },
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/red-brick",
+    "https://public.dhe.ibm.com/software/data/informix/pubs/pdfs/WP2RBWeb.pdf",
+    "https://en.wikipedia.org/wiki/Ralph_Kimball"
+  ],
+  "lastVerified": "2026-10-27"
+}

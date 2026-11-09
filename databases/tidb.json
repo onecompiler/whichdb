@@ -1,0 +1,128 @@
+{
+  "slug": "tidb",
+  "name": "TiDB",
+  "aliases": ["TiDB Cloud", "PingCAP TiDB"],
+  "tagline": "MySQL-compatible distributed SQL with a row store for OLTP and a columnar replica for real-time analytics.",
+  "description": "TiDB is an open-source distributed SQL database from PingCAP that speaks the MySQL protocol, keeps data in TiKV (a Raft-replicated, range-sharded key-value store written in Rust) and optionally mirrors tables into TiFlash columnar replicas for analytical queries. That split lets one cluster serve transactional traffic and fresh analytics without an ETL pipeline. It is the most common landing spot for teams outgrowing sharded MySQL who want to keep MySQL drivers and tooling. TiDB Cloud adds a serverless Starter tier with a free allowance and built-in vector search for AI workloads.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "columnar", "vector"],
+  "workloads": ["oltp", "htap", "real-time-analytics", "vector-search", "metadata-store"],
+  "architecture": ["distributed", "client-server", "serverless"],
+  "developer": "PingCAP",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": { "version": "8.5.8", "date": "2026-08-27" },
+  "writtenIn": ["Go", "Rust", "C++"],
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": {
+    "models": ["open-source", "usage-based", "enterprise-contract"],
+    "freeTier": true,
+    "notes": "Self-managed TiDB is free; TiDB Cloud Starter (serverless) includes a free monthly allowance; Essential/Dedicated tiers are paid."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": ["aws", "gcp", "azure", "alibaba-cloud"],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [
+    { "name": "TiDB Cloud", "provider": "PingCAP", "url": "https://www.pingcap.com/tidb-cloud/" }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Compute (TiDB) and storage (TiKV/TiFlash) scale independently; multi-region deployments use Raft placement rules or TiCDC replication."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["MySQL wire protocol", "TiDB Cloud Data Service (HTTP)"],
+  "compatibleWith": ["mysql"],
+  "drivers": ["Java", "Go", "Python", "JavaScript", "C#", "Ruby", "PHP", "Rust"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "MySQL protocol and dialect compatibility eases migration from sharded MySQL",
+    "TiFlash columnar replicas give real-time analytics on fresh OLTP data without ETL",
+    "Independent scaling of SQL compute and storage layers",
+    "Online DDL and stale-read/flashback queries for operational safety",
+    "Apache 2.0 license with a large production footprint"
+  ],
+  "weaknesses": [
+    "No triggers, stored procedures or foreign-key-heavy MySQL features in self-managed builds",
+    "Many components (PD, TiKV, TiFlash, TiCDC) to operate when self-hosting",
+    "Small clusters carry high fixed overhead compared with a single MySQL node",
+    "Hotspot writes on monotonically increasing keys need AUTO_RANDOM or careful design"
+  ],
+  "useCases": [
+    "Replacing hand-sharded MySQL",
+    "HTAP dashboards on live transactional data",
+    "SaaS platforms with very large tenant counts",
+    "Payment and order systems at internet scale",
+    "AI apps storing vectors next to relational data (TiDB Cloud)"
+  ],
+  "notIdealFor": [
+    "Apps that depend on MySQL triggers or stored procedures",
+    "Tiny workloads that fit on one MySQL instance",
+    "Heavy full-text search on self-managed clusters"
+  ],
+  "notableUsers": ["Pinterest", "Plaid", "Bolt"],
+  "alternatives": ["mysql", "vitess", "cockroachdb", "oceanbase", "singlestore", "planetscale"],
+  "tags": ["distributed-sql", "newsql", "mysql-compatible", "htap", "open-source"],
+  "links": {
+    "website": "https://www.pingcap.com/",
+    "docs": "https://docs.pingcap.com/",
+    "repository": "https://github.com/pingcap/tidb",
+    "pricing": "https://www.pingcap.com/pricing/",
+    "changelog": "https://docs.pingcap.com/releases/tidb-self-managed/",
+    "wikipedia": "https://en.wikipedia.org/wiki/TiDB"
+  },
+  "ids": {
+    "github": "pingcap/tidb",
+    "stackoverflowTag": "tidb",
+    "wikipedia": "TiDB",
+    "dockerHub": "pingcap/tidb",
+    "pypi": "tidb-vector",
+    "hackerNewsQuery": "TiDB"
+  },
+  "brand": { "color": "#DC150B", "simpleIcon": "tidb" },
+  "sources": [
+    "https://docs.pingcap.com/releases/tidb-self-managed/",
+    "https://github.com/pingcap/tidb/releases",
+    "https://www.pingcap.com/tidb-release-support-policy/"
+  ],
+  "lastVerified": "2026-10-27"
+}

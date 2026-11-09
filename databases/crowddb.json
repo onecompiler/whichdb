@@ -1,0 +1,133 @@
+{
+  "slug": "crowddb",
+  "name": "CrowdDB",
+  "aliases": [],
+  "tagline": "Berkeley/ETH research database that routed parts of SQL queries to human workers on Mechanical Turk.",
+  "description": "CrowdDB was a research system from UC Berkeley and ETH Zurich, presented at SIGMOD 2011 by Michael Franklin, Donald Kossmann, Tim Kraska, Sukriti Ramesh and Reynold Xin, that treated people as a query-processing resource. Its CrowdSQL dialect let schemas mark tables or columns as crowdsourced, so a query could fill in missing values, add missing rows, or answer subjective comparisons and entity-resolution questions that machines handle poorly. The optimizer added crowd operators such as CrowdProbe, CrowdJoin and CrowdCompare, generated task user interfaces automatically from the schema, and posted them to Amazon Mechanical Turk, weighing cost, latency and answer quality. It was a prototype, never released as a product, but it started a line of work on human-in-the-loop query processing.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Academic prototype (SIGMOD 2011, UC Berkeley and ETH Zurich); never released.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "UC Berkeley and ETH Zurich",
+  "vendorType": "academic",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Unreleased research code"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "Research prototype; crowd tasks were paid via Mechanical Turk."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "CrowdSQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Extended SQL so missing data and subjective questions could be answered by people",
+    "Generated crowd task UIs automatically from the schema",
+    "Optimizer balanced monetary cost, latency and answer quality"
+  ],
+  "weaknesses": [
+    "Never released; no code to run",
+    "Human answers are slow, costly and noisy"
+  ],
+  "useCases": [
+    "Studying human-in-the-loop query processing",
+    "Background for crowdsourced data cleaning and labelling research"
+  ],
+  "notIdealFor": [
+    "Any production use"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "duckdb"
+  ],
+  "tags": [
+    "research",
+    "crowdsourcing",
+    "sigmod-2011",
+    "berkeley"
+  ],
+  "links": {
+    "website": "https://doi.org/10.1145/1989323.1989331"
+  },
+  "ids": {
+    "hackerNewsQuery": "CrowdDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://doi.org/10.1145/1989323.1989331",
+    "https://dbdb.io/db/crowddb"
+  ],
+  "lastVerified": "2026-10-27"
+}

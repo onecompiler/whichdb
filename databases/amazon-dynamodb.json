@@ -1,0 +1,204 @@
+{
+  "slug": "amazon-dynamodb",
+  "name": "Amazon DynamoDB",
+  "aliases": [
+    "DynamoDB",
+    "DDB"
+  ],
+  "tagline": "AWS's serverless key-value and document store with single-digit-millisecond reads at any scale.",
+  "description": "DynamoDB is AWS's fully managed, serverless NoSQL database: you design tables around partition and sort keys, and AWS handles sharding, replication across three AZs, backups and capacity. It shines when access patterns are known up front and you need predictable latency from one request per second to millions, which is why it sits behind much of Amazon.com and countless serverless apps. The price of that predictability is data modelling discipline (single-table design, GSIs) and very limited ad-hoc querying. Global tables now offer multi-region strong consistency as well as the classic last-writer-wins mode.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "session-store",
+    "caching",
+    "metadata-store",
+    "iot",
+    "event-sourcing"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (AWS service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": true,
+    "startingPrice": "On-demand from $0.625 per million write request units (us-east-1)",
+    "notes": "On-demand or provisioned capacity; storage billed per GB-month. Always-free tier includes 25 GB of storage."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon DynamoDB",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/dynamodb/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Automatic partitioning with no practical table size limit; global tables replicate writes across regions."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "DynamoDB API",
+    "PartiQL"
+  ],
+  "apis": [
+    "HTTPS/JSON API",
+    "DynamoDB Streams"
+  ],
+  "compatibleWith": [
+    "dynamodb"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#",
+    ".NET",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Consistent single-digit-millisecond latency regardless of table size",
+    "Truly serverless: no instances, patching, or capacity planning in on-demand mode",
+    "Global tables with multi-region writes and an optional strongly consistent mode",
+    "Deep AWS integration: Lambda triggers via Streams, IAM fine-grained access, zero-ETL to Redshift and OpenSearch",
+    "Point-in-time recovery up to 35 days and on-demand backups built in"
+  ],
+  "weaknesses": [
+    "Queries must follow the key design; ad-hoc filtering and joins are impractical",
+    "400 KB item size limit and 1 MB page size for queries and scans",
+    "Costs can spike with hot partitions, scans, or large GSIs",
+    "Hard AWS lock-in; the API is only partly reproduced elsewhere (ScyllaDB Alternator)",
+    "Transactions are capped at 100 items and cost double the capacity units"
+  ],
+  "useCases": [
+    "Serverless application backends on Lambda",
+    "User profiles, sessions and shopping carts",
+    "High-traffic e-commerce and gaming state",
+    "IoT device state and metadata",
+    "Event-sourced systems using DynamoDB Streams"
+  ],
+  "notIdealFor": [
+    "Ad-hoc analytics and reporting",
+    "Highly relational data with many joins",
+    "Multi-cloud or on-prem deployments",
+    "Full-text search"
+  ],
+  "notableUsers": [
+    "Amazon",
+    "Disney+",
+    "Lyft",
+    "Zoom",
+    "Duolingo"
+  ],
+  "alternatives": [
+    "scylladb",
+    "apache-cassandra",
+    "azure-cosmos-db",
+    "google-cloud-bigtable",
+    "google-cloud-firestore",
+    "mongodb-atlas",
+    "amazon-keyspaces"
+  ],
+  "tags": [
+    "aws",
+    "serverless",
+    "nosql",
+    "managed",
+    "single-table-design"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/dynamodb/",
+    "docs": "https://docs.aws.amazon.com/dynamodb/",
+    "pricing": "https://aws.amazon.com/dynamodb/pricing/",
+    "changelog": "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DocumentHistory.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_DynamoDB"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-dynamodb",
+    "wikipedia": "Amazon DynamoDB",
+    "dockerHub": "amazon/dynamodb-local",
+    "npm": "@aws-sdk/client-dynamodb",
+    "hackerNewsQuery": "DynamoDB"
+  },
+  "brand": {
+    "color": "#4053D6"
+  },
+  "sources": [
+    "https://aws.amazon.com/dynamodb/",
+    "https://aws.amazon.com/dynamodb/pricing/",
+    "https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DocumentHistory.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

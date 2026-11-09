@@ -1,0 +1,165 @@
+{
+  "slug": "forestdb",
+  "name": "ForestDB",
+  "aliases": [],
+  "tagline": "Couchbase's HB+-trie key-value storage library; no longer actively developed.",
+  "description": "ForestDB is an embeddable key-value storage library from Couchbase whose main index is an HB+-trie: a trie of small B+-trees keyed on fixed-size chunks of the key, which keeps lookups shallow even for long keys. It combines an append-only file with a write-ahead log and an in-memory WAL index, and offers MVCC snapshots, rollback to an earlier commit, iteration by key or sequence number and per-file compaction. The design was published in IEEE Transactions on Computers and reached v1.2 in June 2016. Couchbase now states in its commits that ForestDB is not under active development; it is still compiled as part of the Couchbase Server build, so only build fixes land. Use it to study the HB+-trie, not for new systems.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Couchbase says ForestDB is no longer under active development; it receives only build fixes (latest 2024) because it is still part of the Couchbase Server build.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Couchbase",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "1.2",
+    "date": "2016-06-01"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-process library; distribution is left to the embedding system."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "HB+-trie keeps index depth low for long, variable-length keys",
+    "MVCC snapshots and rollback to a previous commit point",
+    "Iterate by key range or by sequence number",
+    "Peer-reviewed design with a public benchmark harness"
+  ],
+  "weaknesses": [
+    "No feature development; Couchbase only keeps it compiling",
+    "Transactions offer read-committed or read-uncommitted isolation only",
+    "Append-only files need compaction tuning to control space amplification",
+    "Small ecosystem: no maintained bindings beyond C/C++"
+  ],
+  "useCases": [
+    "Studying trie-of-B+-tree index designs",
+    "Maintaining software that already embeds ForestDB",
+    "Benchmark comparisons against LSM and B-tree engines"
+  ],
+  "notIdealFor": [
+    "New embedded storage projects",
+    "Workloads needing serializable transactions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "wiredtiger",
+    "lmdb",
+    "pebble",
+    "leveldb"
+  ],
+  "tags": [
+    "storage-engine",
+    "hb-trie",
+    "embedded",
+    "couchbase",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://github.com/couchbase/forestdb",
+    "repository": "https://github.com/couchbase/forestdb",
+    "docs": "https://github.com/couchbaselabs/forestdb/wiki"
+  },
+  "ids": {
+    "github": "couchbase/forestdb",
+    "hackerNewsQuery": "ForestDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/couchbase/forestdb",
+    "https://github.com/couchbase/forestdb/commits/cb-master",
+    "https://github.com/couchbase/forestdb/releases/tag/v1.2"
+  ],
+  "lastVerified": "2026-10-27"
+}

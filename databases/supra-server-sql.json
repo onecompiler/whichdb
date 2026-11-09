@@ -1,0 +1,148 @@
+{
+  "slug": "supra-server-sql",
+  "name": "SUPRA Server SQL",
+  "aliases": [
+    "Cincom SUPRA",
+    "SUPRA SQL",
+    "SUPRA Server"
+  ],
+  "tagline": "Cincom's mainframe relational DBMS for high-volume OLTP, the SQL half of the SUPRA family.",
+  "description": "SUPRA is the mainframe database family of Cincom Systems, whose TOTAL (1968) was the first commercial DBMS sold independently of hardware vendors. The family pairs SUPRA PDM, a networked/hierarchical engine, with SUPRA SQL, Cincom's ANSI-compliant relational DBMS introduced around 1989 for high-volume online transaction processing. Applications reach it through standard SQL interfaces from COBOL, Java and Visual Basic, and SQL reporting and BI tools can query the data directly. Cincom still lists SUPRA and runs a customer portal for it; the company itself was acquired by PartnerOne in June 2024. It matters to long-standing Cincom mainframe shops, not to new projects.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Cincom Systems (PartnerOne)",
+  "vendorType": "company",
+  "initialRelease": 1989,
+  "writtenIn": [
+    "Assembler"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Standard SQL interfaces"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "COBOL",
+    "Java",
+    "Visual Basic"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Built for high-volume mainframe OLTP",
+    "Shares a family and tooling with SUPRA PDM for mixed relational and network data",
+    "Standard SQL access for COBOL, Java and reporting tools"
+  ],
+  "weaknesses": [
+    "Mainframe-only and sales-led, with little public documentation",
+    "Small, shrinking skills pool",
+    "No cloud or managed offering"
+  ],
+  "useCases": [
+    "Existing Cincom mainframe transaction systems",
+    "SQL reporting over SUPRA data"
+  ],
+  "notIdealFor": [
+    "New applications",
+    "Distributed or cloud-native architectures"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-db2",
+    "total",
+    "idms",
+    "adabas",
+    "ibm-ims"
+  ],
+  "tags": [
+    "mainframe",
+    "cincom",
+    "sql",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.cincom.com/supra/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Cincom_Systems"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://www.cincom.com/supra/",
+    "https://en.wikipedia.org/wiki/Cincom_Systems"
+  ],
+  "lastVerified": "2026-10-27"
+}

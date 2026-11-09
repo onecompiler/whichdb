@@ -1,0 +1,118 @@
+{
+  "slug": "elevatedb",
+  "name": "ElevateDB",
+  "aliases": ["EDB", "Elevate Software ElevateDB"],
+  "tagline": "Royalty-free embedded and client/server SQL engine for Delphi, C++Builder, Lazarus, .NET, ODBC and PHP apps.",
+  "description": "ElevateDB is a commercial relational engine from Elevate Software of North Tonawanda, New York, launched in 2007 as the successor to the company's DBISAM, which had replaced the Borland Database Engine in many Delphi applications. It implements a large subset of SQL:2003, including views, triggers, SQL/PSM stored procedures and functions, constraints, generated and computed columns and intervals, and also gives Delphi developers fast navigational, table-cursor access. The same client code works against local single-user files or the ElevateDB Server, a single executable whose source is included with some editions. It is licensed per developer with royalty-free redistribution and is still maintained: 2.40 added RAD Studio 13 support in September 2025, followed by Build 3 that October.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp", "embedded"],
+  "architecture": ["embedded", "client-server"],
+  "developer": "Elevate Software, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2007,
+  "latestVersion": { "version": "2.40 Build 3", "date": "2025-10-27" },
+  "writtenIn": ["Object Pascal (Delphi)"],
+  "license": { "type": "proprietary", "name": "Proprietary (per-developer, royalty-free distribution)" },
+  "pricing": {
+    "models": ["subscription"],
+    "freeTier": false,
+    "startingPrice": "$159 (LCL Standard with source)",
+    "notes": "Licensed per developer with royalty-free runtime distribution; the first year of updates is included, then an optional subscription."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows", "linux", "macos"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Built for packaged applications: local files or a single ElevateDB Server, with store-based replication between sites."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL (SQL:2003 subset)", "SQL/PSM"],
+  "apis": ["VCL/LCL/FireMonkey components", "ADO.NET data provider", "ODBC", "PHP extension"],
+  "compatibleWith": [],
+  "drivers": ["Delphi", "C++Builder", "Lazarus/Free Pascal", "C#", "PHP", "ODBC"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Royalty-free distribution: no per-install database licence to pass on to customers",
+    "Same client code switches between embedded single-user files and multi-user client/server",
+    "Tight Delphi/C++Builder/Lazarus integration with both SQL and navigational table access",
+    "Server source code available, so ISVs can rebrand or customise it",
+    "Still tracking new RAD Studio releases (RAD Studio 13 support in 2025)"
+  ],
+  "weaknesses": [
+    "Ecosystem is centred on Delphi; few tools or hosting options elsewhere",
+    "No clustering, sharding or managed cloud offering",
+    "Small vendor; support is mainly forums and the founder's team"
+  ],
+  "useCases": [
+    "Packaged Delphi or C++Builder business applications (POS, practice management, pharmacy)",
+    "Replacing BDE/Paradox or DBISAM back ends",
+    "Desktop apps that need to grow from single-user to client/server without code changes"
+  ],
+  "notIdealFor": [
+    "Web-scale or horizontally scaled services",
+    "Teams outside the Delphi/Pascal ecosystem"
+  ],
+  "notableUsers": [],
+  "alternatives": ["firebird", "sqlite", "interbase", "nexusdb", "paradox", "sql-server"],
+  "tags": ["delphi", "embedded", "royalty-free", "sql", "windows"],
+  "links": {
+    "website": "https://www.elevatesoft.com/products?category=edb",
+    "docs": "https://www.elevatesoft.com/manual?category=edb",
+    "pricing": "https://www.elevatesoft.com/products?action=order&category=edb&type=delphibcb",
+    "changelog": "https://www.elevatesoft.com/incident?category=edb"
+  },
+  "ids": {
+    "hackerNewsQuery": "ElevateDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.elevatesoft.com/products?category=edb",
+    "https://www.elevatesoft.com/about",
+    "https://www.elevatesoft.com/blog",
+    "https://www.elevatesoft.com/incident?category=edb",
+    "https://dbdb.io/db/elevatedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

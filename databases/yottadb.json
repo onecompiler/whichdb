@@ -1,0 +1,179 @@
+{
+  "slug": "yottadb",
+  "name": "YottaDB",
+  "aliases": [
+    "YDB (YottaDB)",
+    "YottaDB r2"
+  ],
+  "tagline": "Open-source MUMPS/M hierarchical key-value database forked from GT.M, with SQL via Octo.",
+  "description": "YottaDB is a high-performance hierarchical key-value database descended from GT.M, which it forked in 2017 to develop in the open. Data lives in persistent sparse arrays (M globals) with ACID transactions, journaling and logical multi-site replication, and it serves core-banking and VistA electronic health record systems around the world. Beyond the M language it offers native APIs for C, Go, Rust, Python, Node.js, Perl and Lua, and Octo adds SQL over the PostgreSQL wire protocol. It is the go-to engine for keeping M applications alive on modern Linux.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "hierarchical",
+  "models": [
+    "hierarchical",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "embedded"
+  ],
+  "developer": "YottaDB LLC",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "r2.06",
+    "date": "2026-04-27"
+  },
+  "writtenIn": [
+    "C",
+    "M (MUMPS)"
+  ],
+  "basedOn": "GT.M",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3.0",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Free software; YottaDB LLC sells support contracts."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Vertical scale plus logical multi-site replication for business continuity."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "M (MUMPS)",
+    "SQL (Octo)"
+  ],
+  "apis": [
+    "C API",
+    "PostgreSQL wire protocol (Octo)"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "M",
+    "C",
+    "Go",
+    "Rust",
+    "Python",
+    "Node.js",
+    "Perl",
+    "Lua"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast in-process access to persistent hierarchical arrays",
+    "Decades of production use in banking and healthcare via its GT.M lineage",
+    "Native APIs in modern languages, not only M",
+    "SQL access through Octo for reporting tools"
+  ],
+  "weaknesses": [
+    "M programming model and tooling are unfamiliar to most engineers",
+    "Linux-only with a small talent pool",
+    "No built-in sharding; scale-out is application-level"
+  ],
+  "useCases": [
+    "VistA and other M-based EHR systems",
+    "Core-banking platforms built on M",
+    "Migrating GT.M or Caché applications to open source"
+  ],
+  "notIdealFor": [
+    "Greenfield apps without M heritage",
+    "Horizontally sharded internet-scale workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "gt-m",
+    "intersystems-iris",
+    "intersystems-cache",
+    "berkeley-db",
+    "lmdb"
+  ],
+  "tags": [
+    "mumps",
+    "m-language",
+    "hierarchical",
+    "healthcare",
+    "banking"
+  ],
+  "links": {
+    "website": "https://yottadb.com/",
+    "docs": "https://docs.yottadb.com/",
+    "repository": "https://gitlab.com/YottaDB/DB/YDB",
+    "changelog": "https://gitlab.com/YottaDB/DB/YDB/-/releases"
+  },
+  "ids": {
+    "github": "YottaDB/YDB",
+    "stackoverflowTag": "yottadb",
+    "dockerHub": "yottadb/yottadb-base",
+    "pypi": "yottadb",
+    "hackerNewsQuery": "YottaDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://gitlab.com/YottaDB/DB/YDB/-/releases",
+    "https://yottadb.com/product/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,174 @@
+{
+  "slug": "zincsearch",
+  "name": "ZincSearch",
+  "aliases": [
+    "Zinc",
+    "Zinc Search"
+  ],
+  "tagline": "Lightweight single-binary full-text search engine in Go with Elasticsearch-compatible ingest.",
+  "description": "ZincSearch is a small Go search engine built on the bluge indexing library, created by the team that later built OpenObserve. It ships as one binary with an embedded web UI, accepts data through Elasticsearch-compatible bulk and index APIs, and needs a fraction of Elasticsearch's memory. The original company now steers log users to OpenObserve, and ZincSearch has become community-maintained; after a quiet 2024-25 it resumed releases in September 2026 with 0.4.11 and a 1.0 beta. Good for small app search or replacing a tiny Elasticsearch node, not for serious scale.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "document"
+  ],
+  "workloads": [
+    "full-text-search"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "ZincSearch community (originally Zinc Labs, now OpenObserve)",
+  "vendorType": "community",
+  "initialRelease": 2021,
+  "latestVersion": {
+    "version": "0.4.11",
+    "date": "2026-09-12"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "bluge",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single node; designed for modest datasets."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Elasticsearch-style Query DSL (subset)"
+  ],
+  "apis": [
+    "REST/JSON"
+  ],
+  "compatibleWith": [
+    "elasticsearch"
+  ],
+  "drivers": [
+    "Go",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Single binary with built-in web UI",
+    "Very low memory use compared with Elasticsearch",
+    "Elasticsearch-compatible bulk ingestion makes migration of small workloads easy",
+    "Schemaless documents with no upfront mapping"
+  ],
+  "weaknesses": [
+    "No clustering or replication",
+    "Small community-driven maintainer base after the company moved on",
+    "No vector search",
+    "Query DSL compatibility with Elasticsearch is partial"
+  ],
+  "useCases": [
+    "Small application search",
+    "Lightweight replacement for a single Elasticsearch node",
+    "Developer and test environments"
+  ],
+  "notIdealFor": [
+    "Production log analytics (use OpenObserve or Quickwit)",
+    "High availability requirements",
+    "Semantic or vector search"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "meilisearch",
+    "typesense",
+    "openobserve",
+    "elasticsearch",
+    "sonic",
+    "manticore-search"
+  ],
+  "tags": [
+    "search",
+    "go",
+    "lightweight",
+    "elasticsearch-alternative",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://zincsearch-docs.zinc.dev/",
+    "docs": "https://zincsearch-docs.zinc.dev/",
+    "repository": "https://github.com/zincsearch/zincsearch",
+    "changelog": "https://github.com/zincsearch/zincsearch/releases"
+  },
+  "ids": {
+    "github": "zincsearch/zincsearch",
+    "hackerNewsQuery": "ZincSearch"
+  },
+  "brand": {
+    "color": "#5BA37F",
+    "simpleIcon": "zincsearch"
+  },
+  "sources": [
+    "https://github.com/zincsearch/zincsearch",
+    "https://github.com/zincsearch/zincsearch/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

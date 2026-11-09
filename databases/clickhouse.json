@@ -1,0 +1,241 @@
+{
+  "slug": "clickhouse",
+  "name": "ClickHouse",
+  "aliases": [
+    "ClickHouse Cloud"
+  ],
+  "tagline": "Open-source columnar OLAP database known for very fast aggregations over billions of rows.",
+  "description": "ClickHouse is a column-oriented SQL database built for real-time analytics: MergeTree tables sort and compress data on disk, and a vectorized engine scans billions of rows per second per server. It shines on append-heavy event, log, observability and product-analytics data, with materialized views, TTLs, skip indexes, a native JSON type and vector and text indexes. It can run as a single binary, a sharded self-managed cluster or ClickHouse Cloud with storage on S3. Updates, deletes and complex multi-way joins have improved a lot but remain weaker than in a classic warehouse.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "vector",
+    "time-series"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "observability",
+    "data-warehouse",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "single-node",
+    "client-server"
+  ],
+  "developer": "ClickHouse, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "26.10.2.103",
+    "date": "2026-10-24"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; ClickHouse Cloud bills compute and storage separately with a trial credit; also offered by Aiven, Alibaba Cloud and others."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "alibaba-cloud",
+      "tencent-cloud",
+      "aiven"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "ClickHouse Cloud",
+      "provider": "ClickHouse, Inc.",
+      "url": "https://clickhouse.com/cloud"
+    },
+    {
+      "name": "Aiven for ClickHouse",
+      "provider": "Aiven",
+      "url": "https://aiven.io/clickhouse"
+    },
+    {
+      "name": "Tinybird",
+      "provider": "Tinybird",
+      "url": "https://www.tinybird.co/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Sharded and replicated clusters with ClickHouse Keeper; Cloud separates compute from S3 storage. Multi-PB deployments are documented."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ClickHouse dialect)",
+    "PRQL",
+    "KQL (experimental)"
+  ],
+  "apis": [
+    "Native TCP protocol",
+    "HTTP interface",
+    "MySQL wire protocol",
+    "PostgreSQL wire protocol",
+    "gRPC",
+    "Arrow Flight"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "Go",
+    "Java",
+    "JavaScript",
+    "Rust",
+    "C++",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Scans and aggregates billions of rows per second per node",
+    "Excellent compression (often 10x+) with per-column codecs",
+    "Incremental materialized views and TTLs make rollups and retention cheap",
+    "Ingests millions of rows per second, including directly from Kafka",
+    "Runs anywhere: single binary, self-managed cluster or ClickHouse Cloud",
+    "Huge function library and integrations with S3, Iceberg, Delta and Postgres"
+  ],
+  "weaknesses": [
+    "Updates and deletes are heavier than in row stores (lightweight deletes help)",
+    "Large multi-way joins need care with join algorithms and memory",
+    "Self-managed clusters (sharding, Keeper, replication) take real ops skill",
+    "No full multi-statement ACID transactions"
+  ],
+  "useCases": [
+    "Product and web analytics",
+    "Log and observability backends",
+    "Real-time dashboards over event streams",
+    "Time-series and IoT metrics at scale",
+    "Ad-tech and clickstream analysis",
+    "LLM observability and tracing"
+  ],
+  "notIdealFor": [
+    "OLTP with frequent row updates",
+    "Key-value point lookups at high QPS",
+    "Workloads needing strict multi-row transactions"
+  ],
+  "notableUsers": [
+    "Cloudflare",
+    "Uber",
+    "eBay",
+    "GitLab",
+    "Sentry"
+  ],
+  "alternatives": [
+    "apache-druid",
+    "apache-pinot",
+    "starrocks",
+    "apache-doris",
+    "duckdb",
+    "snowflake",
+    "tinybird",
+    "firebolt"
+  ],
+  "tags": [
+    "olap",
+    "open-source",
+    "real-time",
+    "columnar",
+    "observability"
+  ],
+  "links": {
+    "website": "https://clickhouse.com/",
+    "docs": "https://clickhouse.com/docs",
+    "repository": "https://github.com/ClickHouse/ClickHouse",
+    "pricing": "https://clickhouse.com/pricing",
+    "changelog": "https://clickhouse.com/docs/whats-new/changelog",
+    "wikipedia": "https://en.wikipedia.org/wiki/ClickHouse"
+  },
+  "ids": {
+    "github": "ClickHouse/ClickHouse",
+    "stackoverflowTag": "clickhouse",
+    "wikipedia": "ClickHouse",
+    "dockerHub": "clickhouse/clickhouse-server",
+    "npm": "@clickhouse/client",
+    "pypi": [
+      "clickhouse-connect",
+      "clickhouse-driver"
+    ],
+    "crates": "clickhouse",
+    "hackerNewsQuery": "ClickHouse"
+  },
+  "brand": {
+    "color": "#FFCC01",
+    "simpleIcon": "clickhouse"
+  },
+  "sources": [
+    "https://github.com/ClickHouse/ClickHouse/releases",
+    "https://clickhouse.com/",
+    "https://en.wikipedia.org/wiki/ClickHouse"
+  ],
+  "lastVerified": "2026-10-27"
+}

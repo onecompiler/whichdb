@@ -1,0 +1,170 @@
+{
+  "slug": "antidote",
+  "name": "Antidote",
+  "aliases": [
+    "AntidoteDB"
+  ],
+  "tagline": "Research geo-replicated key-value store built on CRDTs with highly available causal transactions.",
+  "description": "AntidoteDB is the reference platform of the EU SyncFree and LightKone research projects: an Erlang key-value store, built on riak_core_lite, where every value is a CRDT (counters, sets, registers, flags, maps) so concurrent updates in different data centres merge without coordination. It layers highly available transactions with transactional causal consistency (the Cure protocol) on top, so a client sees a causally consistent snapshot across keys while each site keeps accepting writes during partitions. Clients talk to it over a Protocol Buffers interface with Erlang, Java, Go, JavaScript and Python libraries. The last tagged release is v0.2.2 (November 2019); the repository still gets occasional compatibility fixes, such as Erlang 28 support in 2026, but little new feature work.",
+  "productType": "research",
+  "status": "maintenance",
+  "statusNote": "Research platform of the SyncFree/LightKone EU projects; last release v0.2.2 (Nov 2019), with only occasional maintenance commits since.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "local-first"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "SyncFree and LightKone EU research consortia",
+  "vendorType": "academic",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "0.2.2",
+    "date": "2019-11-28"
+  },
+  "writtenIn": [
+    "Erlang"
+  ],
+  "basedOn": "riak_core_lite",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Shards keys across nodes within a data centre and replicates asynchronously between data centres; evaluated mainly in research benchmarks."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "causal"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API with CRDT operations"
+  ],
+  "apis": [
+    "Protocol Buffers interface"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Erlang",
+    "Java",
+    "Go",
+    "JavaScript",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Rich CRDT library (counters, sets, registers, maps) with well-defined merge semantics",
+    "Causally consistent multi-key transactions that stay available during partitions",
+    "Active-active geo-replication without a central coordinator",
+    "Well-documented research artefact with many published papers behind it"
+  ],
+  "weaknesses": [
+    "Research-grade: little production hardening, tooling or operational documentation",
+    "No release since 2019 and a very small community",
+    "Key-value API only; no secondary indexes or query language",
+    "Weak isolation by design; not suited to invariants that need coordination"
+  ],
+  "useCases": [
+    "Teaching and research on CRDTs and causal consistency",
+    "Prototyping geo-replicated, partition-tolerant application logic",
+    "Benchmarking against other weakly consistent stores"
+  ],
+  "notIdealFor": [
+    "Production systems needing vendor support",
+    "Applications needing strong (serializable) consistency or rich queries"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "riak-kv",
+    "redis",
+    "electricsql",
+    "cockroachdb",
+    "apache-cassandra"
+  ],
+  "tags": [
+    "crdt",
+    "geo-replication",
+    "causal-consistency",
+    "research",
+    "erlang"
+  ],
+  "links": {
+    "website": "https://www.antidotedb.eu/",
+    "docs": "https://antidotedb.gitbook.io/documentation/",
+    "repository": "https://github.com/AntidoteDB/antidote",
+    "changelog": "https://github.com/AntidoteDB/antidote/releases"
+  },
+  "ids": {
+    "github": "AntidoteDB/antidote",
+    "dockerHub": "antidotedb/antidote",
+    "hackerNewsQuery": "AntidoteDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/AntidoteDB/antidote",
+    "https://www.antidotedb.eu/",
+    "https://github.com/AntidoteDB/antidote/releases/tag/v0.2.2"
+  ],
+  "lastVerified": "2026-10-27"
+}

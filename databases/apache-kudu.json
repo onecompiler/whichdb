@@ -1,0 +1,177 @@
+{
+  "slug": "apache-kudu",
+  "name": "Apache Kudu",
+  "aliases": [
+    "Kudu"
+  ],
+  "tagline": "Columnar storage engine for fast analytics on fast-changing data, paired with Impala or Spark.",
+  "description": "Apache Kudu is a distributed columnar storage engine from the Hadoop ecosystem that fills the gap between HDFS/Parquet (fast scans, no updates) and HBase (fast updates, slow scans). Tables have primary keys and support inserts, updates and deletes with low latency, replicated with Raft, while keeping columnar scan performance. It has no SQL of its own; Impala, Spark or Presto/Trino provide the query layer. Kudu remains useful in Cloudera estates for mutable analytic tables, but releases are infrequent and Iceberg or Paimon now cover many of the same needs.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "1.18.1",
+    "date": "2026-01-09"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercially supported in Cloudera Data Platform."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Tablets are hash/range partitioned across tablet servers and replicated with Raft."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Impala SQL",
+    "Spark SQL",
+    "Kudu client API"
+  ],
+  "apis": [
+    "C++ client",
+    "Java client",
+    "Python client"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Low-latency inserts, updates and deletes on columnar tables",
+    "Raft replication gives strong consistency and automatic failover",
+    "Fast scans for analytics via Impala and Spark",
+    "Simpler than combining HBase with Parquet for mutable data"
+  ],
+  "weaknesses": [
+    "No query engine of its own",
+    "Slow release cadence and shrinking community",
+    "Tied to the Hadoop/Cloudera ecosystem",
+    "Not designed for object storage"
+  ],
+  "useCases": [
+    "Mutable fact tables in Cloudera",
+    "Near-real-time analytics with Impala",
+    "Time-series with updates"
+  ],
+  "notIdealFor": [
+    "Cloud-native object-storage lakehouses",
+    "Standalone SQL database use",
+    "OLTP with complex transactions"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-impala",
+    "apache-paimon",
+    "apache-hbase",
+    "clickhouse",
+    "starrocks"
+  ],
+  "tags": [
+    "hadoop",
+    "columnar",
+    "storage-engine",
+    "cloudera",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://kudu.apache.org/",
+    "docs": "https://kudu.apache.org/docs/",
+    "repository": "https://github.com/apache/kudu",
+    "changelog": "https://kudu.apache.org/releases/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Kudu"
+  },
+  "ids": {
+    "github": "apache/kudu",
+    "stackoverflowTag": "apache-kudu",
+    "wikipedia": "Apache Kudu",
+    "dockerHub": "apache/kudu",
+    "pypi": "kudu-python",
+    "hackerNewsQuery": "Apache Kudu"
+  },
+  "brand": {},
+  "sources": [
+    "https://kudu.apache.org/releases/",
+    "https://github.com/apache/kudu",
+    "https://en.wikipedia.org/wiki/Apache_Kudu"
+  ],
+  "lastVerified": "2026-10-27"
+}

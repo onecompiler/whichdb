@@ -1,0 +1,153 @@
+{
+  "slug": "shore-mt",
+  "name": "Shore-MT",
+  "aliases": [
+    "SHORE-MT",
+    "Shore Storage Manager: The Multi-Threaded Version"
+  ],
+  "tagline": "Multicore-scalable fork of the Shore storage manager from EPFL and CMU; a staple OLTP research testbed.",
+  "description": "Shore-MT began in 2007 when Anastasia Ailamaki's DIAS lab at EPFL, with Carnegie Mellon collaborators, ported release 5.0.1 of the Shore storage manager to Pthreads and systematically removed its scalability bottlenecks: new latching and synchronisation primitives, a reworked buffer pool, lock manager and log. Their EDBT 2009 paper showed that classic engines collapsed on multicore chips while Shore-MT kept scaling. UW-Madison then completed the port and published a documented release in 2010. It provides ACID transactions with ARIES logging and recovery, B+ tree and R* tree indexes and fine-grained locking as a library, and became the base for research systems such as DORA, PLP and Shore-Kits TPC benchmarks. Development tapered off by the mid-2010s.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research storage manager (2007 to mid-2010s); no longer developed and its Bitbucket repository is gone. Forks continued in later research engines.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "EPFL DIAS lab, Carnegie Mellon University and UW-Madison",
+  "vendorType": "academic",
+  "initialRelease": 2009,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Shore Storage Manager 5.0.1",
+  "license": {
+    "type": "permissive",
+    "name": "SHORE/UW and SHORE-MT/DIAS permissive licenses"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales across the cores of one SMP or NUMA machine."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C++ storage manager API"
+  ],
+  "apis": [
+    "C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Showed how to make a full ARIES-style storage manager scale on multicore CPUs",
+    "Complete transactional library: logging, recovery, locking, B+ trees and R* trees",
+    "Widely used OLTP research baseline with published TPC benchmark kits",
+    "Permissive license"
+  ],
+  "weaknesses": [
+    "No longer maintained; original code hosting has disappeared",
+    "Library only: no SQL, query processor or server",
+    "Some scalability changes were disabled as bug workarounds in the UW release"
+  ],
+  "useCases": [
+    "OLTP storage-engine research and teaching",
+    "Reproducing multicore database scalability studies"
+  ],
+  "notIdealFor": [
+    "Production applications",
+    "Anyone needing SQL or support"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "wiredtiger",
+    "rocksdb",
+    "berkeley-db",
+    "silo"
+  ],
+  "tags": [
+    "research",
+    "storage-manager",
+    "multicore",
+    "epfl",
+    "oltp"
+  ],
+  "links": {
+    "website": "https://research.cs.wisc.edu/shore-mt/",
+    "docs": "https://research.cs.wisc.edu/shore-mt/onlinedoc/html/index.html"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://research.cs.wisc.edu/shore-mt/",
+    "https://doi.org/10.1145/1516360.1516365",
+    "https://dbdb.io/db/shore-mt"
+  ],
+  "lastVerified": "2026-10-27"
+}

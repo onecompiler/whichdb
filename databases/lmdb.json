@@ -1,0 +1,183 @@
+{
+  "slug": "lmdb",
+  "name": "LMDB",
+  "aliases": [
+    "Lightning Memory-Mapped Database",
+    "MDB"
+  ],
+  "tagline": "Tiny memory-mapped B+tree with ACID transactions and lock-free readers; reached 1.0 in 2026.",
+  "description": "LMDB, written by Howard Chu for OpenLDAP, is a copy-on-write B+tree stored in a single memory-mapped file. Readers never block and never take locks, there is no write-ahead log or recovery step because the file is always consistent, and the whole library is a few thousand lines of C. That makes it exceptional for read-heavy embedded workloads and it is used by OpenLDAP, Monero, Postfix and many language bindings. The constraints are a single writer at a time and a file that must fit within the address space. After years on 0.9.x, LMDB 1.0 was released in 2026 with an on-disk format change, so plan a dump and reload when upgrading.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "embedded",
+    "metadata-store",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Symas Corporation / OpenLDAP Project",
+  "vendorType": "company",
+  "initialRelease": 2011,
+  "latestVersion": {
+    "version": "1.0.2",
+    "date": "2026-09-08"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "OpenLDAP Public License 2.8",
+    "spdx": "OLDAP-2.8"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial support from Symas."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single file bounded by the configured map size and virtual address space; multi-TB files work on 64-bit systems."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C API"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Python",
+    "Go",
+    "Rust",
+    "Java",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Lock-free, zero-copy reads directly from the memory map",
+    "Crash-proof copy-on-write design with no recovery or WAL",
+    "Full ACID transactions with MVCC snapshots",
+    "Tiny C codebase with bindings for nearly every language",
+    "Safe multi-process access to one environment"
+  ],
+  "weaknesses": [
+    "Only one write transaction at a time",
+    "Map size must be set up front and the file never shrinks automatically",
+    "Long-lived read transactions prevent page reuse and grow the file",
+    "1.0 changes the on-disk format; 0.9 data must be exported and reloaded"
+  ],
+  "useCases": [
+    "Read-heavy embedded indexes and caches",
+    "Directory services (OpenLDAP back-mdb)",
+    "Blockchain and wallet state",
+    "ML dataset storage with fast random reads"
+  ],
+  "notIdealFor": [
+    "Write-heavy concurrent workloads",
+    "Datasets far larger than addressable memory",
+    "Network or distributed access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "rocksdb",
+    "bbolt",
+    "redb",
+    "berkeley-db",
+    "leveldb",
+    "sqlite"
+  ],
+  "tags": [
+    "b-tree",
+    "mmap",
+    "embedded",
+    "c",
+    "acid"
+  ],
+  "links": {
+    "website": "https://www.symas.com/mdb",
+    "docs": "http://www.lmdb.tech/doc/",
+    "repository": "https://github.com/LMDB/lmdb",
+    "changelog": "https://github.com/LMDB/lmdb/tags",
+    "wikipedia": "https://en.wikipedia.org/wiki/Lightning_Memory-Mapped_Database"
+  },
+  "ids": {
+    "github": "LMDB/lmdb",
+    "stackoverflowTag": "lmdb",
+    "wikipedia": "Lightning Memory-Mapped Database",
+    "crates": "heed",
+    "hackerNewsQuery": "LMDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://lists.openldap.org/hyperkitty/list/openldap-announce@openldap.org/thread/NALMGAVWIBY7YR4RT4JQERKIX72JNTFH/",
+    "https://github.com/LMDB/lmdb",
+    "https://www.symas.com/mdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

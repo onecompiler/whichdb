@@ -1,0 +1,179 @@
+{
+  "slug": "brightstardb",
+  "name": "BrightstarDB",
+  "aliases": [
+    "Brightstar DB"
+  ],
+  "tagline": "MIT-licensed RDF triple store for .NET with SPARQL and a LINQ-based entity framework; dormant since 2020.",
+  "description": "BrightstarDB is a native RDF triple store written in C# for the .NET platform that runs either embedded in your process or as a server exposing a SPARQL 1.1 endpoint and REST API. Its distinguishing feature was a code-first entity framework: you declare .NET interfaces, BrightstarDB generates classes that persist as RDF, and a LINQ provider translates queries into SPARQL, so you get ORM-style development over a schema-free graph. It started as a commercial product from NetworkedPlanet and went open source under MIT in 2013. The last stable release was 1.13.3.1 in February 2018, a 1.14 alpha followed in 2019, and the repository has seen only a dependency bump since 2020. Existing .NET apps can keep running it, but new RDF projects are better served by a maintained store such as GraphDB, Stardog, Oxigraph or Jena.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Dormant: last stable release 1.13.3.1 (Feb 2018), a 1.14 alpha in 2019, and only a dependency update since 2020.",
+  "maturity": "legacy",
+  "primaryModel": "rdf",
+  "models": [
+    "rdf",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph",
+    "embedded",
+    "graph-traversal"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "NetworkedPlanet / BrightstarDB contributors",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "1.13.3.1",
+    "date": "2018-02-19"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free under MIT; NetworkedPlanet historically offered commercial support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node store sized for application-level graphs rather than large knowledge graphs."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "SPARQL",
+    "LINQ"
+  ],
+  "apis": [
+    "SPARQL 1.1 Protocol",
+    "REST API",
+    ".NET client API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Code-first entity framework maps .NET interfaces to RDF and translates LINQ queries to SPARQL",
+    "Runs embedded in-process with zero configuration or as a standalone SPARQL 1.1 server",
+    "Schema-free RDF model makes merging differently shaped data straightforward",
+    "Its LINQ-to-SPARQL layer can also target other SPARQL 1.1 endpoints",
+    "Permissive MIT license"
+  ],
+  "weaknesses": [
+    "No stable release since 2018 and no meaningful development since 2020",
+    "Tied to .NET; little tooling or community outside that ecosystem",
+    "Single-node only, with no clustering or replication",
+    "Small user base, so issues often go unanswered"
+  ],
+  "useCases": [
+    "Maintaining existing .NET apps built on its entity framework",
+    "Embedded RDF storage inside desktop or mobile .NET apps",
+    "Studying a LINQ-to-SPARQL object mapping layer"
+  ],
+  "notIdealFor": [
+    "New production deployments",
+    "Large knowledge graphs",
+    "Non-.NET stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ontotext-graphdb",
+    "stardog",
+    "oxigraph",
+    "apache-jena-tdb",
+    "eclipse-rdf4j",
+    "virtuoso"
+  ],
+  "tags": [
+    "rdf",
+    "sparql",
+    "dotnet",
+    "triplestore",
+    "dormant"
+  ],
+  "links": {
+    "website": "https://brightstardb.com/",
+    "docs": "https://brightstardb.readthedocs.io/en/latest/",
+    "repository": "https://github.com/BrightstarDB/BrightstarDB",
+    "changelog": "https://github.com/BrightstarDB/BrightstarDB/releases"
+  },
+  "ids": {
+    "github": "BrightstarDB/BrightstarDB",
+    "dockerHub": "brightstardb/brightstardb",
+    "hackerNewsQuery": "BrightstarDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://brightstardb.com/",
+    "https://github.com/BrightstarDB/BrightstarDB",
+    "https://github.com/BrightstarDB/BrightstarDB/releases",
+    "https://dbdb.io/db/brightstardb"
+  ],
+  "lastVerified": "2026-10-27"
+}

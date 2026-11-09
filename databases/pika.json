@@ -1,0 +1,175 @@
+{
+  "slug": "pika",
+  "name": "Pika",
+  "aliases": [
+    "PikiwiDB"
+  ],
+  "tagline": "Qihoo 360's Redis-compatible, RocksDB-backed store for datasets too big for memory.",
+  "description": "Pika (now branded PikiwiDB in its OpenAtom Foundation repository) was built at Qihoo 360 to keep Redis's protocol and operating model while storing data in RocksDB on disk. It targets the point where Redis instances grow beyond tens of gigabytes and start suffering from slow restarts, large replication buffers and memory cost. It supports the common Redis data types, slaveof-style replication and Codis-based clustering, and is heavily used in China. Outside that ecosystem documentation is thinner, much of it in Chinese.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "queue"
+  ],
+  "architecture": [
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "OpenAtom Foundation (originally Qihoo 360)",
+  "vendorType": "foundation",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "4.0.4",
+    "date": "2026-10-16"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "RocksDB",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Single instances hold hundreds of GB on disk; horizontal scaling through Codis proxy-based clustering."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)"
+  ],
+  "apis": [
+    "RESP2"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Disk-based storage keeps cost low for large Redis-style datasets",
+    "Fast restarts and replication compared with huge in-memory Redis instances",
+    "Hot-data cache layer in front of RocksDB",
+    "Long production history at Qihoo 360 and other Chinese internet companies"
+  ],
+  "weaknesses": [
+    "Higher latency than RAM-only Redis",
+    "Clustering relies on Codis rather than native Redis Cluster",
+    "English documentation and community support are limited",
+    "Incomplete coverage of newer Redis commands"
+  ],
+  "useCases": [
+    "Large persistent key-value data behind a Redis API",
+    "Cutting memory cost of oversized Redis deployments"
+  ],
+  "notIdealFor": [
+    "Ultra-low-latency caching",
+    "Teams needing vendor support outside China"
+  ],
+  "notableUsers": [
+    "Qihoo 360"
+  ],
+  "alternatives": [
+    "apache-kvrocks",
+    "redis",
+    "valkey",
+    "dragonfly"
+  ],
+  "tags": [
+    "redis-compatible",
+    "rocksdb",
+    "disk-based",
+    "openatom"
+  ],
+  "links": {
+    "website": "https://github.com/OpenAtomFoundation/pikiwidb",
+    "repository": "https://github.com/OpenAtomFoundation/pikiwidb",
+    "changelog": "https://github.com/OpenAtomFoundation/pikiwidb/releases"
+  },
+  "ids": {
+    "github": "OpenAtomFoundation/pikiwidb",
+    "dockerHub": "pikadb/pika",
+    "hackerNewsQuery": "PikiwiDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/OpenAtomFoundation/pikiwidb",
+    "https://github.com/OpenAtomFoundation/pikiwidb/releases",
+    "https://dbdb.io/db/pika"
+  ],
+  "lastVerified": "2026-10-27"
+}

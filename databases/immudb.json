@@ -1,0 +1,181 @@
+{
+  "slug": "immudb",
+  "name": "immudb",
+  "aliases": [
+    "Codenotary immudb"
+  ],
+  "tagline": "Immutable, tamper-evident database with cryptographic proofs, offering key-value, SQL and document APIs.",
+  "description": "immudb is an append-only database from Codenotary in which every write is recorded in a Merkle-tree-backed log. Clients can verify inclusion and consistency proofs themselves rather than trusting the server. It exposes key-value, SQL (with a subset of the PostgreSQL wire protocol) and document APIs, keeps full history so you can query data as of any earlier transaction, and runs embedded in Go or as a server. It is a practical self-hosted replacement for QLDB-style audit ledgers. The licence moved to BSL 1.1 from version 1.9DOM.2, so check the use grant before offering it as a service.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "ledger",
+  "models": [
+    "ledger",
+    "key-value",
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "ledger",
+    "oltp",
+    "event-sourcing"
+  ],
+  "architecture": [
+    "client-server",
+    "embedded",
+    "primary-replica"
+  ],
+  "developer": "Codenotary, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "1.11.2",
+    "date": "2026-09-03"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free for production use within the BSL grant; Codenotary sells support and commercial products."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single primary with asynchronous or synchronous replicas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (immudb dialect)",
+    "Key-value API"
+  ],
+  "apis": [
+    "gRPC",
+    "REST",
+    "PostgreSQL wire protocol (subset)"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Go",
+    "Java",
+    "Python",
+    "Node.js",
+    ".NET"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Client-verifiable cryptographic proofs that history was not altered",
+    "Time-travel queries over the full history of every key and row",
+    "Embeddable in Go or run as a server, self-hosted anywhere",
+    "SQL access through a subset of the PostgreSQL wire protocol"
+  ],
+  "weaknesses": [
+    "BSL licence since 1.9DOM.2 restricts some hosted uses",
+    "Storage only grows; deletes are logical",
+    "SQL dialect and Postgres compatibility are partial"
+  ],
+  "useCases": [
+    "Tamper-evident audit logs",
+    "Replacing Amazon QLDB with a self-hosted ledger",
+    "Software supply-chain and compliance records"
+  ],
+  "notIdealFor": [
+    "High-churn data that must be physically deleted (e.g. GDPR erasure)",
+    "General-purpose OLTP at large scale"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-qldb",
+    "tigerbeetle",
+    "xtdb",
+    "datomic",
+    "postgresql",
+    "bigchaindb"
+  ],
+  "tags": [
+    "ledger",
+    "immutable",
+    "audit",
+    "go",
+    "merkle-tree"
+  ],
+  "links": {
+    "website": "https://immudb.io/",
+    "docs": "https://docs.immudb.io/",
+    "repository": "https://github.com/codenotary/immudb",
+    "changelog": "https://github.com/codenotary/immudb/releases"
+  },
+  "ids": {
+    "github": "codenotary/immudb",
+    "stackoverflowTag": "immudb",
+    "dockerHub": "codenotary/immudb",
+    "pypi": "immudb-py",
+    "hackerNewsQuery": "immudb"
+  },
+  "brand": {},
+  "sources": [
+    "https://immudb.io/",
+    "https://github.com/codenotary/immudb/releases",
+    "https://github.com/codenotary/immudb/blob/master/LICENSE"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,185 @@
+{
+  "slug": "pocketbase",
+  "name": "PocketBase",
+  "aliases": [
+    "Pocket Base"
+  ],
+  "tagline": "Open-source backend in one Go binary: SQLite database, auth, files, realtime and admin UI.",
+  "description": "PocketBase packages an embedded SQLite database, a REST API with filter syntax, realtime subscriptions over SSE, auth (email, OAuth2, OTP, MFA), file storage (local or S3) and an admin dashboard into one Go executable. You can extend it with Go or JavaScript hooks. Collections map to SQLite tables with typed fields, relations and per-collection API rules, so it is closer to a tiny Firebase or Supabase than to a document database. It is pre-1.0 (v0.41.0 as of October 2026). In October 2026 its author moved development off GitHub to a self-hosted forge at ganigeorgiev.com and archived the GitHub repo, so update import paths and release feeds.",
+  "productType": "platform",
+  "status": "active",
+  "statusNote": "Development moved off GitHub to ganigeorgiev.com in October 2026; the GitHub repo is archived read-only and new releases appear only on the new host.",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "pub-sub",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Gani Georgiev",
+  "vendorType": "community",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "0.41.0",
+    "date": "2026-10"
+  },
+  "writtenIn": [
+    "Go",
+    "JavaScript"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; no official hosted offering."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "One process on one machine; vertical scaling only, inherits SQLite's single-writer model."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "PocketBase filter syntax",
+    "SQL (via hooks)"
+  ],
+  "apis": [
+    "REST",
+    "Server-Sent Events (realtime)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Dart"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Entire backend (DB, auth, files, realtime, admin UI) in a single binary",
+    "Trivial to deploy on a small VPS; backups are a file copy",
+    "Extend with Go (as a framework) or JavaScript hooks",
+    "Realtime subscriptions and API rules out of the box",
+    "MIT license"
+  ],
+  "weaknesses": [
+    "Pre-1.0 with breaking changes between minor versions",
+    "Single-node only; no replication or horizontal scaling",
+    "Bus factor of one maintainer",
+    "Move off GitHub breaks existing Go import paths and release automation"
+  ],
+  "useCases": [
+    "MVPs and indie SaaS backends",
+    "Internal tools and admin panels",
+    "Mobile app backends with auth and file uploads",
+    "Self-hosted alternatives to Firebase for small apps"
+  ],
+  "notIdealFor": [
+    "High-availability or multi-region systems",
+    "Large write-heavy workloads",
+    "Teams needing vendor support contracts"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "supabase",
+    "firebase",
+    "appwrite",
+    "convex",
+    "sqlite",
+    "firebase-realtime-database"
+  ],
+  "tags": [
+    "backend-as-a-service",
+    "sqlite",
+    "go",
+    "realtime",
+    "self-hosted"
+  ],
+  "links": {
+    "website": "https://pocketbase.io/",
+    "docs": "https://pocketbase.io/docs/",
+    "repository": "https://ganigeorgiev.com/pocketbase/pocketbase",
+    "changelog": "https://ganigeorgiev.com/pocketbase/pocketbase"
+  },
+  "ids": {
+    "github": "pocketbase/pocketbase",
+    "stackoverflowTag": "pocketbase",
+    "npm": "pocketbase",
+    "hackerNewsQuery": "PocketBase"
+  },
+  "brand": {
+    "color": "#B8DBE4",
+    "simpleIcon": "pocketbase"
+  },
+  "sources": [
+    "https://pocketbase.io/",
+    "https://github.com/pocketbase/pocketbase/discussions/7841",
+    "https://github.com/pocketbase/pocketbase/releases/tag/v0.40.6",
+    "https://github.com/pocketbase/pocketbase"
+  ],
+  "lastVerified": "2026-10-27"
+}

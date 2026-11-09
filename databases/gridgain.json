@@ -1,0 +1,182 @@
+{
+  "slug": "gridgain",
+  "name": "GridGain",
+  "aliases": [
+    "GridGain Platform",
+    "GridGain 9"
+  ],
+  "tagline": "The commercial, enterprise-hardened distribution of Apache Ignite for low-latency SQL and compute.",
+  "description": "GridGain is built by the company that created and donated Apache Ignite, and sells an enterprise distribution with security, data-center replication, snapshots, rolling upgrades and Control Center tooling on top. GridGain 9 tracks Ignite 3's architecture (Raft, Calcite SQL, schema-driven tables) and adds features such as a columnar storage option for analytics. It is mostly used in financial services and other enterprises that want Ignite's in-memory speed with a vendor SLA. GridGain 8 remains available for customers on the Ignite 2.x lineage.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "oltp",
+    "htap",
+    "real-time-analytics",
+    "stream-processing"
+  ],
+  "architecture": [
+    "in-memory",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "GridGain Systems",
+  "vendorType": "company",
+  "initialRelease": 2007,
+  "latestVersion": {
+    "version": "9.1.28",
+    "date": "2026-10-20"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Ignite",
+  "license": {
+    "type": "proprietary",
+    "name": "GridGain commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Subscription per node/core; Community Edition of GridGain 8 is available for evaluation."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Data center replication (enterprise feature) links clusters across regions."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Key-value API"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "Thin client protocol",
+    "REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#",
+    "C++",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Vendor-supported Ignite with security, snapshots and rolling upgrades",
+    "Cross-data-center replication for active-active deployments",
+    "In-memory ACID SQL with collocated compute",
+    "Control Center for monitoring and management"
+  ],
+  "weaknesses": [
+    "Proprietary licensing and enterprise pricing",
+    "Same JVM-cluster operational complexity as Ignite",
+    "Smaller talent pool than mainstream databases"
+  ],
+  "useCases": [
+    "Low-latency trading and risk systems",
+    "Digital integration hubs in front of mainframes and legacy RDBMS",
+    "Real-time feature computation for ML"
+  ],
+  "notIdealFor": [
+    "Budget-constrained teams (Ignite is free)",
+    "Simple caching"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-ignite",
+    "hazelcast",
+    "oracle-coherence",
+    "vmware-tanzu-gemfire",
+    "singlestore",
+    "volt-active-data"
+  ],
+  "tags": [
+    "data-grid",
+    "ignite",
+    "enterprise",
+    "in-memory",
+    "distributed-sql"
+  ],
+  "links": {
+    "website": "https://www.gridgain.com/",
+    "docs": "https://www.gridgain.com/docs/gridgain9/latest",
+    "changelog": "https://www.gridgain.com/docs/gridgain9/latest/release-notes/9.0.0/release-notes_9.0.0"
+  },
+  "ids": {
+    "stackoverflowTag": "gridgain",
+    "dockerHub": "gridgain/gridgain9",
+    "hackerNewsQuery": "GridGain"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.gridgain.com/docs/gridgain9/latest",
+    "https://www.nuget.org/profiles/GridGain",
+    "https://www.gridgain.com/resources/blog/whats-new-in-gridgain-9"
+  ],
+  "lastVerified": "2026-10-27"
+}

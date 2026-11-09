@@ -1,0 +1,103 @@
+{
+  "slug": "elevator",
+  "name": "Elevator",
+  "aliases": ["Elevator key-value store"],
+  "tagline": "Small Python server that exposes multiple LevelDB databases over ZeroMQ and msgpack; idle since 2014.",
+  "description": "Elevator was an open-source key-value server written in Python by Théo Crevon (oleiade) in 2012-2013. It wrapped several LevelDB databases behind one process, using plyvel for storage, and exposed them to remote clients over ZeroMQ sockets with msgpack-encoded messages, so a single LevelDB backend could be shared asynchronously by multithreaded or networked clients in any language with a ZeroMQ binding. It offered GET/PUT/DELETE, range and slice reads, batch writes and database management commands, plus a command-line client, Debian packages and a Puppet module. The PyPI package reached 0.5 in 2013 and the last commit was in May 2014. Projects wanting networked LevelDB-style storage today usually reach for Kvrocks, TiKV or plain RocksDB.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since May 2014; last PyPI release 0.5 (2013).",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": ["key-value"],
+  "workloads": ["oltp"],
+  "architecture": ["client-server", "single-node"],
+  "developer": "Théo Crevon (oleiade)",
+  "vendorType": "community",
+  "initialRelease": 2012,
+  "latestVersion": { "version": "0.5", "date": "2013-02-21" },
+  "writtenIn": ["Python"],
+  "basedOn": "LevelDB",
+  "license": { "type": "permissive", "name": "MIT License", "spdx": "MIT" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "schemaless",
+  "queryLanguages": ["Elevator command protocol"],
+  "apis": ["ZeroMQ + msgpack protocol"],
+  "compatibleWith": [],
+  "drivers": ["Python", "Go", "Clojure"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Turns embedded LevelDB into a shared network service with very little code",
+    "Language-neutral wire format (ZeroMQ + msgpack)",
+    "Ordered range reads and batch writes inherited from LevelDB"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2014 and tied to Python 2-era dependencies and ZeroMQ 3",
+    "No replication, clustering or authentication",
+    "Python request handling caps throughput well below native servers"
+  ],
+  "useCases": [
+    "Learning how to wrap an embedded KV engine as a network server",
+    "Historical reference for LevelDB-over-ZeroMQ designs"
+  ],
+  "notIdealFor": ["Production workloads", "Highly available or multi-node storage"],
+  "notableUsers": [],
+  "alternatives": ["leveldb", "rocksdb", "apache-kvrocks", "tikv", "ssdb"],
+  "tags": ["leveldb", "python", "zeromq", "key-value", "abandoned"],
+  "links": {
+    "website": "https://elevator.readthedocs.io/",
+    "docs": "https://elevator.readthedocs.io/",
+    "repository": "https://github.com/oleiade/Elevator"
+  },
+  "ids": {
+    "github": "oleiade/Elevator",
+    "pypi": "elevator"
+  },
+  "brand": {},
+  "sources": [
+    "https://elevator.readthedocs.io/en/latest/",
+    "https://github.com/oleiade/Elevator",
+    "https://pypi.org/project/elevator/",
+    "https://dbdb.io/db/elevator"
+  ],
+  "lastVerified": "2026-10-27"
+}

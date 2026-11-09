@@ -1,0 +1,181 @@
+{
+  "slug": "cloudflare-workers-kv",
+  "name": "Cloudflare Workers KV",
+  "aliases": [
+    "Workers KV",
+    "Cloudflare KV"
+  ],
+  "tagline": "Globally cached, eventually consistent key-value store for read-heavy data at Cloudflare's edge.",
+  "description": "Workers KV is Cloudflare's global key-value store for Workers: values are written to central storage and cached in data centers close to readers, so hot keys come back in milliseconds anywhere in the world. The trade-off is eventual consistency, since a write can take up to about 60 seconds to be visible in other locations, and per-key write rates are limited (about one write per second per key). That makes it ideal for configuration, feature flags, redirects, static assets and auth tokens that are read far more than written. For counters, coordination or anything needing read-after-write consistency, Cloudflare points you to Durable Objects or D1.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "edge",
+    "caching",
+    "configuration",
+    "session-store"
+  ],
+  "architecture": [
+    "distributed",
+    "serverless"
+  ],
+  "developer": "Cloudflare",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "writtenIn": [
+    "Rust",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Cloudflare service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "free"
+    ],
+    "freeTier": true,
+    "startingPrice": "$0.50 per million reads beyond 10M/month on Workers Paid",
+    "notes": "Free: 100k reads and 1k writes per day, 1 GB stored. Paid: $5 per million writes beyond 1M/month; no egress fees."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "cloudflare"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Workers KV",
+      "provider": "Cloudflare",
+      "url": "https://developers.cloudflare.com/kv/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Reads served from edge caches in hundreds of cities; writes go to central stores and propagate within about 60 seconds."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Workers KV API"
+  ],
+  "apis": [
+    "Workers binding",
+    "REST API",
+    "Wrangler CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Low-latency reads worldwide via Cloudflare's edge cache",
+    "Zero configuration from Workers: bind a namespace and call get/put",
+    "Generous free tier and no egress charges",
+    "Per-key expiration (TTL) and metadata",
+    "Values up to 25 MiB, suitable for small assets"
+  ],
+  "weaknesses": [
+    "Eventually consistent: writes take up to about 60 seconds to propagate",
+    "Roughly one write per second per key",
+    "No transactions, queries or secondary indexes; list is prefix-only",
+    "Cache misses for cold keys are noticeably slower"
+  ],
+  "useCases": [
+    "Feature flags and configuration at the edge",
+    "URL redirects and routing tables",
+    "Authentication tokens and API key lookups",
+    "Caching rendered pages or API responses",
+    "Static asset storage for Workers apps"
+  ],
+  "notIdealFor": [
+    "Counters or frequently updated keys",
+    "Read-after-write consistency",
+    "Relational or queryable data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cloudflare-durable-objects",
+    "vercel-edge-config",
+    "deno-kv",
+    "cloudflare-d1",
+    "upstash",
+    "amazon-dynamodb"
+  ],
+  "tags": [
+    "edge",
+    "serverless",
+    "cloudflare",
+    "eventually-consistent"
+  ],
+  "links": {
+    "website": "https://developers.cloudflare.com/kv/",
+    "docs": "https://developers.cloudflare.com/kv/api/",
+    "pricing": "https://developers.cloudflare.com/kv/platform/pricing/",
+    "changelog": "https://developers.cloudflare.com/kv/platform/changelog/"
+  },
+  "ids": {
+    "stackoverflowTag": "cloudflare-kv",
+    "hackerNewsQuery": "Workers KV"
+  },
+  "brand": {
+    "color": "#F38020",
+    "simpleIcon": "cloudflareworkers"
+  },
+  "sources": [
+    "https://developers.cloudflare.com/kv/",
+    "https://developers.cloudflare.com/kv/platform/pricing/",
+    "https://developers.cloudflare.com/kv/concepts/how-kv-works/"
+  ],
+  "lastVerified": "2026-10-27"
+}

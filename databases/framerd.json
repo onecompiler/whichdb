@@ -1,0 +1,162 @@
+{
+  "slug": "framerd",
+  "name": "FramerD",
+  "aliases": [],
+  "tagline": "MIT Media Lab's distributed frame database for knowledge bases, scripted in a Scheme dialect.",
+  "description": "FramerD was a distributed object database built at the MIT Media Laboratory by Ken Haase for knowledge bases made of frames: objects with many slots that point at each other, as in semantic networks and agent systems. It stored millions of pointer-heavy frames in file pools and indexes that could be spread across networked servers, and shipped FDScript, a Scheme-based language for querying and building web interfaces over the data. Development moved from MIT to SourceForge with support from the startup beingmeta; the last release, 2.6.1, came out in January 2005. Its ideas continued in beingmeta's Kno platform. Today it is of historical interest for anyone studying frame-based knowledge representation.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Last release 2.6.1 in January 2005; framerd.org now hosts unrelated content. Its architecture continued in beingmeta's Kno project.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "graph"
+  ],
+  "workloads": [
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed"
+  ],
+  "developer": "MIT Media Lab (Ken Haase) / beingmeta",
+  "vendorType": "academic",
+  "initialRelease": 1996,
+  "latestVersion": {
+    "version": "2.6.1",
+    "date": "2005-01-18"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Pools of frames could be split across networked servers; sized for millions of frames on 2000s hardware."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "FDScript (Scheme)"
+  ],
+  "apis": [
+    "FramerD network protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Java",
+    "Lisp"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Built for pointer-intensive frame and semantic-network data",
+    "Frames carry arbitrary slots without up-front schema design",
+    "Scheme scripting language integrated with the store",
+    "Open GPL source remains a reference for frame-system storage"
+  ],
+  "weaknesses": [
+    "Unmaintained for two decades; builds target 2000s toolchains",
+    "No ACID transactions or modern replication",
+    "Original website lost; documentation survives only in archives"
+  ],
+  "useCases": [
+    "History of knowledge-representation systems",
+    "Studying frame-based object storage",
+    "Reading the source behind beingmeta's later Kno platform"
+  ],
+  "notIdealFor": [
+    "Any production workload",
+    "Modern knowledge graphs (use RDF or property-graph stores)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "typedb",
+    "apache-jena-tdb",
+    "terminusdb",
+    "neo4j"
+  ],
+  "tags": [
+    "frames",
+    "knowledge-base",
+    "scheme",
+    "mit",
+    "historical"
+  ],
+  "links": {
+    "website": "https://sourceforge.net/projects/framerd/",
+    "repository": "https://sourceforge.net/projects/framerd/"
+  },
+  "ids": {
+    "hackerNewsQuery": "FramerD"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20030208081958/http://www.framerd.org/",
+    "https://sourceforge.net/projects/framerd/",
+    "https://doi.org/10.1147/sj.353.0361",
+    "https://github.com/beingmeta/kno"
+  ],
+  "lastVerified": "2026-10-27"
+}

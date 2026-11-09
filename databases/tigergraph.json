@@ -1,0 +1,196 @@
+{
+  "slug": "tigergraph",
+  "name": "TigerGraph",
+  "aliases": [
+    "TigerGraph DB",
+    "TigerGraph Savanna"
+  ],
+  "tagline": "Distributed MPP graph database built for deep-link analytics on very large graphs.",
+  "description": "TigerGraph is a native, massively parallel graph database written in C++ that shards a single graph across a cluster and runs queries in parallel on every partition. Its GSQL language compiles procedural, accumulator-based queries, which makes 10-hop traversals and whole-graph analytics practical on billions of edges; recent 4.x releases add openCypher and GQL-style pattern matching plus TigerVector for vector search inside graph queries. It suits enterprises with large, fast-changing graphs (fraud, supply chain, customer 360). Expect a steeper learning curve than Cypher-first databases and a mostly commercial licensing model.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "vector"
+  ],
+  "workloads": [
+    "graph-analytics",
+    "graph-traversal",
+    "real-time-analytics",
+    "knowledge-graph",
+    "htap"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "TigerGraph, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "4.2.5",
+    "date": "2026-09-02"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free Community Edition)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free Community Edition for limited data sizes; TigerGraph Savanna cloud is usage-based; Enterprise licensed by contract."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "TigerGraph Savanna",
+      "provider": "TigerGraph",
+      "url": "https://www.tigergraph.com/savanna/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Automatic partitioning of one graph across nodes with replication; cross-region replication for DR."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "GSQL",
+    "openCypher",
+    "GQL"
+  ],
+  "apis": [
+    "REST++ API",
+    "GSQL server",
+    "Kafka loader"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python (pyTigerGraph)",
+    "Java",
+    "JavaScript",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Shards a single graph across nodes and runs every query hop in parallel (MPP)",
+    "GSQL accumulators make multi-hop analytics and custom algorithms expressible in one query",
+    "Handles deep-link queries (10+ hops) on billions of edges with interactive latency",
+    "TigerVector lets vector similarity and graph traversal run in the same query",
+    "Real-time updates coexist with analytics, avoiding a separate graph OLAP copy"
+  ],
+  "weaknesses": [
+    "GSQL is proprietary and has a steep learning curve compared with Cypher",
+    "Strict schema and installed-query workflow slow down ad-hoc exploration",
+    "Closed source; the free edition is size-limited and community is smaller than Neo4j's",
+    "Cluster sizing and memory planning are non-trivial for self-managed deployments"
+  ],
+  "useCases": [
+    "Real-time fraud and AML detection",
+    "Supply chain and network analysis",
+    "Customer 360 and entity resolution",
+    "Recommendation engines over large catalogs",
+    "Cybersecurity threat graphs"
+  ],
+  "notIdealFor": [
+    "Small graphs where an embedded or single-node DB suffices",
+    "RDF/SPARQL semantic workloads",
+    "Teams wanting a fully open-source stack"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "nebulagraph",
+    "amazon-neptune",
+    "memgraph",
+    "ultipa",
+    "galaxybase"
+  ],
+  "tags": [
+    "gsql",
+    "mpp",
+    "distributed",
+    "graph-analytics",
+    "gql"
+  ],
+  "links": {
+    "website": "https://www.tigergraph.com/",
+    "docs": "https://docs.tigergraph.com/",
+    "pricing": "https://www.tigergraph.com/pricing/",
+    "changelog": "https://docs.tigergraph.com/tigergraph-server/current/release-notes/",
+    "wikipedia": "https://en.wikipedia.org/wiki/TigerGraph"
+  },
+  "ids": {
+    "stackoverflowTag": "tigergraph",
+    "wikipedia": "TigerGraph",
+    "dockerHub": "tigergraph/community",
+    "pypi": "pyTigerGraph",
+    "hackerNewsQuery": "TigerGraph"
+  },
+  "brand": {
+    "color": "#F47C20"
+  },
+  "sources": [
+    "https://www.tigergraph.com/docs/tigergraph-server/4.2/release-notes/",
+    "https://www.tigergraph.com/docs/tigergraph-server/current/release-notes/",
+    "https://hub.docker.com/r/tigergraph/community"
+  ],
+  "lastVerified": "2026-10-27"
+}

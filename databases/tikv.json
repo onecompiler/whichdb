@@ -1,0 +1,175 @@
+{
+  "slug": "tikv",
+  "name": "TiKV",
+  "aliases": [],
+  "tagline": "CNCF-graduated, Raft-replicated transactional key-value store in Rust; the storage layer of TiDB.",
+  "description": "TiKV is a distributed key-value database that splits an ordered keyspace into Raft-replicated regions and offers both raw and Percolator-style distributed ACID transactions. PingCAP built it as the storage engine for TiDB and donated it to the CNCF, where it graduated in 2020; it can also be used standalone, for example as the backend for JuiceFS metadata or Redis-protocol layers. A Placement Driver handles timestamps, scheduling and rebalancing. It is a strong fit when you need a horizontally scalable, strongly consistent KV store and are comfortable running a multi-component cluster.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "metadata-store",
+    "htap"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "PingCAP / CNCF",
+  "vendorType": "foundation",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "8.5.8",
+    "date": "2026-08-27"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial support and TiDB Cloud (which includes TiKV) from PingCAP."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Automatic region splitting and balancing via PD; multi-PB TiDB/TiKV clusters are documented. Placement rules and follower reads support cross-region layouts."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "TiKV API (Raw and Transactional)"
+  ],
+  "apis": [
+    "gRPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Rust",
+    "Java",
+    "Python",
+    "C++",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Distributed ACID transactions with snapshot isolation across regions of keyspace",
+    "Raft replication with automatic failover and rebalancing",
+    "Written in Rust on RocksDB, with years of production hardening under TiDB",
+    "Raw API for maximum throughput when transactions are not needed",
+    "MVCC enables stale and historical reads"
+  ],
+  "weaknesses": [
+    "Needs Placement Driver and several TiKV nodes; heavy for small deployments",
+    "Timestamp oracle adds latency for globally distributed writes",
+    "Standalone (non-TiDB) client ecosystem is thinner than TiDB's",
+    "Tuning RocksDB and Raft parameters takes expertise"
+  ],
+  "useCases": [
+    "Storage layer for distributed SQL (TiDB)",
+    "Metadata for distributed file systems (JuiceFS)",
+    "Large-scale transactional key-value services",
+    "Redis-protocol or custom data layers needing strong consistency"
+  ],
+  "notIdealFor": [
+    "Single-node or embedded use",
+    "Analytics without TiFlash/TiDB",
+    "Tiny datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "foundationdb",
+    "etcd",
+    "tidb",
+    "cockroachdb",
+    "apache-cassandra"
+  ],
+  "tags": [
+    "cncf",
+    "rust",
+    "raft",
+    "transactional",
+    "tidb"
+  ],
+  "links": {
+    "website": "https://tikv.org/",
+    "docs": "https://tikv.org/docs/",
+    "repository": "https://github.com/tikv/tikv",
+    "changelog": "https://github.com/tikv/tikv/releases"
+  },
+  "ids": {
+    "github": "tikv/tikv",
+    "stackoverflowTag": "tikv",
+    "dockerHub": "pingcap/tikv",
+    "crates": "tikv-client",
+    "hackerNewsQuery": "TiKV"
+  },
+  "brand": {
+    "color": "#D64B5E"
+  },
+  "sources": [
+    "https://github.com/tikv/tikv/releases",
+    "https://tikv.org/",
+    "https://www.cncf.io/projects/tikv/"
+  ],
+  "lastVerified": "2026-10-27"
+}

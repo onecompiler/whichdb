@@ -1,0 +1,152 @@
+{
+  "slug": "vitesse-db",
+  "name": "Vitesse DB",
+  "aliases": [
+    "VitesseDB",
+    "Vitesse X"
+  ],
+  "tagline": "PostgreSQL fork that JIT-compiled OLAP queries with LLVM; superseded by Vitesse Data's Deepgreen DB.",
+  "description": "Vitesse DB was a PostgreSQL-based analytical database from Vitesse Data, a Bay Area startup. Launched in 2014 on PostgreSQL 9.3.5 with binary compatibility, it compiled queries into native x86 code with LLVM, parsed CSV with SSE instructions and added a compressed column store, claiming large speedups on TPC-H style aggregates over stock PostgreSQL. A Vitesse X variant followed. The company later shifted to Deepgreen DB, its Greenplum-based MPP warehouse, and Vitesse DB disappeared from its product pages; by 2024 the site listed only Deepgreen, open-source Greenplum and Apache Geode support. Query JIT later became a standard PostgreSQL feature.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No longer offered; Vitesse Data's product line moved to Deepgreen DB (Greenplum-based). PostgreSQL itself now has LLVM JIT.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Vitesse Data, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL 9.3",
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Any PostgreSQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in binary compatibility with PostgreSQL 9.3.5",
+    "Early use of LLVM JIT compilation for analytic queries",
+    "Faster CSV loading via SIMD parsing"
+  ],
+  "weaknesses": [
+    "Discontinued and pinned to an obsolete PostgreSQL version",
+    "Proprietary; no source available"
+  ],
+  "useCases": [
+    "History of query compilation in PostgreSQL-based systems",
+    "Context for Vitesse Data's Deepgreen DB"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "greenplum",
+    "apache-cloudberry",
+    "pg-duckdb",
+    "duckdb",
+    "clickhouse"
+  ],
+  "tags": [
+    "postgresql",
+    "llvm",
+    "jit",
+    "olap",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20150913054141/http://vitessedata.com/vitesse-db"
+  },
+  "ids": {
+    "hackerNewsQuery": "Vitesse DB"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20141222203938/http://vitessedata.com/",
+    "https://web.archive.org/web/20160125110326/http://vitessedata.com/technology",
+    "https://web.archive.org/web/20240621223409/https://vitessedata.com/support/"
+  ],
+  "lastVerified": "2026-10-27"
+}

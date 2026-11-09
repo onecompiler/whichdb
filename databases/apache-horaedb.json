@@ -1,0 +1,174 @@
+{
+  "slug": "apache-horaedb",
+  "name": "Apache HoraeDB",
+  "aliases": [
+    "HoraeDB",
+    "CeresDB"
+  ],
+  "tagline": "Retired Apache incubator time-series database (ex-CeresDB from Ant Group), written in Rust.",
+  "description": "Apache HoraeDB, originally CeresDB from Ant Group, was a cloud-native distributed time-series database written in Rust with a hybrid row/columnar storage engine aimed at both classic metrics and high-cardinality analytical workloads. It entered the Apache Incubator in December 2023 and was rebuilt around object storage for a 2.x line. Community activity faded, and in March 2026 the Incubator retired the podling after a community vote; the GitHub repository is archived and the last release, 2.1.0, dates from November 2024. Existing users should migrate to an actively developed engine such as GreptimeDB, VictoriaMetrics or InfluxDB 3.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Retired from the Apache Incubator on 2026-03-03 after a community vote; repo archived. Consider GreptimeDB or InfluxDB 3.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar"
+  ],
+  "workloads": [
+    "time-series",
+    "observability"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "Apache Software Foundation (originally Ant Group)",
+  "vendorType": "foundation",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "2.1.0",
+    "date": "2024-11-18"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PromQL",
+    "InfluxQL"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "HTTP",
+    "gRPC",
+    "Prometheus remote write",
+    "InfluxDB line protocol"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "prometheus",
+    "influxdb"
+  ],
+  "drivers": [
+    "Java",
+    "Go",
+    "Python",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Rust engine with hybrid storage for high-cardinality time series",
+    "SQL plus Prometheus and InfluxDB protocol compatibility",
+    "Apache-2.0 source remains available to fork"
+  ],
+  "weaknesses": [
+    "Retired and archived; no further releases or security fixes",
+    "Small user base outside Ant Group",
+    "Documentation and tooling no longer maintained"
+  ],
+  "useCases": [
+    "Reference design for Rust time-series storage",
+    "Legacy deployments planning migration"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Production systems needing security updates"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "greptimedb",
+    "victoriametrics",
+    "influxdb",
+    "cnosdb",
+    "tdengine"
+  ],
+  "tags": [
+    "time-series",
+    "rust",
+    "apache",
+    "retired"
+  ],
+  "links": {
+    "website": "https://horaedb.apache.org/",
+    "docs": "https://horaedb.apache.org/docs/user-guide",
+    "repository": "https://github.com/apache/horaedb"
+  },
+  "ids": {
+    "github": "apache/horaedb",
+    "dockerHub": "apache/horaedb-server",
+    "hackerNewsQuery": "HoraeDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://incubator.apache.org/podlings.xml",
+    "https://github.com/apache/horaedb",
+    "https://github.com/apache/horaedb/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

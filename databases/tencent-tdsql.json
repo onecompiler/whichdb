@@ -1,0 +1,119 @@
+{
+  "slug": "tencent-tdsql",
+  "name": "TDSQL (Tencent)",
+  "aliases": ["TDSQL", "TDSQL Boundless", "TDSQL-C", "TencentDB for TDSQL"],
+  "tagline": "Tencent's financial-grade MySQL-compatible database family: distributed TDSQL and cloud-native TDSQL-C.",
+  "description": "TDSQL is Tencent's family of relational databases, best known for running core banking at WeBank and other Chinese financial institutions. The distributed editions (TDSQL and the newer TDSQL Boundless) partition data across multi-master nodes with Raft replication, two-phase commit and data-affinity scheduling that keeps related rows on the same node, while staying compatible with MySQL and, for Boundless, the HBase API. TDSQL-C is a separate cloud-native, shared-storage service compatible with MySQL and PostgreSQL, similar in spirit to Aurora. It is available on Tencent Cloud and as private-cloud deployments for banks. Outside China its documentation and ecosystem are limited.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "wide-column"],
+  "workloads": ["oltp", "ledger", "htap"],
+  "architecture": ["distributed", "multi-primary", "shared-storage", "serverless"],
+  "developer": "Tencent Cloud",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2014,
+  "writtenIn": ["C++"],
+  "basedOn": "MySQL",
+  "license": { "type": "proprietary", "name": "Proprietary (Tencent Cloud service / private deployment)" },
+  "pricing": {
+    "models": ["usage-based", "subscription", "enterprise-contract"],
+    "freeTier": false,
+    "notes": "Pay-as-you-go or monthly subscription on Tencent Cloud; TDSQL-C has a serverless billing mode; private-cloud licenses for financial institutions."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["tencent-cloud"],
+    "platforms": ["linux"]
+  },
+  "managedServices": [
+    { "name": "TDSQL Boundless", "provider": "Tencent Cloud", "url": "https://www.tencentcloud.com/products/tdsql" },
+    { "name": "TDSQL-C for MySQL", "provider": "Tencent Cloud", "url": "https://www.tencentcloud.com/products/cynosdb" }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Boundless scales from 2 to several hundred nodes with decoupled compute and storage; TDSQL-C scales read nodes on shared storage."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL"],
+  "apis": ["MySQL wire protocol", "PostgreSQL wire protocol (TDSQL-C)", "HBase API (Boundless)"],
+  "compatibleWith": ["mysql", "postgresql", "hbase"],
+  "drivers": ["Java", "Go", "Python", "PHP", "C++", "JavaScript"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Proven in Chinese core banking (WeBank) with financial-grade consistency",
+    "Multi-master distributed writes with Raft replication",
+    "Data-affinity scheduling keeps most transactions single-node",
+    "High MySQL compatibility for migrations",
+    "Private-cloud deployment option for regulated institutions"
+  ],
+  "weaknesses": [
+    "Tencent Cloud-centric; little presence outside China",
+    "Product naming and edition boundaries are confusing",
+    "English documentation is thinner than Chinese",
+    "Closed source with no community edition"
+  ],
+  "useCases": [
+    "Core banking and payment systems in China",
+    "Scaling MySQL workloads on Tencent Cloud",
+    "Gaming and social backends in the Tencent ecosystem",
+    "Oracle and DB2 replacement in financial services"
+  ],
+  "notIdealFor": [
+    "Workloads outside Tencent Cloud or China",
+    "Open-source requirements",
+    "Small single-node apps"
+  ],
+  "notableUsers": ["WeBank"],
+  "alternatives": ["oceanbase", "tidb", "polardb", "polardb-x", "huawei-gaussdb", "amazon-aurora"],
+  "tags": ["tencent-cloud", "distributed-sql", "mysql-compatible", "financial", "china"],
+  "links": {
+    "website": "https://www.tencentcloud.com/products/tdsql",
+    "docs": "https://www.tencentcloud.com/document/product/1292"
+  },
+  "ids": {
+    "hackerNewsQuery": "TDSQL"
+  },
+  "brand": { "color": "#0052D9" },
+  "sources": [
+    "https://www.tencentcloud.com/document/product/1292/76137",
+    "https://www.tencentcloud.com/document/product/1292/76223",
+    "https://www.tencentcloud.com/products/tdsql"
+  ],
+  "lastVerified": "2026-10-27"
+}

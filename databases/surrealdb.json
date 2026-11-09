@@ -1,0 +1,217 @@
+{
+  "slug": "surrealdb",
+  "name": "SurrealDB",
+  "aliases": [
+    "Surreal"
+  ],
+  "tagline": "Rust multi-model database (documents, graph, vectors, live queries) that runs embedded, in WASM or clustered.",
+  "description": "SurrealDB is a Rust database that combines document, graph (record links and RELATE edges), key-value, full-text and vector search behind SurrealQL, a SQL-like language with graph traversal syntax. The same engine runs in-memory, on disk via RocksDB or SurrealKV, in the browser through WebAssembly, or distributed on TiKV. It adds row-level permissions, so clients can connect directly. Version 3.0 (February 2026) focused on stability and AI-agent memory use cases, and 3.3.4 shipped in October 2026. It is ambitious and evolving quickly, so it is well suited to new apps that want one flexible backend, but check the BSL terms and test maturity for heavy production.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "graph",
+    "key-value",
+    "vector",
+    "search",
+    "time-series",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "graph-traversal",
+    "vector-search",
+    "rag",
+    "embedded",
+    "edge",
+    "full-text-search",
+    "local-first"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "distributed",
+    "client-server",
+    "in-memory"
+  ],
+  "developer": "SurrealDB Ltd",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "3.3.4",
+    "date": "2026-10-19"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "source-available",
+    "name": "Business Source License 1.1 (converts to Apache 2.0 after 4 years)",
+    "spdx": "BUSL-1.1"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host except as a commercial DBaaS; Surreal Cloud has a free tier and paid instances; enterprise licences available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "browser",
+      "wasm"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Surreal Cloud",
+      "provider": "SurrealDB Ltd",
+      "url": "https://surrealdb.com/cloud"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "Single-node by default; horizontal scale comes from running compute nodes over a distributed TiKV storage cluster."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SurrealQL",
+    "GraphQL"
+  ],
+  "apis": [
+    "HTTP REST",
+    "WebSocket RPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "JavaScript",
+    "Python",
+    "Go",
+    "Java",
+    "C#",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": true
+  },
+  "strengths": [
+    "Documents, graph edges, vectors and full-text search in one engine and one query language",
+    "Runs embedded, in the browser via WASM, single-node or on TiKV",
+    "LIVE SELECT pushes realtime changes to clients",
+    "Row-level permissions and built-in auth let frontends query directly",
+    "Schemafull or schemaless per table"
+  ],
+  "weaknesses": [
+    "Young engine; performance and stability have varied between releases",
+    "BSL licence prohibits offering it as a commercial DBaaS",
+    "Distributed mode depends on operating a separate TiKV cluster",
+    "Tooling, ORMs and operational knowledge are still thin"
+  ],
+  "useCases": [
+    "Greenfield apps wanting one backend for documents and relationships",
+    "Agent memory and knowledge graphs for AI applications",
+    "Local-first or in-browser data with WASM",
+    "Realtime collaborative features"
+  ],
+  "notIdealFor": [
+    "Conservative enterprises needing a decade of production track record",
+    "Large analytical workloads",
+    "Companies planning to resell it as a hosted service"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "arangodb",
+    "mongodb",
+    "neo4j",
+    "postgresql",
+    "pocketbase",
+    "edgedb-gel",
+    "convex"
+  ],
+  "tags": [
+    "multi-model",
+    "rust",
+    "graph",
+    "realtime",
+    "wasm",
+    "bsl"
+  ],
+  "links": {
+    "website": "https://surrealdb.com/",
+    "docs": "https://surrealdb.com/docs",
+    "repository": "https://github.com/surrealdb/surrealdb",
+    "pricing": "https://surrealdb.com/pricing",
+    "changelog": "https://surrealdb.com/releases"
+  },
+  "ids": {
+    "github": "surrealdb/surrealdb",
+    "stackoverflowTag": "surrealdb",
+    "dockerHub": "surrealdb/surrealdb",
+    "npm": "surrealdb",
+    "pypi": "surrealdb",
+    "crates": "surrealdb",
+    "hackerNewsQuery": "SurrealDB"
+  },
+  "brand": {
+    "color": "#FF00A0",
+    "simpleIcon": "surrealdb"
+  },
+  "sources": [
+    "https://github.com/surrealdb/surrealdb/releases/tag/v3.3.4",
+    "https://surrealdb.com/releases/3.0",
+    "https://surrealdb.com/license",
+    "https://github.com/surrealdb/surrealdb/blob/main/LICENSE"
+  ],
+  "lastVerified": "2026-10-27"
+}

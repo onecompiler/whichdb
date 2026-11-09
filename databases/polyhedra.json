@@ -1,0 +1,173 @@
+{
+  "slug": "polyhedra",
+  "name": "Polyhedra",
+  "aliases": [
+    "Polyhedra IMDB",
+    "Polyhedra Flash DBMS",
+    "Polyhedra Lite"
+  ],
+  "tagline": "Compact in-memory and flash relational DBMS for embedded, telecom and SCADA systems, sold by Enea.",
+  "description": "Polyhedra is a small-footprint relational database family aimed at OEMs building embedded and always-on control systems. Polyhedra IMDB keeps the working set in RAM with snapshot-plus-journal persistence and hot-standby failover, while Polyhedra Flash DBMS stores data in a flash file with shadow paging for devices like set-top boxes and picocells. Its distinctive feature is active queries: a client subscribes to a query and is pushed deltas when the result changes, which removes polling from SCADA-style applications, plus a trigger language (CL) and table inheritance. Developed in the UK from 1991 and owned by Sweden's Enea since 2001, it is still listed by Enea but is a niche, sales-led product with little public release activity.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Still listed and sold by Enea, but there are no public release notes or roadmap in recent years; treat it as a legacy embedded product.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "time-series"
+  ],
+  "workloads": [
+    "embedded",
+    "iot",
+    "oltp",
+    "time-series"
+  ],
+  "architecture": [
+    "in-memory",
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "Enea AB (originally Polyhedra plc)",
+  "vendorType": "company",
+  "initialRelease": 1993,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Polyhedra Lite was freeware)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "OEM licensing through Enea sales; a freeware Polyhedra Lite edition was released in 2012."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Designed for RAM-resident datasets on a single node, with a hot-standby replica for availability rather than clustering."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "CL (Polyhedra Control Language)"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "Native C/C++ client API",
+    "Active queries"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Active queries push result-set changes to clients, eliminating polling in control systems",
+    "Small RAM and code footprint suited to embedded OEM hardware",
+    "Hot-standby replication for always-on telecom and industrial deployments",
+    "Historian module for capturing and archiving high-rate time-series samples",
+    "Standard SQL, ODBC and JDBC interfaces despite the embedded focus"
+  ],
+  "weaknesses": [
+    "Restricted transaction model: a transaction is a query, a schema change or a batch of writes",
+    "No clustering or load sharing; scaling is vertical with one standby",
+    "Closed, sales-led product with little public documentation, community or release cadence"
+  ],
+  "useCases": [
+    "SCADA and industrial control data repositories",
+    "Telecom network equipment configuration and state",
+    "Embedded devices needing a relational store in flash",
+    "Maintaining existing OEM products already built on Polyhedra"
+  ],
+  "notIdealFor": [
+    "General-purpose application backends",
+    "Analytics or large datasets",
+    "Horizontally scaled services"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "extremedb",
+    "raima-database-manager",
+    "oracle-timesten",
+    "ittia-db",
+    "sqlite"
+  ],
+  "tags": [
+    "in-memory",
+    "embedded",
+    "real-time",
+    "scada",
+    "telecom"
+  ],
+  "links": {
+    "website": "https://www.enea.com/polyhedra",
+    "wikipedia": "https://en.wikipedia.org/wiki/Polyhedra_(software)"
+  },
+  "ids": {
+    "wikipedia": "Polyhedra (software)",
+    "hackerNewsQuery": "Polyhedra database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.enea.com/polyhedra",
+    "https://en.wikipedia.org/wiki/Polyhedra_(software)",
+    "https://dbdb.io/db/polyhedra"
+  ],
+  "lastVerified": "2026-10-27"
+}

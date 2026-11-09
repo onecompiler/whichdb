@@ -1,0 +1,175 @@
+{
+  "slug": "nhost",
+  "name": "Nhost",
+  "aliases": [
+    "Nhost Cloud"
+  ],
+  "tagline": "Open-source backend platform on Postgres with Hasura GraphQL, auth, storage and functions.",
+  "description": "Nhost is an open-source backend platform that gives each project a dedicated PostgreSQL database exposed through the Hasura GraphQL Engine (queries, mutations, realtime subscriptions and event triggers with role-based permissions), plus authentication, file storage with image transformation, serverless functions and an AI toolkit with pgvector. It can be self-hosted with Docker or used as Nhost Cloud. It is a natural Firebase alternative for teams that want GraphQL and plain Postgres underneath rather than a proprietary document store.",
+  "productType": "platform",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "vector"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "vector-search"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Nhost AB",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "writtenIn": [
+    "Go",
+    "TypeScript"
+  ],
+  "basedOn": "PostgreSQL and Hasura GraphQL Engine",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "startingPrice": "$25/month (Pro)",
+    "notes": "Free Starter project pauses after a week of inactivity; Team from $599/month."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "One dedicated Postgres per project; scale vertically via compute add-ons."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "GraphQL",
+    "SQL"
+  ],
+  "apis": [
+    "GraphQL",
+    "REST",
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "JavaScript",
+    "Dart",
+    "Swift",
+    "Kotlin"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Plain Postgres underneath, with direct SQL access",
+    "Instant GraphQL API with realtime subscriptions and row-level permissions",
+    "Auth, storage and functions bundled and open source"
+  ],
+  "weaknesses": [
+    "Depends on Hasura, adding another component to learn and operate",
+    "Smaller community than Supabase or Firebase",
+    "No offline sync for clients"
+  ],
+  "useCases": [
+    "GraphQL-first web and mobile backends",
+    "Firebase replacement on Postgres",
+    "SaaS MVPs needing auth and storage quickly"
+  ],
+  "notIdealFor": [
+    "Offline-first mobile apps",
+    "Teams that prefer REST-only stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "supabase",
+    "firebase",
+    "appwrite",
+    "pocketbase",
+    "convex"
+  ],
+  "tags": [
+    "baas",
+    "graphql",
+    "postgres-ecosystem",
+    "hasura",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://nhost.io/",
+    "docs": "https://docs.nhost.io/",
+    "repository": "https://github.com/nhost/nhost",
+    "pricing": "https://nhost.io/pricing"
+  },
+  "ids": {
+    "github": "nhost/nhost",
+    "npm": "@nhost/nhost-js",
+    "hackerNewsQuery": "Nhost"
+  },
+  "brand": {
+    "color": "#0052CD",
+    "simpleIcon": "nhost"
+  },
+  "sources": [
+    "https://nhost.io/pricing",
+    "https://github.com/nhost/nhost"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,103 @@
+{
+  "slug": "eloquera",
+  "name": "Eloquera",
+  "aliases": ["EloqueraDB", "Eloquera Database"],
+  "tagline": "Native .NET object database queried with LINQ or SQL; no public release since 6.3.3 in January 2014.",
+  "description": "Eloquera is an object database for the .NET platform, first released around 2008, that stores ordinary C# objects, including inheritance hierarchies, generics and dynamic objects, without an ORM mapping layer. Applications query it with LINQ or an SQL-like language and use it either embedded or through a database server, and an Enterprise edition advertised load balancing, failover and disaster-recovery options. The free edition was distributed through NuGet as EloqueraDB, and its last version, 6.3.3, was published in January 2014. Eloquera's current site, run from Sydney, now promotes software consulting and only mentions continued support of the database, with no downloads or documentation, so treat it as a legacy product.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No public release since 6.3.3 (January 2014); the vendor site no longer offers downloads or docs, though the old NuGet package remains.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": ["object"],
+  "workloads": ["oltp", "embedded"],
+  "architecture": ["embedded", "client-server"],
+  "developer": "Eloquera Corp.",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": { "version": "6.3.3", "date": "2014-01-31" },
+  "writtenIn": ["C#"],
+  "license": { "type": "proprietary", "name": "Proprietary (free edition and commercial Enterprise edition)" },
+  "pricing": {
+    "models": ["free", "enterprise-contract"],
+    "freeTier": true,
+    "notes": "The standard edition was free to use; the Enterprise edition was sold separately. Neither is actively marketed now."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "flexible",
+  "queryLanguages": ["LINQ", "SQL-like query language"],
+  "apis": [".NET API"],
+  "compatibleWith": [],
+  "drivers": ["C#", "VB.NET"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Persists plain .NET objects, including generics and inheritance, with no mapping layer",
+    "Both LINQ and SQL-style querying",
+    "Free edition was easy to pull in via NuGet"
+  ],
+  "weaknesses": [
+    "No release since 2014; targets old .NET Framework versions",
+    "Vendor no longer publishes downloads or documentation",
+    "Proprietary format with no export tooling beyond the API"
+  ],
+  "useCases": [
+    "Maintaining existing .NET applications already built on Eloquera",
+    "Historical reference for .NET object databases"
+  ],
+  "notIdealFor": ["New .NET projects", "Cross-platform or cloud deployments"],
+  "notableUsers": [],
+  "alternatives": ["litedb", "ravendb", "realm", "db4o", "versant-object-database", "siaqodb"],
+  "tags": ["object-database", "dotnet", "linq", "legacy"],
+  "links": {
+    "website": "https://www.eloquera.com/"
+  },
+  "ids": {
+    "stackoverflowTag": "eloquera"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.eloquera.com/",
+    "https://www.nuget.org/packages/EloqueraDB",
+    "https://db-engines.com/en/system/Eloquera",
+    "https://dbdb.io/db/eloquera"
+  ],
+  "lastVerified": "2026-10-27"
+}

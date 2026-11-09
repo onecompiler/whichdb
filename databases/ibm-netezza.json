@@ -1,0 +1,179 @@
+{
+  "slug": "ibm-netezza",
+  "name": "IBM Netezza",
+  "aliases": [
+    "Netezza Performance Server",
+    "NPS",
+    "IBM PureData System for Analytics"
+  ],
+  "tagline": "IBM's FPGA-accelerated MPP warehouse, now offered as NPS on-prem, in Cloud Pak and as a service.",
+  "description": "Netezza pioneered the data warehouse appliance in the early 2000s, pairing commodity CPUs with FPGAs that filter and decompress data as it streams off disk. IBM acquired it in 2010 and, after briefly sunsetting the appliance, revived it as Netezza Performance Server: on the new Barracuda appliance, on Cloud Pak for Data System, and as a managed service on AWS, Azure and IBM Cloud. The 11.3 line moves to RHEL 8 and adds Iceberg integration with watsonx.data. It suits long-time Netezza shops that want continuity; everyone else usually picks a cloud-native warehouse.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "IBM",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract",
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Appliance and software subscriptions; NPS as a Service billed hourly on AWS, Azure and IBM Cloud."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "ibm-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Netezza Performance Server as a Service",
+      "provider": "IBM",
+      "url": "https://www.ibm.com/products/netezza"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "NZPLSQL"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "OLE DB",
+    "nzsql CLI"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "C",
+    ".NET",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "FPGA-accelerated scans and zone maps need little tuning",
+    "Simple appliance-style operations with high SQL compatibility to legacy NPS",
+    "Available on-prem, in Cloud Pak and as a managed cloud service",
+    "Iceberg integration with watsonx.data for lakehouse access"
+  ],
+  "weaknesses": [
+    "Legacy platform with a shrinking talent pool",
+    "Proprietary hardware heritage and IBM-specific tooling",
+    "Limited modern features (semi-structured data, streaming) versus cloud warehouses"
+  ],
+  "useCases": [
+    "Existing Netezza estates seeking continuity",
+    "Regulated on-prem warehousing",
+    "Hybrid setups with IBM watsonx.data"
+  ],
+  "notIdealFor": [
+    "Greenfield cloud analytics",
+    "Real-time or streaming workloads",
+    "Startups and small teams"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "yellowbrick",
+    "ibm-db2-warehouse",
+    "snowflake",
+    "amazon-redshift",
+    "teradata-vantage"
+  ],
+  "tags": [
+    "mpp",
+    "appliance",
+    "fpga",
+    "ibm",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://www.ibm.com/products/netezza",
+    "docs": "https://www.ibm.com/docs/en/netezza",
+    "wikipedia": "https://en.wikipedia.org/wiki/Netezza"
+  },
+  "ids": {
+    "stackoverflowTag": "netezza",
+    "wikipedia": "Netezza",
+    "hackerNewsQuery": "Netezza"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.ibm.com/docs/en/SSTNZ3/get-started/relnotes/nps_release_schedule.html",
+    "https://www.ibm.com/products/netezza",
+    "https://en.wikipedia.org/wiki/Netezza"
+  ],
+  "lastVerified": "2026-10-27"
+}

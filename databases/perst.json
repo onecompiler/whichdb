@@ -1,0 +1,162 @@
+{
+  "slug": "perst",
+  "name": "Perst",
+  "aliases": [
+    "Perst Embedded Database",
+    "Perst.NET"
+  ],
+  "tagline": "McObject's embedded object database for Java and .NET, dual-licensed GPL or commercial.",
+  "description": "Perst is an object-oriented embedded database from McObject, with an all-Java edition and a C# edition for .NET. Objects are persisted transparently and indexed with a wide choice of structures (B-trees, R-trees, KD-trees, Patricia tries and more), and it includes full-text search and a small SQL subset called JSQL. Its pitch is a tiny footprint for Java SE, Android and .NET apps that want object persistence without an ORM. McObject still offers downloads and commercial licenses, but the product sees little visible development and its community is small next to SQLite or ObjectBox.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Still sold by McObject, but no public version history or recent releases are documented on its product page.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "spatial"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline",
+    "iot"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "McObject LLC",
+  "vendorType": "company",
+  "initialRelease": 2004,
+  "writtenIn": [
+    "Java",
+    "C#"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-3.0 or commercial license",
+    "spdx": "GPL-3.0-or-later"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "per-node-license"
+    ],
+    "freeTier": true,
+    "notes": "Free under GPL; closed-source products need a commercial license from McObject."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "JSQL",
+    "Native object API"
+  ],
+  "apis": [
+    "Java API",
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Transparent persistence of plain Java or .NET objects",
+    "Unusually broad index types, including spatial R-trees and KD-trees",
+    "Small footprint suitable for embedded and Android use"
+  ],
+  "weaknesses": [
+    "GPL licensing forces a commercial license for most proprietary apps",
+    "Small community and sparse modern documentation",
+    "Little evidence of active feature development"
+  ],
+  "useCases": [
+    "Embedded Java or .NET apps needing object persistence",
+    "Devices needing spatial indexes in a tiny footprint"
+  ],
+  "notIdealFor": [
+    "New projects wanting an active ecosystem",
+    "Server-side or multi-user databases"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "objectdb",
+    "db4o",
+    "objectbox",
+    "sqlite",
+    "litedb"
+  ],
+  "tags": [
+    "object-database",
+    "java",
+    "dotnet",
+    "embedded",
+    "mcobject"
+  ],
+  "links": {
+    "website": "https://www.mcobject.com/perst/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Perst"
+  },
+  "ids": {
+    "wikipedia": "Perst",
+    "hackerNewsQuery": "Perst database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.mcobject.com/perst/",
+    "https://en.wikipedia.org/wiki/Perst"
+  ],
+  "lastVerified": "2026-10-27"
+}

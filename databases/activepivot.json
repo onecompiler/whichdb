@@ -1,0 +1,173 @@
+{
+  "slug": "activepivot",
+  "name": "ActivePivot",
+  "aliases": [
+    "Atoti Server",
+    "Atoti",
+    "ActiveViam ActivePivot"
+  ],
+  "tagline": "In-memory OLAP aggregation engine for bank risk analytics, renamed Atoti Server by ActiveViam.",
+  "description": "ActivePivot is ActiveViam's Java in-memory analytical engine, now sold as Atoti Server after the rename in the 6.0 release. It loads granular fact data into a columnar in-memory datastore, models it as multidimensional cubes with hierarchies and measures, and aggregates on the fly with MVCC so continuous updates and queries see consistent versions. Since 6.0 it can also leave data in Snowflake, BigQuery, Databricks, Redshift or ClickHouse via DirectQuery. Its home market is capital markets: FRTB, market risk, CVA and limits monitoring, where ActiveViam also sells packaged Atoti solutions. Access is through MDX/XMLA clients such as Excel, the Atoti UI, and Java and Python SDKs.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Renamed Atoti Server in version 6.0; ActivePivot remains the common historical name.",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "in-memory",
+    "client-server",
+    "distributed"
+  ],
+  "developer": "ActiveViam (formerly Quartet FS)",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Atoti EULA; free community edition of the Python SDK)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Commercial licences for Atoti Server and solutions; the Atoti Python SDK has a free community edition for non-production use."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales up with RAM and out via distributed cubes; DirectQuery keeps larger history in an external warehouse."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "MDX"
+  ],
+  "apis": [
+    "XMLA",
+    "REST API",
+    "Java API",
+    "Python SDK (atoti)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "On-the-fly aggregation over granular trade-level data without pre-computed cubes",
+    "MVCC versioning lets real-time updates and long queries coexist consistently",
+    "Non-linear risk measures (VaR, expected shortfall) and what-if simulations are first-class",
+    "DirectQuery can blend in-memory data with Snowflake, BigQuery, Databricks or ClickHouse",
+    "Packaged FRTB, market risk and limits solutions built on the same engine"
+  ],
+  "weaknesses": [
+    "RAM-bound for in-memory cubes, so hardware costs rise with data volume",
+    "Proprietary, enterprise-priced and concentrated in financial services",
+    "Cube modelling and Java extension points have a steep learning curve",
+    "Product naming (ActivePivot, Atoti, Atoti Server) is confusing across versions"
+  ],
+  "useCases": [
+    "Market risk and FRTB capital calculations",
+    "Real-time P&L and limits monitoring on trading desks",
+    "What-if and scenario analysis on granular positions",
+    "Excel/MDX front ends over large in-memory cubes"
+  ],
+  "notIdealFor": [
+    "Transactional application storage",
+    "Cheap long-term storage of raw history",
+    "Teams without Java or OLAP modelling skills"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kdb-plus",
+    "clickhouse",
+    "apache-kylin",
+    "sap-hana",
+    "apache-pinot",
+    "snowflake"
+  ],
+  "tags": [
+    "olap",
+    "in-memory",
+    "risk-analytics",
+    "capital-markets",
+    "mdx"
+  ],
+  "links": {
+    "website": "https://www.activeviam.com/",
+    "docs": "https://docs.activeviam.com/"
+  },
+  "ids": {
+    "pypi": "atoti",
+    "hackerNewsQuery": "ActivePivot"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.activeviam.com/",
+    "https://docs.activeviam.com/concepts/intro.md",
+    "https://docs.activeviam.com/products/atoti/server/6.0/docs/release/whats_new",
+    "https://dbdb.io/db/atoti",
+    "https://pypi.org/project/atoti/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,162 @@
+{
+  "slug": "tembo",
+  "name": "Tembo",
+  "aliases": [
+    "Tembo Cloud",
+    "Tembo Stacks"
+  ],
+  "tagline": "Former managed Postgres platform with workload-tuned 'Stacks'; Tembo Cloud was shut down in 2025.",
+  "description": "Tembo was a managed PostgreSQL platform built around 'Stacks': preconfigured Postgres instances bundled with extensions and tuning for specific workloads such as message queues (pgmq), vector search, analytics or geospatial. It also ran Trunk, a registry for Postgres extensions, and open-sourced a Kubernetes operator. In 2025 the company pivoted to an AI coding-agent product, disabled new Tembo Cloud instances on May 5, 2025, and required paid customers to migrate off by June 27, 2025. The managed database no longer exists; existing users were directed to other managed Postgres providers. Its open-source projects, such as pgmq, live on independently.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Tembo Cloud was sunset in 2025 (new instances disabled May 5, paid instances ended June 27) as the company pivoted to AI agents; migrate to another managed Postgres.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "queue",
+    "vector-search",
+    "geospatial"
+  ],
+  "architecture": [
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Tembo",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "Rust",
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (service); operator and tools were open source"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold; the service is shut down."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Was single-primary Postgres; the service no longer operates."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "JavaScript",
+    "Go",
+    "Rust",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pioneered workload-specific Postgres 'Stacks' with curated extensions",
+    "Seeded useful open-source projects such as pgmq and the Trunk extension registry"
+  ],
+  "weaknesses": [
+    "Service shut down in 2025; not available for new or existing workloads",
+    "Customers had only weeks to migrate"
+  ],
+  "useCases": [
+    "Historical reference only",
+    "Understanding Postgres-as-a-queue patterns (pgmq lives on)"
+  ],
+  "notIdealFor": [
+    "Any new project: the service no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neon",
+    "supabase",
+    "crunchy-bridge",
+    "amazon-rds",
+    "pgmq",
+    "xata"
+  ],
+  "tags": [
+    "postgres",
+    "discontinued",
+    "managed",
+    "extensions"
+  ],
+  "links": {
+    "website": "https://www.tembo.io/",
+    "docs": "https://tembo-io.notion.site/Tembo-Cloud-Migration-Guide-1de7c9367d6a80349570e7469ba7f17b"
+  },
+  "ids": {
+    "hackerNewsQuery": "Tembo Postgres"
+  },
+  "brand": {},
+  "sources": [
+    "https://tembo-io.notion.site/Tembo-Cloud-Migration-Guide-1de7c9367d6a80349570e7469ba7f17b",
+    "https://www.cs.cmu.edu/~pavlo/blog/2026/01/2025-databases-retrospective.html",
+    "https://www.plushcap.com/companies/tembo/blog/summaries/2025/05"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,164 @@
+{
+  "slug": "inmemory-net",
+  "name": "InMemory.Net",
+  "aliases": [
+    "IRDB",
+    "InMemory.Net IRDB"
+  ],
+  "tagline": "Commercial in-memory columnar SQL engine for .NET that speeds up reporting over hundreds of millions of rows.",
+  "description": "InMemory.Net is a small commercial analytics database from Cork, Ireland, written in .NET. Its IRDBImport tool pulls data out of ODBC, OLE DB or .NET data providers, dictionary-compresses each column (typically 5-10x) into files on disk, and the IRDB server loads those files into RAM and answers SQL aggregations, with queries compiled to .NET code via Roslyn. It is essentially an extract-and-accelerate layer for reports and dashboards rather than a system of record: data is refreshed by re-importing, not by OLTP writes. Development is slow but alive; builds target .NET Framework 4.x and modern .NET, and Parquet import and export arrived in 2025.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "InMemory.Net (Cork, Ireland)",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (per-server, SaaS and OEM licenses)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "subscription"
+    ],
+    "freeTier": false,
+    "startingPrice": "$400 perpetual (1 named user)",
+    "notes": "Per-server licenses priced by named users ($400 for 1 user to $6,500 unlimited); SaaS hosting at $400 per backend server per month; OEM by quote."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server; capacity bounded by RAM after column compression."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "LINQ"
+  ],
+  "apis": [
+    "ADO.NET data provider",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Aggregates hundreds of millions of rows in about a second on one server",
+    "Dictionary-encoded columns shrink data 5-10x so large extracts fit in RAM",
+    "Imports from any ODBC, OLE DB or .NET source and from Parquet files",
+    "Native .NET API and LINQ for embedding fast analytics in .NET apps",
+    "Simple perpetual pricing compared with enterprise analytics engines"
+  ],
+  "weaknesses": [
+    "Batch re-import model; not designed for transactional writes",
+    "Windows/.NET only, single-node, small vendor with sparse documentation",
+    "Little community, tooling or third-party integration compared with DuckDB or ClickHouse"
+  ],
+  "useCases": [
+    "Accelerating slow SQL Server or ODBC-backed reports",
+    "Embedded analytics inside .NET line-of-business applications",
+    "Interactive dashboards over tens of millions of rows on a desktop"
+  ],
+  "notIdealFor": [
+    "OLTP or frequently updated data",
+    "Linux or container-first deployments",
+    "Multi-terabyte datasets that exceed one machine's memory"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "duckdb",
+    "clickhouse",
+    "sql-server",
+    "singlestore",
+    "exasol"
+  ],
+  "tags": [
+    "in-memory",
+    "dotnet",
+    "analytics",
+    "columnar",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://inmemory.net/",
+    "pricing": "https://inmemory.net/licensing/"
+  },
+  "ids": {
+    "hackerNewsQuery": "InMemory.Net"
+  },
+  "brand": {},
+  "sources": [
+    "https://inmemory.net/",
+    "https://inmemory.net/licensing/",
+    "https://inmemory.net/technology/data-compression/",
+    "https://inmemory.net/2025/11/06/parquet-support/",
+    "https://inmemory.net/download/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,217 @@
+{
+  "slug": "valkey",
+  "name": "Valkey",
+  "aliases": [],
+  "tagline": "The Linux Foundation's BSD-licensed fork of Redis, now the default engine on AWS and Google Cloud.",
+  "description": "Valkey was forked from Redis 7.2.4 in March 2024, days after Redis left the BSD license, by maintainers from AWS, Google, Oracle, Ericsson and others under the Linux Foundation. It stays wire- and data-compatible with Redis OSS while shipping its own work: multi-threaded I/O, per-field hash TTLs, multiple databases in cluster mode (9.0) and database-level ACLs (9.1). For anyone who wants a drop-in Redis that stays permissively licensed and vendor-neutral, it is now the safe default, and ElastiCache, MemoryDB and Memorystore all lead with it.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "session-store",
+    "queue",
+    "pub-sub",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node",
+    "primary-replica",
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Valkey project (Linux Foundation)",
+  "vendorType": "foundation",
+  "initialRelease": 2024,
+  "latestVersion": {
+    "version": "9.1.3",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "Redis 7.2.4",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; managed by AWS, Google Cloud, Aiven, DigitalOcean, Momento and others."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "oracle-cloud",
+      "aiven",
+      "digitalocean",
+      "akamai-linode",
+      "alibaba-cloud",
+      "railway",
+      "render"
+    ],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon ElastiCache for Valkey",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/elasticache/"
+    },
+    {
+      "name": "Memorystore for Valkey",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/memorystore/docs/valkey"
+    },
+    {
+      "name": "Aiven for Valkey",
+      "provider": "Aiven",
+      "url": "https://aiven.io/valkey"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Cluster mode shards by hash slot; 9.x scales clusters toward 2,000 nodes. All data lives in RAM."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (RESP)",
+    "Lua"
+  ],
+  "apis": [
+    "RESP2/RESP3"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust",
+    "Ruby",
+    "PHP",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in compatible with Redis OSS 7.2 clients, commands and RDB/AOF files",
+    "BSD-3-Clause license with open governance and no CLA-backed relicensing risk",
+    "Multi-threaded I/O delivers well over 1M requests/s on one node",
+    "Default engine for ElastiCache, MemoryDB and Memorystore, often at lower price than Redis OSS",
+    "Hash field expiration and database-level ACLs added beyond the original fork"
+  ],
+  "weaknesses": [
+    "Search, JSON and Bloom features live in separate valkey-search/valkey-json/valkey-bloom modules",
+    "Diverging from Redis 8 commands, so new Redis-only features will not appear",
+    "Still memory-bound: dataset size equals RAM bill",
+    "Async replication can drop recent writes on failover"
+  ],
+  "useCases": [
+    "Replacing Redis OSS without license concerns",
+    "Application caching and session storage",
+    "Rate limiting, counters and leaderboards",
+    "Pub/sub fan-out and Streams-based queues"
+  ],
+  "notIdealFor": [
+    "Durable system of record with multi-key ACID transactions",
+    "Datasets much larger than RAM",
+    "Analytical or relational queries"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "redis",
+    "dragonfly",
+    "garnet",
+    "keydb",
+    "amazon-elasticache",
+    "google-memorystore"
+  ],
+  "tags": [
+    "cache",
+    "in-memory",
+    "resp",
+    "redis-fork",
+    "linux-foundation",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://valkey.io/",
+    "docs": "https://valkey.io/topics/",
+    "repository": "https://github.com/valkey-io/valkey",
+    "changelog": "https://valkey.io/download/releases/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Valkey"
+  },
+  "ids": {
+    "github": "valkey-io/valkey",
+    "stackoverflowTag": "valkey",
+    "wikipedia": "Valkey",
+    "dockerHub": "valkey/valkey",
+    "npm": "@valkey/valkey-glide",
+    "pypi": "valkey-glide",
+    "hackerNewsQuery": "Valkey"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/valkey-io/valkey/releases",
+    "https://www.linuxfoundation.org/press/valkey-enhances-efficiency-security-and-modular-performance-with-9.1-release-and-new-ecosystem-integrations",
+    "https://valkey.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

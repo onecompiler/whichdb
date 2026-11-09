@@ -1,0 +1,176 @@
+{
+  "slug": "adabas",
+  "name": "Software AG Adabas",
+  "aliases": [
+    "Adabas",
+    "ADABAS",
+    "Adabas & Natural",
+    "Adabas for z/OS"
+  ],
+  "tagline": "Inverted-list, multi-value mainframe database paired with Natural, run as a standalone Software AG business.",
+  "description": "Adabas (Adaptable Database System) is Software AG's high-throughput database from 1971, storing compressed records with multiple-value and periodic-group fields and indexing them through inverted lists of 'descriptors'. Together with the Natural 4GL it runs government, tax, social-security and banking systems on IBM Z, with a Linux edition for distributed and cloud deployments. After Silver Lake took Software AG private and sold off webMethods, StreamSets and others, Adabas & Natural has operated as a standalone business since January 2025 under an 'Adabas & Natural 2050+' commitment; the October 2025 release brought Adabas for z/OS 8.6.1 and Adabas for Linux 7.4. It is a keep-running platform, not a new-build choice.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "multivalue",
+  "models": [
+    "multivalue"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "shared-storage",
+    "primary-replica"
+  ],
+  "developer": "Software AG (Adabas & Natural business, owned by Silver Lake)",
+  "vendorType": "company",
+  "initialRelease": 1971,
+  "latestVersion": {
+    "version": "8.6.1 (z/OS)",
+    "date": "2025-10"
+  },
+  "writtenIn": [
+    "Assembly",
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Enterprise licensing, usually bundled with Natural; mainframe pricing tied to capacity."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "mainframe",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Adabas Cluster Services (Parallel Sysplex) and Adabas Cluster for Linux; Event Replicator for downstream copies."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Natural",
+    "Adabas direct call interface",
+    "SQL (via Adabas SQL Gateway)"
+  ],
+  "apis": [
+    "Adabas direct calls",
+    "Adabas Client for Java",
+    "Adabas REST administration"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Natural",
+    "COBOL",
+    "Java",
+    "C",
+    "Assembly"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very high transaction throughput for large record-oriented workloads",
+    "Multiple-value and periodic-group fields avoid many joins",
+    "Automatic record compression keeps storage small",
+    "Event Replicator streams changes to relational targets and Kafka-style consumers",
+    "Vendor commitment to support through '2050+'"
+  ],
+  "weaknesses": [
+    "Natural and Adabas skills are rare and ageing",
+    "Proprietary access model; SQL access needs gateways",
+    "Ownership has changed repeatedly, adding long-term uncertainty"
+  ],
+  "useCases": [
+    "Government tax and social-security systems",
+    "Banking and insurance back ends on IBM Z",
+    "Rehosting Adabas/Natural applications to Linux"
+  ],
+  "notIdealFor": [
+    "New application development",
+    "Analytics without replication to a warehouse",
+    "Teams without Natural expertise"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ibm-ims",
+    "idms",
+    "ibm-db2",
+    "oracle-database",
+    "rocket-unidata-universe"
+  ],
+  "tags": [
+    "mainframe",
+    "inverted-list",
+    "natural",
+    "multivalue",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.softwareag.com/en/adabas-natural/",
+    "docs": "https://documentation.softwareag.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/ADABAS"
+  },
+  "ids": {
+    "stackoverflowTag": "adabas",
+    "wikipedia": "ADABAS",
+    "hackerNewsQuery": "Adabas"
+  },
+  "brand": {},
+  "sources": [
+    "https://techcommunity.softwareag.com/t/adabas-natural-release-information-oct-2025/311504",
+    "https://www.softwareag.com/en/?p=2769",
+    "https://computerweekly.com/news/366617765/Software-AG-shrinks-with-sale-of-Alfabet-and-Cumulocity"
+  ],
+  "lastVerified": "2026-10-27"
+}

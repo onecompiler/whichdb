@@ -1,0 +1,157 @@
+{
+  "slug": "pointbase",
+  "name": "PointBase",
+  "aliases": [
+    "PointBase Embedded",
+    "PointBase Server",
+    "PointBase Micro"
+  ],
+  "tagline": "Pure-Java embeddable SQL database once bundled with the J2EE SDK and WebLogic; long discontinued.",
+  "description": "PointBase was a small relational database written entirely in Java, started in 1998 by Oracle co-founder Bruce Scott with Jeff Richey and Daren Race. It ran in-process or as a lightweight server through JDBC, and became familiar to a generation of Java developers because Sun shipped it with the J2EE SDK and BEA bundled it with WebLogic as a development database. DataMirror bought it in 2003, IBM bought DataMirror in 2007, and the product quietly disappeared; later WebLogic releases switched to Apache Derby. Today it only matters when you inherit an old Java EE sample app or test fixture that expects it.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by DataMirror (2003), which IBM bought in 2007; PointBase is no longer sold or supported. Use Apache Derby, H2 or HSQLDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "PointBase Inc. (later DataMirror, then IBM)",
+  "vendorType": "company",
+  "initialRelease": 1998,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (evaluation and bundled licenses)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Historically licensed commercially; free copies shipped only for development inside the J2EE SDK and WebLogic. No longer sold."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "A development and embedded database; bundled evaluation copies were capped at small database sizes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-install pure-Java engine that ran wherever a JVM did",
+    "Shipped with the J2EE SDK and WebLogic, so many old tutorials and samples assume it",
+    "Embedded and client-server modes behind the same JDBC interface"
+  ],
+  "weaknesses": [
+    "Discontinued for well over a decade; no downloads, patches or support",
+    "Bundled copies were licensed for development and testing only",
+    "No modern JDBC, Java module or SQL feature support"
+  ],
+  "useCases": [
+    "Reading or porting legacy J2EE and WebLogic sample applications",
+    "Understanding the history of embedded Java databases"
+  ],
+  "notIdealFor": [
+    "Any new project",
+    "Production deployments of any size"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-derby",
+    "h2",
+    "hsqldb",
+    "sqlite"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "jdbc",
+    "discontinued",
+    "acquired"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/PointBase",
+    "wikipedia": "https://en.wikipedia.org/wiki/PointBase"
+  },
+  "ids": {
+    "wikipedia": "PointBase",
+    "hackerNewsQuery": "PointBase database"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/PointBase",
+    "https://dbdb.io/db/pointbase"
+  ],
+  "lastVerified": "2026-10-27"
+}

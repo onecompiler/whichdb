@@ -1,0 +1,176 @@
+{
+  "slug": "vertex-ai-vector-search",
+  "name": "Vertex AI Vector Search",
+  "aliases": [
+    "Vertex AI Matching Engine",
+    "Agent Retrieval",
+    "Gemini Enterprise Agent Platform Vector Search"
+  ],
+  "tagline": "Google Cloud's managed ANN service built on ScaNN, now part of Gemini Enterprise Agent Platform.",
+  "description": "Vertex AI Vector Search, originally Matching Engine, is Google Cloud's managed approximate nearest neighbour service built on Google Research's ScaNN algorithm, the same technology behind Google Search and YouTube retrieval. You build indexes from embeddings in Cloud Storage or stream updates, deploy them to endpoints backed by provisioned nodes, and query dense, sparse or hybrid vectors with namespace restricts and numeric filters. Google has folded Vertex AI into the Gemini Enterprise Agent Platform and renamed the newer collection-based Vector Search 2.0 to Agent Retrieval, with auto-generated embeddings and reranking. Best for GCP-native teams with large, high-QPS workloads; minimum node costs make it pricey for small ones.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Google Cloud",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2021,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "ScaNN",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Google Cloud service)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Billed for node-hours of deployed index endpoints plus index build/update data processed. Google cites minimal setups under $100/month; shard count rises with dataset size and filters."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Vertex AI Vector Search",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/vertex-ai/docs/vector-search/overview"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Indexes shard across nodes and autoscale replicas; billions of vectors at high QPS are supported."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Vector Search API (restricts and numeric filters)"
+  ],
+  "apis": [
+    "REST/JSON",
+    "gRPC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "Node.js",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "ScaNN delivers excellent recall/latency at billion scale",
+    "Dense, sparse and hybrid queries",
+    "Streaming index updates for fresh data",
+    "IAM, VPC Service Controls and CMEK integration",
+    "Tight integration with Gemini embeddings and agent tooling"
+  ],
+  "weaknesses": [
+    "Provisioned nodes mean a baseline cost even when idle",
+    "GCP-only",
+    "Two generations (1.0 indexes vs Agent Retrieval collections) and renames cause confusion",
+    "Metadata filtering is less expressive than in Qdrant or Weaviate"
+  ],
+  "useCases": [
+    "Large-scale semantic search on GCP",
+    "Recommendation candidate retrieval",
+    "RAG for Gemini-based agents",
+    "Image and product similarity"
+  ],
+  "notIdealFor": [
+    "Small or spiky workloads on a budget",
+    "Multi-cloud or on-prem deployments",
+    "Full-text-heavy search"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "pinecone",
+    "alloydb",
+    "azure-ai-search",
+    "milvus",
+    "zilliz-cloud",
+    "amazon-s3-vectors"
+  ],
+  "tags": [
+    "vector-search",
+    "gcp",
+    "managed",
+    "scann",
+    "rag"
+  ],
+  "links": {
+    "website": "https://cloud.google.com/vertex-ai/docs/vector-search/overview",
+    "docs": "https://docs.cloud.google.com/vertex-ai/docs/vector-search/overview",
+    "pricing": "https://cloud.google.com/vertex-ai/pricing"
+  },
+  "ids": {
+    "stackoverflowTag": "google-cloud-vertex-ai",
+    "pypi": "google-cloud-aiplatform",
+    "hackerNewsQuery": "Vertex AI Vector Search"
+  },
+  "brand": {
+    "color": "#4285F4",
+    "simpleIcon": "googlecloud"
+  },
+  "sources": [
+    "https://docs.cloud.google.com/vertex-ai/docs/vector-search/overview",
+    "https://cloud.google.com/vertex-ai/pricing",
+    "https://github.com/google-research/google-research/tree/master/scann"
+  ],
+  "lastVerified": "2026-10-27"
+}

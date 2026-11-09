@@ -1,0 +1,155 @@
+{
+  "slug": "clusterpoint",
+  "name": "Clusterpoint",
+  "aliases": [
+    "Clusterpoint DBMS",
+    "Clusterpoint Server"
+  ],
+  "tagline": "Latvian-founded XML/JSON document database with built-in full-text search and JS/SQL queries; defunct.",
+  "description": "Clusterpoint was a schema-free document database from a company founded in 2006 by Latvian engineers and later headquartered in London, aimed at enterprise search and analytics over XML and then JSON documents. The engine combined distributed storage with built-in full-text, geospatial and time-series indexing and a multi-master cluster in which any node could coordinate. Version 4 added a hosted database-as-a-service with ACID transactions and JS/SQL, a SQL dialect whose queries could embed JavaScript expressions executed next to the data, and around 2015–2016 the company offered 10 GB free cloud accounts. The service went quiet around 2017, the website later became a static brochure, and the domain no longer serves the product. There is no maintained distribution.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Cloud service wound down around 2017; the website later went static and is now offline. No maintained release.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "search",
+    "xml"
+  ],
+  "workloads": [
+    "full-text-search",
+    "oltp",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "Clusterpoint Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2006,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Marketed scaling from one server to thousands of nodes in a multi-master cluster; no longer operated."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JS/SQL"
+  ],
+  "apis": [
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Full-text search built into the document store rather than bolted on",
+    "JS/SQL let queries run JavaScript expressions next to the data",
+    "Multi-master cluster design with ACID transactions in version 4"
+  ],
+  "weaknesses": [
+    "Company and service are defunct; no downloads or support",
+    "Proprietary query dialect makes migration a manual rewrite"
+  ],
+  "useCases": [
+    "Historical reference for search-centric document databases",
+    "Understanding legacy systems migrated off Clusterpoint"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "elasticsearch",
+    "couchbase",
+    "marklogic",
+    "opensearch"
+  ],
+  "tags": [
+    "document",
+    "xml",
+    "json",
+    "full-text-search",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20160618145119/https://www.clusterpoint.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Clusterpoint"
+  },
+  "ids": {
+    "wikipedia": "Clusterpoint",
+    "hackerNewsQuery": "Clusterpoint"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20160618145119/https://www.clusterpoint.com/",
+    "https://en.wikipedia.org/wiki/Clusterpoint",
+    "https://dbdb.io/db/clusterpoint"
+  ],
+  "lastVerified": "2026-10-27"
+}

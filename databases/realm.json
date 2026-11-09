@@ -1,0 +1,191 @@
+{
+  "slug": "realm",
+  "name": "Realm (Atlas Device SDK)",
+  "aliases": [
+    "Realm",
+    "Realm Database",
+    "MongoDB Realm",
+    "Atlas Device SDK"
+  ],
+  "tagline": "Object-oriented mobile database whose MongoDB sync service is gone; the local engine survives as open source.",
+  "description": "Realm is an embedded object database for iOS, Android and desktop apps: you declare model classes, and Realm persists them with zero-copy reads, live objects and change notifications instead of an ORM over SQLite. MongoDB bought Realm in 2019, rebranded the SDKs as Atlas Device SDKs and tied them to Atlas Device Sync, then deprecated both in September 2024 and shut the sync service down on 30 September 2025. The local database is still on GitHub under Apache-2.0 and gets occasional toolchain-compatibility releases, but new projects should treat it as legacy and pick a database with an active sync story.",
+  "productType": "library",
+  "status": "deprecated",
+  "statusNote": "MongoDB deprecated the Atlas Device SDKs and Device Sync in Sept 2024; sync ended 30 Sept 2025. The local DB stays Apache-2.0 open source with maintenance-only releases.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "MongoDB, Inc. (originally Realm Inc.)",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "Realm Swift 20.0.6",
+    "date": "2026-09-27"
+  },
+  "writtenIn": [
+    "C++",
+    "Swift",
+    "Objective-C",
+    "Kotlin",
+    "TypeScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "The local database is free. The paid Atlas Device Sync service no longer exists."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "ios",
+      "android",
+      "macos",
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "A single on-device file per realm; sized for app-local data, not shared server workloads."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Realm Query Language (RQL)",
+    "NSPredicate",
+    "LINQ"
+  ],
+  "apis": [
+    "Native object SDKs"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Swift",
+    "Objective-C",
+    "Kotlin",
+    "Java",
+    "JavaScript",
+    "Dart",
+    "C#",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Live, auto-updating objects remove most manual cache-invalidation code in UI layers",
+    "Zero-copy, memory-mapped reads are fast even on low-end phones",
+    "Built-in AES-256 file encryption and in-memory realms",
+    "One object model across Swift, Kotlin, JavaScript, Dart and .NET SDKs"
+  ],
+  "weaknesses": [
+    "Vendor sync was shut down in 2025; you must build or buy replication yourself",
+    "Maintenance-only releases with no clear long-term owner for the open-source code",
+    "Thread-confined objects and frozen-object rules trip up newcomers",
+    "Schema migrations are code-driven and can get painful across many app versions"
+  ],
+  "useCases": [
+    "Maintaining existing Realm-based iOS and Android apps",
+    "Local-only object persistence where sync is not needed",
+    "Reactive UI caches that bind directly to stored objects"
+  ],
+  "notIdealFor": [
+    "New apps that need cloud sync",
+    "Server-side or multi-user shared databases",
+    "Teams wanting SQL and ad-hoc reporting on device data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "objectbox",
+    "couchbase-lite",
+    "sqlite",
+    "powersync",
+    "watermelondb",
+    "isar"
+  ],
+  "tags": [
+    "mobile",
+    "embedded",
+    "object-database",
+    "offline-first",
+    "mongodb",
+    "deprecated"
+  ],
+  "links": {
+    "website": "https://github.com/realm",
+    "docs": "https://www.mongodb.com/docs/atlas/device-sdks/",
+    "repository": "https://github.com/realm/realm-swift",
+    "changelog": "https://github.com/realm/realm-swift/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Realm_(database)"
+  },
+  "ids": {
+    "github": "realm/realm-swift",
+    "stackoverflowTag": "realm",
+    "wikipedia": "Realm (database)",
+    "npm": "realm",
+    "hackerNewsQuery": "Realm database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.mongodb.com/docs/atlas/device-sdks/",
+    "https://www.mongodb.com/community/forums/t/atlas-device-sync-end-of-life-and-deprecation/296687",
+    "https://github.com/realm/realm-js/discussions/6884",
+    "https://github.com/realm/realm-swift/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

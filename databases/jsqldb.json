@@ -1,0 +1,156 @@
+{
+  "slug": "jsqldb",
+  "name": "JSqlDb",
+  "aliases": [
+    "JSqldb",
+    "JavaScript Query Language Database"
+  ],
+  "tagline": "Small DBMS that persists JavaScript objects and functions and is queried in JavaScript via V8.",
+  "description": "JSqlDb, 'JavaScript Query Language Database', was a hobby-scale DBMS by South African developer Konrad von Backström. Instead of storing JSON documents, it kept a persistent global JavaScript object graph: you assign to db.something, and objects, arrays, references between objects, prototype inheritance and even stored functions survive restarts. Queries are plain JavaScript run in an embedded V8 engine, with helper functions such as where() for SQL-like filtering. The C++ server shipped with an async Node.js driver, a synchronous debug driver and a Java driver under the LGPL. The project website went offline around 2021 and no maintained release is known.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Project website offline since about 2021 and no public releases since; no known maintainer.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "document",
+    "graph"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Konrad von Backström",
+  "vendorType": "community",
+  "initialRelease": 2017,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL v3",
+    "spdx": "LGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JavaScript"
+  ],
+  "apis": [
+    "Node.js driver",
+    "Java driver"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Persists real JavaScript object graphs, including references and prototypes",
+    "Stored functions act as JavaScript stored procedures",
+    "No impedance mismatch for JavaScript developers"
+  ],
+  "weaknesses": [
+    "Abandoned; website offline and no maintained releases",
+    "Running arbitrary JavaScript as queries complicates security and indexing",
+    "No replication, tooling or community"
+  ],
+  "useCases": [
+    "Historical curiosity: an orthogonal-persistence take on JavaScript",
+    "Ideas for object-graph persistence in JS runtimes"
+  ],
+  "notIdealFor": [
+    "Any production workload",
+    "Multi-user systems needing access control"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "lokijs",
+    "nedb",
+    "arangodb",
+    "zodb"
+  ],
+  "tags": [
+    "javascript",
+    "v8",
+    "object-graph",
+    "hobby",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2020/https://jsqldb.org/"
+  },
+  "ids": {
+    "hackerNewsQuery": "JSqlDb"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2020/https://jsqldb.org/",
+    "https://dbdb.io/db/jsqldb"
+  ],
+  "lastVerified": "2026-10-27"
+}

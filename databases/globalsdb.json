@@ -1,0 +1,158 @@
+{
+  "slug": "globalsdb",
+  "name": "GlobalsDB",
+  "aliases": [
+    "Globals",
+    "Globals DB"
+  ],
+  "tagline": "InterSystems' free NoSQL release of the Caché globals engine (c. 2011–2016), with Java, Node.js and .NET APIs.",
+  "description": "GlobalsDB was a free download from InterSystems that exposed only the storage kernel of Caché: globals, persistent sparse multi-dimensional arrays addressed by a variable name plus any number of subscripts. It left out SQL, the object layer, ObjectScript, ECP distribution and the rest of Caché, and gave developers a native API first for Java, then Node.js and finally .NET, so any key-value, document or tree layout could be modelled directly on the sorted global structures. InterSystems used it to introduce MUMPS-style storage to a wider developer audience. The project faded after 2015 and its domain was later taken over by unrelated sites. InterSystems IRIS, including its free Community Edition, is the successor.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Discontinued by InterSystems around 2016; globalsdb.org now hosts unrelated content. InterSystems IRIS is the successor.",
+  "maturity": "legacy",
+  "primaryModel": "hierarchical",
+  "models": [
+    "hierarchical",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded"
+  ],
+  "developer": "InterSystems",
+  "vendorType": "company",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "InterSystems Caché",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary freeware"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Was a free download with no registration; no longer offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-node engine; the distributed ECP layer of Caché was not included."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Globals API"
+  ],
+  "apis": [
+    "Java API",
+    "Node.js API",
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "JavaScript",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Same globals storage engine that powers Caché and IRIS deployments",
+    "Sorted multi-dimensional arrays model key-value, tree and document data directly",
+    "Very low-latency native access from Java and Node.js"
+  ],
+  "weaknesses": [
+    "Discontinued and no longer downloadable from InterSystems",
+    "No SQL, objects or secondary indexing beyond what you build into globals",
+    "No distribution or replication features"
+  ],
+  "useCases": [
+    "Historical context for InterSystems IRIS and MUMPS-style storage",
+    "Understanding hierarchical global data models"
+  ],
+  "notIdealFor": [
+    "New development (use InterSystems IRIS Community Edition or YottaDB)"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "intersystems-iris",
+    "yottadb",
+    "gt-m",
+    "intersystems-cache"
+  ],
+  "tags": [
+    "mumps",
+    "globals",
+    "intersystems",
+    "nosql",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20150203094453/http://globalsdb.org:80/"
+  },
+  "ids": {
+    "hackerNewsQuery": "GlobalsDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20150203094453/http://globalsdb.org:80/",
+    "https://web.archive.org/web/2012/http://globalsdb.org/faq",
+    "https://dbdb.io/db/globalsdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

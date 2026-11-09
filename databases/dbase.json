@@ -1,0 +1,121 @@
+{
+  "slug": "dbase",
+  "name": "dBASE",
+  "aliases": ["dBase", "dBASE II", "dBASE III", "dBASE IV", "dBASE PLUS", "dBASE 2019", "dBASE CLASSIC"],
+  "tagline": "The original microcomputer database and xBase language, still sold as a Windows IDE built on DBF tables.",
+  "description": "dBASE combined a file-based table engine, an interactive command language, forms, reports and a compiler into one desktop package, and its DBF file format became a de facto interchange standard that GIS tools, spreadsheets and ETL utilities still read today. It started life as Vulcan, was licensed by Ashton-Tate as dBASE II in 1980 and dominated PC databases through the 1980s before Ashton-Tate's decline. dBase LLC now sells dBASE 2019, a Windows IDE for the object-oriented dBL language, plus dBASE CLASSIC (the old DOS dBASE V) and the dbDOS runtime for legacy apps. The last full release, 2019.2, shipped in February 2020, so treat it as a maintenance product for keeping existing xBase applications alive rather than a choice for new projects.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Still sold by dBase LLC, but the newest build is dBASE 2019.2 (February 2020); recent activity is legacy DOS tooling. New projects should use SQLite, Access or a server RDBMS.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["oltp"],
+  "architecture": ["single-node", "embedded"],
+  "developer": "dBase LLC (originally Ashton-Tate)",
+  "vendorType": "company",
+  "initialRelease": 1980,
+  "latestVersion": { "version": "2019.2", "date": "2020-02-18" },
+  "writtenIn": ["Assembly", "C"],
+  "license": { "type": "proprietary", "name": "Proprietary" },
+  "pricing": {
+    "models": ["per-node-license"],
+    "freeTier": false,
+    "notes": "Perpetual per-seat licences bought from the dBase LLC store; dBASE CLASSIC (DOS) launched at $99. A trial download is offered."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single DBF files are limited to a few GB; multi-user access relies on file and record locking over a shared drive."
+  },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["dBL (xBase)", "SQL (local, via BDE)"],
+  "apis": ["BDE", "ODBC", "ADO"],
+  "compatibleWith": [],
+  "drivers": ["dBL"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "DBF tables are readable by countless tools (GIS shapefiles, LibreOffice, Python dbfread), so data is never locked in",
+    "Single package covers tables, indexes, forms, reports and a compiled application runtime",
+    "dbDOS and dBASE CLASSIC keep decades-old DOS xBase applications running on modern Windows",
+    "Vendor still sells licences and runtimes for existing deployments"
+  ],
+  "weaknesses": [
+    "No release since dBASE 2019.2 in February 2020",
+    "Windows-only desktop tooling; no server engine, replication or cloud option",
+    "File-share locking scales poorly beyond a handful of concurrent users and risks index corruption",
+    "Small, ageing developer community and few modern libraries for dBL"
+  ],
+  "useCases": [
+    "Maintaining legacy xBase business applications",
+    "Running DOS-era dBASE programs on current Windows via dbDOS",
+    "Reading or producing DBF files for interchange",
+    "Small single-office desktop databases"
+  ],
+  "notIdealFor": [
+    "New application development",
+    "Web or multi-user server workloads",
+    "Anything needing high availability or cloud deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": ["microsoft-access", "filemaker", "sqlite", "4d", "firebird", "paradox"],
+  "tags": ["xbase", "dbf", "desktop", "legacy", "windows"],
+  "links": {
+    "website": "https://www.dbase.com/",
+    "changelog": "https://www.dbase.com/support/updates-and-fixes/",
+    "wikipedia": "https://en.wikipedia.org/wiki/DBase"
+  },
+  "ids": {
+    "stackoverflowTag": "dbase",
+    "wikipedia": "DBase",
+    "hackerNewsQuery": "dBASE"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.dbase.com/",
+    "https://www.dbase.com/support/updates-and-fixes/",
+    "https://www.dbase.com/announcing-dbase-classic/",
+    "https://en.wikipedia.org/wiki/DBase",
+    "https://dbdb.io/db/dbase"
+  ],
+  "lastVerified": "2026-10-27"
+}

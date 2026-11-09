@@ -1,0 +1,181 @@
+{
+  "slug": "heavydb",
+  "name": "HEAVY.AI (HeavyDB)",
+  "aliases": [
+    "HeavyDB",
+    "OmniSciDB",
+    "MapD",
+    "HEAVY.AI"
+  ],
+  "tagline": "GPU-native columnar SQL database with visual analytics, fully open-sourced by NVIDIA in 2026.",
+  "description": "HeavyDB (formerly MapD and OmniSciDB) is an in-memory columnar SQL engine that compiles queries with LLVM and runs them across GPUs, making interactive scans and geospatial joins over billions of rows feasible on a single server. NVIDIA acquired HEAVY.AI in 2025, and in October 2026 released v10.0 with the whole platform open source under Apache 2.0, including the Immerse dashboard UI, the GPU rendering engine, HeavyConnect foreign tables and HeavyRF. It is a strong option for geospatial and telemetry visualization on NVIDIA hardware; it needs GPUs and the community is still forming around the new release.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "olap",
+    "geospatial",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "single-node",
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "NVIDIA (HEAVY.AI)",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "10.0.0",
+    "date": "2026-10-08"
+  },
+  "writtenIn": [
+    "C++",
+    "CUDA"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "The full platform is open source as of v10.0 (October 2026)."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Best on one or a few multi-GPU servers; hot data must fit in GPU/CPU memory."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Thrift API",
+    "JDBC",
+    "ODBC",
+    "Arrow"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "GPU execution makes billion-row scans and geo joins interactive",
+    "Server-side GPU rendering of points, polygons and heatmaps",
+    "Now fully open source including the Immerse visualization UI",
+    "Native geospatial types and functions",
+    "Backed by NVIDIA hardware and CUDA expertise"
+  ],
+  "weaknesses": [
+    "Requires NVIDIA GPUs for its main advantage",
+    "Working set must fit in GPU/CPU memory",
+    "Transactions and updates are limited",
+    "Community and roadmap are in flux after the acquisition"
+  ],
+  "useCases": [
+    "Geospatial visual analytics",
+    "Telecom and RF network planning",
+    "Interactive exploration of large telemetry datasets"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "CPU-only environments",
+    "Petabyte-scale cold data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kinetica",
+    "clickhouse",
+    "duckdb",
+    "apache-druid"
+  ],
+  "tags": [
+    "gpu",
+    "geospatial",
+    "visual-analytics",
+    "nvidia",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://docs.nvidia.com/heavyai/",
+    "docs": "https://docs.nvidia.com/heavyai/",
+    "repository": "https://github.com/heavyai/heavydb",
+    "changelog": "https://github.com/heavyai/heavydb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/HEAVY.AI"
+  },
+  "ids": {
+    "github": "heavyai/heavydb",
+    "wikipedia": "HEAVY.AI",
+    "pypi": "heavyai",
+    "hackerNewsQuery": "HeavyDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/heavyai/heavydb/releases",
+    "https://docs.nvidia.com/heavyai/",
+    "https://en.wikipedia.org/wiki/HEAVY.AI"
+  ],
+  "lastVerified": "2026-10-27"
+}

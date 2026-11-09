@@ -1,0 +1,160 @@
+{
+  "slug": "galaxybase",
+  "name": "Galaxybase",
+  "aliases": [
+    "银河图数据库"
+  ],
+  "tagline": "Chinese native distributed graph database for HTAP graph workloads in banking and energy.",
+  "description": "Galaxybase is a commercial, native distributed property-graph database from CreateLink (Zhejiang Chuanglin Technology) in Hangzhou. Its storage layout is designed for fast traversals and single-edge lookups, and it supports concurrent transactional and analytical graph workloads (HTAP), as described in a VLDB 2024 paper. It is deployed mainly by Chinese banks, power grids and telecoms for risk control and knowledge graphs, and the vendor now bundles it with graph-RAG and enterprise AI products. Documentation and support are primarily in Chinese.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "htap",
+    "knowledge-graph",
+    "rag"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "CreateLink (Zhejiang Chuanglin Technology)",
+  "vendorType": "company",
+  "initialRelease": 2019,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free edition available)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free edition and trial downloads; production licenses by contract."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Distributed parallel architecture for very large graphs."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Cypher"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native distributed storage optimized for traversal and single-edge queries",
+    "HTAP design runs transactional and analytical graph work together",
+    "Production references across major Chinese banks, grids and telecoms"
+  ],
+  "weaknesses": [
+    "Limited English documentation and international presence",
+    "Proprietary with no public pricing",
+    "Few independent benchmarks or community resources"
+  ],
+  "useCases": [
+    "Bank risk control and anti-fraud",
+    "Power-grid topology analysis",
+    "Enterprise knowledge graphs",
+    "Graph-enhanced RAG"
+  ],
+  "notIdealFor": [
+    "Teams needing English-first support",
+    "Open-source deployments",
+    "RDF/SPARQL workloads"
+  ],
+  "notableUsers": [
+    "Agricultural Bank of China",
+    "China Minsheng Bank",
+    "Bank of Communications",
+    "State Grid",
+    "China Mobile"
+  ],
+  "alternatives": [
+    "nebulagraph",
+    "tigergraph",
+    "ultipa",
+    "apache-hugegraph",
+    "neo4j"
+  ],
+  "tags": [
+    "distributed",
+    "htap",
+    "china",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://www.galaxybase.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Galaxybase"
+  },
+  "brand": {
+    "color": "#2D5BFF"
+  },
+  "sources": [
+    "https://www.galaxybase.com/",
+    "https://www.galaxybase.com/product",
+    "https://rmarcus.info/dbscholar/papers/h4fefcb27dd01f3d3"
+  ],
+  "lastVerified": "2026-10-27"
+}

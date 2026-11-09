@@ -1,0 +1,179 @@
+{
+  "slug": "etcd",
+  "name": "etcd",
+  "aliases": [],
+  "tagline": "Raft-based, strongly consistent key-value store that holds Kubernetes' cluster state.",
+  "description": "etcd is a small, strongly consistent key-value store designed for the most critical data in a distributed system: configuration, service discovery, leader election and locks. It replicates via Raft, keeps a multi-version history so clients can watch for changes from any revision, and attaches leases to keys for TTL-based expiry. Every Kubernetes control plane depends on it, which makes it one of the most widely deployed databases in the world even if few people query it directly. Keep datasets small (the default quota is 2 GB, recommended maximum about 8 GB); it is a coordination service, not a general-purpose database.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "configuration",
+    "metadata-store",
+    "pub-sub"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "etcd maintainers / CNCF",
+  "vendorType": "foundation",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "3.7.3",
+    "date": "2026-10-22"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "basedOn": "bbolt (storage) and Raft",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; managed implicitly as part of every managed Kubernetes control plane."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Every member stores the full dataset; clusters of 3 or 5 members are typical. Designed for gigabytes, not terabytes."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "etcd v3 API"
+  ],
+  "apis": [
+    "gRPC",
+    "gRPC-gateway (HTTP/JSON)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Java",
+    "Python",
+    "JavaScript",
+    "Rust",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Linearizable reads and writes through Raft consensus",
+    "Watch API streams changes from any historical revision",
+    "Leases, locks and leader election primitives built in",
+    "Battle-tested as the backing store of every Kubernetes cluster",
+    "Simple single binary with TLS and RBAC"
+  ],
+  "weaknesses": [
+    "Full dataset on every member, with a recommended ceiling of about 8 GB",
+    "Write throughput bounded by a single Raft leader and disk fsync latency",
+    "Needs periodic compaction and defragmentation",
+    "Not meant for application data or large values"
+  ],
+  "useCases": [
+    "Kubernetes and control-plane state",
+    "Service discovery and dynamic configuration",
+    "Distributed locks and leader election",
+    "Feature flags and small metadata for infrastructure"
+  ],
+  "notIdealFor": [
+    "Application databases",
+    "Large datasets or blobs",
+    "High-volume write workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-zookeeper",
+    "hashicorp-consul-kv",
+    "foundationdb",
+    "tikv"
+  ],
+  "tags": [
+    "cncf",
+    "kubernetes",
+    "raft",
+    "coordination",
+    "go"
+  ],
+  "links": {
+    "website": "https://etcd.io/",
+    "docs": "https://etcd.io/docs/",
+    "repository": "https://github.com/etcd-io/etcd",
+    "changelog": "https://github.com/etcd-io/etcd/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Etcd"
+  },
+  "ids": {
+    "github": "etcd-io/etcd",
+    "stackoverflowTag": "etcd",
+    "wikipedia": "Etcd",
+    "hackerNewsQuery": "etcd"
+  },
+  "brand": {
+    "color": "#419EDA",
+    "simpleIcon": "etcd"
+  },
+  "sources": [
+    "https://github.com/etcd-io/etcd/releases",
+    "https://etcd.io/docs/v3.6/dev-guide/limit/",
+    "https://etcd.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

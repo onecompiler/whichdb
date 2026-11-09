@@ -1,0 +1,177 @@
+{
+  "slug": "kingbase",
+  "name": "KingbaseES",
+  "aliases": [
+    "Kingbase",
+    "人大金仓",
+    "金仓数据库",
+    "KES"
+  ],
+  "tagline": "Chinese PostgreSQL-derived RDBMS with Oracle, MySQL and SQL Server compatibility modes.",
+  "description": "KingbaseES is a commercial relational database from CETC Kingbase (formerly Beijing Kingbase, which grew out of Renmin University of China). Its modern versions are built on PostgreSQL code and add compatibility modes for Oracle, MySQL and SQL Server syntax, plus its own clustering options (read-write separation clusters, shared-storage RAC and sharding). It is one of the main beneficiaries of China's domestic-software programmes in government, energy and finance, and the V9 line is actively developed. Outside the Chinese market it is rarely seen, and most documentation is in Chinese.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "oltp",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica",
+    "shared-storage"
+  ],
+  "developer": "CETC Kingbase (中电科金仓)",
+  "vendorType": "company",
+  "initialRelease": 1999,
+  "latestVersion": {
+    "version": "V9R4C11",
+    "date": "2025-02"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary commercial license"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Commercial licences sold mainly into Chinese government and enterprise projects."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Primary/standby clusters, a shared-storage cluster option and a sharding edition."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/SQL-compatible procedural SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "JDBC",
+    "ODBC",
+    "ADO.NET"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "C",
+    "C#",
+    "Python",
+    "Go"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "One engine with Oracle, MySQL, SQL Server and PostgreSQL compatibility modes",
+    "PostgreSQL heritage gives mature MVCC and SQL features",
+    "Certified for Chinese government and domestic hardware/OS stacks (Kunpeng, Loongson, Kylin)",
+    "Shared-storage and sharding options for HA and scale"
+  ],
+  "weaknesses": [
+    "Documentation, support and community are almost entirely Chinese",
+    "Compatibility modes are not complete clones; migrations still need testing",
+    "Little presence on global cloud platforms"
+  ],
+  "useCases": [
+    "Replacing Oracle in Chinese government systems",
+    "Energy and utility enterprise applications",
+    "Applications that must run on domestic Chinese hardware and OS"
+  ],
+  "notIdealFor": [
+    "Projects outside China",
+    "Teams wanting community PostgreSQL extensions unchanged",
+    "Cloud-native managed-service architectures"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "dameng",
+    "huawei-gaussdb",
+    "opengauss",
+    "oceanbase",
+    "postgresql",
+    "oracle-database"
+  ],
+  "tags": [
+    "sql",
+    "postgres-derived",
+    "china",
+    "oracle-compatible"
+  ],
+  "links": {
+    "website": "https://www.kingbase.com.cn/",
+    "docs": "https://docs.kingbase.com.cn/cn"
+  },
+  "ids": {
+    "hackerNewsQuery": "KingbaseES"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.modb.pro/db/1916685711630151680",
+    "https://www.modb.pro/db/1933719916692123648",
+    "https://www.kingbase.com.cn/"
+  ],
+  "lastVerified": "2026-10-27"
+}

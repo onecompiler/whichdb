@@ -1,0 +1,175 @@
+{
+  "slug": "velodb",
+  "name": "VeloDB",
+  "aliases": [
+    "SelectDB"
+  ],
+  "tagline": "Commercial cloud and enterprise distribution of Apache Doris from its core maintainers.",
+  "description": "VeloDB is the company and product line built by core Apache Doris contributors (the company behind SelectDB). VeloDB Cloud is a managed, compute-storage separated Doris service that runs in VeloDB's cloud or as BYOC in your account, and VeloDB Enterprise packages hardened Doris builds, a cluster manager and Kubernetes operator for self-managed deployments. It brings Doris' real-time analytics, log search with inverted indexes, and lakehouse federation to teams that do not want to operate Doris themselves. Choosing it means a single-vendor commercial relationship around an Apache-licensed core.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "search",
+    "vector"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "observability",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "VeloDB",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "basedOn": "Apache Doris",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (on an Apache-2.0 Doris core)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Cloud billed by compute and storage with a free trial; Enterprise edition licensed for self-managed deployments."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure",
+      "alibaba-cloud"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Elastic compute clusters over object storage in VeloDB Cloud."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol",
+    "HTTP Stream Load",
+    "Arrow Flight SQL"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Managed Doris from its core developers, including BYOC",
+    "Compute-storage separation with elastic clusters",
+    "Real-time analytics and log search in one engine",
+    "Upstream Apache Doris compatibility avoids hard lock-in"
+  ],
+  "weaknesses": [
+    "Smaller vendor than hyperscaler warehouses",
+    "Commercial edition features differ from open-source Doris",
+    "MySQL-flavoured SQL"
+  ],
+  "useCases": [
+    "Managed real-time analytics",
+    "Log analytics as an Elasticsearch alternative",
+    "Lakehouse query acceleration"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Teams that only want hyperscaler-native services"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-doris",
+    "starrocks",
+    "clickhouse",
+    "snowflake",
+    "elasticsearch"
+  ],
+  "tags": [
+    "doris",
+    "managed",
+    "real-time",
+    "byoc"
+  ],
+  "links": {
+    "website": "https://www.velodb.io/",
+    "docs": "https://docs.velodb.io/",
+    "pricing": "https://www.velodb.io/pricing"
+  },
+  "ids": {
+    "hackerNewsQuery": "VeloDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.velodb.io/",
+    "https://www.velodb.io/pricing",
+    "https://doris.apache.org/"
+  ],
+  "lastVerified": "2026-10-27"
+}

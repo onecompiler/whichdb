@@ -1,0 +1,167 @@
+{
+  "slug": "orbitdb",
+  "name": "OrbitDB",
+  "aliases": [
+    "Orbit DB"
+  ],
+  "tagline": "Serverless peer-to-peer database on IPFS and libp2p using Merkle-CRDT logs.",
+  "description": "OrbitDB is a peer-to-peer database for JavaScript built on IPFS (Helia) and libp2p. Every database is an append-only, content-addressed operation log replicated between peers as a Merkle-CRDT, with higher-level types layered on top: event logs, documents and key-value stores, guarded by pluggable access controllers. Peers sync whenever they connect, so apps work offline and need no central server. It is the most established option for decentralised web3-style apps. Throughput, discovery and pinning are harder than with a server database, and the community is small.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "key-value",
+    "event-store"
+  ],
+  "workloads": [
+    "local-first",
+    "event-sourcing"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "embedded"
+  ],
+  "developer": "OrbitDB community",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "4.0.0",
+    "date": "2026-05-14"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "basedOn": "IPFS (Helia) and libp2p",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "active-active",
+    "notes": "Each peer replicates whole databases it opens; write rates are modest."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "JavaScript API"
+  ],
+  "apis": [
+    "libp2p pubsub replication"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "No central server: peers replicate directly over libp2p",
+    "Content-addressed, verifiable history for every database",
+    "Pluggable access controllers for who may write"
+  ],
+  "weaknesses": [
+    "Peer discovery, pinning and availability are operational headaches",
+    "Low throughput compared with server databases",
+    "Small community and frequent breaking changes across majors"
+  ],
+  "useCases": [
+    "Decentralised and web3 applications",
+    "Offline-capable collaborative apps without a backend",
+    "Tamper-evident shared logs between parties"
+  ],
+  "notIdealFor": [
+    "High-throughput transactional systems",
+    "Apps requiring strong consistency"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "gun",
+    "pouchdb",
+    "bigchaindb",
+    "jazz",
+    "evolu"
+  ],
+  "tags": [
+    "p2p",
+    "ipfs",
+    "crdt",
+    "decentralized",
+    "javascript"
+  ],
+  "links": {
+    "website": "https://orbitdb.org/",
+    "docs": "https://api.orbitdb.org/",
+    "repository": "https://github.com/orbitdb/orbitdb",
+    "changelog": "https://github.com/orbitdb/orbitdb/releases"
+  },
+  "ids": {
+    "github": "orbitdb/orbitdb",
+    "npm": "@orbitdb/core",
+    "hackerNewsQuery": "OrbitDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/orbitdb/orbitdb",
+    "https://www.npmjs.com/package/@orbitdb/core"
+  ],
+  "lastVerified": "2026-10-27"
+}

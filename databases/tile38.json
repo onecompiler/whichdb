@@ -1,0 +1,172 @@
+{
+  "slug": "tile38",
+  "name": "Tile38",
+  "aliases": [],
+  "tagline": "In-memory geospatial database and geofencing server that speaks the Redis protocol and HTTP.",
+  "description": "Tile38 is Josh Baker's (tidwall) open-source geolocation store: it keeps points, bounding boxes, geohashes, XYZ tiles and full GeoJSON objects in memory with spatial indexes, persists to disk, and answers nearby, within and intersects queries with field filters. Its standout feature is real-time geofencing: you register fences and it pushes enter, exit and cross events over pub/sub channels or webhooks to HTTP, gRPC, Kafka, AMQP, MQTT, NATS, SQS and other endpoints. Clients connect over the Redis RESP protocol, HTTP, WebSockets or telnet, and leader/follower replication adds read replicas and standby copies. Version 1.38.0 shipped in June 2026, and it remains the go-to choice when you need fast moving-object queries without a full GIS database.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "spatial",
+  "models": [
+    "spatial",
+    "key-value"
+  ],
+  "workloads": [
+    "geospatial",
+    "real-time-analytics",
+    "iot",
+    "pub-sub"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Josh Baker (tidwall)",
+  "vendorType": "community",
+  "initialRelease": 2016,
+  "latestVersion": {
+    "version": "1.38.0",
+    "date": "2026-06-09"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Dataset must fit in one leader's memory; followers add read capacity and standby copies."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Tile38 commands"
+  ],
+  "apis": [
+    "Redis protocol (RESP)",
+    "HTTP",
+    "WebSockets",
+    "Telnet"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Real-time geofencing with enter, exit and cross events",
+    "Webhooks to HTTP, gRPC, Kafka, MQTT, NATS, SQS and more without glue code",
+    "Works with any Redis client over RESP, or plain HTTP",
+    "Fast in-memory spatial queries on points, boxes, tiles and GeoJSON",
+    "Single Go binary, MIT licensed and actively maintained"
+  ],
+  "weaknesses": [
+    "Dataset must fit in RAM on one leader",
+    "No sharding or multi-leader writes",
+    "Not a full GIS: no projections, rasters or SQL spatial functions"
+  ],
+  "useCases": [
+    "Fleet, courier and ride-hailing vehicle tracking",
+    "Geofence alerts for IoT devices",
+    "Location-based notifications in mobile apps",
+    "Real-time nearby search for moving objects"
+  ],
+  "notIdealFor": [
+    "Complex GIS analysis (use PostGIS)",
+    "Datasets larger than memory",
+    "Transactional business data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgis",
+    "redis",
+    "valkey",
+    "mongodb",
+    "elasticsearch"
+  ],
+  "tags": [
+    "geospatial",
+    "geofencing",
+    "in-memory",
+    "redis-protocol",
+    "go"
+  ],
+  "links": {
+    "website": "https://tile38.com/",
+    "docs": "https://tile38.com/topics/installation",
+    "repository": "https://github.com/tidwall/tile38",
+    "changelog": "https://github.com/tidwall/tile38/releases"
+  },
+  "ids": {
+    "github": "tidwall/tile38",
+    "dockerHub": "tile38/tile38",
+    "hackerNewsQuery": "Tile38"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/tidwall/tile38",
+    "https://github.com/tidwall/tile38/releases",
+    "https://tile38.com/commands/sethook"
+  ],
+  "lastVerified": "2026-10-27"
+}

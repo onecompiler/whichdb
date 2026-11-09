@@ -1,0 +1,164 @@
+{
+  "slug": "versant-object-database",
+  "name": "Actian NoSQL (Versant)",
+  "aliases": [
+    "Versant Object Database",
+    "VOD",
+    "Actian NoSQL Object Database",
+    "Actian NoSQL FastObjects"
+  ],
+  "tagline": "Enterprise object database formerly known as Versant, sold by Actian for complex object models.",
+  "description": "Actian NoSQL, formerly the Versant Object Database, is a transactional object database that stores C++, Java and .NET object graphs directly, with online schema evolution, distributed multi-database transactions and high-availability options. It has a long history in telecom network management, defence and transport systems where object models are deep and latency matters. Actian (now part of HCLSoftware) still sells it alongside the embeddable FastObjects edition and now ships Docker images and a Kubernetes operator. It is a legacy-but-supported choice: dependable for existing installations, rarely chosen for greenfield work.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "distributed",
+    "embedded"
+  ],
+  "developer": "Actian (HCLSoftware)",
+  "vendorType": "company",
+  "initialRelease": 1990,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial (Actian)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Quoted by Actian; a trial download is available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Multiple databases can be combined with distributed transactions."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "VQL (Versant Query Language)",
+    "JPA (NoSQL JPA)"
+  ],
+  "apis": [
+    "C++ API",
+    "Java API",
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Stores complex object graphs without mapping code",
+    "Online schema evolution without downtime",
+    "Decades of use in telecom and defence systems",
+    "Container images and a Kubernetes operator are available"
+  ],
+  "weaknesses": [
+    "Proprietary with opaque pricing",
+    "Small and shrinking developer community",
+    "Few modern integrations or managed offerings"
+  ],
+  "useCases": [
+    "Telecom network inventory and management",
+    "Defence and transport systems with deep object models",
+    "Maintaining existing Versant installations"
+  ],
+  "notIdealFor": [
+    "Greenfield cloud-native apps",
+    "SQL analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "objectivity-db",
+    "gemstone-s",
+    "objectdb",
+    "intersystems-iris",
+    "postgresql"
+  ],
+  "tags": [
+    "object-database",
+    "actian",
+    "enterprise",
+    "cpp",
+    "legacy"
+  ],
+  "links": {
+    "website": "https://www.actian.com/databases/nosql/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Actian_NoSQL_Object_Database"
+  },
+  "ids": {
+    "wikipedia": "Actian NoSQL Object Database",
+    "hackerNewsQuery": "Versant object database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.actian.com/databases/nosql/",
+    "https://en.wikipedia.org/wiki/Actian_NoSQL_Object_Database"
+  ],
+  "lastVerified": "2026-10-27"
+}

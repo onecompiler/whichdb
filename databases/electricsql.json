@@ -1,0 +1,175 @@
+{
+  "slug": "electricsql",
+  "name": "ElectricSQL",
+  "aliases": [
+    "Electric",
+    "Electric Sync"
+  ],
+  "tagline": "Read-path sync engine that streams partial replicas of Postgres to clients over plain HTTP.",
+  "description": "Electric is an open-source sync service that sits next to PostgreSQL, consumes logical replication and streams subsets of tables (shapes) to clients over HTTP, so CDNs can cache and fan out the data. Clients get a live, incrementally updated copy in memory, in TanStack DB or in PGlite. Writes go back through your own API, which keeps authorization and business logic in your backend. After the 2024 rewrite it is simpler and more scalable than the original CRDT-based ElectricSQL. In August 2026 the team joined Databricks (Neon) and began winding down Electric Cloud, while the Apache-2.0 sync engine stays open source.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Team joined Databricks (Neon) in Aug 2026 and Electric Cloud is winding down; the Apache-2.0 sync engine remains open source and self-hostable.",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "local-first",
+    "mobile-offline",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Electric DB (part of Databricks)",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "sync-service 1.8.1",
+    "date": "2026-09-07"
+  },
+  "writtenIn": [
+    "Elixir",
+    "TypeScript"
+  ],
+  "basedOn": "PostgreSQL (logical replication)",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosting is free. Electric Cloud is being wound down after the Databricks deal."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Shape logs are served over HTTP and can be fanned out through CDNs; write throughput is bounded by the source Postgres."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "causal",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Shape definitions (table + SQL WHERE clause)"
+  ],
+  "apis": [
+    "HTTP Shape API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "TypeScript",
+    "Elixir"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": false
+  },
+  "strengths": [
+    "Works with an existing Postgres; no schema rewrite or new primary database",
+    "Plain HTTP shape streams cache in CDNs and scale to many concurrent clients",
+    "Writes stay in your API, so auth and validation logic stay where they are",
+    "Pairs with PGlite and TanStack DB for a full local Postgres in the browser"
+  ],
+  "weaknesses": [
+    "Read-path only; optimistic writes and conflict handling are your job",
+    "Hosted Electric Cloud is winding down, so you must self-host",
+    "Future roadmap now depends on Databricks/Neon priorities",
+    "Shape filters are limited compared with arbitrary SQL"
+  ],
+  "useCases": [
+    "Real-time dashboards fed from Postgres",
+    "Local-first web apps with a Postgres backend",
+    "Streaming per-user data subsets to many clients"
+  ],
+  "notIdealFor": [
+    "Apps needing turnkey bidirectional offline writes",
+    "Non-Postgres backends",
+    "Teams that want a fully managed sync service"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "powersync",
+    "rocicorp-zero",
+    "pglite",
+    "supabase",
+    "replicache",
+    "instantdb"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "sync",
+    "local-first",
+    "http",
+    "elixir"
+  ],
+  "links": {
+    "website": "https://electric.ax/",
+    "docs": "https://electric.ax/docs",
+    "repository": "https://github.com/electric-sql/electric",
+    "changelog": "https://github.com/electric-sql/electric/releases"
+  },
+  "ids": {
+    "github": "electric-sql/electric",
+    "npm": "@electric-sql/client",
+    "dockerHub": "electricsql/electric",
+    "hackerNewsQuery": "ElectricSQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://electric.ax/blog/2026/08/11/electric-joining-databricks",
+    "https://github.com/electric-sql/electric/releases",
+    "https://www.npmjs.com/package/@electric-sql/client"
+  ],
+  "lastVerified": "2026-10-27"
+}

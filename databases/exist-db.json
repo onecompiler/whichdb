@@ -1,0 +1,186 @@
+{
+  "slug": "exist-db",
+  "name": "eXist-db",
+  "aliases": [
+    "eXist"
+  ],
+  "tagline": "Open-source native XML database and XQuery application platform for documents and digital editions.",
+  "description": "eXist-db is a Java native XML database that stores documents in a collection hierarchy and queries them with XQuery 3.1, XPath and XSLT. Lucene powers its full-text indexes, and range indexes cover structured queries. It doubles as an application server: XQuery modules, RESTXQ endpoints and packaged apps run inside the database, which is why it is a mainstay of digital humanities, TEI editions and publishing workflows. The 6.x line is stable (6.4.1, March 2026), and 7.0 is in beta. It is not built for large-scale transactional work, but it is excellent for XML-heavy content applications.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "xml",
+  "models": [
+    "xml",
+    "document",
+    "search"
+  ],
+  "workloads": [
+    "content-management",
+    "full-text-search",
+    "scientific",
+    "metadata-store"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "eXist-db Open Source Initiative",
+  "vendorType": "community",
+  "initialRelease": 2000,
+  "latestVersion": {
+    "version": "6.4.1",
+    "date": "2026-03-05"
+  },
+  "writtenIn": [
+    "Java",
+    "XQuery"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU LGPL 2.1",
+    "spdx": "LGPL-2.1-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; commercial support available from eXist Solutions and consultants."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-instance database; scale by splitting collections across instances."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "XQuery 3.1",
+    "XPath",
+    "XSLT",
+    "XQuery Update (eXist dialect)"
+  ],
+  "apis": [
+    "REST",
+    "RESTXQ",
+    "WebDAV",
+    "XML-RPC",
+    "XML:DB API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Complete XQuery 3.1 implementation with Lucene full-text search",
+    "Builds and hosts whole web apps in XQuery with RESTXQ",
+    "WebDAV access makes it friendly to XML editors such as oXygen",
+    "Strong digital-humanities community and TEI tooling"
+  ],
+  "weaknesses": [
+    "Single-node only, with no clustering",
+    "Limited transactional guarantees for user-level multi-step updates",
+    "Small contributor base and slow major releases",
+    "XML-first; JSON is a second-class citizen"
+  ],
+  "useCases": [
+    "TEI digital editions and scholarly archives",
+    "XML publishing pipelines",
+    "Metadata repositories with full-text search"
+  ],
+  "notIdealFor": [
+    "High-volume OLTP",
+    "JSON-first web applications",
+    "Distributed or multi-region deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "basex",
+    "marklogic",
+    "sednadb",
+    "mongodb",
+    "apache-solr"
+  ],
+  "tags": [
+    "xml",
+    "xquery",
+    "open-source",
+    "digital-humanities"
+  ],
+  "links": {
+    "website": "https://exist-db.org/",
+    "docs": "https://exist-db.org/exist/apps/doc/",
+    "repository": "https://github.com/eXist-db/exist",
+    "changelog": "https://github.com/eXist-db/exist/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/EXist"
+  },
+  "ids": {
+    "github": "eXist-db/exist",
+    "stackoverflowTag": "exist-db",
+    "wikipedia": "EXist",
+    "dockerHub": "existdb/existdb",
+    "hackerNewsQuery": "eXist-db"
+  },
+  "brand": {
+    "color": "#6E2A3A"
+  },
+  "sources": [
+    "https://github.com/eXist-db/exist/releases",
+    "https://exist-db.org/",
+    "https://en.wikipedia.org/wiki/EXist"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,159 @@
+{
+  "slug": "tomp2p",
+  "name": "TomP2P",
+  "aliases": [
+    "Tom P2P"
+  ],
+  "tagline": "Java DHT library: a Kademlia-style peer-to-peer key-value store; archived and unmaintained.",
+  "description": "TomP2P is a Java library implementing a distributed hash table: every peer keeps a memory- or disk-backed table, and keys are routed to the closest peers with XOR-based iterative routing similar to Kademlia. On top of put/get it adds operations such as putIfAbsent, add, digests, Bloom-filtered gets, replication and signed data, plus NAT traversal via UPnP and NAT-PMP, all exposed through non-blocking futures on Netty. It came out of the University of Zurich and powered research and some P2P applications. The 5.0 line never left beta (last tag 5.0-Beta8.1, May 2020) and the GitHub repository is now archived.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "GitHub repo archived; last tag 5.0-Beta8.1 (May 2020) and tomp2p.net is offline. No maintained successor.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "edge",
+    "embedded"
+  ],
+  "architecture": [
+    "distributed",
+    "embedded"
+  ],
+  "developer": "Thomas Bocek and contributors (University of Zurich)",
+  "vendorType": "academic",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "5.0-Beta8.1",
+    "date": "2020-05-05"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Peers join an overlay network; data is spread and replicated across peers by key distance."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java API (put/get)"
+  ],
+  "apis": [
+    "Java API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Complete DHT stack in one library: routing, replication, NAT traversal and signed data",
+    "Non-blocking API built on Netty futures",
+    "Extended operations (Bloom-filter gets, digests, custom RPCs) beyond plain put/get"
+  ],
+  "weaknesses": [
+    "Archived; 5.0 never reached a stable release",
+    "Eventual consistency only, with no transactions or query language",
+    "Documentation site is gone and examples target old APIs"
+  ],
+  "useCases": [
+    "Studying DHT design in Java",
+    "Research prototypes of P2P storage"
+  ],
+  "notIdealFor": [
+    "Production systems that need support",
+    "Strongly consistent data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "orbitdb",
+    "gun",
+    "riak-kv",
+    "hazelcast"
+  ],
+  "tags": [
+    "p2p",
+    "dht",
+    "java",
+    "kademlia",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/tomp2p/TomP2P",
+    "repository": "https://github.com/tomp2p/TomP2P"
+  },
+  "ids": {
+    "github": "tomp2p/TomP2P",
+    "hackerNewsQuery": "TomP2P"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/tomp2p/TomP2P",
+    "https://github.com/tomp2p/TomP2P/tags"
+  ],
+  "lastVerified": "2026-10-27"
+}

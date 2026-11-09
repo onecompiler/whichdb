@@ -1,0 +1,163 @@
+{
+  "slug": "ardb",
+  "name": "Ardb",
+  "aliases": [],
+  "tagline": "Disk-backed Redis-protocol server with pluggable RocksDB, LevelDB or LMDB engines; unmaintained since 2019.",
+  "description": "Ardb is a C++ server by Yinqi Wen that speaks the Redis protocol but keeps data on disk through a choice of storage engines: RocksDB by default, or LevelDB, LMDB, WiredTiger, PerconaFT or ForestDB chosen at build time. It implements most Redis commands and data types (strings, lists, sets, sorted sets, hashes, bitmaps, HyperLogLog, streams) plus a 2D spatial index, Lua scripting and pub/sub, and can replicate to or from Redis 2.6/2.8 instances with Sentinel-driven failover. That made it a way to hold Redis-shaped datasets larger than RAM. The last release, 0.9.7, came out in April 2018 and the last commit in April 2019; Apache Kvrocks and Pika now fill the same niche with active development.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Last release 0.9.7 (Apr 2018), last commit Apr 2019; unmaintained. Apache Kvrocks or Pika are maintained disk-backed Redis-compatible servers.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "spatial"
+  ],
+  "workloads": [
+    "caching",
+    "session-store"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Yinqi Wen",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "0.9.7",
+    "date": "2018-04-26"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "RocksDB (default; pluggable engines)",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single server per dataset; capacity is bounded by disk rather than RAM. Replication follows the Redis 2.x master/slave model."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands",
+    "Lua"
+  ],
+  "apis": [
+    "Redis protocol (RESP)"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Redis protocol over disk-resident storage for datasets larger than RAM",
+    "Choice of six storage engines selected at build time",
+    "Can replicate to and from real Redis instances and work with Sentinel",
+    "Permissive BSD license"
+  ],
+  "weaknesses": [
+    "No commits since 2019; open security and compatibility gaps",
+    "Only Redis 2.x-era replication and command coverage",
+    "Higher latency than in-memory Redis",
+    "No cluster mode or sharding"
+  ],
+  "useCases": [
+    "Existing deployments that still depend on it",
+    "Studying how Redis semantics map onto LSM and B-tree engines"
+  ],
+  "notIdealFor": [
+    "New projects (use Apache Kvrocks, Pika or Redis/Valkey)",
+    "Sharded or highly available clusters"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-kvrocks",
+    "pika",
+    "valkey",
+    "redis",
+    "dragonfly"
+  ],
+  "tags": [
+    "redis-compatible",
+    "rocksdb",
+    "key-value",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/yinqiwen/ardb",
+    "repository": "https://github.com/yinqiwen/ardb",
+    "docs": "https://github.com/yinqiwen/ardb/wiki"
+  },
+  "ids": {
+    "github": "yinqiwen/ardb",
+    "hackerNewsQuery": "Ardb redis"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/yinqiwen/ardb",
+    "https://github.com/yinqiwen/ardb/releases/tag/v0.9.7",
+    "https://github.com/yinqiwen/ardb/wiki/ARDB-Commands"
+  ],
+  "lastVerified": "2026-10-27"
+}

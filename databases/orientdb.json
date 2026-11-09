@@ -1,0 +1,187 @@
+{
+  "slug": "orientdb",
+  "name": "OrientDB",
+  "aliases": [
+    "OrientDB Community Edition"
+  ],
+  "tagline": "Early Java multi-model database mixing documents, graphs and objects, now in patch-only mode.",
+  "description": "OrientDB is a Java multi-model database where every record is a document that can also act as a graph vertex or edge, linked by direct physical pointers instead of join tables. It offers an extended SQL dialect with graph traversal, Gremlin support, Lucene-based full-text and spatial indexes, and runs embedded or as a server with Hazelcast-based distribution. SAP acquired OrientDB in 2017 and later wound down commercial support. The 3.2 line still gets regular patch releases (3.2.57 in October 2026), but feature work has moved to forks: its creator's ArcadeDB and JetBrains' YouTrackDB.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "SAP-era commercial support has ended; 3.2.x receives only patch releases. Its creator's successor is ArcadeDB, and JetBrains forked it as YouTrackDB.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "document",
+    "key-value",
+    "object",
+    "search",
+    "spatial"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "oltp",
+    "embedded",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "OrientDB community (orientechnologies; formerly SAP)",
+  "vendorType": "community",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "3.2.57",
+    "date": "2026-10-05"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Distributed mode uses Hazelcast for multi-master replication and sharding by cluster, which is known to be fragile under load."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "OrientDB SQL",
+    "Gremlin"
+  ],
+  "apis": [
+    "Binary protocol",
+    "HTTP REST"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "JavaScript",
+    "Python",
+    "PHP",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Documents and graph vertices are the same record, so there is no separate graph store",
+    "Direct record links give constant-time traversals",
+    "Runs embedded in a JVM process or as a server",
+    "SQL-like language is easier to adopt than Cypher or Gremlin for many teams",
+    "Apache 2.0 licensed"
+  ],
+  "weaknesses": [
+    "No meaningful feature development; patch-only maintenance",
+    "Distributed mode has a long history of stability problems",
+    "Documentation and drivers are dated",
+    "Shrinking community as users migrate to ArcadeDB, YouTrackDB or Neo4j"
+  ],
+  "useCases": [
+    "Maintaining existing OrientDB-based applications",
+    "Embedded JVM applications needing documents plus graph links"
+  ],
+  "notIdealFor": [
+    "New projects (evaluate ArcadeDB or Neo4j)",
+    "Large clustered deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "arcadedb",
+    "arangodb",
+    "neo4j",
+    "janusgraph",
+    "surrealdb"
+  ],
+  "tags": [
+    "multi-model",
+    "graph",
+    "java",
+    "legacy",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://orientdb.dev/",
+    "docs": "https://orientdb.dev/docs/3.2.x/",
+    "repository": "https://github.com/orientechnologies/orientdb",
+    "changelog": "https://github.com/orientechnologies/orientdb/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/OrientDB"
+  },
+  "ids": {
+    "github": "orientechnologies/orientdb",
+    "stackoverflowTag": "orientdb",
+    "wikipedia": "OrientDB",
+    "dockerHub": "library/orientdb",
+    "hackerNewsQuery": "OrientDB"
+  },
+  "brand": {
+    "color": "#FF8800"
+  },
+  "sources": [
+    "https://github.com/orientechnologies/orientdb/releases",
+    "https://en.wikipedia.org/wiki/OrientDB",
+    "https://arcadedb.com/orientdb.html",
+    "https://github.com/JetBrains/youtrackdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

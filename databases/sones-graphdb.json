@@ -1,0 +1,158 @@
+{
+  "slug": "sones-graphdb",
+  "name": "sones GraphDB",
+  "aliases": [
+    "GraphDB (sones)"
+  ],
+  "tagline": "Weighted, object-oriented graph database in C#/.NET from sones GmbH; the company went bankrupt in 2012.",
+  "description": "sones GraphDB was a German graph database built on .NET (and Mono) that modelled typed vertices and edges with index-free adjacency, weighted edges and vertex types that could be extended at runtime. It was queried through its own SQL-like language, confusingly named GraphQL years before Facebook's API standard took the name, and was offered both as an AGPLv3 community edition (from July 2010) and as SaaS on Microsoft Azure. sones GmbH was declared bankrupt on 1 January 2012; the last version came out in May 2011 and the public repository was last touched in 2013. The GraphDB trademark later passed to Ontotext, which is a different product.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "sones GmbH went bankrupt in January 2012; last release May 2011, repo dormant since 2013. The 'GraphDB' name now belongs to Graphwise (Ontotext). Use Neo4j or Memgraph.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "object"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "sones GmbH",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3 (Community Edition)",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": false,
+    "notes": "The commercial enterprise edition and Azure SaaS ended with the company; only the AGPL source remains."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "sones GraphQL (SQL-like, unrelated to the GraphQL API standard)"
+  ],
+  "apis": [
+    "REST",
+    "C# API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Weighted edges and typed vertices were first-class, useful for ranking and recommendations",
+    "Vertex types could be extended at runtime without migrations",
+    "Ran on .NET or Mono, which suited Microsoft-centric shops of the time"
+  ],
+  "weaknesses": [
+    "Vendor bankrupt since 2012, no maintenance or security fixes",
+    "Query language named GraphQL invites confusion with the unrelated API standard",
+    "AGPL community edition complicated closed-source embedding",
+    "Tiny community and sparse documentation"
+  ],
+  "useCases": [
+    "Historical reference for early .NET graph databases",
+    "Studying weighted property-graph modelling"
+  ],
+  "notIdealFor": [
+    "Any new production graph workload"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "memgraph",
+    "arangodb",
+    "janusgraph",
+    "ontotext-graphdb"
+  ],
+  "tags": [
+    "graph",
+    "dotnet",
+    "csharp",
+    "discontinued",
+    "germany"
+  ],
+  "links": {
+    "website": "https://github.com/sones/sones",
+    "repository": "https://github.com/sones/sones",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sones_GraphDB"
+  },
+  "ids": {
+    "github": "sones/sones",
+    "wikipedia": "Sones GraphDB",
+    "hackerNewsQuery": "sones GraphDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/sones/sones",
+    "https://en.wikipedia.org/wiki/Sones_GraphDB",
+    "https://dbdb.io/db/sones-graphdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

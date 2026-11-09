@@ -1,0 +1,147 @@
+{
+  "slug": "manhattan",
+  "name": "Manhattan",
+  "aliases": [
+    "Twitter Manhattan",
+    "X Manhattan"
+  ],
+  "tagline": "Twitter's in-house, multi-tenant, eventually consistent key-value store with pluggable storage engines.",
+  "description": "Manhattan is the distributed database Twitter built in-house as a self-service, multi-tenant storage platform for its engineers; it had been in production for about two years when Twitter described it publicly in April 2014. Its core handles routing, topology, intra- and inter-datacenter replication, conflict resolution and continuous replica reconciliation; above that sit pluggable storage engines (seadb, a read-only format for batch Hadoop output; an LSM 'sstable' engine for write-heavy data; and a B-tree engine for read-heavy data) plus services for Hadoop bulk import, strong consistency (consensus with a replicated log enabling check-and-set) and high-volume time-series counters for Twitter's observability stack. It is eventually consistent by default and schemaless key-value. Manhattan was never open-sourced or sold, so it matters as a design reference rather than an option.",
+  "productType": "engine",
+  "status": "active",
+  "statusNote": "Internal to Twitter/X and never released externally; its current role at X is not publicly documented.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "time-series"
+  ],
+  "workloads": [
+    "oltp",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "Twitter (now X Corp.)",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (internal only)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Not available outside Twitter/X; no licensing or service offering exists."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Multi-tenant clusters replicated within and across Twitter datacenters at Twitter scale."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual",
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key-value API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pluggable storage engines matched to batch, write-heavy and read-heavy workloads",
+    "Self-service multi-tenancy: teams provision storage without schemas or tickets",
+    "Optional strong consistency (consensus and CAS) on an eventually consistent core",
+    "Efficient serving layer for datasets generated in Hadoop"
+  ],
+  "weaknesses": [
+    "Not available outside Twitter/X; no source, binaries or docs",
+    "Public technical detail stops around the mid-2010s"
+  ],
+  "useCases": [
+    "Reference design for multi-tenant, multi-datacenter key-value platforms",
+    "Studying pluggable storage engines and replica reconciliation"
+  ],
+  "notIdealFor": [
+    "Anyone outside X: it cannot be obtained"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-cassandra",
+    "scylladb",
+    "amazon-dynamodb",
+    "foundationdb",
+    "tikv",
+    "riak-kv"
+  ],
+  "tags": [
+    "internal",
+    "twitter",
+    "key-value",
+    "multi-tenant",
+    "distributed"
+  ],
+  "links": {
+    "website": "https://blog.x.com/engineering/en_us/a/2014/manhattan-our-real-time-multi-tenant-distributed-database-for-twitter-scale"
+  },
+  "ids": {
+    "hackerNewsQuery": "Twitter Manhattan database"
+  },
+  "brand": {},
+  "sources": [
+    "https://blog.x.com/engineering/en_us/a/2014/manhattan-our-real-time-multi-tenant-distributed-database-for-twitter-scale",
+    "https://web.archive.org/web/2020/https://blog.twitter.com/engineering/en_us/a/2014/manhattan-our-real-time-multi-tenant-distributed-database-for-twitter-scale"
+  ],
+  "lastVerified": "2026-10-27"
+}

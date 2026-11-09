@@ -1,0 +1,211 @@
+{
+  "slug": "scylladb",
+  "name": "ScyllaDB",
+  "aliases": [
+    "Scylla"
+  ],
+  "tagline": "C++ rewrite of Cassandra with shard-per-core design; also speaks the DynamoDB API.",
+  "description": "ScyllaDB re-implements the Cassandra data model and CQL protocol in C++ on the Seastar framework, pinning one shard to each CPU core so it avoids JVM pauses and lock contention. In practice that means far fewer, larger nodes for the same throughput and tighter p99 latencies, which is why teams such as Discord moved trillions of messages onto it. Tablets-based elastic sharding, Raft-managed schema and topology, and the Alternator DynamoDB-compatible API make it a migration target from both Cassandra and DynamoDB. Since the 2025 releases the single product is source-available rather than AGPL: free up to 10 TB and 50 vCPUs, commercial beyond that.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "time-series",
+    "iot",
+    "ml-feature-store",
+    "metadata-store",
+    "caching"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "ScyllaDB Inc.",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "2026.3.4",
+    "date": "2026-10"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Apache Cassandra (protocol and data model)",
+  "license": {
+    "type": "source-available",
+    "name": "ScyllaDB Software License Agreement 1.1"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Self-hosted use free up to 10 TB total storage / 50 vCPUs for non-customers; ScyllaDB Cloud billed per cluster-hour."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "ScyllaDB Cloud",
+      "provider": "ScyllaDB",
+      "url": "https://www.scylladb.com/product/scylla-cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Tablets rebalance data automatically as nodes are added; petabyte-scale clusters are publicly documented."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "tunable",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "CQL",
+    "DynamoDB API"
+  ],
+  "apis": [
+    "CQL native protocol",
+    "Alternator (DynamoDB-compatible HTTP API)"
+  ],
+  "compatibleWith": [
+    "cassandra",
+    "dynamodb"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "Rust",
+    "C++",
+    "C#",
+    "JavaScript",
+    "Scala"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Shard-per-core architecture delivers low, stable p99 latency without JVM GC pauses",
+    "Drop-in CQL compatibility plus a DynamoDB-compatible API (Alternator)",
+    "Tablets give fast, automatic rebalancing when scaling out or in",
+    "Typically needs several times fewer nodes than Cassandra for the same load",
+    "Workload prioritization lets OLTP and batch jobs share a cluster"
+  ],
+  "weaknesses": [
+    "No longer open source: production use beyond 10 TB / 50 vCPUs requires a commercial license",
+    "Same query-first modelling limits as Cassandra; no joins",
+    "Some Cassandra features and edge behaviours differ, so migrations need testing",
+    "Smaller community and managed-service choice than Cassandra"
+  ],
+  "useCases": [
+    "Chat and messaging history at very high volume",
+    "Low-latency feature stores for ML",
+    "Cassandra or DynamoDB migration targets",
+    "IoT and telemetry ingestion",
+    "Ad-tech and personalisation lookups"
+  ],
+  "notIdealFor": [
+    "Teams that require an OSI-approved open-source license",
+    "Relational or join-heavy data",
+    "Small single-node workloads"
+  ],
+  "notableUsers": [
+    "Discord",
+    "Comcast",
+    "Zillow"
+  ],
+  "alternatives": [
+    "apache-cassandra",
+    "amazon-dynamodb",
+    "datastax-astra-db",
+    "amazon-keyspaces",
+    "google-cloud-bigtable",
+    "aerospike"
+  ],
+  "tags": [
+    "wide-column",
+    "cassandra-compatible",
+    "dynamodb-compatible",
+    "c++",
+    "seastar"
+  ],
+  "links": {
+    "website": "https://www.scylladb.com/",
+    "docs": "https://docs.scylladb.com/",
+    "repository": "https://github.com/scylladb/scylladb",
+    "pricing": "https://www.scylladb.com/pricing/",
+    "changelog": "https://github.com/scylladb/scylladb/tags",
+    "wikipedia": "https://en.wikipedia.org/wiki/ScyllaDB"
+  },
+  "ids": {
+    "github": "scylladb/scylladb",
+    "stackoverflowTag": "scylla",
+    "wikipedia": "ScyllaDB",
+    "dockerHub": "scylladb/scylla",
+    "pypi": "scylla-driver",
+    "crates": "scylla",
+    "hackerNewsQuery": "ScyllaDB"
+  },
+  "brand": {
+    "color": "#6CD5E7",
+    "simpleIcon": "scylladb"
+  },
+  "sources": [
+    "https://github.com/scylladb/scylladb/blob/master/LICENSE-ScyllaDB-Source-Available.md",
+    "https://www.scylladb.com/",
+    "https://github.com/scylladb/scylladb/tags"
+  ],
+  "lastVerified": "2026-10-27"
+}

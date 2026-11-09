@@ -1,0 +1,197 @@
+{
+  "slug": "apache-hive",
+  "name": "Apache Hive",
+  "aliases": [
+    "Hive",
+    "Hive Metastore"
+  ],
+  "tagline": "The original SQL-on-Hadoop warehouse, now mostly valued for its Metastore and Iceberg support.",
+  "description": "Apache Hive brought SQL to Hadoop at Facebook in 2008: HiveQL compiled to MapReduce, later Tez, over files in HDFS. Hive 4.x runs on Tez with LLAP caching, ACID ORC tables, materialized views with query rewrite and first-class Iceberg tables, and requires JDK 21 from 4.2. Its most enduring piece is the Hive Metastore, still the catalog behind countless Spark, Trino and Impala deployments, now with an Iceberg REST catalog. New projects rarely choose Hive as the query engine, but it remains embedded in Hadoop-era estates.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse",
+    "metadata-store"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "4.2.1",
+    "date": "2026-08-24"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; bundled in Cloudera and Amazon EMR; AWS Glue Data Catalog is Metastore-compatible."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon EMR (Hive)",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/emr/"
+    },
+    {
+      "name": "Cloudera Data Warehouse",
+      "provider": "Cloudera",
+      "url": "https://www.cloudera.com/products/data-warehouse.html"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scales with the underlying Hadoop/Tez or Kubernetes cluster; historic multi-PB deployments."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "HiveQL"
+  ],
+  "apis": [
+    "HiveServer2 Thrift",
+    "JDBC",
+    "ODBC",
+    "Metastore Thrift API",
+    "Iceberg REST catalog"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Hive Metastore is the de facto catalog for Spark, Trino and Impala",
+    "Handles very large batch SQL jobs over HDFS and object storage",
+    "ACID ORC tables and Iceberg tables with time travel and compaction",
+    "Materialized views with automatic query rewrite"
+  ],
+  "weaknesses": [
+    "High query latency compared with modern MPP engines",
+    "Heavy Hadoop-era dependencies (Tez, YARN, ZooKeeper)",
+    "Shrinking community as users move to Spark, Trino and cloud warehouses",
+    "Operationally complex to run and upgrade"
+  ],
+  "useCases": [
+    "Existing Hadoop data warehouses",
+    "Shared Metastore catalog for lakehouse engines",
+    "Large overnight batch SQL"
+  ],
+  "notIdealFor": [
+    "Interactive BI",
+    "New cloud-native platforms",
+    "Streaming or real-time analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-spark-sql",
+    "trino",
+    "apache-impala",
+    "presto",
+    "databricks-sql"
+  ],
+  "tags": [
+    "hadoop",
+    "sql-on-hadoop",
+    "metastore",
+    "batch",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://hive.apache.org/",
+    "docs": "https://hive.apache.org/docs/latest/",
+    "repository": "https://github.com/apache/hive",
+    "changelog": "https://hive.apache.org/general/downloads/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Apache_Hive"
+  },
+  "ids": {
+    "github": "apache/hive",
+    "stackoverflowTag": "hive",
+    "wikipedia": "Apache Hive",
+    "dockerHub": "apache/hive",
+    "hackerNewsQuery": "Apache Hive"
+  },
+  "brand": {
+    "color": "#FDEE21",
+    "simpleIcon": "apachehive"
+  },
+  "sources": [
+    "https://hive.apache.org/general/downloads/",
+    "https://github.com/apache/hive",
+    "https://en.wikipedia.org/wiki/Apache_Hive"
+  ],
+  "lastVerified": "2026-10-27"
+}

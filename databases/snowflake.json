@@ -1,0 +1,200 @@
+{
+  "slug": "snowflake",
+  "name": "Snowflake",
+  "aliases": [
+    "Snowflake Data Cloud",
+    "Snowflake AI Data Cloud"
+  ],
+  "tagline": "Fully managed cloud data warehouse with separate storage and compute, now spanning AI and apps.",
+  "description": "Snowflake is a cloud-only analytical database that stores data in its own compressed columnar format on object storage and runs queries on independently sized virtual warehouses. Its big win is operational: no indexes, vacuuming or distribution keys to tune, near-instant zero-copy clones, time travel, and secure data sharing across accounts and clouds. It has grown into a broad platform (Snowpark, Cortex AI functions, Iceberg tables, Postgres), but at its core it remains the default choice for teams that want a SQL warehouse with almost no DBA work and are willing to pay per credit for it.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "serverless"
+  ],
+  "developer": "Snowflake Inc.",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "C++",
+    "Java"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "startingPrice": "From ~$2 per credit (Standard edition, region-dependent)",
+    "notes": "Compute billed per second in credits per warehouse size; storage billed per TB-month. 30-day trial with free credits."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Multi-cluster warehouses scale out concurrency; database replication and failover across regions and clouds."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL",
+    "Snowflake Scripting",
+    "Python (Snowpark)",
+    "JavaScript"
+  ],
+  "apis": [
+    "REST SQL API",
+    "JDBC",
+    "ODBC",
+    "Arrow (ADBC)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    ".NET",
+    "C",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": true,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Near-zero administration: no indexes, vacuum or distribution keys to manage",
+    "Independent virtual warehouses isolate ETL, BI and data science workloads",
+    "Zero-copy cloning and time travel make dev/test copies and recovery trivial",
+    "Secure data sharing and Marketplace across accounts, regions and clouds",
+    "Semi-structured VARIANT data queried with plain SQL",
+    "Runs on AWS, Azure and GCP with the same feature set"
+  ],
+  "weaknesses": [
+    "Credit-based pricing gets expensive with always-on or poorly sized warehouses",
+    "Closed storage format for native tables (Iceberg tables are the escape hatch)",
+    "Not designed for sub-second, high-concurrency user-facing analytics",
+    "No self-hosted or on-prem option"
+  ],
+  "useCases": [
+    "Enterprise data warehouse",
+    "ELT pipelines with dbt",
+    "Cross-company data sharing",
+    "BI and reporting at scale",
+    "Governed data platform for ML and AI features"
+  ],
+  "notIdealFor": [
+    "OLTP application backends",
+    "Sub-100 ms customer-facing dashboards",
+    "Air-gapped or on-prem deployments",
+    "Tight fixed budgets with spiky ad-hoc usage"
+  ],
+  "notableUsers": [
+    "Capital One",
+    "DoorDash",
+    "Instacart"
+  ],
+  "alternatives": [
+    "google-bigquery",
+    "databricks-sql",
+    "amazon-redshift",
+    "microsoft-fabric-warehouse",
+    "clickhouse",
+    "firebolt",
+    "starburst"
+  ],
+  "tags": [
+    "cloud-data-warehouse",
+    "sql",
+    "saas",
+    "separation-of-storage-and-compute",
+    "data-sharing"
+  ],
+  "links": {
+    "website": "https://www.snowflake.com/",
+    "docs": "https://docs.snowflake.com/",
+    "pricing": "https://www.snowflake.com/en/pricing-options/",
+    "changelog": "https://docs.snowflake.com/en/release-notes/new-features",
+    "wikipedia": "https://en.wikipedia.org/wiki/Snowflake_Inc."
+  },
+  "ids": {
+    "stackoverflowTag": "snowflake-cloud-data-platform",
+    "wikipedia": "Snowflake Inc.",
+    "npm": "snowflake-sdk",
+    "pypi": "snowflake-connector-python",
+    "hackerNewsQuery": "Snowflake"
+  },
+  "brand": {
+    "color": "#29B5E8",
+    "simpleIcon": "snowflake"
+  },
+  "sources": [
+    "https://www.snowflake.com/en/",
+    "https://docs.snowflake.com/en/user-guide/intro-key-concepts",
+    "https://en.wikipedia.org/wiki/Snowflake_Inc."
+  ],
+  "lastVerified": "2026-10-27"
+}

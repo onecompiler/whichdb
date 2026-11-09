@@ -1,0 +1,180 @@
+{
+  "slug": "sequoiadb",
+  "name": "SequoiaDB",
+  "aliases": [
+    "巨杉数据库",
+    "SequoiaDB Juzhang",
+    "SequoiaSQL"
+  ],
+  "tagline": "Chinese distributed document database with native ACID storage, SQL instances and S3 API, used in many banks.",
+  "description": "SequoiaDB is a distributed database from Guangzhou-based SequoiaDB Corporation, first released in 2013 and open-sourced in 2014. Its core is a natively distributed, JSON document storage engine with full ACID transactions, sharding, multi-replica high availability and elastic scale-out; on top of it the company layers SQL instances compatible with MySQL and PostgreSQL, an S3-compatible object interface and a file-system gateway, which it markets as multi-model. The vendor reports production use in more than 100 banks and clusters of up to 500 servers and 3 PB, mainly for historical-data platforms, real-time data hubs and content management in Chinese financial services. In July 2025 the main repository moved to a new GitHub home and was relicensed from AGPL-3.0 to Apache 2.0; development of the 5.x line continues.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "primary-replica"
+  ],
+  "developer": "SequoiaDB Corporation",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0 (relicensed from AGPL-3.0 in 2025)",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open-source engine with a free download; commercial enterprise editions and support from SequoiaDB Corporation."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Vendor cites clusters of up to 500 physical servers and about 3 PB, with remote disaster-recovery replication."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SequoiaDB shell (JavaScript)",
+    "SQL via MySQL/PostgreSQL instances"
+  ],
+  "apis": [
+    "Native driver protocol",
+    "MySQL wire protocol (SQL instance)",
+    "PostgreSQL wire protocol (SQL instance)",
+    "S3-compatible object API",
+    "REST"
+  ],
+  "compatibleWith": [
+    "mysql",
+    "postgresql",
+    "s3"
+  ],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "Python",
+    "PHP",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native distributed document engine with full ACID transactions",
+    "MySQL- and PostgreSQL-compatible SQL instances over the same data",
+    "S3-compatible object storage and file gateway in one platform",
+    "Proven in large Chinese banking deployments",
+    "Now under the permissive Apache 2.0 license"
+  ],
+  "weaknesses": [
+    "Documentation and community are mostly in Chinese",
+    "Small ecosystem outside China; few managed offerings",
+    "Multi-layer architecture (engine plus SQL instances) adds operational complexity"
+  ],
+  "useCases": [
+    "Historical and full-volume data platforms in banking",
+    "Real-time data hubs combining JSON and SQL access",
+    "Content and image management with an S3-compatible API",
+    "Mainframe offload of read-heavy financial data"
+  ],
+  "notIdealFor": [
+    "Teams needing English-first support",
+    "Small single-node applications"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "tidb",
+    "oceanbase",
+    "couchbase",
+    "yugabytedb"
+  ],
+  "tags": [
+    "distributed",
+    "document",
+    "multi-model",
+    "china",
+    "financial-services"
+  ],
+  "links": {
+    "website": "https://www.sequoiadb.com/en/",
+    "repository": "https://github.com/SequoiaDB/SequoiaDB",
+    "wikipedia": "https://en.wikipedia.org/wiki/SequoiaDB"
+  },
+  "ids": {
+    "github": "SequoiaDB/SequoiaDB",
+    "wikipedia": "SequoiaDB",
+    "hackerNewsQuery": "SequoiaDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.sequoiadb.com/en/",
+    "https://github.com/SequoiaDB/SequoiaDB",
+    "https://github.com/SequoiaDB/SequoiaDB_OLD",
+    "https://en.wikipedia.org/wiki/SequoiaDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

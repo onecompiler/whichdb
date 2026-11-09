@@ -1,0 +1,178 @@
+{
+  "slug": "m3db",
+  "name": "M3DB",
+  "aliases": [
+    "M3",
+    "M3 Coordinator",
+    "M3 Aggregator"
+  ],
+  "tagline": "Uber-born distributed TSDB and aggregator for Prometheus-scale metrics with tunable replication.",
+  "description": "M3 is the metrics platform Uber built to replace a Graphite-on-Cassandra stack. M3DB is a distributed, replicated time-series store with its own compressed on-disk format, M3 Coordinator accepts Prometheus remote write and serves PromQL and Graphite queries, and M3 Aggregator downsamples streams before they reach storage. It handles billions of series in production, but it is operationally heavy, with etcd, placement management and separate namespaces per resolution. After years with few releases, v1.6.0 shipped in September 2026. Chronosphere, the main sponsor and commercial heir of M3, was acquired by Palo Alto Networks in early 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "M3 project (Uber, Chronosphere)",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "1.6.0",
+    "date": "2026-09-25"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host; Chronosphere (Palo Alto Networks) sells a proprietary observability platform with M3 roots."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shards series across nodes with configurable replication factor; multi-region is done with separate clusters and cross-cluster queries."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "tunable"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "PromQL",
+    "Graphite",
+    "M3QL"
+  ],
+  "apis": [
+    "Prometheus remote write/read",
+    "Carbon plaintext",
+    "HTTP API"
+  ],
+  "compatibleWith": [
+    "prometheus",
+    "graphite"
+  ],
+  "drivers": [
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Proven at Uber scale with billions of series",
+    "Streaming aggregation tier reduces cardinality before storage",
+    "Tunable read/write consistency levels (one, majority, all)",
+    "Speaks both Prometheus and Graphite protocols",
+    "Official Kubernetes operator for M3DB clusters"
+  ],
+  "weaknesses": [
+    "Many components plus etcd make operations complex",
+    "Long release gaps and a small contributor base outside its sponsors",
+    "Documentation lags the code",
+    "No object-storage tier; retention is bounded by cluster disks"
+  ],
+  "useCases": [
+    "Very large Prometheus remote-write backends",
+    "Migrating Graphite at scale to PromQL",
+    "Multi-resolution metrics retention"
+  ],
+  "notIdealFor": [
+    "Small teams wanting low operational overhead",
+    "Logs and traces",
+    "SQL analytics"
+  ],
+  "notableUsers": [
+    "Uber"
+  ],
+  "alternatives": [
+    "victoriametrics",
+    "grafana-mimir",
+    "thanos",
+    "prometheus",
+    "graphite",
+    "cortex"
+  ],
+  "tags": [
+    "metrics",
+    "distributed",
+    "prometheus-compatible",
+    "open-source",
+    "go"
+  ],
+  "links": {
+    "website": "https://m3db.io/",
+    "docs": "https://m3db.io/docs/",
+    "repository": "https://github.com/m3db/m3",
+    "changelog": "https://github.com/m3db/m3/releases"
+  },
+  "ids": {
+    "github": "m3db/m3",
+    "hackerNewsQuery": "M3DB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/m3db/m3/releases/tag/v1.6.0",
+    "https://m3db.io/docs/",
+    "https://www.paloaltonetworks.com/company/press/2026/palo-alto-networks-completes-chronosphere-acquisition--unifying-observability-and-security-for-the-ai-era"
+  ],
+  "lastVerified": "2026-10-27"
+}

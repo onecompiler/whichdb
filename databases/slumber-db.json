@@ -1,0 +1,151 @@
+{
+  "slug": "slumber-db",
+  "name": "Slumber DB",
+  "aliases": [
+    "SlumberDB"
+  ],
+  "tagline": "Small Java key/value API for JSON objects over LevelDB, RocksDB, LMDB or MySQL; abandoned in 2014.",
+  "description": "Slumber DB was Richard Hightower's companion to the Boon JSON library: a typed Java key/value store that serializes objects with Boon (JSON) or Kryo (binary) and persists them to a pluggable backend such as LevelDB, RocksDB, LMDB or MySQL. It was aimed at REST and WebSocket services that just need to save and load objects by key, with batch reads and writes, deletes and key search, and deliberately avoided data-grid features. The project stopped in 2014, so it only matters if you are maintaining code that already uses it.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No commits since September 2014, along with the rest of the Boon project; effectively unmaintained. Use MapDB, Chronicle Map or RocksDB's Java API.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "session-store"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Richard Hightower",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Thin, typed Java API over several proven storage engines",
+    "Fast JSON (Boon) and binary (Kryo) serialization built in",
+    "Swap LevelDB, RocksDB, LMDB or MySQL backends without changing application code"
+  ],
+  "weaknesses": [
+    "Abandoned since 2014 with outdated dependencies",
+    "Key/value only: no queries on fields, secondary indexes or multi-key transactions",
+    "Tiny user base and sparse documentation"
+  ],
+  "useCases": [
+    "Maintaining older Boon-based Java services",
+    "Reference design for a pluggable JVM key/value facade"
+  ],
+  "notIdealFor": [
+    "New Java projects",
+    "Querying JSON documents by field"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mapdb",
+    "chronicle-map",
+    "rocksdb",
+    "lmdb",
+    "xodus"
+  ],
+  "tags": [
+    "java",
+    "json",
+    "key-value",
+    "boon",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://github.com/RichardHightower/slumberdb",
+    "repository": "https://github.com/RichardHightower/slumberdb"
+  },
+  "ids": {
+    "github": "RichardHightower/slumberdb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/RichardHightower/slumberdb",
+    "https://github.com/RichardHightower/slumberdb/commits/master"
+  ],
+  "lastVerified": "2026-10-27"
+}

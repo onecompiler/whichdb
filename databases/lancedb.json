@@ -1,0 +1,204 @@
+{
+  "slug": "lancedb",
+  "name": "LanceDB",
+  "aliases": [
+    "Lance"
+  ],
+  "tagline": "Embedded, serverless retrieval database on the Lance columnar format for multimodal AI data.",
+  "description": "LanceDB is a Rust retrieval engine built on Lance, an open columnar file format designed for ML data with fast random access and versioning. The open-source library runs embedded in Python, TypeScript or Rust and reads directly from local disk or object storage, so there is no server to run; LanceDB Cloud and Enterprise add a serverless/distributed service and a 'multimodal lakehouse' for feature engineering. It supports vector, full-text (BM25) and scalar-indexed search, zero-copy schema evolution and time travel across table versions. Especially strong when the same data feeds training pipelines and retrieval.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "columnar",
+    "search"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "embedded",
+    "lakehouse",
+    "ml-feature-store"
+  ],
+  "architecture": [
+    "embedded",
+    "serverless",
+    "shared-storage"
+  ],
+  "developer": "LanceDB, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "latestVersion": {
+    "version": "0.40.0",
+    "date": "2026-10-07"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "Lance columnar format",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open-source library is free. LanceDB Cloud is usage-based serverless; LanceDB Enterprise (BYOC/managed, multimodal lakehouse) via sales."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "LanceDB Cloud",
+      "provider": "LanceDB",
+      "url": "https://lancedb.com/"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "OSS scales with storage (local or S3/GCS/Azure); Enterprise distributes query and indexing across nodes for billions of rows."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "LanceDB API (SQL filter expressions)",
+    "SQL"
+  ],
+  "apis": [
+    "Python",
+    "TypeScript",
+    "Rust",
+    "REST (Cloud)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "TypeScript",
+    "Rust",
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "No server: embed it and point it at local disk or object storage",
+    "Lance format is efficient for both training scans and random-access retrieval",
+    "Versioned tables with time travel and zero-copy column additions",
+    "Vector, BM25 full-text and scalar indexes together",
+    "Handles images, video and other blobs alongside embeddings"
+  ],
+  "weaknesses": [
+    "Concurrent writers to the same table need care in OSS",
+    "Fast-moving 0.x API with frequent breaking changes",
+    "Distributed serving is a paid Cloud/Enterprise feature",
+    "Object-storage latency can hurt tail latency without caching"
+  ],
+  "useCases": [
+    "Embedded RAG in desktop, CLI and agent apps",
+    "Multimodal datasets shared by training and retrieval",
+    "Agent memory stores",
+    "Serverless vector search over S3"
+  ],
+  "notIdealFor": [
+    "High-concurrency transactional writes",
+    "Teams wanting a classic client-server DB they can SSH into",
+    "Relational joins-heavy workloads"
+  ],
+  "notableUsers": [
+    "Netflix",
+    "Second Dinner",
+    "WeRide"
+  ],
+  "alternatives": [
+    "chroma",
+    "qdrant",
+    "turbopuffer",
+    "duckdb",
+    "milvus",
+    "sqlite-vec"
+  ],
+  "tags": [
+    "vector-database",
+    "embedded",
+    "columnar",
+    "multimodal",
+    "rust",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://lancedb.com/",
+    "docs": "https://lancedb.com/docs/",
+    "repository": "https://github.com/lancedb/lancedb",
+    "pricing": "https://lancedb.com/pricing",
+    "changelog": "https://github.com/lancedb/lancedb/releases"
+  },
+  "ids": {
+    "github": "lancedb/lancedb",
+    "stackoverflowTag": "lancedb",
+    "npm": "@lancedb/lancedb",
+    "pypi": "lancedb",
+    "crates": "lancedb",
+    "hackerNewsQuery": "LanceDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/lancedb/lancedb/releases",
+    "https://pypi.org/project/lancedb/",
+    "https://lancedb.com/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

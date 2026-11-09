@@ -1,0 +1,169 @@
+{
+  "slug": "graphenedb",
+  "name": "GrapheneDB",
+  "aliases": [],
+  "tagline": "Managed hosting for Neo4j Community Edition on dedicated cloud instances, with backups and replicas.",
+  "description": "GrapheneDB is a hosted service that runs Neo4j Community Edition databases on dedicated instances in a private cloud, operated by GrapheneDB Labs since about 2013. It adds the operational pieces Community Edition lacks out of the box: scheduled and hot snapshots, clone and restore, read replicas, query logs and metrics, VPC peering, IP allow-lists, encryption at rest and in transit, a management API and, recently, an MCP server for AI assistants. Pricing is pay-as-you-go from about $44 a month or by subscription, with $50 of trial credit. It suits teams that want Cypher and the Neo4j ecosystem without Enterprise licensing or managing servers; for clustering and Enterprise features look at Neo4j Aura instead.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "knowledge-graph",
+    "oltp"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "GrapheneDB Labs",
+  "vendorType": "company",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Neo4j Community Edition",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary service (hosts GPLv3 Neo4j Community Edition)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "startingPrice": "From $44/month (pay as you go)",
+    "notes": "$50 trial credit; Gold support plan $50/month; no Neo4j license or data-transfer fees."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "GrapheneDB",
+      "provider": "GrapheneDB Labs",
+      "url": "https://graphenedb.com/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single primary per database, sized up to 512 GB RAM and 48 vCPU, plus optional read replicas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Cypher"
+  ],
+  "apis": [
+    "Bolt",
+    "HTTP API",
+    "Management API"
+  ],
+  "compatibleWith": [
+    "neo4j"
+  ],
+  "drivers": [
+    "Java",
+    "JavaScript",
+    "Python",
+    "Go",
+    "C#"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Neo4j Community without running servers, with backups and snapshots handled",
+    "Read replicas and VPC peering on top of Community Edition",
+    "No Neo4j license fees and no data-transfer charges",
+    "Transparent per-instance pricing with a cost estimator"
+  ],
+  "weaknesses": [
+    "Community Edition limits: no causal clustering or Enterprise security features",
+    "Write capacity bounded by a single primary instance",
+    "Smaller vendor than Neo4j itself; region list is not public"
+  ],
+  "useCases": [
+    "Production Neo4j apps on a budget",
+    "Recommendation and social graphs for startups",
+    "Managed graph backends for knowledge-graph prototypes"
+  ],
+  "notIdealFor": [
+    "Workloads needing Neo4j Enterprise clustering",
+    "Very large graphs that exceed one instance"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "memgraph",
+    "falkordb",
+    "amazon-neptune",
+    "arcadedb"
+  ],
+  "tags": [
+    "neo4j",
+    "dbaas",
+    "graph",
+    "cypher",
+    "managed"
+  ],
+  "links": {
+    "website": "https://graphenedb.com/",
+    "pricing": "https://graphenedb.com/pricing"
+  },
+  "ids": {
+    "hackerNewsQuery": "GrapheneDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://graphenedb.com/",
+    "https://graphenedb.com/pricing",
+    "https://web.archive.org/web/20130216051018/http://www.graphenedb.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

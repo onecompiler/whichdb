@@ -1,0 +1,172 @@
+{
+  "slug": "hsqldb",
+  "name": "HyperSQL (HSQLDB)",
+  "aliases": [
+    "HSQLDB",
+    "HyperSQL"
+  ],
+  "tagline": "Long-running pure-Java SQL database with strong SQL:2023 coverage, used embedded and in LibreOffice.",
+  "description": "HyperSQL (HSQLDB) is a Java relational database that has been in continuous development since 2001, maintained largely by Fred Toussi and the hsql Development Group. It can run in-memory, file-based embedded or as a server, and it is notable for unusually thorough SQL standard support, including SQL:2023 features, MVCC, and Java routines. It ships as the embedded engine for LibreOffice/OpenOffice Base and is widely used for tests in Java projects. Releases are infrequent (2.7.4 in October 2024) but source activity continues, so treat it as stable and maintained rather than fast-moving.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "The hsql Development Group",
+  "vendorType": "community",
+  "initialRelease": 2001,
+  "latestVersion": {
+    "version": "2.7.4",
+    "date": "2024-10-25"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Hypersonic SQL",
+  "license": {
+    "type": "permissive",
+    "name": "HSQLDB License (BSD-style)",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single JVM or single server; cached tables allow multi-GB data on disk."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "HSQL/HTTP protocols"
+  ],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very broad SQL standard coverage, including system-versioned tables",
+    "Choice of 2PL, MVCC or mixed concurrency control",
+    "Tiny dependency footprint for embedding",
+    "Compatibility settings for PostgreSQL, MySQL, Oracle and others",
+    "BSD-style license"
+  ],
+  "weaknesses": [
+    "Small maintainer team and slow release cadence",
+    "Java-only access",
+    "Not tuned for large datasets or high write concurrency",
+    "Hosted on SourceForge with a minimal community"
+  ],
+  "useCases": [
+    "Embedded storage in Java applications",
+    "Unit tests needing strict SQL semantics",
+    "LibreOffice Base documents",
+    "Teaching SQL standard features"
+  ],
+  "notIdealFor": [
+    "High-traffic production services",
+    "Non-JVM stacks",
+    "Analytics on large data"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "h2",
+    "apache-derby",
+    "sqlite",
+    "duckdb",
+    "postgresql"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "in-memory",
+    "sql-standard"
+  ],
+  "links": {
+    "website": "https://hsqldb.org/",
+    "docs": "https://hsqldb.org/doc/2.0/guide/",
+    "repository": "https://sourceforge.net/projects/hsqldb/",
+    "changelog": "https://hsqldb.org/doc/2.0/changelist_2_0.txt",
+    "wikipedia": "https://en.wikipedia.org/wiki/HSQLDB"
+  },
+  "ids": {
+    "stackoverflowTag": "hsqldb",
+    "wikipedia": "HSQLDB",
+    "hackerNewsQuery": "HSQLDB"
+  },
+  "sources": [
+    "https://hsqldb.org/",
+    "https://sourceforge.net/p/hsqldb/svn/",
+    "https://hsqldb.org/web/hsqlLicense.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

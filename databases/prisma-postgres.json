@@ -1,0 +1,121 @@
+{
+  "slug": "prisma-postgres",
+  "name": "Prisma Postgres",
+  "aliases": ["Prisma Data Platform Postgres", "PPG"],
+  "tagline": "Serverless Postgres from the Prisma ORM team, on unikernels, billed per operation with no cold starts.",
+  "description": "Prisma Postgres is a managed PostgreSQL service from Prisma, the company behind the popular TypeScript ORM. It runs each database in lightweight unikernel microVMs on bare metal, which lets it pack many databases densely and avoid the cold starts of scale-to-zero designs. Billing counts operations (queries) and storage rather than compute hours, and the service includes connection pooling and optional global query caching. It became generally available in 2025 and now accepts direct TCP connections from any Postgres client, not just the Prisma ORM. It is an easy default for TypeScript teams already on Prisma; check operation-based pricing against heavy, chatty workloads before committing.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": ["relational", "document"],
+  "workloads": ["oltp", "content-management"],
+  "architecture": ["serverless", "primary-replica"],
+  "developer": "Prisma Data, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2025,
+  "writtenIn": ["Rust", "TypeScript", "C"],
+  "basedOn": "PostgreSQL",
+  "license": { "type": "proprietary", "name": "Proprietary (managed service)" },
+  "pricing": {
+    "models": ["usage-based", "subscription", "free"],
+    "freeTier": true,
+    "startingPrice": "$10/month (Starter)",
+    "notes": "Free: 200k operations/month, 50 databases, small storage allowance. Starter: 1M operations then $8/M, 10 GB then $2/GB. Pro and Business tiers above."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Prisma Postgres", "provider": "Prisma", "url": "https://www.prisma.io/postgres" }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single-primary databases; global caching can serve reads near users."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["PostgreSQL wire protocol", "HTTP serverless driver", "Prisma ORM"],
+  "compatibleWith": ["postgresql"],
+  "drivers": ["JavaScript", "TypeScript", "Python", "Go", "Java"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Unikernel architecture avoids cold starts while keeping per-database cost low",
+    "Tight integration with Prisma ORM, Migrate and Studio",
+    "Simple operation-based pricing with a free tier",
+    "Built-in connection pooling and optional query caching",
+    "Standard Postgres TCP connections for non-Prisma tools"
+  ],
+  "weaknesses": [
+    "Young service with a limited extension list",
+    "Operation-based billing can be costly for chatty ORMs or batch jobs",
+    "No branching, read scaling or multi-region writes",
+    "Vendor is best known for an ORM, not database operations"
+  ],
+  "useCases": [
+    "TypeScript apps built with Prisma ORM",
+    "Side projects and startups needing quick Postgres",
+    "Serverless functions on Vercel, Netlify or Cloudflare",
+    "Many small databases for templates or AI-generated apps"
+  ],
+  "notIdealFor": [
+    "High-throughput analytics or batch processing",
+    "Workloads needing niche Postgres extensions",
+    "Large databases requiring replicas"
+  ],
+  "notableUsers": [],
+  "alternatives": ["neon", "supabase", "xata", "planetscale", "nile", "cloudflare-d1"],
+  "tags": ["postgres", "serverless", "prisma", "typescript", "unikernel"],
+  "links": {
+    "website": "https://www.prisma.io/postgres",
+    "docs": "https://www.prisma.io/docs/postgres",
+    "pricing": "https://www.prisma.io/pricing"
+  },
+  "ids": {
+    "npm": "@prisma/ppg",
+    "hackerNewsQuery": "Prisma Postgres"
+  },
+  "brand": { "color": "#2D3748", "simpleIcon": "prisma" },
+  "sources": [
+    "https://www.prisma.io/pricing",
+    "https://www.prisma.io/blog/prisma-postgres-the-future-of-serverless-databases",
+    "https://www.prisma.io/blog/announcing-prisma-postgres-early-access"
+  ],
+  "lastVerified": "2026-10-27"
+}

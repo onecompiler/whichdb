@@ -1,0 +1,121 @@
+{
+  "slug": "volt-active-data",
+  "name": "Volt Active Data (VoltDB)",
+  "aliases": ["VoltDB", "Volt", "Volt Active Data"],
+  "tagline": "In-memory, partitioned SQL engine running Java stored procedures serially for millisecond decisioning.",
+  "description": "Volt Active Data, the product formerly known as VoltDB, is an in-memory distributed SQL database that descends from the H-Store research project led by Michael Stonebraker. Data is partitioned across CPU cores, and each partition executes stored procedures serially, which avoids locking and delivers ACID transactions with predictable single-digit-millisecond latency at very high throughput. Snapshots and command logging provide durability, and import/export connectors plus topics connect it to Kafka-style streams. Today it is sold as a commercial real-time decisioning platform, mainly to telecom (charging, policy) and fraud-prevention customers. The open-source community edition stopped receiving updates in 2022.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "spatial"],
+  "workloads": ["oltp", "real-time-analytics", "stream-processing", "financial-tick-data"],
+  "architecture": ["distributed", "in-memory", "client-server"],
+  "developer": "Volt Active Data, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": { "version": "16.0.0", "date": "2026-09-30" },
+  "writtenIn": ["Java", "C++"],
+  "license": { "type": "proprietary", "name": "Proprietary (commercial)" },
+  "pricing": {
+    "models": ["subscription", "enterprise-contract"],
+    "freeTier": false,
+    "notes": "Commercial subscriptions; trial licenses available; deployable via Google Cloud Marketplace on GKE."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": ["aws", "gcp"],
+    "platforms": ["linux"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Data must fit in cluster RAM; scales by adding nodes and partitions; cross-datacenter replication (XDCR) supports active-active."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "Java (stored procedures)"],
+  "apis": ["Native client protocol", "JDBC", "JSON/HTTP"],
+  "compatibleWith": [],
+  "drivers": ["Java", "Python", "C++", "Go", "C#", "JavaScript"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Serial execution per partition gives ACID with no locks or latches",
+    "Predictable single-digit-millisecond latency at millions of transactions per second",
+    "Java stored procedures keep decision logic next to the data",
+    "Built-in import/export and topics for streaming pipelines",
+    "Active-active cross-datacenter replication"
+  ],
+  "weaknesses": [
+    "Entire dataset must fit in memory",
+    "Multi-partition transactions are much slower than single-partition ones",
+    "Commercial-only; open-source edition is frozen since 2022",
+    "Small community and limited ecosystem tooling"
+  ],
+  "useCases": [
+    "Telecom online charging and policy control",
+    "Real-time fraud and risk decisions",
+    "Ad bidding and personalization at high TPS",
+    "Gaming leaderboards and in-game economies"
+  ],
+  "notIdealFor": [
+    "Datasets larger than available RAM",
+    "Ad-hoc analytics or BI",
+    "Teams wanting an open-source or managed-cloud option"
+  ],
+  "notableUsers": [],
+  "alternatives": ["singlestore", "aerospike", "redis", "hazelcast", "oracle-timesten", "apache-ignite"],
+  "tags": ["in-memory", "newsql", "real-time", "telecom", "stored-procedures"],
+  "links": {
+    "website": "https://www.voltactivedata.com/",
+    "docs": "https://docs.voltactivedata.com/",
+    "changelog": "https://docs.voltactivedata.com/ReleaseNotes",
+    "wikipedia": "https://en.wikipedia.org/wiki/VoltDB"
+  },
+  "ids": {
+    "stackoverflowTag": "voltdb",
+    "wikipedia": "VoltDB",
+    "pypi": "voltdbclient",
+    "hackerNewsQuery": "VoltDB"
+  },
+  "brand": { "color": "#E51937" },
+  "sources": [
+    "https://docs.voltactivedata.com/ReleaseNotes",
+    "https://www.voltactivedata.com/",
+    "https://pypi.org/project/voltdbclient/"
+  ],
+  "lastVerified": "2026-10-27"
+}

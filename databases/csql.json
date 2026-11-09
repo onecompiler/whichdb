@@ -1,0 +1,162 @@
+{
+  "slug": "csql",
+  "name": "CSQL",
+  "aliases": [
+    "CSQL Main Memory Database",
+    "CSQL Cache"
+  ],
+  "tagline": "Open-source in-memory SQL engine and bidirectional cache for MySQL, Postgres and Oracle; inactive since 2011.",
+  "description": "CSQL was an open-source suite from India's Lakshya Solutions built around a main-memory relational engine: it could run embedded in an application, as a standalone in-memory database server, or as an updatable, bidirectional table-level cache in front of disk-based databases such as MySQL, PostgreSQL and Oracle, exposing everything through SQL with ODBC and JDBC interfaces. The pitch was microsecond-level response times for telecom and financial workloads by keeping hot tables in shared memory while the backing database remained the system of record. Version 3.3 binaries for Linux were the last files published on SourceForge, in May 2011. The company website no longer belongs to the project, so treat CSQL as discontinued and look at Oracle TimesTen, eXtremeDB or Redis-based caching instead.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No releases since CSQL 3.3 (May 2011); the vendor website is gone.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "embedded"
+  ],
+  "architecture": [
+    "in-memory",
+    "embedded",
+    "client-server"
+  ],
+  "developer": "Lakshya Solutions",
+  "vendorType": "company",
+  "initialRelease": 2006,
+  "latestVersion": {
+    "version": "3.3",
+    "date": "2011-05-08"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU General Public License v2",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Data held in shared memory on a single host."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Main-memory SQL engine usable embedded, as a server, or as a cache",
+    "Bidirectional table-level caching in front of MySQL, PostgreSQL or Oracle",
+    "Standard ODBC/JDBC access"
+  ],
+  "weaknesses": [
+    "Inactive since 2011 with no maintainer",
+    "Single-host, memory-bound design",
+    "Sparse documentation now that the vendor site is gone"
+  ],
+  "useCases": [
+    "Maintaining legacy deployments that still use it",
+    "Studying main-memory database and cache designs"
+  ],
+  "notIdealFor": [
+    "New projects",
+    "Datasets larger than RAM"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-timesten",
+    "extremedb",
+    "redis",
+    "altibase",
+    "sqlite"
+  ],
+  "tags": [
+    "in-memory",
+    "cache",
+    "sql",
+    "gpl",
+    "inactive"
+  ],
+  "links": {
+    "website": "https://sourceforge.net/projects/csql/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://sourceforge.net/projects/csql/",
+    "https://sourceforge.net/projects/csql/files/",
+    "https://dbdb.io/db/csql"
+  ],
+  "lastVerified": "2026-10-27"
+}

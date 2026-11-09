@@ -1,0 +1,149 @@
+{
+  "slug": "bityota",
+  "name": "BitYota",
+  "aliases": [
+    "BitYota DWS",
+    "BitYota Data Warehouse Service"
+  ],
+  "tagline": "Early cloud MPP data warehouse service with native JSON and separate compute and storage; shut down in 2015.",
+  "description": "BitYota was a fully managed MPP data warehouse service that ran on virtual machines in AWS and, from 2014, Microsoft Azure, competing with Amazon Redshift in its early years. It offered ANSI SQL with OLAP and window functions, user-defined functions in JavaScript, Python or Perl, native handling of semi-structured JSON, ODBC/JDBC access for BI tools and scheduled loads plus an events service for fresh data, priced on a pay-per-use basis with compute and storage scaled independently. On August 21, 2015 LifeLock acquired the platform and team, and BitYota announced the service would no longer be offered on public clouds, arguing that warehouses sold by the cloud vendors themselves would win. Its ideas of JSON-native SQL and decoupled storage became standard in Snowflake and BigQuery.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "Acquired by LifeLock on August 21, 2015; the public-cloud data warehouse service was shut down. Snowflake, BigQuery and Redshift fill the role.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage"
+  ],
+  "developer": "BitYota, Inc. (acquired by LifeLock)",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based"
+    ],
+    "freeTier": false,
+    "notes": "Was pay-per-use by node; no longer available."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Clusters grew by adding compute and storage nodes independently; started at one node."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Native JSON querying inside a SQL warehouse years before it was common",
+    "Separated compute and storage for independent scaling",
+    "UDFs in JavaScript, Python or Perl"
+  ],
+  "weaknesses": [
+    "Service discontinued in 2015; all customers had to migrate",
+    "Small vendor competing with cloud providers' own warehouses"
+  ],
+  "useCases": [
+    "Historical reference for cloud data warehouse design",
+    "Case study in startups competing with hyperscaler-native services"
+  ],
+  "notIdealFor": [
+    "Any current workload: the service no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "snowflake",
+    "google-bigquery",
+    "amazon-redshift",
+    "databricks-sql",
+    "azure-synapse-analytics"
+  ],
+  "tags": [
+    "data-warehouse",
+    "cloud",
+    "json",
+    "acquired",
+    "defunct"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20160423085841/http://www.bityota.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "BitYota"
+  },
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/20160423085841/http://www.bityota.com/",
+    "http://web.archive.org/web/20141222174032/http://www.bityota.com:80/product/",
+    "http://web.archive.org/web/20141224232852/http://www.bityota.com/",
+    "https://dbdb.io/db/bityota"
+  ],
+  "lastVerified": "2026-10-27"
+}

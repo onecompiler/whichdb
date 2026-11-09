@@ -1,0 +1,142 @@
+{
+  "slug": "pocketsql",
+  "name": "pocketSQL",
+  "aliases": [],
+  "tagline": "Steve Grubb's compact embeddable SQL engine for shell scripts and C programs (2001–2002); abandoned.",
+  "description": "pocketSQL was a compact, multiuser SQL database by Steve Grubb (author of the Ploticus charting tool) designed to be linked straight into programs or driven from the shell rather than run as a server. It provided a simple C API, a command-line interface named psql (unrelated to PostgreSQL's), web access through his cgipal tool, a subset of SQL with SELECT INTO, joins, GROUP BY and ORDER BY, plus extensions to pipe results to shell commands and read ordinary files as tables, with file-level locking and transaction logging. It deliberately skipped indexing, logins and network access: processes had to share the data's file system and UID. The project dates from about 2001–2002 and its site is now a parked domain; use SQLite instead.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Unmaintained since about 2002; the sgpr.net project page is now a parked domain. SQLite is the obvious replacement.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Steve Grubb",
+  "vendorType": "community",
+  "initialRelease": 2001,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU GPL v2",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "No indexes, so practical only for small tables."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "C API",
+    "psql command line"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Shell-friendly design: SQL results can pipe into commands and read plain files",
+    "Tiny library that links directly into C programs"
+  ],
+  "weaknesses": [
+    "No indexes, logins or network access",
+    "Abandoned around 2002 and hard to find today"
+  ],
+  "useCases": [
+    "Historical reference for script-oriented embedded SQL",
+    "Comparing early embedded SQL designs with SQLite"
+  ],
+  "notIdealFor": [
+    "Any new project"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "berkeley-db",
+    "h2"
+  ],
+  "tags": [
+    "embedded",
+    "sql",
+    "c",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "http://web.archive.org/web/20020809030245/http://www.sgpr.net:80/pocketsql/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "http://web.archive.org/web/20020809030245/http://www.sgpr.net:80/pocketsql/",
+    "https://dbdb.io/db/pocketsql"
+  ],
+  "lastVerified": "2026-10-27"
+}

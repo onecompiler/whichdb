@@ -1,0 +1,183 @@
+{
+  "slug": "kinetica",
+  "name": "Kinetica",
+  "aliases": [
+    "GPUdb",
+    "Kinetica DB"
+  ],
+  "tagline": "GPU- and vector-accelerated database for real-time spatial, time-series and vector analytics.",
+  "description": "Kinetica is a distributed, columnar, memory-first database that started as GPUdb for US Army intelligence workloads and vectorizes queries across GPUs or CPUs. Its niche is fast analytics on streaming, location-rich data: native geospatial and time-series functions, graph analytics, vector search and continuous materialized views, fed from Kafka at high rates. Newer releases add an LLM-driven SQL assistant and agent tooling. It is available as Kinetica Cloud, a free Developer Edition and an Enterprise edition. It is powerful for telemetry and geospatial use cases, but proprietary and niche outside them.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "spatial",
+    "time-series",
+    "vector",
+    "graph"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "geospatial",
+    "time-series",
+    "vector-search",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "Kinetica DB Inc.",
+  "vendorType": "company",
+  "initialRelease": 2016,
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free Developer Edition)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "Dedicated cloud from $1.80/hour",
+    "notes": "Free Developer Edition; dedicated cloud billed hourly; Enterprise priced by contract."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Sharded across nodes with tiered memory/disk/object storage."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (PostgreSQL-flavoured)"
+  ],
+  "apis": [
+    "REST API",
+    "PostgreSQL wire protocol",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "C++",
+    "C#"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "GPU vectorized execution for heavy geospatial and time-series joins",
+    "Native geospatial, graph and vector functions in one SQL engine",
+    "High-rate Kafka ingestion with continuously updated materialized views",
+    "Free Developer Edition for local use"
+  ],
+  "weaknesses": [
+    "Proprietary and niche; small community",
+    "Best performance requires GPUs and plenty of RAM",
+    "Fewer third-party integrations than mainstream warehouses"
+  ],
+  "useCases": [
+    "Real-time fleet and vehicle telemetry",
+    "Telecom network analytics",
+    "Defense and geospatial intelligence",
+    "Fraud detection with vector similarity"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Generic BI warehousing on a budget",
+    "Teams requiring open source"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "heavydb",
+    "clickhouse",
+    "apache-pinot",
+    "singlestore",
+    "apache-druid"
+  ],
+  "tags": [
+    "gpu",
+    "geospatial",
+    "time-series",
+    "vector",
+    "real-time"
+  ],
+  "links": {
+    "website": "https://www.kinetica.com/",
+    "docs": "https://docs.kinetica.com/7.2/",
+    "pricing": "https://www.kinetica.com/pricing/"
+  },
+  "ids": {
+    "dockerHub": "kinetica/kinetica-cpu",
+    "pypi": "gpudb",
+    "npm": "@kinetica/gpudb",
+    "hackerNewsQuery": "Kinetica database"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.kinetica.com/",
+    "https://www.kinetica.com/pricing/",
+    "https://pypi.org/project/gpudb/"
+  ],
+  "lastVerified": "2026-10-27"
+}

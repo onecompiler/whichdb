@@ -1,0 +1,172 @@
+{
+  "slug": "kdb-ai",
+  "name": "KDB.AI",
+  "aliases": [
+    "KDBAI"
+  ],
+  "tagline": "KX's vector database for time-aware AI search, with temporal similarity and hybrid retrieval.",
+  "description": "KDB.AI is a vector database from KX, the company behind the kdb+ time-series database used throughout capital markets. Its distinguishing feature is time-aware retrieval: Temporal Similarity Search finds similar patterns across time-series windows without precomputed embeddings, and searches can be constrained by time alongside metadata. It offers qFlat and qHNSW indexes (on-disk variants that cut memory), IVF-PQ, and hybrid dense plus sparse search, accessed via Python and REST. It makes most sense for teams in the KX/kdb ecosystem or with financial and sensor time-series; general RAG teams have broader options.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "vector",
+  "models": [
+    "vector",
+    "time-series"
+  ],
+  "workloads": [
+    "vector-search",
+    "rag",
+    "time-series",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "KX",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "q",
+    "C"
+  ],
+  "basedOn": "kdb+",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free and commercial licences)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free sign-up for a KDB.AI licence for development; enterprise licensing and support via KX sales."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Server Edition runs as a Docker container; on-disk qHNSW/qFlat indexes reduce RAM needs."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "KDB.AI Python API",
+    "REST API"
+  ],
+  "apis": [
+    "REST/JSON",
+    "Python"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "q"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Temporal Similarity Search over raw time series",
+    "Time-windowed filtering combined with vector search",
+    "On-disk qHNSW and qFlat indexes lower memory cost",
+    "Fits naturally with existing kdb+ estates"
+  ],
+  "weaknesses": [
+    "Proprietary with a small developer community",
+    "Python and REST are the only first-class interfaces",
+    "Limited public pricing and roadmap information",
+    "No built-in replication or sharding"
+  ],
+  "useCases": [
+    "Pattern matching in market and sensor time series",
+    "RAG over financial documents with time constraints",
+    "Anomaly and outlier detection"
+  ],
+  "notIdealFor": [
+    "General-purpose RAG at large scale",
+    "Open-source-only environments",
+    "Full-text keyword search"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kdb-plus",
+    "qdrant",
+    "milvus",
+    "weaviate",
+    "pinecone"
+  ],
+  "tags": [
+    "vector-database",
+    "time-series",
+    "kx",
+    "finance",
+    "proprietary"
+  ],
+  "links": {
+    "website": "https://kdb.ai/",
+    "docs": "https://code.kx.com/kdbai/"
+  },
+  "ids": {
+    "pypi": "kdbai-client",
+    "hackerNewsQuery": "KDB.AI"
+  },
+  "brand": {
+    "color": "#101820",
+    "simpleIcon": "kx"
+  },
+  "sources": [
+    "https://kdb.ai/",
+    "https://pypi.org/project/kdbai-client/",
+    "https://kx.com/news-room/kx-announces-kdb-ai-cloud-the-free-smarter-vector-database-for-ai/"
+  ],
+  "lastVerified": "2026-10-27"
+}

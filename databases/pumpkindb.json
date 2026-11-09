@@ -1,0 +1,164 @@
+{
+  "slug": "pumpkindb",
+  "name": "PumpkinDB",
+  "aliases": [
+    "Pumpkin DB"
+  ],
+  "tagline": "Immutable ordered key-value engine in Rust, scripted with a Forth-like language; abandoned in 2017.",
+  "description": "PumpkinDB is an experimental database engine in which a key, once set, can never be overwritten, so every change is recorded as a new key and history is never lost. Clients send small programs in PumpkinScript, a stack-based Forth-inspired language, which run next to the data over an LMDB-backed ordered store with ACID transactions; it can run as a server or be embedded in Rust programs. The project targeted event sourcing and 'lazy event sourcing' designs where domain interpretation is deferred to query time. Development stopped in August 2017 at version 0.2.0, which the README itself called between alpha and beta.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No commits since August 2017 (v0.2.0, pre-beta); the repository is unmaintained. For event sourcing consider KurrentDB, or LMDB/RocksDB for an embedded store.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "event-store"
+  ],
+  "workloads": [
+    "event-sourcing",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server",
+    "embedded"
+  ],
+  "developer": "Yurii Rashkovskii and contributors",
+  "vendorType": "community",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "0.2.0",
+    "date": "2017-06-07"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "basedOn": "LMDB",
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "PumpkinScript"
+  ],
+  "apis": [
+    "TCP binary protocol",
+    "Embedded Rust API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Rust",
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Write-once keys make the full history of every value queryable",
+    "Programs execute next to the data, avoiding chatty client round trips",
+    "Embeddable in Rust or runnable as a standalone server",
+    "Clean reference design for immutable, event-sourced storage"
+  ],
+  "weaknesses": [
+    "Abandoned before reaching beta; required Rust nightly at the time",
+    "Low-level primitives only: no query planner, secondary-index DSL or SQL",
+    "Only Rust and an unfinished Java client"
+  ],
+  "useCases": [
+    "Prototyping event-sourced storage ideas",
+    "Learning how an immutable key-value engine can be built on LMDB"
+  ],
+  "notIdealFor": [
+    "Production systems",
+    "Teams wanting SQL or a supported event store"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kurrentdb",
+    "lmdb",
+    "rocksdb",
+    "xtdb"
+  ],
+  "tags": [
+    "rust",
+    "immutable",
+    "event-sourcing",
+    "lmdb",
+    "abandoned"
+  ],
+  "links": {
+    "website": "http://pumpkindb.org/",
+    "repository": "https://github.com/PumpkinDB/PumpkinDB"
+  },
+  "ids": {
+    "github": "PumpkinDB/PumpkinDB",
+    "dockerHub": "pumpkindb/pumpkindb",
+    "hackerNewsQuery": "PumpkinDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/PumpkinDB/PumpkinDB",
+    "https://dbdb.io/db/pumpkindb",
+    "https://github.com/PumpkinDB/PumpkinDB/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

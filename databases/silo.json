@@ -1,0 +1,157 @@
+{
+  "slug": "silo",
+  "name": "Silo",
+  "aliases": [
+    "Silo in-memory database",
+    "Silo (SOSP 2013)"
+  ],
+  "tagline": "Multicore in-memory OLTP engine (SOSP 2013) whose epoch-based OCC commit avoids writes for read-only records.",
+  "description": "Silo is the research prototype behind 'Speedy Transactions in Multicore In-Memory Databases' by Stephen Tu, Wenting Zheng, Eddie Kohler, Barbara Liskov and Samuel Madden (MIT and Harvard, SOSP 2013). Its central idea is an optimistic concurrency control commit protocol that gives serializability without touching shared memory for records a transaction only read, and without a central transaction-ID counter: time is divided into short global epochs that drive commit ordering, garbage collection and group-committed logging. Tables are Masstree indexes in RAM, and the paper reported almost 700,000 TPC-C transactions per second on 32 cores with near-linear scaling. The code was last touched in 2015, but the design underpins a long line of follow-on systems and is a standard reference in OLTP research.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (SOSP 2013); repository inactive since 2015. Its epoch-based OCC design influenced many later in-memory engines.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "single-node",
+    "in-memory",
+    "embedded"
+  ],
+  "developer": "MIT CSAIL and Harvard University",
+  "vendorType": "academic",
+  "initialRelease": 2013,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Masstree",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Scales across the cores of one large-memory server; data must fit in RAM."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "C++ transaction API"
+  ],
+  "apis": [
+    "C++ API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Serializable OCC commit that performs no shared-memory writes for read-only records",
+    "Epoch-based design removes the central transaction-ID bottleneck",
+    "Near-linear multicore scaling with ~700k TPC-C tx/s on 32 cores (2013)",
+    "Clean, permissively licensed reference implementation with benchmark harness"
+  ],
+  "weaknesses": [
+    "Research prototype: no SQL, server, or full checkpoint/recovery tooling",
+    "Unmaintained since 2015",
+    "Data must fit in memory"
+  ],
+  "useCases": [
+    "OLTP concurrency-control research and baselines",
+    "Teaching optimistic concurrency control and epoch-based reclamation"
+  ],
+  "notIdealFor": [
+    "Production databases",
+    "Datasets larger than RAM"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "volt-active-data",
+    "singlestore",
+    "microsoft-faster",
+    "shore-mt"
+  ],
+  "tags": [
+    "research",
+    "in-memory",
+    "occ",
+    "oltp",
+    "masstree"
+  ],
+  "links": {
+    "website": "https://people.csail.mit.edu/stephentu/papers/silo.pdf",
+    "repository": "https://github.com/stephentu/silo"
+  },
+  "ids": {
+    "github": "stephentu/silo",
+    "hackerNewsQuery": "Silo multicore in-memory database"
+  },
+  "brand": {},
+  "sources": [
+    "https://people.csail.mit.edu/stephentu/papers/silo.pdf",
+    "https://doi.org/10.1145/2517349.2522713",
+    "https://github.com/stephentu/silo",
+    "https://dbdb.io/db/silo"
+  ],
+  "lastVerified": "2026-10-27"
+}

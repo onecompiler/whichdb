@@ -1,0 +1,158 @@
+{
+  "slug": "msql",
+  "name": "mSQL",
+  "aliases": [
+    "Mini SQL"
+  ],
+  "tagline": "Hughes Technologies' lightweight 1994 SQL server that powered early dynamic websites before MySQL.",
+  "description": "mSQL (Mini SQL) is a small SQL database server that David Hughes wrote in 1993–94, first as an SQL front end to Postgres for his Minerva network-monitoring system and then as a standalone engine when Postgres proved too heavy for small machines. Together with Linux and cheap PCs it was one of the first affordable SQL databases for dynamic web sites in the mid-1990s, and MySQL's original C API was modelled on it before MySQL overtook it by the end of the decade. It implements a subset of SQL and was never open source: the source is available, use is free for non-commercial, educational and charitable purposes, and commercial users need a license. Hughes Technologies still ships it, mainly for OEM licensees; mSQL 4.4 came out in October 2021.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "Still distributed by Hughes Technologies; last release mSQL 4.4 (Oct 2021), maintained mainly for OEM licensees.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Hughes Technologies",
+  "vendorType": "company",
+  "initialRelease": 1994,
+  "latestVersion": {
+    "version": "4.4",
+    "date": "2021-10-20"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "mSQL license (free non-commercial use; commercial license required)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free for non-commercial, educational and charitable use; commercial and OEM licenses from Hughes Technologies."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "Perl",
+    "Java",
+    "PHP"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very small footprint; runs on minimal hardware",
+    "Simple C API that shaped early MySQL",
+    "Still available and maintained for embedded OEM use"
+  ],
+  "weaknesses": [
+    "Only a subset of SQL and no real transaction support",
+    "Not open source; commercial use requires a license",
+    "Tiny community and ecosystem compared with MySQL or SQLite"
+  ],
+  "useCases": [
+    "Maintaining products that already embed mSQL",
+    "History of 1990s web databases"
+  ],
+  "notIdealFor": [
+    "New web applications",
+    "Workloads needing transactions or full SQL"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mysql",
+    "postgresql",
+    "sqlite",
+    "mariadb"
+  ],
+  "tags": [
+    "sql",
+    "lightweight",
+    "historical",
+    "web-1.0"
+  ],
+  "links": {
+    "website": "https://hughestech.com.au/products/msql/",
+    "wikipedia": "https://en.wikipedia.org/wiki/MSQL"
+  },
+  "ids": {
+    "wikipedia": "MSQL",
+    "hackerNewsQuery": "Mini SQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://hughestech.com.au/products/msql/",
+    "https://en.wikipedia.org/wiki/MSQL"
+  ],
+  "lastVerified": "2026-10-27"
+}

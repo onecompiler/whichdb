@@ -1,0 +1,186 @@
+{
+  "slug": "quasardb",
+  "name": "quasardb",
+  "aliases": [
+    "Quasar",
+    "QuasarDB",
+    "qdb"
+  ],
+  "tagline": "Distributed columnar time-series database, now sold as Quasar, for tick, sensor and industrial data.",
+  "description": "quasardb is a C++ distributed, column-oriented database with native time-series tables, built by the French company QuasarDB SAS (the GitHub organisation is still named bureau14) and now marketed simply as Quasar. It ingests high-rate timestamped data into sharded tables, compresses it aggressively and answers SQL-like queries with time-series extensions such as ASOF joins, LAG/LEAD and pre-aggregated tables, while also supporting key-value lookups. Its sweet spot is capital-markets tick data, industrial telemetry and other workloads where years of history and fresh data must be queried together. It is commercial software deployed in your own AWS, Azure or Google Cloud account, on-premises, at the edge or as an appliance, with official Python, Java, Go, .NET, C and REST clients; 3.14 is the current release line.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series",
+    "columnar",
+    "key-value"
+  ],
+  "workloads": [
+    "time-series",
+    "financial-tick-data",
+    "iot",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "QuasarDB SAS",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "3.14.3",
+    "date": "2026-09"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (client APIs BSD-licensed)"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Flat pricing based on provisioned capacity, with no per-query or per-ingest charges; deployed in the customer's own cloud account or on-premises."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Data is sharded across cluster nodes; hosting cost is dominated by object storage for long histories."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL-like query language with time-series extensions"
+  ],
+  "apis": [
+    "Native C API",
+    "REST API",
+    "ODBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    "Go",
+    "C#",
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Columnar time-series tables with heavy compression keep years of tick or sensor data affordable",
+    "ASOF joins, LAG/LEAD and aggregated tables built for market and telemetry analysis",
+    "Same engine runs in your own cloud account, on-premises or at the edge",
+    "Well-maintained Python API that fits pandas and NumPy workflows",
+    "Integrations with Kafka, Spark, Grafana, Tableau, Excel and ODBC tools"
+  ],
+  "weaknesses": [
+    "Commercial and sales-led; pricing and editions are not published",
+    "Smaller community and ecosystem than kdb+, QuestDB or TimescaleDB",
+    "Custom SQL dialect rather than PostgreSQL compatibility"
+  ],
+  "useCases": [
+    "Capital-markets tick and order-book history",
+    "Industrial and IoT sensor telemetry",
+    "Backtesting and quantitative research over long histories",
+    "Edge collection with central analytics"
+  ],
+  "notIdealFor": [
+    "General OLTP applications",
+    "Teams needing a permissive open-source engine",
+    "Small hobby projects"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "kdb-plus",
+    "questdb",
+    "timescaledb",
+    "clickhouse",
+    "dolphindb",
+    "influxdb"
+  ],
+  "tags": [
+    "time-series",
+    "columnar",
+    "finance",
+    "iot",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://quasar.ai/",
+    "docs": "https://doc.quasar.ai/master/",
+    "pricing": "https://quasar.ai/pricing",
+    "repository": "https://github.com/bureau14/qdb-api-python"
+  },
+  "ids": {
+    "dockerHub": "bureau14/qdb",
+    "pypi": "quasardb",
+    "hackerNewsQuery": "quasardb"
+  },
+  "brand": {},
+  "sources": [
+    "https://quasar.ai/",
+    "https://doc.quasar.ai/master/",
+    "https://pypi.org/project/quasardb/",
+    "https://hub.docker.com/r/bureau14/qdb",
+    "https://dbdb.io/db/quasardb"
+  ],
+  "lastVerified": "2026-10-27"
+}

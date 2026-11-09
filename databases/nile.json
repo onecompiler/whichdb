@@ -1,0 +1,123 @@
+{
+  "slug": "nile",
+  "name": "Nile",
+  "aliases": ["Nile Postgres", "thenile.dev"],
+  "tagline": "Serverless Postgres that makes tenants a first-class primitive, with per-tenant isolation and placement.",
+  "description": "Nile is a managed PostgreSQL service designed for B2B SaaS, where the tenant is a built-in concept rather than a column you remember to filter on. Tables marked as tenant-aware are partitioned by tenant behind the scenes, connections can be scoped to a tenant for automatic isolation, and each tenant can be placed on shared or dedicated compute and moved without application changes. It also bundles tenant-aware auth and pgvector for per-tenant AI features. The free plan has no pause and 1 GB of storage, and Pro starts at $15 per month. It is a niche but thoughtful option when multi-tenancy is the hardest part of your data model; several roadmap items such as branching are still labeled as coming soon.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": ["relational", "document", "vector"],
+  "workloads": ["oltp", "vector-search", "rag"],
+  "architecture": ["serverless", "distributed", "shared-storage"],
+  "developer": "Nile",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "writtenIn": ["Go", "C", "TypeScript"],
+  "basedOn": "PostgreSQL",
+  "license": { "type": "proprietary", "name": "Proprietary (managed service; SDKs Apache-2.0)" },
+  "pricing": {
+    "models": ["subscription", "usage-based", "free"],
+    "freeTier": true,
+    "startingPrice": "$15/month (Pro)",
+    "notes": "Free: 1 GB storage, 50M query tokens, no pausing. Pro: 5 GB, 150M query tokens, 99.95% SLA. Scale from $350/month; Enterprise custom."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": ["aws"],
+    "platforms": []
+  },
+  "managedServices": [
+    { "name": "Nile", "provider": "Nile", "url": "https://www.thenile.dev/" }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Tenants are distributed across Postgres instances and can be moved between shared and dedicated compute."
+  },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL", "PL/pgSQL"],
+  "apis": ["PostgreSQL wire protocol", "REST API"],
+  "compatibleWith": ["postgresql"],
+  "drivers": ["JavaScript", "TypeScript", "Python", "Go", "Java"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tenant isolation enforced by the database, not application filters",
+    "Move a tenant to dedicated compute without code changes",
+    "Per-tenant backups and data placement",
+    "Built-in tenant-aware authentication",
+    "Free plan that never pauses"
+  ],
+  "weaknesses": [
+    "Small vendor; long-term viability is a real consideration",
+    "Some Postgres features and extensions are restricted",
+    "Branching and provisioned compute still on the roadmap",
+    "Only valuable if your app is genuinely multi-tenant"
+  ],
+  "useCases": [
+    "B2B SaaS with many customer organizations",
+    "Per-tenant AI features using pgvector",
+    "Moving large customers to isolated infrastructure",
+    "Compliance-driven tenant data placement"
+  ],
+  "notIdealFor": [
+    "Single-tenant or consumer apps",
+    "Analytics-heavy workloads",
+    "Self-hosted deployments"
+  ],
+  "notableUsers": [],
+  "alternatives": ["citus", "supabase", "neon", "xata", "postgresql", "prisma-postgres"],
+  "tags": ["postgres", "multi-tenant", "saas", "serverless"],
+  "links": {
+    "website": "https://www.thenile.dev/",
+    "docs": "https://www.thenile.dev/docs",
+    "repository": "https://github.com/niledatabase/niledatabase",
+    "pricing": "https://www.thenile.dev/pricing"
+  },
+  "ids": {
+    "github": "niledatabase/niledatabase",
+    "npm": "@niledatabase/server",
+    "hackerNewsQuery": "Nile Postgres"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.thenile.dev/pricing",
+    "https://github.com/niledatabase/niledatabase",
+    "https://techcrunch.com/2024/01/30/nile-raises-11-6m-in-seed-funding-to-build-a-postgres-powered-data-layer-for-saas-applications"
+  ],
+  "lastVerified": "2026-10-27"
+}

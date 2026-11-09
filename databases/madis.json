@@ -1,0 +1,163 @@
+{
+  "slug": "madis",
+  "name": "madIS",
+  "aliases": [
+    "madis",
+    "MaDgIK madIS"
+  ],
+  "tagline": "SQLite extended with Python functions and virtual tables, turning SQL into a data-processing workbench.",
+  "description": "madIS is an extensible relational system from the MaDgIK lab at the University of Athens (Yannis Ioannidis' group), built on SQLite through the APSW wrapper. Its point is to do data work inside SQL: Python row, aggregate and virtual-table functions read files, URLs and other sources as tables, parse and transform text, and plug into a workflow engine, without importing data first. The authors compare it to Hive's SQL-plus-UDF style, minus the cluster, and say it handles tens of millions of rows on one machine; it also includes a multidimensional index to speed multi-constraint joins against external sources. Code dates from 2009-2013, and the GitHub repository sees only occasional updates, the latest in 2025.",
+  "productType": "research",
+  "status": "maintenance",
+  "statusNote": "Academic system (University of Athens, c. 2009-2013); occasional commits since, most recently May 2025.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "embedded",
+    "scientific"
+  ],
+  "architecture": [
+    "embedded",
+    "single-node"
+  ],
+  "developer": "MaDgIK Lab, University of Athens",
+  "vendorType": "academic",
+  "initialRelease": 2009,
+  "writtenIn": [
+    "Python"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "zlib-style permissive license"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single machine; tens of millions of rows per the authors."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL (SQLite dialect)",
+    "Python UDFs"
+  ],
+  "apis": [
+    "Python (APSW)",
+    "Interactive terminal (mterm)"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Python row, aggregate and virtual-table functions callable directly from SQL",
+    "Query files and network sources as tables without importing them",
+    "Built-in workflow engine for multi-step transformations",
+    "Inherits SQLite's reliability and zero-administration footprint"
+  ],
+  "weaknesses": [
+    "Small academic codebase with sparse, aging documentation",
+    "Single-machine only; no distributed execution",
+    "Python UDF overhead on very large scans"
+  ],
+  "useCases": [
+    "Text and data wrangling pipelines expressed in SQL",
+    "Prototyping new operators or indexes for database research",
+    "Ad-hoc analysis joining local files with remote sources"
+  ],
+  "notIdealFor": [
+    "Multi-user transactional applications",
+    "Datasets that need a cluster"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "duckdb",
+    "apache-spark-sql",
+    "apache-hive"
+  ],
+  "tags": [
+    "sqlite",
+    "python",
+    "udf",
+    "academic",
+    "data-processing"
+  ],
+  "links": {
+    "website": "https://madgik.github.io/madis/",
+    "repository": "https://github.com/madgik/madis",
+    "docs": "https://madgik.github.io/madis/"
+  },
+  "ids": {
+    "github": "madgik/madis",
+    "hackerNewsQuery": "madIS SQLite"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/madgik/madis",
+    "https://madgik.github.io/madis/",
+    "https://github.com/madgik/madis/blob/master/src/LICENSE.txt",
+    "https://dbdb.io/db/madis"
+  ],
+  "lastVerified": "2026-10-27"
+}

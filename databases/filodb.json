@@ -1,0 +1,108 @@
+{
+  "slug": "filodb",
+  "name": "FiloDB",
+  "aliases": ["Filo DB"],
+  "tagline": "Distributed in-memory time-series database with PromQL, ingesting from Kafka and persisting to Cassandra.",
+  "description": "FiloDB is an open-source, distributed time-series and event database written in Scala, started by Evan Chan in 2015 and still under active development. Nodes form a peer-to-peer Akka cluster, ingest directly from Apache Kafka, shard series by tags and keep recent data in compressed, off-heap columnar memory so dashboards and alerts query it with low latency; Apache Cassandra provides durable storage and recovery. Queries use PromQL (with FiloDB extensions and first-class histograms) over an HTTP API compatible with Prometheus, so Grafana works out of the box, and multiple schemas let one cluster hold operational metrics alongside other event types. It targets very high-cardinality operational metrics, not OLAP or transactional work; tagged releases stopped at 0.9.17.2 in 2022 although commits continue in 2026.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "time-series",
+  "models": ["time-series", "columnar"],
+  "workloads": ["time-series", "observability", "real-time-analytics"],
+  "architecture": ["distributed", "in-memory"],
+  "developer": "FiloDB contributors (started by Evan Chan)",
+  "vendorType": "community",
+  "initialRelease": 2015,
+  "latestVersion": { "version": "0.9.17.2", "date": "2022-11-18" },
+  "writtenIn": ["Scala"],
+  "license": { "type": "permissive", "name": "Apache License 2.0", "spdx": "Apache-2.0" },
+  "pricing": { "models": ["open-source"], "freeTier": true },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["linux", "macos"]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shards series across cluster nodes by Kafka partition; designed for dual-datacenter operation and many millions of series."
+  },
+  "consistency": { "acid": "none", "models": ["eventual"] },
+  "schemaMode": "flexible",
+  "queryLanguages": ["PromQL"],
+  "apis": ["Prometheus-compatible HTTP API", "gRPC", "CLI"],
+  "compatibleWith": ["prometheus"],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "PromQL and a Prometheus-compatible HTTP API, so Grafana and existing dashboards just work",
+    "Compressed off-heap columnar memory holds large hot datasets with low query latency",
+    "Ingests straight from Kafka with tag-based sharding across an Akka cluster",
+    "First-class histogram support and multiple schemas per cluster",
+    "Active commits in 2026"
+  ],
+  "weaknesses": [
+    "Heavy dependency stack: Kafka, Cassandra and the JVM/Akka",
+    "Only partial PromQL coverage, and no tagged release since 2022",
+    "Small public community and documentation compared with Mimir, Thanos or VictoriaMetrics"
+  ],
+  "useCases": [
+    "Large-scale operational metrics for dashboards and alerting",
+    "Long-retention Prometheus-compatible storage at high cardinality",
+    "Real-time event and application-metric debugging"
+  ],
+  "notIdealFor": ["Transactional, update-heavy workloads", "General OLAP analytics", "Small teams wanting a single-binary TSDB"],
+  "notableUsers": [],
+  "alternatives": ["grafana-mimir", "thanos", "victoriametrics", "cortex", "m3db", "prometheus"],
+  "tags": ["time-series", "promql", "prometheus", "kafka", "scala"],
+  "links": {
+    "website": "https://github.com/filodb/FiloDB",
+    "repository": "https://github.com/filodb/FiloDB",
+    "changelog": "https://github.com/filodb/FiloDB/releases"
+  },
+  "ids": {
+    "github": "filodb/FiloDB",
+    "hackerNewsQuery": "FiloDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/filodb/FiloDB",
+    "https://github.com/filodb/FiloDB/releases",
+    "https://dbdb.io/db/filodb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,151 @@
+{
+  "slug": "rdb",
+  "name": "/rdb",
+  "aliases": [
+    "slash rdb",
+    "Revolutionary Software rdb"
+  ],
+  "tagline": "Relational database built from Unix shell filters over plain ASCII tables; the 'shell as a 4GL' approach.",
+  "description": "/rdb from Revolutionary Software of Santa Cruz, California, implemented a relational database as a suite of roughly 130 Unix commands. Tables were variable-length ASCII files, and operators such as sorttable, jointable, row, column and compute read a table on standard input and wrote one on standard output, so queries were ordinary shell pipelines that could mix in grep, awk or any other Unix tool; indexes, a vi-like forms editor, a report writer and menus rounded it out. Rod Manis documented the approach in the 1988 Prentice-Hall book 'UNIX Relational Database Management' and it was ported to Linux, Solaris, AIX, Mac OS X and POSIX Windows. The rdb.com site lapsed around 2021, though the same pipeline-of-table-filters idea survives in Carlo Strozzi's NoSQL and in modern tools such as Miller.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Vendor web presence ended around 2021 and the product is no longer sold. For pipeline-style table processing use SQLite, DuckDB or CSV tools.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "single-node",
+    "embedded"
+  ],
+  "developer": "Revolutionary Software, Inc.",
+  "vendorType": "company",
+  "initialRelease": 1988,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Historically sold per license with renewals; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Pipelines parallelise across CPU cores naturally, but data is plain text files on one machine."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Unix shell pipelines with /rdb operators"
+  ],
+  "apis": [
+    "CLI",
+    "C callable library"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tables are plain text readable by any Unix tool",
+    "Relational operators compose with the whole Unix toolbox in pipelines",
+    "Pipelines run stages concurrently, using multiple CPUs without extra work",
+    "Very small learning curve for shell users"
+  ],
+  "weaknesses": [
+    "No transactions, concurrency control or crash safety beyond the file system",
+    "Text-file storage is slow and bulky for large tables",
+    "Product and vendor are gone"
+  ],
+  "useCases": [
+    "Historical reference for shell-based relational tooling",
+    "Maintaining very old Unix applications built on /rdb"
+  ],
+  "notIdealFor": [
+    "Multi-user transactional systems",
+    "Large datasets",
+    "New projects"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "duckdb"
+  ],
+  "tags": [
+    "unix",
+    "shell",
+    "text-tables",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20160417005503/http://www.rdb.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/20160417005503/http://www.rdb.com/",
+    "https://web.archive.org/web/19970327100827/http://www.rdb.com/",
+    "https://dbdb.io/db/rdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

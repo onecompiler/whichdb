@@ -1,0 +1,195 @@
+{
+  "slug": "amazon-redshift",
+  "name": "Amazon Redshift",
+  "aliases": [
+    "Redshift",
+    "Redshift Serverless"
+  ],
+  "tagline": "AWS's MPP columnar data warehouse, available as provisioned RA3 clusters or Serverless.",
+  "description": "Amazon Redshift is AWS's managed data warehouse, descended from ParAccel and speaking the PostgreSQL wire protocol. RA3 nodes keep hot data on local SSD and the rest in Redshift Managed Storage on S3, and Redshift Serverless removes node sizing entirely. It integrates deeply with the AWS estate: zero-ETL from Aurora and DynamoDB, Spectrum queries over S3, streaming ingestion from Kinesis and MSK, and data sharing between clusters. It is the natural default for AWS-centric shops, though it still asks for more tuning (sort keys, workload management) than Snowflake or BigQuery.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "document",
+    "spatial"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap",
+    "lakehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "shared-storage",
+    "serverless"
+  ],
+  "developer": "Amazon Web Services",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "ParAccel (PostgreSQL 8.0 fork)",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "startingPrice": "Serverless from ~$0.36 per RPU-hour (us-east-1)",
+    "notes": "Provisioned nodes billed hourly (reserved instances available); Serverless billed per RPU-second; free trial credits for new accounts."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws"
+    ],
+    "platforms": []
+  },
+  "managedServices": [
+    {
+      "name": "Amazon Redshift Serverless",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/redshift/redshift-serverless/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "read-replicas",
+    "notes": "Scales by adding RA3 nodes or RPUs; concurrency scaling adds transient clusters; cross-region snapshots and data sharing."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (PostgreSQL dialect)",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "Redshift Data API",
+    "JDBC",
+    "ODBC"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "Go",
+    ".NET",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Deep AWS integration: zero-ETL from Aurora/DynamoDB, Spectrum over S3, IAM",
+    "Serverless option removes node sizing for spiky workloads",
+    "PostgreSQL wire compatibility works with most BI tools and drivers",
+    "Native streaming ingestion from Kinesis and Amazon MSK",
+    "Data sharing between clusters without copying"
+  ],
+  "weaknesses": [
+    "Still benefits from manual tuning of sort keys, distribution and WLM",
+    "PostgreSQL compatibility is shallow: old dialect, no extensions",
+    "Only available on AWS",
+    "Concurrency on provisioned clusters needs paid concurrency scaling"
+  ],
+  "useCases": [
+    "Enterprise data warehouse on AWS",
+    "BI dashboards over curated marts",
+    "Lakehouse queries over S3 with Spectrum",
+    "Near-real-time analytics on Aurora data via zero-ETL"
+  ],
+  "notIdealFor": [
+    "OLTP workloads",
+    "Multi-cloud deployments",
+    "Heavy semi-structured or schema-less data"
+  ],
+  "notableUsers": [
+    "Nasdaq"
+  ],
+  "alternatives": [
+    "snowflake",
+    "google-bigquery",
+    "databricks-sql",
+    "amazon-athena",
+    "clickhouse",
+    "firebolt"
+  ],
+  "tags": [
+    "cloud-data-warehouse",
+    "aws",
+    "mpp",
+    "sql",
+    "postgres-protocol"
+  ],
+  "links": {
+    "website": "https://aws.amazon.com/redshift/",
+    "docs": "https://docs.aws.amazon.com/redshift/",
+    "pricing": "https://aws.amazon.com/redshift/pricing/",
+    "changelog": "https://docs.aws.amazon.com/redshift/latest/mgmt/cluster-versions.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Amazon_Redshift"
+  },
+  "ids": {
+    "stackoverflowTag": "amazon-redshift",
+    "wikipedia": "Amazon Redshift",
+    "pypi": "redshift-connector",
+    "npm": "@aws-sdk/client-redshift-data",
+    "hackerNewsQuery": "Redshift"
+  },
+  "brand": {
+    "color": "#8C4FFF"
+  },
+  "sources": [
+    "https://aws.amazon.com/redshift/",
+    "https://aws.amazon.com/redshift/pricing/",
+    "https://en.wikipedia.org/wiki/Amazon_Redshift"
+  ],
+  "lastVerified": "2026-10-27"
+}

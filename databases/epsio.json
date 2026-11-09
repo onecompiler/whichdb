@@ -1,0 +1,160 @@
+{
+  "slug": "epsio",
+  "name": "Epsio",
+  "aliases": [],
+  "tagline": "An incremental view engine that keeps complex SQL results fresh inside your existing Postgres or MySQL.",
+  "description": "Epsio sits beside an existing database, reads its replication stream, and maintains the results of expensive SQL queries incrementally, writing them back into a regular results table in the same database. Applications just query that table, so there is no new query endpoint to adopt. It targets Postgres, MySQL and SQL Server users who use materialized views or denormalized caches that are slow to refresh. It runs inside your cloud account and data does not leave your environment. It is a small, commercial startup product with little public release information, so evaluate it carefully before you depend on it.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "stream-processing",
+    "caching"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Epsio Ltd.",
+  "vendorType": "company",
+  "initialRelease": 2023,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial license"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free start option; pricing not published."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "MySQL protocol"
+  ],
+  "compatibleWith": [
+    "postgresql",
+    "mysql",
+    "sql-server"
+  ],
+  "drivers": [
+    "Any Postgres/MySQL driver"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Results land in normal tables in your existing database",
+    "No new query engine for applications to adopt",
+    "Handles joins and aggregations incrementally from CDC",
+    "Runs inside your environment"
+  ],
+  "weaknesses": [
+    "Proprietary with unpublished pricing",
+    "Little public release information and a small vendor",
+    "Results lag the source by replication delay",
+    "Adds write load to the primary when writing results back"
+  ],
+  "useCases": [
+    "Speeding up slow dashboards and reports on OLTP Postgres",
+    "Replacing REFRESH MATERIALIZED VIEW cron jobs",
+    "Maintaining denormalized tables automatically"
+  ],
+  "notIdealFor": [
+    "Teams needing open-source software",
+    "Streaming from Kafka or non-database sources"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "materialize",
+    "readyset",
+    "feldera",
+    "risingwave"
+  ],
+  "tags": [
+    "incremental-view-maintenance",
+    "postgres",
+    "mysql",
+    "cdc"
+  ],
+  "links": {
+    "website": "https://www.epsio.io/",
+    "docs": "https://docs.epsio.io/"
+  },
+  "ids": {
+    "hackerNewsQuery": "Epsio"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.epsio.io/",
+    "https://docs.epsio.io/",
+    "https://docs.epsio.io/about/key-concepts/"
+  ],
+  "lastVerified": "2026-10-27"
+}

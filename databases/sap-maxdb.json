@@ -1,0 +1,174 @@
+{
+  "slug": "sap-maxdb",
+  "name": "SAP MaxDB",
+  "aliases": [
+    "MaxDB",
+    "SAP DB",
+    "Adabas D",
+    "MySQL MaxDB",
+    "liveCache"
+  ],
+  "tagline": "SAP's older relational database (ex-Adabas D/SAP DB), still under content servers and liveCache.",
+  "description": "MaxDB is a relational database whose roots go back to a 1977 TU Berlin research project, later sold as Adabas D by Software AG, acquired by SAP in 1997 as SAP DB, briefly open-sourced under GPL and co-marketed with MySQL AB as MaxDB, then taken back fully by SAP in 2007. It is a low-administration engine certified for SAP NetWeaver systems and is the technology underneath SAP liveCache and many SAP Content Server installations. SAP has stopped feature development after 7.9 (latest patch 7.9.10.12, 2024) and is phasing it out in favour of HANA. Only consider it inside existing SAP landscapes.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "SAP has ended major and minor development after 7.9 (last listed patch 7.9.10.12, Feb 2024) and is phasing MaxDB out in favour of SAP HANA.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management"
+  ],
+  "architecture": [
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "SAP SE",
+  "vendorType": "company",
+  "initialRelease": 1977,
+  "latestVersion": {
+    "version": "7.9.10.12",
+    "date": "2024-02"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "SAP proprietary (free community licence for non-SAP use; older GPL releases)"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Licensed with SAP applications; a free community edition with restrictions exists for non-SAP use."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single-server engine with hot-standby options; scaling is vertical."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "ODBC",
+    "JDBC",
+    "SQLDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++",
+    "Java",
+    "Python",
+    "ABAP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Low-administration engine that runs SAP content servers with little care",
+    "Certified for SAP NetWeaver, liveCache and Content Server scenarios",
+    "Free community licence for non-SAP use"
+  ],
+  "weaknesses": [
+    "No feature development after 7.9; SAP is phasing it out",
+    "Tiny community outside SAP Basis teams",
+    "No modern features such as JSON, vectors or columnar storage"
+  ],
+  "useCases": [
+    "SAP Content Server document storage",
+    "SAP liveCache for SCM/APO planning",
+    "Keeping older SAP NetWeaver systems running until migration"
+  ],
+  "notIdealFor": [
+    "Any new application",
+    "Non-SAP workloads",
+    "Analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sap-hana",
+    "sap-ase",
+    "postgresql",
+    "sql-server"
+  ],
+  "tags": [
+    "sap",
+    "legacy",
+    "content-server",
+    "livecache"
+  ],
+  "links": {
+    "website": "https://maxdb.sap.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/MaxDB"
+  },
+  "ids": {
+    "stackoverflowTag": "maxdb",
+    "wikipedia": "MaxDB",
+    "hackerNewsQuery": "SAP MaxDB"
+  },
+  "brand": {
+    "color": "#0FAAFF",
+    "simpleIcon": "sap"
+  },
+  "sources": [
+    "https://en.wikipedia.org/wiki/MaxDB",
+    "https://maxdb.sap.com/",
+    "https://help.sap.com/docs/SAP_MAXDB"
+  ],
+  "lastVerified": "2026-10-27"
+}

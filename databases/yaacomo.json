@@ -1,0 +1,141 @@
+{
+  "slug": "yaacomo",
+  "name": "Yaacomo",
+  "aliases": [
+    "Yaacomo DBMS"
+  ],
+  "tagline": "German GPU-accelerated relational in-memory DBMS for real-time analytics (c. 2011-2023); defunct.",
+  "description": "Yaacomo was a relational in-memory database from Q2WEB GmbH in Germany that used massively parallel algorithms on graphics processors (with a CPU fallback) for real-time analytics and big-data queries. Its marketing stressed energy efficiency, claiming server-class performance from a palm-sized, 10-watt device, and it won a GreenIT award in 2011; it was also pitched for embedded and machine-to-machine systems and could run on APUs and mobile hardware. The site stayed online, largely unchanged, into 2023 and has returned 404 since; dbdb.io lists the project as failed. HeavyDB, Kinetica and Brytlyt are active GPU databases.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Website static for years and offline by 2025; dbdb.io marks the project as failed (end year 2023). Consider HeavyDB, Kinetica or Brytlyt.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "real-time-analytics",
+    "olap",
+    "iot"
+  ],
+  "architecture": [
+    "in-memory",
+    "single-node"
+  ],
+  "developer": "Q2WEB GmbH",
+  "vendorType": "company",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "GPU-parallel query execution for fast analytics on modest hardware",
+    "Low power footprint, suited to embedded deployments"
+  ],
+  "weaknesses": [
+    "Defunct vendor; no downloads or support",
+    "Little technical documentation was ever published"
+  ],
+  "useCases": [
+    "History of GPU-accelerated databases",
+    "Context for evaluating GPU database vendors"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "heavydb",
+    "kinetica",
+    "brytlyt",
+    "sap-hana"
+  ],
+  "tags": [
+    "gpu",
+    "in-memory",
+    "analytics",
+    "germany",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20141218153837/http://yaacomo.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/yaacomo",
+    "https://web.archive.org/web/20141218153837/http://yaacomo.com/",
+    "https://web.archive.org/web/20230130174733/http://yaacomo.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

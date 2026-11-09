@@ -1,0 +1,162 @@
+{
+  "slug": "datablitz",
+  "name": "DataBlitz",
+  "aliases": [
+    "Dalí",
+    "Dali main-memory storage manager"
+  ],
+  "tagline": "Bell Labs main-memory storage manager (originally Dalí) used inside Lucent telecom and billing systems.",
+  "description": "DataBlitz is a main-memory database system from Lucent Bell Labs Research that began in the early 1990s as the Dalí storage manager and was renamed DataBlitz when it was productised for use across Lucent from 1997. Applications map the database directly into shared memory and access it through a C++ API, so reads never touch disk and writes cost only a log flush. It provides full transactions with multi-level recovery, fuzzy checkpoints that barely disturb processing, codeword-based memory protection against stray application pointers, T-tree and hash indexes, and synchronous or asynchronous replication for high availability; SQL, ODBC and JDBC came through an embedded Dharma SQL engine. It targeted call routing, real-time billing and trading, and its design was widely cited by later in-memory databases. The last documented release is 7.1 (2010).",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No public activity since release 7.1 (2010); Bell Labs' project page is gone. Successor-style products include Oracle TimesTen and eXtremeDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "key-value"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "in-memory",
+    "embedded",
+    "primary-replica"
+  ],
+  "developer": "Lucent Bell Labs",
+  "vendorType": "company",
+  "initialRelease": 1997,
+  "latestVersion": {
+    "version": "7.1",
+    "date": "2010-04-04"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Used inside Lucent products; not available today."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single-host shared-memory database with synchronous or asynchronous replicas for availability."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "C++ API",
+    "SQL (via Dharma)"
+  ],
+  "apis": [
+    "C++ relational API",
+    "ODBC",
+    "JDBC"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Direct shared-memory access with no disk I/O on reads",
+    "Fuzzy checkpoints and multi-level recovery with minimal interference",
+    "Codeword memory protection guards against corruption by stray pointers",
+    "Synchronous or asynchronous replication for telecom-grade availability"
+  ],
+  "weaknesses": [
+    "Proprietary and long unavailable",
+    "Dataset bounded by main memory of one host"
+  ],
+  "useCases": [
+    "Historical reference for main-memory database design",
+    "Studying recovery and memory-protection techniques for in-memory stores"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "oracle-timesten",
+    "extremedb",
+    "altibase",
+    "volt-active-data",
+    "sap-hana"
+  ],
+  "tags": [
+    "in-memory",
+    "telecom",
+    "bell-labs",
+    "historical"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/Datablitz",
+    "wikipedia": "https://en.wikipedia.org/wiki/Datablitz"
+  },
+  "ids": {
+    "wikipedia": "Datablitz"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Datablitz",
+    "https://doi.org/10.1145/304182.304239",
+    "https://dbdb.io/db/datablitz"
+  ],
+  "lastVerified": "2026-10-27"
+}

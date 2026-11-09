@@ -1,0 +1,148 @@
+{
+  "slug": "amisa-server",
+  "name": "Amisa Server",
+  "aliases": [
+    "AmisaLabs",
+    "Amisa Cloud"
+  ],
+  "tagline": "Short-lived distributed in-memory multi-model DBMS with SQL and built-in search, sold as a DBaaS (2014-16).",
+  "description": "Amisa Server was the engine behind AmisaLabs, a Canadian startup that pitched one ACID, distributed, in-memory database able to act as a relational, document, graph, time-series and key-value store at once, with SQL, an integrated search engine (autocomplete, phrase and full-text search) and a file system. Its marketing described bitmap-encoded set intersections for fast multidimensional filtering, hash or range auto-sharding with rebalancing, and real-time replication, sold mainly as a hosted database-as-a-service called Amisa Cloud. The company appears to have shut down around 2016 and the domain later passed to unrelated owners. None of its claims were independently benchmarked.",
+  "productType": "managed-service",
+  "status": "discontinued",
+  "statusNote": "AmisaLabs and its Amisa Cloud service disappeared around 2016; the software is not available.",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "relational",
+    "graph",
+    "key-value",
+    "time-series"
+  ],
+  "workloads": [
+    "oltp",
+    "real-time-analytics",
+    "full-text-search"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory"
+  ],
+  "developer": "AmisaLabs",
+  "vendorType": "company",
+  "initialRelease": 2014,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Hosted DBaaS; no longer offered."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Marketed hash/range auto-sharding with rebalancing; no public evidence of large deployments."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "Hosted API"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Ambitious single-engine multi-model design combining SQL, search and graph traversal",
+    "Illustrates the mid-2010s push to replace polyglot persistence with one store"
+  ],
+  "weaknesses": [
+    "Company and service are gone; nothing to download or run",
+    "Marketing claims were never independently verified",
+    "No public documentation survives beyond archived web pages"
+  ],
+  "useCases": [
+    "Historical reference on multi-model DBaaS attempts",
+    "Market research on failed database startups"
+  ],
+  "notIdealFor": [
+    "Any current workload: the product no longer exists"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "arangodb",
+    "surrealdb",
+    "couchbase",
+    "singlestore",
+    "azure-cosmos-db"
+  ],
+  "tags": [
+    "multi-model",
+    "in-memory",
+    "dbaas",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://dbdb.io/db/amisa-server"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://dbdb.io/db/amisa-server",
+    "http://web.archive.org/web/20140406191303/http://www.amisalabs.com:80/",
+    "http://web.archive.org/web/20150905174352/http://www.amisalabs.com/About_us.html"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,161 @@
+{
+  "slug": "gadfly",
+  "name": "Gadfly",
+  "aliases": [],
+  "tagline": "Pure-Python SQL relational database from 1994, an early DB-API engine; long unmaintained.",
+  "description": "Gadfly is a relational database engine written entirely in Python by Aaron Watters, first released in 1994 and later maintained on SourceForge as GadflyB5. It parses a sizeable subset of SQL with its own kwParsing toolkit, keeps tables and indexes in memory, logs commits to disk for crash recovery, and exposes the Python DB-API so applications could swap it for a server database later. A small TCP server mode let several processes share one database, since concurrent writers were otherwise not supported. Contributors over the years included the Zope Corporation team. The final 1.0.0 release dates from 2005 and targets Python 2; sqlite3 in the standard library has since taken over this niche.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Last release 1.0.0 in 2005 and Python 2 only; superseded by Python's built-in sqlite3 module.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Aaron Watters",
+  "vendorType": "community",
+  "initialRelease": 1994,
+  "latestVersion": {
+    "version": "1.0.0",
+    "date": "2005-01"
+  },
+  "writtenIn": [
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Gadfly license (historical permission notice)"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "The working set lives in memory; sized for small datasets."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset)"
+  ],
+  "apis": [
+    "Python DB-API",
+    "TCP client/server"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero native dependencies: SQL engine written in pure Python",
+    "DB-API compliant, so code could later move to a server database",
+    "Log-based recovery of committed transactions after a crash",
+    "Readable source for learning how a SQL parser and executor fit together"
+  ],
+  "weaknesses": [
+    "Python 2 only and unmaintained since 2005",
+    "No concurrent writers without the TCP server",
+    "Whole database held in memory",
+    "SQL coverage is a subset"
+  ],
+  "useCases": [
+    "Teaching SQL engine internals",
+    "Maintaining old Python 2 or Zope code that embeds it"
+  ],
+  "notIdealFor": [
+    "New Python projects (use sqlite3 or DuckDB)",
+    "Multi-user or large datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "duckdb",
+    "tinydb"
+  ],
+  "tags": [
+    "python",
+    "sql",
+    "embedded",
+    "historical"
+  ],
+  "links": {
+    "website": "https://gadfly.sourceforge.net/",
+    "repository": "https://sourceforge.net/projects/gadfly/",
+    "docs": "https://gadfly.sourceforge.net/faq.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/Gadfly_(database)"
+  },
+  "ids": {
+    "wikipedia": "Gadfly (database)",
+    "hackerNewsQuery": "Gadfly SQL Python"
+  },
+  "brand": {},
+  "sources": [
+    "https://gadfly.sourceforge.net/",
+    "https://sourceforge.net/projects/gadfly/",
+    "https://en.wikipedia.org/wiki/Gadfly_(database)"
+  ],
+  "lastVerified": "2026-10-27"
+}

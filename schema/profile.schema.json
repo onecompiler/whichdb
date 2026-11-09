@@ -1,0 +1,881 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/onecompiler/whichdb/main/schema/profile.schema.json",
+  "title": "WhichDB database profile",
+  "description": "One database profile (databases/<slug>.json). Generated from the WhichDB site's Zod schema; do not edit by hand.",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "not": {
+        "enum": [
+          "find",
+          "rankings",
+          "databases",
+          "compare",
+          "category",
+          "use-case",
+          "methodology",
+          "about",
+          "data",
+          "logos",
+          "db",
+          "api",
+          "search",
+          "tutorials",
+          "users",
+          "login",
+          "sitemap",
+          "robots",
+          "opengraph-image",
+          "privacy-policy",
+          "terms-and-conditions",
+          "404",
+          "_next"
+        ]
+      }
+    },
+    "name": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 60
+    },
+    "aliases": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "tagline": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 110
+    },
+    "description": {
+      "type": "string",
+      "minLength": 120,
+      "maxLength": 1100
+    },
+    "productType": {
+      "type": "string",
+      "enum": [
+        "engine",
+        "managed-service",
+        "extension",
+        "library",
+        "platform",
+        "research"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "maintenance",
+        "deprecated",
+        "discontinued"
+      ]
+    },
+    "statusNote": {
+      "type": "string",
+      "maxLength": 240
+    },
+    "maturity": {
+      "type": "string",
+      "enum": [
+        "emerging",
+        "growing",
+        "mature",
+        "legacy"
+      ]
+    },
+    "primaryModel": {
+      "type": "string",
+      "enum": [
+        "relational",
+        "document",
+        "key-value",
+        "wide-column",
+        "graph",
+        "rdf",
+        "time-series",
+        "vector",
+        "search",
+        "columnar",
+        "object",
+        "spatial",
+        "event-store",
+        "ledger",
+        "array",
+        "xml",
+        "hierarchical",
+        "multivalue",
+        "navigational"
+      ]
+    },
+    "models": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "relational",
+          "document",
+          "key-value",
+          "wide-column",
+          "graph",
+          "rdf",
+          "time-series",
+          "vector",
+          "search",
+          "columnar",
+          "object",
+          "spatial",
+          "event-store",
+          "ledger",
+          "array",
+          "xml",
+          "hierarchical",
+          "multivalue",
+          "navigational"
+        ]
+      }
+    },
+    "workloads": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "oltp",
+          "olap",
+          "htap",
+          "real-time-analytics",
+          "data-warehouse",
+          "lakehouse",
+          "stream-processing",
+          "caching",
+          "session-store",
+          "queue",
+          "pub-sub",
+          "full-text-search",
+          "vector-search",
+          "rag",
+          "time-series",
+          "observability",
+          "iot",
+          "graph-traversal",
+          "graph-analytics",
+          "knowledge-graph",
+          "geospatial",
+          "embedded",
+          "edge",
+          "mobile-offline",
+          "local-first",
+          "event-sourcing",
+          "ledger",
+          "ml-feature-store",
+          "content-management",
+          "metadata-store",
+          "configuration",
+          "scientific",
+          "financial-tick-data"
+        ]
+      }
+    },
+    "architecture": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "single-node",
+          "primary-replica",
+          "multi-primary",
+          "distributed",
+          "shared-storage",
+          "embedded",
+          "serverless",
+          "in-memory",
+          "client-server"
+        ]
+      }
+    },
+    "developer": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 80
+    },
+    "vendorType": {
+      "type": "string",
+      "enum": [
+        "community",
+        "foundation",
+        "company",
+        "cloud-provider",
+        "academic"
+      ]
+    },
+    "initialRelease": {
+      "type": "integer",
+      "minimum": 1960,
+      "maximum": 2030
+    },
+    "latestVersion": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "date": {
+          "type": "string",
+          "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+        }
+      },
+      "required": [
+        "version",
+        "date"
+      ]
+    },
+    "writtenIn": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "basedOn": {
+      "type": "string"
+    },
+    "license": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "permissive",
+            "copyleft",
+            "source-available",
+            "proprietary"
+          ]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 80
+        },
+        "spdx": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "type",
+        "name"
+      ]
+    },
+    "pricing": {
+      "type": "object",
+      "properties": {
+        "models": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "free",
+              "open-source",
+              "usage-based",
+              "subscription",
+              "per-node-license",
+              "enterprise-contract"
+            ]
+          }
+        },
+        "freeTier": {
+          "type": "boolean"
+        },
+        "startingPrice": {
+          "type": "string",
+          "maxLength": 80
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 300
+        }
+      },
+      "required": [
+        "models",
+        "freeTier"
+      ]
+    },
+    "deployment": {
+      "type": "object",
+      "properties": {
+        "selfHosted": {
+          "type": "boolean"
+        },
+        "managedByVendor": {
+          "type": "boolean"
+        },
+        "serverless": {
+          "type": "boolean"
+        },
+        "embedded": {
+          "type": "boolean"
+        },
+        "edge": {
+          "type": "boolean"
+        },
+        "kubernetesOperator": {
+          "type": "boolean"
+        },
+        "cloudProviders": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "aws",
+              "gcp",
+              "azure",
+              "oracle-cloud",
+              "ibm-cloud",
+              "alibaba-cloud",
+              "tencent-cloud",
+              "huawei-cloud",
+              "digitalocean",
+              "cloudflare",
+              "vercel",
+              "fly-io",
+              "heroku",
+              "render",
+              "railway",
+              "aiven",
+              "akamai-linode",
+              "ovhcloud",
+              "scaleway",
+              "hetzner"
+            ]
+          }
+        },
+        "platforms": {
+          "default": [],
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "linux",
+              "macos",
+              "windows",
+              "android",
+              "ios",
+              "browser",
+              "wasm",
+              "mainframe",
+              "unix"
+            ]
+          }
+        }
+      },
+      "required": [
+        "selfHosted",
+        "managedByVendor",
+        "serverless",
+        "embedded",
+        "edge",
+        "kubernetesOperator"
+      ]
+    },
+    "managedServices": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "provider": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "name",
+          "provider"
+        ]
+      }
+    },
+    "scale": {
+      "type": "object",
+      "properties": {
+        "tier": {
+          "type": "string",
+          "enum": [
+            "small",
+            "medium",
+            "large",
+            "massive"
+          ]
+        },
+        "horizontalScaling": {
+          "type": "string",
+          "enum": [
+            "native",
+            "addon",
+            "manual",
+            "none"
+          ]
+        },
+        "multiRegion": {
+          "type": "string",
+          "enum": [
+            "active-active",
+            "read-replicas",
+            "none"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 300
+        }
+      },
+      "required": [
+        "tier",
+        "horizontalScaling",
+        "multiRegion"
+      ]
+    },
+    "consistency": {
+      "type": "object",
+      "properties": {
+        "acid": {
+          "type": "string",
+          "enum": [
+            "full",
+            "limited",
+            "none"
+          ]
+        },
+        "models": {
+          "minItems": 1,
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "strong",
+              "tunable",
+              "causal",
+              "eventual"
+            ]
+          }
+        }
+      },
+      "required": [
+        "acid",
+        "models"
+      ]
+    },
+    "schemaMode": {
+      "type": "string",
+      "enum": [
+        "strict",
+        "flexible",
+        "schemaless"
+      ]
+    },
+    "queryLanguages": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "apis": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "compatibleWith": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "postgresql",
+          "mysql",
+          "sqlite",
+          "sql-server",
+          "oracle",
+          "redis",
+          "memcached",
+          "mongodb",
+          "cassandra",
+          "dynamodb",
+          "elasticsearch",
+          "kafka",
+          "s3",
+          "prometheus",
+          "influxdb",
+          "neo4j",
+          "hbase",
+          "clickhouse",
+          "opentsdb",
+          "graphite",
+          "couchdb"
+        ]
+      }
+    },
+    "drivers": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "transactions": {
+          "type": "boolean"
+        },
+        "joins": {
+          "type": "boolean"
+        },
+        "secondaryIndexes": {
+          "type": "boolean"
+        },
+        "fullTextSearch": {
+          "type": "boolean"
+        },
+        "vectorSearch": {
+          "type": "boolean"
+        },
+        "geospatial": {
+          "type": "boolean"
+        },
+        "json": {
+          "type": "boolean"
+        },
+        "changeDataCapture": {
+          "type": "boolean"
+        },
+        "triggers": {
+          "type": "boolean"
+        },
+        "storedProcedures": {
+          "type": "boolean"
+        },
+        "materializedViews": {
+          "type": "boolean"
+        },
+        "ttl": {
+          "type": "boolean"
+        },
+        "pubSub": {
+          "type": "boolean"
+        },
+        "columnarStorage": {
+          "type": "boolean"
+        },
+        "inMemory": {
+          "type": "boolean"
+        },
+        "persistence": {
+          "type": "boolean"
+        },
+        "compression": {
+          "type": "boolean"
+        },
+        "encryptionAtRest": {
+          "type": "boolean"
+        },
+        "rbac": {
+          "type": "boolean"
+        },
+        "timeTravel": {
+          "type": "boolean"
+        },
+        "branching": {
+          "type": "boolean"
+        },
+        "onlineSchemaChanges": {
+          "type": "boolean"
+        },
+        "streamingIngest": {
+          "type": "boolean"
+        },
+        "offlineSync": {
+          "type": "boolean"
+        },
+        "wasm": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "transactions",
+        "joins",
+        "secondaryIndexes",
+        "fullTextSearch",
+        "vectorSearch",
+        "geospatial",
+        "json",
+        "changeDataCapture",
+        "triggers",
+        "storedProcedures",
+        "materializedViews",
+        "ttl",
+        "pubSub",
+        "columnarStorage",
+        "inMemory",
+        "persistence",
+        "compression",
+        "encryptionAtRest",
+        "rbac",
+        "timeTravel",
+        "branching",
+        "onlineSchemaChanges",
+        "streamingIngest",
+        "offlineSync",
+        "wasm"
+      ]
+    },
+    "strengths": {
+      "minItems": 2,
+      "maxItems": 7,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 160
+      }
+    },
+    "weaknesses": {
+      "minItems": 1,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 160
+      }
+    },
+    "useCases": {
+      "minItems": 2,
+      "maxItems": 8,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 100
+      }
+    },
+    "notIdealFor": {
+      "minItems": 1,
+      "maxItems": 5,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "maxLength": 100
+      }
+    },
+    "notableUsers": {
+      "default": [],
+      "maxItems": 12,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "alternatives": {
+      "default": [],
+      "maxItems": 8,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+      }
+    },
+    "tags": {
+      "default": [],
+      "maxItems": 12,
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "links": {
+      "type": "object",
+      "properties": {
+        "website": {
+          "type": "string",
+          "format": "uri"
+        },
+        "docs": {
+          "type": "string",
+          "format": "uri"
+        },
+        "repository": {
+          "type": "string",
+          "format": "uri"
+        },
+        "pricing": {
+          "type": "string",
+          "format": "uri"
+        },
+        "changelog": {
+          "type": "string",
+          "format": "uri"
+        },
+        "wikipedia": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "required": [
+        "website"
+      ]
+    },
+    "ids": {
+      "type": "object",
+      "properties": {
+        "github": {
+          "type": "string",
+          "pattern": "^[\\w.-]+\\/[\\w.-]+$"
+        },
+        "stackoverflowTag": {
+          "type": "string"
+        },
+        "wikipedia": {
+          "type": "string"
+        },
+        "dockerHub": {
+          "type": "string"
+        },
+        "npm": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "minItems": 1,
+              "maxItems": 6,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          ]
+        },
+        "pypi": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "minItems": 1,
+              "maxItems": 6,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          ]
+        },
+        "crates": {
+          "anyOf": [
+            {
+              "type": "string",
+              "minLength": 1
+            },
+            {
+              "minItems": 1,
+              "maxItems": 6,
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          ]
+        },
+        "hackerNewsQuery": {
+          "type": "string"
+        }
+      }
+    },
+    "brand": {
+      "default": {},
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "pattern": "^#[0-9a-fA-F]{6}$"
+        },
+        "simpleIcon": {
+          "type": "string"
+        }
+      }
+    },
+    "sources": {
+      "minItems": 2,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "lastVerified": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    }
+  },
+  "required": [
+    "slug",
+    "name",
+    "tagline",
+    "description",
+    "productType",
+    "status",
+    "maturity",
+    "primaryModel",
+    "models",
+    "workloads",
+    "architecture",
+    "developer",
+    "vendorType",
+    "initialRelease",
+    "writtenIn",
+    "license",
+    "pricing",
+    "deployment",
+    "scale",
+    "consistency",
+    "schemaMode",
+    "queryLanguages",
+    "features",
+    "strengths",
+    "weaknesses",
+    "useCases",
+    "notIdealFor",
+    "links",
+    "ids",
+    "sources",
+    "lastVerified"
+  ],
+  "additionalProperties": false
+}

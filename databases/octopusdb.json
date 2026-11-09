@@ -1,0 +1,139 @@
+{
+  "slug": "octopusdb",
+  "name": "OctopusDB",
+  "aliases": [],
+  "tagline": "Saarland research DBMS that keeps one change log and derives row, column or stream views per workload.",
+  "description": "OctopusDB was a research system from Jens Dittrich's Information Systems Group at Saarland University, proposed by Dittrich and Alekh Jindal in a CIDR 2011 'outrageous ideas' paper as a one-size-fits-all architecture for OLTP, OLAP, streaming and scan-heavy workloads. Its primary storage is a logical log of all changes; on top of it the system keeps Storage Views, which are row stores, column stores, indexes or stream structures covering all or part of the log, and chooses or adapts them to the observed workload, so one engine can emulate several specialised systems or hybrids of them. It stayed a research prototype and the project page is gone, but its log-plus-derived-views idea anticipates later HTAP and log-structured designs.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (about 2010–2014) at Saarland University; never released. Ideas echo in HTAP engines such as Hyrise and SAP HANA.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "olap",
+    "htap",
+    "stream-processing"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Saarland University (Information Systems Group)",
+  "vendorType": "academic",
+  "initialRelease": 2011,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Not released (research prototype)"
+  },
+  "pricing": {
+    "models": [
+      "free"
+    ],
+    "freeTier": false,
+    "notes": "No public code or binaries; only papers."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Single logical log as the source of truth for every workload type",
+    "Storage Views let one engine act as row store, column store or stream system",
+    "Clear, provocative paper that is useful for teaching physical design trade-offs"
+  ],
+  "weaknesses": [
+    "Never released; only the vision paper and follow-ups exist",
+    "Automatic view selection was largely unproven at scale"
+  ],
+  "useCases": [
+    "Database architecture courses",
+    "Background reading for adaptive and HTAP storage design"
+  ],
+  "notIdealFor": [
+    "Any practical deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "hyrise",
+    "sap-hana",
+    "h-store",
+    "c-store",
+    "singlestore"
+  ],
+  "tags": [
+    "research",
+    "htap",
+    "adaptive-storage",
+    "saarland",
+    "cidr"
+  ],
+  "links": {
+    "website": "https://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper25.pdf"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://www.cidrdb.org/cidr2011/Papers/CIDR11_Paper25.pdf",
+    "https://dbdb.io/db/octopusdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

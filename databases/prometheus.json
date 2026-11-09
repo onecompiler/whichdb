@@ -1,0 +1,213 @@
+{
+  "slug": "prometheus",
+  "name": "Prometheus",
+  "aliases": [
+    "Prometheus TSDB"
+  ],
+  "tagline": "CNCF-graduated pull-based monitoring system with a local TSDB, PromQL and alerting rules.",
+  "description": "Prometheus is the default open-source metrics system for cloud-native infrastructure: it scrapes HTTP endpoints found through service discovery, stores samples in a compact local TSDB, and evaluates PromQL for dashboards and alerting rules. The 3.x line, started in late 2024, brought a new UI, OpenTelemetry (OTLP) ingestion, UTF-8 metric names and native histograms. A server is deliberately not clustered: long retention, global views and HA deduplication are delegated to remote-write backends such as Thanos, Mimir or VictoriaMetrics. Use it for operational metrics, not as a general-purpose time-series database.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "observability",
+    "time-series"
+  ],
+  "architecture": [
+    "single-node"
+  ],
+  "developer": "Prometheus Authors (CNCF)",
+  "vendorType": "foundation",
+  "initialRelease": 2012,
+  "latestVersion": {
+    "version": "3.15.1",
+    "date": "2026-10-21"
+  },
+  "writtenIn": [
+    "Go"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free; AWS, Google Cloud, Azure and Grafana Cloud sell Prometheus-compatible managed backends."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "gcp",
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon Managed Service for Prometheus",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/prometheus/"
+    },
+    {
+      "name": "Google Cloud Managed Service for Prometheus",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/stackdriver/docs/managed-prometheus"
+    },
+    {
+      "name": "Azure Monitor managed service for Prometheus",
+      "provider": "Microsoft Azure"
+    },
+    {
+      "name": "Grafana Cloud Metrics",
+      "provider": "Grafana Labs",
+      "url": "https://grafana.com/products/cloud/metrics/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "One server handles millions of active series, but scaling beyond that means functional sharding or a remote-write backend."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "PromQL"
+  ],
+  "apis": [
+    "HTTP query API",
+    "Remote write",
+    "Remote read",
+    "OTLP",
+    "Exposition format scraping"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Go",
+    "Java",
+    "Python",
+    "Ruby",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Pull-based scraping with service discovery for Kubernetes, EC2, Consul and many others",
+    "PromQL is the lingua franca of metrics and is accepted by most metrics backends",
+    "Single static Go binary with no external dependencies",
+    "Alerting rules plus Alertmanager for routing, grouping and silencing",
+    "Huge exporter ecosystem and native instrumentation in Kubernetes and most cloud-native software"
+  ],
+  "weaknesses": [
+    "No clustering or HA deduplication; global, long-term storage needs Thanos, Mimir or similar",
+    "Local retention is bounded by a single node's disk",
+    "High-cardinality labels (user or request IDs) blow up memory",
+    "Not designed for events, logs or exact per-request data such as billing"
+  ],
+  "useCases": [
+    "Kubernetes and microservice monitoring",
+    "SLO and symptom-based alerting",
+    "Host and infrastructure metrics via exporters",
+    "Short-term metrics store feeding a long-term backend via remote write"
+  ],
+  "notIdealFor": [
+    "Multi-year metric retention on its own",
+    "Billing data that must be 100% accurate",
+    "Logs and traces",
+    "High-cardinality event analytics"
+  ],
+  "notableUsers": [
+    "SoundCloud"
+  ],
+  "alternatives": [
+    "victoriametrics",
+    "thanos",
+    "grafana-mimir",
+    "m3db",
+    "influxdb",
+    "graphite",
+    "greptimedb"
+  ],
+  "tags": [
+    "monitoring",
+    "cncf",
+    "metrics",
+    "kubernetes",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://prometheus.io/",
+    "docs": "https://prometheus.io/docs/",
+    "repository": "https://github.com/prometheus/prometheus",
+    "changelog": "https://github.com/prometheus/prometheus/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Prometheus_(software)"
+  },
+  "ids": {
+    "github": "prometheus/prometheus",
+    "stackoverflowTag": "prometheus",
+    "wikipedia": "Prometheus (software)",
+    "dockerHub": "prom/prometheus",
+    "pypi": "prometheus-client",
+    "hackerNewsQuery": "Prometheus"
+  },
+  "brand": {
+    "color": "#E6522C",
+    "simpleIcon": "prometheus"
+  },
+  "sources": [
+    "https://github.com/prometheus/prometheus/releases",
+    "https://prometheus.io/docs/introduction/overview/",
+    "https://www.cncf.io/projects/prometheus/"
+  ],
+  "lastVerified": "2026-10-27"
+}

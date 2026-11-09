@@ -1,0 +1,175 @@
+{
+  "slug": "ssdb",
+  "name": "SSDB",
+  "aliases": [],
+  "tagline": "Redis-protocol NoSQL server that keeps strings, hashes, sorted sets and lists on disk in LevelDB.",
+  "description": "SSDB is a C++ server by ideawu that speaks the Redis protocol, so ordinary Redis clients work, but stores data in LevelDB on disk instead of RAM. That trades some latency for capacity far beyond memory size at much lower cost, while keeping familiar key-value, hash, sorted-set and list (queue) operations, TTLs and master-slave replication. It was widely used by Chinese internet companies in the 2010s, with Qihoo 360 named in the README. Development stalled after release 1.9.9 in October 2020 and the last commit in 2021; for new Redis-compatible disk-backed storage, Apache Kvrocks or Pika are the maintained options.",
+  "productType": "engine",
+  "status": "maintenance",
+  "statusNote": "No commits since July 2021 and last release 1.9.9 (Oct 2020); effectively unmaintained. Apache Kvrocks and Pika are maintained Redis-compatible disk stores.",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "queue",
+    "session-store"
+  ],
+  "architecture": [
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "ideawu (Zuyang Wu)",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "1.9.9",
+    "date": "2020-10-07"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "LevelDB",
+  "license": {
+    "type": "permissive",
+    "name": "BSD 3-Clause License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Single-node capacity is bounded by disk, not RAM; sharding is done client-side or with a proxy."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Redis commands (subset)"
+  ],
+  "apis": [
+    "Redis protocol (RESP)",
+    "SSDB protocol"
+  ],
+  "compatibleWith": [
+    "redis"
+  ],
+  "drivers": [
+    "C++",
+    "PHP",
+    "Python",
+    "Java",
+    "JavaScript",
+    "Ruby",
+    "Go"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Drop-in for many Redis clients while storing data on disk",
+    "Datasets far larger than RAM at much lower cost than in-memory Redis",
+    "Supports hashes, sorted sets and lists, not just plain strings",
+    "Simple master-slave replication"
+  ],
+  "weaknesses": [
+    "Unmaintained since 2021",
+    "Only a subset of Redis commands; no Lua scripting or cluster protocol",
+    "Higher latency than RAM-based Redis",
+    "No built-in sharding"
+  ],
+  "useCases": [
+    "Large Redis-style datasets that do not fit in memory",
+    "Leaderboards and counters backed by disk",
+    "Maintaining existing SSDB deployments"
+  ],
+  "notIdealFor": [
+    "New deployments needing maintained software",
+    "Sub-millisecond caching",
+    "Apps relying on full Redis features"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-kvrocks",
+    "pika",
+    "redis",
+    "valkey",
+    "dragonfly",
+    "keydb"
+  ],
+  "tags": [
+    "redis-compatible",
+    "leveldb",
+    "key-value",
+    "disk-backed"
+  ],
+  "links": {
+    "website": "https://ssdb.io/",
+    "docs": "https://ssdb.io/docs/",
+    "repository": "https://github.com/ideawu/ssdb"
+  },
+  "ids": {
+    "github": "ideawu/ssdb",
+    "hackerNewsQuery": "SSDB Redis"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/ideawu/ssdb",
+    "https://github.com/ideawu/ssdb/releases",
+    "https://ssdb.io/",
+    "https://dbdb.io/db/ssdb"
+  ],
+  "lastVerified": "2026-10-27"
+}

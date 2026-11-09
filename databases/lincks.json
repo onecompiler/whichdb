@@ -1,0 +1,150 @@
+{
+  "slug": "lincks",
+  "name": "LINCKS",
+  "aliases": [
+    "LINCKS OODBMS"
+  ],
+  "tagline": "Linköping University's early-1990s object-centred, versioned multi-user database for shared documents.",
+  "description": "LINCKS was a research database system from the IISLAB group at Linköping University's Department of Computer and Information Science, built to explore intelligent information systems. It stored small, semi-structured information chunks (each with a structured part for AI processing and a free-form part for users) that combine into composite objects shared by many users for different purposes, with alternative views over the same data, a full database history, notification of parallel edits and a hypertext-like X11 interface. Version 2 was released publicly over FTP under the GNU license in September 1993, with 2.2 patch level 1 following in June 1994, for SunOS, Solaris and other Unix systems. It has long been inactive and is of historical interest.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (Linköping University); public releases 1993-1994 and no development since the mid-1990s.",
+  "maturity": "legacy",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "document"
+  ],
+  "workloads": [
+    "content-management",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "client-server"
+  ],
+  "developer": "Linköping University (IDA, IISLAB)",
+  "vendorType": "academic",
+  "initialRelease": 1993,
+  "latestVersion": {
+    "version": "2.2 patch level 1",
+    "date": "1994-06-09"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "GNU General Public License"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Interactive X11 browser/editor"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Composite objects built from shared, semi-structured chunks",
+    "Full database history and alternative views over the same information",
+    "Notification when several users edit related objects in parallel",
+    "Early example of hypertext-style browsing of a shared database"
+  ],
+  "weaknesses": [
+    "Research prototype from the early 1990s, long unmaintained",
+    "Tied to X11R5-era Unix systems",
+    "No standard query language"
+  ],
+  "useCases": [
+    "Studying early versioned, semi-structured and hypertext databases",
+    "History of Swedish database research"
+  ],
+  "notIdealFor": [
+    "Any present-day deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "terminusdb",
+    "xtdb",
+    "mongodb",
+    "exist-db"
+  ],
+  "tags": [
+    "research",
+    "object-database",
+    "versioning",
+    "hypertext",
+    "sweden"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/19970804193845/http://www.ida.liu.se/~lincks/"
+  },
+  "ids": {
+    "hackerNewsQuery": "LINCKS Linkoping"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/19970804193845/http://www.ida.liu.se/~lincks/",
+    "https://web.archive.org/web/1997/http://www.ida.liu.se:80/~lincks/history.html",
+    "https://web.archive.org/web/1997/http://www.ida.liu.se:80/~lincks/announcement.html",
+    "https://dbdb.io/db/lincks"
+  ],
+  "lastVerified": "2026-10-27"
+}

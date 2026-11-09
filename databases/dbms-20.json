@@ -1,0 +1,102 @@
+{
+  "slug": "dbms-20",
+  "name": "DBMS-20",
+  "aliases": ["DBMS-10", "DEC DBMS-10/20"],
+  "tagline": "DEC's CODASYL network database for the 36-bit DECsystem-10 and DECSYSTEM-20 mainframes.",
+  "description": "DBMS-20 was Digital Equipment Corporation's CODASYL (DBTG-style) network database for the DECSYSTEM-20 running TOPS-20, the sibling of DBMS-10 on the DECsystem-10, whose first manuals date from September 1973. Data was described with a schema DDL of areas, record types and owner-member sets, applications received tailored sub-schemas, and COBOL programs navigated records through an embedded data-manipulation language handled by a run-time Data Base Control System. The last documented release, V6.1, appears in DEC's 1985 TOPS-20 documentation set. It died with DEC's 36-bit product line and is now a reference point for how navigational databases worked before SQL took over.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Shipped by DEC from the 1970s to the mid-1980s (last documented release V6.1, c. 1985); ended with the 36-bit DECsystem line.",
+  "maturity": "legacy",
+  "primaryModel": "navigational",
+  "models": ["navigational"],
+  "workloads": ["oltp"],
+  "architecture": ["single-node"],
+  "developer": "Digital Equipment Corporation",
+  "vendorType": "company",
+  "initialRelease": 1973,
+  "latestVersion": { "version": "6.1", "date": "1985" },
+  "writtenIn": ["MACRO-10 assembly"],
+  "license": { "type": "proprietary", "name": "Proprietary (DEC single-system licence)" },
+  "pricing": {
+    "models": ["per-node-license"],
+    "freeTier": false,
+    "notes": "Was licensed per computer system by DEC; no longer sold."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["mainframe"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "limited", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["CODASYL DML (embedded in COBOL)", "Schema and sub-schema DDL"],
+  "apis": ["COBOL DML preprocessor"],
+  "compatibleWith": [],
+  "drivers": ["COBOL"],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Faithful implementation of the CODASYL DBTG schema/sub-schema and set model",
+    "Complete DEC manuals survive on bitsavers, making it a well-documented teaching example",
+    "Sub-schemas gave each program a restricted view of the database, an early form of access control"
+  ],
+  "weaknesses": [
+    "Runs only on long-obsolete DEC 36-bit hardware or emulators",
+    "Navigational record-at-a-time access couples programs tightly to physical structure",
+    "No declarative query language"
+  ],
+  "useCases": [
+    "Studying CODASYL network databases",
+    "Retro-computing on TOPS-20 emulators (SIMH, KLH10)",
+    "Understanding the pre-relational design that SQL replaced"
+  ],
+  "notIdealFor": ["Any modern production workload"],
+  "notableUsers": [],
+  "alternatives": ["idms", "ibm-ims", "postgresql"],
+  "tags": ["codasyl", "network-model", "dec", "tops-20", "historical"],
+  "links": {
+    "website": "https://bitsavers.org/pdf/dec/pdp10/TOPS20/",
+    "docs": "https://bitsavers.org/pdf/dec/pdp10/TOPS20/MasterTableOfContentsJun85.txt"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://bitsavers.org/pdf/dec/pdp10/TOPS20/MasterTableOfContentsJun85.txt",
+    "https://bitsavers.org/pdf/dec/pdp10/TOPS10/DEC-10-AAPMA-A-D_DECSYSTEM-10_DBMS-10_Data_Base_Administrators_Procedures_Manual_Sep1973.pdf",
+    "https://dbdb.io/db/dbms-20"
+  ],
+  "lastVerified": "2026-10-27"
+}

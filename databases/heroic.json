@@ -1,0 +1,159 @@
+{
+  "slug": "heroic",
+  "name": "Heroic",
+  "aliases": [],
+  "tagline": "Spotify's time-series database on Bigtable or Cassandra plus Elasticsearch; deprecated in 2021.",
+  "description": "Heroic is the time-series database Spotify built for its internal monitoring. It stores metric samples in Google Cloud Bigtable or Apache Cassandra and keeps series metadata and tags in Elasticsearch, which powers tag-based lookups and suggestions; a Java service on top offers an HTTP API, its own query language with aggregations, and federation that fans queries out across clusters in several regions. Spotify open-sourced it in 2015 and published a deprecation notice in March 2021 with the final 2.3.18 release, saying it would no longer improve or release Heroic; the repository is archived. It remains a readable example of separating metric storage from metadata indexing, but new deployments should use Prometheus-compatible systems.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Spotify deprecated Heroic in March 2021 (final release 2.3.18) and archived the repository. Use Mimir, VictoriaMetrics or M3.",
+  "maturity": "legacy",
+  "primaryModel": "time-series",
+  "models": [
+    "time-series"
+  ],
+  "workloads": [
+    "time-series",
+    "observability"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Spotify",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "2.3.18",
+    "date": "2021-03-04"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Google Cloud Bigtable or Apache Cassandra, with Elasticsearch",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Storage scales with the Bigtable or Cassandra backend; federation fans queries out to independent regional clusters."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Heroic Query Language"
+  ],
+  "apis": [
+    "HTTP API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Separates sample storage (Bigtable/Cassandra) from tag indexing (Elasticsearch)",
+    "Cross-region federation of queries",
+    "Battle-tested on Spotify's monitoring workload"
+  ],
+  "weaknesses": [
+    "Deprecated and archived; no security fixes",
+    "Requires running Bigtable or Cassandra plus Elasticsearch",
+    "Not compatible with PromQL or the Prometheus ecosystem"
+  ],
+  "useCases": [
+    "Studying large-scale metrics architecture",
+    "Maintaining existing Heroic deployments during migration"
+  ],
+  "notIdealFor": [
+    "New monitoring stacks",
+    "Small teams without Cassandra or Elasticsearch expertise"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "grafana-mimir",
+    "victoriametrics",
+    "m3db",
+    "prometheus",
+    "opentsdb"
+  ],
+  "tags": [
+    "time-series",
+    "monitoring",
+    "spotify",
+    "cassandra",
+    "bigtable",
+    "archived"
+  ],
+  "links": {
+    "website": "https://spotify.github.io/heroic/",
+    "repository": "https://github.com/spotify/heroic",
+    "changelog": "https://github.com/spotify/heroic/releases"
+  },
+  "ids": {
+    "github": "spotify/heroic",
+    "dockerHub": "spotify/heroic",
+    "hackerNewsQuery": "Spotify Heroic"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/spotify/heroic",
+    "https://github.com/spotify/heroic/releases",
+    "https://spotify.github.io/heroic/"
+  ],
+  "lastVerified": "2026-10-27"
+}

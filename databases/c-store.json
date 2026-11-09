@@ -1,0 +1,156 @@
+{
+  "slug": "c-store",
+  "name": "C-Store",
+  "aliases": [
+    "CStore"
+  ],
+  "tagline": "MIT/Brown/Brandeis research column store (VLDB 2005) that introduced projections and became Vertica.",
+  "description": "C-Store was the academic column-oriented DBMS led by Michael Stonebraker with Daniel Abadi, Sam Madden and colleagues from MIT, Brown, Brandeis, UMass Boston and Yale, described in the VLDB 2005 paper \"C-Store: A Column-oriented DBMS\". It stored each column separately with heavy compression, organised data into overlapping sorted projections instead of base tables, split storage into a small write-optimised store and a large read-optimised store merged by a tuple mover, and used redundant projections for K-safe fault tolerance. Follow-up work used it to show the gains of executing directly on compressed columns. The team released version 0.2 of the code under a BSD license in October 2006 and stated no further releases were expected. The design was commercialised as Vertica and, with MonetDB, shaped most modern analytical column stores.",
+  "productType": "research",
+  "status": "discontinued",
+  "statusNote": "Research prototype (2005–2006); final code release 0.2 in Oct 2006. Commercialised as Vertica.",
+  "maturity": "legacy",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational"
+  ],
+  "workloads": [
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "MIT, Brown, Brandeis, UMass Boston and Yale",
+  "vendorType": "academic",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "0.2",
+    "date": "2006-10"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "Berkeley DB (storage layer)",
+  "license": {
+    "type": "permissive",
+    "name": "BSD License",
+    "spdx": "BSD-3-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Source snapshot only; no support or further releases."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "The paper targets a shared-nothing grid with K-safe projections; the public 0.2 code is a research snapshot for reproducing experiments."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (subset)"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Introduced sorted, overlapping projections as the physical design unit of a column store",
+    "Showed that operating directly on compressed columns (RLE, bit-vectors, dictionaries) pays off",
+    "Write-optimised plus read-optimised stores joined by a tuple mover, later standard in Vertica",
+    "Small, readable reference codebase under a BSD license"
+  ],
+  "weaknesses": [
+    "Abandoned since 2006; its authors note it no longer builds easily on modern toolchains",
+    "Never production-hardened, with limited SQL and no tooling",
+    "Released code is a research snapshot, not the full distributed design from the paper"
+  ],
+  "useCases": [
+    "Studying column-store internals and the origins of Vertica",
+    "Reproducing classic column-store experiments",
+    "Teaching physical design with projections"
+  ],
+  "notIdealFor": [
+    "Production analytics",
+    "Any workload that needs support or updates"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vertica",
+    "monetdb",
+    "clickhouse",
+    "duckdb",
+    "apache-druid"
+  ],
+  "tags": [
+    "research",
+    "column-store",
+    "stonebraker",
+    "vldb-2005"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2019/http://db.csail.mit.edu/projects/cstore/",
+    "wikipedia": "https://en.wikipedia.org/wiki/C-Store"
+  },
+  "ids": {
+    "wikipedia": "C-Store"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2019/http://db.csail.mit.edu/projects/cstore/",
+    "https://en.wikipedia.org/wiki/C-Store",
+    "https://doi.org/10.1145/3226595.3226638"
+  ],
+  "lastVerified": "2026-10-27"
+}

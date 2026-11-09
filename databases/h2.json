@@ -1,0 +1,181 @@
+{
+  "slug": "h2",
+  "name": "H2 Database",
+  "aliases": [
+    "H2",
+    "H2 Database Engine"
+  ],
+  "tagline": "Fast pure-Java SQL engine for embedded, in-memory and test databases, with compatibility modes.",
+  "description": "H2 is a compact relational database written in Java that runs embedded in the JVM, in pure in-memory mode, or as a TCP/PG server. It is the default test database for Spring Boot and many Java frameworks because it starts in milliseconds and offers compatibility modes that imitate PostgreSQL, MySQL, Oracle, SQL Server and others closely enough for most ORM-level tests. The MVStore engine gives MVCC transactions and file persistence, and the 2.x line has steadily improved SQL standard coverage. It remains actively maintained with regular releases, but it is not a production server for high concurrency or large data.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "embedded",
+    "oltp",
+    "configuration"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "H2 Group (Thomas Mueller, Evgenij Ryazanov and contributors)",
+  "vendorType": "community",
+  "initialRelease": 2005,
+  "latestVersion": {
+    "version": "2.5.252",
+    "date": "2026-09-24"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "MPL 2.0 or EPL 1.0 (dual)",
+    "spdx": "MPL-2.0 OR EPL-1.0"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "open-source"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Designed for a single JVM; databases of a few GB are comfortable."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "JDBC",
+    "PostgreSQL wire protocol (partial)",
+    "ODBC via PG protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Starts in milliseconds; ideal for unit and integration tests",
+    "Compatibility modes for PostgreSQL, MySQL, Oracle, SQL Server, DB2 dialects",
+    "Single small JAR with built-in web console",
+    "In-memory and file-backed modes share the same SQL",
+    "Java functions and triggers run in-process"
+  ],
+  "weaknesses": [
+    "Compatibility modes are approximations; tests can pass on H2 and fail on the real database",
+    "Major versions change the file format, requiring export/import",
+    "Not designed for concurrent multi-user production workloads",
+    "Java-only client access in practice"
+  ],
+  "useCases": [
+    "Integration tests for Spring/JPA applications",
+    "Embedded storage in Java desktop tools",
+    "Prototyping before choosing a production database",
+    "In-memory scratch databases in batch jobs"
+  ],
+  "notIdealFor": [
+    "Production multi-user servers",
+    "Non-JVM applications",
+    "Validating database-specific SQL behavior"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "hsqldb",
+    "sqlite",
+    "apache-derby",
+    "duckdb",
+    "postgresql"
+  ],
+  "tags": [
+    "java",
+    "embedded",
+    "in-memory",
+    "testing"
+  ],
+  "links": {
+    "website": "https://h2database.com/",
+    "docs": "https://h2database.com/html/main.html",
+    "repository": "https://github.com/h2database/h2database",
+    "changelog": "https://h2database.com/html/changelog.html",
+    "wikipedia": "https://en.wikipedia.org/wiki/H2_Database_Engine"
+  },
+  "ids": {
+    "github": "h2database/h2database",
+    "stackoverflowTag": "h2",
+    "wikipedia": "H2 Database Engine",
+    "hackerNewsQuery": "\"H2 database\""
+  },
+  "brand": {
+    "color": "#09476B",
+    "simpleIcon": "h2database"
+  },
+  "sources": [
+    "https://github.com/h2database/h2database/releases",
+    "https://h2database.com/html/license.html",
+    "https://h2database.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

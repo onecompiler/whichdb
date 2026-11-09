@@ -1,0 +1,147 @@
+{
+  "slug": "sqrrl",
+  "name": "Sqrrl",
+  "aliases": [
+    "Sqrrl Enterprise",
+    "Sqrrl Data"
+  ],
+  "tagline": "Accumulo-based big-data and cyber threat-hunting platform from ex-NSA engineers; acquired by Amazon in 2018.",
+  "description": "Sqrrl Data was founded in 2012 by former NSA staff who had worked on Apache Accumulo, the cell-level-secured Bigtable clone. Its Sqrrl Enterprise product packaged Accumulo with indexing, search and linked-data analysis, and over time became a threat-hunting platform that combined user, entity and event data into a behavior graph for security analysts and integrated with SIEMs such as QRadar. Amazon acquired the company in January 2018 to fold it into AWS, and the product is no longer sold. Accumulo itself is still an Apache project if you need cell-level security on a wide-column store.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Amazon in January 2018 and absorbed into AWS; Sqrrl Enterprise is no longer sold. Apache Accumulo remains available.",
+  "maturity": "legacy",
+  "primaryModel": "wide-column",
+  "models": [
+    "wide-column",
+    "graph"
+  ],
+  "workloads": [
+    "graph-analytics",
+    "observability"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Sqrrl Data, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Apache Accumulo",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "No longer sold."
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": []
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Inherited Accumulo's tablet-based scale-out on Hadoop clusters."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Proprietary query and search API"
+  ],
+  "apis": [],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Cell-level security labels from Accumulo suited multi-level-access data",
+    "Behavior-graph analytics built for security analysts hunting threats",
+    "Scaled out on Hadoop-era infrastructure"
+  ],
+  "weaknesses": [
+    "Discontinued after Amazon's 2018 acquisition",
+    "Proprietary, with no remaining distribution",
+    "Required running Hadoop, ZooKeeper and Accumulo underneath"
+  ],
+  "useCases": [
+    "Historical reference for security-focused Accumulo deployments",
+    "Background on cell-level security models"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "apache-accumulo",
+    "splunk",
+    "elasticsearch",
+    "opensearch",
+    "neo4j"
+  ],
+  "tags": [
+    "accumulo",
+    "security",
+    "threat-hunting",
+    "discontinued",
+    "aws"
+  ],
+  "links": {
+    "website": "https://en.wikipedia.org/wiki/Sqrrl",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sqrrl"
+  },
+  "ids": {
+    "wikipedia": "Sqrrl",
+    "hackerNewsQuery": "Sqrrl"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/Sqrrl",
+    "https://dbdb.io/db/sqrrl"
+  ],
+  "lastVerified": "2026-10-27"
+}

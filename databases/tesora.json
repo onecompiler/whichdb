@@ -1,0 +1,158 @@
+{
+  "slug": "tesora",
+  "name": "Tesora",
+  "aliases": [
+    "Tesora Database Virtualization Engine",
+    "Tesora DVE",
+    "ParElastic",
+    "Tesora DBaaS Platform"
+  ],
+  "tagline": "MySQL-protocol sharding layer (ex-ParElastic) and OpenStack Trove DBaaS vendor; bought by Stratoscale in 2017.",
+  "description": "Tesora started in 2010 as ParElastic, whose Database Virtualization Engine (DVE) sat between applications and a pool of MySQL or MariaDB servers, exposing one virtual MySQL-protocol database while transparently sharding data across storage nodes with ACID transactions across them. Renamed Tesora, the company open-sourced DVE under the AGPL in 2014 and shifted to an enterprise distribution of OpenStack Trove, the OpenStack database-as-a-service, becoming its leading contributor. Stratoscale acquired Tesora in February 2017 to build AWS-style database services, and both DVE and the Tesora DBaaS platform stopped as standalone products. For transparent MySQL sharding today, look at Vitess or a distributed SQL database.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Acquired by Stratoscale in February 2017; the DVE repo has been idle since 2015 and Tesora products are no longer offered. Use Vitess, TiDB or PlanetScale.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server"
+  ],
+  "developer": "Tesora, Inc. (formerly ParElastic)",
+  "vendorType": "company",
+  "initialRelease": 2012,
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "MySQL / MariaDB storage nodes",
+  "license": {
+    "type": "copyleft",
+    "name": "GNU AGPL v3 (DVE community edition)",
+    "spdx": "AGPL-3.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "DVE community source remains on GitHub; commercial editions and the DBaaS platform ended after the acquisition."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Scale-out by adding MySQL storage nodes behind the virtualization engine."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Applications saw one MySQL database while data was sharded underneath",
+    "Cross-shard ACID transactions without application changes",
+    "Ran on standard MySQL or MariaDB servers"
+  ],
+  "weaknesses": [
+    "Discontinued after the 2017 acquisition; code idle since 2015",
+    "Extra proxy hop and query-routing overhead",
+    "AGPL community edition with a tiny user base"
+  ],
+  "useCases": [
+    "Historical reference for MySQL sharding middleware",
+    "Background on OpenStack Trove DBaaS"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "vitess",
+    "tidb",
+    "planetscale",
+    "mysql",
+    "mariadb"
+  ],
+  "tags": [
+    "mysql",
+    "sharding",
+    "openstack",
+    "trove",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20150605181326/http://www.tesora.com/",
+    "repository": "https://github.com/Tesora/tesora-dve-pub"
+  },
+  "ids": {
+    "github": "Tesora/tesora-dve-pub",
+    "hackerNewsQuery": "Tesora database"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/Tesora/tesora-dve-pub",
+    "https://www.percona.com/blog/benchmarking-tesoras-database-virtualisation-engine-sysbench/",
+    "https://siliconangle.com/2017/02/06/stratoscale-acquires-tesora-expand-database-service-market/",
+    "https://web.archive.org/web/20141226080442/http://www.tesora.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,166 @@
+{
+  "slug": "lovefield",
+  "name": "Lovefield",
+  "aliases": [
+    "google/lovefield"
+  ],
+  "tagline": "Google's pure-JavaScript relational database for web apps, layered over IndexedDB; archived since 2021.",
+  "description": "Lovefield is a relational query engine written in JavaScript by Google and open-sourced in 2014-2015. You declare a typed schema, and a fluent SQL-like API (select, from, where, innerJoin, orderBy, groupBy) runs queries with an optimizer, indexes, constraints, transactions and observable queries for data binding, persisting rows to IndexedDB or keeping them in memory (Firebase was an optional backend). It worked across Chrome, Firefox, IE 11, Edge and Safari and, per its FAQ, Inbox by Gmail relied on it heavily. The last npm release, 2.1.12, dates from February 2017 and the GitHub repository is archived; for new browser apps, SQLite compiled to WebAssembly, PGlite or Dexie are the usual choices.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "GitHub repository archived (no commits since Aug 2021); last npm release 2.1.12 (Feb 2017). Consider SQLite WASM, PGlite or Dexie.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Google",
+  "vendorType": "company",
+  "initialRelease": 2015,
+  "latestVersion": {
+    "version": "2.1.12",
+    "date": "2017-02-04"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": false,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Bounded by browser storage quotas and memory."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL-like JavaScript query builder"
+  ],
+  "apis": [
+    "JavaScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Real relational queries with joins, aggregation and an optimizer in the browser",
+    "Declarative schema with indexes, constraints and transactions",
+    "Observable queries for UI data binding",
+    "Proven at scale inside Inbox by Gmail"
+  ],
+  "weaknesses": [
+    "Archived and unmaintained since 2021",
+    "Fluent API rather than SQL text; no SQL compatibility",
+    "Performance bounded by IndexedDB and JavaScript execution"
+  ],
+  "useCases": [
+    "Maintaining older web apps built on it",
+    "Learning how a relational engine maps onto IndexedDB"
+  ],
+  "notIdealFor": [
+    "New browser apps (prefer SQLite WASM, PGlite or Dexie)",
+    "Server-side Node.js data storage"
+  ],
+  "notableUsers": [
+    "Google (Inbox by Gmail)"
+  ],
+  "alternatives": [
+    "indexeddb",
+    "dexie",
+    "pglite",
+    "alasql",
+    "rxdb",
+    "lokijs"
+  ],
+  "tags": [
+    "javascript",
+    "browser",
+    "indexeddb",
+    "relational",
+    "archived"
+  ],
+  "links": {
+    "website": "https://google.github.io/lovefield/",
+    "repository": "https://github.com/google/lovefield",
+    "docs": "https://github.com/google/lovefield/blob/master/docs/spec_index.md"
+  },
+  "ids": {
+    "github": "google/lovefield",
+    "npm": "lovefield",
+    "hackerNewsQuery": "Lovefield Google"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/google/lovefield",
+    "https://github.com/google/lovefield/blob/master/docs/FAQ.md",
+    "https://www.npmjs.com/package/lovefield",
+    "https://dbdb.io/db/lovefield"
+  ],
+  "lastVerified": "2026-10-27"
+}

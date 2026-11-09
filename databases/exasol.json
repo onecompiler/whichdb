@@ -1,0 +1,186 @@
+{
+  "slug": "exasol",
+  "name": "Exasol",
+  "aliases": [],
+  "tagline": "In-memory MPP columnar analytics database from Germany, tuned for fast BI with little tuning.",
+  "description": "Exasol is a German in-memory, columnar MPP database that has long topped TPC-H performance tables. It keeps hot data in RAM, creates and maintains indexes automatically, and parallelizes queries across nodes, so BI tools get fast answers without much tuning. It runs on-premises, in your cloud or as Exasol SaaS, with UDFs in Python, R, Java and Lua and a free Personal edition. Recent releases position it as a 'sovereign' analytics database for AI agents, with an MCP server and Parquet/lakehouse loading. It is a good BI accelerator; the ecosystem is smaller than the US hyperscalers'.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "columnar",
+  "models": [
+    "columnar",
+    "relational",
+    "spatial"
+  ],
+  "workloads": [
+    "data-warehouse",
+    "olap"
+  ],
+  "architecture": [
+    "distributed",
+    "in-memory",
+    "client-server"
+  ],
+  "developer": "Exasol AG",
+  "vendorType": "company",
+  "initialRelease": 2000,
+  "latestVersion": {
+    "version": "2026.1.0",
+    "date": "2026-05-26"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "subscription",
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Free Personal/Community edition; commercial licences by memory or cores; SaaS billed by usage."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shared-nothing MPP cluster; performance best when the hot working set fits in cluster RAM."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Lua",
+    "Python UDFs",
+    "R UDFs",
+    "Java UDFs"
+  ],
+  "apis": [
+    "JDBC",
+    "ODBC",
+    "ADO.NET",
+    "WebSocket API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "Java",
+    ".NET",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Very fast BI queries from in-memory columnar MPP execution",
+    "Self-tuning: indexes and statistics are created automatically",
+    "UDFs in Python, R, Java and Lua run inside the database",
+    "Deploys on-prem, in any major cloud or as SaaS; EU-based vendor",
+    "Free Personal edition for evaluation and small projects"
+  ],
+  "weaknesses": [
+    "RAM-heavy sizing raises hardware cost for large datasets",
+    "Smaller ecosystem and community than mainstream warehouses",
+    "Fewer native lakehouse and streaming features"
+  ],
+  "useCases": [
+    "BI acceleration layer for Tableau or Power BI",
+    "EU data-sovereign analytics",
+    "Replacing slow legacy warehouses",
+    "In-database data science"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Petabyte-scale cold data",
+    "Teams needing open source"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "snowflake",
+    "vertica",
+    "clickhouse",
+    "sap-hana",
+    "teradata-vantage",
+    "yellowbrick"
+  ],
+  "tags": [
+    "in-memory",
+    "mpp",
+    "columnar",
+    "bi",
+    "eu"
+  ],
+  "links": {
+    "website": "https://www.exasol.com/",
+    "docs": "https://docs.exasol.com/",
+    "pricing": "https://www.exasol.com/pricing/",
+    "changelog": "https://docs.exasol.com/release_notes.htm",
+    "wikipedia": "https://en.wikipedia.org/wiki/Exasol"
+  },
+  "ids": {
+    "stackoverflowTag": "exasol",
+    "wikipedia": "Exasol",
+    "dockerHub": "exasol/docker-db",
+    "pypi": "pyexasol",
+    "hackerNewsQuery": "Exasol"
+  },
+  "brand": {},
+  "sources": [
+    "https://www.exasol.com/blog/exasol-release-26-1/",
+    "https://docs.exasol.com/db/latest/release_notes_2026_1.htm",
+    "https://en.wikipedia.org/wiki/Exasol"
+  ],
+  "lastVerified": "2026-10-27"
+}

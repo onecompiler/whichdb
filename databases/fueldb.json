@@ -1,0 +1,158 @@
+{
+  "slug": "fueldb",
+  "name": "FuelDB",
+  "aliases": [],
+  "tagline": "Small Node.js real-time database that pushed JSON updates to subscribers over WebSockets.",
+  "description": "FuelDB was an open-source real-time data server written in JavaScript for Node.js by Joris Basiglio under the Wonderfuel name. Clients subscribed to keys over WebSockets or raw sockets and the server pushed every change to them, with HTTP/REST access, optional SSL and simple user/password authentication configured in JSON files. It was closer to a self-hosted pub/sub key-value hub than a full database, aimed at dashboards and live web apps around 2014–2015. The project stopped after its 1.0 line; the last commit is from September 2015 and the Wonderfuel site is gone. Modern equivalents are Firebase Realtime Database, Firestore listeners, Supabase Realtime or PocketBase.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Abandoned: last commit September 2015 and the wonderfuel.io site no longer resolves. Use Firebase Realtime Database, Supabase or PocketBase instead.",
+  "maturity": "legacy",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document"
+  ],
+  "workloads": [
+    "pub-sub",
+    "caching"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Joris Basiglio (Wonderfuel)",
+  "vendorType": "community",
+  "initialRelease": 2014,
+  "latestVersion": {
+    "version": "1.0.0",
+    "date": "2014-10-18"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single Node.js process; clustering was announced but never shipped."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Key subscription API"
+  ],
+  "apis": [
+    "WebSocket",
+    "REST",
+    "TCP socket"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Push-based updates to every subscribed client",
+    "Tiny codebase that is easy to read and fork",
+    "WebSocket and REST access with optional SSL"
+  ],
+  "weaknesses": [
+    "Abandoned since 2015 with no security updates",
+    "No queries, indexes or transactions",
+    "No clustering or replication"
+  ],
+  "useCases": [
+    "Reference for building a WebSocket pub/sub data hub",
+    "Hobby real-time dashboards"
+  ],
+  "notIdealFor": [
+    "Production applications",
+    "Anything needing durability guarantees or queries"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "firebase-realtime-database",
+    "supabase",
+    "pocketbase",
+    "google-cloud-firestore",
+    "convex"
+  ],
+  "tags": [
+    "nodejs",
+    "realtime",
+    "websocket",
+    "pub-sub",
+    "abandoned"
+  ],
+  "links": {
+    "website": "https://github.com/jbasiglio/fueldb",
+    "repository": "https://github.com/jbasiglio/fueldb"
+  },
+  "ids": {
+    "github": "jbasiglio/fueldb"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/jbasiglio/fueldb",
+    "https://web.archive.org/web/2016/https://wonderfuel.io/fueldb/",
+    "https://dbdb.io/db/fueldb"
+  ],
+  "lastVerified": "2026-10-27"
+}

@@ -1,0 +1,194 @@
+{
+  "slug": "alloydb",
+  "name": "AlloyDB for PostgreSQL",
+  "aliases": [
+    "AlloyDB",
+    "AlloyDB Omni",
+    "AlloyDB AI"
+  ],
+  "tagline": "Google's Postgres-compatible service with disaggregated storage, a columnar engine and ScaNN vectors.",
+  "description": "AlloyDB is Google Cloud's high-end PostgreSQL-compatible database. It keeps the Postgres query engine but moves storage into a regional, log-processing storage service, adds an automatically managed in-memory columnar engine for analytical queries, and ships ScaNN-based vector indexes and in-database model calls under the AlloyDB AI banner. AlloyDB Omni packages the same engine for self-managed deployment on any cloud, on-premises or Kubernetes. It suits teams on Google Cloud that need more throughput and faster mixed OLTP/analytics than Cloud SQL, and want to stay on real Postgres semantics; it is overkill and pricier for small databases.",
+  "productType": "managed-service",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial",
+    "vector",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "htap",
+    "vector-search",
+    "rag",
+    "real-time-analytics"
+  ],
+  "architecture": [
+    "shared-storage",
+    "primary-replica"
+  ],
+  "developer": "Google",
+  "vendorType": "cloud-provider",
+  "initialRelease": 2022,
+  "writtenIn": [
+    "C",
+    "C++"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (Google Cloud service; AlloyDB Omni commercial license)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "subscription"
+    ],
+    "freeTier": false,
+    "notes": "Billed per vCPU/memory-hour and storage, with committed-use discounts; free trial clusters are time-limited; AlloyDB Omni has a free developer edition and paid production licensing."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "AlloyDB for PostgreSQL",
+      "provider": "Google Cloud",
+      "url": "https://cloud.google.com/alloydb"
+    }
+  ],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Single primary with scalable read pools and cross-region secondary clusters; storage scales automatically."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/pgSQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol",
+    "AlloyDB Auth Proxy",
+    "Language connectors"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript",
+    "C#",
+    "Ruby",
+    "PHP"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": true,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Real PostgreSQL semantics, including PostgreSQL 18 compatibility (GA March 2026)",
+    "Adaptive in-memory columnar engine accelerates analytical queries without schema changes",
+    "ScaNN vector indexes and in-database Vertex AI model calls for RAG",
+    "AlloyDB Omni runs the same engine on any cloud, on-prem or Kubernetes",
+    "Federated queries into BigQuery via bigquery_fdw"
+  ],
+  "weaknesses": [
+    "Single writer; no built-in horizontal write sharding",
+    "More expensive than Cloud SQL for small or idle databases",
+    "Managed service is Google Cloud only",
+    "Proprietary storage layer means behavior differs from vanilla Postgres under some workloads"
+  ],
+  "useCases": [
+    "Migrating demanding Postgres or Oracle workloads to Google Cloud",
+    "Operational analytics on live transactional data",
+    "RAG and semantic search with vectors stored beside business data",
+    "Hybrid deployments using AlloyDB Omni on-premises"
+  ],
+  "notIdealFor": [
+    "Small hobby databases",
+    "Write-scaling beyond one large primary",
+    "Teams that must avoid cloud-specific Postgres forks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "amazon-aurora",
+    "google-cloud-sql",
+    "google-cloud-spanner",
+    "postgresql",
+    "neon",
+    "azure-database-for-postgresql"
+  ],
+  "tags": [
+    "google-cloud",
+    "postgres-compatible",
+    "managed",
+    "htap",
+    "ai"
+  ],
+  "links": {
+    "website": "https://cloud.google.com/alloydb",
+    "docs": "https://cloud.google.com/alloydb/docs",
+    "pricing": "https://cloud.google.com/alloydb/pricing",
+    "changelog": "https://docs.cloud.google.com/alloydb/docs/release-notes"
+  },
+  "ids": {
+    "stackoverflowTag": "google-alloydb",
+    "hackerNewsQuery": "AlloyDB"
+  },
+  "brand": {
+    "color": "#4285F4"
+  },
+  "sources": [
+    "https://docs.cloud.google.com/alloydb/docs/release-notes",
+    "https://cloud.google.com/alloydb",
+    "https://cloud.google.com/alloydb/pricing"
+  ],
+  "lastVerified": "2026-10-27"
+}

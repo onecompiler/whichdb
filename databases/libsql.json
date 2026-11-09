@@ -1,0 +1,207 @@
+{
+  "slug": "libsql",
+  "name": "libSQL",
+  "aliases": [
+    "libsql",
+    "sqld"
+  ],
+  "tagline": "Turso's open-contribution SQLite fork with native vectors, a network server and embedded replicas.",
+  "description": "libSQL is an open-source, open-contribution fork of SQLite created by Turso (formerly ChiselStrike) in 2022, because upstream SQLite does not accept outside patches. It keeps the SQLite file format and C API while adding a network server (sqld) with HTTP and WebSocket protocols, embedded replicas that sync a local copy from a remote primary, native vector columns with DiskANN indexes, ALTER TABLE extensions and WASM user-defined functions. It powers the classic Turso Cloud and many edge deployments. Turso now points new projects to Turso Database, its Rust rewrite, so libSQL receives fixes and occasional releases rather than major new features.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Turso has shifted development to Turso Database (Rust rewrite) and recommends it for new projects; libSQL still gets fixes and releases (0.10.0, Oct 2026).",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "vector",
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "edge",
+    "local-first",
+    "mobile-offline",
+    "vector-search",
+    "oltp"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "primary-replica"
+  ],
+  "developer": "Turso",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "0.10.0",
+    "date": "2026-10-13"
+  },
+  "writtenIn": [
+    "C",
+    "Rust"
+  ],
+  "basedOn": "SQLite",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "usage-based"
+    ],
+    "freeTier": true,
+    "notes": "Library and server are MIT; Turso Cloud hosts libSQL databases with a free tier."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios",
+      "wasm"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Turso Cloud",
+      "provider": "Turso",
+      "url": "https://turso.tech/"
+    }
+  ],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "manual",
+    "multiRegion": "read-replicas",
+    "notes": "Single primary per database; scale by using many small databases (per tenant) and embedded read replicas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "SQLite C API",
+    "Hrana over HTTP/WebSocket",
+    "HTTP API"
+  ],
+  "compatibleWith": [
+    "sqlite"
+  ],
+  "drivers": [
+    "Rust",
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Go",
+    "Swift",
+    "Kotlin",
+    "C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": true,
+    "wasm": true
+  },
+  "strengths": [
+    "Drop-in SQLite compatibility with a network server added",
+    "Embedded replicas give microsecond local reads synced from a remote primary",
+    "Native vector type and ANN index without extensions",
+    "Open to outside contributions, unlike upstream SQLite",
+    "Database-per-tenant pattern is cheap and practical"
+  ],
+  "weaknesses": [
+    "Development focus has moved to Turso Database",
+    "Still single-writer per database",
+    "Divergence from upstream SQLite means extensions and tools may lag",
+    "Self-hosted sqld has less documentation than Turso Cloud"
+  ],
+  "useCases": [
+    "Edge and serverless apps needing SQLite over the network",
+    "Per-tenant databases in SaaS",
+    "Local-first apps with synced embedded replicas",
+    "Small RAG and semantic-search apps using native vectors"
+  ],
+  "notIdealFor": [
+    "New greenfield projects (Turso recommends Turso Database)",
+    "Write-heavy concurrent workloads",
+    "Large analytical datasets"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "turso-database",
+    "sqlite",
+    "turso",
+    "cloudflare-d1",
+    "rqlite",
+    "pglite"
+  ],
+  "tags": [
+    "sqlite-fork",
+    "edge",
+    "embedded",
+    "vector",
+    "turso"
+  ],
+  "links": {
+    "website": "https://turso.tech/libsql",
+    "docs": "https://docs.turso.tech/libsql",
+    "repository": "https://github.com/tursodatabase/libsql",
+    "changelog": "https://github.com/tursodatabase/libsql/releases"
+  },
+  "ids": {
+    "github": "tursodatabase/libsql",
+    "npm": "@libsql/client",
+    "pypi": "libsql-client",
+    "crates": "libsql",
+    "hackerNewsQuery": "libSQL"
+  },
+  "brand": {
+    "color": "#4FF8D2",
+    "simpleIcon": "turso"
+  },
+  "sources": [
+    "https://github.com/tursodatabase/libsql",
+    "https://docs.turso.tech/libsql",
+    "https://turso.tech/libsql"
+  ],
+  "lastVerified": "2026-10-27"
+}

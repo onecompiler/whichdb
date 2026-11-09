@@ -1,0 +1,160 @@
+{
+  "slug": "ninja-database",
+  "name": "Ninja Database",
+  "aliases": [
+    "Ninja Database Pro",
+    "Ninja .NET Database Pro",
+    "Ninja Database Lite"
+  ],
+  "tagline": "Kellerman Software's commercial embedded object/relational database for .NET, Xamarin and Unity apps.",
+  "description": "Ninja Database Pro is a compact (about 220 KB) embedded database written in C# that stores .NET objects either inline as embedded children or in separate related tables, so it acts as an object store or a lightweight relational store depending on how you model child objects. It provides ACID transactions with automatic rollback on the next open, LINQ index queries, paging, constraints, triggers, foreign keys, LRU caching, AES encryption and LZO compression, and copes with class changes through automatic schema evolution. It targets .NET Framework, .NET Standard and Core, Mono, Xamarin, UWP and Unity, with a cheaper Lite edition. Kellerman Software still sells it, but updates have slowed to occasional fixes; the latest NuGet release is 3.20.0 from January 2023.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "Still sold by Kellerman Software, but only bug-fix updates since 2019; latest release 3.20.0 (Jan 2023).",
+  "maturity": "mature",
+  "primaryModel": "object",
+  "models": [
+    "object",
+    "relational"
+  ],
+  "workloads": [
+    "embedded",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Kellerman Software",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "latestVersion": {
+    "version": "3.20.0",
+    "date": "2023-01-28"
+  },
+  "writtenIn": [
+    "C#"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial, royalty-free redistribution"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "startingPrice": "$199 per developer",
+    "notes": "Developer, team and site licenses, optionally with source code; trial available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows",
+      "linux",
+      "macos",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "LINQ"
+  ],
+  "apis": [
+    ".NET API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C#",
+    "VB.NET"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-configuration: tables and indexes are created from your classes automatically",
+    "Automatic schema evolution when properties are added, removed or retyped",
+    "Built-in AES encryption and compression in a ~220 KB assembly",
+    "One API across desktop .NET, Xamarin mobile, UWP and Unity"
+  ],
+  "weaknesses": [
+    "Closed source unless you buy a source license",
+    "Development has slowed to occasional fixes",
+    "No SQL, no server mode and a small user community"
+  ],
+  "useCases": [
+    "Local storage for Xamarin or .NET MAUI-era mobile apps",
+    "Desktop .NET apps that want object persistence without an ORM",
+    "Unity games storing structured save data"
+  ],
+  "notIdealFor": [
+    "Shared multi-user databases",
+    "Teams that need open-source dependencies"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "litedb",
+    "realm",
+    "sqlite",
+    "objectbox"
+  ],
+  "tags": [
+    "dotnet",
+    "embedded",
+    "object-database",
+    "xamarin",
+    "commercial"
+  ],
+  "links": {
+    "website": "https://kellermansoftware.com/products/ninja-net-database-pro"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://kellermansoftware.com/products/ninja-net-database-pro",
+    "https://www.nuget.org/packages/NinjaDatabasePro"
+  ],
+  "lastVerified": "2026-10-27"
+}

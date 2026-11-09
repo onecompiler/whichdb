@@ -1,0 +1,193 @@
+{
+  "slug": "tarantool",
+  "name": "Tarantool",
+  "aliases": [],
+  "tagline": "In-memory database and Lua application server in one process, with an optional disk engine.",
+  "description": "Tarantool combines an in-memory storage engine (memtx), a disk-based LSM engine (vinyl) and a LuaJIT application server, so business logic runs inside the database next to the data. It offers ACID transactions with MVCC, secondary and spatial indexes, an SQL dialect, asynchronous and Raft-based synchronous replication, and sharding through the official vshard module. Built at Mail.ru and now developed by VK, it is popular in Russian fintech, telecom and gaming for caches that must also be the system of record. Outside that ecosystem the community and English-language resources are thinner.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value",
+    "document",
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "caching",
+    "session-store",
+    "queue",
+    "financial-tick-data"
+  ],
+  "architecture": [
+    "in-memory",
+    "primary-replica",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "VK",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "3.9.0",
+    "date": "2026-10-26"
+  },
+  "writtenIn": [
+    "C",
+    "Lua"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "BSD 2-Clause License",
+    "spdx": "BSD-2-Clause"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "notes": "Open-source edition free; Tarantool Enterprise adds tooling, security features and support from VK."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Sharding via the official vshard module; memtx datasets must fit in RAM per shard."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Lua",
+    "SQL"
+  ],
+  "apis": [
+    "IPROTO binary protocol (MessagePack)",
+    "HTTP via modules"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Lua",
+    "Go",
+    "Java",
+    "Python",
+    "C",
+    "C++",
+    "JavaScript",
+    "PHP",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Microsecond in-memory reads and writes with full ACID transactions",
+    "Lua stored procedures run inside the database, removing network hops",
+    "Two engines: RAM-resident memtx and disk-based vinyl in one server",
+    "Synchronous replication with Raft-based automatic failover",
+    "Write-ahead log and snapshots give durability for in-memory data"
+  ],
+  "weaknesses": [
+    "Smaller global community; much material is in Russian",
+    "Sharding requires vshard and application-level awareness",
+    "Lua-centric development model is unfamiliar to many teams",
+    "memtx datasets are limited by RAM"
+  ],
+  "useCases": [
+    "Low-latency transactional caches that are also the source of truth",
+    "Session and user-profile storage for high-traffic sites",
+    "Queues and real-time counters",
+    "Fintech and telecom billing hot paths"
+  ],
+  "notIdealFor": [
+    "Analytics over large datasets",
+    "Teams wanting a pure SQL relational database",
+    "Datasets far larger than RAM on the memtx engine"
+  ],
+  "notableUsers": [
+    "VK"
+  ],
+  "alternatives": [
+    "redis",
+    "aerospike",
+    "apache-ignite",
+    "hazelcast",
+    "valkey"
+  ],
+  "tags": [
+    "in-memory",
+    "lua",
+    "application-server",
+    "acid",
+    "vk"
+  ],
+  "links": {
+    "website": "https://www.tarantool.io/",
+    "docs": "https://www.tarantool.io/en/doc/latest/",
+    "repository": "https://github.com/tarantool/tarantool",
+    "changelog": "https://github.com/tarantool/tarantool/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Tarantool"
+  },
+  "ids": {
+    "github": "tarantool/tarantool",
+    "stackoverflowTag": "tarantool",
+    "wikipedia": "Tarantool",
+    "dockerHub": "tarantool/tarantool",
+    "pypi": "tarantool",
+    "hackerNewsQuery": "Tarantool"
+  },
+  "brand": {
+    "color": "#FF5B2E"
+  },
+  "sources": [
+    "https://github.com/tarantool/tarantool/releases",
+    "https://www.tarantool.io/",
+    "https://github.com/tarantool/tarantool/blob/master/LICENSE"
+  ],
+  "lastVerified": "2026-10-27"
+}

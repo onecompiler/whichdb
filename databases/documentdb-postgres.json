@@ -1,0 +1,195 @@
+{
+  "slug": "documentdb-postgres",
+  "name": "DocumentDB (open-source, PostgreSQL-based)",
+  "aliases": [
+    "DocumentDB",
+    "pg_documentdb",
+    "DocumentDB Linux Foundation"
+  ],
+  "tagline": "MIT-licensed, MongoDB-compatible document engine built as PostgreSQL extensions, run by the Linux Foundation.",
+  "description": "DocumentDB is an open-source document database that stores native BSON inside PostgreSQL through the pg_documentdb_core and pg_documentdb extensions, with a Rust gateway that speaks the MongoDB wire protocol. Microsoft open-sourced it in January 2025 as the engine behind Azure DocumentDB, then donated it to the Linux Foundation in August 2025; its steering committee now includes Microsoft, AWS, Rippling and Yugabyte. Version 1.0, the first GA release, shipped on 19 October 2026 alongside a 1.0 Kubernetes operator. It is the most credible permissively licensed path to MongoDB-compatible storage, and it inherits PostgreSQL's durability and tooling.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "document",
+  "models": [
+    "document",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "vector-search",
+    "rag",
+    "metadata-store"
+  ],
+  "architecture": [
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "DocumentDB project (Linux Foundation; originated at Microsoft)",
+  "vendorType": "foundation",
+  "initialRelease": 2025,
+  "latestVersion": {
+    "version": "1.0",
+    "date": "2026-10-19"
+  },
+  "writtenIn": [
+    "C",
+    "Rust"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free to self-host. Azure DocumentDB is the managed service built on it, and FerretDB 2.x used it as a backend."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Azure DocumentDB",
+      "provider": "Microsoft Azure",
+      "url": "https://learn.microsoft.com/azure/documentdb/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Scales like a single PostgreSQL primary with streaming replicas; the operator handles HA and cross-cluster replication. Transparent sharding exists only in the Azure service today."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "MongoDB Query API (MQL)",
+    "Aggregation pipeline",
+    "SQL (via PostgreSQL)"
+  ],
+  "apis": [
+    "MongoDB wire protocol (gateway)",
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mongodb",
+    "postgresql"
+  ],
+  "drivers": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "Go",
+    "C#",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "MIT license with vendor-neutral Linux Foundation governance",
+    "Works with existing MongoDB drivers and tools such as mongosh and Compass",
+    "Runs on stock PostgreSQL 15-18, so backups, replication and monitoring are familiar",
+    "Vector search via pgvector and text indexes built in",
+    "Backed by several cloud vendors, which makes it a likely common standard"
+  ],
+  "weaknesses": [
+    "Very young as a GA product (1.0 in October 2026); compatibility gaps remain",
+    "No open-source horizontal sharding yet",
+    "Change streams and some admin commands are incomplete",
+    "Performance tuning means understanding both PostgreSQL internals and MongoDB semantics"
+  ],
+  "useCases": [
+    "Self-hosted MongoDB-compatible database without SSPL",
+    "Migrating MongoDB apps onto PostgreSQL infrastructure",
+    "Document plus vector storage for RAG on Kubernetes",
+    "Local development matching Azure DocumentDB"
+  ],
+  "notIdealFor": [
+    "Multi-terabyte write-heavy workloads needing sharding",
+    "Apps relying on the newest MongoDB-specific features"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "mongodb",
+    "ferretdb",
+    "azure-documentdb",
+    "amazon-documentdb",
+    "postgresql",
+    "percona-server-mongodb"
+  ],
+  "tags": [
+    "open-source",
+    "postgres-ecosystem",
+    "mongodb-compatible",
+    "linux-foundation",
+    "bson"
+  ],
+  "links": {
+    "website": "https://documentdb.io/",
+    "docs": "https://documentdb.io/docs/",
+    "repository": "https://github.com/documentdb/documentdb",
+    "changelog": "https://github.com/documentdb/documentdb/releases"
+  },
+  "ids": {
+    "github": "documentdb/documentdb",
+    "hackerNewsQuery": "DocumentDB PostgreSQL"
+  },
+  "brand": {
+    "color": "#336791"
+  },
+  "sources": [
+    "https://documentdb.io/",
+    "https://github.com/documentdb/documentdb/releases/tag/v1.0-0",
+    "https://sdtimes.com/data/microsoft-donates-documentdb-to-the-linux-foundation/",
+    "https://learn.microsoft.com/en-us/azure/documentdb/overview"
+  ],
+  "lastVerified": "2026-10-27"
+}

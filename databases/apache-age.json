@@ -1,0 +1,191 @@
+{
+  "slug": "apache-age",
+  "name": "Apache AGE",
+  "aliases": [
+    "AGE",
+    "A Graph Extension"
+  ],
+  "tagline": "PostgreSQL extension that adds openCypher graph queries alongside SQL.",
+  "description": "Apache AGE is a PostgreSQL extension that stores property graphs in Postgres tables and lets you query them with openCypher embedded in SQL, so graph and relational data share transactions, backups and tooling. It grew out of Bitnine's AgensGraph and became a top-level Apache project; releases track each Postgres major (1.8.0 for PostgreSQL 18 in 2026), and Azure Database for PostgreSQL offers it as a supported extension. It is the pragmatic option when your data already lives in Postgres and you need moderate graph querying, but deep traversals are slower than in native graph engines.",
+  "productType": "extension",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "relational"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "oltp",
+    "knowledge-graph"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Apache Software Foundation",
+  "vendorType": "foundation",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "1.8.0 (PG18)",
+    "date": "2026-08"
+  },
+  "writtenIn": [
+    "C"
+  ],
+  "basedOn": "PostgreSQL",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "azure"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Azure Database for PostgreSQL (AGE extension)",
+      "provider": "Microsoft Azure",
+      "url": "https://azure.microsoft.com/products/postgresql/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "Inherits PostgreSQL scaling: vertical plus streaming replicas."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "openCypher",
+    "SQL"
+  ],
+  "apis": [
+    "PostgreSQL wire protocol"
+  ],
+  "compatibleWith": [
+    "postgresql"
+  ],
+  "drivers": [
+    "Python",
+    "Go",
+    "Java",
+    "JavaScript",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Graph queries and SQL joins over the same data in one ACID transaction",
+    "Reuses the whole Postgres toolchain: backups, replication, security, monitoring",
+    "Open source under Apache 2.0 with ASF governance",
+    "Available as a managed extension on Azure Database for PostgreSQL"
+  ],
+  "weaknesses": [
+    "Traversals become relational joins, so deep multi-hop queries are slow",
+    "openCypher coverage is incomplete and error messages can be cryptic",
+    "Not available on many managed Postgres services (e.g. Amazon RDS)",
+    "Lags Postgres majors; separate builds per PostgreSQL version"
+  ],
+  "useCases": [
+    "Adding graph queries to an existing Postgres app",
+    "Moderate-size knowledge graphs",
+    "Hierarchies and dependency graphs",
+    "Prototyping graph features without a new database"
+  ],
+  "notIdealFor": [
+    "Deep traversals on billion-edge graphs",
+    "Graph algorithms at scale",
+    "RDF/SPARQL workloads"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "postgresql",
+    "neo4j",
+    "memgraph",
+    "ladybugdb",
+    "puppygraph"
+  ],
+  "tags": [
+    "postgres-ecosystem",
+    "opencypher",
+    "extension",
+    "apache",
+    "sql"
+  ],
+  "links": {
+    "website": "https://age.apache.org/",
+    "docs": "https://age.apache.org/age-manual/master/index.html",
+    "repository": "https://github.com/apache/age",
+    "changelog": "https://github.com/apache/age/releases"
+  },
+  "ids": {
+    "github": "apache/age",
+    "stackoverflowTag": "apache-age",
+    "dockerHub": "apache/age",
+    "pypi": "apache-age-python",
+    "hackerNewsQuery": "Apache AGE"
+  },
+  "brand": {
+    "color": "#4B8BBE"
+  },
+  "sources": [
+    "https://age.apache.org/download/",
+    "https://archive.apache.org/dist/age/PG18/",
+    "https://github.com/apache/age/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

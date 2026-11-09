@@ -1,0 +1,185 @@
+{
+  "slug": "starburst",
+  "name": "Starburst",
+  "aliases": [
+    "Starburst Enterprise",
+    "Starburst Galaxy",
+    "SEP"
+  ],
+  "tagline": "Commercial Trino platform: self-managed Starburst Enterprise and the Starburst Galaxy SaaS.",
+  "description": "Starburst, founded by Trino's creators, sells the enterprise distribution of Trino. Starburst Enterprise runs in your own Kubernetes or VMs with extra connectors, Warp Speed caching and indexing, built-in access control and governance; Starburst Galaxy is the fully managed SaaS on AWS, Azure and GCP with managed Iceberg tables. Recent releases add AI features such as the AIDA assistant and agent guardrails. It is the pragmatic choice for enterprises that want a Trino-based lakehouse or data-mesh layer with support and governance, at commercial license cost.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "columnar"
+  ],
+  "workloads": [
+    "lakehouse",
+    "olap",
+    "data-warehouse"
+  ],
+  "architecture": [
+    "distributed",
+    "client-server",
+    "serverless"
+  ],
+  "developer": "Starburst Data",
+  "vendorType": "company",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "483-e",
+    "date": "2026-10-16"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "basedOn": "Trino",
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (on an Apache-2.0 Trino core)"
+  },
+  "pricing": {
+    "models": [
+      "usage-based",
+      "enterprise-contract"
+    ],
+    "freeTier": false,
+    "notes": "Galaxy is billed by compute credits; Enterprise is licensed per cluster/core under annual contracts."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": true,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp"
+    ],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Starburst Galaxy",
+      "provider": "Starburst",
+      "url": "https://www.starburst.io/platform/starburst-galaxy/"
+    }
+  ],
+  "scale": {
+    "tier": "massive",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Trino MPP clusters with autoscaling in Galaxy; cross-cloud federation via Stargate."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (ANSI)"
+  ],
+  "apis": [
+    "Trino client protocol",
+    "JDBC",
+    "ODBC",
+    "REST API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java",
+    "Python",
+    "Go",
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": true,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": true,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Supported, hardened Trino from the project's creators",
+    "Warp Speed smart indexing and caching accelerates lake queries",
+    "Fine-grained access control, lineage and data products built in",
+    "Same engine self-managed (Enterprise) or as SaaS (Galaxy)",
+    "Extra enterprise connectors (e.g. Teradata, SAP HANA, Oracle parallel)"
+  ],
+  "weaknesses": [
+    "Commercial licensing on top of a free open-source engine",
+    "Inherits Trino's need for good file layout and memory sizing",
+    "Two products with different feature sets can confuse buyers"
+  ],
+  "useCases": [
+    "Enterprise lakehouse on Iceberg",
+    "Data mesh and data products",
+    "Federated queries across on-prem and cloud",
+    "Warehouse offload from Teradata or Netezza"
+  ],
+  "notIdealFor": [
+    "OLTP",
+    "Small teams fine with open-source Trino",
+    "Sub-second user-facing analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "trino",
+    "dremio",
+    "databricks-sql",
+    "snowflake",
+    "amazon-athena",
+    "presto"
+  ],
+  "tags": [
+    "trino",
+    "lakehouse",
+    "data-mesh",
+    "federated",
+    "enterprise"
+  ],
+  "links": {
+    "website": "https://www.starburst.io/",
+    "docs": "https://docs.starburst.io/",
+    "pricing": "https://www.starburst.io/pricing/",
+    "changelog": "https://docs.starburst.io/latest/release.html"
+  },
+  "ids": {
+    "hackerNewsQuery": "Starburst Trino"
+  },
+  "brand": {},
+  "sources": [
+    "https://docs.starburst.io/latest/release.html",
+    "https://www.starburst.io/"
+  ],
+  "lastVerified": "2026-10-27"
+}

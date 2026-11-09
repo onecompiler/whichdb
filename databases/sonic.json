@@ -1,0 +1,169 @@
+{
+  "slug": "sonic",
+  "name": "Sonic",
+  "aliases": [
+    "Sonic search backend"
+  ],
+  "tagline": "Tiny schema-less Rust search backend that returns object IDs, running in a few MB of RAM.",
+  "description": "Sonic is a minimalist search backend written in Rust by Valerian Saliou for the Crisp messaging platform. Instead of storing documents, it indexes words to object IDs in RocksDB and answers queries with ID lists you then look up in your primary database, which keeps memory use to a few megabytes even for millions of objects. It speaks a simple TCP text protocol (Sonic Channel) and supports search, suggest/autocomplete and per-collection buckets. It is a good fit for fast autocomplete and basic keyword lookup, not for relevance-heavy or semantic search.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "key-value"
+  ],
+  "workloads": [
+    "full-text-search"
+  ],
+  "architecture": [
+    "single-node",
+    "client-server"
+  ],
+  "developer": "Valerian Saliou (Crisp)",
+  "vendorType": "community",
+  "initialRelease": 2019,
+  "latestVersion": {
+    "version": "1.10.2",
+    "date": "2026-10-05"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "copyleft",
+    "name": "Mozilla Public License 2.0",
+    "spdx": "MPL-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Single process; shard by collection/bucket at the app level."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Sonic Channel protocol"
+  ],
+  "apis": [
+    "TCP text protocol"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "Python",
+    "Go",
+    "Ruby",
+    "PHP",
+    "Java",
+    "Rust"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs in a few MB of RAM",
+    "Very fast word and prefix lookups for autocomplete",
+    "Simple to operate: one binary plus a RocksDB directory",
+    "Language-aware tokenisation and stop words for many languages"
+  ],
+  "weaknesses": [
+    "Returns IDs only; you must fetch documents from another store",
+    "Minimal relevance controls, no facets or aggregations",
+    "No replication or clustering",
+    "No vector search"
+  ],
+  "useCases": [
+    "Autocomplete and suggest",
+    "Search over chat messages or helpdesk tickets",
+    "Lightweight search for small servers"
+  ],
+  "notIdealFor": [
+    "Ranked relevance search",
+    "Semantic or hybrid search",
+    "Analytics"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "meilisearch",
+    "typesense",
+    "zincsearch",
+    "bleve",
+    "tantivy"
+  ],
+  "tags": [
+    "search",
+    "rust",
+    "lightweight",
+    "autocomplete",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://github.com/valeriansaliou/sonic",
+    "repository": "https://github.com/valeriansaliou/sonic",
+    "changelog": "https://github.com/valeriansaliou/sonic/releases"
+  },
+  "ids": {
+    "github": "valeriansaliou/sonic",
+    "dockerHub": "valeriansaliou/sonic",
+    "hackerNewsQuery": "Sonic search backend"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/valeriansaliou/sonic",
+    "https://github.com/valeriansaliou/sonic/releases"
+  ],
+  "lastVerified": "2026-10-27"
+}

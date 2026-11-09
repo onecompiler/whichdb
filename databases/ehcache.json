@@ -1,0 +1,170 @@
+{
+  "slug": "ehcache",
+  "name": "Ehcache",
+  "aliases": [
+    "Ehcache 3"
+  ],
+  "tagline": "The standard embedded JVM cache, with heap, off-heap and disk tiers and optional Terracotta clustering.",
+  "description": "Ehcache is an embedded Java caching library and one of the most widely deployed JCache (JSR-107) implementations, used for Hibernate second-level caching and Spring's cache abstraction. Ehcache 3 stores entries across on-heap, off-heap and local disk tiers, and can be clustered through a Terracotta server. It is maintained by the Terracotta team, whose published artifacts now list IBM as the owning organisation. Releases are infrequent but ongoing (3.12.0 in April 2026). Use it when you want in-process caching in a JVM app, not a network cache.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "key-value",
+  "models": [
+    "key-value"
+  ],
+  "workloads": [
+    "caching",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Terracotta (IBM)",
+  "vendorType": "company",
+  "initialRelease": 2003,
+  "latestVersion": {
+    "version": "3.12.0",
+    "date": "2026-04-03"
+  },
+  "writtenIn": [
+    "Java"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Library is free; Terracotta clustering server has open-source and commercial editions."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "addon",
+    "multiRegion": "none",
+    "notes": "In-process per JVM; sharing across nodes requires a Terracotta server cluster."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Java API"
+  ],
+  "apis": [
+    "JCache (JSR-107)",
+    "Ehcache API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Java"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Zero-network-hop reads from the application's own memory",
+    "Off-heap tier holds large caches without GC pressure",
+    "Drop-in JCache provider for Spring and Hibernate",
+    "Mature and stable with a small API surface"
+  ],
+  "weaknesses": [
+    "JVM-only and embedded; not a shared cache by itself",
+    "Clustering needs a separate Terracotta server",
+    "Slow release cadence and modest community activity",
+    "Caffeine is usually faster for pure on-heap caching"
+  ],
+  "useCases": [
+    "Hibernate second-level cache",
+    "Spring @Cacheable method caching",
+    "Local caching of reference data in JVM services"
+  ],
+  "notIdealFor": [
+    "Cross-service shared caches (use Redis/Valkey)",
+    "Non-JVM languages"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "infinispan",
+    "hazelcast",
+    "redis",
+    "memcached",
+    "oracle-coherence"
+  ],
+  "tags": [
+    "cache",
+    "jvm",
+    "embedded",
+    "jcache",
+    "library"
+  ],
+  "links": {
+    "website": "https://www.ehcache.org/",
+    "docs": "https://www.ehcache.org/documentation/",
+    "repository": "https://github.com/ehcache/ehcache3",
+    "changelog": "https://github.com/ehcache/ehcache3/releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/Ehcache"
+  },
+  "ids": {
+    "github": "ehcache/ehcache3",
+    "stackoverflowTag": "ehcache",
+    "wikipedia": "Ehcache",
+    "hackerNewsQuery": "Ehcache"
+  },
+  "brand": {},
+  "sources": [
+    "https://repo1.maven.org/maven2/org/ehcache/ehcache/",
+    "https://github.com/ehcache/ehcache3",
+    "https://central.sonatype.com/artifact/org.ehcache/ehcache-clustered/"
+  ],
+  "lastVerified": "2026-10-27"
+}

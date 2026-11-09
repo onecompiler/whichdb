@@ -1,0 +1,169 @@
+{
+  "slug": "nedb",
+  "name": "NeDB",
+  "aliases": [
+    "nedb",
+    "@seald-io/nedb"
+  ],
+  "tagline": "Pure-JavaScript embedded datastore with a MongoDB-like API; the original is unmaintained.",
+  "description": "NeDB is an embedded, persistent or in-memory datastore for Node.js, Electron and browsers, written in pure JavaScript with a subset of the MongoDB API: insert, find with query operators, update modifiers, indexes and TTL expiry. Data is kept in memory and persisted to an append-only file. It was hugely popular in the Electron era, but its author marked it unmaintained after the last release (1.8.0, 2016), warning of unpatched bugs and security issues. Seald maintains a compatible fork, @seald-io/nedb (v4.1.2, July 2025), and that fork is what anyone still using NeDB should install.",
+  "productType": "library",
+  "status": "deprecated",
+  "statusNote": "Original author marked NeDB unmaintained (last release 1.8.0, 2016). Seald maintains a drop-in fork, @seald-io/nedb (v4.1.2, 2025).",
+  "maturity": "legacy",
+  "primaryModel": "document",
+  "models": [
+    "document"
+  ],
+  "workloads": [
+    "embedded",
+    "configuration",
+    "local-first"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Louis Chatriot (original); Seald (maintained fork)",
+  "vendorType": "community",
+  "initialRelease": 2013,
+  "latestVersion": {
+    "version": "1.8.0",
+    "date": "2016-02-15"
+  },
+  "writtenIn": [
+    "JavaScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "MIT License",
+    "spdx": "MIT"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "browser"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Entire dataset lives in memory; practical limit is tens of thousands to low millions of small documents."
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "MongoDB-like query API (subset)"
+  ],
+  "apis": [
+    "JavaScript API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "MongoDB-style queries and updates with zero native dependencies",
+    "Works in Node.js, Electron and browsers",
+    "Indexes and TTL expiry built in",
+    "Easy migration path to MongoDB later"
+  ],
+  "weaknesses": [
+    "Original package is unmaintained, with known unpatched issues",
+    "Whole dataset must fit in memory",
+    "Append-only file needs periodic compaction",
+    "No multi-document transactions"
+  ],
+  "useCases": [
+    "Legacy Electron or Node apps already using it (switch to the Seald fork)",
+    "Small offline desktop tools"
+  ],
+  "notIdealFor": [
+    "New projects (use the fork, SQLite or PGlite)",
+    "Large datasets or multi-process access"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "lowdb",
+    "lokijs",
+    "sqlite",
+    "pouchdb",
+    "rxdb",
+    "pglite"
+  ],
+  "tags": [
+    "javascript",
+    "embedded",
+    "mongodb-like",
+    "unmaintained"
+  ],
+  "links": {
+    "website": "https://github.com/louischatriot/nedb",
+    "docs": "https://github.com/seald/nedb#readme",
+    "repository": "https://github.com/louischatriot/nedb",
+    "changelog": "https://github.com/seald/nedb/blob/master/CHANGELOG.md"
+  },
+  "ids": {
+    "github": "louischatriot/nedb",
+    "stackoverflowTag": "nedb",
+    "npm": "nedb",
+    "hackerNewsQuery": "NeDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/louischatriot/nedb",
+    "https://github.com/seald/nedb",
+    "https://www.npmjs.com/package/@seald-io/nedb"
+  ],
+  "lastVerified": "2026-10-27"
+}

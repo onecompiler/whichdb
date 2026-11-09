@@ -1,0 +1,152 @@
+{
+  "slug": "scimoredb",
+  "name": "ScimoreDB",
+  "aliases": [
+    "Scimore",
+    "ScimoreDB Embedded"
+  ],
+  "tagline": "Distributed, T-SQL-compatible database for Windows clusters plus an embedded .NET edition; defunct.",
+  "description": "ScimoreDB came from Scimore UAB and offered two things: a shared-nothing distributed SQL database for clusters of commodity Windows servers, and an embedded edition for .NET applications. The distributed version partitioned data across nodes, ran distributed ACID transactions with deadlock detection, executed joins, aggregations, sub-selects and stored procedures in parallel, and aimed for enough SQL Server and T-SQL compatibility to offload large tables from SQL Server; it also had scale-out full-text search and transaction prioritisation. The last news post dates from November 2013 and the scimore.com site had stopped serving the product by 2022, so the product is no longer available.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "No releases or news since late 2013 and the vendor site is gone. For distributed SQL consider CockroachDB, YugabyteDB or Azure SQL; for embedded .NET use SQLite or LiteDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded",
+    "full-text-search"
+  ],
+  "architecture": [
+    "distributed",
+    "embedded"
+  ],
+  "developer": "Scimore UAB",
+  "vendorType": "company",
+  "initialRelease": 2005,
+  "writtenIn": [
+    "Unknown"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "Historically licensed by the vendor; no longer available."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Shared-nothing partitioning over commodity Windows servers; a customer reported offloading over 5 billion rows from SQL Server."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "T-SQL subset"
+  ],
+  "apis": [],
+  "compatibleWith": [
+    "sql-server"
+  ],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Scale-out SQL with distributed ACID transactions on cheap Windows hardware",
+    "T-SQL compatibility eased offloading tables from SQL Server",
+    "Same engine available embedded inside .NET applications",
+    "Parallel full-text search across the cluster"
+  ],
+  "weaknesses": [
+    "Vendor and product are gone; no support or downloads",
+    "Windows-only"
+  ],
+  "useCases": [
+    "History of distributed SQL on Windows",
+    "Migrating legacy ScimoreDB deployments"
+  ],
+  "notIdealFor": [
+    "Any new deployment"
+  ],
+  "notableUsers": [
+    "SPAMfighter"
+  ],
+  "alternatives": [
+    "cockroachdb",
+    "yugabytedb",
+    "azure-sql-database",
+    "sqlite",
+    "litedb"
+  ],
+  "tags": [
+    "distributed-sql",
+    "windows",
+    "dotnet",
+    "embedded",
+    "defunct"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/2014/http://www.scimore.com/"
+  },
+  "ids": {
+    "hackerNewsQuery": "ScimoreDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2014/http://www.scimore.com/",
+    "https://dbdb.io/db/scimoredb"
+  ],
+  "lastVerified": "2026-10-27"
+}

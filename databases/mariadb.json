@@ -1,0 +1,229 @@
+{
+  "slug": "mariadb",
+  "name": "MariaDB",
+  "aliases": [
+    "MariaDB Server",
+    "MariaDB Community Server"
+  ],
+  "tagline": "Community-led MySQL fork with extra storage engines, built-in Galera and a faster feature cadence.",
+  "description": "MariaDB started in 2009 as a fork of MySQL by its original authors and has since diverged into its own database with system-versioned tables, sequences, Oracle-compatibility mode, a vector type and pluggable engines such as ColumnStore and Spider. It is the default MySQL-family server on many Linux distributions and remains largely drop-in for MySQL 5.7-era applications, though newer MySQL features (and replication from MySQL 8+) are not always compatible. The server is governed by the MariaDB Foundation, while MariaDB plc, taken private by K1 Investment Management in 2024 and owner of Galera since 2025, sells the Enterprise Platform and SkySQL-style cloud offerings. Releases now follow yearly LTS plus rolling quarterly releases.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "document",
+    "spatial",
+    "vector",
+    "columnar"
+  ],
+  "workloads": [
+    "oltp",
+    "content-management",
+    "geospatial",
+    "vector-search",
+    "metadata-store"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "multi-primary",
+    "client-server"
+  ],
+  "developer": "MariaDB Foundation and MariaDB plc",
+  "vendorType": "foundation",
+  "initialRelease": 2009,
+  "latestVersion": {
+    "version": "13.0.2",
+    "date": "2026-09-15"
+  },
+  "writtenIn": [
+    "C++",
+    "C"
+  ],
+  "basedOn": "MySQL",
+  "license": {
+    "type": "copyleft",
+    "name": "GPL-2.0",
+    "spdx": "GPL-2.0-only"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "subscription"
+    ],
+    "freeTier": true,
+    "notes": "Community Server is GPLv2; MariaDB Enterprise Platform (MaxScale, enterprise server, support) is a subscription."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": true,
+    "cloudProviders": [
+      "aws",
+      "azure",
+      "gcp",
+      "alibaba-cloud",
+      "digitalocean",
+      "akamai-linode",
+      "ovhcloud",
+      "scaleway"
+    ],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [
+    {
+      "name": "Amazon RDS for MariaDB",
+      "provider": "AWS",
+      "url": "https://aws.amazon.com/rds/mariadb/"
+    },
+    {
+      "name": "MariaDB Cloud",
+      "provider": "MariaDB plc",
+      "url": "https://mariadb.com/products/cloud/"
+    }
+  ],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "addon",
+    "multiRegion": "read-replicas",
+    "notes": "Primary-replica or Galera multi-primary for HA; Spider engine and MaxScale provide sharding and routing."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong",
+      "eventual"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "PL/SQL (Oracle mode)"
+  ],
+  "apis": [
+    "MySQL client/server protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "C",
+    "Java",
+    "Python",
+    "JavaScript",
+    "PHP",
+    "Go",
+    "C#",
+    "Ruby",
+    "Rust"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": true,
+    "rbac": true,
+    "timeTravel": true,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "System-versioned (temporal) tables for point-in-time queries in plain SQL",
+    "Native VECTOR type with HNSW indexes since 11.7, no extension needed",
+    "Galera synchronous multi-primary replication bundled in the server",
+    "Pluggable engines: ColumnStore for analytics, Spider for sharding, S3 for archives",
+    "Open development with Foundation governance and GPL code"
+  ],
+  "weaknesses": [
+    "Diverging from MySQL 8+/9: GTIDs, JSON storage and some syntax are incompatible",
+    "Smaller managed-service footprint than MySQL or PostgreSQL (no Cloud SQL or Azure flexible server)",
+    "Rolling releases get short support windows; production should track LTS",
+    "Corporate side has been through financial turmoil and an ownership change"
+  ],
+  "useCases": [
+    "Drop-in replacement for legacy MySQL deployments",
+    "Linux distribution default database for LAMP stacks",
+    "Temporal auditing with system-versioned tables",
+    "HA clusters with Galera",
+    "Combining relational data with vector similarity search"
+  ],
+  "notIdealFor": [
+    "Apps depending on the newest MySQL 8.4/9.x-only features",
+    "Large-scale analytics compared with dedicated warehouses",
+    "Teams wanting a managed service on every cloud"
+  ],
+  "notableUsers": [
+    "Wikimedia Foundation",
+    "Google",
+    "Red Hat",
+    "ServiceNow"
+  ],
+  "alternatives": [
+    "mysql",
+    "percona-server-mysql",
+    "postgresql",
+    "galera-cluster",
+    "tidb",
+    "singlestore"
+  ],
+  "tags": [
+    "sql",
+    "open-source",
+    "mysql-fork",
+    "galera",
+    "temporal"
+  ],
+  "links": {
+    "website": "https://mariadb.org/",
+    "docs": "https://mariadb.com/docs/",
+    "repository": "https://github.com/MariaDB/server",
+    "changelog": "https://mariadb.com/docs/release-notes/community-server/all-releases",
+    "wikipedia": "https://en.wikipedia.org/wiki/MariaDB"
+  },
+  "ids": {
+    "github": "MariaDB/server",
+    "stackoverflowTag": "mariadb",
+    "wikipedia": "MariaDB",
+    "dockerHub": "library/mariadb",
+    "npm": "mariadb",
+    "pypi": "mariadb",
+    "hackerNewsQuery": "MariaDB"
+  },
+  "brand": {
+    "color": "#003545",
+    "simpleIcon": "mariadb"
+  },
+  "sources": [
+    "https://github.com/MariaDB/server/releases",
+    "https://mariadb.com/docs/release-notes/community-server/all-releases",
+    "https://mariadb.com/newsroom/press-releases/mariadb-acquires-galera-cluster/"
+  ],
+  "lastVerified": "2026-10-27"
+}

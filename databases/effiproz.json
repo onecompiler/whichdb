@@ -1,0 +1,99 @@
+{
+  "slug": "effiproz",
+  "name": "EffiProz",
+  "aliases": ["EffiProz Database"],
+  "tagline": "Pure C# embedded SQL engine modelled on HSQLDB, with Silverlight and Windows Phone 7 builds; dead since 2012.",
+  "description": "EffiProz was an embedded relational database written entirely in C#, with an SQL dialect and feature set closely tracking HSQLDB 1.9/2.0. It ran in-process in .NET, Silverlight 4 and Windows Phone 7 applications, shipped an ADO.NET and Entity Framework provider with Visual Studio 2010 designer support, and let developers write stored functions, aggregates and table-valued functions in CLR languages. A Ms-PL community edition lived on CodePlex alongside commercial builds, and the company was a 2010 Red Herring Global 100 winner. Development stopped around 2012; effiproz.com now hosts unrelated spam, so use the archived CodePlex pages for reference. SQLite (Microsoft.Data.Sqlite) or LiteDB cover the same embedded .NET niche today.",
+  "productType": "library",
+  "status": "discontinued",
+  "statusNote": "Abandoned around 2012; the vendor domain now serves unrelated spam. For embedded .NET use SQLite or LiteDB.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": ["relational"],
+  "workloads": ["embedded", "mobile-offline"],
+  "architecture": ["embedded"],
+  "developer": "EffiProz",
+  "vendorType": "company",
+  "initialRelease": 2009,
+  "writtenIn": ["C#"],
+  "basedOn": "HSQLDB (SQL dialect and design)",
+  "license": { "type": "permissive", "name": "Microsoft Public License (community edition); commercial editions", "spdx": "MS-PL" },
+  "pricing": {
+    "models": ["open-source"],
+    "freeTier": true,
+    "notes": "The Ms-PL community edition was free; commercial editions are no longer sold."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": ["windows", "browser"]
+  },
+  "managedServices": [],
+  "scale": { "tier": "small", "horizontalScaling": "none", "multiRegion": "none" },
+  "consistency": { "acid": "full", "models": ["strong"] },
+  "schemaMode": "strict",
+  "queryLanguages": ["SQL (HSQLDB-style)"],
+  "apis": ["ADO.NET", "Entity Framework provider"],
+  "compatibleWith": [],
+  "drivers": ["C#", "VB.NET"],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": true,
+    "storedProcedures": true,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fully managed C# code: no native binaries, so it ran inside the Silverlight and Windows Phone 7 sandboxes",
+    "Rich SQL inherited from HSQLDB, plus CLR user-defined functions, aggregates and TVFs",
+    "Entity Framework provider and Visual Studio 2010 tooling"
+  ],
+  "weaknesses": [
+    "Dead since about 2012; targets platforms (Silverlight, WP7) that are themselves gone",
+    "Original site and source host have disappeared",
+    "Small user base; little documentation survives"
+  ],
+  "useCases": [
+    "Historical reference for managed-code embedded SQL engines",
+    "Maintaining very old Silverlight or WP7 apps that bundled it"
+  ],
+  "notIdealFor": ["New .NET applications", "Multi-user server deployments"],
+  "notableUsers": [],
+  "alternatives": ["sqlite", "litedb", "hsqldb", "realm"],
+  "tags": ["dotnet", "csharp", "embedded", "sql", "silverlight"],
+  "links": {
+    "website": "https://web.archive.org/web/2011/http://effiproz.codeplex.com/"
+  },
+  "ids": {},
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/2011/http://effiproz.codeplex.com/",
+    "https://dbdb.io/db/effiproz"
+  ],
+  "lastVerified": "2026-10-27"
+}

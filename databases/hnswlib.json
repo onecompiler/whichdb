@@ -1,0 +1,166 @@
+{
+  "slug": "hnswlib",
+  "name": "hnswlib",
+  "aliases": [
+    "nmslib hnswlib"
+  ],
+  "tagline": "Header-only C++ HNSW library with Python bindings, from the authors of the HNSW algorithm.",
+  "description": "hnswlib is the reference implementation of Hierarchical Navigable Small World graphs, maintained under the nmslib organisation with contributions from HNSW co-author Yury Malkov. It is a small header-only C++ library with Python bindings that supports incremental inserts, deletions via marking, filtering callbacks and saving/loading indexes, using L2, inner product or cosine distance. Many early vector databases and RAG tools embedded it directly, and it remains a common baseline. It is a library with no metadata store or server, and releases are infrequent (0.9.0 in March 2026, 0.10 in release candidates).",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "nmslib contributors",
+  "vendorType": "community",
+  "initialRelease": 2017,
+  "latestVersion": {
+    "version": "0.9.0",
+    "date": "2026-03-28"
+  },
+  "writtenIn": [
+    "C++",
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Whole index lives in RAM in one process; tens to hundreds of millions of vectors on a large machine."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Library API"
+  ],
+  "apis": [
+    "C++",
+    "Python"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Python"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Reference HNSW implementation with excellent recall/speed trade-offs",
+    "Header-only and dependency-free",
+    "Incremental inserts and soft deletes",
+    "Simple Python API used by many tools"
+  ],
+  "weaknesses": [
+    "RAM-only index, no quantization",
+    "No metadata storage or server",
+    "Slow release cadence",
+    "Single distance family per index"
+  ],
+  "useCases": [
+    "Embedding HNSW in applications",
+    "Baseline for ANN benchmarks",
+    "Small in-process semantic search"
+  ],
+  "notIdealFor": [
+    "Datasets larger than RAM",
+    "Teams needing a database with filters and CRUD"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "faiss",
+    "usearch",
+    "annoy",
+    "scann",
+    "qdrant"
+  ],
+  "tags": [
+    "vector",
+    "library",
+    "hnsw",
+    "ann",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://github.com/nmslib/hnswlib",
+    "repository": "https://github.com/nmslib/hnswlib",
+    "changelog": "https://github.com/nmslib/hnswlib/tags"
+  },
+  "ids": {
+    "github": "nmslib/hnswlib",
+    "pypi": "hnswlib",
+    "hackerNewsQuery": "hnswlib"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/nmslib/hnswlib",
+    "https://pypi.org/project/hnswlib/"
+  ],
+  "lastVerified": "2026-10-27"
+}

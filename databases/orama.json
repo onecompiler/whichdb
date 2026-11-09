@@ -1,0 +1,177 @@
+{
+  "slug": "orama",
+  "name": "Orama",
+  "aliases": [
+    "OramaJS",
+    "Lyra"
+  ],
+  "tagline": "Tiny TypeScript full-text, vector and hybrid search engine for browsers, servers and the edge.",
+  "description": "Orama (originally Lyra) is an in-memory search engine written in TypeScript that runs in the browser, Node, Deno, Bun and edge runtimes with no native dependencies. It supports full-text search with typo tolerance, facets, filters, geosearch, vector and hybrid search, plus plugins for persistence, embeddings and documentation sites (it powers many docs search bars). The company behind it has since broadened into an enterprise AI platform (Metis), and the open-source library, now branded OramaJS, receives slower but continuing maintenance. Great for client-side and static-site search; not a server database.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "search",
+  "models": [
+    "search",
+    "vector",
+    "document"
+  ],
+  "workloads": [
+    "full-text-search",
+    "vector-search",
+    "rag",
+    "embedded",
+    "edge"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Orama (OramaSearch Inc.)",
+  "vendorType": "company",
+  "initialRelease": 2022,
+  "latestVersion": {
+    "version": "3.1.18",
+    "date": "2025-12-19"
+  },
+  "writtenIn": [
+    "TypeScript"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "OramaJS is free; Orama's commercial products are now an enterprise AI platform (Metis) and cloud offerings."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "browser",
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none",
+    "notes": "Index lives in process memory; best for up to hundreds of thousands of documents."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Orama search API (TypeScript)"
+  ],
+  "apis": [
+    "JavaScript/TypeScript"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "JavaScript",
+    "TypeScript"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Runs entirely client-side or at the edge with no server",
+    "Full-text, vector and hybrid search in a few kilobytes",
+    "Typo tolerance, facets, filters and geosearch",
+    "Plugin ecosystem for docs frameworks (Docusaurus, VitePress, Astro)"
+  ],
+  "weaknesses": [
+    "In-memory only; dataset size limited by the JS heap",
+    "Library releases slowed after the company's pivot",
+    "No replication or server mode",
+    "JavaScript-only"
+  ],
+  "useCases": [
+    "Static site and documentation search",
+    "Offline search in web and mobile apps",
+    "Edge-function search over small corpora",
+    "Client-side RAG prototypes"
+  ],
+  "notIdealFor": [
+    "Large datasets",
+    "Server-side multi-tenant search",
+    "Non-JavaScript stacks"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "meilisearch",
+    "typesense",
+    "algolia",
+    "sqlite-vec",
+    "lancedb"
+  ],
+  "tags": [
+    "search",
+    "javascript",
+    "typescript",
+    "edge",
+    "in-memory",
+    "open-source"
+  ],
+  "links": {
+    "website": "https://orama.com/",
+    "docs": "https://docs.orama.com/",
+    "repository": "https://github.com/oramasearch/orama",
+    "changelog": "https://github.com/oramasearch/orama/releases"
+  },
+  "ids": {
+    "github": "oramasearch/orama",
+    "npm": "@orama/orama",
+    "hackerNewsQuery": "Orama search"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/oramasearch/orama",
+    "https://www.npmjs.com/package/@orama/orama",
+    "https://orama.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

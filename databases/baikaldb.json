@@ -1,0 +1,171 @@
+{
+  "slug": "baikaldb",
+  "name": "BaikalDB",
+  "aliases": [
+    "Baikal DB"
+  ],
+  "tagline": "Baidu's MySQL-compatible distributed HTAP database on RocksDB and Raft, with full-text and vector indexes.",
+  "description": "BaikalDB is a distributed SQL database from Baidu, open-sourced in 2018, that speaks the MySQL protocol and dialect so applications can move from MySQL with few changes. It separates a stateless SQL layer from Raft-replicated storage regions on RocksDB, built with Baidu's brpc and braft libraries, and borrows design ideas from TiDB and Impala. Beyond OLTP it adds inverted full-text indexes, a columnar engine, MPP execution, querying of Parquet files and, in 2026 releases, vector indexes (IVF and PQ variants), cosine-similarity functions, array columns, column-level TTL and an optional storage-compute separated mode. It is actively developed (v5.0.0, June 2026), though most documentation and community discussion are in Chinese.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "growing",
+  "primaryModel": "relational",
+  "models": [
+    "relational",
+    "vector",
+    "search"
+  ],
+  "workloads": [
+    "htap",
+    "oltp",
+    "olap",
+    "full-text-search",
+    "vector-search"
+  ],
+  "architecture": [
+    "distributed"
+  ],
+  "developer": "Baidu",
+  "vendorType": "company",
+  "initialRelease": 2018,
+  "latestVersion": {
+    "version": "5.0.0",
+    "date": "2026-06-15"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "basedOn": "RocksDB, brpc and braft",
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "native",
+    "multiRegion": "none",
+    "notes": "Data is split into Raft-replicated regions that split and move automatically; positioned for petabyte-scale structured data."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL (MySQL dialect)"
+  ],
+  "apis": [
+    "MySQL wire protocol"
+  ],
+  "compatibleWith": [
+    "mysql"
+  ],
+  "drivers": [
+    "Any MySQL driver"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": true,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": true,
+    "pubSub": false,
+    "columnarStorage": true,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": true,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "MySQL protocol compatibility eases migration from sharded MySQL",
+    "Raft-replicated regions give automatic sharding, failover and rebalancing",
+    "Full-text inverted indexes and vector indexes in the same SQL engine",
+    "Columnar engine and MPP execution for analytical queries alongside OLTP",
+    "Permissive Apache 2.0 license with frequent 2026 releases"
+  ],
+  "weaknesses": [
+    "Documentation, release notes and community are mostly in Chinese",
+    "Small ecosystem outside Baidu compared with TiDB or CockroachDB",
+    "Some features (e.g. storage-compute separation) only target Baidu's internal file system",
+    "No vendor-managed cloud service"
+  ],
+  "useCases": [
+    "Scaling out MySQL-style OLTP workloads",
+    "HTAP reporting on live transactional data",
+    "Combining SQL filters with full-text or vector similarity search"
+  ],
+  "notIdealFor": [
+    "Teams needing English-language commercial support",
+    "Small single-node deployments where MySQL or PostgreSQL suffice"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "tidb",
+    "oceanbase",
+    "cockroachdb",
+    "vitess",
+    "singlestore",
+    "matrixone"
+  ],
+  "tags": [
+    "distributed-sql",
+    "htap",
+    "mysql-compatible",
+    "raft",
+    "baidu"
+  ],
+  "links": {
+    "website": "https://github.com/baidu/BaikalDB",
+    "docs": "https://github.com/baidu/BaikalDB/wiki",
+    "repository": "https://github.com/baidu/BaikalDB",
+    "changelog": "https://github.com/baidu/BaikalDB/releases"
+  },
+  "ids": {
+    "github": "baidu/BaikalDB",
+    "hackerNewsQuery": "BaikalDB"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/baidu/BaikalDB",
+    "https://github.com/baidu/BaikalDB/releases/tag/v5.0.0",
+    "https://github.com/baidu/BaikalDB/releases/tag/v4.1.0"
+  ],
+  "lastVerified": "2026-10-27"
+}

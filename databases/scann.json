@@ -1,0 +1,165 @@
+{
+  "slug": "scann",
+  "name": "ScaNN",
+  "aliases": [
+    "Scalable Nearest Neighbors"
+  ],
+  "tagline": "Google Research's ANN library using anisotropic quantization; the tech behind Vertex AI and AlloyDB vectors.",
+  "description": "ScaNN (Scalable Nearest Neighbors) is Google Research's library for maximum inner product and Euclidean vector search. It combines tree-based partitioning with anisotropic vector quantization, which weights quantization error by its effect on inner-product ranking, and the SOAR technique for better spill-over indexing. It consistently ranks near the top of ANN benchmarks and underlies Google's managed Vertex AI Vector Search and the ScaNN index in AlloyDB. Released for research use via pip on Linux x86 (AVX/FMA) and ARM, it is a library rather than a database.",
+  "productType": "library",
+  "status": "active",
+  "maturity": "mature",
+  "primaryModel": "vector",
+  "models": [
+    "vector"
+  ],
+  "workloads": [
+    "vector-search",
+    "embedded",
+    "scientific"
+  ],
+  "architecture": [
+    "embedded",
+    "in-memory"
+  ],
+  "developer": "Google Research",
+  "vendorType": "company",
+  "initialRelease": 2020,
+  "latestVersion": {
+    "version": "1.4.2",
+    "date": "2025-08-29"
+  },
+  "writtenIn": [
+    "C++",
+    "Python"
+  ],
+  "license": {
+    "type": "permissive",
+    "name": "Apache License 2.0",
+    "spdx": "Apache-2.0"
+  },
+  "pricing": {
+    "models": [
+      "open-source",
+      "free"
+    ],
+    "freeTier": true
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "large",
+    "horizontalScaling": "manual",
+    "multiRegion": "none",
+    "notes": "Single-process library; Google's managed services distribute it at billion scale."
+  },
+  "consistency": {
+    "acid": "none",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "schemaless",
+  "queryLanguages": [
+    "Python API",
+    "C++ API"
+  ],
+  "apis": [
+    "Python",
+    "C++",
+    "TensorFlow ops"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "Python",
+    "C++"
+  ],
+  "features": {
+    "transactions": false,
+    "joins": false,
+    "secondaryIndexes": false,
+    "fullTextSearch": false,
+    "vectorSearch": true,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": false,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Anisotropic quantization gives excellent recall at high speed",
+    "Top-tier results on public ANN benchmarks",
+    "Same algorithm family as Google's production services",
+    "Optional TensorFlow integration"
+  ],
+  "weaknesses": [
+    "Linux-only wheels; needs AVX/FMA or NEON",
+    "Lives inside the sprawling google-research monorepo",
+    "No persistence layer, server or metadata filtering",
+    "Released 'for research purposes' with limited support"
+  ],
+  "useCases": [
+    "High-throughput batch similarity search",
+    "ANN research and benchmarking",
+    "Embedding retrieval inside Python ML pipelines"
+  ],
+  "notIdealFor": [
+    "macOS/Windows developers",
+    "Applications needing a full database"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "faiss",
+    "hnswlib",
+    "usearch",
+    "vertex-ai-vector-search",
+    "alloydb"
+  ],
+  "tags": [
+    "vector",
+    "library",
+    "ann",
+    "google",
+    "quantization"
+  ],
+  "links": {
+    "website": "https://github.com/google-research/google-research/tree/master/scann",
+    "repository": "https://github.com/google-research/google-research/tree/master/scann"
+  },
+  "ids": {
+    "pypi": "scann",
+    "hackerNewsQuery": "ScaNN"
+  },
+  "brand": {},
+  "sources": [
+    "https://github.com/google-research/google-research/tree/master/scann",
+    "https://pypi.org/project/scann/"
+  ],
+  "lastVerified": "2026-10-27"
+}

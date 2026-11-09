@@ -1,0 +1,159 @@
+{
+  "slug": "just-logic-sql",
+  "name": "Just Logic/SQL",
+  "aliases": [
+    "Just Logic SQL",
+    "JustLogic/SQL",
+    "SQLweb"
+  ],
+  "tagline": "1990s royalty-free SQL engine from Montreal for C/C++ programs and early Linux web sites.",
+  "description": "Just Logic/SQL was a compact relational database sold by Just Logic Technologies of Nun's Island, Montreal, in the mid-to-late 1990s. It targeted C and C++ developers on Windows 3.1/95, SCO OpenServer and UnixWare, BSDI and early Linux, offering three interfaces (C++ classes, a direct C API and an embedded-SQL precompiler), ANSI SQL with views, subqueries, updatable cursors, row-level locking, COMMIT/ROLLBACK with crash recovery and a cost-based optimizer, in under 300-500 KB of code. Its pitch was price: Linux licenses started at $149, with no per-user fees or runtime royalties, and an optional SQLweb module generated dynamic web pages from SQL without CGI code. The product vanished from the web around 2000 and is of historical interest only.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Sold c. 1996-2000; the product is no longer available and justlogic.com now belongs to an unrelated company.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp",
+    "embedded"
+  ],
+  "architecture": [
+    "embedded",
+    "client-server",
+    "single-node"
+  ],
+  "developer": "Just Logic Technologies Inc.",
+  "vendorType": "company",
+  "initialRelease": 1996,
+  "writtenIn": [
+    "C"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (royalty-free runtime)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license"
+    ],
+    "freeTier": false,
+    "notes": "1997 list prices: $149 for Linux or Windows, $299-$399 for SCO/BSDI; client-server and SQLweb add-ons extra; no runtime royalties."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "windows",
+      "unix"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL",
+    "Embedded SQL (C precompiler)"
+  ],
+  "apis": [
+    "C API",
+    "C++ class library",
+    "SQLweb HTML templating"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C",
+    "C++"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Tiny footprint: under 300 KB on Windows, about 500 KB on Unix",
+    "Royalty-free redistribution inside C/C++ applications",
+    "Real SQL features for its size: views, subqueries, updatable cursors, row locks",
+    "An early commercial SQL database for Linux (1.1+ kernels)"
+  ],
+  "weaknesses": [
+    "Discontinued for more than two decades; no binaries or documentation survive officially",
+    "Platforms and APIs (Windows 3.1, SCO, CGI-era web) are obsolete"
+  ],
+  "useCases": [
+    "History of early commercial databases on Linux",
+    "Context for embedded SQL engines before SQLite"
+  ],
+  "notIdealFor": [
+    "Any present-day application"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "sqlite",
+    "firebird",
+    "empress-embedded-database",
+    "raima-database-manager",
+    "postgresql"
+  ],
+  "tags": [
+    "historical",
+    "embedded",
+    "linux",
+    "1990s",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/19970412003545/http://www.justlogic.com:80/descr.html"
+  },
+  "ids": {
+    "hackerNewsQuery": "Just Logic/SQL"
+  },
+  "brand": {},
+  "sources": [
+    "https://web.archive.org/web/19970412003545/http://www.justlogic.com:80/descr.html",
+    "https://web.archive.org/web/19970412003555/http://www.justlogic.com:80/feat.html",
+    "https://web.archive.org/web/19970412003622/http://www.justlogic.com:80/order_in.html",
+    "https://web.archive.org/web/19971210200937/http://www.justlogic.com:80/"
+  ],
+  "lastVerified": "2026-10-27"
+}

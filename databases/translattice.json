@@ -1,0 +1,145 @@
+{
+  "slug": "translattice",
+  "name": "TransLattice",
+  "aliases": [
+    "TransLattice Elastic Database",
+    "TED"
+  ],
+  "tagline": "Geo-distributed NewSQL database (TransLattice Elastic Database); the company folded around 2014-2016.",
+  "description": "TransLattice, a Santa Clara startup founded in 2007 and launched in 2010, sold the TransLattice Elastic Database (TED): a SQL, ACID-compliant database whose nodes could be spread across data centres and public clouds while behaving as one logical database, alongside an application platform built on the same fabric. In 2013 it bought StormDB, whose clustered PostgreSQL fork it open-sourced in 2014 as Postgres-XL, which outlived the company. TransLattice stopped operating around 2014-2016 and TED is no longer available. Today's geo-distributed SQL needs are served by CockroachDB, YugabyteDB, Spanner or pgEdge.",
+  "productType": "engine",
+  "status": "discontinued",
+  "statusNote": "Company went defunct around 2014-2016; TED is no longer sold or supported. Its Postgres-XL contribution lives on separately.",
+  "maturity": "legacy",
+  "primaryModel": "relational",
+  "models": [
+    "relational"
+  ],
+  "workloads": [
+    "oltp"
+  ],
+  "architecture": [
+    "distributed",
+    "multi-primary"
+  ],
+  "developer": "TransLattice, Inc.",
+  "vendorType": "company",
+  "initialRelease": 2010,
+  "writtenIn": [
+    "Undisclosed"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Commercial"
+  },
+  "pricing": {
+    "models": [
+      "enterprise-contract"
+    ],
+    "freeTier": false
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "medium",
+    "horizontalScaling": "native",
+    "multiRegion": "active-active",
+    "notes": "Nodes in different sites and clouds formed a single database fabric."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "SQL"
+  ],
+  "apis": [
+    "SQL"
+  ],
+  "compatibleWith": [],
+  "drivers": [],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Early geo-distributed relational database spanning several clouds at once",
+    "Behaved as one logical SQL database despite nodes in multiple locations"
+  ],
+  "weaknesses": [
+    "Discontinued with the company; no releases, support or community",
+    "Closed source, so nothing to self-maintain"
+  ],
+  "useCases": [
+    "History of NewSQL and geo-distributed SQL",
+    "Background on the origins of Postgres-XL"
+  ],
+  "notIdealFor": [
+    "Any current deployment"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "cockroachdb",
+    "yugabytedb",
+    "google-cloud-spanner",
+    "pgedge",
+    "citus"
+  ],
+  "tags": [
+    "newsql",
+    "geo-distributed",
+    "historical",
+    "discontinued"
+  ],
+  "links": {
+    "website": "https://web.archive.org/web/20130116033832/http://www.translattice.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/TransLattice"
+  },
+  "ids": {
+    "wikipedia": "TransLattice",
+    "hackerNewsQuery": "TransLattice"
+  },
+  "brand": {},
+  "sources": [
+    "https://en.wikipedia.org/wiki/TransLattice",
+    "https://web.archive.org/web/20130116033832/http://www.translattice.com/"
+  ],
+  "lastVerified": "2026-10-27"
+}

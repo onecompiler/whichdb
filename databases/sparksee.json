@@ -1,0 +1,173 @@
+{
+  "slug": "sparksee",
+  "name": "Sparksee",
+  "aliases": [
+    "DEX"
+  ],
+  "tagline": "Embeddable C++ graph database library from Sparsity Technologies, refocused on embedded and mobile.",
+  "description": "Sparksee (formerly DEX) is a commercial, embeddable graph database library written in C++ and spun out of the Universitat Politecnica de Catalunya. It stores labeled, attributed multigraphs with bitmap-based structures for compact storage and fast neighbor operations, and exposes native APIs for Java, .NET, C++, Python and Objective-C. Since version 6.0 (2021) it has focused on embedded and mobile devices. The vendor site is still up, but there is no public sign of releases after 6.0, so treat it as a niche, slow-moving option.",
+  "productType": "library",
+  "status": "maintenance",
+  "statusNote": "No public release after 6.0 (2021); vendor site still online in 2026.",
+  "maturity": "legacy",
+  "primaryModel": "graph",
+  "models": [
+    "graph"
+  ],
+  "workloads": [
+    "embedded",
+    "graph-traversal",
+    "graph-analytics",
+    "mobile-offline"
+  ],
+  "architecture": [
+    "embedded"
+  ],
+  "developer": "Sparsity Technologies",
+  "vendorType": "company",
+  "initialRelease": 2008,
+  "latestVersion": {
+    "version": "6.0",
+    "date": "2021"
+  },
+  "writtenIn": [
+    "C++"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free evaluation/academic license)"
+  },
+  "pricing": {
+    "models": [
+      "per-node-license",
+      "free"
+    ],
+    "freeTier": true,
+    "notes": "Free evaluation and academic license limited to 1 million nodes; commercial licenses for production."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": false,
+    "serverless": false,
+    "embedded": true,
+    "edge": true,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows",
+      "android",
+      "ios"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "none"
+  },
+  "consistency": {
+    "acid": "limited",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "strict",
+  "queryLanguages": [
+    "Native API"
+  ],
+  "apis": [
+    "C++ API",
+    "Java API",
+    ".NET API",
+    "Python API",
+    "Objective-C API"
+  ],
+  "compatibleWith": [],
+  "drivers": [
+    "C++",
+    "Java",
+    ".NET",
+    "Python",
+    "Objective-C"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": false,
+    "secondaryIndexes": true,
+    "fullTextSearch": false,
+    "vectorSearch": false,
+    "geospatial": false,
+    "json": false,
+    "changeDataCapture": false,
+    "triggers": false,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": false,
+    "columnarStorage": false,
+    "inMemory": false,
+    "persistence": true,
+    "compression": true,
+    "encryptionAtRest": false,
+    "rbac": false,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": false,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Compact bitmap-based storage suits devices with limited memory",
+    "Native bindings across C++, Java, .NET, Python and Objective-C",
+    "Runs fully embedded on mobile platforms"
+  ],
+  "weaknesses": [
+    "No standard query language (no Cypher, Gremlin or GQL)",
+    "Little visible development since 2021",
+    "Proprietary and small user community"
+  ],
+  "useCases": [
+    "Embedded graph storage in devices",
+    "Mobile apps with local graph data",
+    "Research prototypes"
+  ],
+  "notIdealFor": [
+    "Server-side multi-user graphs",
+    "Teams wanting Cypher/GQL",
+    "Long-term strategic platforms"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "ladybugdb",
+    "kuzu",
+    "cozodb",
+    "hypergraphdb",
+    "neo4j"
+  ],
+  "tags": [
+    "embedded",
+    "mobile",
+    "c++",
+    "library"
+  ],
+  "links": {
+    "website": "https://www.sparsity-technologies.com/",
+    "wikipedia": "https://en.wikipedia.org/wiki/Sparksee_(graph_database)"
+  },
+  "ids": {
+    "wikipedia": "Sparksee_(graph_database)",
+    "hackerNewsQuery": "Sparksee"
+  },
+  "brand": {
+    "color": "#E30613"
+  },
+  "sources": [
+    "https://www.sparsity-technologies.com/",
+    "https://en.wikipedia.org/wiki/Sparksee_(graph_database)",
+    "https://mvnrepository.com/artifact/com.sparsity/sparkseejava"
+  ],
+  "lastVerified": "2026-10-27"
+}
