@@ -103,7 +103,8 @@ for (const file of files) {
   const dangling = (db.alternatives ?? []).filter((a) => !allSlugs.has(a));
   if (dangling.length) {
     const msg = `alternatives not in the dataset: ${dangling.join(", ")}`;
-    strict ? fail(file, msg) : warn(file, msg);
+    if (strict) fail(file, msg);
+    else warn(file, msg);
   }
 }
 
