@@ -6,7 +6,7 @@
     "SingleStoreDB",
     "SingleStore Helios"
   ],
-  "tagline": "Distributed SQL with rowstore, columnstore and object-storage tiering for real-time analytics and vectors.",
+  "tagline": "Distributed SQL running transactions, analytics, vector and full-text search in one engine on live data.",
   "description": "SingleStore (formerly MemSQL) is a distributed, MySQL-wire-compatible database whose default table type is a compressed columnstore on local disk that still supports fast seeks and updates; new writes are buffered in a rowstore segment, fully in-memory rowstore tables remain an option, and with unlimited storage older data tiers out to object storage. Built-in pipelines ingest continuously from Kafka, S3 and other sources, and the engine adds full-text and indexed vector search, so a single cluster can power customer-facing dashboards and AI features over fresh data. It is offered as Helios (managed, with a free shared tier) and as self-managed software. Since a 2025 growth buyout, private-equity firm Vector Capital holds a majority stake. Expect commercial licensing and some MySQL incompatibilities such as missing triggers.",
   "productType": "engine",
   "status": "active",
@@ -25,6 +25,7 @@
     "real-time-analytics",
     "olap",
     "vector-search",
+    "rag",
     "full-text-search",
     "oltp",
     "stream-processing"
@@ -144,12 +145,13 @@
     "Native pipelines ingest from Kafka, S3 and GCS with exactly-once semantics",
     "Indexed vector search (HNSW/IVF, F16 vectors in 9.1) next to SQL and full-text",
     "MySQL wire compatibility simplifies driver and BI tool support",
-    "Sub-second analytics on high-concurrency, customer-facing dashboards"
+    "Sub-second analytics on high-concurrency, customer-facing dashboards",
+    "MCP server and SQL AI functions let AI agents query and act on live data"
   ],
   "weaknesses": [
     "Proprietary license; self-managed production use is costly",
     "No triggers or materialized views; some MySQL syntax unsupported",
-    "Rowstore tables require data to fit in memory",
+    "Optional in-memory rowstore tables must fit in RAM; the default columnstore lives on local disk and tiers to object storage",
     "Shard key and sort key choices strongly affect performance"
   ],
   "useCases": [
@@ -157,7 +159,7 @@
     "Fraud detection and risk scoring on streaming data",
     "Ad-tech and IoT ingestion with immediate querying",
     "Hybrid vector plus keyword search for RAG",
-    "Replacing a MySQL + Elasticsearch + warehouse combination"
+    "Apps and AI agents that read and write live business data"
   ],
   "notIdealFor": [
     "Simple CRUD apps that fit in Postgres or MySQL",
@@ -180,7 +182,8 @@
     "real-time-analytics",
     "vector",
     "mysql-compatible",
-    "distributed-sql"
+    "distributed-sql",
+    "rag"
   ],
   "links": {
     "website": "https://www.singlestore.com/",
@@ -204,7 +207,11 @@
     "https://www.singlestore.com/media-hub/releases/singlestore-announces-growth-buyout-led-by-vector-capital/",
     "https://docs.singlestore.com/db/v9.1/release-notes/singlestore-memsql/9-1-release-notes/",
     "https://docs.singlestore.com/cloud/create-a-database/columnstore/writing-columnstore-data/",
-    "https://docs.singlestore.com/db/v9.1/manage-data/local-and-unlimited-database-storage-concepts/"
+    "https://docs.singlestore.com/db/v9.1/manage-data/local-and-unlimited-database-storage-concepts/",
+    "https://docs.singlestore.com/cloud/create-a-database/columnstore/universal-storage/",
+    "https://docs.singlestore.com/cloud/developer-resources/functional-extensions/hybrid-search-reranking-full-text-and-vector-search-results/",
+    "https://docs.singlestore.com/cloud/ai/singlestore-mcp-server/",
+    "https://docs.singlestore.com/cloud/ai/ai-ml-functions/ai-functions/"
   ],
-  "lastVerified": "2026-11-09"
+  "lastVerified": "2026-11-10"
 }
