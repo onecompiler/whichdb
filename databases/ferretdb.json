@@ -59,7 +59,13 @@
       "windows"
     ]
   },
-  "managedServices": [],
+  "managedServices": [
+    {
+      "name": "Layerbase FerretDB",
+      "provider": "Layerbase",
+      "url": "https://layerbase.com/db/ferretdb"
+    }
+  ],
   "scale": {
     "tier": "medium",
     "horizontalScaling": "none",
