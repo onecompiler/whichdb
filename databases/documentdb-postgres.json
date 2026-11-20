@@ -70,6 +70,11 @@
       "name": "Azure DocumentDB",
       "provider": "Microsoft Azure",
       "url": "https://learn.microsoft.com/azure/documentdb/"
+    },
+    {
+      "name": "Layerbase DocumentDB",
+      "provider": "Layerbase",
+      "url": "https://layerbase.com/db/documentdb"
     }
   ],
   "scale": {
