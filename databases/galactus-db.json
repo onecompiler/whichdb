@@ -1,0 +1,201 @@
+{
+  "slug": "galactus-db",
+  "name": "Galactus DB",
+  "aliases": [
+    "GDB",
+    "GalactusDB"
+  ],
+  "tagline": "Rust frontier database combining a Cypher property graph, vector search and typed SQL tables in one server.",
+  "description": "Galactus DB is a frontier database that puts a property graph, vector search and typed SQL tables in one Rust server, and it questions the assumption that scaling needs heavyweight, multi-service infrastructure. A single container image of about 5 MB speaks Cypher over Bolt and stores SQL tables on nodes and relationships, queried with joins, window functions and recursive CTEs inside graph transactions. Vector, full-text and spatial indexes, graph algorithms, APOC utilities, change streams, a scheduler, roles, TLS and an MCP server for AI agents ship in the box without plugins. Its open benchmark against five other graph databases puts it fastest in its class on every query measured, from point lookups to weighted shortest paths. Instances run on one server with read replicas, Nebula Cluster (early access) adds high availability, automatic failover and property sharding, and the free Community edition is licensed for production, with Commercial and Enterprise sold per core.",
+  "productType": "engine",
+  "status": "active",
+  "maturity": "emerging",
+  "primaryModel": "graph",
+  "models": [
+    "graph",
+    "relational",
+    "vector",
+    "spatial"
+  ],
+  "workloads": [
+    "graph-traversal",
+    "graph-analytics",
+    "knowledge-graph",
+    "rag",
+    "vector-search",
+    "oltp",
+    "geospatial",
+    "full-text-search"
+  ],
+  "architecture": [
+    "single-node",
+    "primary-replica",
+    "client-server"
+  ],
+  "developer": "Boowm Ltd",
+  "vendorType": "company",
+  "initialRelease": 2026,
+  "latestVersion": {
+    "version": "2.7.0",
+    "date": "2026-11-24"
+  },
+  "writtenIn": [
+    "Rust"
+  ],
+  "license": {
+    "type": "proprietary",
+    "name": "Proprietary (free Community edition; Commercial and Enterprise per core)"
+  },
+  "pricing": {
+    "models": [
+      "free",
+      "subscription",
+      "enterprise-contract"
+    ],
+    "freeTier": true,
+    "startingPrice": "$400 per core per year (Commercial)",
+    "notes": "Community is free for any use, including production, with up to three active user databases. Commercial adds unlimited databases and backup/restore, with term or perpetual licences per core. Enterprise adds replicas on other servers and support."
+  },
+  "deployment": {
+    "selfHosted": true,
+    "managedByVendor": true,
+    "serverless": false,
+    "embedded": false,
+    "edge": false,
+    "kubernetesOperator": false,
+    "cloudProviders": [],
+    "platforms": [
+      "linux",
+      "macos",
+      "windows"
+    ]
+  },
+  "managedServices": [],
+  "scale": {
+    "tier": "small",
+    "horizontalScaling": "none",
+    "multiRegion": "read-replicas",
+    "notes": "One server per instance; graph structure and indexes are held in memory with properties paged from disk. Read-only replicas can run on the same or another server (Enterprise). A cluster edition with property sharding is in early access."
+  },
+  "consistency": {
+    "acid": "full",
+    "models": [
+      "strong"
+    ]
+  },
+  "schemaMode": "flexible",
+  "queryLanguages": [
+    "Cypher",
+    "SQL"
+  ],
+  "apis": [
+    "Bolt protocol",
+    "MCP"
+  ],
+  "compatibleWith": [
+    "neo4j"
+  ],
+  "drivers": [
+    "C#",
+    "Rust",
+    "Java",
+    "Go",
+    "JavaScript",
+    "C/C++",
+    "Python"
+  ],
+  "features": {
+    "transactions": true,
+    "joins": true,
+    "secondaryIndexes": true,
+    "fullTextSearch": true,
+    "vectorSearch": true,
+    "geospatial": true,
+    "json": false,
+    "changeDataCapture": true,
+    "triggers": true,
+    "storedProcedures": false,
+    "materializedViews": false,
+    "ttl": false,
+    "pubSub": true,
+    "columnarStorage": false,
+    "inMemory": true,
+    "persistence": true,
+    "compression": false,
+    "encryptionAtRest": false,
+    "rbac": true,
+    "timeTravel": false,
+    "branching": false,
+    "onlineSchemaChanges": false,
+    "streamingIngest": true,
+    "offlineSync": false,
+    "wasm": false
+  },
+  "strengths": [
+    "Fastest in its class in an open benchmark against five graph databases: 0.073 ms point lookups and 113,600 lookups/s on 8 CPUs (2.5.3, i9-13900K)",
+    "Typed SQL tables on nodes and relationships, queried with SQL (joins, window functions, recursive CTEs) inside Cypher in the same transaction",
+    "GIS built in: WGS-84 points plus geometry and geography shapes from WKT, WKB and GeoJSON, with spatial indexes and shortest-path routing",
+    "Nebula Cluster (early access) adds high availability with automatic failover; apps keep their Bolt driver and bolt:// address",
+    "Feature-rich out of the box: vector search, FastRP, graph algorithms, APOC, change streams, a scheduler and an MCP server, no plugins",
+    "Cypher over Bolt, so existing Bolt drivers and tools connect, plus open source drivers in seven languages",
+    "Container image of about 5 MB for Linux AMD64 and ARM64; Community is free and licensed for production use, with no key"
+  ],
+  "weaknesses": [
+    "The server is closed source; only the drivers are open source (Apache-2.0)",
+    "Young project with a small community and few third-party tools beyond the Cypher and Bolt ecosystem",
+    "Released instances scale up, not out: the cluster edition is in early access"
+  ],
+  "useCases": [
+    "GraphRAG and agent memory",
+    "Knowledge graphs combining graph structure with tabular records",
+    "Route finding and shortest paths on road networks",
+    "Recommendations and fraud detection",
+    "Scheduling and resource planning on graph data",
+    "Consolidating graph, relational and vector data into one server"
+  ],
+  "notIdealFor": [
+    "RDF/SPARQL workloads",
+    "Teams that require an open-source server"
+  ],
+  "notableUsers": [],
+  "alternatives": [
+    "neo4j",
+    "memgraph",
+    "falkordb",
+    "arangodb",
+    "dgraph",
+    "nebulagraph"
+  ],
+  "tags": [
+    "cypher",
+    "bolt",
+    "sql",
+    "graphrag",
+    "mcp",
+    "rust",
+    "vector-search"
+  ],
+  "links": {
+    "website": "https://galactusdb.com/",
+    "docs": "https://galactusdb.com/docs",
+    "pricing": "https://galactusdb.com/pricing"
+  },
+  "ids": {
+    "dockerHub": "ianknowles/galactus-db",
+    "hackerNewsQuery": "Galactus DB|GalactusDB"
+  },
+  "brand": {
+    "color": "#C5F03A"
+  },
+  "sources": [
+    "https://galactusdb.com/compare",
+    "https://galactusdb.com/llms.txt",
+    "https://galactusdb.com/docs/operations/licensing",
+    "https://galactusdb.com/docs/integrations/bolt",
+    "https://hub.docker.com/r/ianknowles/galactus-db/tags",
+    "https://galactusdb.com/nebula",
+    "https://galactusdb.com/docs/types/spatial-shapes",
+    "https://galactusdb.com/docs/tables"
+  ],
+  "lastVerified": "2026-11-26"
+}
